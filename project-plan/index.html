@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CEx × Digital Movement UK — Project Plan · Executive Summary</title>
+<meta name="description" content="Executive summary of the CEx × Digital Movement UK engagement. Conversion-optimised website plus SEO service pages, built to put CEx in front of Google and AI Search.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter+Tight:wght@300..900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* Avoid any flash of the wrong language before i18n applies on load. */
+html:not(.lang-ready) body{visibility:hidden}
+:root{
+  --white:#FFFFFF;--cream:#FFF8F0;--ink:#1A0E2E;--ink-soft:#2D1F45;--ink-mute:#6B5F7A;
+  --rule:#EFE4F0;--rule-soft:#F7EFF6;
+  --dm-yellow:#FFD24A;--dm-orange:#F59425;--dm-pink:#E91E63;--dm-pink-hot:#FF2D7A;
+  --dm-purple:#4A1E70;--dm-cyan:#3DDEDE;--dm-teal:#1FC4B8;
+  --grad-primary:linear-gradient(135deg,#FFD24A 0%,#F59425 22%,#FF2D7A 52%,#E91E63 70%,#4A1E70 100%);
+  --grad-hot:linear-gradient(135deg,#F59425 0%,#E91E63 55%,#4A1E70 100%);
+  --grad-text:linear-gradient(95deg,#F59425 0%,#E91E63 50%,#4A1E70 100%);
+  --grad-soft:linear-gradient(135deg,#FFF6E8 0%,#FFE8F0 50%,#F2E8FF 100%);
+  --grad-radial:radial-gradient(ellipse at 30% 20%,#FFD24A 0%,transparent 45%),radial-gradient(ellipse at 75% 30%,#FF2D7A 0%,transparent 50%),radial-gradient(ellipse at 60% 90%,#4A1E70 0%,transparent 55%),linear-gradient(135deg,#F59425 0%,#E91E63 100%);
+  --display:'Plus Jakarta Sans','Inter Tight',system-ui,sans-serif;
+  --sans:'Inter Tight',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --max:1180px;--gutter:clamp(20px,5vw,72px);
+  --ease:cubic-bezier(0.22,1,0.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--dm-pink);color:var(--white)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter);position:relative}
+section{padding:clamp(64px,9vw,120px) 0;position:relative}
+.section-rule{border-top:1px solid var(--rule)}
+
+/* ============ Reveal animations ============ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.9s var(--ease),transform 0.9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:0.08s}.reveal.d2{transition-delay:0.16s}
+.reveal.d3{transition-delay:0.24s}.reveal.d4{transition-delay:0.32s}
+.reveal.d5{transition-delay:0.40s}.reveal.d6{transition-delay:0.48s}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+/* ============ Masthead ============ */
+.masthead{border-bottom:1px solid var(--rule);padding:18px 0;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:var(--ink-mute);background:var(--white);position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);background:rgba(255,255,255,0.94)}
+.masthead-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.masthead-logo{display:inline-flex;align-items:center;gap:10px;color:var(--ink);font-weight:700;letter-spacing:0.14em}
+/* Language toggle — sits in the masthead, visible on every viewport. The
+   gradient-pill on the active option is the same brand stack used in the hero,
+   so the control reads as a first-class brand element, not a utility nav. */
+.lang-toggle{display:inline-flex;align-items:center;background:var(--rule-soft);border:1px solid var(--rule);border-radius:999px;padding:3px;gap:0;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:0.12em;line-height:1;flex-shrink:0;user-select:none}
+.lang-opt{appearance:none;background:transparent;border:0;cursor:pointer;padding:7px 12px;border-radius:999px;color:var(--ink-mute);font:inherit;letter-spacing:inherit;transition:color 0.25s ease,background 0.25s ease,box-shadow 0.25s ease}
+.lang-opt:hover{color:var(--ink)}
+.lang-opt.is-active{background:var(--grad-primary);color:var(--white);box-shadow:0 4px 12px -4px rgba(233,30,99,0.35)}
+.lang-opt:focus-visible{outline:2px solid var(--dm-pink);outline-offset:2px}
+/* Compact masthead row on smaller widths so the toggle always stays visible */
+@media(max-width:760px){
+  .lang-toggle{font-size:10px}
+  .lang-opt{padding:6px 10px}
+}
+.dm-mark{height:22px;width:auto;flex-shrink:0;display:inline-block;vertical-align:middle}
+.dm-mark-foot{height:34px;width:auto;display:inline-block;margin-bottom:18px}
+.divider-mono{display:inline-block;width:20px;height:1px;background:currentColor;vertical-align:middle;margin:0 10px;opacity:0.5}
+
+/* ============ Hero ============ */
+.hero{position:relative;background:var(--grad-radial);color:var(--white);padding:clamp(84px,11vw,150px) 0 clamp(72px,9vw,130px);overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 700px 900px at 88% 50%,rgba(74,30,112,0.7) 0%,transparent 60%),radial-gradient(ellipse 480px 480px at 8% 92%,rgba(74,30,112,0.45) 0%,transparent 55%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.hero-blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:0.45;pointer-events:none;z-index:1}
+.hero-blob.b1{width:380px;height:380px;background:var(--dm-yellow);top:-80px;right:-40px;animation:float 14s ease-in-out infinite}
+.hero-blob.b2{width:280px;height:280px;background:var(--dm-pink-hot);bottom:-60px;left:18%;animation:float 18s ease-in-out infinite reverse}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-30px) scale(1.08)}}
+
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);border-radius:999px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.15em;font-weight:500;color:var(--white);backdrop-filter:blur(8px)}
+.hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--dm-yellow);box-shadow:0 0 12px var(--dm-yellow);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 8px var(--dm-yellow);opacity:1}50%{box-shadow:0 0 18px var(--dm-yellow);opacity:0.85}}
+.hero-title{font-family:var(--display);font-weight:800;font-size:clamp(38px,7vw,92px);text-transform:uppercase;letter-spacing:-0.035em;line-height:0.94;margin:28px 0 28px;color:var(--white)}
+.hero-title .yellow{color:var(--dm-yellow)}
+.hero-title .x{color:var(--dm-yellow);font-weight:500;font-size:0.85em;margin:0 0.12em;letter-spacing:0;display:inline-block;vertical-align:0.06em}
+.hero-deck{font-family:var(--sans);font-size:clamp(17px,1.8vw,22px);font-weight:400;line-height:1.5;color:rgba(255,255,255,0.95);max-width:720px;margin-bottom:36px}
+.hero-meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.22);border-radius:14px;overflow:hidden;backdrop-filter:blur(8px);max-width:880px}
+.hero-meta-cell{background:rgba(26,14,46,0.32);padding:18px 22px}
+.hero-meta-label{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.16em;color:rgba(255,255,255,0.75);margin-bottom:6px;font-weight:600}
+.hero-meta-val{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-0.02em;color:var(--white);line-height:1.1}
+.hero-meta-val small{font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:0.02em;color:rgba(255,255,255,0.78);display:block;margin-top:4px;text-transform:none}
+
+/* ============ Section heads ============ */
+.sec-head{display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,56px);align-items:baseline;margin-bottom:44px}
+.sec-num{font-family:var(--mono);font-weight:600;font-size:12px;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:0.18em;white-space:nowrap;text-transform:uppercase}
+.sec-title{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.6vw,58px);line-height:1.0;letter-spacing:-0.035em;text-transform:uppercase;color:var(--ink)}
+.sec-title em{font-style:normal;font-weight:800;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
+.intro-deck{font-size:17px;line-height:1.65;max-width:760px;color:var(--ink-soft);margin-bottom:36px}
+.intro-deck strong{color:var(--ink);font-weight:700}
+
+/* ============ Context cards ============ */
+.context-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:28px}
+.ctx-card{background:var(--white);border:1px solid var(--rule);border-radius:18px;padding:30px 28px;position:relative;overflow:hidden;transition:transform 0.5s var(--ease),box-shadow 0.5s var(--ease)}
+.ctx-card:hover{transform:translateY(-4px);box-shadow:0 24px 60px -24px rgba(74,30,112,0.22)}
+.ctx-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-primary)}
+.ctx-num{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--dm-pink);letter-spacing:0.18em;margin-bottom:14px;text-transform:uppercase}
+.ctx-h{font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-0.02em;text-transform:uppercase;color:var(--ink);margin-bottom:12px;line-height:1.15}
+.ctx-body{font-size:14.5px;line-height:1.6;color:var(--ink-soft)}
+.ctx-body strong{color:var(--ink);font-weight:700}
+
+/* ============ Deliverables ============ */
+.deliv-grid{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:820px){.deliv-grid{grid-template-columns:1fr 1fr;gap:28px}}
+.deliv{background:var(--white);border:1px solid var(--rule);border-radius:22px;padding:clamp(28px,3.5vw,42px);position:relative;overflow:hidden;transition:transform 0.5s var(--ease),box-shadow 0.5s var(--ease)}
+.deliv:hover{transform:translateY(-4px);box-shadow:0 28px 70px -28px rgba(74,30,112,0.25)}
+.deliv-head{display:flex;align-items:center;gap:18px;margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid var(--rule)}
+.deliv-icon{width:54px;height:54px;border-radius:14px;background:var(--grad-hot);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--white)}
+.deliv.b .deliv-icon{background:linear-gradient(135deg,var(--dm-purple) 0%,var(--dm-pink) 100%)}
+.deliv-label{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.18em;color:var(--ink-mute);font-weight:600;margin-bottom:4px}
+.deliv-title{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-0.02em;line-height:1.1;text-transform:uppercase;color:var(--ink)}
+.deliv-body{font-size:15px;line-height:1.65;color:var(--ink-soft)}
+.deliv-body strong{color:var(--ink)}
+.deliv-list{list-style:none;margin-top:18px}
+.deliv-list li{padding:10px 0;border-top:1px dashed var(--rule);display:flex;align-items:flex-start;gap:12px;font-size:14.5px;color:var(--ink-soft);line-height:1.5}
+.deliv-list li:first-child{border-top:0}
+.deliv-list .dot{width:6px;height:6px;border-radius:50%;background:var(--grad-hot);margin-top:8px;flex-shrink:0}
+.deliv-list strong{color:var(--ink);font-weight:700;display:block;margin-bottom:2px}
+.scope-note{background:var(--rule-soft);border-left:3px solid var(--dm-purple);border-radius:0 12px 12px 0;padding:14px 18px;margin-top:18px;font-size:13.5px;line-height:1.5;color:var(--ink-soft)}
+.scope-note strong{color:var(--ink)}
+
+/* ============ Milestones ============ */
+.ws-stack{display:grid;gap:32px;margin-top:8px}
+.ws{background:var(--white);border:1px solid var(--rule);border-radius:22px;padding:clamp(28px,3.5vw,42px);position:relative;overflow:hidden}
+.ws::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--grad-primary)}
+.ws.b::before{background:linear-gradient(180deg,var(--dm-purple) 0%,var(--dm-pink) 100%)}
+.ws.c::before{background:linear-gradient(180deg,var(--dm-cyan) 0%,var(--dm-teal) 100%)}
+.ws-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--rule)}
+.ws-tag{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.18em;font-weight:700;color:var(--dm-pink)}
+.ws.b .ws-tag{color:var(--dm-purple)}
+.ws.c .ws-tag{color:var(--dm-teal)}
+.ws-tag-dot{width:8px;height:8px;border-radius:50%;background:currentColor}
+.ws-title{font-family:var(--display);font-weight:800;font-size:clamp(22px,2.8vw,30px);letter-spacing:-0.025em;line-height:1.05;text-transform:uppercase;color:var(--ink);margin-top:8px}
+.ws-cadence{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:var(--ink-mute);text-align:right;line-height:1.6}
+.ws-cadence strong{display:block;color:var(--ink);font-size:14px;font-family:var(--display);letter-spacing:-0.01em;text-transform:none;font-weight:700;margin-bottom:2px}
+
+.ms-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.ms{background:var(--rule-soft);border:1px solid var(--rule);border-radius:14px;padding:20px 22px;position:relative;transition:transform 0.4s var(--ease),background 0.4s var(--ease)}
+.ms:hover{transform:translateY(-3px);background:var(--white);box-shadow:0 16px 40px -16px rgba(74,30,112,0.18)}
+.ms-id{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:0.18em;color:var(--dm-pink);margin-bottom:8px}
+.ws.b .ms-id{color:var(--dm-purple)}
+.ws.c .ms-id{color:var(--dm-teal)}
+.ms-h{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:-0.01em;color:var(--ink);line-height:1.25;margin-bottom:6px}
+.ms-d{font-size:13px;line-height:1.5;color:var(--ink-mute)}
+
+/* ============ Timeline ============ */
+.timeline-wrap{margin:32px 0 8px;position:relative}
+.timeline-svg{width:100%;height:auto;display:block}
+.tl-rail{stroke:var(--rule);stroke-width:2}
+.tl-path{stroke:url(#tl-grad);stroke-width:5;stroke-linecap:round;fill:none;stroke-dasharray:1200;stroke-dashoffset:1200;transition:stroke-dashoffset 2s var(--ease)}
+.timeline-wrap.in .tl-path{stroke-dashoffset:0}
+.tl-node{transition:transform 0.5s var(--ease);transform-origin:center;opacity:0}
+.timeline-wrap.in .tl-node{opacity:1;animation:nodeIn 0.6s var(--ease) both}
+.timeline-wrap.in .tl-node.n1{animation-delay:0.4s}
+.timeline-wrap.in .tl-node.n2{animation-delay:0.8s}
+.timeline-wrap.in .tl-node.n3{animation-delay:1.2s}
+.timeline-wrap.in .tl-node.n4{animation-delay:1.6s}
+@keyframes nodeIn{0%{opacity:0;transform:scale(0.4)}100%{opacity:1;transform:scale(1)}}
+.tl-label{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.16em;fill:var(--ink-mute);text-transform:uppercase}
+.tl-date{font-family:var(--display);font-size:13px;font-weight:800;letter-spacing:-0.01em;fill:var(--ink)}
+.tl-event{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--ink-soft)}
+
+.tl-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:36px}
+.tl-card{background:var(--white);border:1px solid var(--rule);border-radius:16px;padding:22px 24px;position:relative;overflow:hidden}
+.tl-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--grad-primary)}
+.tl-card .when{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.16em;color:var(--dm-pink);font-weight:700;margin-bottom:8px}
+.tl-card .what{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-0.015em;color:var(--ink);line-height:1.2;margin-bottom:8px}
+.tl-card .why{font-size:13.5px;line-height:1.55;color:var(--ink-mute)}
+
+/* ============ Business Value Timeline ============ */
+.bv-wrap{background:var(--ink);color:var(--white);border-radius:28px;padding:clamp(32px,5vw,56px);position:relative;overflow:hidden}
+.bv-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 500px 300px at 18% 20%,rgba(245,148,37,0.18) 0%,transparent 65%),radial-gradient(ellipse 600px 400px at 88% 80%,rgba(233,30,99,0.20) 0%,transparent 65%),radial-gradient(ellipse 400px 300px at 60% 110%,rgba(74,30,112,0.4) 0%,transparent 65%);pointer-events:none}
+.bv-wrap > *{position:relative;z-index:2}
+.bv-eyebrow{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.18em;color:var(--dm-yellow);font-weight:600;margin-bottom:14px}
+.bv-title{font-family:var(--display);font-weight:800;font-size:clamp(24px,3.4vw,40px);letter-spacing:-0.025em;line-height:1.05;text-transform:uppercase;color:var(--white);margin-bottom:14px;max-width:780px}
+.bv-deck{font-size:15px;line-height:1.6;color:rgba(255,255,255,0.86);max-width:680px;margin-bottom:30px}
+
+.bv-chart{margin:18px 0 28px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:24px 18px 12px;overflow:hidden}
+.bv-chart svg{width:100%;height:auto;display:block}
+.bv-curve{fill:none;stroke:url(#bv-grad);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1400;stroke-dashoffset:1400;transition:stroke-dashoffset 2.6s var(--ease)}
+.bv-chart.in .bv-curve{stroke-dashoffset:0}
+.bv-fill{fill:url(#bv-fill-grad);opacity:0;transition:opacity 1.2s var(--ease) 1.4s}
+.bv-chart.in .bv-fill{opacity:0.4}
+.bv-dot{fill:#FFD24A;opacity:0;transition:opacity 0.4s var(--ease)}
+.bv-chart.in .bv-dot{opacity:1}
+.bv-chart.in .bv-dot.d1{transition-delay:0.4s}
+.bv-chart.in .bv-dot.d2{transition-delay:0.9s}
+.bv-chart.in .bv-dot.d3{transition-delay:1.4s}
+.bv-chart.in .bv-dot.d4{transition-delay:1.9s}
+.bv-phase-line{stroke:rgba(255,255,255,0.16);stroke-width:1;stroke-dasharray:2 4}
+.bv-axis{font-family:var(--mono);font-size:9px;fill:rgba(255,255,255,0.55);letter-spacing:0.1em;text-transform:uppercase;font-weight:600}
+.bv-phase-label{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.16em;fill:rgba(255,255,255,0.7);text-transform:uppercase}
+
+.bv-phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:8px}
+@media(min-width:960px){.bv-phases{grid-template-columns:repeat(4,1fr)}}
+.bv-phase{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:22px 22px;transition:transform 0.4s var(--ease),background 0.4s var(--ease)}
+.bv-phase:hover{transform:translateY(-3px);background:rgba(255,255,255,0.1)}
+.bv-phase-num{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.2em;color:var(--dm-yellow);text-transform:uppercase;margin-bottom:8px}
+.bv-phase-h{font-family:var(--display);font-weight:800;font-size:16px;letter-spacing:-0.01em;text-transform:uppercase;line-height:1.15;margin-bottom:8px;color:var(--white)}
+.bv-phase-range{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,0.7);margin-bottom:10px;letter-spacing:0.06em}
+.bv-phase-d{font-size:13px;line-height:1.55;color:rgba(255,255,255,0.82)}
+.bv-foot{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.1);font-family:var(--mono);font-size:11px;line-height:1.6;color:rgba(255,255,255,0.65);letter-spacing:0.04em}
+.bv-foot strong{color:var(--dm-yellow);font-weight:700}
+
+/* ============ Investment ============ */
+.inv-grid{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:880px){.inv-grid{grid-template-columns:1.05fr 0.95fr;gap:32px}}
+.inv-card{background:var(--white);border:1px solid var(--rule);border-radius:22px;padding:clamp(32px,4vw,48px);position:relative;overflow:hidden}
+.inv-card.feature{background:var(--grad-radial);color:var(--white);border:0}
+.inv-card.feature::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 500px 600px at 88% 50%,rgba(74,30,112,0.7) 0%,transparent 60%);pointer-events:none}
+.inv-card.feature > *{position:relative;z-index:2}
+.inv-label{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.18em;color:rgba(255,255,255,0.85);font-weight:600;margin-bottom:14px}
+.inv-card:not(.feature) .inv-label{color:var(--dm-pink)}
+.inv-amount{font-family:var(--display);font-weight:800;font-size:clamp(54px,9vw,96px);line-height:0.95;letter-spacing:-0.04em;color:var(--white);margin-bottom:6px}
+.inv-amount .cur{font-size:0.5em;vertical-align:0.2em;margin-right:6px;font-weight:700}
+.inv-amount .per{font-size:0.28em;font-weight:600;letter-spacing:0.02em;color:rgba(255,255,255,0.85);margin-left:8px;text-transform:uppercase}
+.inv-sub{font-family:var(--display);font-size:18px;font-weight:700;letter-spacing:-0.01em;color:var(--white);margin-bottom:24px}
+.inv-row{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-top:1px solid rgba(255,255,255,0.18);font-size:14px}
+.inv-row .k{font-family:var(--mono);text-transform:uppercase;letter-spacing:0.1em;font-size:11px;color:rgba(255,255,255,0.78)}
+.inv-row .v{font-family:var(--display);font-weight:700;color:var(--white);letter-spacing:-0.005em}
+.inv-row.tot{border-top:1px solid rgba(255,255,255,0.3);margin-top:6px;padding-top:18px}
+.inv-row.tot .v{font-size:18px}
+
+.inv-card:not(.feature) .inv-h{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-0.02em;line-height:1.1;text-transform:uppercase;color:var(--ink);margin-bottom:18px}
+.trigger-list{list-style:none;margin:18px 0}
+.trigger-list li{padding:14px 0;border-top:1px dashed var(--rule);font-size:14.5px;line-height:1.55;color:var(--ink-soft);display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+.trigger-list li:first-child{border-top:0}
+.trigger-list .tag{font-family:var(--mono);font-size:10px;font-weight:700;color:var(--dm-pink);background:var(--rule-soft);padding:5px 9px;border-radius:6px;letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap}
+.trigger-list strong{color:var(--ink);font-weight:700;display:block;margin-bottom:3px;font-family:var(--display);font-size:15px;letter-spacing:-0.01em}
+.inv-note{background:var(--rule-soft);border-left:3px solid var(--dm-purple);border-radius:0 12px 12px 0;padding:16px 20px;margin-top:20px;font-size:13.5px;line-height:1.55;color:var(--ink-soft)}
+.inv-note strong{color:var(--ink)}
+
+/* ============ Next steps ============ */
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:8px}
+.step-card{background:var(--white);border:1px solid var(--rule);border-radius:16px;padding:26px 26px;position:relative;transition:transform 0.4s var(--ease),box-shadow 0.4s var(--ease)}
+.step-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px -16px rgba(74,30,112,0.2)}
+.step-card .n{font-family:var(--display);font-weight:800;font-size:36px;line-height:1;letter-spacing:-0.04em;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:10px}
+.step-card .h{font-family:var(--display);font-weight:800;font-size:16px;letter-spacing:-0.01em;text-transform:uppercase;color:var(--ink);line-height:1.2;margin-bottom:8px}
+.step-card .d{font-size:13.5px;line-height:1.55;color:var(--ink-mute)}
+
+/* ============ Account manager ============ */
+.am-wrap{background:var(--white);border:1px solid var(--rule);border-radius:24px;padding:clamp(32px,4vw,52px);position:relative;overflow:hidden;display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,44px);align-items:center}
+@media(min-width:760px){.am-wrap{grid-template-columns:auto 1fr}}
+.am-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad-primary)}
+.am-photo-wrap{position:relative;width:clamp(170px,22vw,220px);height:clamp(170px,22vw,220px);margin:0 auto;flex-shrink:0}
+.am-photo-wrap::before{content:'';position:absolute;inset:-10px;border-radius:50%;background:var(--grad-primary);opacity:0.18;filter:blur(20px);z-index:0}
+.am-photo{position:relative;width:100%;height:100%;border-radius:50%;overflow:hidden;border:4px solid var(--white);box-shadow:0 16px 48px -16px rgba(74,30,112,0.32);z-index:1}
+.am-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(0.05) contrast(1.04)}
+.am-photo-frame{position:absolute;inset:-4px;border-radius:50%;border:1.5px solid transparent;background:var(--grad-primary) border-box;-webkit-mask:linear-gradient(#fff 0 0) padding-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;z-index:2;pointer-events:none}
+.am-body{flex:1}
+.am-eyebrow{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.18em;color:var(--dm-pink);font-weight:700;margin-bottom:10px}
+.am-name{font-family:var(--display);font-weight:800;font-size:clamp(28px,3.6vw,40px);letter-spacing:-0.025em;line-height:1.0;color:var(--ink);margin-bottom:6px;text-transform:uppercase}
+.am-role{font-family:var(--display);font-size:15px;font-weight:600;color:var(--ink-mute);letter-spacing:-0.005em;margin-bottom:22px}
+.am-channels{display:grid;grid-template-columns:1fr;gap:1px;background:var(--rule);border-radius:14px;overflow:hidden;border:1px solid var(--rule)}
+@media(min-width:560px){.am-channels{grid-template-columns:1.6fr 1fr 1fr}}
+.am-ch{background:var(--white);padding:16px 20px;transition:background 0.3s ease,transform 0.3s ease;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:4px}
+.am-ch:hover{background:var(--rule-soft);transform:translateY(-2px)}
+.am-ch-label{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.16em;color:var(--ink-mute);font-weight:600}
+.am-ch-val{font-family:var(--display);font-weight:700;font-size:14.5px;letter-spacing:-0.005em;color:var(--ink);overflow-wrap:anywhere;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:560px){.am-ch-val{white-space:normal;text-overflow:clip}}
+.am-ch-icon{display:inline-flex;align-items:center;gap:6px;color:var(--dm-pink)}
+.am-note{margin-top:22px;font-size:13.5px;line-height:1.55;color:var(--ink-mute);max-width:520px}
+
+/* ============ Top progress bar ============ */
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:100;background:transparent;pointer-events:none}
+.scroll-progress-bar{height:100%;width:0;background:var(--grad-primary);transition:width 0.08s linear;box-shadow:0 0 12px rgba(233,30,99,0.5)}
+
+/* ============ Right-side reading tracker ============ */
+.reading-now{
+  position:fixed;z-index:60;
+  right:clamp(18px,2vw,32px);top:50%;transform:translateY(-50%) translateX(24px);
+  width:284px;max-height:78vh;
+  background:linear-gradient(155deg,rgba(26,14,46,0.82) 0%,rgba(15,7,29,0.9) 100%);
+  backdrop-filter:saturate(180%) blur(28px);-webkit-backdrop-filter:saturate(180%) blur(28px);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:22px;
+  padding:22px 22px 18px;
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,0.20),inset 0 -1px 0 rgba(255,255,255,0.04),0 30px 70px -20px rgba(0,0,0,0.55),0 8px 22px -8px rgba(0,0,0,0.3);
+  font-family:var(--sans);
+  display:flex;flex-direction:column;gap:10px;
+  opacity:0;transition:opacity 0.7s var(--ease),transform 0.7s var(--ease);
+  isolation:isolate;overflow:hidden;pointer-events:auto
+}
+body.is-reading .reading-now{opacity:1;transform:translateY(-50%) translateX(0)}
+.reading-now::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;
+  background:radial-gradient(ellipse at 88% 8%,rgba(245,148,37,0.16) 0%,transparent 55%),radial-gradient(ellipse at 8% 92%,rgba(74,30,112,0.18) 0%,transparent 60%)
+}
+.reading-now-title{font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--dm-yellow);line-height:1;display:inline-flex;align-items:center;gap:8px;margin-bottom:4px}
+.reading-now-title::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dm-yellow);box-shadow:0 0 0 3px rgba(255,210,74,0.22);animation:rn-pulse 1.8s ease-in-out infinite}
+@keyframes rn-pulse{0%,100%{box-shadow:0 0 0 2px rgba(255,210,74,0.22)}50%{box-shadow:0 0 0 6px rgba(255,210,74,0)}}
+.reading-now-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column}
+.reading-now-list li{border-top:1px solid rgba(255,255,255,0.08);padding:9px 0;margin:0}
+.reading-now-list li:first-child{border-top:0;padding-top:4px}
+.reading-now-list li:last-child{padding-bottom:0}
+.reading-now a{display:flex;align-items:center;justify-content:space-between;gap:10px;color:rgba(255,255,255,0.6);text-decoration:none;border:0;font-size:12.5px;line-height:1.3;font-weight:500;transition:color 0.25s ease}
+.reading-now a:hover{color:#fff}
+.reading-now li.in-progress a{color:#fff;font-weight:700}
+.reading-now li.done a{color:rgba(255,255,255,0.82)}
+.rn-num{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.15em;color:rgba(255,255,255,0.45);margin-right:4px;transition:color 0.25s ease}
+.reading-now li.in-progress .rn-num{color:var(--dm-yellow)}
+.reading-now li.done .rn-num{color:rgba(255,210,74,0.7)}
+.rn-text{flex:1;min-width:0}
+.rn-ring{position:relative;width:22px;height:22px;flex-shrink:0}
+.rn-ring svg{position:absolute;inset:0;width:22px;height:22px;transform:rotate(-90deg);overflow:visible}
+.rn-ring-bg{fill:transparent;stroke:rgba(255,255,255,0.2);stroke-width:2.5}
+.rn-ring-fg{fill:transparent;stroke:url(#rn-grad);stroke-width:2.5;stroke-linecap:round;stroke-dasharray:56.549;stroke-dashoffset:56.549;transition:stroke-dashoffset 0.35s var(--ease);filter:drop-shadow(0 0 4px rgba(245,148,37,0.45))}
+.reading-now li.done .rn-ring-fg{stroke-dashoffset:0;filter:drop-shadow(0 0 5px rgba(255,210,74,0.5))}
+
+/* Compact mobile reading tracker — pinned to the bottom of the viewport so
+   it never obstructs content, every section's ring remains visible at a
+   glance, and the same scroll-charge math keeps driving the rings. */
+@media (max-width:1180px){
+  .reading-now{
+    top:auto;bottom:14px;right:auto;left:50%;
+    transform:translateX(-50%) translateY(20px);
+    width:auto;max-width:calc(100vw - 24px);
+    padding:8px 12px;border-radius:999px;
+    flex-direction:row;align-items:center;gap:10px;
+    max-height:none
+  }
+  body.is-reading .reading-now{transform:translateX(-50%) translateY(0)}
+  .reading-now-title{display:none}
+  .reading-now-list{flex-direction:row;align-items:center;gap:2px;overflow:visible;flex-wrap:nowrap}
+  .reading-now-list li{border-top:0;padding:0;display:flex;align-items:center}
+  .reading-now-list li:first-child{padding-top:0}
+  .reading-now a{padding:6px 4px;font-size:0}
+  .reading-now a:hover{color:rgba(255,255,255,0.6)}
+  .rn-num{font-size:9px;margin:0;display:none}
+  .rn-text{display:none}
+  .rn-ring{width:18px;height:18px}
+  .rn-ring svg{width:18px;height:18px}
+  /* Scale the dasharray for the smaller ring (r still 9 in svg viewBox so
+     the math doesn't actually change — the ring just renders smaller). */
+}
+@media (max-width:480px){
+  .reading-now{padding:6px 10px;gap:6px}
+  .reading-now-list{gap:0}
+  .reading-now a{padding:5px 3px}
+  .rn-ring{width:16px;height:16px}
+  .rn-ring svg{width:16px;height:16px}
+}
+
+/* ============ Footer ============ */
+.foot{background:var(--ink);color:rgba(255,255,255,0.78);padding:clamp(54px,7vw,90px) 0 clamp(28px,4vw,42px);position:relative;overflow:hidden}
+.foot::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 600px 400px at 18% 20%,rgba(245,148,37,0.10) 0%,transparent 65%),radial-gradient(ellipse 600px 400px at 82% 80%,rgba(74,30,112,0.5) 0%,transparent 65%);pointer-events:none}
+.foot .wrap{position:relative;z-index:2}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:36px;margin-bottom:44px}
+@media(min-width:780px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr;gap:42px}}
+.foot-h{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.16em;color:rgba(255,255,255,0.55);font-weight:600;margin-bottom:14px}
+.foot-title{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-0.025em;line-height:1.1;text-transform:uppercase;color:var(--white);margin-bottom:14px}
+.foot-body{font-size:14.5px;line-height:1.65;color:rgba(255,255,255,0.78)}
+.foot-body a{color:var(--dm-yellow);text-decoration:none;border-bottom:1px solid rgba(255,210,74,0.4);transition:border-color 0.3s ease}
+.foot-body a:hover{border-color:var(--dm-yellow)}
+.foot-list{list-style:none}
+.foot-list li{padding:6px 0;font-size:14px;color:rgba(255,255,255,0.78)}
+.foot-list li strong{color:var(--white);font-weight:600;display:block;font-family:var(--mono);font-size:10px;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:2px;color:rgba(255,255,255,0.55)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,0.12);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.16em;color:rgba(255,255,255,0.5)}
+
+/* ============ Vertical timeline (mobile) ============ */
+.timeline-vertical{display:none;position:relative;margin:24px auto 36px;padding-left:36px;max-width:440px}
+.tlv-rail{position:absolute;left:14px;top:6px;bottom:6px;width:3px;background:var(--rule);border-radius:2px;overflow:hidden}
+/* In scroll-driven mode the fill's top + height are set in pixels by JS so the
+   gradient front lines up exactly with the activated dot. */
+.tlv-fill{position:absolute;left:0;right:0;top:0;height:0;background:linear-gradient(180deg,#FFD24A 0%,#F59425 30%,#E91E63 65%,#4A1E70 100%);transition:height 2.4s var(--ease)}
+.timeline-vertical.in .tlv-fill{height:100%}
+/* Scroll-driven mode: JS sets the fill height in lockstep with scroll. The
+   transition stays just long enough to smooth out RAF jitter without lagging
+   the finger. Node fade-in is gated on the dot passing the fill front. */
+.timeline-vertical.scroll-driven .tlv-fill{transition:height 0.12s linear,top 0.12s linear}
+.tlv-node{position:relative;padding:6px 0 30px;opacity:0;transform:translateX(-8px);transition:opacity 0.6s var(--ease),transform 0.6s var(--ease),filter 0.5s var(--ease)}
+.timeline-vertical.in .tlv-node{opacity:1;transform:none}
+.timeline-vertical.in .tlv-node.tlv-n1{transition-delay:0.5s}
+.timeline-vertical.in .tlv-node.tlv-n2{transition-delay:1.0s}
+.timeline-vertical.in .tlv-node.tlv-n3{transition-delay:1.5s}
+.timeline-vertical.in .tlv-node.tlv-n4{transition-delay:2.0s}
+/* Scroll-driven node states */
+.timeline-vertical.scroll-driven .tlv-node{opacity:0.35;transform:none;filter:grayscale(0.55);transition-delay:0s}
+.timeline-vertical.scroll-driven .tlv-node.tlv-active{opacity:1;filter:none}
+.tlv-node:last-child{padding-bottom:0}
+.tlv-dot{position:absolute;left:-29px;top:8px;width:18px;height:18px;border-radius:50%;border:3px solid var(--ink);box-shadow:0 0 0 4px var(--white);transition:transform 0.4s var(--ease),box-shadow 0.4s var(--ease)}
+.timeline-vertical.scroll-driven .tlv-node.tlv-active .tlv-dot{transform:scale(1.08);box-shadow:0 0 0 4px var(--white),0 0 14px rgba(233,30,99,0.45)}
+.tlv-node.tlv-n3 .tlv-dot{width:22px;height:22px;left:-31px;top:6px}
+.tlv-content{text-align:left}
+.tlv-label{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.16em;color:var(--ink-mute);font-weight:700;margin-bottom:4px}
+.tlv-date{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-0.015em;color:var(--ink);line-height:1.1;margin-bottom:4px}
+.tlv-event{font-family:var(--sans);font-size:13px;color:var(--ink-soft);line-height:1.45}
+.tlv-event strong{color:var(--dm-pink);font-weight:700}
+
+/* ============ Small-screen tuning ============ */
+@media(max-width:760px){
+  /* Center-align mobile layout */
+  .hero .wrap,.hero-eyebrow,.hero-title,.hero-deck{text-align:center}
+  .hero-eyebrow{display:inline-flex}
+  .hero-title{text-align:center}
+  .hero-deck{margin-left:auto;margin-right:auto}
+  .hero-meta-grid{margin-left:auto;margin-right:auto}
+
+  .sec-head{grid-template-columns:1fr;text-align:center;justify-items:center;gap:12px;margin-bottom:32px}
+  .sec-num{display:inline-block}
+  .intro-deck{text-align:center;margin-left:auto;margin-right:auto}
+
+  /* Cards: header centered, body left-aligned for readability */
+  .ctx-card,.deliv,.ms,.tl-card,.step-card{text-align:center}
+  .deliv-head{flex-direction:column;align-items:center;text-align:center;gap:14px}
+  .deliv-list{text-align:left;max-width:360px;margin-left:auto;margin-right:auto}
+  .deliv-list li{justify-content:flex-start}
+  .scope-note{text-align:left}
+  .ws-head{flex-direction:column;align-items:center;text-align:center;gap:12px}
+  .ws-cadence{text-align:center}
+  .ms-d{text-align:center}
+  .bv-title,.bv-deck,.bv-eyebrow{text-align:center}
+  .bv-phase{text-align:center}
+  .inv-card.feature{text-align:center}
+  .inv-amount{justify-content:center}
+  .inv-h{text-align:center}
+  .trigger-list li{text-align:left}
+  .foot-grid > *{text-align:center}
+  .foot-list li{text-align:center}
+  .am-wrap{text-align:center}
+  .am-body{text-align:center}
+  .am-note{margin-left:auto;margin-right:auto}
+
+  /* Timeline: hide horizontal, show vertical */
+  .timeline-wrap{display:none}
+  .timeline-vertical{display:block}
+  .tl-cards{display:none}
+
+  /* Workstream cadence becomes inline */
+  .ws-head{padding-bottom:14px}
+
+  /* Hero × stays clean */
+  .masthead{font-size:10px}
+  .masthead-row > span:last-child{display:none}
+  .hero-meta-cell{padding:14px 16px;text-align:left}
+  .hero-meta-val{font-size:17px}
+}
+@media(max-width:480px){
+  .foot-bottom{justify-content:center;text-align:center}
+  .hero-title{font-size:clamp(38px,12vw,56px)}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="dm-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD24A"/>
+      <stop offset="35%" stop-color="#F59425"/>
+      <stop offset="65%" stop-color="#E91E63"/>
+      <stop offset="100%" stop-color="#4A1E70"/>
+    </linearGradient>
+    <linearGradient id="rn-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD24A"/>
+      <stop offset="50%" stop-color="#F59425"/>
+      <stop offset="100%" stop-color="#E91E63"/>
+    </linearGradient>
+    <symbol id="dm-logo" viewBox="0 0 48 48">
+      <path d="M8 6 H22 C32 6 38 14 38 24 C38 34 32 42 22 42 H8 V6 Z M14 12 V36 H22 C28 36 32 31 32 24 C32 17 28 12 22 12 H14 Z" fill="url(#dm-grad)"/>
+      <path d="M30 18 L36 30 L42 18" fill="none" stroke="url(#dm-grad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Top scroll-progress bar -->
+<div class="scroll-progress" aria-hidden="true">
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+</div>
+
+<!-- Right-side reading tracker -->
+<aside class="reading-now" id="reading-now" aria-label="Section progress tracker">
+  <div class="reading-now-title">Reading now</div>
+  <ol class="reading-now-list">
+    <li data-rn-target="#sec-01">
+      <a href="#sec-01">
+        <span class="rn-num">01</span>
+        <span class="rn-text">Context</span>
+        <span class="rn-ring" aria-hidden="true"><svg viewBox="0 0 22 22"><circle class="rn-ring-bg" cx="11" cy="11" r="9"/><circle class="rn-ring-fg" cx="11" cy="11" r="9"/></svg></span>
+      </a>
+    </li>
+    <li data-rn-target="#sec-02">
+      <a href="#sec-02">
+        <span class="rn-num">02</span>
+        <span class="rn-text">Deliverables</span>
+        <span class="rn-ring" aria-hidden="true"><svg viewBox="0 0 22 22"><circle class="rn-ring-bg" cx="11" cy="11" r="9"/><circle class="rn-ring-fg" cx="11" cy="11" r="9"/></svg></span>
+      </a>
+    </li>
+    <li data-rn-target="#sec-03">
+      <a href="#sec-03">
+        <span class="rn-num">03</span>
+        <span class="rn-text">Milestones</span>
+        <span class="rn-ring" aria-hidden="true"><svg viewBox="0 0 22 22"><circle class="rn-ring-bg" cx="11" cy="11" r="9"/><circle class="rn-ring-fg" cx="11" cy="11" r="9"/></svg></span>
+      </a>
+    </li>
+    <li data-rn-target="#sec-04">
+      <a href="#sec-04">
+        <span class="rn-num">04</span>
+        <span class="rn-text">Timeline</span>
+        <span class="rn-ring" aria-hidden="true"><svg viewBox="0 0 22 22"><circle class="rn-ring-bg" cx="11" cy="11" r="9"/><circle class="rn-ring-fg" cx="11" cy="11" r="9"/></svg></span>
+      </a>
+    </li>
+    <li data-rn-target="#sec-05">
+      <a href="#sec-05">
+        <span class="rn-num">05</span>
+        <span class="rn-text">Business value timeline</span>
+        <span class="rn-ring" aria-hidden="true"><svg viewBox="0 0 22 22"><circle class="rn-ring-bg" cx="11" cy="11" r="9"/><circle class="rn-ring-fg" cx="11" cy="11" r="9"/></svg></span>
+      </a>
+    </li>
+    <li data-rn-target="#sec-06">
+      <a href="#sec-06">
+        <span class="rn-num">06</span>
+        <span class="rn-text">Investment</span>
+        <span class="rn-ring" aria-hidden="true"><svg viewBox="0 0 22 22"><circle class="rn-ring-bg" cx="11" cy="11" r="9"/><circle class="rn-ring-fg" cx="11" cy="11" r="9"/></svg></span>
+      </a>
+    </li>
+    <li data-rn-target="#sec-07">
+      <a href="#sec-07">
+        <span class="rn-num">07</span>
+        <span class="rn-text">Next steps</span>
+        <span class="rn-ring" aria-hidden="true"><svg viewBox="0 0 22 22"><circle class="rn-ring-bg" cx="11" cy="11" r="9"/><circle class="rn-ring-fg" cx="11" cy="11" r="9"/></svg></span>
+      </a>
+    </li>
+    <li data-rn-target="#sec-08">
+      <a href="#sec-08">
+        <span class="rn-num">08</span>
+        <span class="rn-text">Account manager</span>
+        <span class="rn-ring" aria-hidden="true"><svg viewBox="0 0 22 22"><circle class="rn-ring-bg" cx="11" cy="11" r="9"/><circle class="rn-ring-fg" cx="11" cy="11" r="9"/></svg></span>
+      </a>
+    </li>
+  </ol>
+</aside>
+
+<header class="masthead">
+  <div class="wrap masthead-row">
+    <span class="masthead-logo">
+      <img class="dm-mark" src="dm-logo-positive.svg" alt="Digital Movement UK" />
+      <span class="divider-mono"></span> <span data-i18n="masthead.title">CEx Projektplan</span>
+    </span>
+    <span data-i18n="masthead.subtitle">Executive Summary <span class="divider-mono"></span> v1.0</span>
+    <div class="lang-toggle" role="group" aria-label="Sprache wählen">
+      <button class="lang-opt" type="button" data-lang="de" aria-pressed="true">DE</button>
+      <button class="lang-opt" type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <span class="hero-blob b1"></span>
+  <span class="hero-blob b2"></span>
+  <div class="wrap">
+    <span class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Executive Summary — Project Plan</span>
+    <h1 class="hero-title">
+      CEx <span class="x">×</span><br>
+      <span class="yellow">Digital</span> Movement<br>
+      UK.
+    </h1>
+    <p class="hero-deck">
+      A focused 7-week build to put CEx in front of buyers on Google and AI Search — a conversion-optimised website paired with a programmatic SEO page system that compounds in value month after month.
+    </p>
+    <div class="hero-meta-grid">
+      <div class="hero-meta-cell">
+        <div class="hero-meta-label">Project Start</div>
+        <div class="hero-meta-val">25 May 2026<small>Kick-off week</small></div>
+      </div>
+      <div class="hero-meta-cell">
+        <div class="hero-meta-label">Go-Live Trigger</div>
+        <div class="hero-meta-val">20 July 2026<small>SEO pages submitted</small></div>
+      </div>
+      <div class="hero-meta-cell">
+        <div class="hero-meta-label">Engagement</div>
+        <div class="hero-meta-val">6 Months<small>From go-live</small></div>
+      </div>
+      <div class="hero-meta-cell">
+        <div class="hero-meta-label">Retainer</div>
+        <div class="hero-meta-val">€1,500 / mo<small>Direct Debit, post-delivery</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 01 CONTEXT ============ -->
+<section class="section-rule" id="sec-01">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">01 — Context</span>
+      <h2 class="sec-title">Why we're <em>doing this.</em></h2>
+    </div>
+    <p class="intro-deck reveal d1">
+      CEx is a young start-up founded by <strong>Johannes and Hannes</strong>. The founders are building toward sustainable, repeatable lead acquisition — not one-off campaigns, not paid-media dependence. Digital Movement UK's mandate is to give CEx the digital surface area to be <strong>found, trusted, and chosen</strong> across both Google Search and the new generation of AI-powered search.
+    </p>
+    <div class="context-grid">
+      <div class="ctx-card reveal d1">
+        <div class="ctx-num">01.1 — Who</div>
+        <div class="ctx-h">A young start-up with founder ambition</div>
+        <p class="ctx-body">Johannes and Hannes are scaling CEx from early traction toward predictable growth. The brief is clear: build the asset, then let it compound.</p>
+      </div>
+      <div class="ctx-card reveal d2">
+        <div class="ctx-num">01.2 — What</div>
+        <div class="ctx-h">Sustainable lead acquisition</div>
+        <p class="ctx-body">Not ad-spend dependence. A web property that <strong>earns</strong> attention through search visibility and converts that attention into qualified enquiries.</p>
+      </div>
+      <div class="ctx-card reveal d3">
+        <div class="ctx-num">01.3 — Where</div>
+        <div class="ctx-h">Google Search + AI Search</div>
+        <p class="ctx-body">Built for both — classic SERP ranking and the citation-driven retrieval of AI assistants like ChatGPT, Perplexity, and Gemini.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 DELIVERABLES ============ -->
+<section class="section-rule" id="sec-02">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">02 — Deliverables</span>
+      <h2 class="sec-title">Two assets, <em>one system.</em></h2>
+    </div>
+    <p class="intro-deck reveal d1">
+      The engagement produces two interlocking assets. The <strong>website</strong> is the conversion surface — the place a buyer lands and decides. The <strong>SEO service pages</strong> are the acquisition engine — the pages that bring qualified, intent-matched traffic to that surface.
+    </p>
+    <div class="deliv-grid">
+      <div class="deliv reveal d1">
+        <div class="deliv-head">
+          <div class="deliv-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="2" y1="7" x2="22" y2="7"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div>
+            <div class="deliv-label">Deliverable A</div>
+            <div class="deliv-title">Full Website</div>
+          </div>
+        </div>
+        <p class="deliv-body">A conversion-optimised company website built on <strong>WordPress</strong>, covering the full stack — public-facing pages, design system, and the backend that makes the site fast, indexable, and easy for CEx to extend later without developer dependency.</p>
+        <ul class="deliv-list">
+          <li><span class="dot"></span><span><strong>Frontend</strong>Public pages — Home, Services, About Us, Contact. Responsive, accessible, conversion-tuned.</span></li>
+          <li><span class="dot"></span><span><strong>Backend on WordPress</strong>Content management, contact form handling, analytics + tag layer, hosting and DNS — set up so CEx can update copy independently.</span></li>
+          <li><span class="dot"></span><span><strong>Brand & design system</strong>Visual language, type, colour, components — the foundation everything else extends from.</span></li>
+          <li><span class="dot"></span><span><strong>Performance + SEO basics</strong>Core Web Vitals, semantic markup, schema, indexation hygiene, AI-search structured data.</span></li>
+        </ul>
+      </div>
+      <div class="deliv b reveal d2">
+        <div class="deliv-head">
+          <div class="deliv-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/><path d="M8 11h6 M11 8v6"/></svg>
+          </div>
+          <div>
+            <div class="deliv-label">Deliverable B</div>
+            <div class="deliv-title">SEO Service Pages</div>
+          </div>
+        </div>
+        <p class="deliv-body">A library of programmatic service pages — each one engineered to rank for a specific buying-intent query and to convert that visitor into an enquiry. The acquisition engine that runs in the background, 24/7.</p>
+        <ul class="deliv-list">
+          <li><span class="dot"></span><span><strong>Research-led</strong>Topic, intent, and competitive analysis grounded in real Semrush + SERP data.</span></li>
+          <li><span class="dot"></span><span><strong>Page architecture</strong>Sitemap and internal-link tree designed for authority flow and crawl efficiency.</span></li>
+          <li><span class="dot"></span><span><strong>Hand-written copy — no AI</strong>Long-form, expertise-signalled editorial written by humans. Google's E-E-A-T signals reward genuine authorship, and we don't dilute the asset with AI filler.</span></li>
+          <li><span class="dot"></span><span><strong>German keywords + meta data</strong>Keyword and meta data layer engineered for German-language search and translated into CEx's market language.</span></li>
+          <li><span class="dot"></span><span><strong>WordPress implementation</strong>Pages built, internal links wired, schema validated, sitemap submitted to Google Search Console.</span></li>
+        </ul>
+        <div class="scope-note"><strong>Exact page count.</strong> Confirmed during the SEO Strategy meeting (next Tuesday) once the priority services CEx wants to be found for are agreed. Typical range: <strong>6–12 core pages</strong> in the initial submission.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 MILESTONES ============ -->
+<section class="section-rule" id="sec-03" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">03 — Milestones</span>
+      <h2 class="sec-title">Three <em>workstreams.</em></h2>
+    </div>
+    <p class="intro-deck reveal d1">
+      The build runs as three coordinated workstreams. <strong>A</strong> and <strong>B</strong> are the setup deliverables — finite, dated, signed off. <strong>C</strong> is the ongoing operating cadence once the system is live.
+    </p>
+
+    <div class="ws-stack">
+
+      <!-- Workstream A -->
+      <div class="ws reveal">
+        <div class="ws-head">
+          <div>
+            <span class="ws-tag"><span class="ws-tag-dot"></span>Workstream A · Setup</span>
+            <h3 class="ws-title">Website Build</h3>
+          </div>
+          <div class="ws-cadence"><strong>~6 weeks</strong>25 May → 8 July 2026</div>
+        </div>
+        <div class="ms-grid">
+          <div class="ms">
+            <div class="ms-id">A.1</div>
+            <div class="ms-h">Public-facing copy</div>
+            <div class="ms-d">Services, About Us, Contact. Voice, structure, and conversion logic locked before pixels are pushed.</div>
+          </div>
+          <div class="ms">
+            <div class="ms-id">A.2</div>
+            <div class="ms-h">Design prototype</div>
+            <div class="ms-d">Interactive design system + key page layouts. One round of structured feedback, then sign-off.</div>
+          </div>
+          <div class="ms">
+            <div class="ms-id">A.3</div>
+            <div class="ms-h">WordPress build &amp; Go-Live</div>
+            <div class="ms-d">Production build in WordPress, QA pass, indexation primer. Site live on CEx domain — milestone gate for invoicing.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Workstream B -->
+      <div class="ws b reveal d1">
+        <div class="ws-head">
+          <div>
+            <span class="ws-tag"><span class="ws-tag-dot"></span>Workstream B · Setup</span>
+            <h3 class="ws-title">SEO Pages</h3>
+          </div>
+          <div class="ws-cadence"><strong>~8 weeks</strong>25 May → 20 July 2026</div>
+        </div>
+        <div class="ms-grid">
+          <div class="ms">
+            <div class="ms-id">B.1</div>
+            <div class="ms-h">Strategy &amp; SEO research</div>
+            <div class="ms-d">Strategy meeting locks the Key Services CEx wants to be found for. Keyword landscape, intent map, competitor gap, and opportunity sizing follow — the brief that drives every page choice.</div>
+          </div>
+          <div class="ms">
+            <div class="ms-id">B.2</div>
+            <div class="ms-h">Page guide + keywords &amp; meta</div>
+            <div class="ms-d">SEO page tree (parent / child sitemap + internal linking). German-language keyword and meta-data layer engineered for each priority service. Sign-off gate.</div>
+          </div>
+          <div class="ms">
+            <div class="ms-id">B.3</div>
+            <div class="ms-h">Hand-written copy — no AI</div>
+            <div class="ms-d">Long-form editorial written by humans (not AI) — expertise-signalled, E-E-A-T compliant, paired with a repeatable design template that every page inherits.</div>
+          </div>
+          <div class="ms">
+            <div class="ms-id">B.4</div>
+            <div class="ms-h">WordPress build + submission</div>
+            <div class="ms-d">Pages built in WordPress, keywords + meta audited, schema validated, sitemap submitted to Google Search Console, AI-search readiness verified. Milestone gate.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Workstream C -->
+      <div class="ws c reveal d2">
+        <div class="ws-head">
+          <div>
+            <span class="ws-tag"><span class="ws-tag-dot"></span>Workstream C · Ongoing</span>
+            <h3 class="ws-title">Reporting</h3>
+          </div>
+          <div class="ws-cadence"><strong>Monthly</strong>Starts month 1 post go-live</div>
+        </div>
+        <div class="ms-grid">
+          <div class="ms">
+            <div class="ms-id">C.1</div>
+            <div class="ms-h">Indexation + ranking</div>
+            <div class="ms-d">Which pages are indexed, current SERP positions, week-on-week movement on tracked keywords.</div>
+          </div>
+          <div class="ms">
+            <div class="ms-id">C.2</div>
+            <div class="ms-h">Traffic + behaviour</div>
+            <div class="ms-d">Organic sessions, AI-search referrals, on-page engagement, conversion funnel diagnostics.</div>
+          </div>
+          <div class="ms">
+            <div class="ms-id">C.3</div>
+            <div class="ms-h">Enquiry pipeline</div>
+            <div class="ms-d">Form fills, source attribution, lead quality signals. The number that actually matters.</div>
+          </div>
+          <div class="ms">
+            <div class="ms-id">C.4</div>
+            <div class="ms-h">Next-month plan</div>
+            <div class="ms-d">Where we're doubling down, what we're fixing, which new pages we're adding to the queue.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 TIMELINE ============ -->
+<section class="section-rule" id="sec-04">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">04 — Timeline</span>
+      <h2 class="sec-title">From kick-off <em>to first collection.</em></h2>
+    </div>
+    <p class="intro-deck reveal d1">
+      Project starts 25 May. Website goes live 8 July. SEO pages are submitted to Google on 20 July. That date — <strong>B.4 sign-off</strong> — is the trigger that opens the 6-month engagement clock and the first GoCardless Direct Debit collection.
+    </p>
+
+    <div class="timeline-wrap reveal">
+      <svg class="timeline-svg" viewBox="0 0 1200 220" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <defs>
+          <linearGradient id="tl-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FFD24A"/>
+            <stop offset="30%" stop-color="#F59425"/>
+            <stop offset="65%" stop-color="#E91E63"/>
+            <stop offset="100%" stop-color="#4A1E70"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Rail -->
+        <line class="tl-rail" x1="80" y1="130" x2="1120" y2="130"/>
+        <!-- Animated path -->
+        <line class="tl-path" x1="80" y1="130" x2="1120" y2="130"/>
+
+        <!-- Nodes + labels -->
+        <!-- N1: 25 May -->
+        <g class="tl-node n1">
+          <circle cx="120" cy="130" r="10" fill="#FFD24A" stroke="#1A0E2E" stroke-width="2"/>
+          <text class="tl-label" x="120" y="80" text-anchor="middle">Kick-off</text>
+          <text class="tl-date" x="120" y="100" text-anchor="middle">25 May</text>
+          <text class="tl-event" x="120" y="168" text-anchor="middle">Project start</text>
+        </g>
+        <!-- N2: 8 July -->
+        <g class="tl-node n2">
+          <circle cx="500" cy="130" r="10" fill="#F59425" stroke="#1A0E2E" stroke-width="2"/>
+          <text class="tl-label" x="500" y="80" text-anchor="middle">A.3 — Website</text>
+          <text class="tl-date" x="500" y="100" text-anchor="middle">8 July</text>
+          <text class="tl-event" x="500" y="168" text-anchor="middle">Full website goes live</text>
+        </g>
+        <!-- N3: 20 July -->
+        <g class="tl-node n3">
+          <circle cx="700" cy="130" r="12" fill="#E91E63" stroke="#1A0E2E" stroke-width="2"/>
+          <circle cx="700" cy="130" r="20" fill="none" stroke="#E91E63" stroke-width="1.5" opacity="0.35"/>
+          <text class="tl-label" x="700" y="80" text-anchor="middle">B.4 — SEO submitted</text>
+          <text class="tl-date" x="700" y="100" text-anchor="middle">20 July</text>
+          <text class="tl-event" x="700" y="168" text-anchor="middle">Direct Debit + 6-month clock starts</text>
+        </g>
+        <!-- N4: 20 Jan -->
+        <g class="tl-node n4">
+          <circle cx="1080" cy="130" r="10" fill="#4A1E70" stroke="#1A0E2E" stroke-width="2"/>
+          <text class="tl-label" x="1080" y="80" text-anchor="middle">End of term</text>
+          <text class="tl-date" x="1080" y="100" text-anchor="middle">20 Jan 2027</text>
+          <text class="tl-event" x="1080" y="168" text-anchor="middle">Renewal review</text>
+        </g>
+
+        <!-- Phase bracket: 6-month period -->
+        <g opacity="0.55">
+          <line x1="700" y1="195" x2="1080" y2="195" stroke="#E91E63" stroke-width="1.5" stroke-dasharray="3 4"/>
+          <text id="tl-bracket-engagement" class="tl-label" x="890" y="212" text-anchor="middle" fill="#E91E63">6-month engagement</text>
+        </g>
+        <g opacity="0.55">
+          <line x1="120" y1="195" x2="700" y2="195" stroke="#6B5F7A" stroke-width="1.5" stroke-dasharray="3 4"/>
+          <text id="tl-bracket-setup" class="tl-label" x="410" y="212" text-anchor="middle" fill="#6B5F7A">Setup phase — unbilled</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Vertical timeline (mobile only) -->
+    <div class="timeline-vertical reveal">
+      <div class="tlv-rail"><div class="tlv-fill"></div></div>
+      <div class="tlv-node tlv-n1">
+        <div class="tlv-dot" style="background:#FFD24A"></div>
+        <div class="tlv-content">
+          <div class="tlv-label">Kick-off</div>
+          <div class="tlv-date">25 May 2026</div>
+          <div class="tlv-event">Project start — both workstreams begin</div>
+        </div>
+      </div>
+      <div class="tlv-node tlv-n2">
+        <div class="tlv-dot" style="background:#F59425"></div>
+        <div class="tlv-content">
+          <div class="tlv-label">A.3 — Website</div>
+          <div class="tlv-date">8 July 2026</div>
+          <div class="tlv-event">Full website goes live</div>
+        </div>
+      </div>
+      <div class="tlv-node tlv-n3">
+        <div class="tlv-dot" style="background:#E91E63"></div>
+        <div class="tlv-content">
+          <div class="tlv-label">B.4 — SEO submitted</div>
+          <div class="tlv-date">20 July 2026</div>
+          <div class="tlv-event"><strong>First Direct Debit + 6-month clock starts</strong></div>
+        </div>
+      </div>
+      <div class="tlv-node tlv-n4">
+        <div class="tlv-dot" style="background:#4A1E70"></div>
+        <div class="tlv-content">
+          <div class="tlv-label">End of term</div>
+          <div class="tlv-date">20 Jan 2027</div>
+          <div class="tlv-event">Renewal review</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-cards">
+      <div class="tl-card reveal d1">
+        <div class="when">25 May 2026</div>
+        <div class="what">Project Start</div>
+        <div class="why">Kick-off + briefing. Workstreams A and B begin in parallel.</div>
+      </div>
+      <div class="tl-card reveal d2">
+        <div class="when">8 July 2026</div>
+        <div class="what">Website Live (A.3)</div>
+        <div class="why">~6.5 weeks from kick-off. New CEx site live on production domain.</div>
+      </div>
+      <div class="tl-card reveal d3">
+        <div class="when">20 July 2026</div>
+        <div class="what">SEO Submission (B.4)</div>
+        <div class="why">SEO pages live, sitemap submitted to Google. <strong>First Direct Debit collected. 6-month clock starts.</strong></div>
+      </div>
+      <div class="tl-card reveal d4">
+        <div class="when">20 Jan 2027</div>
+        <div class="what">End of Initial Term</div>
+        <div class="why">Renewal conversation based on the ranking + enquiry data we will have by then.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 BUSINESS VALUE TIMELINE ============ -->
+<section class="section-rule" id="sec-05" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">05 — Business Value Timeline</span>
+      <h2 class="sec-title">When the asset <em>starts paying.</em></h2>
+    </div>
+    <p class="intro-deck reveal d1">
+      SEO is a compounding asset, not a campaign. Below is the realistic trajectory for a <strong>new domain</strong> — slightly longer than an established site, because Google needs time to assign authority before pages begin ranking. The shape is consistent; the pace bends in your favour after month 6.
+    </p>
+
+    <div class="bv-wrap reveal">
+      <div class="bv-eyebrow">Projected Value Curve · 12+ months from go-live</div>
+      <h3 class="bv-title">From foundation to top-performance — the four phases of an SEO engine maturing.</h3>
+      <p class="bv-deck">The curve below shows the qualitative arc of expected business value. The early months are about <em>building the asset</em>; the later months are about <em>compounding</em> it. Real numbers will be calibrated against the SEO research output (B.1).</p>
+
+      <div class="bv-chart">
+        <svg viewBox="0 0 1100 320" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <defs>
+            <linearGradient id="bv-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#FFD24A"/>
+              <stop offset="35%" stop-color="#F59425"/>
+              <stop offset="70%" stop-color="#E91E63"/>
+              <stop offset="100%" stop-color="#FFD24A"/>
+            </linearGradient>
+            <linearGradient id="bv-fill-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FFD24A" stop-opacity="0.4"/>
+              <stop offset="100%" stop-color="#E91E63" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Phase dividers -->
+          <line class="bv-phase-line" x1="275" y1="30" x2="275" y2="280"/>
+          <line class="bv-phase-line" x1="550" y1="30" x2="550" y2="280"/>
+          <line class="bv-phase-line" x1="825" y1="30" x2="825" y2="280"/>
+
+          <!-- Phase labels -->
+          <text id="bv-phase-1" class="bv-phase-label" x="137" y="50" text-anchor="middle">Foundation</text>
+          <text id="bv-phase-2" class="bv-phase-label" x="412" y="50" text-anchor="middle">Growth</text>
+          <text id="bv-phase-3" class="bv-phase-label" x="687" y="50" text-anchor="middle">Performance</text>
+          <text id="bv-phase-4" class="bv-phase-label" x="965" y="50" text-anchor="middle">Top Performance</text>
+
+          <!-- Baseline -->
+          <line x1="60" y1="270" x2="1060" y2="270" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+
+          <!-- Area fill -->
+          <path class="bv-fill" d="M 60 270 L 60 265 C 130 262, 200 258, 275 250 C 350 235, 425 210, 550 175 C 650 145, 730 115, 825 88 C 920 70, 990 62, 1060 60 L 1060 270 Z"/>
+
+          <!-- Curve -->
+          <path class="bv-curve" d="M 60 265 C 130 262, 200 258, 275 250 C 350 235, 425 210, 550 175 C 650 145, 730 115, 825 88 C 920 70, 990 62, 1060 60"/>
+
+          <!-- Phase milestone dots -->
+          <circle class="bv-dot d1" cx="275" cy="250" r="7"/>
+          <circle class="bv-dot d2" cx="550" cy="175" r="8"/>
+          <circle class="bv-dot d3" cx="825" cy="88" r="9"/>
+          <circle class="bv-dot d4" cx="1040" cy="62" r="10" fill="#FF2D7A"/>
+
+          <!-- X axis labels -->
+          <text class="bv-axis" x="60" y="298" text-anchor="middle">M0</text>
+          <text class="bv-axis" x="275" y="298" text-anchor="middle">M3</text>
+          <text class="bv-axis" x="550" y="298" text-anchor="middle">M6</text>
+          <text class="bv-axis" x="825" y="298" text-anchor="middle">M9</text>
+          <text class="bv-axis" x="1060" y="298" text-anchor="middle">M12+</text>
+
+          <!-- Y axis label -->
+          <text id="bv-y-axis" class="bv-axis" x="60" y="65" text-anchor="middle" transform="rotate(-90 60 65)">Enquiries</text>
+        </svg>
+      </div>
+
+      <div class="bv-phases">
+        <div class="bv-phase reveal d1">
+          <div class="bv-phase-num">Phase 01</div>
+          <div class="bv-phase-h">Foundation</div>
+          <div class="bv-phase-range">Months 1 — 3</div>
+          <div class="bv-phase-d">Google assigns authority to the new domain. Submitted SEO pages move through crawl and indexation. The asset is being built, not yet earning.</div>
+        </div>
+        <div class="bv-phase reveal d2">
+          <div class="bv-phase-num">Phase 02</div>
+          <div class="bv-phase-h">Growth</div>
+          <div class="bv-phase-range">Months 3 — 6</div>
+          <div class="bv-phase-d">First rankings appear. First enquiries follow — typically months 5–6. The curve starts bending upward as Google trusts more of the site.</div>
+        </div>
+        <div class="bv-phase reveal d3">
+          <div class="bv-phase-num">Phase 03</div>
+          <div class="bv-phase-h">Performance</div>
+          <div class="bv-phase-range">Months 6 — 12</div>
+          <div class="bv-phase-d">Pages climb the SERP. Enquiry volume grows month-over-month as more terms break into page 1 territory. The engine starts paying for itself.</div>
+        </div>
+        <div class="bv-phase reveal d4">
+          <div class="bv-phase-num">Phase 04</div>
+          <div class="bv-phase-h">Top Performance</div>
+          <div class="bv-phase-range">Months 12 +</div>
+          <div class="bv-phase-d">A growing share of SEO pages sit in top-10 positions. Compounding kicks in — each new page added now lands on a domain Google already trusts.</div>
+        </div>
+      </div>
+
+      <div class="bv-foot">
+        <strong>Note · </strong>New-website effect. A fresh domain typically extends each ranking window by <strong>2–3 months</strong> versus an established site. The trajectory above already accounts for this.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 INVESTMENT ============ -->
+<section class="section-rule" id="sec-06">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">06 — Investment</span>
+      <h2 class="sec-title">A retainer that <em>only starts when you do.</em></h2>
+    </div>
+    <p class="intro-deck reveal d1">
+      The commercial structure is deliberately simple — and front-loaded in CEx's favour. The full setup is delivered <strong>before</strong> the engagement clock starts. Billing only begins once both the website and the SEO pages are live.
+    </p>
+
+    <div class="inv-grid">
+      <div class="inv-card feature reveal d1">
+        <div class="inv-label">Monthly Retainer</div>
+        <div class="inv-amount"><span class="cur">€</span><span class="counter" data-target="1500">1,500</span><span class="per">/ month</span></div>
+        <div class="inv-sub">6-month initial term · Direct Debit, monthly</div>
+        <div class="inv-row"><span class="k">Term length</span><span class="v">6 months</span></div>
+        <div class="inv-row"><span class="k">Payment method</span><span class="v">Direct Debit via GoCardless</span></div>
+        <div class="inv-row"><span class="k">First collection</span><span class="v">After A.3 + B.4 sign-off</span></div>
+        <div class="inv-row tot"><span class="k">Total over initial term</span><span class="v">€9,000</span></div>
+      </div>
+
+      <div class="inv-card reveal d2">
+        <div class="inv-label">First Collection Triggers</div>
+        <div class="inv-h">Two milestones, both required</div>
+        <ul class="trigger-list">
+          <li>
+            <span class="tag">A.3</span>
+            <span><strong>Full website delivered</strong>Frontend + backend live on the CEx production domain. QA pass complete. Site is publicly accessible.</span>
+          </li>
+          <li>
+            <span class="tag">B.4</span>
+            <span><strong>SEO submission complete</strong>Pages published, sitemap submitted to Google Search Console, AI-search readiness verified.</span>
+          </li>
+        </ul>
+        <div class="inv-note">
+          <strong>What this means in practice.</strong> Digital Movement UK absorbs roughly <strong>8 weeks of setup work</strong> before any payment is collected. A GoCardless Direct Debit mandate is set up at contract signing for administrative reasons — but the first collection only fires once both A.3 (website live) and B.4 (SEO submitted to Google) are signed off. CEx pays nothing until both are in your hands.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 NEXT STEPS ============ -->
+<section class="section-rule" id="sec-07" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">07 — Next Steps</span>
+      <h2 class="sec-title">From this page <em>to first ranking.</em></h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal d1">
+        <div class="n">01</div>
+        <div class="h">Review &amp; align</div>
+        <div class="d">Johannes &amp; Hannes review this summary. Any tweaks, additions, or scope clarifications get folded in before contract.</div>
+      </div>
+      <div class="step-card reveal d2">
+        <div class="n">02</div>
+        <div class="h">Contract</div>
+        <div class="d">Digital Movement UK issues the contract reflecting this plan — same scope, same commercials, same milestone gates.</div>
+      </div>
+      <div class="step-card reveal d3">
+        <div class="n">03</div>
+        <div class="h">Kick-off + strategy — 26 May</div>
+        <div class="d">Joint session on Tuesday 26 May. We lock the <strong>Key Services</strong> CEx wants to be found for — and with that, the exact SEO-page scope. Everything in Workstream B downstream depends on this single decision.</div>
+      </div>
+      <div class="step-card reveal d4">
+        <div class="n">04</div>
+        <div class="h">Build mode</div>
+        <div class="d">Website (Workstream A) and SEO pages (Workstream B) run in parallel. Weekly check-ins, structured sign-offs at A.2 and B.2, delivery on the dates above.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 ACCOUNT MANAGER ============ -->
+<section class="section-rule" id="sec-08">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">08 — Your Account Manager</span>
+      <h2 class="sec-title">One point <em>of contact.</em></h2>
+    </div>
+    <p class="intro-deck reveal d1">
+      Throughout the engagement you have a single, senior point of contact at Digital Movement UK — for briefings, sign-offs, escalations, and the running conversation about what the data is telling us.
+    </p>
+
+    <div class="am-wrap reveal d1">
+      <div class="am-photo-wrap">
+        <div class="am-photo">
+          <img src="raoul-founder.png" alt="Raoul (Alex) Müller — Digital Movement UK Founder" loading="lazy">
+        </div>
+        <div class="am-photo-frame"></div>
+      </div>
+      <div class="am-body">
+        <div class="am-eyebrow">Your account lead</div>
+        <h3 class="am-name">Raoul (Alex) Müller</h3>
+        <div class="am-role">Founder · Digital Movement UK</div>
+
+        <div class="am-channels">
+          <a class="am-ch" href="mailto:alex@digitalmovement.uk">
+            <span class="am-ch-label">
+              <span class="am-ch-icon" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              </span>
+              Email
+            </span>
+            <span class="am-ch-val">alex@digitalmovement.uk</span>
+          </a>
+          <a class="am-ch" href="tel:+4917682360647">
+            <span class="am-ch-label">
+              <span class="am-ch-icon" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z"/></svg>
+              </span>
+              Phone
+            </span>
+            <span class="am-ch-val">+49 176 82360647</span>
+          </a>
+          <a class="am-ch" href="https://wa.me/4917623296439" target="_blank" rel="noopener">
+            <span class="am-ch-label">
+              <span class="am-ch-icon" aria-hidden="true">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.8-.9-2.1-1-.3-.1-.5-.15-.7.15-.2.3-.8 1-.95 1.2-.2.2-.35.2-.65.05-.3-.15-1.25-.45-2.4-1.45-.9-.8-1.5-1.75-1.65-2.05-.2-.3-.05-.45.1-.6.15-.15.3-.35.45-.55.15-.2.2-.3.3-.5.1-.2.05-.4-.05-.55-.1-.15-.7-1.7-1-2.3-.25-.6-.55-.5-.7-.5h-.6c-.2 0-.55.05-.8.4-.3.3-1.05 1.05-1.05 2.6 0 1.5 1.1 2.95 1.25 3.15.15.2 2.15 3.3 5.25 4.55.7.3 1.3.45 1.75.6.75.25 1.4.2 1.95.1.6-.1 1.8-.75 2.05-1.45.25-.7.25-1.3.2-1.45-.1-.15-.3-.25-.6-.4ZM12 2C6.5 2 2 6.5 2 12c0 1.8.45 3.5 1.35 5L2 22l5.15-1.35c1.4.8 3.05 1.25 4.85 1.25 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg>
+              </span>
+              WhatsApp
+            </span>
+            <span class="am-ch-val">+49 176 23296439</span>
+          </a>
+        </div>
+        <p class="am-note">Office hours are Monday–Friday, 09:00–18:00 CET. For urgent matters outside hours, WhatsApp is the fastest channel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-h">From the desk of</div>
+        <img class="dm-mark-foot" src="dm-logo-negative.svg" alt="Digital Movement UK" />
+        <p class="foot-body">A specialist studio building conversion-led websites and SEO engines for ambitious operators. We build the asset, then let it compound. <br><br>This summary is the working blueprint for the CEx engagement. Anything unclear, anything you'd like reframed — we'd rather hear it now than at contract.</p>
+      </div>
+      <div>
+        <div class="foot-h">Document</div>
+        <ul class="foot-list">
+          <li><strong>Reference</strong>CEx-PP-v1.0 · May 2026</li>
+          <li><strong>Status</strong>Pre-contract executive summary</li>
+          <li><strong>Author</strong>Digital Movement UK</li>
+          <li><strong>For</strong>Johannes &amp; Hannes, CEx</li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Get in touch</div>
+        <ul class="foot-list">
+          <li><strong>Email</strong><a href="mailto:alex@digitalmovement.uk">alex@digitalmovement.uk</a></li>
+          <li><strong>Phone / WhatsApp</strong>+49 176 82360647</li>
+          <li><strong>Web</strong>digitalmovement.uk</li>
+          <li><strong>Next step</strong>Sign-off on this plan → contract</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Digital Movement UK · All rights reserved</span>
+      <span>CEx Project Plan v1.0 <span class="divider-mono"></span> Confidential</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   i18n — bilingual content swap (DE default, EN secondary)
+   ----------------------------------------------------------------
+   Selector-based: each entry maps a CSS selector to the HTML that
+   should occupy the matching element when that language is active.
+   No data-i18n attributes on individual elements — the mapping
+   lives here in one place. innerHTML is used because some strings
+   include inline <strong>/<em>/<span>/<br> formatting.
+============================================================ */
+(function(){
+  const STORE_KEY = 'cex-projektplan-lang';
+
+  // Helper to keep the mapping table readable
+  const t = (sel, html) => [sel, html];
+
+  const i18n = {
+    de: [
+      // Masthead
+      t('[data-i18n="masthead.title"]', 'CEx Projektplan'),
+      t('[data-i18n="masthead.subtitle"]', 'Executive Summary <span class="divider-mono"></span> v1.0'),
+
+      // Hero
+      t('.hero-eyebrow', '<span class="hero-eyebrow-dot"></span>Executive Summary — Projektplan'),
+      t('.hero-deck', 'Eine fokussierte 7-Wochen-Umsetzung, die CEx in der Google- und KI-Suche sichtbar macht — eine conversion-optimierte Website kombiniert mit einem programmatischen SEO-Seitensystem, das von Monat zu Monat an Wert gewinnt.'),
+      t('.hero-meta-cell:nth-of-type(1) .hero-meta-label', 'Projektstart'),
+      t('.hero-meta-cell:nth-of-type(1) .hero-meta-val', '25. Mai 2026<small>Kick-off-Woche</small>'),
+      t('.hero-meta-cell:nth-of-type(2) .hero-meta-label', 'Go-Live-Punkt'),
+      t('.hero-meta-cell:nth-of-type(2) .hero-meta-val', '20. Juli 2026<small>SEO-Seiten eingereicht</small>'),
+      t('.hero-meta-cell:nth-of-type(3) .hero-meta-label', 'Laufzeit'),
+      t('.hero-meta-cell:nth-of-type(3) .hero-meta-val', '6 Monate<small>Ab Go-Live</small>'),
+      t('.hero-meta-cell:nth-of-type(4) .hero-meta-label', 'Retainer'),
+      t('.hero-meta-cell:nth-of-type(4) .hero-meta-val', '1.500 € / Monat<small>Lastschrift, nach Lieferung</small>'),
+
+      // 01 — Context
+      t('#sec-01 .sec-num', '01 — Kontext'),
+      t('#sec-01 .sec-title', 'Warum wir das <em>tun.</em>'),
+      t('#sec-01 .intro-deck', 'CEx ist ein junges Start-up, gegründet von <strong>Johannes und Hannes</strong>. Die Gründer bauen auf nachhaltige, wiederholbare Lead-Akquise hin — keine Einmal-Kampagnen, keine Abhängigkeit von Paid Media. Der Auftrag von Digital Movement UK: CEx die digitale Sichtbarkeit zu verschaffen, um <strong>gefunden, vertraut und gewählt</strong> zu werden — in der klassischen Google-Suche genauso wie in der neuen Generation KI-gestützter Suche.'),
+      t('#sec-01 .ctx-card:nth-of-type(1) .ctx-num', '01.1 — Wer'),
+      t('#sec-01 .ctx-card:nth-of-type(1) .ctx-h', 'Ein junges Start-up mit Gründerambition'),
+      t('#sec-01 .ctx-card:nth-of-type(1) .ctx-body', 'Johannes und Hannes skalieren CEx von früher Traktion in Richtung planbares Wachstum. Der Auftrag ist klar: das Asset bauen und es danach Zinsen tragen lassen.'),
+      t('#sec-01 .ctx-card:nth-of-type(2) .ctx-num', '01.2 — Was'),
+      t('#sec-01 .ctx-card:nth-of-type(2) .ctx-h', 'Nachhaltige Lead-Akquise'),
+      t('#sec-01 .ctx-card:nth-of-type(2) .ctx-body', 'Keine Abhängigkeit von Werbeausgaben. Eine Web-Property, die Aufmerksamkeit über Suchsichtbarkeit <strong>verdient</strong> — und diese Aufmerksamkeit in qualifizierte Anfragen umwandelt.'),
+      t('#sec-01 .ctx-card:nth-of-type(3) .ctx-num', '01.3 — Wo'),
+      t('#sec-01 .ctx-card:nth-of-type(3) .ctx-h', 'Google-Suche + KI-Suche'),
+      t('#sec-01 .ctx-card:nth-of-type(3) .ctx-body', 'Beides im Blick — klassisches Ranking in den Google-SERPs und die zitatbasierte Auffindbarkeit in KI-Assistenten wie ChatGPT, Perplexity und Gemini.'),
+
+      // 02 — Deliverables
+      t('#sec-02 .sec-num', '02 — Leistungen'),
+      t('#sec-02 .sec-title', 'Zwei Assets, <em>ein System.</em>'),
+      t('#sec-02 .intro-deck', 'Das Engagement liefert zwei ineinandergreifende Assets. Die <strong>Website</strong> ist die Conversion-Fläche — der Ort, an dem ein Käufer landet und entscheidet. Die <strong>SEO-Servicepages</strong> sind der Akquisemotor — die Seiten, die qualifizierten, intent-getriebenen Traffic auf diese Fläche bringen.'),
+      t('#sec-02 .deliv:not(.b) .deliv-label', 'Liefergegenstand A'),
+      t('#sec-02 .deliv:not(.b) .deliv-title', 'Komplette Website'),
+      t('#sec-02 .deliv:not(.b) .deliv-body', 'Eine conversion-optimierte Unternehmens-Website auf <strong>WordPress</strong>, die den kompletten Stack abdeckt — öffentliche Seiten, Designsystem und das Backend, das die Website schnell, indexierbar und für CEx auch ohne Entwickler-Abhängigkeit später erweiterbar macht.'),
+      t('#sec-02 .deliv:not(.b) .deliv-list li:nth-of-type(1) span:last-child', '<strong>Frontend</strong>Öffentliche Seiten — Home, Services, Über uns, Kontakt. Responsiv, barrierearm, conversion-getunt.'),
+      t('#sec-02 .deliv:not(.b) .deliv-list li:nth-of-type(2) span:last-child', '<strong>Backend auf WordPress</strong>Content-Management, Formulare, Analytics- + Tagging-Layer, Hosting und DNS — so eingerichtet, dass CEx Texte eigenständig pflegen kann.'),
+      t('#sec-02 .deliv:not(.b) .deliv-list li:nth-of-type(3) span:last-child', '<strong>Brand & Designsystem</strong>Visuelle Sprache, Typografie, Farben, Komponenten — das Fundament, von dem alles Weitere ausgeht.'),
+      t('#sec-02 .deliv:not(.b) .deliv-list li:nth-of-type(4) span:last-child', '<strong>Performance + SEO-Basis</strong>Core Web Vitals, semantisches Markup, Schema, Indexierungshygiene, KI-Search-Strukturdaten.'),
+      t('#sec-02 .deliv.b .deliv-label', 'Liefergegenstand B'),
+      t('#sec-02 .deliv.b .deliv-title', 'SEO-Servicepages'),
+      t('#sec-02 .deliv.b .deliv-body', 'Eine Bibliothek programmatischer Servicepages — jede einzelne darauf ausgelegt, für eine bestimmte kaufbezogene Suchanfrage zu ranken und Besucher in Anfragen zu konvertieren. Der Akquisemotor, der im Hintergrund läuft, 24/7.'),
+      t('#sec-02 .deliv.b .deliv-list li:nth-of-type(1) span:last-child', '<strong>Research-getrieben</strong>Themen-, Intent- und Wettbewerbsanalyse auf Basis echter Semrush- und SERP-Daten.'),
+      t('#sec-02 .deliv.b .deliv-list li:nth-of-type(2) span:last-child', '<strong>Seitenarchitektur</strong>Sitemap und interner Link-Baum, ausgelegt auf Authority-Flow und effiziente Crawls.'),
+      t('#sec-02 .deliv.b .deliv-list li:nth-of-type(3) span:last-child', '<strong>Handgeschriebene Texte — keine KI</strong>Lange, expertise-tragende Editorial-Texte von Menschen geschrieben. Googles E-E-A-T-Signale belohnen echte Autorenschaft — wir verwässern das Asset nicht mit KI-Füllmaterial.'),
+      t('#sec-02 .deliv.b .deliv-list li:nth-of-type(4) span:last-child', '<strong>Deutsche Keywords + Meta-Daten</strong>Keyword- und Meta-Daten-Layer ausgelegt auf deutschsprachige Suche und übersetzt in die Marktsprache von CEx.'),
+      t('#sec-02 .deliv.b .deliv-list li:nth-of-type(5) span:last-child', '<strong>WordPress-Umsetzung</strong>Seiten gebaut, interne Verlinkung gesetzt, Schema validiert, Sitemap in der Google Search Console eingereicht.'),
+      t('#sec-02 .deliv.b .scope-note', '<strong>Genaue Seitenzahl.</strong> Wird im SEO-Strategiemeeting am kommenden Dienstag festgelegt, sobald die priorisierten Services, für die CEx gefunden werden möchte, abgestimmt sind. Typische Bandbreite: <strong>6–12 Kernseiten</strong> in der Erstauslieferung.'),
+
+      // 03 — Milestones
+      t('#sec-03 .sec-num', '03 — Meilensteine'),
+      t('#sec-03 .sec-title', 'Drei <em>Workstreams.</em>'),
+      t('#sec-03 .intro-deck', 'Der Build läuft in drei koordinierten Workstreams. <strong>A</strong> und <strong>B</strong> sind die Setup-Lieferungen — endlich, datiert, abnahmebereit. <strong>C</strong> ist die laufende Betriebskadenz, sobald das System live ist.'),
+      t('#sec-03 .ws:nth-of-type(1) .ws-tag', '<span class="ws-tag-dot"></span>Workstream A · Setup'),
+      t('#sec-03 .ws:nth-of-type(1) .ws-title', 'Website-Build'),
+      t('#sec-03 .ws:nth-of-type(1) .ws-cadence', '<strong>~6 Wochen</strong>25. Mai → 8. Juli 2026'),
+      t('#sec-03 .ws:nth-of-type(1) .ms:nth-of-type(1) .ms-h', 'Texte der öffentlichen Seiten'),
+      t('#sec-03 .ws:nth-of-type(1) .ms:nth-of-type(1) .ms-d', 'Services, Über uns, Kontakt. Tonalität, Struktur und Conversion-Logik fixiert, bevor die ersten Pixel platziert werden.'),
+      t('#sec-03 .ws:nth-of-type(1) .ms:nth-of-type(2) .ms-h', 'Design-Prototyp'),
+      t('#sec-03 .ws:nth-of-type(1) .ms:nth-of-type(2) .ms-d', 'Interaktives Designsystem + zentrale Seitenlayouts. Eine strukturierte Feedback-Runde, dann Freigabe.'),
+      t('#sec-03 .ws:nth-of-type(1) .ms:nth-of-type(3) .ms-h', 'WordPress-Build & Go-Live'),
+      t('#sec-03 .ws:nth-of-type(1) .ms:nth-of-type(3) .ms-d', 'Produktiv-Build in WordPress, QA-Durchlauf, Indexierungs-Primer. Website live auf der CEx-Domain — Meilenstein-Gate für die Abrechnung.'),
+      t('#sec-03 .ws.b .ws-tag', '<span class="ws-tag-dot"></span>Workstream B · Setup'),
+      t('#sec-03 .ws.b .ws-title', 'SEO-Seiten'),
+      t('#sec-03 .ws.b .ws-cadence', '<strong>~8 Wochen</strong>25. Mai → 20. Juli 2026'),
+      t('#sec-03 .ws.b .ms:nth-of-type(1) .ms-h', 'Strategie & SEO-Research'),
+      t('#sec-03 .ws.b .ms:nth-of-type(1) .ms-d', 'Im Strategiemeeting werden die Key Services festgelegt, für die CEx gefunden werden möchte. Danach: Keyword-Landschaft, Intent-Map, Wettbewerbslücken und Opportunity-Sizing — das Briefing, das jede Seitenentscheidung antreibt.'),
+      t('#sec-03 .ws.b .ms:nth-of-type(2) .ms-h', 'Page-Guide + Keywords & Meta'),
+      t('#sec-03 .ws.b .ms:nth-of-type(2) .ms-d', 'SEO-Seitenbaum (Parent/Child-Sitemap + interne Verlinkung). Deutschsprachiger Keyword- und Meta-Daten-Layer für jeden priorisierten Service. Freigabe-Gate.'),
+      t('#sec-03 .ws.b .ms:nth-of-type(3) .ms-h', 'Handgeschriebene Texte — keine KI'),
+      t('#sec-03 .ws.b .ms:nth-of-type(3) .ms-d', 'Lange, expertise-tragende Editorial-Texte von Menschen geschrieben (nicht von KI) — E-E-A-T-konform, kombiniert mit einem wiederholbaren Design-Template, das jede Seite erbt.'),
+      t('#sec-03 .ws.b .ms:nth-of-type(4) .ms-h', 'WordPress-Build + Einreichung'),
+      t('#sec-03 .ws.b .ms:nth-of-type(4) .ms-d', 'Seiten in WordPress gebaut, Keywords + Meta auditiert, Schema validiert, Sitemap in der Google Search Console eingereicht, KI-Search-Readiness geprüft. Meilenstein-Gate.'),
+      t('#sec-03 .ws.c .ws-tag', '<span class="ws-tag-dot"></span>Workstream C · Laufend'),
+      t('#sec-03 .ws.c .ws-title', 'Reporting'),
+      t('#sec-03 .ws.c .ws-cadence', '<strong>Monatlich</strong>Startet Monat 1 nach Go-Live'),
+      t('#sec-03 .ws.c .ms:nth-of-type(1) .ms-h', 'Indexierung + Ranking'),
+      t('#sec-03 .ws.c .ms:nth-of-type(1) .ms-d', 'Welche Seiten sind indexiert, aktuelle SERP-Positionen, Woche-für-Woche-Bewegung auf den getrackten Keywords.'),
+      t('#sec-03 .ws.c .ms:nth-of-type(2) .ms-h', 'Traffic + Verhalten'),
+      t('#sec-03 .ws.c .ms:nth-of-type(2) .ms-d', 'Organische Sessions, KI-Search-Referrals, On-Page-Engagement, Conversion-Funnel-Diagnostik.'),
+      t('#sec-03 .ws.c .ms:nth-of-type(3) .ms-h', 'Anfrage-Pipeline'),
+      t('#sec-03 .ws.c .ms:nth-of-type(3) .ms-d', 'Formularabsendungen, Quellen-Attribution, Signale zur Lead-Qualität. Die Zahl, auf die es wirklich ankommt.'),
+      t('#sec-03 .ws.c .ms:nth-of-type(4) .ms-h', 'Plan für den nächsten Monat'),
+      t('#sec-03 .ws.c .ms:nth-of-type(4) .ms-d', 'Wo wir doppelt nachlegen, was wir fixen, welche neuen Seiten als Nächstes in die Pipeline gehen.'),
+
+      // 04 — Timeline
+      t('#sec-04 .sec-num', '04 — Zeitplan'),
+      t('#sec-04 .sec-title', 'Vom Kick-off <em>zur ersten Abbuchung.</em>'),
+      t('#sec-04 .intro-deck', 'Projektstart am 25. Mai. Website geht am 8. Juli live. SEO-Seiten werden am 20. Juli bei Google eingereicht. Dieses Datum — <strong>B.4-Freigabe</strong> — ist der Auslöser, der die 6-Monats-Engagement-Uhr startet und die erste GoCardless-Lastschrift auslöst.'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(1) .when', '25. Mai 2026'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(1) .what', 'Projektstart'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(1) .why', 'Kick-off + Briefing. Workstreams A und B starten parallel.'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(2) .when', '8. Juli 2026'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(2) .what', 'Website Live (A.3)'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(2) .why', '~6,5 Wochen ab Kick-off. Neue CEx-Website live auf der Produktionsdomain.'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(3) .when', '20. Juli 2026'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(3) .what', 'SEO-Einreichung (B.4)'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(3) .why', 'SEO-Seiten live, Sitemap bei Google eingereicht. <strong>Erste Lastschrift wird gezogen. 6-Monats-Uhr startet.</strong>'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(4) .when', '20. Jan. 2027'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(4) .what', 'Ende der Erstlaufzeit'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(4) .why', 'Verlängerungsgespräch auf Basis der Ranking- + Anfrage-Daten, die wir bis dahin haben werden.'),
+      // Horizontal timeline SVG labels (desktop)
+      t('#sec-04 .tl-node.n1 .tl-label', 'Kick-off'),
+      t('#sec-04 .tl-node.n1 .tl-date', '25. Mai'),
+      t('#sec-04 .tl-node.n1 .tl-event', 'Projektstart'),
+      t('#sec-04 .tl-node.n2 .tl-label', 'A.3 — Website'),
+      t('#sec-04 .tl-node.n2 .tl-date', '8. Juli'),
+      t('#sec-04 .tl-node.n2 .tl-event', 'Komplette Website geht live'),
+      t('#sec-04 .tl-node.n3 .tl-label', 'B.4 — SEO eingereicht'),
+      t('#sec-04 .tl-node.n3 .tl-date', '20. Juli'),
+      t('#sec-04 .tl-node.n3 .tl-event', 'Lastschrift + 6-Monats-Uhr startet'),
+      t('#sec-04 .tl-node.n4 .tl-label', 'Ende der Laufzeit'),
+      t('#sec-04 .tl-node.n4 .tl-date', '20. Jan. 2027'),
+      t('#sec-04 .tl-node.n4 .tl-event', 'Verlängerungsgespräch'),
+      t('#tl-bracket-engagement', '6-Monats-Engagement'),
+      t('#tl-bracket-setup', 'Setup-Phase — ohne Abrechnung'),
+      // Vertical timeline (mobile)
+      t('.timeline-vertical .tlv-node.tlv-n1 .tlv-label', 'Kick-off'),
+      t('.timeline-vertical .tlv-node.tlv-n1 .tlv-date', '25. Mai 2026'),
+      t('.timeline-vertical .tlv-node.tlv-n1 .tlv-event', 'Projektstart — beide Workstreams starten'),
+      t('.timeline-vertical .tlv-node.tlv-n2 .tlv-label', 'A.3 — Website'),
+      t('.timeline-vertical .tlv-node.tlv-n2 .tlv-date', '8. Juli 2026'),
+      t('.timeline-vertical .tlv-node.tlv-n2 .tlv-event', 'Komplette Website geht live'),
+      t('.timeline-vertical .tlv-node.tlv-n3 .tlv-label', 'B.4 — SEO eingereicht'),
+      t('.timeline-vertical .tlv-node.tlv-n3 .tlv-date', '20. Juli 2026'),
+      t('.timeline-vertical .tlv-node.tlv-n3 .tlv-event', '<strong>Erste Lastschrift + 6-Monats-Uhr startet</strong>'),
+      t('.timeline-vertical .tlv-node.tlv-n4 .tlv-label', 'Ende der Laufzeit'),
+      t('.timeline-vertical .tlv-node.tlv-n4 .tlv-date', '20. Jan. 2027'),
+      t('.timeline-vertical .tlv-node.tlv-n4 .tlv-event', 'Verlängerungsgespräch'),
+
+      // 05 — Business Value Timeline
+      t('#sec-05 .sec-num', '05 — Wertentwicklung'),
+      t('#sec-05 .sec-title', 'Wann das Asset <em>anfängt zu zahlen.</em>'),
+      t('#sec-05 .intro-deck', 'SEO ist ein sich aufzinsendes Asset, keine Kampagne. Unten siehst du den realistischen Verlauf für eine <strong>neue Domain</strong> — etwas länger als bei einer etablierten Seite, weil Google Zeit braucht, der Domain Authority zuzuweisen, bevor Seiten zu ranken beginnen. Die Form ist konstant; das Tempo dreht ab Monat 6 zu deinen Gunsten.'),
+      t('#sec-05 .bv-eyebrow', 'Prognostizierte Wertkurve · 12+ Monate ab Go-Live'),
+      t('#sec-05 .bv-title', 'Vom Fundament zur Top-Performance — die vier Phasen einer reifenden SEO-Maschine.'),
+      t('#sec-05 .bv-deck', 'Die Kurve unten zeigt den qualitativen Bogen des erwarteten Business Value. Die frühen Monate gehen es um den <em>Asset-Aufbau</em>; die späteren Monate ums <em>Aufzinsen</em>. Echte Zahlen werden gegen das SEO-Research-Ergebnis (B.1) kalibriert.'),
+      t('#sec-05 .bv-phase:nth-of-type(1) .bv-phase-num', 'Phase 01'),
+      t('#sec-05 .bv-phase:nth-of-type(1) .bv-phase-h', 'Fundament'),
+      t('#sec-05 .bv-phase:nth-of-type(1) .bv-phase-range', 'Monat 1 — 3'),
+      t('#sec-05 .bv-phase:nth-of-type(1) .bv-phase-d', 'Google weist der neuen Domain Authority zu. Eingereichte SEO-Seiten durchlaufen Crawl und Indexierung. Das Asset wird aufgebaut — verdient aber noch nicht.'),
+      t('#sec-05 .bv-phase:nth-of-type(2) .bv-phase-num', 'Phase 02'),
+      t('#sec-05 .bv-phase:nth-of-type(2) .bv-phase-h', 'Wachstum'),
+      t('#sec-05 .bv-phase:nth-of-type(2) .bv-phase-range', 'Monat 3 — 6'),
+      t('#sec-05 .bv-phase:nth-of-type(2) .bv-phase-d', 'Erste Rankings tauchen auf. Erste Anfragen folgen — typischerweise Monat 5–6. Die Kurve beginnt nach oben zu kippen, weil Google mehr und mehr der Seite vertraut.'),
+      t('#sec-05 .bv-phase:nth-of-type(3) .bv-phase-num', 'Phase 03'),
+      t('#sec-05 .bv-phase:nth-of-type(3) .bv-phase-h', 'Performance'),
+      t('#sec-05 .bv-phase:nth-of-type(3) .bv-phase-range', 'Monat 6 — 12'),
+      t('#sec-05 .bv-phase:nth-of-type(3) .bv-phase-d', 'Seiten klettern in den SERPs. Anfragevolumen wächst Monat für Monat, weil mehr Begriffe in den Top-10-Bereich vorrücken. Die Maschine fängt an, sich selbst zu finanzieren.'),
+      t('#sec-05 .bv-phase:nth-of-type(4) .bv-phase-num', 'Phase 04'),
+      t('#sec-05 .bv-phase:nth-of-type(4) .bv-phase-h', 'Top-Performance'),
+      t('#sec-05 .bv-phase:nth-of-type(4) .bv-phase-range', 'Monat 12 +'),
+      t('#sec-05 .bv-phase:nth-of-type(4) .bv-phase-d', 'Ein wachsender Anteil der SEO-Seiten sitzt in Top-10-Positionen. Zinseszins setzt ein — jede neue Seite landet jetzt auf einer Domain, der Google bereits vertraut.'),
+      t('#sec-05 .bv-foot', '<strong>Hinweis · </strong>Neue-Website-Effekt. Eine frische Domain dehnt jedes Ranking-Fenster typischerweise um <strong>2–3 Monate</strong> gegenüber einer etablierten Seite. Der oben gezeigte Verlauf berücksichtigt das bereits.'),
+      t('#bv-phase-1', 'Fundament'),
+      t('#bv-phase-2', 'Wachstum'),
+      t('#bv-phase-3', 'Performance'),
+      t('#bv-phase-4', 'Top-Performance'),
+      t('#bv-y-axis', 'Anfragen'),
+
+      // 06 — Investment
+      t('#sec-06 .sec-num', '06 — Investition'),
+      t('#sec-06 .sec-title', 'Ein Retainer, <em>der erst startet, wenn Sie loslegen.</em>'),
+      t('#sec-06 .intro-deck', 'Die kommerzielle Struktur ist bewusst einfach — und zugunsten von CEx vorgelagert. Das komplette Setup wird <strong>vor</strong> Beginn der Engagement-Uhr geliefert. Die Abrechnung startet erst, wenn sowohl Website als auch SEO-Seiten live sind.'),
+      t('#sec-06 .inv-card.feature .inv-label', 'Monatlicher Retainer'),
+      t('#sec-06 .inv-card.feature .inv-amount', '<span class="cur">€</span><span class="counter" data-target="1500">1.500</span><span class="per">/ Monat</span>'),
+      t('#sec-06 .inv-card.feature .inv-sub', '6 Monate Erstlaufzeit · Lastschrift, monatlich'),
+      t('#sec-06 .inv-card.feature .inv-row:nth-of-type(1) .k', 'Laufzeit'),
+      t('#sec-06 .inv-card.feature .inv-row:nth-of-type(1) .v', '6 Monate'),
+      t('#sec-06 .inv-card.feature .inv-row:nth-of-type(2) .k', 'Zahlungsweise'),
+      t('#sec-06 .inv-card.feature .inv-row:nth-of-type(2) .v', 'Lastschrift via GoCardless'),
+      t('#sec-06 .inv-card.feature .inv-row:nth-of-type(3) .k', 'Erste Abbuchung'),
+      t('#sec-06 .inv-card.feature .inv-row:nth-of-type(3) .v', 'Nach A.3 + B.4-Freigabe'),
+      t('#sec-06 .inv-card.feature .inv-row.tot .k', 'Gesamt über Erstlaufzeit'),
+      t('#sec-06 .inv-card.feature .inv-row.tot .v', '9.000 €'),
+      t('#sec-06 .inv-card:not(.feature) .inv-label', 'Auslöser der ersten Abbuchung'),
+      t('#sec-06 .inv-card:not(.feature) .inv-h', 'Zwei Meilensteine, beide erforderlich'),
+      t('#sec-06 .inv-card:not(.feature) .trigger-list li:nth-of-type(1) > span:last-child', '<strong>Komplette Website geliefert</strong>Frontend + Backend live auf der CEx-Produktionsdomain. QA-Durchlauf abgeschlossen. Seite öffentlich erreichbar.'),
+      t('#sec-06 .inv-card:not(.feature) .trigger-list li:nth-of-type(2) > span:last-child', '<strong>SEO-Einreichung abgeschlossen</strong>Seiten veröffentlicht, Sitemap in der Google Search Console eingereicht, KI-Search-Readiness verifiziert.'),
+      t('#sec-06 .inv-card:not(.feature) .inv-note', '<strong>Was das in der Praxis heißt.</strong> Digital Movement UK absorbiert rund <strong>8 Wochen Setup-Arbeit</strong>, bevor eine Zahlung eingezogen wird. Das GoCardless-Lastschriftmandat wird bei Vertragsunterzeichnung administrativ eingerichtet — die erste Abbuchung wird aber erst ausgelöst, sobald sowohl A.3 (Website live) als auch B.4 (SEO bei Google eingereicht) freigegeben sind. CEx zahlt nichts, bis beides in Ihrer Hand ist.'),
+
+      // 07 — Next Steps
+      t('#sec-07 .sec-num', '07 — Nächste Schritte'),
+      t('#sec-07 .sec-title', 'Von dieser Seite <em>zum ersten Ranking.</em>'),
+      t('#sec-07 .step-card:nth-of-type(1) .h', 'Prüfen & abstimmen'),
+      t('#sec-07 .step-card:nth-of-type(1) .d', 'Johannes & Hannes prüfen diese Zusammenfassung. Anpassungen, Ergänzungen oder Scope-Klärungen fließen vor Vertrag ein.'),
+      t('#sec-07 .step-card:nth-of-type(2) .h', 'Vertrag'),
+      t('#sec-07 .step-card:nth-of-type(2) .d', 'Digital Movement UK stellt den Vertrag aus, der diesen Plan abbildet — gleicher Scope, gleiche Konditionen, gleiche Meilenstein-Gates.'),
+      t('#sec-07 .step-card:nth-of-type(3) .h', 'Kick-off + Strategie — 26. Mai'),
+      t('#sec-07 .step-card:nth-of-type(3) .d', 'Gemeinsames Meeting am Dienstag, 26. Mai. Wir fixieren die <strong>Key Services</strong>, für die CEx gefunden werden möchte — und damit den exakten Scope der SEO-Seiten. Alles, was in Workstream B danach passiert, hängt an dieser einen Entscheidung.'),
+      t('#sec-07 .step-card:nth-of-type(4) .h', 'Build-Modus'),
+      t('#sec-07 .step-card:nth-of-type(4) .d', 'Website (Workstream A) und SEO-Seiten (Workstream B) laufen parallel. Wöchentliche Check-ins, strukturierte Freigaben bei A.2 und B.2, Lieferung zu den oben genannten Daten.'),
+
+      // 08 — Account Manager
+      t('#sec-08 .sec-num', '08 — Ihr Account-Manager'),
+      t('#sec-08 .sec-title', 'Ein zentraler <em>Ansprechpartner.</em>'),
+      t('#sec-08 .intro-deck', 'Während des gesamten Engagements haben Sie einen einzigen, senioren Ansprechpartner bei Digital Movement UK — für Briefings, Freigaben, Eskalationen und das laufende Gespräch darüber, was die Daten gerade sagen.'),
+      t('#sec-08 .am-eyebrow', 'Ihr Account-Lead'),
+      t('#sec-08 .am-role', 'Gründer · Digital Movement UK'),
+      t('#sec-08 .am-channels .am-ch:nth-of-type(1) .am-ch-label', '<span class="am-ch-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>E-Mail'),
+      t('#sec-08 .am-channels .am-ch:nth-of-type(2) .am-ch-label', '<span class="am-ch-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z"/></svg></span>Telefon'),
+      t('#sec-08 .am-channels .am-ch:nth-of-type(3) .am-ch-label', '<span class="am-ch-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.8-.9-2.1-1-.3-.1-.5-.15-.7.15-.2.3-.8 1-.95 1.2-.2.2-.35.2-.65.05-.3-.15-1.25-.45-2.4-1.45-.9-.8-1.5-1.75-1.65-2.05-.2-.3-.05-.45.1-.6.15-.15.3-.35.45-.55.15-.2.2-.3.3-.5.1-.2.05-.4-.05-.55-.1-.15-.7-1.7-1-2.3-.25-.6-.55-.5-.7-.5h-.6c-.2 0-.55.05-.8.4-.3.3-1.05 1.05-1.05 2.6 0 1.5 1.1 2.95 1.25 3.15.15.2 2.15 3.3 5.25 4.55.7.3 1.3.45 1.75.6.75.25 1.4.2 1.95.1.6-.1 1.8-.75 2.05-1.45.25-.7.25-1.3.2-1.45-.1-.15-.3-.25-.6-.4ZM12 2C6.5 2 2 6.5 2 12c0 1.8.45 3.5 1.35 5L2 22l5.15-1.35c1.4.8 3.05 1.25 4.85 1.25 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg></span>WhatsApp'),
+      t('#sec-08 .am-note', 'Bürozeiten: Montag–Freitag, 09:00–18:00 MEZ. Für dringende Themen außerhalb dieser Zeiten ist WhatsApp der schnellste Kanal.'),
+
+      // Reading-now panel
+      t('.reading-now-title', 'Sie lesen jetzt'),
+      t('.reading-now-list li:nth-of-type(1) .rn-text', 'Kontext'),
+      t('.reading-now-list li:nth-of-type(2) .rn-text', 'Leistungen'),
+      t('.reading-now-list li:nth-of-type(3) .rn-text', 'Meilensteine'),
+      t('.reading-now-list li:nth-of-type(4) .rn-text', 'Zeitplan'),
+      t('.reading-now-list li:nth-of-type(5) .rn-text', 'Wertentwicklung'),
+      t('.reading-now-list li:nth-of-type(6) .rn-text', 'Investition'),
+      t('.reading-now-list li:nth-of-type(7) .rn-text', 'Nächste Schritte'),
+      t('.reading-now-list li:nth-of-type(8) .rn-text', 'Account-Manager'),
+
+      // Footer
+      t('.foot-grid > div:nth-of-type(1) .foot-h', 'Vom Schreibtisch von'),
+      t('.foot-grid > div:nth-of-type(1) .foot-body', 'Ein spezialisiertes Studio, das conversion-getriebene Websites und SEO-Engines für ambitionierte Operator baut. Wir bauen das Asset und lassen es danach Zinsen tragen. <br><br>Diese Zusammenfassung ist der Arbeits-Blueprint für das CEx-Engagement. Alles, was unklar ist, alles, was Sie anders formuliert sehen möchten — wir hören es lieber jetzt als beim Vertrag.'),
+      t('.foot-grid > div:nth-of-type(2) .foot-h', 'Dokument'),
+      t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(1)', '<strong>Referenz</strong>CEx-PP-v1.0 · Mai 2026'),
+      t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(2)', '<strong>Status</strong>Vorvertragliche Zusammenfassung'),
+      t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(3)', '<strong>Autor</strong>Digital Movement UK'),
+      t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(4)', '<strong>Für</strong>Johannes & Hannes, CEx'),
+      t('.foot-grid > div:nth-of-type(3) .foot-h', 'Kontakt'),
+      t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(1)', '<strong>E-Mail</strong><a href="mailto:alex@digitalmovement.uk">alex@digitalmovement.uk</a>'),
+      t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(2)', '<strong>Telefon / WhatsApp</strong>+49 176 82360647'),
+      t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(3)', '<strong>Web</strong>digitalmovement.uk'),
+      t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(4)', '<strong>Nächster Schritt</strong>Freigabe dieses Plans → Vertrag'),
+      t('.foot-bottom > span:nth-of-type(1)', '© 2026 Digital Movement UK · Alle Rechte vorbehalten'),
+      t('.foot-bottom > span:nth-of-type(2)', 'CEx Projektplan v1.0 <span class="divider-mono"></span> Vertraulich')
+    ],
+
+    en: [
+      // Masthead
+      t('[data-i18n="masthead.title"]', 'CEx Project Plan'),
+      t('[data-i18n="masthead.subtitle"]', 'Executive Summary <span class="divider-mono"></span> v1.0'),
+
+      // Hero
+      t('.hero-eyebrow', '<span class="hero-eyebrow-dot"></span>Executive Summary — Project Plan'),
+      t('.hero-deck', 'A focused 7-week build to put CEx in front of buyers on Google and AI Search — a conversion-optimised website paired with a programmatic SEO page system that compounds in value month after month.'),
+      t('.hero-meta-cell:nth-of-type(1) .hero-meta-label', 'Project Start'),
+      t('.hero-meta-cell:nth-of-type(1) .hero-meta-val', '25 May 2026<small>Kick-off week</small>'),
+      t('.hero-meta-cell:nth-of-type(2) .hero-meta-label', 'Go-Live Trigger'),
+      t('.hero-meta-cell:nth-of-type(2) .hero-meta-val', '20 July 2026<small>SEO pages submitted</small>'),
+      t('.hero-meta-cell:nth-of-type(3) .hero-meta-label', 'Engagement'),
+      t('.hero-meta-cell:nth-of-type(3) .hero-meta-val', '6 Months<small>From go-live</small>'),
+      t('.hero-meta-cell:nth-of-type(4) .hero-meta-label', 'Retainer'),
+      t('.hero-meta-cell:nth-of-type(4) .hero-meta-val', '€1,500 / mo<small>Direct Debit, post-delivery</small>'),
+
+      // 01 — Context
+      t('#sec-01 .sec-num', '01 — Context'),
+      t('#sec-01 .sec-title', 'Why we\'re <em>doing this.</em>'),
+      t('#sec-01 .intro-deck', 'CEx is a young start-up founded by <strong>Johannes and Hannes</strong>. The founders are building toward sustainable, repeatable lead acquisition — not one-off campaigns, not paid-media dependence. Digital Movement UK\'s mandate is to give CEx the digital surface area to be <strong>found, trusted, and chosen</strong> across both Google Search and the new generation of AI-powered search.'),
+      t('#sec-01 .ctx-card:nth-of-type(1) .ctx-num', '01.1 — Who'),
+      t('#sec-01 .ctx-card:nth-of-type(1) .ctx-h', 'A young start-up with founder ambition'),
+      t('#sec-01 .ctx-card:nth-of-type(1) .ctx-body', 'Johannes and Hannes are scaling CEx from early traction toward predictable growth. The brief is clear: build the asset, then let it compound.'),
+      t('#sec-01 .ctx-card:nth-of-type(2) .ctx-num', '01.2 — What'),
+      t('#sec-01 .ctx-card:nth-of-type(2) .ctx-h', 'Sustainable lead acquisition'),
+      t('#sec-01 .ctx-card:nth-of-type(2) .ctx-body', 'Not ad-spend dependence. A web property that <strong>earns</strong> attention through search visibility and converts that attention into qualified enquiries.'),
+      t('#sec-01 .ctx-card:nth-of-type(3) .ctx-num', '01.3 — Where'),
+      t('#sec-01 .ctx-card:nth-of-type(3) .ctx-h', 'Google Search + AI Search'),
+      t('#sec-01 .ctx-card:nth-of-type(3) .ctx-body', 'Built for both — classic SERP ranking and the citation-driven retrieval of AI assistants like ChatGPT, Perplexity, and Gemini.'),
+
+      // 02 — Deliverables
+      t('#sec-02 .sec-num', '02 — Deliverables'),
+      t('#sec-02 .sec-title', 'Two assets, <em>one system.</em>'),
+      t('#sec-02 .intro-deck', 'The engagement produces two interlocking assets. The <strong>website</strong> is the conversion surface — the place a buyer lands and decides. The <strong>SEO service pages</strong> are the acquisition engine — the pages that bring qualified, intent-matched traffic to that surface.'),
+      t('#sec-02 .deliv:not(.b) .deliv-label', 'Deliverable A'),
+      t('#sec-02 .deliv:not(.b) .deliv-title', 'Full Website'),
+      t('#sec-02 .deliv:not(.b) .deliv-body', 'A conversion-optimised company website built on <strong>WordPress</strong>, covering the full stack — public-facing pages, design system, and the backend that makes the site fast, indexable, and easy for CEx to extend later without developer dependency.'),
+      t('#sec-02 .deliv:not(.b) .deliv-list li:nth-of-type(1) span:last-child', '<strong>Frontend</strong>Public pages — Home, Services, About Us, Contact. Responsive, accessible, conversion-tuned.'),
+      t('#sec-02 .deliv:not(.b) .deliv-list li:nth-of-type(2) span:last-child', '<strong>Backend on WordPress</strong>Content management, contact form handling, analytics + tag layer, hosting and DNS — set up so CEx can update copy independently.'),
+      t('#sec-02 .deliv:not(.b) .deliv-list li:nth-of-type(3) span:last-child', '<strong>Brand & design system</strong>Visual language, type, colour, components — the foundation everything else extends from.'),
+      t('#sec-02 .deliv:not(.b) .deliv-list li:nth-of-type(4) span:last-child', '<strong>Performance + SEO basics</strong>Core Web Vitals, semantic markup, schema, indexation hygiene, AI-search structured data.'),
+      t('#sec-02 .deliv.b .deliv-label', 'Deliverable B'),
+      t('#sec-02 .deliv.b .deliv-title', 'SEO Service Pages'),
+      t('#sec-02 .deliv.b .deliv-body', 'A library of programmatic service pages — each one engineered to rank for a specific buying-intent query and to convert that visitor into an enquiry. The acquisition engine that runs in the background, 24/7.'),
+      t('#sec-02 .deliv.b .deliv-list li:nth-of-type(1) span:last-child', '<strong>Research-led</strong>Topic, intent, and competitive analysis grounded in real Semrush + SERP data.'),
+      t('#sec-02 .deliv.b .deliv-list li:nth-of-type(2) span:last-child', '<strong>Page architecture</strong>Sitemap and internal-link tree designed for authority flow and crawl efficiency.'),
+      t('#sec-02 .deliv.b .deliv-list li:nth-of-type(3) span:last-child', '<strong>Hand-written copy — no AI</strong>Long-form, expertise-signalled editorial written by humans. Google\'s E-E-A-T signals reward genuine authorship, and we don\'t dilute the asset with AI filler.'),
+      t('#sec-02 .deliv.b .deliv-list li:nth-of-type(4) span:last-child', '<strong>German keywords + meta data</strong>Keyword and meta data layer engineered for German-language search and translated into CEx\'s market language.'),
+      t('#sec-02 .deliv.b .deliv-list li:nth-of-type(5) span:last-child', '<strong>WordPress implementation</strong>Pages built, internal links wired, schema validated, sitemap submitted to Google Search Console.'),
+      t('#sec-02 .deliv.b .scope-note', '<strong>Exact page count.</strong> Confirmed during the SEO Strategy meeting (next Tuesday) once the priority services CEx wants to be found for are agreed. Typical range: <strong>6–12 core pages</strong> in the initial submission.'),
+
+      // 03 — Milestones
+      t('#sec-03 .sec-num', '03 — Milestones'),
+      t('#sec-03 .sec-title', 'Three <em>workstreams.</em>'),
+      t('#sec-03 .intro-deck', 'The build runs as three coordinated workstreams. <strong>A</strong> and <strong>B</strong> are the setup deliverables — finite, dated, signed off. <strong>C</strong> is the ongoing operating cadence once the system is live.'),
+      t('#sec-03 .ws:nth-of-type(1) .ws-tag', '<span class="ws-tag-dot"></span>Workstream A · Setup'),
+      t('#sec-03 .ws:nth-of-type(1) .ws-title', 'Website Build'),
+      t('#sec-03 .ws:nth-of-type(1) .ws-cadence', '<strong>~6 weeks</strong>25 May → 8 July 2026'),
+      t('#sec-03 .ws:nth-of-type(1) .ms:nth-of-type(1) .ms-h', 'Public-facing copy'),
+      t('#sec-03 .ws:nth-of-type(1) .ms:nth-of-type(1) .ms-d', 'Services, About Us, Contact. Voice, structure, and conversion logic locked before pixels are pushed.'),
+      t('#sec-03 .ws:nth-of-type(1) .ms:nth-of-type(2) .ms-h', 'Design prototype'),
+      t('#sec-03 .ws:nth-of-type(1) .ms:nth-of-type(2) .ms-d', 'Interactive design system + key page layouts. One round of structured feedback, then sign-off.'),
+      t('#sec-03 .ws:nth-of-type(1) .ms:nth-of-type(3) .ms-h', 'WordPress build & Go-Live'),
+      t('#sec-03 .ws:nth-of-type(1) .ms:nth-of-type(3) .ms-d', 'Production build in WordPress, QA pass, indexation primer. Site live on CEx domain — milestone gate for invoicing.'),
+      t('#sec-03 .ws.b .ws-tag', '<span class="ws-tag-dot"></span>Workstream B · Setup'),
+      t('#sec-03 .ws.b .ws-title', 'SEO Pages'),
+      t('#sec-03 .ws.b .ws-cadence', '<strong>~8 weeks</strong>25 May → 20 July 2026'),
+      t('#sec-03 .ws.b .ms:nth-of-type(1) .ms-h', 'Strategy & SEO research'),
+      t('#sec-03 .ws.b .ms:nth-of-type(1) .ms-d', 'Strategy meeting locks the Key Services CEx wants to be found for. Keyword landscape, intent map, competitor gap, and opportunity sizing follow — the brief that drives every page choice.'),
+      t('#sec-03 .ws.b .ms:nth-of-type(2) .ms-h', 'Page guide + keywords & meta'),
+      t('#sec-03 .ws.b .ms:nth-of-type(2) .ms-d', 'SEO page tree (parent / child sitemap + internal linking). German-language keyword and meta-data layer engineered for each priority service. Sign-off gate.'),
+      t('#sec-03 .ws.b .ms:nth-of-type(3) .ms-h', 'Hand-written copy — no AI'),
+      t('#sec-03 .ws.b .ms:nth-of-type(3) .ms-d', 'Long-form editorial written by humans (not AI) — expertise-signalled, E-E-A-T compliant, paired with a repeatable design template that every page inherits.'),
+      t('#sec-03 .ws.b .ms:nth-of-type(4) .ms-h', 'WordPress build + submission'),
+      t('#sec-03 .ws.b .ms:nth-of-type(4) .ms-d', 'Pages built in WordPress, keywords + meta audited, schema validated, sitemap submitted to Google Search Console, AI-search readiness verified. Milestone gate.'),
+      t('#sec-03 .ws.c .ws-tag', '<span class="ws-tag-dot"></span>Workstream C · Ongoing'),
+      t('#sec-03 .ws.c .ws-title', 'Reporting'),
+      t('#sec-03 .ws.c .ws-cadence', '<strong>Monthly</strong>Starts month 1 post go-live'),
+      t('#sec-03 .ws.c .ms:nth-of-type(1) .ms-h', 'Indexation + ranking'),
+      t('#sec-03 .ws.c .ms:nth-of-type(1) .ms-d', 'Which pages are indexed, current SERP positions, week-on-week movement on tracked keywords.'),
+      t('#sec-03 .ws.c .ms:nth-of-type(2) .ms-h', 'Traffic + behaviour'),
+      t('#sec-03 .ws.c .ms:nth-of-type(2) .ms-d', 'Organic sessions, AI-search referrals, on-page engagement, conversion funnel diagnostics.'),
+      t('#sec-03 .ws.c .ms:nth-of-type(3) .ms-h', 'Enquiry pipeline'),
+      t('#sec-03 .ws.c .ms:nth-of-type(3) .ms-d', 'Form fills, source attribution, lead quality signals. The number that actually matters.'),
+      t('#sec-03 .ws.c .ms:nth-of-type(4) .ms-h', 'Next-month plan'),
+      t('#sec-03 .ws.c .ms:nth-of-type(4) .ms-d', 'Where we\'re doubling down, what we\'re fixing, which new pages we\'re adding to the queue.'),
+
+      // 04 — Timeline
+      t('#sec-04 .sec-num', '04 — Timeline'),
+      t('#sec-04 .sec-title', 'From kick-off <em>to first collection.</em>'),
+      t('#sec-04 .intro-deck', 'Project starts 25 May. Website goes live 8 July. SEO pages are submitted to Google on 20 July. That date — <strong>B.4 sign-off</strong> — is the trigger that opens the 6-month engagement clock and the first GoCardless Direct Debit collection.'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(1) .when', '25 May 2026'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(1) .what', 'Project Start'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(1) .why', 'Kick-off + briefing. Workstreams A and B begin in parallel.'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(2) .when', '8 July 2026'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(2) .what', 'Website Live (A.3)'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(2) .why', '~6.5 weeks from kick-off. New CEx site live on production domain.'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(3) .when', '20 July 2026'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(3) .what', 'SEO Submission (B.4)'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(3) .why', 'SEO pages live, sitemap submitted to Google. <strong>First Direct Debit collected. 6-month clock starts.</strong>'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(4) .when', '20 Jan 2027'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(4) .what', 'End of Initial Term'),
+      t('#sec-04 .tl-cards .tl-card:nth-of-type(4) .why', 'Renewal conversation based on the ranking + enquiry data we will have by then.'),
+      // Horizontal timeline SVG labels (desktop)
+      t('#sec-04 .tl-node.n1 .tl-label', 'Kick-off'),
+      t('#sec-04 .tl-node.n1 .tl-date', '25 May'),
+      t('#sec-04 .tl-node.n1 .tl-event', 'Project start'),
+      t('#sec-04 .tl-node.n2 .tl-label', 'A.3 — Website'),
+      t('#sec-04 .tl-node.n2 .tl-date', '8 July'),
+      t('#sec-04 .tl-node.n2 .tl-event', 'Full website goes live'),
+      t('#sec-04 .tl-node.n3 .tl-label', 'B.4 — SEO submitted'),
+      t('#sec-04 .tl-node.n3 .tl-date', '20 July'),
+      t('#sec-04 .tl-node.n3 .tl-event', 'Direct Debit + 6-month clock starts'),
+      t('#sec-04 .tl-node.n4 .tl-label', 'End of term'),
+      t('#sec-04 .tl-node.n4 .tl-date', '20 Jan 2027'),
+      t('#sec-04 .tl-node.n4 .tl-event', 'Renewal review'),
+      t('#tl-bracket-engagement', '6-month engagement'),
+      t('#tl-bracket-setup', 'Setup phase — unbilled'),
+      // Vertical timeline (mobile)
+      t('.timeline-vertical .tlv-node.tlv-n1 .tlv-label', 'Kick-off'),
+      t('.timeline-vertical .tlv-node.tlv-n1 .tlv-date', '25 May 2026'),
+      t('.timeline-vertical .tlv-node.tlv-n1 .tlv-event', 'Project start — both workstreams begin'),
+      t('.timeline-vertical .tlv-node.tlv-n2 .tlv-label', 'A.3 — Website'),
+      t('.timeline-vertical .tlv-node.tlv-n2 .tlv-date', '8 July 2026'),
+      t('.timeline-vertical .tlv-node.tlv-n2 .tlv-event', 'Full website goes live'),
+      t('.timeline-vertical .tlv-node.tlv-n3 .tlv-label', 'B.4 — SEO submitted'),
+      t('.timeline-vertical .tlv-node.tlv-n3 .tlv-date', '20 July 2026'),
+      t('.timeline-vertical .tlv-node.tlv-n3 .tlv-event', '<strong>First Direct Debit + 6-month clock starts</strong>'),
+      t('.timeline-vertical .tlv-node.tlv-n4 .tlv-label', 'End of term'),
+      t('.timeline-vertical .tlv-node.tlv-n4 .tlv-date', '20 Jan 2027'),
+      t('.timeline-vertical .tlv-node.tlv-n4 .tlv-event', 'Renewal review'),
+
+      // 05 — Business Value Timeline
+      t('#sec-05 .sec-num', '05 — Business Value Timeline'),
+      t('#sec-05 .sec-title', 'When the asset <em>starts paying.</em>'),
+      t('#sec-05 .intro-deck', 'SEO is a compounding asset, not a campaign. Below is the realistic trajectory for a <strong>new domain</strong> — slightly longer than an established site, because Google needs time to assign authority before pages begin ranking. The shape is consistent; the pace bends in your favour after month 6.'),
+      t('#sec-05 .bv-eyebrow', 'Projected Value Curve · 12+ months from go-live'),
+      t('#sec-05 .bv-title', 'From foundation to top-performance — the four phases of an SEO engine maturing.'),
+      t('#sec-05 .bv-deck', 'The curve below shows the qualitative arc of expected business value. The early months are about <em>building the asset</em>; the later months are about <em>compounding</em> it. Real numbers will be calibrated against the SEO research output (B.1).'),
+      t('#sec-05 .bv-phase:nth-of-type(1) .bv-phase-num', 'Phase 01'),
+      t('#sec-05 .bv-phase:nth-of-type(1) .bv-phase-h', 'Foundation'),
+      t('#sec-05 .bv-phase:nth-of-type(1) .bv-phase-range', 'Months 1 — 3'),
+      t('#sec-05 .bv-phase:nth-of-type(1) .bv-phase-d', 'Google assigns authority to the new domain. Submitted SEO pages move through crawl and indexation. The asset is being built, not yet earning.'),
+      t('#sec-05 .bv-phase:nth-of-type(2) .bv-phase-num', 'Phase 02'),
+      t('#sec-05 .bv-phase:nth-of-type(2) .bv-phase-h', 'Growth'),
+      t('#sec-05 .bv-phase:nth-of-type(2) .bv-phase-range', 'Months 3 — 6'),
+      t('#sec-05 .bv-phase:nth-of-type(2) .bv-phase-d', 'First rankings appear. First enquiries follow — typically months 5–6. The curve starts bending upward as Google trusts more of the site.'),
+      t('#sec-05 .bv-phase:nth-of-type(3) .bv-phase-num', 'Phase 03'),
+      t('#sec-05 .bv-phase:nth-of-type(3) .bv-phase-h', 'Performance'),
+      t('#sec-05 .bv-phase:nth-of-type(3) .bv-phase-range', 'Months 6 — 12'),
+      t('#sec-05 .bv-phase:nth-of-type(3) .bv-phase-d', 'Pages climb the SERP. Enquiry volume grows month-over-month as more terms break into page 1 territory. The engine starts paying for itself.'),
+      t('#sec-05 .bv-phase:nth-of-type(4) .bv-phase-num', 'Phase 04'),
+      t('#sec-05 .bv-phase:nth-of-type(4) .bv-phase-h', 'Top Performance'),
+      t('#sec-05 .bv-phase:nth-of-type(4) .bv-phase-range', 'Months 12 +'),
+      t('#sec-05 .bv-phase:nth-of-type(4) .bv-phase-d', 'A growing share of SEO pages sit in top-10 positions. Compounding kicks in — each new page added now lands on a domain Google already trusts.'),
+      t('#sec-05 .bv-foot', '<strong>Note · </strong>New-website effect. A fresh domain typically extends each ranking window by <strong>2–3 months</strong> versus an established site. The trajectory above already accounts for this.'),
+      t('#bv-phase-1', 'Foundation'),
+      t('#bv-phase-2', 'Growth'),
+      t('#bv-phase-3', 'Performance'),
+      t('#bv-phase-4', 'Top Performance'),
+      t('#bv-y-axis', 'Enquiries'),
+
+      // 06 — Investment
+      t('#sec-06 .sec-num', '06 — Investment'),
+      t('#sec-06 .sec-title', 'A retainer that <em>only starts when you do.</em>'),
+      t('#sec-06 .intro-deck', 'The commercial structure is deliberately simple — and front-loaded in CEx\'s favour. The full setup is delivered <strong>before</strong> the engagement clock starts. Billing only begins once both the website and the SEO pages are live.'),
+      t('#sec-06 .inv-card.feature .inv-label', 'Monthly Retainer'),
+      t('#sec-06 .inv-card.feature .inv-amount', '<span class="cur">€</span><span class="counter" data-target="1500">1,500</span><span class="per">/ month</span>'),
+      t('#sec-06 .inv-card.feature .inv-sub', '6-month initial term · Direct Debit, monthly'),
+      t('#sec-06 .inv-card.feature .inv-row:nth-of-type(1) .k', 'Term length'),
+      t('#sec-06 .inv-card.feature .inv-row:nth-of-type(1) .v', '6 months'),
+      t('#sec-06 .inv-card.feature .inv-row:nth-of-type(2) .k', 'Payment method'),
+      t('#sec-06 .inv-card.feature .inv-row:nth-of-type(2) .v', 'Direct Debit via GoCardless'),
+      t('#sec-06 .inv-card.feature .inv-row:nth-of-type(3) .k', 'First collection'),
+      t('#sec-06 .inv-card.feature .inv-row:nth-of-type(3) .v', 'After A.3 + B.4 sign-off'),
+      t('#sec-06 .inv-card.feature .inv-row.tot .k', 'Total over initial term'),
+      t('#sec-06 .inv-card.feature .inv-row.tot .v', '€9,000'),
+      t('#sec-06 .inv-card:not(.feature) .inv-label', 'First Collection Triggers'),
+      t('#sec-06 .inv-card:not(.feature) .inv-h', 'Two milestones, both required'),
+      t('#sec-06 .inv-card:not(.feature) .trigger-list li:nth-of-type(1) > span:last-child', '<strong>Full website delivered</strong>Frontend + backend live on the CEx production domain. QA pass complete. Site is publicly accessible.'),
+      t('#sec-06 .inv-card:not(.feature) .trigger-list li:nth-of-type(2) > span:last-child', '<strong>SEO submission complete</strong>Pages published, sitemap submitted to Google Search Console, AI-search readiness verified.'),
+      t('#sec-06 .inv-card:not(.feature) .inv-note', '<strong>What this means in practice.</strong> Digital Movement UK absorbs roughly <strong>8 weeks of setup work</strong> before any payment is collected. A GoCardless Direct Debit mandate is set up at contract signing for administrative reasons — but the first collection only fires once both A.3 (website live) and B.4 (SEO submitted to Google) are signed off. CEx pays nothing until both are in your hands.'),
+
+      // 07 — Next Steps
+      t('#sec-07 .sec-num', '07 — Next Steps'),
+      t('#sec-07 .sec-title', 'From this page <em>to first ranking.</em>'),
+      t('#sec-07 .step-card:nth-of-type(1) .h', 'Review &amp; align'),
+      t('#sec-07 .step-card:nth-of-type(1) .d', 'Johannes &amp; Hannes review this summary. Any tweaks, additions, or scope clarifications get folded in before contract.'),
+      t('#sec-07 .step-card:nth-of-type(2) .h', 'Contract'),
+      t('#sec-07 .step-card:nth-of-type(2) .d', 'Digital Movement UK issues the contract reflecting this plan — same scope, same commercials, same milestone gates.'),
+      t('#sec-07 .step-card:nth-of-type(3) .h', 'Kick-off + strategy — 26 May'),
+      t('#sec-07 .step-card:nth-of-type(3) .d', 'Joint session on Tuesday 26 May. We lock the <strong>Key Services</strong> CEx wants to be found for — and with that, the exact SEO-page scope. Everything in Workstream B downstream depends on this single decision.'),
+      t('#sec-07 .step-card:nth-of-type(4) .h', 'Build mode'),
+      t('#sec-07 .step-card:nth-of-type(4) .d', 'Website (Workstream A) and SEO pages (Workstream B) run in parallel. Weekly check-ins, structured sign-offs at A.2 and B.2, delivery on the dates above.'),
+
+      // 08 — Account Manager
+      t('#sec-08 .sec-num', '08 — Your Account Manager'),
+      t('#sec-08 .sec-title', 'One point <em>of contact.</em>'),
+      t('#sec-08 .intro-deck', 'Throughout the engagement you have a single, senior point of contact at Digital Movement UK — for briefings, sign-offs, escalations, and the running conversation about what the data is telling us.'),
+      t('#sec-08 .am-eyebrow', 'Your account lead'),
+      t('#sec-08 .am-role', 'Founder · Digital Movement UK'),
+      t('#sec-08 .am-channels .am-ch:nth-of-type(1) .am-ch-label', '<span class="am-ch-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>Email'),
+      t('#sec-08 .am-channels .am-ch:nth-of-type(2) .am-ch-label', '<span class="am-ch-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92Z"/></svg></span>Phone'),
+      t('#sec-08 .am-channels .am-ch:nth-of-type(3) .am-ch-label', '<span class="am-ch-icon" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.8-.9-2.1-1-.3-.1-.5-.15-.7.15-.2.3-.8 1-.95 1.2-.2.2-.35.2-.65.05-.3-.15-1.25-.45-2.4-1.45-.9-.8-1.5-1.75-1.65-2.05-.2-.3-.05-.45.1-.6.15-.15.3-.35.45-.55.15-.2.2-.3.3-.5.1-.2.05-.4-.05-.55-.1-.15-.7-1.7-1-2.3-.25-.6-.55-.5-.7-.5h-.6c-.2 0-.55.05-.8.4-.3.3-1.05 1.05-1.05 2.6 0 1.5 1.1 2.95 1.25 3.15.15.2 2.15 3.3 5.25 4.55.7.3 1.3.45 1.75.6.75.25 1.4.2 1.95.1.6-.1 1.8-.75 2.05-1.45.25-.7.25-1.3.2-1.45-.1-.15-.3-.25-.6-.4ZM12 2C6.5 2 2 6.5 2 12c0 1.8.45 3.5 1.35 5L2 22l5.15-1.35c1.4.8 3.05 1.25 4.85 1.25 5.5 0 10-4.5 10-10S17.5 2 12 2Z"/></svg></span>WhatsApp'),
+      t('#sec-08 .am-note', 'Office hours are Monday–Friday, 09:00–18:00 CET. For urgent matters outside hours, WhatsApp is the fastest channel.'),
+
+      // Reading-now panel
+      t('.reading-now-title', 'Reading now'),
+      t('.reading-now-list li:nth-of-type(1) .rn-text', 'Context'),
+      t('.reading-now-list li:nth-of-type(2) .rn-text', 'Deliverables'),
+      t('.reading-now-list li:nth-of-type(3) .rn-text', 'Milestones'),
+      t('.reading-now-list li:nth-of-type(4) .rn-text', 'Timeline'),
+      t('.reading-now-list li:nth-of-type(5) .rn-text', 'Business value timeline'),
+      t('.reading-now-list li:nth-of-type(6) .rn-text', 'Investment'),
+      t('.reading-now-list li:nth-of-type(7) .rn-text', 'Next steps'),
+      t('.reading-now-list li:nth-of-type(8) .rn-text', 'Account manager'),
+
+      // Footer
+      t('.foot-grid > div:nth-of-type(1) .foot-h', 'From the desk of'),
+      t('.foot-grid > div:nth-of-type(1) .foot-body', 'A specialist studio building conversion-led websites and SEO engines for ambitious operators. We build the asset, then let it compound. <br><br>This summary is the working blueprint for the CEx engagement. Anything unclear, anything you\'d like reframed — we\'d rather hear it now than at contract.'),
+      t('.foot-grid > div:nth-of-type(2) .foot-h', 'Document'),
+      t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(1)', '<strong>Reference</strong>CEx-PP-v1.0 · May 2026'),
+      t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(2)', '<strong>Status</strong>Pre-contract executive summary'),
+      t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(3)', '<strong>Author</strong>Digital Movement UK'),
+      t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(4)', '<strong>For</strong>Johannes &amp; Hannes, CEx'),
+      t('.foot-grid > div:nth-of-type(3) .foot-h', 'Get in touch'),
+      t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(1)', '<strong>Email</strong><a href="mailto:alex@digitalmovement.uk">alex@digitalmovement.uk</a>'),
+      t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(2)', '<strong>Phone / WhatsApp</strong>+49 176 82360647'),
+      t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(3)', '<strong>Web</strong>digitalmovement.uk'),
+      t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(4)', '<strong>Next step</strong>Sign-off on this plan → contract'),
+      t('.foot-bottom > span:nth-of-type(1)', '© 2026 Digital Movement UK · All rights reserved'),
+      t('.foot-bottom > span:nth-of-type(2)', 'CEx Project Plan v1.0 <span class="divider-mono"></span> Confidential')
+    ]
+  };
+
+  function applyLang(lang){
+    const set = i18n[lang];
+    if(!set) return;
+    set.forEach(([sel, html]) => {
+      document.querySelectorAll(sel).forEach(el => { el.innerHTML = html; });
+    });
+    document.documentElement.lang = lang;
+    document.documentElement.classList.add('lang-ready');
+    document.querySelectorAll('.lang-opt').forEach(btn => {
+      const isActive = btn.dataset.lang === lang;
+      btn.classList.toggle('is-active', isActive);
+      btn.setAttribute('aria-pressed', String(isActive));
+    });
+    try{ localStorage.setItem(STORE_KEY, lang); }catch(_){ }
+  }
+
+  // Bind toggle clicks
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.lang-opt');
+    if(!btn) return;
+    applyLang(btn.dataset.lang);
+    // Reset the once-fired counter animation so the swapped number animates again
+    document.querySelectorAll('.counter').forEach(el => {
+      const t = parseInt(el.dataset.target || '0', 10);
+      if(!t) return;
+      const isDE = document.documentElement.lang === 'de';
+      el.textContent = isDE ? t.toLocaleString('de-DE') : t.toLocaleString('en-US');
+    });
+  });
+
+  // Initial language: localStorage > browser preference (de if German) > default DE
+  let initial = 'de';
+  try{
+    const saved = localStorage.getItem(STORE_KEY);
+    if(saved === 'de' || saved === 'en') initial = saved;
+    else if((navigator.language || '').toLowerCase().startsWith('en')) initial = 'en';
+  }catch(_){ }
+  applyLang(initial);
+})();
+
+// Reveal-on-scroll
+(function(){
+  if(!('IntersectionObserver' in window)){
+    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+    document.querySelectorAll('.timeline-wrap,.bv-chart').forEach(el=>el.classList.add('in'));
+    return;
+  }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:0.14,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Separate observer for timeline + chart (different threshold)
+  const io2 = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io2.unobserve(e.target);
+      }
+    });
+  },{threshold:0.25});
+  document.querySelectorAll('.timeline-wrap,.bv-chart,.timeline-vertical').forEach(el=>io2.observe(el));
+
+  // Scroll-bound vertical timeline (mobile) — rail fills in lockstep with the
+  // user's scroll through the timeline section; each node lights up the moment
+  // its dot is passed by the fill front. Also drives the business-value curve.
+  (function setupScrollBoundAnimations(){
+    const tlv = document.querySelector('.timeline-vertical');
+    const bvCurve = document.querySelector('.bv-curve');
+    const bvFill = document.querySelector('.bv-fill');
+    const bvChart = document.querySelector('.bv-chart');
+    const bvDots = bvChart ? Array.from(bvChart.querySelectorAll('.bv-dot')) : [];
+
+    // Mark the vertical timeline as scroll-driven so CSS knows to defer to JS
+    if(tlv) tlv.classList.add('scroll-driven','in');
+
+    // Pre-compute the bv-curve path length so we can drive stroke-dashoffset
+    let bvLen = 1400;
+    if(bvCurve && bvCurve.getTotalLength){
+      try { bvLen = bvCurve.getTotalLength(); } catch(_){ }
+      bvCurve.style.strokeDasharray = bvLen;
+      bvCurve.style.strokeDashoffset = bvLen;
+      bvCurve.style.transition = 'stroke-dashoffset 0.15s linear';
+    }
+    if(bvFill){ bvFill.style.transition = 'opacity 0.25s linear'; }
+
+    function tlvTick(){
+      if(!tlv) return;
+      const winH = window.innerHeight;
+      const nodes = Array.from(tlv.querySelectorAll('.tlv-node'));
+      if(!nodes.length) return;
+      const fill = tlv.querySelector('.tlv-fill');
+      const rail = tlv.querySelector('.tlv-rail');
+      if(!fill || !rail) return;
+
+      // Focal line: ~55% down the viewport. Both the fill front and the node
+      // activation threshold are driven by THIS line — same source of truth,
+      // so they can never drift out of sync.
+      const focalY = winH * 0.55;
+
+      const railRect = rail.getBoundingClientRect();
+      const firstDotRect = nodes[0].querySelector('.tlv-dot').getBoundingClientRect();
+      const lastDotRect  = nodes[nodes.length - 1].querySelector('.tlv-dot').getBoundingClientRect();
+      const firstDotCentre = firstDotRect.top + firstDotRect.height * 0.5;
+      const lastDotCentre  = lastDotRect.top  + lastDotRect.height * 0.5;
+      const range = Math.max(1, lastDotCentre - firstDotCentre);
+
+      // Distance (in px) the focal line has traveled past the first dot's centre
+      const dist = Math.min(range, Math.max(0, focalY - firstDotCentre));
+
+      // Anchor the fill's top at the first dot's centre within the rail,
+      // and grow its height by `dist`. This way the fill's bottom edge ALWAYS
+      // sits exactly at the focal line — and exactly where the next dot is
+      // about to activate.
+      fill.style.top = (firstDotCentre - railRect.top) + 'px';
+      fill.style.height = dist + 'px';
+
+      // A node activates the instant the focal line enters the dot's footprint
+      // (within half the dot's height — feels like activation "as you arrive").
+      nodes.forEach(node => {
+        const dot = node.querySelector('.tlv-dot');
+        if(!dot) return;
+        const dotRect = dot.getBoundingClientRect();
+        node.classList.toggle('tlv-active', focalY + dotRect.height * 0.5 >= dotRect.top);
+      });
+    }
+
+    function bvTick(){
+      if(!bvChart || !bvCurve) return;
+      const rect = bvChart.getBoundingClientRect();
+      const winH = window.innerHeight;
+      const triggerIn  = winH * 0.85;
+      const triggerOut = winH * 0.25;
+      const distance   = rect.height + (triggerIn - triggerOut);
+      const passed     = triggerIn - rect.top;
+      const p = Math.min(1, Math.max(0, passed / Math.max(1, distance)));
+      bvCurve.style.strokeDashoffset = String((1 - p) * bvLen);
+      if(bvFill) bvFill.style.opacity = String(0.4 * p);
+      // Reveal milestone dots progressively as the curve passes them
+      const thresholds = [0.20, 0.45, 0.72, 0.94];
+      bvDots.forEach((d, i) => {
+        d.style.opacity = p >= thresholds[i] ? '1' : '0';
+        d.style.transition = 'opacity 0.3s ease';
+      });
+    }
+
+    function tick(){ tlvTick(); bvTick(); }
+    tick();
+    let raf = 0;
+    window.addEventListener('scroll', () => {
+      if(raf) return;
+      raf = requestAnimationFrame(() => { raf = 0; tick(); });
+    }, { passive:true });
+    window.addEventListener('resize', tick);
+    if(document.fonts && document.fonts.ready){
+      document.fonts.ready.then(tick);
+    } else {
+      setTimeout(tick, 500);
+    }
+  })();
+
+  // Top scroll-progress bar + right-side section tracker
+  (function setupReadingProgress(){
+    const bar = document.getElementById('scrollProgressBar');
+    const panel = document.getElementById('reading-now');
+    if(!panel || !bar) return;
+    const items = Array.from(panel.querySelectorAll('li'));
+    const CIRC = 2 * Math.PI * 9; // r=9 -> ~56.549
+
+    let cache = [];
+    function rebuildCache(){
+      const resolved = items.map(li => {
+        const target = document.querySelector(li.dataset.rnTarget);
+        const fg = li.querySelector('.rn-ring-fg');
+        // Start charging only once the section's H2 is FULLY visible in viewport.
+        // That moment, scrolling DOWN, is when (h2Top + h2Height) === innerHeight
+        // (i.e. h2 bottom touches viewport bottom). Solve for scrollY.
+        const h2 = target ? target.querySelector('.sec-title') : null;
+        return { li, target, fg, h2 };
+      }).filter(r => r.target);
+      cache = resolved.map((r,i) => {
+        const next = resolved[i+1] ? resolved[i+1] : null;
+        const h2Rect = r.h2 ? r.h2.getBoundingClientRect() : r.target.getBoundingClientRect();
+        const h2DocTop = h2Rect.top + window.scrollY;
+        const h2Height = r.h2 ? r.h2.offsetHeight : 0;
+        // Scroll position at which this section's H2 is first fully visible
+        const start = Math.max(0, h2DocTop + h2Height - window.innerHeight);
+        // End = scroll position at which NEXT section's H2 is first fully visible.
+        // If no next section, end of doc.
+        let end;
+        if(next){
+          const nh2 = next.h2 || next.target;
+          const nh2Rect = nh2.getBoundingClientRect();
+          const nh2DocTop = nh2Rect.top + window.scrollY;
+          const nh2Height = next.h2 ? next.h2.offsetHeight : 0;
+          end = Math.max(start + 1, nh2DocTop + nh2Height - window.innerHeight);
+        } else {
+          end = document.documentElement.scrollHeight - window.innerHeight;
+        }
+        return { li:r.li, start, end, fg:r.fg };
+      });
+    }
+    function tick(){
+      // Top progress bar — overall document scroll percentage
+      const docH = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docH > 0 ? Math.min(1, Math.max(0, window.scrollY / docH)) : 0;
+      bar.style.width = (pct * 100).toFixed(2) + '%';
+
+      // Reveal panel once user has scrolled past the hero
+      const hero = document.querySelector('.hero');
+      const heroBottom = hero ? (hero.getBoundingClientRect().top + window.scrollY + hero.offsetHeight) : 600;
+      document.body.classList.toggle('is-reading', window.scrollY > heroBottom - 200);
+
+      // Per-section ring fill — `start` is the scrollY value at which this
+      // section's H2 first becomes fully visible; `end` is the scrollY value
+      // at which the NEXT section's H2 first becomes fully visible.
+      const y = window.scrollY;
+      const atBottom = (window.scrollY + window.innerHeight) >= (document.documentElement.scrollHeight - 4);
+      cache.forEach(({li,start,end,fg}) => {
+        const range = Math.max(1, end - start);
+        let p = Math.min(1, Math.max(0, (y - start) / range));
+        // Snap every ring closed at the very bottom of the page
+        if(atBottom) p = 1;
+        if(fg) fg.style.strokeDashoffset = String((1 - p) * CIRC);
+        li.classList.toggle('in-progress', p > 0 && p < 0.995);
+        li.classList.toggle('done', p >= 0.995);
+      });
+    }
+    rebuildCache();
+    tick();
+    let raf = 0;
+    window.addEventListener('scroll', () => {
+      if(raf) return;
+      raf = requestAnimationFrame(() => { raf = 0; tick(); });
+    }, { passive:true });
+    window.addEventListener('resize', () => { rebuildCache(); tick(); });
+    if(document.fonts && document.fonts.ready){
+      document.fonts.ready.then(() => { rebuildCache(); tick(); });
+    } else {
+      setTimeout(() => { rebuildCache(); tick(); }, 600);
+    }
+  })();
+
+  // Counter animation
+  const counterIo = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      const el = e.target;
+      const target = parseInt(el.dataset.target,10);
+      const dur = 1400;
+      const start = performance.now();
+      const tick = (now)=>{
+        const p = Math.min(1,(now-start)/dur);
+        const eased = 1 - Math.pow(1-p,3);
+        const val = Math.round(target*eased);
+        const locale = document.documentElement.lang === 'de' ? 'de-DE' : 'en-US';
+        el.textContent = val.toLocaleString(locale);
+        if(p<1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      counterIo.unobserve(el);
+    });
+  },{threshold:0.5});
+  document.querySelectorAll('.counter').forEach(el=>counterIo.observe(el));
+})();
+</script>
+
+</body>
+</html>
