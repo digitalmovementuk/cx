@@ -3,8 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CEx × Digital Movement UK — Project Plan · Executive Summary</title>
-<meta name="description" content="Executive summary of the CEx × Digital Movement UK engagement. Conversion-optimised website plus SEO service pages, built to put CEx in front of Google and AI Search.">
+<title>CEx x Digital Movement UK – Project Plan</title>
+<meta name="description" content="Context | Deliverables | Milestones | Timeline | Business Value Timeline | Investment | Next Steps | Account Manager">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+
+<!-- Open Graph / WhatsApp / LinkedIn / Slack share preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Movement UK">
+<meta property="og:title" content="CEx x Digital Movement UK – Project Plan">
+<meta property="og:description" content="Context | Deliverables | Milestones | Timeline | Business Value Timeline | Investment | Next Steps | Account Manager">
+<meta property="og:image" content="https://digitalmovementuk.github.io/cx/project-plan/og-image.jpg">
+<meta property="og:image:secure_url" content="https://digitalmovementuk.github.io/cx/project-plan/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CEx x Digital Movement UK – Project Plan">
+<meta property="og:url" content="https://digitalmovementuk.github.io/cx/project-plan/">
+
+<!-- Twitter / X share preview -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CEx x Digital Movement UK – Project Plan">
+<meta name="twitter:description" content="Context | Deliverables | Milestones | Timeline | Business Value Timeline | Investment | Next Steps | Account Manager">
+<meta name="twitter:image" content="https://digitalmovementuk.github.io/cx/project-plan/og-image.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,20 +91,24 @@ section{padding:clamp(64px,9vw,120px) 0;position:relative}
 
 /* ============ Hero ============ */
 .hero{position:relative;background:var(--grad-radial);color:var(--white);padding:clamp(84px,11vw,150px) 0 clamp(72px,9vw,130px);overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 700px 900px at 88% 50%,rgba(74,30,112,0.7) 0%,transparent 60%),radial-gradient(ellipse 480px 480px at 8% 92%,rgba(74,30,112,0.45) 0%,transparent 55%);pointer-events:none}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 700px 900px at 88% 50%,rgba(74,30,112,0.7) 0%,transparent 60%),radial-gradient(ellipse 480px 480px at 8% 92%,rgba(74,30,112,0.45) 0%,transparent 55%);pointer-events:none;z-index:1}
+/* Text-area vignette — sits under the H1/deck and darkens the gradient just
+   enough that white + yellow type always reads cleanly without losing the
+   brand colour story behind it. */
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(26,14,46,0.42) 0%,rgba(26,14,46,0.22) 38%,rgba(26,14,46,0.05) 60%,transparent 78%);pointer-events:none;z-index:1}
 .hero .wrap{position:relative;z-index:2}
 .hero-blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:0.45;pointer-events:none;z-index:1}
 .hero-blob.b1{width:380px;height:380px;background:var(--dm-yellow);top:-80px;right:-40px;animation:float 14s ease-in-out infinite}
 .hero-blob.b2{width:280px;height:280px;background:var(--dm-pink-hot);bottom:-60px;left:18%;animation:float 18s ease-in-out infinite reverse}
 @keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-30px) scale(1.08)}}
 
-.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);border-radius:999px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.15em;font-weight:500;color:var(--white);backdrop-filter:blur(8px)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:9px 17px;background:rgba(26,14,46,0.32);border:1px solid rgba(255,255,255,0.36);border-radius:999px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.15em;font-weight:600;color:var(--white);backdrop-filter:blur(10px);box-shadow:0 4px 16px -4px rgba(26,14,46,0.35)}
 .hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--dm-yellow);box-shadow:0 0 12px var(--dm-yellow);animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 8px var(--dm-yellow);opacity:1}50%{box-shadow:0 0 18px var(--dm-yellow);opacity:0.85}}
-.hero-title{font-family:var(--display);font-weight:800;font-size:clamp(38px,7vw,92px);text-transform:uppercase;letter-spacing:-0.035em;line-height:0.94;margin:28px 0 28px;color:var(--white)}
-.hero-title .yellow{color:var(--dm-yellow)}
-.hero-title .x{color:var(--dm-yellow);font-weight:500;font-size:0.85em;margin:0 0.12em;letter-spacing:0;display:inline-block;vertical-align:0.06em}
-.hero-deck{font-family:var(--sans);font-size:clamp(17px,1.8vw,22px);font-weight:400;line-height:1.5;color:rgba(255,255,255,0.95);max-width:720px;margin-bottom:36px}
+.hero-title{font-family:var(--display);font-weight:800;font-size:clamp(38px,7vw,92px);text-transform:uppercase;letter-spacing:-0.035em;line-height:0.94;margin:28px 0 28px;color:var(--white);text-shadow:0 2px 20px rgba(26,14,46,0.35),0 1px 2px rgba(26,14,46,0.25)}
+.hero-title .yellow{color:var(--dm-yellow);text-shadow:0 2px 24px rgba(26,14,46,0.5),0 1px 3px rgba(26,14,46,0.4)}
+.hero-title .x{color:var(--dm-yellow);font-weight:500;font-size:0.85em;margin:0 0.12em;letter-spacing:0;display:inline-block;vertical-align:0.06em;text-shadow:0 2px 18px rgba(26,14,46,0.45)}
+.hero-deck{font-family:var(--sans);font-size:clamp(17px,1.8vw,22px);font-weight:500;line-height:1.5;color:#fff;max-width:720px;margin-bottom:36px;text-shadow:0 1px 12px rgba(26,14,46,0.4)}
 .hero-meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.22);border-radius:14px;overflow:hidden;backdrop-filter:blur(8px);max-width:880px}
 .hero-meta-cell{background:rgba(26,14,46,0.32);padding:18px 22px}
 .hero-meta-label{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.16em;color:rgba(255,255,255,0.75);margin-bottom:6px;font-weight:600}
@@ -348,6 +375,13 @@ body.is-reading .reading-now{opacity:1;transform:translateY(-50%) translateX(0)}
   .rn-ring svg{width:16px;height:16px}
 }
 
+/* Fade the floating tracker and the top progress bar out as the user reaches
+   the very end of the document — at that point the footer is in view and the
+   tracker no longer earns its space. Applies to both the desktop right-side
+   panel and the mobile bottom pill. */
+body.at-doc-end .reading-now{opacity:0;pointer-events:none;transition:opacity 0.5s var(--ease)}
+body.at-doc-end .scroll-progress{opacity:0;transition:opacity 0.5s var(--ease)}
+
 /* ============ Footer ============ */
 .foot{background:var(--ink);color:rgba(255,255,255,0.78);padding:clamp(54px,7vw,90px) 0 clamp(28px,4vw,42px);position:relative;overflow:hidden}
 .foot::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 600px 400px at 18% 20%,rgba(245,148,37,0.10) 0%,transparent 65%),radial-gradient(ellipse 600px 400px at 82% 80%,rgba(74,30,112,0.5) 0%,transparent 65%);pointer-events:none}
@@ -365,34 +399,50 @@ body.is-reading .reading-now{opacity:1;transform:translateY(-50%) translateX(0)}
 .foot-bottom{border-top:1px solid rgba(255,255,255,0.12);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.16em;color:rgba(255,255,255,0.5)}
 
 /* ============ Vertical timeline (mobile) ============ */
-.timeline-vertical{display:none;position:relative;margin:24px auto 36px;padding-left:36px;max-width:440px}
+.timeline-vertical{display:none;position:relative;margin:32px auto 48px;padding-left:44px;max-width:440px}
+/* Rail: a thin neutral track that the JS-driven gradient fill rides on top of.
+   Background extends slightly above the first dot and below the last dot so
+   the rail itself reads as a single connected thread. */
 .tlv-rail{position:absolute;left:14px;top:6px;bottom:6px;width:3px;background:var(--rule);border-radius:2px;overflow:hidden}
-/* In scroll-driven mode the fill's top + height are set in pixels by JS so the
-   gradient front lines up exactly with the activated dot. */
-.tlv-fill{position:absolute;left:0;right:0;top:0;height:0;background:linear-gradient(180deg,#FFD24A 0%,#F59425 30%,#E91E63 65%,#4A1E70 100%);transition:height 2.4s var(--ease)}
+.tlv-fill{position:absolute;left:-1px;right:-1px;top:0;height:0;background:linear-gradient(180deg,#FFD24A 0%,#F59425 30%,#E91E63 65%,#4A1E70 100%);border-radius:3px;box-shadow:0 0 10px rgba(233,30,99,0.35);transition:height 2.4s var(--ease)}
 .timeline-vertical.in .tlv-fill{height:100%}
-/* Scroll-driven mode: JS sets the fill height in lockstep with scroll. The
-   transition stays just long enough to smooth out RAF jitter without lagging
-   the finger. Node fade-in is gated on the dot passing the fill front. */
-.timeline-vertical.scroll-driven .tlv-fill{transition:height 0.12s linear,top 0.12s linear}
-.tlv-node{position:relative;padding:6px 0 30px;opacity:0;transform:translateX(-8px);transition:opacity 0.6s var(--ease),transform 0.6s var(--ease),filter 0.5s var(--ease)}
+/* Scroll-driven mode: JS sets fill.style.height/top in pixels every RAF tick.
+   No transition — the browser already paints once per frame, so any added
+   smoothing only introduces lag against the finger. */
+.timeline-vertical.scroll-driven .tlv-fill{transition:none}
+.tlv-node{position:relative;padding:8px 0 36px;opacity:0;transform:translateX(-8px);transition:opacity 0.6s var(--ease),transform 0.6s var(--ease),filter 0.5s var(--ease)}
 .timeline-vertical.in .tlv-node{opacity:1;transform:none}
 .timeline-vertical.in .tlv-node.tlv-n1{transition-delay:0.5s}
 .timeline-vertical.in .tlv-node.tlv-n2{transition-delay:1.0s}
 .timeline-vertical.in .tlv-node.tlv-n3{transition-delay:1.5s}
 .timeline-vertical.in .tlv-node.tlv-n4{transition-delay:2.0s}
-/* Scroll-driven node states */
-.timeline-vertical.scroll-driven .tlv-node{opacity:0.35;transform:none;filter:grayscale(0.55);transition-delay:0s}
-.timeline-vertical.scroll-driven .tlv-node.tlv-active{opacity:1;filter:none}
+/* Inactive state: low-key but still readable. Hollow dot, muted text.
+   When activated, everything snaps to brand-true ink + gradient dot. */
+.timeline-vertical.scroll-driven .tlv-node{opacity:1;transform:none;filter:none;transition-delay:0s}
 .tlv-node:last-child{padding-bottom:0}
-.tlv-dot{position:absolute;left:-29px;top:8px;width:18px;height:18px;border-radius:50%;border:3px solid var(--ink);box-shadow:0 0 0 4px var(--white);transition:transform 0.4s var(--ease),box-shadow 0.4s var(--ease)}
-.timeline-vertical.scroll-driven .tlv-node.tlv-active .tlv-dot{transform:scale(1.08);box-shadow:0 0 0 4px var(--white),0 0 14px rgba(233,30,99,0.45)}
-.tlv-node.tlv-n3 .tlv-dot{width:22px;height:22px;left:-31px;top:6px}
-.tlv-content{text-align:left}
-.tlv-label{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.16em;color:var(--ink-mute);font-weight:700;margin-bottom:4px}
-.tlv-date{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-0.015em;color:var(--ink);line-height:1.1;margin-bottom:4px}
-.tlv-event{font-family:var(--sans);font-size:13px;color:var(--ink-soft);line-height:1.45}
-.tlv-event strong{color:var(--dm-pink);font-weight:700}
+/* Dot: hollow + bordered by default; filled with the gradient stop matching
+   its rail position when active. Each node gets a distinct active colour so
+   the dot's colour always agrees with where the fill front sits. */
+.tlv-dot{position:absolute;left:-31px;top:10px;width:20px;height:20px;border-radius:50%;background:var(--white);border:2.5px solid var(--rule);box-shadow:0 0 0 4px var(--white);transition:background 0.45s var(--ease),border-color 0.45s var(--ease),transform 0.45s var(--ease),box-shadow 0.45s var(--ease);z-index:2}
+.timeline-vertical.scroll-driven .tlv-node.tlv-active .tlv-dot{transform:scale(1.05);box-shadow:0 0 0 4px var(--white),0 0 18px rgba(245,148,37,0.45)}
+/* Per-node active colours mirror the gradient position on the rail */
+.tlv-node.tlv-n1.tlv-active .tlv-dot{background:#FFD24A;border-color:#FFD24A}
+.tlv-node.tlv-n2.tlv-active .tlv-dot{background:#F59425;border-color:#F59425}
+.tlv-node.tlv-n3.tlv-active .tlv-dot{background:#E91E63;border-color:#E91E63}
+.tlv-node.tlv-n4.tlv-active .tlv-dot{background:#4A1E70;border-color:#4A1E70}
+/* Mid-milestone is the headline trigger — slightly larger ring */
+.tlv-node.tlv-n3 .tlv-dot{width:24px;height:24px;left:-33px;top:8px}
+.tlv-content{text-align:left;transition:transform 0.45s var(--ease)}
+.timeline-vertical.scroll-driven .tlv-node.tlv-active .tlv-content{transform:translateX(2px)}
+.tlv-label{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:0.16em;color:var(--ink-mute);font-weight:700;margin-bottom:4px;transition:color 0.45s var(--ease)}
+.tlv-date{font-family:var(--display);font-weight:800;font-size:18px;letter-spacing:-0.015em;color:var(--ink-mute);line-height:1.1;margin-bottom:6px;transition:color 0.45s var(--ease)}
+.tlv-event{font-family:var(--sans);font-size:13.5px;color:var(--ink-mute);line-height:1.45;transition:color 0.45s var(--ease)}
+.tlv-event strong{color:inherit;font-weight:700;transition:color 0.45s var(--ease)}
+/* Active text states — brand-ink for date, slightly softer ink for event copy */
+.timeline-vertical.scroll-driven .tlv-node.tlv-active .tlv-label{color:var(--dm-pink)}
+.timeline-vertical.scroll-driven .tlv-node.tlv-active .tlv-date{color:var(--ink)}
+.timeline-vertical.scroll-driven .tlv-node.tlv-active .tlv-event{color:var(--ink-soft)}
+.timeline-vertical.scroll-driven .tlv-node.tlv-active .tlv-event strong{color:var(--dm-pink)}
 
 /* ============ Small-screen tuning ============ */
 @media(max-width:760px){
@@ -664,7 +714,7 @@ body.is-reading .reading-now{opacity:1;transform:translateY(-50%) translateX(0)}
           <li><span class="dot"></span><span><strong>German keywords + meta data</strong>Keyword and meta data layer engineered for German-language search and translated into CEx's market language.</span></li>
           <li><span class="dot"></span><span><strong>WordPress implementation</strong>Pages built, internal links wired, schema validated, sitemap submitted to Google Search Console.</span></li>
         </ul>
-        <div class="scope-note"><strong>Exact page count.</strong> Confirmed during the SEO Strategy meeting (next Tuesday) once the priority services CEx wants to be found for are agreed. Typical range: <strong>6–12 core pages</strong> in the initial submission.</div>
+        <div class="scope-note"><strong>Exact scope.</strong> The list of SEO landing pages is locked at the SEO Strategy meeting on Tuesday, once the priority services CEx wants to be found for are agreed.</div>
       </div>
     </div>
   </div>
@@ -1251,7 +1301,7 @@ body.is-reading .reading-now{opacity:1;transform:translateY(-50%) translateX(0)}
       t('#sec-02 .deliv.b .deliv-list li:nth-of-type(3) span:last-child', '<strong>Handgeschriebene Texte — keine KI</strong>Lange, expertise-tragende Editorial-Texte von Menschen geschrieben. Googles E-E-A-T-Signale belohnen echte Autorenschaft — wir verwässern das Asset nicht mit KI-Füllmaterial.'),
       t('#sec-02 .deliv.b .deliv-list li:nth-of-type(4) span:last-child', '<strong>Deutsche Keywords + Meta-Daten</strong>Keyword- und Meta-Daten-Layer ausgelegt auf deutschsprachige Suche und übersetzt in die Marktsprache von CEx.'),
       t('#sec-02 .deliv.b .deliv-list li:nth-of-type(5) span:last-child', '<strong>WordPress-Umsetzung</strong>Seiten gebaut, interne Verlinkung gesetzt, Schema validiert, Sitemap in der Google Search Console eingereicht.'),
-      t('#sec-02 .deliv.b .scope-note', '<strong>Genaue Seitenzahl.</strong> Wird im SEO-Strategiemeeting am kommenden Dienstag festgelegt, sobald die priorisierten Services, für die CEx gefunden werden möchte, abgestimmt sind. Typische Bandbreite: <strong>6–12 Kernseiten</strong> in der Erstauslieferung.'),
+      t('#sec-02 .deliv.b .scope-note', '<strong>Genauer Scope.</strong> Die Liste der SEO-Landingpages wird im SEO-Strategiemeeting am Dienstag fixiert, sobald die priorisierten Services, für die CEx gefunden werden möchte, abgestimmt sind.'),
 
       // 03 — Milestones
       t('#sec-03 .sec-num', '03 — Meilensteine'),
@@ -1486,7 +1536,7 @@ body.is-reading .reading-now{opacity:1;transform:translateY(-50%) translateX(0)}
       t('#sec-02 .deliv.b .deliv-list li:nth-of-type(3) span:last-child', '<strong>Hand-written copy — no AI</strong>Long-form, expertise-signalled editorial written by humans. Google\'s E-E-A-T signals reward genuine authorship, and we don\'t dilute the asset with AI filler.'),
       t('#sec-02 .deliv.b .deliv-list li:nth-of-type(4) span:last-child', '<strong>German keywords + meta data</strong>Keyword and meta data layer engineered for German-language search and translated into CEx\'s market language.'),
       t('#sec-02 .deliv.b .deliv-list li:nth-of-type(5) span:last-child', '<strong>WordPress implementation</strong>Pages built, internal links wired, schema validated, sitemap submitted to Google Search Console.'),
-      t('#sec-02 .deliv.b .scope-note', '<strong>Exact page count.</strong> Confirmed during the SEO Strategy meeting (next Tuesday) once the priority services CEx wants to be found for are agreed. Typical range: <strong>6–12 core pages</strong> in the initial submission.'),
+      t('#sec-02 .deliv.b .scope-note', '<strong>Exact scope.</strong> The list of SEO landing pages is locked at the SEO Strategy meeting on Tuesday, once the priority services CEx wants to be found for are agreed.'),
 
       // 03 — Milestones
       t('#sec-03 .sec-num', '03 — Milestones'),
@@ -1889,6 +1939,11 @@ body.is-reading .reading-now{opacity:1;transform:translateY(-50%) translateX(0)}
       const hero = document.querySelector('.hero');
       const heroBottom = hero ? (hero.getBoundingClientRect().top + window.scrollY + hero.offsetHeight) : 600;
       document.body.classList.toggle('is-reading', window.scrollY > heroBottom - 200);
+
+      // Fade trackers out when the footer is in view (last ~280px of doc).
+      // Hysteresis keeps it stable at the cut-off so the pill doesn't flicker.
+      const distFromEnd = (document.documentElement.scrollHeight - window.innerHeight) - window.scrollY;
+      document.body.classList.toggle('at-doc-end', distFromEnd < 280);
 
       // Per-section ring fill — `start` is the scrollY value at which this
       // section's H2 first becomes fully visible; `end` is the scrollY value
