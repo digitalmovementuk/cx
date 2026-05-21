@@ -3,82 +3,828 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CX Versions</title>
-    <meta name="robots" content="noindex" />
-    <style>
-      :root {
-        color-scheme: light;
-        --ink: #151515;
-        --muted: #68625d;
-        --line: #e8e0d8;
-        --paper: #f8f4ef;
-        --accent: #ff6a1a;
+    <title>CX | Requirements Engineering, Digitalisierung &amp; Transformation, Projektmanagement &amp; Delivery</title>
+    <meta
+      name="description"
+      content="CX unterstützt Unternehmen bei Requirements Engineering und Product Owner Aufgaben, bei Digitalisierung und Transformation sowie bei Projektmanagement und Delivery."
+    />
+    <meta name="theme-color" content="#000000" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CX | Requirements Engineering, Digitalisierung &amp; Transformation, Projektmanagement &amp; Delivery" />
+    <meta
+      property="og:description"
+      content="Requirements Engineering und Interim Product Owner, Digitalisierung und Transformation, Projektmanagement und Delivery aus einer klaren Arbeitslogik."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23000000'/%3E%3Cpath d='M22 18 L40 32 L22 46' fill='none' stroke='%23A100FF' stroke-width='6' stroke-linecap='square' stroke-linejoin='miter'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "CX",
+        "description": "Beratung für Requirements Engineering und Product Owner Aufgaben, für Digitalisierung und Transformation sowie für Projektmanagement und Delivery.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        "serviceType": [
+          "Requirements Engineering",
+          "Interim Product Owner",
+          "Digitalisierung",
+          "Transformation",
+          "Projektmanagement",
+          "Agiles Delivery"
+        ],
+        "availableLanguage": ["de"]
       }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        padding: 32px;
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        color: var(--ink);
-        background: var(--paper);
-      }
-
-      main {
-        width: min(100%, 560px);
-      }
-
-      h1 {
-        margin: 0 0 12px;
-        font-size: clamp(2rem, 8vw, 4rem);
-        line-height: 0.95;
-      }
-
-      p {
-        margin: 0 0 28px;
-        color: var(--muted);
-        font-size: 1rem;
-        line-height: 1.6;
-      }
-
-      .links {
-        display: grid;
-        gap: 12px;
-      }
-
-      a {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 64px;
-        padding: 16px 18px;
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        background: #ffffff;
-        color: var(--ink);
-        font-weight: 750;
-        text-decoration: none;
-      }
-
-      a span {
-        color: var(--accent);
-      }
-    </style>
+    </script>
   </head>
   <body>
-    <main>
-      <h1>CX</h1>
-      <p>Published preview versions.</p>
-      <div class="links">
-        <a href="./cx-v1/">CX V1 <span>/cx-v1</span></a>
-        <a href="./cx-v2/">CX V2 <span>/cx-v2</span></a>
-      </div>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+    <header>
+      <nav class="nav" id="nav">
+        <div class="nav__inner">
+          <a href="#top" class="nav__brand" aria-label="CX Startseite">
+            <span class="nav__brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none">
+                <path d="M11 7 L22 16 L11 25" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter" />
+              </svg>
+            </span>
+            <span class="nav__brand-text">CX</span>
+          </a>
+
+          <div class="nav__links" role="navigation" aria-label="Hauptnavigation">
+            <a href="#capabilities">Leistungen</a>
+            <a href="#journey">Vorgehen</a>
+            <a href="#benefits">Vorteile</a>
+            <a href="#outcomes">Einsatzfelder</a>
+            <a href="#faq">FAQ</a>
+          </div>
+
+          <div class="nav__cta-group">
+            <a href="#contact" class="btn btn--accent btn--small nav__desktop-cta">
+              Erstgespräch anfragen
+              <span class="btn__icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
+                </svg>
+              </span>
+            </a>
+            <button
+              class="nav__menu"
+              type="button"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-nav"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="nav-drawer" id="mobile-nav" hidden>
+          <div class="nav-drawer__inner">
+            <a href="#capabilities">Leistungen</a>
+            <a href="#journey">Vorgehen</a>
+            <a href="#benefits">Vorteile</a>
+            <a href="#outcomes">Einsatzfelder</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact" class="btn btn--accent btn--small">Erstgespräch anfragen</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero__video-shell" aria-hidden="true">
+          <video class="hero__video" autoplay muted loop playsinline preload="auto" disablepictureinpicture>
+            <source src="media/cx-hero-background-calm.mp4" type="video/mp4" />
+          </video>
+          <div class="hero__video-overlay"></div>
+        </div>
+
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <div class="hero__eyebrow">
+              <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+              <span>CX · Beratung</span>
+            </div>
+
+            <h1 class="hero__title">
+              <span class="hero__title-line">
+                <span class="hero__title-text hero__title-text--left">Komplexe Veränderungen</span>
+              </span>
+              <span class="hero__title-line hero__title-line--accent">
+                <span class="hero__title-glyph" aria-hidden="true">
+                  <svg viewBox="0 0 80 80" fill="none">
+                    <path d="M22 14 L58 40 L22 66" stroke="currentColor" stroke-width="11" stroke-linecap="square" stroke-linejoin="miter" />
+                  </svg>
+                </span>
+                <span class="hero__title-text hero__title-text--right">Klare Umsetzung</span>
+              </span>
+            </h1>
+
+            <div class="hero__lead-wrap">
+              <span class="hero__lead-bar" aria-hidden="true"></span>
+              <h2 class="hero__lead">
+                Wenn Anforderungen, Transformation und Delivery gleichzeitig bewegt werden, bringt CX Ordnung in
+                Prioritäten, Verantwortung und Umsetzung.
+              </h2>
+            </div>
+
+            <div class="hero__shapes" aria-label="Leistungsfokus">
+              <span class="hero__shape">Anforderungen</span>
+              <span class="hero__shape">Transformation</span>
+              <span class="hero__shape">Delivery</span>
+            </div>
+
+            <a href="#contact" class="hero__cta">
+              <span class="hero__cta-icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" />
+                </svg>
+              </span>
+              <span>Erstgespräch anfragen</span>
+            </a>
+          </div>
+
+          <div class="hero__form-wrap">
+            <div class="hero__card">
+              <div class="form__kicker">
+                <span class="form__kicker-bar" aria-hidden="true"></span>
+                <span>Lassen Sie uns sprechen</span>
+              </div>
+              <p class="form__sub" id="contact-privacy-note">
+                Ein kurzer Überblick reicht. Diese Vorschau sendet keine Daten und setzt keine Cookies.
+              </p>
+
+              <form class="form" id="contact" aria-describedby="contact-privacy-note form-status">
+                <label class="form__label">
+                  <span>Name</span>
+                  <input
+                    class="form__input"
+                    name="name"
+                    autocomplete="name"
+                    maxlength="80"
+                    placeholder="Ihr Name"
+                  />
+                </label>
+
+                <label class="form__label">
+                  <span>E-Mail</span>
+                  <input
+                    class="form__input"
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    maxlength="120"
+                    placeholder="Ihre E-Mail"
+                    required
+                  />
+                </label>
+
+                <label class="form__label">
+                  <span>Thema</span>
+                  <textarea
+                    class="form__textarea"
+                    name="situation"
+                    maxlength="1200"
+                    placeholder="Wo hakt es gerade?"
+                  ></textarea>
+                </label>
+
+                <label class="form__consent">
+                  <input class="form__checkbox" type="checkbox" name="privacy_acknowledged" required />
+                  <span>
+                    Ich habe die <a href="./datenschutz.html">Datenschutzhinweise</a> gelesen.
+                    Meine Angaben werden nur zur Bearbeitung der Anfrage genutzt.
+                  </span>
+                </label>
+
+                <p class="form__privacy">
+                  Zweck: Antwort auf Ihre Anfrage. Rechtsgrundlage: vorvertragliche Anfrage oder
+                  berechtigtes Interesse. Keine Newsletter-Anmeldung, kein Tracking, keine Weitergabe
+                  an Werbenetzwerke.
+                </p>
+
+                <button type="submit" class="btn btn--accent form__submit">
+                  Erstgespräch anfragen
+                  <span class="btn__icon" aria-hidden="true">
+                    <svg viewBox="0 0 16 16" fill="none">
+                      <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
+                    </svg>
+                  </span>
+                </button>
+
+                <p class="form__status" id="form-status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__scroll-cue" aria-hidden="true">
+          <span class="hero__scroll-cue-label">Scrollen</span>
+          <span class="hero__scroll-cue-line"></span>
+        </div>
+      </section>
+
+      <section class="trustband" aria-label="Leistungsfokus">
+        <div class="container">
+          <div class="trustband__inner">
+            <div class="trustband__label">Im Fokus</div>
+            <div class="trustband__items">
+              <span>Requirements Engineering</span>
+              <span>Interim Product Owner</span>
+              <span>Digitalisierung</span>
+              <span>Transformation</span>
+              <span>Projektmanagement</span>
+              <span>Agiles Delivery</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--white" id="capabilities">
+        <div class="container">
+          <div class="section__intro reveal">
+            <div class="eyebrow"><span class="eyebrow__bar" aria-hidden="true"></span><span class="eyebrow__index">01</span><span>Leistungen</span></div>
+            <div class="section__intro-grid">
+              <h2 class="h-section">Drei klare Leistungsfelder.</h2>
+              <p class="h-lead">
+                CX bündelt Requirements &amp; Product Owner, Digitalisierung &amp; Transformation und Projektmanagement &amp; Delivery zu einer zusammenhängenden Arbeitslogik.
+              </p>
+            </div>
+          </div>
+
+          <div class="caps__grid">
+            <article class="cap-card reveal">
+              <div class="cap-card__media" aria-hidden="true">
+                <video class="cap-card__video" autoplay muted loop playsinline preload="auto" disablepictureinpicture>
+                  <source src="media/cx-card-process-optimization-pexels-8290538.mp4" type="video/mp4" />
+                </video>
+                <div class="cap-card__media-overlay"></div>
+                <div class="cap-card__index">01</div>
+              </div>
+              <div class="cap-card__body">
+                <div class="cap-card__tag">Requirements Engineering &amp; Product Owner</div>
+                <h3 class="cap-card__title">Anforderungen schärfen, Backlogs führen.</h3>
+                <p class="cap-card__copy">
+                  Für Vorhaben, in denen Scope, Anforderungen und Prioritäten unscharf geworden
+                  sind oder die Product-Owner-Rolle Unterstützung braucht.
+                </p>
+                <ul class="cap-card__list">
+                  <li>Anforderungsklarheit</li>
+                  <li>Backlog &amp; Interim Product Owner</li>
+                </ul>
+                <div class="cap-card__footer">
+                  <a href="#outcomes" class="link-arrow">
+                    <span>Mehr dazu</span>
+                    <span class="link-arrow__icon" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cap-card reveal">
+              <div class="cap-card__media" aria-hidden="true">
+                <video class="cap-card__video" autoplay muted loop playsinline preload="auto" disablepictureinpicture>
+                  <source src="media/cx-card-digitalization-pexels-6774648.mp4" type="video/mp4" />
+                </video>
+                <div class="cap-card__media-overlay"></div>
+                <div class="cap-card__index">02</div>
+              </div>
+              <div class="cap-card__body">
+                <div class="cap-card__tag">Digitalisierung &amp; Transformation</div>
+                <h3 class="cap-card__title">Veränderung sauber vorbereiten.</h3>
+                <p class="cap-card__copy">
+                  Prozesssicht, Zielbild und Maßnahmenlogik werden geordnet, bevor Digitalisierungs-
+                  oder Transformationsschritte zu groß werden.
+                </p>
+                <ul class="cap-card__list">
+                  <li>Prozess- und Systemblick</li>
+                  <li>Realistischer Transformationspfad</li>
+                </ul>
+                <div class="cap-card__footer">
+                  <a href="#journey" class="link-arrow">
+                    <span>Mehr dazu</span>
+                    <span class="link-arrow__icon" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cap-card reveal">
+              <div class="cap-card__media" aria-hidden="true">
+                <video class="cap-card__video" autoplay muted loop playsinline preload="auto" disablepictureinpicture>
+                  <source src="media/cx-card-delivery-structure-pexels-7686671.mp4" type="video/mp4" />
+                </video>
+                <div class="cap-card__media-overlay"></div>
+                <div class="cap-card__index">03</div>
+              </div>
+              <div class="cap-card__body">
+                <div class="cap-card__tag">Projektmanagement &amp; Delivery</div>
+                <h3 class="cap-card__title">Projekte und Delivery wieder führen.</h3>
+                <p class="cap-card__copy">
+                  Wenn Steuerung, Rollen und Lieferpfad schwimmen, bringt CX wieder Struktur in die
+                  laufende Umsetzung — agil oder klassisch, je nach Vorhaben.
+                </p>
+                <ul class="cap-card__list">
+                  <li>Projekt- und Liefersteuerung</li>
+                  <li>Klare Rollen und Takt</li>
+                </ul>
+                <div class="cap-card__footer">
+                  <a href="#faq" class="link-arrow">
+                    <span>Mehr dazu</span>
+                    <span class="link-arrow__icon" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark" id="journey">
+        <div class="container">
+          <div class="journey__grid">
+            <div class="journey__aside reveal">
+              <div class="eyebrow eyebrow--on-dark"><span class="eyebrow__bar" aria-hidden="true"></span><span class="eyebrow__index">02</span><span>Vorgehen</span></div>
+              <h2 class="h-section h-section--on-dark">Ein klarer Ablauf für komplexe Veränderung.</h2>
+              <p class="h-lead h-lead--on-dark">
+                CX startet mit einem Lagebild und baut daraus Anforderungen, Transformationsschritte
+                und Delivery.
+              </p>
+
+              <div class="journey__figure">
+                <div class="journey__figure-label">Arbeitsmodell</div>
+                <div class="journey__figure-title">Lagebild · Anforderungen · Delivery</div>
+                <p class="journey__figure-copy">
+                  Anforderungsklarheit, Transformationspfad und Delivery werden als eine
+                  Reihenfolge aufgebaut.
+                </p>
+
+                <div class="journey__diagram" aria-hidden="true">
+                  <svg viewBox="0 0 280 90" fill="none">
+                    <defs>
+                      <linearGradient id="journeyLine" x1="0" x2="1" y1="0" y2="0">
+                        <stop offset="0" stop-color="#A100FF" stop-opacity="0.2" />
+                        <stop offset="0.5" stop-color="#A100FF" stop-opacity="1" />
+                        <stop offset="1" stop-color="#A100FF" stop-opacity="0.2" />
+                      </linearGradient>
+                    </defs>
+                    <line x1="20" y1="45" x2="260" y2="45" stroke="url(#journeyLine)" stroke-width="1.5" />
+                    <g font-family="inherit" font-size="9" fill="#a2a2a0" letter-spacing="0.04em">
+                      <text x="34" y="80" text-anchor="middle">LAGEBILD</text>
+                      <text x="113" y="80" text-anchor="middle">ANFORDERUNGEN</text>
+                      <text x="192" y="80" text-anchor="middle">TRANSFORMATION</text>
+                      <text x="260" y="80" text-anchor="end">DELIVERY</text>
+                    </g>
+                    <circle cx="34" cy="45" r="6" fill="#A100FF" />
+                    <circle cx="34" cy="45" r="11" stroke="#A100FF" stroke-opacity="0.3" />
+                    <circle cx="113" cy="45" r="5" fill="#A100FF" />
+                    <circle cx="192" cy="45" r="5" fill="#A100FF" />
+                    <rect x="252" y="35" width="20" height="20" fill="#A100FF" />
+                    <path d="M256 41 L266 45 L256 49" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="square" stroke-linejoin="miter" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <ol class="journey__steps reveal">
+              <li class="journey-step">
+                <div class="journey-step__num">01</div>
+                <div class="journey-step__body">
+                  <h3 class="journey-step__title">Ausgangslage klären</h3>
+                  <p class="journey-step__copy">
+                    Welche Abläufe stocken, welche Entscheidungen hängen fest und wo fehlt heute
+                    Klarheit?
+                  </p>
+                </div>
+              </li>
+              <li class="journey-step">
+                <div class="journey-step__num">02</div>
+                <div class="journey-step__body">
+                  <h3 class="journey-step__title">Anforderungen schärfen</h3>
+                  <p class="journey-step__copy">
+                    Aus diffusen Themen werden klare Anforderungen, Rollen und Prioritäten — bei
+                    Bedarf in Interim-Product-Owner-Logik.
+                  </p>
+                </div>
+              </li>
+              <li class="journey-step">
+                <div class="journey-step__num">03</div>
+                <div class="journey-step__body">
+                  <h3 class="journey-step__title">Transformationspfad ordnen</h3>
+                  <p class="journey-step__copy">
+                    Digitalisierungs- und Transformationsschritte werden in eine realistische
+                    Reihenfolge gebracht, statt parallel zu wachsen.
+                  </p>
+                </div>
+              </li>
+              <li class="journey-step">
+                <div class="journey-step__num">04</div>
+                <div class="journey-step__body">
+                  <h3 class="journey-step__title">Delivery-Modell aufsetzen</h3>
+                  <p class="journey-step__copy">
+                    Projektstruktur, Backlog, Rollen und Takt werden so gebaut, dass Fortschritt
+                    wieder lesbar wird.
+                  </p>
+                </div>
+              </li>
+              <li class="journey-step">
+                <div class="journey-step__num">05</div>
+                <div class="journey-step__body">
+                  <h3 class="journey-step__title">Nächste Schritte umsetzbar machen</h3>
+                  <p class="journey-step__copy">
+                    Das Ergebnis ist eine brauchbare Basis für konkrete Verbesserungen und nächste
+                    Schritte.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--white" id="benefits">
+        <div class="container">
+          <div class="section__intro reveal">
+            <div class="eyebrow"><span class="eyebrow__bar" aria-hidden="true"></span><span class="eyebrow__index">03</span><span>Warum CX</span></div>
+            <div class="section__intro-grid">
+              <h2 class="h-section">Warum CX eher entlastet als weiter überlädt.</h2>
+              <p class="h-lead">
+                Die Arbeit von CX setzt genau dort an, wo zwischen Anforderungen, Transformation und
+                Delivery der Faden verloren geht.
+              </p>
+            </div>
+          </div>
+
+          <div class="benefits__grid">
+            <article class="benefit reveal">
+              <div class="benefit__head">
+                <div class="benefit__num">01</div>
+                <div class="benefit__meta">Verbindet statt trennt</div>
+              </div>
+              <h3 class="benefit__title">Requirements, Transformation und Delivery werden als eine Reihenfolge behandelt.</h3>
+              <p class="benefit__copy">
+                CX vermeidet Inseldenken. Das hilft, wenn unscharfe Anforderungen sonst digital
+                kopiert oder gute Ideen ohne klare Lieferlogik versanden würden.
+              </p>
+              <div class="benefit__impact">
+                <span class="benefit__impact-label">Nutzen</span>
+                <span>Weniger Brüche zwischen Analyse und Umsetzung</span>
+              </div>
+            </article>
+
+            <article class="benefit reveal">
+              <div class="benefit__head">
+                <div class="benefit__num">02</div>
+                <div class="benefit__meta">Praktisch</div>
+              </div>
+              <h3 class="benefit__title">Klarer, direkter Ton statt aufgeblasener Transformationssprache.</h3>
+              <p class="benefit__copy">
+                Die Beratung erklärt, was konkret bremst, was sich ändern soll und welcher nächste
+                Schritt dafür sinnvoll ist.
+              </p>
+              <div class="benefit__impact">
+                <span class="benefit__impact-label">Nutzen</span>
+                <span>Bessere Verständlichkeit für Fachseite und Delivery</span>
+              </div>
+            </article>
+
+            <article class="benefit reveal">
+              <div class="benefit__head">
+                <div class="benefit__num">03</div>
+                <div class="benefit__meta">Mittelstand</div>
+              </div>
+              <h3 class="benefit__title">Hilfreich für Unternehmen mit Transformationsdruck und vielen offenen Anforderungen.</h3>
+              <p class="benefit__copy">
+                Die Zielgruppe sind Teams mit Transformations- oder Digitalisierungsvorhaben,
+                unklaren Anforderungen oder Projekten, die viel Energie binden und trotzdem schwer
+                steuerbar bleiben.
+              </p>
+              <div class="benefit__impact">
+                <span class="benefit__impact-label">Nutzen</span>
+                <span>Externe Struktur ohne unnötigen Beratungsapparat</span>
+              </div>
+            </article>
+
+            <article class="benefit reveal">
+              <div class="benefit__head">
+                <div class="benefit__num">04</div>
+                <div class="benefit__meta">Anschlussfähig</div>
+              </div>
+              <h3 class="benefit__title">Von Requirements Engineering bis Interim Product Owner und Delivery andockbar.</h3>
+              <p class="benefit__copy">
+                CX kann bei Anforderungsklärung und Priorisierung starten, eine Transformation
+                vorbereiten oder direkt in laufende Projekte, Backlogs und Delivery-Setups
+                einsteigen.
+              </p>
+              <div class="benefit__impact">
+                <span class="benefit__impact-label">Nutzen</span>
+                <span>Sinnvoll auch bei laufenden Vorhaben</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--paper" id="outcomes">
+        <div class="container">
+          <div class="section__intro reveal">
+            <div class="eyebrow"><span class="eyebrow__bar" aria-hidden="true"></span><span class="eyebrow__index">04</span><span>Typische Einsatzfelder</span></div>
+            <div class="section__intro-grid">
+              <h2 class="h-section">Drei häufige Startpunkte.</h2>
+              <p class="h-lead">
+                Die häufigsten Muster liegen in unklaren Anforderungen, anstehender Transformation
+                oder Delivery ohne klare Priorität.
+              </p>
+            </div>
+          </div>
+
+          <div role="tablist" class="outcomes__tabs reveal" aria-label="Typische Situationen">
+            <button role="tab" aria-selected="true" class="outcomes__tab is-active" data-panel="0">
+              <span class="outcomes__tab-num">01</span>
+              <span class="outcomes__tab-label">Anforderungen &amp; PO</span>
+            </button>
+            <button role="tab" aria-selected="false" class="outcomes__tab" data-panel="1">
+              <span class="outcomes__tab-num">02</span>
+              <span class="outcomes__tab-label">Digitalisierung &amp; Transformation</span>
+            </button>
+            <button role="tab" aria-selected="false" class="outcomes__tab" data-panel="2">
+              <span class="outcomes__tab-num">03</span>
+              <span class="outcomes__tab-label">Projekt &amp; Delivery</span>
+            </button>
+          </div>
+
+          <div class="outcomes__panels reveal">
+            <div class="outcomes__panel is-active" id="outcomes-panel-0"></div>
+            <div class="outcomes__panel" id="outcomes-panel-1"></div>
+            <div class="outcomes__panel" id="outcomes-panel-2"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--white" id="faq">
+        <div class="container">
+          <div class="section__intro section__intro--center reveal">
+            <div class="eyebrow eyebrow--center"><span class="eyebrow__bar" aria-hidden="true"></span><span class="eyebrow__index">05</span><span>FAQ</span></div>
+            <h2 class="h-section h-section--center">Fragen, die vor einem ersten Gespräch meistens auftauchen.</h2>
+          </div>
+
+          <div class="faq">
+            <details class="faq-item reveal">
+              <summary>
+                <span class="faq-summary__text">Für welche Unternehmen ist CX besonders sinnvoll?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <span class="faq-icon__bar faq-icon__bar--h"></span>
+                  <span class="faq-icon__bar faq-icon__bar--v"></span>
+                </span>
+              </summary>
+              <div class="faq-item__body">
+                Für Unternehmen mit unklaren Anforderungen, anstehender Digitalisierung oder
+                Transformation oder Delivery-Problemen, in denen zu viel Reibung zwischen Fachseite,
+                IT und Umsetzung entstanden ist.
+              </div>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>
+                <span class="faq-summary__text">Arbeitet CX nur an Digitalisierung und Transformation?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <span class="faq-icon__bar faq-icon__bar--h"></span>
+                  <span class="faq-icon__bar faq-icon__bar--v"></span>
+                </span>
+              </summary>
+              <div class="faq-item__body">
+                Nein. Digitalisierung und Transformation sind ein Schwerpunkt, daneben arbeitet CX
+                an Requirements Engineering und Interim Product Owner Aufgaben sowie an
+                Projektmanagement und Delivery.
+              </div>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>
+                <span class="faq-summary__text">Brauchen wir dafür sofort neue Software?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <span class="faq-icon__bar faq-icon__bar--h"></span>
+                  <span class="faq-icon__bar faq-icon__bar--v"></span>
+                </span>
+              </summary>
+              <div class="faq-item__body">
+                Nicht unbedingt. Oft ist zuerst wichtiger zu verstehen, welche Anforderungs-,
+                Rollen- oder Prozesslücken die Transformation überhaupt sinnvoll machen.
+              </div>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>
+                <span class="faq-summary__text">Kann CX in laufende Projekte einsteigen?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <span class="faq-icon__bar faq-icon__bar--h"></span>
+                  <span class="faq-icon__bar faq-icon__bar--v"></span>
+                </span>
+              </summary>
+              <div class="faq-item__body">
+                Ja. Gerade bei laufenden Vorhaben hilft ein externer Blick oft, Scope, Rollen,
+                Prioritäten und Delivery-Takt wieder lesbarer zu machen.
+              </div>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>
+                <span class="faq-summary__text">Ist das eher Strategie oder auch Umsetzungsvorbereitung?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <span class="faq-icon__bar faq-icon__bar--h"></span>
+                  <span class="faq-icon__bar faq-icon__bar--v"></span>
+                </span>
+              </summary>
+              <div class="faq-item__body">
+                Beides, aber mit starkem Fokus auf eine umsetzbare Arbeitsbasis. Ziel ist nicht nur
+                ein gutes Bild, sondern ein klarerer Pfad für Anforderungen, Prioritäten und Delivery.
+              </div>
+            </details>
+
+            <details class="faq-item reveal">
+              <summary>
+                <span class="faq-summary__text">Wie startet ein Erstgespräch?</span>
+                <span class="faq-icon" aria-hidden="true">
+                  <span class="faq-icon__bar faq-icon__bar--h"></span>
+                  <span class="faq-icon__bar faq-icon__bar--v"></span>
+                </span>
+              </summary>
+              <div class="faq-item__body">
+                Der Einstieg ist ein kurzes Gespräch über Ausgangslage, größte Bremsen und den
+                sinnvollsten ersten Fokus. Daraus entsteht noch kein großes Projekt, sondern zuerst
+                Klarheit über die nächsten Schritte.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq-followup reveal">
+            <div class="faq-followup__bar" aria-hidden="true"></div>
+            <div class="faq-followup__body">
+              <div class="faq-followup__title">Noch unsicher, wo das Problem eigentlich sitzt?</div>
+              <p class="faq-followup__copy">
+                Dann starten Sie nicht mit der Lösung, sondern mit der Lagebeschreibung. Genau dafür
+                ist das Erstgespräch da.
+              </p>
+            </div>
+            <a href="#contact" class="btn btn--ghost btn--small">
+              Zum Formular
+              <span class="btn__icon" aria-hidden="true">
+                <svg viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section final-cta">
+        <div class="container">
+          <div class="final-cta__inner reveal">
+            <div class="eyebrow eyebrow--on-dark eyebrow--center"><span class="eyebrow__bar" aria-hidden="true"></span><span class="eyebrow__index">06</span><span>Nächster Schritt</span></div>
+            <h2 class="final-cta__headline">
+              Bringen Sie Prozesse und Umsetzung
+              <span class="final-cta__headline-accent">
+                <span class="final-cta__headline-glyph" aria-hidden="true">
+                  <svg viewBox="0 0 80 80" fill="none">
+                    <path d="M22 14 L58 40 L22 66" stroke="currentColor" stroke-width="11" stroke-linecap="square" stroke-linejoin="miter" />
+                  </svg>
+                </span>
+                wieder in eine klare Reihenfolge.
+              </span>
+            </h2>
+            <p class="final-cta__lead">
+              Wenn Anforderungen, Transformation oder Delivery zu unübersichtlich geworden sind,
+              startet CX mit einem strukturierten Erstgespräch.
+            </p>
+            <div class="final-cta__actions">
+              <a href="#contact" class="btn btn--primary">
+                Erstgespräch anfragen
+                <span class="btn__icon" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
+                  </svg>
+                </span>
+              </a>
+              <a href="#capabilities" class="btn btn--ghost-on-dark">Leistungen prüfen</a>
+            </div>
+            <p class="final-cta__reassurance">
+              Kein aufgeblasener Methoden-Pitch. Erst ein klares Bild, dann eine sinnvolle Reihenfolge.
+            </p>
+            <div class="final-cta__topics" aria-label="Arbeitsfokus">
+              <span class="final-cta__topics-label">Fokus</span>
+              <span>Requirements &amp; PO</span>
+              <span>Digitalisierung &amp; Transformation</span>
+              <span>Projekt &amp; Delivery</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <aside class="sticky-cta" id="stickyCta" aria-label="Kontakt-Hinweis" aria-hidden="true" inert>
+      <div class="sticky-cta__copy">Anforderungen, Transformation oder Delivery hängen fest?</div>
+      <a href="#contact" class="btn btn--accent btn--small">
+        Erstgespräch
+        <span class="btn__icon" aria-hidden="true">
+          <svg viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
+          </svg>
+        </span>
+      </a>
+    </aside>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand-wrap">
+            <a href="#top" class="footer__brand" aria-label="CX">
+              <span class="footer__brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 32 32" fill="none">
+                  <path d="M11 7 L22 16 L11 25" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter" />
+                </svg>
+              </span>
+              <span>CX</span>
+            </a>
+            <p class="footer__lead">
+              Beratung für Requirements Engineering &amp; Product Owner, Digitalisierung &amp;
+              Transformation und Projektmanagement &amp; Delivery — für Vorhaben, die wieder
+              lesbar werden müssen.
+            </p>
+            <div class="footer__meta">Fokus auf klare Leistungen, saubere Anforderungen und umsetzbare nächste Schritte.</div>
+          </div>
+
+          <div class="footer__cols">
+            <div class="footer__col">
+              <div class="footer__col-title">Explore</div>
+              <a href="#capabilities">Leistungen</a>
+              <a href="#journey">Vorgehen</a>
+              <a href="#benefits">Warum CX</a>
+              <a href="#outcomes">Einsatzfelder</a>
+              <a href="#faq">FAQ</a>
+            </div>
+
+            <div class="footer__col">
+              <div class="footer__col-title">Leistungen</div>
+              <a href="#capabilities">Requirements Engineering</a>
+              <a href="#capabilities">Interim Product Owner</a>
+              <a href="#capabilities">Digitalisierung &amp; Transformation</a>
+              <a href="#capabilities">Projektmanagement</a>
+              <a href="#capabilities">Agiles Delivery</a>
+            </div>
+
+            <div class="footer__col">
+              <div class="footer__col-title">Kontaktstart</div>
+              <a href="#contact">Erstgespräch anfragen</a>
+              <a href="#contact">Ausgangslage schildern</a>
+              <div class="footer__note">Keine Cookies oder Analyse-Tools</div>
+              <div class="footer__note">Formular in dieser Vorschau lokal</div>
+            </div>
+
+            <div class="footer__col footer__col--legal">
+              <div class="footer__col-title">Rechtliches</div>
+              <a href="./datenschutz.html">Datenschutz</a>
+              <a href="./impressum.html">Impressum</a>
+              <button class="footer__link-button" type="button" data-privacy-settings>
+                Privatsphäre-Einstellungen
+              </button>
+              <div class="footer__note">Keine externen Schriftarten</div>
+              <div class="footer__note">Keine Drittanbieter-Tracker</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div>© CX — Klarheit für Anforderungen, Transformation und Delivery.</div>
+          <div>Datensparsame Website: lokale Medien, keine Cookies, keine Tracking-Skripte.</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

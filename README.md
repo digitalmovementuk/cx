@@ -1,7 +1,8 @@
 # CX
 
-Standalone GitHub Pages repo for the CX website previews.
+Live site for cx-experts.de (GitHub Pages → <https://digitalmovementuk.github.io/cx/>).
 
-- `cx-v1/` publishes version 1.
-- `cx-v2/` publishes version 2.
-- `media/` contains the shared hero video used by both versions.
+- `index.html` — landing page (V1, Accenture-style, with hero background video and animated icons)
+- `datenschutz.html`, `impressum.html` — legal pages
+- `media/` — hero and capability-card videos
+- `script.js`, `styles.css` — page assets
