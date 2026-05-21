@@ -304,17 +304,34 @@ document.querySelectorAll('.reveal').forEach((element) => {
 });
 
 if (hero && stickyCta) {
-  const stickyObserver = new IntersectionObserver(
-    ([entry]) => {
-      const shouldShow = !entry.isIntersecting;
-      stickyCta.classList.toggle('is-visible', shouldShow);
-      stickyCta.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
-      stickyCta.toggleAttribute('inert', !shouldShow);
-    },
-    { threshold: 0.2 }
-  );
+  const finalCta = document.querySelector('.final-cta');
+  const footer = document.querySelector('.footer');
+  const state = { pastHero: false, inFinalCta: false, inFooter: false };
 
-  stickyObserver.observe(hero);
+  const sync = () => {
+    const shouldShow = state.pastHero && !state.inFinalCta && !state.inFooter;
+    stickyCta.classList.toggle('is-visible', shouldShow);
+    stickyCta.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
+    stickyCta.toggleAttribute('inert', !shouldShow);
+  };
+
+  new IntersectionObserver(
+    ([entry]) => { state.pastHero = !entry.isIntersecting; sync(); },
+    { threshold: 0.2 }
+  ).observe(hero);
+
+  if (finalCta) {
+    new IntersectionObserver(
+      ([entry]) => { state.inFinalCta = entry.isIntersecting; sync(); },
+      { threshold: 0.1 }
+    ).observe(finalCta);
+  }
+  if (footer) {
+    new IntersectionObserver(
+      ([entry]) => { state.inFooter = entry.isIntersecting; sync(); },
+      { threshold: 0.01 }
+    ).observe(footer);
+  }
 }
 
 if (navLinks.length) {

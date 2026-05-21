@@ -57,8 +57,8 @@
   /* Layout */
   --container: 1440px;
   --container-px: clamp(24px, 5vw, 88px);
-  --section-py: clamp(96px, 12vw, 180px);
-  --section-py-tight: clamp(72px, 9vw, 128px);
+  --section-py: clamp(80px, 9vw, 140px);
+  --section-py-tight: clamp(64px, 7vw, 108px);
   --gutter-lg: clamp(40px, 6vw, 96px);
   --gutter-md: clamp(28px, 4vw, 56px);
 
@@ -1732,34 +1732,34 @@ body.has-drawer { overflow: hidden; }
 
 .sticky-cta {
   position: fixed;
-  inset: auto 16px 16px 16px;
-  display: flex;
+  inset: auto 24px 24px auto;
+  left: auto;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 14px 18px;
+  gap: 14px;
+  padding: 12px 14px 12px 18px;
   background: var(--acn-black);
   color: #fff;
-  border: 1px solid var(--acn-purple);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 90;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(14px);
   pointer-events: none;
   transition: opacity var(--dur) var(--ease-out), transform var(--dur) var(--ease-out);
-  box-shadow: 0 24px 48px -16px rgba(0, 0, 0, 0.5);
-  max-width: 540px;
-  margin-inline: auto;
+  box-shadow: 0 18px 48px -18px rgba(0, 0, 0, 0.55);
+  max-width: 420px;
 }
 .sticky-cta.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
-.sticky-cta__copy { font-size: 0.875rem; line-height: 1.4; flex: 1; min-width: 0; }
-.sticky-cta .btn { background: var(--cx-yellow); border-color: var(--cx-yellow); color: var(--cx-charcoal); }
+.sticky-cta.is-hidden  { opacity: 0; transform: translateY(14px); pointer-events: none; }
+.sticky-cta__copy { font-size: 0.8125rem; line-height: 1.35; flex: 1; min-width: 0; color: rgba(255,255,255,0.78); }
+.sticky-cta .btn { background: var(--cx-yellow); border-color: var(--cx-yellow); color: var(--cx-charcoal); padding: 10px 14px; }
 .sticky-cta .btn:hover { background: var(--cx-warm-2); color: var(--cx-charcoal); border-color: var(--cx-warm-2); }
-.sticky-cta .btn .btn__icon { background: var(--cx-charcoal); color: var(--cx-yellow); }
+.sticky-cta .btn .btn__icon { background: var(--cx-charcoal); color: var(--cx-yellow); width: 22px; height: 22px; flex: 0 0 22px; }
 .sticky-cta .btn:hover .btn__icon { background: var(--cx-charcoal); color: var(--cx-yellow); }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .sticky-cta__copy { display: none; }
-  .sticky-cta { left: auto; right: 16px; max-width: none; width: auto; }
+  .sticky-cta { inset: auto 16px 16px auto; padding: 10px 12px; }
 }
 
 /* ==========================================================================
