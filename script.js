@@ -641,3 +641,39 @@ if (contactForm && formStatus) {
     glyphObserver.observe(finalSection);
   }
 })();
+
+/* ==========================================================================
+   Wide hamburger services drawer (homepage)
+   ========================================================================== */
+(function () {
+  const btn = document.getElementById('cxMenuToggle');
+  const drawer = document.getElementById('cxServicesDrawer');
+  const scrim = document.getElementById('cxDrawerScrim');
+  if (!btn || !drawer || !scrim) return;
+  function open() {
+    btn.setAttribute('aria-expanded', 'true');
+    btn.setAttribute('aria-label', 'Leistungen-Menü schließen');
+    drawer.classList.add('is-open');
+    drawer.setAttribute('aria-hidden', 'false');
+    scrim.classList.add('is-open');
+    scrim.setAttribute('aria-hidden', 'false');
+    document.documentElement.style.overflow = 'hidden';
+  }
+  function close() {
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Leistungen-Menü öffnen');
+    drawer.classList.remove('is-open');
+    drawer.setAttribute('aria-hidden', 'true');
+    scrim.classList.remove('is-open');
+    scrim.setAttribute('aria-hidden', 'true');
+    document.documentElement.style.overflow = '';
+  }
+  btn.addEventListener('click', () => {
+    if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
+  });
+  scrim.addEventListener('click', close);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  drawer.querySelectorAll('.cx-drawer__link, .cx-drawer__cta').forEach(a => {
+    a.addEventListener('click', () => setTimeout(close, 0));
+  });
+})();

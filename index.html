@@ -19,7 +19,7 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23000000'/%3E%3Cpath d='M22 18 L40 32 L22 46' fill='none' stroke='%23A100FF' stroke-width='6' stroke-linecap='square' stroke-linejoin='miter'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23000000'/%3E%3Cpath d='M22 18 L40 32 L22 46' fill='none' stroke='%23FF7A00' stroke-width='6' stroke-linecap='square' stroke-linejoin='miter'/%3E%3C/svg%3E"
     />
     <link rel="stylesheet" href="./styles.css" />
     <script defer src="./script.js"></script>
@@ -28,18 +28,25 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "CX",
-        "description": "Beratung für Requirements Engineering und Product Owner Aufgaben, für Digitalisierung und Transformation sowie für Projektmanagement und Delivery.",
+        "description": "Beratung für Prozessoptimierung und Business Process Management, IT-Projektmanagement und agile Delivery, Digitalisierung und digitale Transformation, Change Management sowie KI- und Enterprise-Architecture-Beratung.",
         "areaServed": {
           "@type": "Country",
           "name": "Germany"
         },
         "serviceType": [
-          "Requirements Engineering",
-          "Interim Product Owner",
-          "Digitalisierung",
-          "Transformation",
-          "Projektmanagement",
-          "Agiles Delivery"
+          "Prozessoptimierung Beratung",
+          "Business Process Management Beratung",
+          "IT-Projektmanagement Beratung",
+          "Agiles Projektmanagement Beratung",
+          "Scrum Beratung",
+          "Digitalisierungsberatung",
+          "Digitale Transformation Beratung",
+          "Industrie 4.0 Beratung",
+          "Change Management Beratung",
+          "KI-Beratung",
+          "KI-Strategie Beratung",
+          "Enterprise Architecture Beratung",
+          "IT-Architektur Beratung"
         ],
         "availableLanguage": ["de"]
       }
@@ -61,14 +68,16 @@
           </a>
 
           <div class="nav__links" role="navigation" aria-label="Hauptnavigation">
-            <a href="#capabilities">Leistungen</a>
             <a href="#journey">Vorgehen</a>
             <a href="#benefits">Vorteile</a>
-            <a href="#outcomes">Einsatzfelder</a>
             <a href="#faq">FAQ</a>
           </div>
 
           <div class="nav__cta-group">
+            <button type="button" class="cx-menu-btn" id="cxMenuToggle" aria-label="Leistungen-Menü öffnen" aria-expanded="false" aria-controls="cxServicesDrawer">
+              <span class="cx-menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+              <span class="cx-menu-btn__label">Leistungen</span>
+            </button>
             <a href="#contact" class="btn btn--accent btn--small nav__desktop-cta">
               Erstgespräch anfragen
               <span class="btn__icon" aria-hidden="true">
@@ -93,7 +102,6 @@
 
         <div class="nav-drawer" id="mobile-nav" hidden>
           <div class="nav-drawer__inner">
-            <a href="#capabilities">Leistungen</a>
             <a href="#journey">Vorgehen</a>
             <a href="#benefits">Vorteile</a>
             <a href="#outcomes">Einsatzfelder</a>
@@ -103,6 +111,42 @@
         </div>
       </nav>
     </header>
+
+    <div class="cx-drawer-scrim" id="cxDrawerScrim" aria-hidden="true"></div>
+    <aside class="cx-drawer" id="cxServicesDrawer" aria-hidden="true" role="dialog" aria-label="Leistungs-Navigation">
+      <div class="cx-drawer__inner">
+        <div class="cx-drawer__column">
+          <div class="cx-drawer__section">
+            <div class="cx-drawer__label">Säule 1 — Projekte &amp; Prozesse</div>
+            <a class="cx-drawer__link" href="prozessoptimierung-beratung/index.html"><span class="cx-drawer__num">01</span><span class="cx-drawer__title">Prozessoptimierung &amp; BPM</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+            <a class="cx-drawer__link" href="projektmanagement-beratung/index.html"><span class="cx-drawer__num">02</span><span class="cx-drawer__title">Projektmanagement &amp; Scrum</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+            <a class="cx-drawer__link" href="digitalisierungsberatung/index.html"><span class="cx-drawer__num">03</span><span class="cx-drawer__title">Digitalisierung &amp; Transformation</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+            <a class="cx-drawer__link" href="change-management-beratung/index.html"><span class="cx-drawer__num">04</span><span class="cx-drawer__title">Change Management</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+            <a class="cx-drawer__link" href="ki-beratung/index.html"><span class="cx-drawer__num">05</span><span class="cx-drawer__title">KI-Beratung &amp; Strategie</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+          </div>
+          <div class="cx-drawer__section" style="margin-top:24px">
+            <div class="cx-drawer__label">Säule 2 — Architektur</div>
+            <a class="cx-drawer__link" href="enterprise-architecture-beratung/index.html"><span class="cx-drawer__num">06</span><span class="cx-drawer__title">Enterprise Architecture</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+          </div>
+          <div class="cx-drawer__section cx-drawer__section--mobile" style="margin-top:24px">
+            <div class="cx-drawer__label">Springen zu</div>
+            <a class="cx-drawer__jump" href="#journey">Vorgehen <span aria-hidden="true">→</span></a>
+            <a class="cx-drawer__jump" href="#benefits">Vorteile <span aria-hidden="true">→</span></a>
+            <a class="cx-drawer__jump" href="#outcomes">Einsatzfelder <span aria-hidden="true">→</span></a>
+            <a class="cx-drawer__jump" href="#faq">FAQ <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="cx-drawer__footer">
+          <div>
+            <div class="cx-drawer__footer-label">CX-Experts</div>
+            <div class="cx-drawer__footer-h">Zwei Säulen, sechs Beratungsfelder.</div>
+            <p class="cx-drawer__footer-p">Projekte &amp; Prozesse als Kernpfeiler, Enterprise Architecture als zweiter Schwerpunkt. Beide greifen ineinander.</p>
+            <a href="#contact" class="cx-drawer__cta"><span>Erstgespräch anfragen</span><span class="cx-drawer__cta-arrow">→</span></a>
+          </div>
+          <div class="cx-drawer__close-hint">Schließen mit <kbd>Esc</kbd> oder Klick außerhalb</div>
+        </div>
+      </div>
+    </aside>
 
     <main id="main">
       <section class="hero" id="top">
@@ -137,15 +181,15 @@
             <div class="hero__lead-wrap">
               <span class="hero__lead-bar" aria-hidden="true"></span>
               <h2 class="hero__lead">
-                Wenn Anforderungen, Transformation und Delivery gleichzeitig bewegt werden, bringt CX Ordnung in
+                Wenn Prozesse, Projekte, Digitalisierung und Veränderung gleichzeitig bewegt werden, bringt CX Ordnung in
                 Prioritäten, Verantwortung und Umsetzung.
               </h2>
             </div>
 
             <div class="hero__shapes" aria-label="Leistungsfokus">
-              <span class="hero__shape">Anforderungen</span>
-              <span class="hero__shape">Transformation</span>
-              <span class="hero__shape">Delivery</span>
+              <span class="hero__shape">Prozesse</span>
+              <span class="hero__shape">Projekte</span>
+              <span class="hero__shape">KI</span>
             </div>
 
             <a href="#contact" class="hero__cta">
@@ -243,12 +287,12 @@
           <div class="trustband__inner">
             <div class="trustband__label">Im Fokus</div>
             <div class="trustband__items">
-              <span>Requirements Engineering</span>
-              <span>Interim Product Owner</span>
-              <span>Digitalisierung</span>
-              <span>Transformation</span>
+              <span>Prozessoptimierung</span>
               <span>Projektmanagement</span>
-              <span>Agiles Delivery</span>
+              <span>Digitalisierung</span>
+              <span>Change Management</span>
+              <span>KI-Beratung</span>
+              <span>Enterprise Architecture</span>
             </div>
           </div>
         </div>
@@ -259,13 +303,22 @@
           <div class="section__intro reveal">
             <div class="eyebrow"><span class="eyebrow__bar" aria-hidden="true"></span><span class="eyebrow__index">01</span><span>Leistungen</span></div>
             <div class="section__intro-grid">
-              <h2 class="h-section">Drei klare Leistungsfelder.</h2>
+              <h2 class="h-section">Zwei Säulen. Sechs Beratungsfelder.</h2>
               <p class="h-lead">
-                CX bündelt Requirements &amp; Product Owner, Digitalisierung &amp; Transformation und Projektmanagement &amp; Delivery zu einer zusammenhängenden Arbeitslogik.
+                <strong>Projekte &amp; Prozesse</strong> als Kernpfeiler — Prozessoptimierung, Projektmanagement, Digitalisierung, Change Management und KI. <strong>Enterprise Architecture</strong> als zweite Säule. Beide Säulen greifen ineinander.
               </p>
             </div>
           </div>
 
+          <!-- Säule 1 · Projekte & Prozesse (Kernpfeiler) -->
+          <div class="caps__pillar reveal">
+            <div class="caps__pillar-band">
+              <span class="caps__pillar-num">Säule 1</span>
+              <span class="caps__pillar-divider" aria-hidden="true"></span>
+              <span class="caps__pillar-title">Projekte &amp; Prozesse</span>
+              <span class="caps__pillar-note">Kernpfeiler</span>
+            </div>
+          </div>
           <div class="caps__grid">
             <article class="cap-card reveal">
               <div class="cap-card__media" aria-hidden="true">
@@ -276,50 +329,18 @@
                 <div class="cap-card__index">01</div>
               </div>
               <div class="cap-card__body">
-                <div class="cap-card__tag">Requirements Engineering &amp; Product Owner</div>
-                <h3 class="cap-card__title">Anforderungen schärfen, Backlogs führen.</h3>
+                <div class="cap-card__tag">Prozesse · BPM</div>
+                <h3 class="cap-card__title">Prozesse messbar besser machen.</h3>
                 <p class="cap-card__copy">
-                  Für Vorhaben, in denen Scope, Anforderungen und Prioritäten unscharf geworden
-                  sind oder die Product-Owner-Rolle Unterstützung braucht.
+                  Prozessoptimierung und Business Process Management — von Ist-Aufnahme über
+                  Schwachstellenanalyse bis zur sauberen Soll-Architektur und Umsetzung im Betrieb.
                 </p>
                 <ul class="cap-card__list">
-                  <li>Anforderungsklarheit</li>
-                  <li>Backlog &amp; Interim Product Owner</li>
+                  <li>Prozessoptimierung</li>
+                  <li>Business Process Management</li>
                 </ul>
                 <div class="cap-card__footer">
-                  <a href="#outcomes" class="link-arrow">
-                    <span>Mehr dazu</span>
-                    <span class="link-arrow__icon" aria-hidden="true">
-                      <svg viewBox="0 0 16 16" fill="none">
-                        <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
-                      </svg>
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <article class="cap-card reveal">
-              <div class="cap-card__media" aria-hidden="true">
-                <video class="cap-card__video" autoplay muted loop playsinline preload="auto" disablepictureinpicture>
-                  <source src="media/cx-card-digitalization-pexels-6774648.mp4" type="video/mp4" />
-                </video>
-                <div class="cap-card__media-overlay"></div>
-                <div class="cap-card__index">02</div>
-              </div>
-              <div class="cap-card__body">
-                <div class="cap-card__tag">Digitalisierung &amp; Transformation</div>
-                <h3 class="cap-card__title">Veränderung sauber vorbereiten.</h3>
-                <p class="cap-card__copy">
-                  Prozesssicht, Zielbild und Maßnahmenlogik werden geordnet, bevor Digitalisierungs-
-                  oder Transformationsschritte zu groß werden.
-                </p>
-                <ul class="cap-card__list">
-                  <li>Prozess- und Systemblick</li>
-                  <li>Realistischer Transformationspfad</li>
-                </ul>
-                <div class="cap-card__footer">
-                  <a href="#journey" class="link-arrow">
+                  <a href="prozessoptimierung-beratung/index.html" class="link-arrow">
                     <span>Mehr dazu</span>
                     <span class="link-arrow__icon" aria-hidden="true">
                       <svg viewBox="0 0 16 16" fill="none">
@@ -337,21 +358,21 @@
                   <source src="media/cx-card-delivery-structure-pexels-7686671.mp4" type="video/mp4" />
                 </video>
                 <div class="cap-card__media-overlay"></div>
-                <div class="cap-card__index">03</div>
+                <div class="cap-card__index">02</div>
               </div>
               <div class="cap-card__body">
-                <div class="cap-card__tag">Projektmanagement &amp; Delivery</div>
-                <h3 class="cap-card__title">Projekte und Delivery wieder führen.</h3>
+                <div class="cap-card__tag">Projektmanagement · IT-Delivery</div>
+                <h3 class="cap-card__title">Projekte führen, IT umsetzen.</h3>
                 <p class="cap-card__copy">
-                  Wenn Steuerung, Rollen und Lieferpfad schwimmen, bringt CX wieder Struktur in die
-                  laufende Umsetzung — agil oder klassisch, je nach Vorhaben.
+                  IT-Projektumsetzung, klassisches und agiles Projektmanagement, Scrum-Beratung —
+                  Steuerung, Rollen und Lieferpfad wieder in Takt bringen.
                 </p>
                 <ul class="cap-card__list">
-                  <li>Projekt- und Liefersteuerung</li>
-                  <li>Klare Rollen und Takt</li>
+                  <li>IT-Projektmanagement &amp; -Umsetzung</li>
+                  <li>Agiles PM &amp; Scrum</li>
                 </ul>
                 <div class="cap-card__footer">
-                  <a href="#faq" class="link-arrow">
+                  <a href="projektmanagement-beratung/index.html" class="link-arrow">
                     <span>Mehr dazu</span>
                     <span class="link-arrow__icon" aria-hidden="true">
                       <svg viewBox="0 0 16 16" fill="none">
@@ -360,6 +381,126 @@
                     </span>
                   </a>
                 </div>
+              </div>
+            </article>
+
+            <article class="cap-card reveal">
+              <div class="cap-card__media" aria-hidden="true">
+                <video class="cap-card__video" autoplay muted loop playsinline preload="auto" disablepictureinpicture>
+                  <source src="media/cx-card-digitalization-pexels-6774648.mp4" type="video/mp4" />
+                </video>
+                <div class="cap-card__media-overlay"></div>
+                <div class="cap-card__index">03</div>
+              </div>
+              <div class="cap-card__body">
+                <div class="cap-card__tag">Digitalisierung · Transformation</div>
+                <h3 class="cap-card__title">Digitalisierung sauber vorbereiten.</h3>
+                <p class="cap-card__copy">
+                  Digitalisierungsberatung, digitale Transformation und Industrie-4.0-Projekte —
+                  Zielbild, Maßnahmen und Reihenfolge geordnet, bevor die Komplexität davonläuft.
+                </p>
+                <ul class="cap-card__list">
+                  <li>Digitalisierungs- &amp; Transformationsberatung</li>
+                  <li>Industrie 4.0 Projekte</li>
+                </ul>
+                <div class="cap-card__footer">
+                  <a href="digitalisierungsberatung/index.html" class="link-arrow">
+                    <span>Mehr dazu</span>
+                    <span class="link-arrow__icon" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cap-card reveal">
+              <div class="cap-card__media" aria-hidden="true">
+                <video class="cap-card__video" autoplay muted loop playsinline preload="auto" disablepictureinpicture>
+                  <source src="media/cx-card-process-optimization-pexels-8290538.mp4" type="video/mp4" />
+                </video>
+                <div class="cap-card__media-overlay"></div>
+                <div class="cap-card__index">04</div>
+              </div>
+              <div class="cap-card__body">
+                <div class="cap-card__tag">Change Management</div>
+                <h3 class="cap-card__title">Veränderung trägt nur mit den Menschen.</h3>
+                <p class="cap-card__copy">
+                  Change-Management-Beratung — Stakeholder ausrichten, Kommunikation steuern,
+                  Widerstände früh adressieren, damit die Umsetzung in der Organisation auch ankommt.
+                </p>
+                <ul class="cap-card__list">
+                  <li>Stakeholder &amp; Kommunikation</li>
+                  <li>Change-Architektur &amp; Begleitung</li>
+                </ul>
+                <div class="cap-card__footer">
+                  <a href="change-management-beratung/index.html" class="link-arrow">
+                    <span>Mehr dazu</span>
+                    <span class="link-arrow__icon" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="cap-card reveal">
+              <div class="cap-card__media" aria-hidden="true">
+                <video class="cap-card__video" autoplay muted loop playsinline preload="auto" disablepictureinpicture>
+                  <source src="media/cx-card-digitalization-pexels-6774648.mp4" type="video/mp4" />
+                </video>
+                <div class="cap-card__media-overlay"></div>
+                <div class="cap-card__index">05</div>
+              </div>
+              <div class="cap-card__body">
+                <div class="cap-card__tag">KI-Beratung · Strategie</div>
+                <h3 class="cap-card__title">KI vom Hype zur Umsetzung.</h3>
+                <p class="cap-card__copy">
+                  KI-Beratung für Unternehmen und KMU, KI-Strategieentwicklung — von Use-Case-Identifikation
+                  über Strategie bis zur Pilot- und Skalierungs-Planung.
+                </p>
+                <ul class="cap-card__list">
+                  <li>KI-Strategie &amp; Use Cases</li>
+                  <li>KI für KMU &amp; Unternehmen</li>
+                </ul>
+                <div class="cap-card__footer">
+                  <a href="ki-beratung/index.html" class="link-arrow">
+                    <span>Mehr dazu</span>
+                    <span class="link-arrow__icon" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Säule 2 · Enterprise Architecture -->
+          <div class="caps__secondary reveal">
+            <div class="caps__pillar-band caps__pillar-band--second">
+              <span class="caps__pillar-num">Säule 2</span>
+              <span class="caps__pillar-divider" aria-hidden="true"></span>
+              <span class="caps__pillar-title">Enterprise Architecture</span>
+              <span class="caps__pillar-note">Ergänzungspfeiler</span>
+            </div>
+            <article class="cap-card cap-card--secondary">
+              <div class="cap-card__body cap-card__body--wide">
+                <div class="cap-card__tag">Enterprise Architecture Management</div>
+                <h3 class="cap-card__title">Architektur, die die Strategie trägt.</h3>
+                <p class="cap-card__copy">
+                  Enterprise Architecture Management und IT-Architekturberatung — Ziel-Architekturen,
+                  Domain-Schnitt und IT-Bebauungspläne, die zu Strategie und Roadmap passen.
+                </p>
+                <ul class="cap-card__list cap-card__list--inline">
+                  <li>Enterprise Architecture Management</li>
+                  <li>IT-Architekturberatung</li>
+                </ul>
               </div>
             </article>
           </div>
@@ -389,9 +530,9 @@
                   <svg viewBox="0 0 420 90" fill="none">
                     <defs>
                       <linearGradient id="journeyLine" x1="0" x2="1" y1="0" y2="0">
-                        <stop offset="0" stop-color="#dfff00" stop-opacity="0.2" />
-                        <stop offset="0.5" stop-color="#dfff00" stop-opacity="1" />
-                        <stop offset="1" stop-color="#dfff00" stop-opacity="0.2" />
+                        <stop offset="0" stop-color="#FF7A00" stop-opacity="0.2" />
+                        <stop offset="0.5" stop-color="#FF7A00" stop-opacity="1" />
+                        <stop offset="1" stop-color="#FF7A00" stop-opacity="0.2" />
                       </linearGradient>
                     </defs>
                     <line x1="30" y1="45" x2="390" y2="45" stroke="url(#journeyLine)" stroke-width="1.5" />
@@ -401,12 +542,12 @@
                       <text x="290" y="80" text-anchor="middle">TRANSFORMATION</text>
                       <text x="390" y="80" text-anchor="end">DELIVERY</text>
                     </g>
-                    <circle cx="50"  cy="45" r="6"  fill="#dfff00" />
-                    <circle cx="50"  cy="45" r="11" stroke="#dfff00" stroke-opacity="0.3" />
-                    <circle cx="170" cy="45" r="5"  fill="#dfff00" />
-                    <circle cx="290" cy="45" r="5"  fill="#dfff00" />
-                    <rect   x="380" y="35" width="20" height="20" fill="#dfff00" />
-                    <path d="M384 41 L394 45 L384 49" stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="square" stroke-linejoin="miter" />
+                    <circle cx="50"  cy="45" r="6"  fill="#FF7A00" />
+                    <circle cx="50"  cy="45" r="11" stroke="#FF7A00" stroke-opacity="0.3" />
+                    <circle cx="170" cy="45" r="5"  fill="#FF7A00" />
+                    <circle cx="290" cy="45" r="5"  fill="#FF7A00" />
+                    <rect   x="380" y="35" width="20" height="20" fill="#FF7A00" />
+                    <path d="M384 41 L394 45 L384 49" stroke="#1E2327" stroke-width="1.5" fill="none" stroke-linecap="square" stroke-linejoin="miter" />
                   </svg>
                 </div>
               </div>
@@ -792,11 +933,12 @@
 
             <div class="footer__col">
               <div class="footer__col-title">Leistungen</div>
-              <a href="#capabilities">Requirements Engineering</a>
-              <a href="#capabilities">Interim Product Owner</a>
+              <a href="#capabilities">Prozessoptimierung &amp; BPM</a>
+              <a href="#capabilities">Projektmanagement &amp; Scrum</a>
               <a href="#capabilities">Digitalisierung &amp; Transformation</a>
-              <a href="#capabilities">Projektmanagement</a>
-              <a href="#capabilities">Agiles Delivery</a>
+              <a href="#capabilities">Change Management</a>
+              <a href="ki-beratung/index.html">KI-Beratung &amp; Strategie</a>
+              <a href="#capabilities">Enterprise Architecture</a>
             </div>
 
             <div class="footer__col">
