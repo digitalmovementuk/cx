@@ -6402,21 +6402,30 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     filterBar.classList.add('is-revealed');
   }
 
-  // Sticky sitemap CTA: appear once the page-guide section is in view, then STAY (one-way trigger)
+  // Sticky sitemap CTA: appear as soon as the page-guide section reaches the top of the viewport, then STAY
   const pageGuideSection = document.getElementById('spg-delivered');
   const stickCta = document.querySelector('.pg-stick-cta');
-  if (pageGuideSection && stickCta && 'IntersectionObserver' in window) {
-    const ctaObs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          stickCta.classList.add('is-revealed');
-          ctaObs.disconnect();
-        }
-      });
-    }, { rootMargin: '0px 0px -10% 0px', threshold: 0 });
-    ctaObs.observe(pageGuideSection);
-  } else if (stickCta) {
-    stickCta.classList.add('is-revealed');
+  if (pageGuideSection && stickCta) {
+    let revealed = false;
+    function revealStickCta() {
+      if (revealed) return;
+      const rect = pageGuideSection.getBoundingClientRect();
+      // Reveal once any part of the Page Guide section has scrolled past the top of the viewport
+      // OR is already inside it (handles direct-load to a hash deep in Tab 3)
+      if (rect.top < window.innerHeight * 0.8) {
+        stickCta.classList.add('is-revealed');
+        revealed = true;
+        window.removeEventListener('scroll', revealStickCta);
+      }
+    }
+    window.addEventListener('scroll', revealStickCta, { passive: true });
+    // Run once on init in case the user already lands inside / past the section (hash jump, tab switch)
+    revealStickCta();
+    // Also run after tab switches into Tab 3
+    document.addEventListener('click', e => {
+      const jump = e.target.closest('[data-tab-jump="seo-page-guide"]');
+      if (jump) setTimeout(revealStickCta, 250);
+    });
   }
 
   // Initial state
