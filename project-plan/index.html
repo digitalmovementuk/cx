@@ -8347,6 +8347,12 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       }
       document.dispatchEvent(new CustomEvent('tabchanged', {detail:{tab:name}}));
       try{ localStorage.setItem(STORE_KEY, name); }catch(_){ }
+      // Update URL so it's shareable — only if user didn't deep-link to a section
+      if(!opts.preserveHash){
+        try{
+          history.replaceState(null, '', '#' + name);
+        }catch(_){ }
+      }
     }
 
     tabs.forEach(t => t.addEventListener('click', () => switchTo(t.dataset.tabTarget)));
@@ -8358,10 +8364,11 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       const target = jump.dataset.tabJump;
       const hash = jump.getAttribute('href') || '';
       if(target && target !== getActive()){
-        switchTo(target, {preserveScroll: !!hash});
+        switchTo(target, {preserveScroll: !!hash, preserveHash: !!hash});
         if(hash && hash.indexOf('#') === 0){
           // Defer hash navigation so panel switch + reveal happen first
           requestAnimationFrame(() => {
+            try{ history.replaceState(null, '', hash); }catch(_){ }
             const el = document.querySelector(hash);
             if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
           });
@@ -8374,22 +8381,56 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       return active ? active.dataset.tabTarget : 'project-plan';
     }
 
-    const VALID = ['project-plan','seo-keywords','seo-page-guide'];
+    const VALID = ['project-plan','seo-keywords','seo-page-guide','sitemap'];
 
-    // Initial: hash > localStorage > default project-plan
+    // Map a hash to its owning tab, supporting both shareable canonical hashes
+    // (#project-plan, #seo-keywords, #seo-page-guide, #sitemap) and deep section anchors.
+    function tabFromHash(rawHash){
+      if(!rawHash) return null;
+      const h = rawHash.replace(/^#/, '');
+      // 1. Exact tab name as hash → shareable canonical URL
+      if(VALID.indexOf(h) >= 0) return h;
+      // 2. Known section prefixes
+      if(h.indexOf('pg-') === 0) return 'seo-keywords';
+      if(h.indexOf('spg-') === 0 || h.indexOf('pg-stick') === 0) return 'seo-page-guide';
+      if(h.indexOf('sec-') === 0 || h.indexOf('sec-approve') === 0) return 'project-plan';
+      if(h.indexOf('sm-') === 0) return 'sitemap';
+      // 3. Fallback: look up the element and walk to its containing tab-panel
+      const el = document.getElementById(h);
+      if(el){
+        const panel = el.closest('.tab-panel[data-tab]');
+        if(panel && VALID.indexOf(panel.dataset.tab) >= 0) return panel.dataset.tab;
+      }
+      return null;
+    }
+
+    // Initial: hash → localStorage → default project-plan
     let initial = 'project-plan';
-    const hash = window.location.hash;
-    if(hash && hash.indexOf('#pg-') === 0){
-      initial = 'seo-keywords';
-    } else if(hash && hash.indexOf('#spg-') === 0){
-      initial = 'seo-page-guide';
+    const initialHash = window.location.hash;
+    const hashTab = tabFromHash(initialHash);
+    if(hashTab){
+      initial = hashTab;
     } else {
       try{
         const saved = localStorage.getItem(STORE_KEY);
         if(VALID.indexOf(saved) >= 0) initial = saved;
       }catch(_){ }
     }
-    if(initial !== 'project-plan') switchTo(initial, {preserveScroll: !!hash});
+    // preserveHash on init: only when the hash points to a specific section, not the canonical tab hash
+    const isDeepHash = initialHash && initialHash.replace(/^#/, '') !== initial;
+    if(initial !== 'project-plan' || isDeepHash){
+      switchTo(initial, {preserveScroll: !!initialHash, preserveHash: isDeepHash});
+    }
+    // If user landed on plain '#sitemap' / '#seo-page-guide' / etc., the URL stays clean.
+    // If user landed on a deep section hash (e.g. #spg-delivered), keep that hash in the URL.
+
+    // Respond to back/forward navigation between shareable tab URLs
+    window.addEventListener('hashchange', () => {
+      const t = tabFromHash(window.location.hash);
+      if(t && t !== getActive()){
+        switchTo(t, {preserveScroll: true, preserveHash: true});
+      }
+    });
   })();
 
   // Section approval tick-boxes (Tab 1, live meeting)
