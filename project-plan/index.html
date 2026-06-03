@@ -1386,6 +1386,47 @@ body.is-reading .scroll-cue{opacity:0;transform:translateX(-50%) translateY(12px
   .spg-details-collapse__body{padding:22px 16px 14px}
 }
 </style>
+<style>
+/* ====== Tab 3 v2 polish: white details, tightened spacing, list head ====== */
+/* White-tone collapsing box (overrides earlier cream-tinted summary) */
+.spg-details-collapse{background:#fff;border:1px solid #E8E4D8;border-radius:16px;margin:36px 0 56px;box-shadow:0 1px 0 rgba(26,14,46,0.02)}
+.spg-details-collapse > summary{background:#fff;padding:20px 24px}
+.spg-details-collapse > summary:hover{background:#FBFAF6}
+.spg-details-collapse[open] > summary{background:#fff;border-bottom:1px solid #E8E4D8}
+.spg-details-collapse__body{background:#fff;padding:32px 28px 24px;border-top:0}
+
+/* Visible exec status block — slightly more breathing room */
+.pg-delivered-tag{margin-top:8px}
+.pg-delivered-h{margin-top:18px;font-size:clamp(1.5rem,3vw,2.25rem)}
+.pg-delivered-lead{margin:14px 0 30px;font-size:1.0625rem;line-height:1.55;max-width:78ch}
+
+/* List head section (new) */
+.pg-list-head{margin:8px 0 18px;max-width:780px}
+.pg-list-head__eyebrow{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#7C3AED;padding:4px 10px;background:rgba(124,58,237,0.10);border-radius:99px;margin-bottom:10px}
+.pg-list-head__h{margin:0 0 8px;font-family:var(--display);font-size:clamp(1.375rem,2.6vw,1.875rem);font-weight:800;letter-spacing:-0.018em;line-height:1.2;color:var(--ink)}
+.pg-list-head__h em{font-style:normal;color:#F59425}
+.pg-list-head__lead{margin:0;font-size:0.9375rem;line-height:1.55;color:var(--ink-soft)}
+
+/* Tighten KPI strip + reduce visual noise inside collapsed box */
+.spg-details-collapse__body .pg-kpi-strip{margin:0 0 32px}
+.spg-details-collapse__body .pg-tree-section{margin:0 0 36px}
+.spg-details-collapse__body .pg-legend-head{margin-top:6px}
+
+/* Reduce decorative weight on package size cards (Section 05) */
+.pg-scen{padding:24px 22px 22px}
+.pg-scen__sub{font-size:0.875rem;line-height:1.45;max-width:32ch}
+.pg-scen__list li{padding:7px 0;font-size:0.8125rem}
+
+/* Footer tightening (cognitive load) */
+.foot-list li{padding:5px 0;font-size:13.5px}
+
+/* Mobile */
+@media(max-width:760px){
+  .spg-details-collapse__body{padding:22px 16px 14px}
+  .pg-delivered-lead{margin:12px 0 22px}
+  .pg-list-head{margin:0 0 14px}
+}
+</style>
 </head>
 <body>
 
@@ -3148,6 +3189,49 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 <section class="pg-section" id="spg-page-list">
   <div class="wrap">
 
+
+    <!-- ====== Visible exec status block (status, h3, lead, delivery comparison) ====== -->
+    <span class="pg-delivered-tag reveal">
+      <span class="pg-delivered-check" aria-hidden="true">
+        <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5L5.5 10.5L11.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span data-i18n="spg.delivered.tag">Status-Update · Geliefert am 3. Juni 2026</span>
+    </span>
+
+    <h3 class="pg-delivered-h reveal d1" data-i18n-html="spg.delivered.h">100 Seiten — sortiert nach <em>erwarteter Anfrage-Menge.</em></h3>
+    <p class="pg-delivered-lead reveal d2" data-i18n-html="spg.delivered.lead">
+      Johannes, Hannes — aus <strong>2.893 auditierten Suchanfragen</strong> haben wir die <strong>100 Seiten</strong> mit dem höchsten Anfrage-Potenzial herausgefiltert. Sortiert nach <strong>EYS</strong> (Enquiry Yield Score) — der erwarteten Anfrage-Menge pro Monat.
+    </p>
+
+    <div class="pg-delivery reveal d2">
+      <div class="pg-delivery__col">
+        <span class="pg-delivery__lbl" data-i18n="spg.delivery.expected.lbl">Erwartete Lieferung</span>
+        <span class="pg-delivery__date" data-i18n="spg.delivery.expected.date">24. Juni 2026</span>
+        <span class="pg-delivery__detail" data-i18n="spg.delivery.expected.detail">Phase 06 · ~Woche 4 ab Kick-off (27. Mai 2026)</span>
+        <span class="pg-delivery__source" data-i18n="spg.delivery.expected.source">aus Zeitplan</span>
+      </div>
+      <div class="pg-delivery__arrow" aria-hidden="true">→</div>
+      <div class="pg-delivery__col pg-delivery__col--actual">
+        <span class="pg-delivery__lbl pg-delivery__lbl--green" data-i18n="spg.delivery.actual.lbl">Tatsächliche Lieferung</span>
+        <span class="pg-delivery__date pg-delivery__date--green" data-i18n="spg.delivery.actual.date">3. Juni 2026</span>
+        <span class="pg-delivery__detail" data-i18n="spg.delivery.actual.detail">Woche 1 ab Kick-off · vollständige Liste freigegeben</span>
+        <span class="pg-delivery__source pg-delivery__source--green" data-i18n="spg.delivery.actual.source">heute</span>
+      </div>
+      <div class="pg-delivery__delta">
+        <span class="pg-delivery__delta-num" data-i18n="spg.delivery.delta.num">−21</span>
+        <span class="pg-delivery__delta-lbl" data-i18n-html="spg.delivery.delta.lbl">Tage<br>vor Plan</span>
+      </div>
+    </div>
+
+    <details class="spg-details-collapse reveal d1">
+      <summary class="spg-details-collapse__summary">
+        <span class="spg-details-collapse__icon" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="spg-details-collapse__label" data-i18n="spg.details.summary">Page-Architektur · KPIs · Metriken</span>
+        <span class="spg-details-collapse__hint" data-i18n="spg.details.hint">öffnen</span>
+      </summary>
+      <div class="spg-details-collapse__body">
     <!-- ============ Page Architecture Tree ============ -->
 <div class="pg-tree-section reveal d2">
   <div class="pg-tree-section__head">
@@ -3950,47 +4034,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     </div>
   </div>
 </div>
-    <!-- ====== Collapsed exec details: status, KPI strip, metric-key legend ====== -->
-    <details class="spg-details-collapse reveal d1">
-      <summary class="spg-details-collapse__summary">
-        <span class="spg-details-collapse__icon" aria-hidden="true">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-        <span class="spg-details-collapse__label" data-i18n="spg.details.summary">Status, KPIs & Metrik-Schlüssel</span>
-        <span class="spg-details-collapse__hint" data-i18n="spg.details.hint">öffnen</span>
-      </summary>
-      <div class="spg-details-collapse__body">
-    <span class="pg-delivered-tag reveal">
-      <span class="pg-delivered-check" aria-hidden="true">
-        <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5L5.5 10.5L11.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </span>
-      <span data-i18n="spg.delivered.tag">Status-Update · Geliefert am 3. Juni 2026</span>
-    </span>
 
-    <h3 class="pg-delivered-h reveal d1" data-i18n-html="spg.delivered.h">100 Seiten — sortiert nach <em>erwarteter Anfrage-Menge.</em></h3>
-    <p class="pg-delivered-lead reveal d2" data-i18n-html="spg.delivered.lead">
-      Johannes, Hannes — aus <strong>2.893 auditierten Suchanfragen</strong> haben wir die <strong>100 Seiten</strong> mit dem höchsten Anfrage-Potenzial herausgefiltert. Sortiert nach <strong>EYS</strong> (Enquiry Yield Score) — der erwarteten Anfrage-Menge pro Monat.
-    </p>
-
-    <div class="pg-delivery reveal d2">
-      <div class="pg-delivery__col">
-        <span class="pg-delivery__lbl" data-i18n="spg.delivery.expected.lbl">Erwartete Lieferung</span>
-        <span class="pg-delivery__date" data-i18n="spg.delivery.expected.date">24. Juni 2026</span>
-        <span class="pg-delivery__detail" data-i18n="spg.delivery.expected.detail">Phase 06 · ~Woche 4 ab Kick-off (27. Mai 2026)</span>
-        <span class="pg-delivery__source" data-i18n="spg.delivery.expected.source">aus Zeitplan</span>
-      </div>
-      <div class="pg-delivery__arrow" aria-hidden="true">→</div>
-      <div class="pg-delivery__col pg-delivery__col--actual">
-        <span class="pg-delivery__lbl pg-delivery__lbl--green" data-i18n="spg.delivery.actual.lbl">Tatsächliche Lieferung</span>
-        <span class="pg-delivery__date pg-delivery__date--green" data-i18n="spg.delivery.actual.date">3. Juni 2026</span>
-        <span class="pg-delivery__detail" data-i18n="spg.delivery.actual.detail">Woche 1 ab Kick-off · vollständige Liste freigegeben</span>
-        <span class="pg-delivery__source pg-delivery__source--green" data-i18n="spg.delivery.actual.source">heute</span>
-      </div>
-      <div class="pg-delivery__delta">
-        <span class="pg-delivery__delta-num" data-i18n="spg.delivery.delta.num">−21</span>
-        <span class="pg-delivery__delta-lbl" data-i18n-html="spg.delivery.delta.lbl">Tage<br>vor Plan</span>
-      </div>
-    </div>
 <div class="pg-kpi-strip reveal d1">
       <div class="pg-kpi"><div class="pg-kpi__num">100</div><div class="pg-kpi__label" data-i18n="spg.kpi.pages">Seiten total</div></div>
       <div class="pg-kpi"><div class="pg-kpi__num">14</div><div class="pg-kpi__label" data-i18n="spg.kpi.servicehubs">Service-Hubs</div></div>
@@ -4179,7 +4223,13 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 })();
 </script>
 
-        <!-- Sticky filter bar -->
+        <div class="pg-list-head reveal d1">
+      <span class="pg-list-head__eyebrow" data-i18n="spg.list.eyebrow">Die Liste</span>
+      <h3 class="pg-list-head__h" data-i18n-html="spg.list.h">100 Seiten — <em>sortiert nach EYS.</em></h3>
+      <p class="pg-list-head__lead" data-i18n="spg.list.lead">Standardansicht: Top 10. Klick auf einen Spalten-Header sortiert die Liste neu.</p>
+    </div>
+
+    <!-- Sticky filter bar -->
     <div class="pg-filter-bar" id="pgFilterBar">
       <div class="pg-filter-bar__inner">
         <span class="pg-filter-bar__label" data-i18n="pgf.label">Filter</span>
@@ -4188,9 +4238,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         <button class="pg-filter-pill" data-filter="sector_hub" style="color:#7C3AED" data-i18n-html="pgf.sector">◆ Branchen-Hubs <span class="pg-filter-pill__count">12</span></button>
         <button class="pg-filter-pill" data-filter="sub_only" style="color:#616160" data-i18n-html="pgf.sub">· Sub-Pages <span class="pg-filter-pill__count">72</span></button>
         <span class="pg-filter-bar__divider" aria-hidden="true"></span>
-        <span class="pg-filter-bar__state" id="pgState" data-i18n-html="pgf.state">zeigt <b>Top 5</b> von <b>100</b></span>
+        <span class="pg-filter-bar__state" id="pgState" data-i18n-html="pgf.state">zeigt <b>Top 10</b> von <b>100</b></span>
         <div class="pg-filter-bar__actions">
-          <button type="button" class="pg-filter-bar__btn pg-filter-bar__btn--primary" id="pgShowAllBtn" data-i18n="pgf.showall">⤓ Alle 98 anzeigen</button>
+          <button type="button" class="pg-filter-bar__btn pg-filter-bar__btn--primary" id="pgShowAllBtn" data-i18n="pgf.showall">⤓ Alle 100 anzeigen</button>
           <button type="button" class="pg-filter-bar__btn pg-filter-bar__btn--secondary" id="pgResetBtn" data-i18n="pgf.reset">↻ EYS-Sortierung</button>
         </div>
       </div>
@@ -7267,7 +7317,7 @@ html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP
   if (!state || !resetBtn || !showAllBtn || rows.length === 0) return;
   const STATE_LABELS = {eys:'EYS', vol:'Vol', kd:'KD', los:'LOS', kw:'Keyword', pot:'Kategorie', rank:'Rang'};
   const DEFAULT = {key:'eys', dir:'desc'};
-  const TOP_N = 5;
+  const TOP_N = 10;
   let current = {...DEFAULT};
   let currentFilter = 'all';
   let collapsed = true;
@@ -7289,7 +7339,7 @@ html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP
     state.innerHTML = collapsed
       ? `zeigt <b>Top ${Math.min(TOP_N, totalForFilter)}</b> von <b>${totalForFilter}</b>`
       : `zeigt <b>alle ${totalForFilter}</b>`;
-    showAllBtn.textContent = collapsed ? `⤓ Alle ${totalForFilter} anzeigen` : '⤒ Auf Top 5 reduzieren';
+    showAllBtn.textContent = collapsed ? `⤓ Alle ${totalForFilter} anzeigen` : '⤒ Auf Top 10 reduzieren';
   }
 
   function sortRows(){
@@ -7348,27 +7398,36 @@ html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP
     filterBar.classList.add('is-revealed');
   }
 
-  // Sticky sitemap CTA: hide while user is in the hero; reveal once the hero has scrolled fully past the sticky tab bar
+  // Sticky sitemap CTA: shown on Tab 3 except while the hero is in view
   const pgHero = document.getElementById('spg-cover');
-  const pageGuideSection = document.getElementById('spg-delivered');
   const stickCta = document.querySelector('.pg-stick-cta');
-  if (stickCta && (pgHero || pageGuideSection)) {
+  if (stickCta) {
     function updateStickCta() {
-      // Hide if active tab isn't seo-page-guide (defensive)
-      const activeTab = document.querySelector('.tab.is-active');
-      const isPageGuideTab = activeTab && activeTab.getAttribute('data-tab') === 'seo-page-guide';
-      if (!isPageGuideTab) { stickCta.classList.remove('is-revealed'); return; }
-      // Show only when the hero has scrolled out of view (its bottom passes 120px — the sticky-bar zone)
-      const heroBottom = pgHero ? pgHero.getBoundingClientRect().bottom : -1;
-      const shouldShow = heroBottom < 120;
-      stickCta.classList.toggle('is-revealed', shouldShow);
+      const activePanel = document.querySelector('.tab-panel.is-active');
+      const isPageGuide = activePanel && activePanel.getAttribute('data-tab') === 'seo-page-guide';
+      if (!isPageGuide) { stickCta.classList.remove('is-revealed'); return; }
+      // On Tab 3: show whenever the hero is not in view; hide while hero overlaps the viewport
+      let heroInView = false;
+      if (pgHero) {
+        const rect = pgHero.getBoundingClientRect();
+        // Hero is "in view" if its bottom is still below the sticky-bar zone (~120px from top)
+        heroInView = rect.bottom > 120;
+      }
+      stickCta.classList.toggle('is-revealed', !heroInView);
     }
     window.addEventListener('scroll', updateStickCta, { passive: true });
-    updateStickCta();
+    window.addEventListener('resize', updateStickCta);
+    document.addEventListener('langchange', updateStickCta);
+    // Re-check after any tab switch (the click flips .is-active classes asynchronously)
     document.addEventListener('click', e => {
-      const jump = e.target.closest('[data-tab-jump]');
-      if (jump) setTimeout(updateStickCta, 250);
+      if (e.target.closest('[data-tab-jump], [data-tab-target]')) {
+        setTimeout(updateStickCta, 80);
+        setTimeout(updateStickCta, 300);
+      }
     });
+    // Initial check + a slight delay for tab activation on load
+    updateStickCta();
+    setTimeout(updateStickCta, 200);
   }
 
   // Initial state
@@ -8386,8 +8445,8 @@ html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP
       t('[data-i18n-html="pgf.service"]', '★ Service-Hubs <span class="pg-filter-pill__count">14</span>'),
       t('[data-i18n-html="pgf.sector"]', '◆ Branchen-Hubs <span class="pg-filter-pill__count">12</span>'),
       t('[data-i18n-html="pgf.sub"]', '· Sub-Pages <span class="pg-filter-pill__count">72</span>'),
-      t('[data-i18n-html="pgf.state"]', 'zeigt <b>Top 5</b> von <b>100</b>'),
-      t('[data-i18n="pgf.showall"]', '⤓ Alle 98 anzeigen'),
+      t('[data-i18n-html="pgf.state"]', 'zeigt <b>Top 10</b> von <b>100</b>'),
+      t('[data-i18n="pgf.showall"]', '⤓ Alle 100 anzeigen'),
       t('[data-i18n="pgf.reset"]', '↻ EYS-Sortierung'),
       t('[data-i18n-html="pgt.kw"]', 'Keyword <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span>'),
       t('[data-i18n-html="pgt.cat"]', 'Kategorie <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span>'),
@@ -8412,7 +8471,7 @@ html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP
       t('[data-i18n="sm.c2.name"]', 'Branchen-Hubs (Cluster 2)'),
       t('[data-i18n="sm.c2.kw"]', '12 vertikale Anker für Branchen-Anfragen'),
       // === Restructure: collapsed details + one-sentence cards ===
-      t('[data-i18n="spg.details.summary"]', 'Status, KPIs & Metrik-Schlüssel'),
+      t('[data-i18n="spg.details.summary"]', 'Architektur · KPIs · Metriken'),
       t('[data-i18n="spg.details.hint"]', 'öffnen'),
       t('[data-i18n="spg.eyebrow"]', 'Geliefert am 3. Juni 2026'),
       t('[data-i18n="spg.lc.eys.one"]', 'Erwartete Anfragen pro Monat, wenn diese Seite auf Position 3 in Google rankt.'),
@@ -8423,6 +8482,10 @@ html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP
       t('[data-i18n="spg.lc.density.one"]', 'Wie viele Beratungs-Sites bereits in der Top-10-SERP ranken.'),
       t('[data-i18n="spg.lc.intent.one"]', 'Aufschlag, wenn die Anfrage Käufer-Signale wie Stadt, Branche oder „Beratung" enthält.'),
       t('[data-i18n="spg.lc.kdf.one"]', 'Reduziert EYS um den Anteil der Wettbewerbs-Härte (Formel: (110 − KD) / 100).'),
+      // === List head ===
+      t('[data-i18n="spg.list.eyebrow"]', 'Die Liste'),
+      t('[data-i18n-html="spg.list.h"]', '100 Seiten — <em>sortiert nach EYS.</em>'),
+      t('[data-i18n="spg.list.lead"]', 'Standardansicht: Top 10. Klick auf einen Spalten-Header sortiert die Liste neu.'),
     ],
 
     en: [
@@ -9300,8 +9363,8 @@ html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP
       t('[data-i18n-html="pgf.service"]', '★ Service hubs <span class="pg-filter-pill__count">14</span>'),
       t('[data-i18n-html="pgf.sector"]', '◆ Sector hubs <span class="pg-filter-pill__count">12</span>'),
       t('[data-i18n-html="pgf.sub"]', '· Sub-pages <span class="pg-filter-pill__count">72</span>'),
-      t('[data-i18n-html="pgf.state"]', 'showing <b>top 5</b> of <b>100</b>'),
-      t('[data-i18n="pgf.showall"]', '⤓ Show all 98'),
+      t('[data-i18n-html="pgf.state"]', 'showing <b>top 10</b> of <b>100</b>'),
+      t('[data-i18n="pgf.showall"]', '⤓ Show all 100'),
       t('[data-i18n="pgf.reset"]', '↻ Reset to EYS'),
       t('[data-i18n-html="pgt.kw"]', 'Keyword <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span>'),
       t('[data-i18n-html="pgt.cat"]', 'Category <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span>'),
@@ -9326,7 +9389,7 @@ html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP
       t('[data-i18n="sm.c2.name"]', 'Sector hubs (Cluster 2)'),
       t('[data-i18n="sm.c2.kw"]', '12 vertical anchors for sector queries'),
       // === Restructure: collapsed details + one-sentence cards ===
-      t('[data-i18n="spg.details.summary"]', 'Status, KPIs & metric key'),
+      t('[data-i18n="spg.details.summary"]', 'Architecture · KPIs · metrics'),
       t('[data-i18n="spg.details.hint"]', 'open'),
       t('[data-i18n="spg.eyebrow"]', 'Delivered on 3 June 2026'),
       t('[data-i18n="spg.lc.eys.one"]', 'Expected enquiries per month if this page ranks at position 3 on Google.'),
@@ -9337,6 +9400,10 @@ html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP
       t('[data-i18n="spg.lc.density.one"]', 'How many consulting sites already rank in the top-10 SERP.'),
       t('[data-i18n="spg.lc.intent.one"]', 'Premium when the query carries buyer signals like city, sector or "Beratung".'),
       t('[data-i18n="spg.lc.kdf.one"]', 'Reduces EYS by the share of competition difficulty (formula: (110 − KD) / 100).'),
+      // === List head ===
+      t('[data-i18n="spg.list.eyebrow"]', 'The list'),
+      t('[data-i18n-html="spg.list.h"]', '100 pages — <em>sorted by EYS.</em>'),
+      t('[data-i18n="spg.list.lead"]', 'Default view: top 10. Click a column header to re-sort.'),
     ]
   };
 
