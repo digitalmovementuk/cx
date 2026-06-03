@@ -6387,7 +6387,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
   showAllBtn.addEventListener('click', () => { collapsed = !collapsed; applyAll(); });
   resetBtn.addEventListener('click', () => { current = {...DEFAULT}; collapsed = true; currentFilter='all'; filterPills.forEach(x=>x.classList.toggle('is-active', x.dataset.filter==='all')); sortRows(); });
 
-  // Reveal filter bar when list enters viewport
+  // Reveal filter bar + thead when list enters viewport (two-way toggle)
   const rowsContainer = document.getElementById('pgRows');
   if (filterBar && rowsContainer && 'IntersectionObserver' in window) {
     const obs = new IntersectionObserver(entries => {
@@ -6395,13 +6395,28 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         filterBar.classList.toggle('is-revealed', e.isIntersecting);
         const thead = document.querySelector('[data-tab="seo-page-guide"] .pg-thead');
         if (thead) thead.classList.toggle('is-revealed', e.isIntersecting);
-        const stickCta = document.querySelector('.pg-stick-cta');
-        if (stickCta) stickCta.classList.toggle('is-revealed', e.isIntersecting);
       });
     }, { rootMargin: '-120px 0px 0px 0px', threshold: 0 });
     obs.observe(rowsContainer);
   } else if (filterBar) {
     filterBar.classList.add('is-revealed');
+  }
+
+  // Sticky sitemap CTA: appear once the page-guide section is in view, then STAY (one-way trigger)
+  const pageGuideSection = document.getElementById('spg-delivered');
+  const stickCta = document.querySelector('.pg-stick-cta');
+  if (pageGuideSection && stickCta && 'IntersectionObserver' in window) {
+    const ctaObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          stickCta.classList.add('is-revealed');
+          ctaObs.disconnect();
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0 });
+    ctaObs.observe(pageGuideSection);
+  } else if (stickCta) {
+    stickCta.classList.add('is-revealed');
   }
 
   // Initial state
