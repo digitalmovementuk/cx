@@ -1311,6 +1311,81 @@ body.is-reading .scroll-cue{opacity:0;transform:translateX(-50%) translateY(12px
 .obj-tbl td.a strong{color:var(--ink);font-weight:700}
 
 </style>
+<style>
+/* ====== Tab 3 polish per user feedback ====== */
+/* Bigger base font for readability across Tab 3 */
+[data-tab="seo-page-guide"]{font-size:17px}
+[data-tab="seo-page-guide"] .intro-deck,
+[data-tab="seo-page-guide"] .sec-title{letter-spacing:-0.01em}
+[data-tab="seo-page-guide"] .pg-delivered-lead,
+[data-tab="seo-page-guide"] .pg-tree-section__lead{font-size:1.0625rem;line-height:1.55}
+
+/* Make tree chevrons more prominent and obviously interactive */
+.pg-tree__cluster-bar .pg-tree__chev,
+.pg-tree__hub-bar .pg-tree__chev{
+  font-size:18px;
+  width:30px;height:30px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:rgba(124,58,237,0.10);
+  color:#7C3AED;
+  border-radius:50%;
+  transition:transform 0.3s ease,background 0.25s ease;
+  font-weight:800;
+}
+.pg-tree__hub-bar:hover .pg-tree__chev,
+.pg-tree__cluster-bar:hover .pg-tree__chev{
+  background:rgba(124,58,237,0.20);
+  transform:scale(1.1);
+}
+.pg-tree__cluster[open] > .pg-tree__cluster-bar .pg-tree__chev,
+.pg-tree__hub[open] > .pg-tree__hub-bar .pg-tree__chev{
+  transform:rotate(180deg);
+  background:rgba(124,58,237,0.18);
+}
+.pg-tree__hub-bar{cursor:pointer;padding:14px 16px;border-radius:10px;transition:background 0.2s ease}
+.pg-tree__hub-bar:hover{background:rgba(124,58,237,0.04)}
+
+/* Collapsed-details (Status, KPIs & Metrik-Schlüssel) */
+.spg-details-collapse{margin:32px 0 48px;border:1px solid var(--rule);border-radius:14px;background:#fff;overflow:hidden}
+.spg-details-collapse > summary{
+  list-style:none;
+  cursor:pointer;
+  padding:18px 22px;
+  display:flex;align-items:center;gap:14px;
+  background:linear-gradient(180deg,#faf6ec,#fff);
+  font-family:var(--mono);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--ink);
+  transition:background 0.2s ease;
+}
+.spg-details-collapse > summary::-webkit-details-marker{display:none}
+.spg-details-collapse > summary:hover{background:#f4efe3}
+.spg-details-collapse__icon{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:rgba(124,58,237,0.12);color:#7C3AED;transition:transform 0.3s ease}
+.spg-details-collapse[open] .spg-details-collapse__icon{transform:rotate(180deg)}
+.spg-details-collapse__label{flex:1;font-size:13px}
+.spg-details-collapse__hint{font-size:11px;color:var(--ink-mute);font-weight:600;letter-spacing:0.16em}
+.spg-details-collapse[open] .spg-details-collapse__hint{color:#7C3AED}
+.spg-details-collapse__body{padding:28px 22px 18px;border-top:1px solid var(--rule)}
+
+/* Single-sentence metric card */
+.pg-lcard__one{margin:8px 0 0;font-size:15px;line-height:1.5;color:var(--ink);max-width:48ch}
+.pg-lcard{padding:18px 18px 20px}
+.pg-lcard__abbr{font-size:18px}
+.pg-lcard__full{font-size:13px;margin-bottom:2px}
+.pg-lcard--featured .pg-lcard__one{font-size:16px;color:var(--ink)}
+.pg-lcard--featured{border-color:#FF7A00;background:rgba(255,148,37,0.04)}
+
+@media(max-width:760px){
+  [data-tab="seo-page-guide"]{font-size:16px}
+  .pg-tree__cluster-bar .pg-tree__chev,
+  .pg-tree__hub-bar .pg-tree__chev{width:26px;height:26px;font-size:16px}
+  .spg-details-collapse > summary{padding:14px 16px;font-size:11px}
+  .spg-details-collapse__body{padding:22px 16px 14px}
+}
+</style>
 </head>
 <body>
 
@@ -1585,9 +1660,6 @@ body.is-reading .scroll-cue{opacity:0;transform:translateX(-50%) translateY(12px
     <button class="tab" type="button" role="tab" aria-selected="false" data-tab-target="seo-page-guide">
       <span class="tab__num">03</span>
       <span data-i18n="tab.seopageguide">SEO Page Guide</span>
-      <span class="tab__lock tab__lock--open" aria-hidden="true" title="Geliefert · 3. Juni 2026">
-        <svg width="11" height="13" viewBox="0 0 11 13" fill="none"><path d="M2 6V4a3.5 3.5 0 0 1 6.4 -1.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/><rect x="1" y="6" width="9" height="6.5" rx="1.4" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1.5"/></svg>
-      </span>
     </button>
   </div>
 </nav>
@@ -2897,14 +2969,8 @@ body.is-reading .scroll-cue{opacity:0;transform:translateX(-50%) translateY(12px
 <!-- SPG HERO -->
 <section class="spg-hero" id="spg-cover">
   <div class="wrap">
-    <span class="spg-eyebrow spg-eyebrow--unlocked reveal">
-      <span class="spg-eyebrow-lock spg-eyebrow-lock--open" aria-hidden="true">
-        <svg width="13" height="15" viewBox="0 0 13 15" fill="none">
-          <path d="M3 8V5a3.3 3.3 0 0 1 6.4-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-          <rect x="1.5" y="7.5" width="9" height="6.5" rx="1.4" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1.5"/>
-        </svg>
-      </span>
-      <span data-i18n="spg.eyebrow">Freigeschaltet — Geliefert am 3. Juni 2026</span>
+    <span class="spg-eyebrow reveal">
+      <span data-i18n="spg.eyebrow">Geliefert am 3. Juni 2026</span>
     </span>
 
     <div class="phase-strip reveal" data-tab-strip="tab3">
@@ -2961,7 +3027,7 @@ body.is-reading .scroll-cue{opacity:0;transform:translateX(-50%) translateY(12px
   </div>
   <div class="jump-cta-wrap">
     <a class="jump-cta" href="#spg-delivered" aria-label="Zum Page Guide">
-      <span class="jump-cta__label">Zum Page Guide</span>
+      <span class="jump-cta__label" data-i18n="spg.jumpcta">Zum Page Guide</span>
     </a>
     <span class="jump-cta-arrow-ext" aria-hidden="true">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4v14M5 12l6 6 6-6"/></svg>
@@ -2992,7 +3058,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <h2 class="sec-title" data-i18n-html="spg.flow.title">Drei Phasen — alle <em>abgeschlossen.</em></h2>
     </div>
     <button type="button" class="sec-collapse-btn" data-target="spg-flow-body" aria-expanded="false">
-      <span class="sec-collapse-btn__label">Phasen-Übersicht anzeigen</span>
+      <span class="sec-collapse-btn__label" data-i18n="spg.flow.collapse">Phasen-Übersicht anzeigen</span>
       <span class="sec-collapse-btn__chev" aria-hidden="true">▾</span>
     </button>
     <div class="sec-collapse-body" id="spg-flow-body" hidden>
@@ -3035,15 +3101,8 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         <div class="spg-node spg-node--light delivery">
           <span class="spg-node-step">06</span>
           <span class="spg-node-num">Phase 06 · You receive</span>
-          <span class="spg-node-unlock" aria-hidden="true">
-            <svg width="22" height="24" viewBox="0 0 22 26" fill="none">
-              <path d="M5 12V8a6 6 0 0 1 11 -2.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-              <rect x="3" y="12" width="16" height="12" rx="2.2" fill="currentColor" fill-opacity="0.22" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M8 18l2.4 2.4L15 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            </svg>
-          </span>
           <h3 class="spg-node-title">SEO Page Guide</h3>
-          <span class="spg-node-status delivered"><span class="spg-node-status-dot"></span><span>Freigeschaltet · Geliefert 3. Juni 2026</span></span>
+          <span class="spg-node-status delivered"><span class="spg-node-status-dot"></span><span data-i18n="spg.flow.delivered">Geliefert 3. Juni 2026</span></span>
           <p class="spg-node-desc">The full page-by-page blueprint, mapped to every priority keyword.</p>
         </div>
       </div>
@@ -3130,42 +3189,11 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 
 
 <!-- ============ SPG DELIVERED CONTENT (light theme · 2026-06-03) ============ -->
-<section class="pg-delivered-hero" id="spg-delivered">
+<section class="pg-delivered-hero" id="spg-delivered" style="scroll-margin-top:140px">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-num" style="color:#F59425" data-i18n="spg.sn.03">03 — Page Guide</span>
       <h2 class="sec-title" style="font-family:var(--display);font-weight:800" data-i18n-html="spg.sn.03.title.h">Was geliefert wurde — <em>am 3. Juni 2026.</em></h2>
-    </div>
-    <span class="pg-delivered-tag reveal">
-      <span class="pg-delivered-check" aria-hidden="true">
-        <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5L5.5 10.5L11.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </span>
-      <span data-i18n="spg.delivered.tag">Status-Update · Geliefert am 3. Juni 2026</span>
-    </span>
-
-    <h3 class="pg-delivered-h reveal d1" data-i18n-html="spg.delivered.h">100 Seiten — sortiert nach <em>erwarteter Anfrage-Menge.</em></h3>
-    <p class="pg-delivered-lead reveal d2" data-i18n-html="spg.delivered.lead">
-      Johannes, Hannes — aus <strong>2.893 auditierten Suchanfragen</strong> haben wir die <strong>100 Seiten</strong> mit dem höchsten Anfrage-Potenzial herausgefiltert. Sortiert nach <strong>EYS</strong> (Enquiry Yield Score) — der erwarteten Anfrage-Menge pro Monat.
-    </p>
-
-    <div class="pg-delivery reveal d2">
-      <div class="pg-delivery__col">
-        <span class="pg-delivery__lbl" data-i18n="spg.delivery.expected.lbl">Erwartete Lieferung</span>
-        <span class="pg-delivery__date" data-i18n="spg.delivery.expected.date">24. Juni 2026</span>
-        <span class="pg-delivery__detail" data-i18n="spg.delivery.expected.detail">Phase 06 · ~Woche 4 ab Kick-off (27. Mai 2026)</span>
-        <span class="pg-delivery__source" data-i18n="spg.delivery.expected.source">aus Zeitplan</span>
-      </div>
-      <div class="pg-delivery__arrow" aria-hidden="true">→</div>
-      <div class="pg-delivery__col pg-delivery__col--actual">
-        <span class="pg-delivery__lbl pg-delivery__lbl--green" data-i18n="spg.delivery.actual.lbl">Tatsächliche Lieferung</span>
-        <span class="pg-delivery__date pg-delivery__date--green" data-i18n="spg.delivery.actual.date">3. Juni 2026</span>
-        <span class="pg-delivery__detail" data-i18n="spg.delivery.actual.detail">Woche 1 ab Kick-off · vollständige Liste freigegeben</span>
-        <span class="pg-delivery__source pg-delivery__source--green" data-i18n="spg.delivery.actual.source">heute</span>
-      </div>
-      <div class="pg-delivery__delta">
-        <span class="pg-delivery__delta-num" data-i18n="spg.delivery.delta.num">−21</span>
-        <span class="pg-delivery__delta-lbl" data-i18n-html="spg.delivery.delta.lbl">Tage<br>vor Plan</span>
-      </div>
     </div>
   </div>
 </section>
@@ -3173,69 +3201,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 <section class="pg-section" id="spg-page-list">
   <div class="wrap">
 
-    <div class="pg-kpi-strip reveal d1">
-      <div class="pg-kpi"><div class="pg-kpi__num">100</div><div class="pg-kpi__label" data-i18n="spg.kpi.pages">Seiten total</div></div>
-      <div class="pg-kpi"><div class="pg-kpi__num">14</div><div class="pg-kpi__label" data-i18n="spg.kpi.servicehubs">Service-Hubs</div></div>
-      <div class="pg-kpi"><div class="pg-kpi__num">12</div><div class="pg-kpi__label" data-i18n="spg.kpi.branchen">Branchen-Hubs</div></div>
-      <div class="pg-kpi"><div class="pg-kpi__num">74</div><div class="pg-kpi__label" data-i18n="spg.kpi.subpages">Sub-Pages</div></div>
-      <div class="pg-kpi"><div class="pg-kpi__num">1,898<small style="font-size:.6em;opacity:.6"> k</small></div><div class="pg-kpi__label" data-i18n="spg.kpi.totaleys">Total-EYS</div></div>
-    </div>
-
-    <div class="pg-legend-head reveal d2">
-      <div class="pg-legend-eyebrow" data-i18n="spg.legend.eyebrow">Bevor Sie scrollen — Metrik-Schlüssel</div>
-      <h3 class="pg-legend-h" data-i18n="spg.legend.h">Was jede Spalte in der Liste bedeutet.</h3>
-      <p class="pg-legend-lead" data-i18n-html="spg.legend.lead">Vier Kennzahlen entscheiden, ob eine Seite in der Production-Liste landet — und in welcher Reihenfolge. <strong>EYS</strong> ist die wichtigste, weil sie alles andere zusammenführt zu einer einzigen Vergleichszahl: <strong>erwartete qualifizierte Anfragen pro Monat</strong>.</p>
-    </div>
-
-    <div class="pg-legend-grid reveal d2">
-      <article class="pg-lcard pg-lcard--featured">
-        <div class="pg-lcard__abbr">EYS</div>
-        <div class="pg-lcard__full">Enquiry Yield Score</div>
-        <p class="pg-lcard__what">Die <strong>erwartete Anfrage-Menge pro Monat</strong> wenn diese Seite auf Position 3 in Google rankt. Höherer EYS = mehr Anfragen. Vergleichbar über alle Seiten hinweg.</p>
-        <div class="pg-lcard__formula">
-          <span class="pg-lf-step">Vol</span><span class="pg-lf-op">×</span>
-          <span class="pg-lf-step">CTR<sub>pos3</sub></span><span class="pg-lf-op">×</span>
-          <span class="pg-lf-step">Density</span><span class="pg-lf-op">×</span>
-          <span class="pg-lf-step">Intent</span><span class="pg-lf-op">×</span>
-          <span class="pg-lf-step">KD-Faktor</span><span class="pg-lf-op">×</span>
-          <span class="pg-lf-step pg-lf-step--out">1.000</span>
-        </div>
-        <p class="pg-lcard__note"><strong>Auf gut Deutsch:</strong> "Wie viele Anfragen ist diese Seite wert, wenn sie rankt?" — Konservativ kalkuliert für Position 3. Bei Position 1 wäre der Wert 2,7× höher.</p>
-      </article>
-
-      <article class="pg-lcard"><div class="pg-lcard__abbr">Vol</div><div class="pg-lcard__full">Suchvolumen</div><p class="pg-lcard__what">Wie viele Menschen suchen diese Anfrage pro Monat in Google.de — aus Semrush abgefragt, live verifiziert.</p><div class="pg-lcard__range">Range im Build: <b>10—1.000/mo</b></div><p class="pg-lcard__note">10/mo klingt wenig, aber bei 30—40% Top-3-Klickrate × 2—3% Beratungs-Conversion = 1—2 Anfragen pro Quartal pro Seite. Bei 100 Seiten addiert sich das.</p></article>
-
-      <article class="pg-lcard"><div class="pg-lcard__abbr">KD</div><div class="pg-lcard__full">Keyword Difficulty</div><p class="pg-lcard__what">Wie hart der Wettbewerb auf Position 1—10 ist. Semrush-Score von 0—100. Niedriger = einfacher zu ranken.</p><div class="pg-lcard__range">Range im Build: <b>0—45</b> (überwiegend niedrig)</div><p class="pg-lcard__note">Beratungs-Suchanfragen haben tendenziell niedrige KDs (10—30), weil wenige spezialisierte Beratungen mit ihnen ranken. Macht den Build im SEO-Sinne "günstig".</p></article>
-
-      <article class="pg-lcard"><div class="pg-lcard__abbr">LOS</div><div class="pg-lcard__full">Lead Opportunity Score</div><p class="pg-lcard__what">DM-internes Komposit aus Volumen, Käufer-Intention, Konkurrenz-Härte und CEx-Service-Fit. Skala 0—100.</p><div class="pg-lcard__range">Range im Build: <b>52—96</b></div><p class="pg-lcard__note">LOS ist der <em>qualitative</em> Vorfilter, EYS ist die <em>quantitative</em> Endbewertung. LOS sortiert "ist das eine gute Seite?", EYS antwortet "wie viel bringt sie konkret?".</p></article>
-
-      <article class="pg-lcard"><div class="pg-lcard__abbr">CTR<sub>pos3</sub></div><div class="pg-lcard__full">Klickrate bei Position 3</div><p class="pg-lcard__what">Anteil der Sucher, die bei Ranking-Position 3 klicken. Standardwert in unserer Berechnung: <b>0,10</b> (10%).</p><div class="pg-lcard__range">Industry-Benchmark: <b>0,27</b> (Pos 1) · <b>0,15</b> (Pos 2) · <b>0,10</b> (Pos 3)</div><p class="pg-lcard__note">Konservativ angesetzt. Realistisches Ziel: Pos 1—3 in 12—18 Monaten. Bei Pos 1 verdreifacht sich der EYS pro Seite.</p></article>
-
-      <article class="pg-lcard"><div class="pg-lcard__abbr">Density</div><div class="pg-lcard__full">Beratungs-Dichte in der SERP</div><p class="pg-lcard__what">Wie viele Beratungs-Websites bereits in der Top-10-SERP ranken. Indikator dafür, dass Google die Anfrage als Beratungs-Käufer-Suche einstuft.</p><div class="pg-lcard__range">Range: <b>1,0—3,5</b></div><p class="pg-lcard__note">Hohe Density = Google sieht es als Beratungs-Markt = wir können dort ranken.</p></article>
-
-      <article class="pg-lcard"><div class="pg-lcard__abbr">Intent</div><div class="pg-lcard__full">Käufer-Intentions-Bonus</div><p class="pg-lcard__what">Aufschlag, wenn die Anfrage Käufer-Signale enthält: +25% wenn Stadt-Name, +20% wenn Branchen-Name, +10% wenn "Beratung" im Begriff.</p><div class="pg-lcard__range">Max-Bonus: <b>+60%</b></div><p class="pg-lcard__note">"Prozessoptimierung Berlin" hat einen höheren Intent-Bonus als nur "Prozessoptimierung".</p></article>
-
-      <article class="pg-lcard"><div class="pg-lcard__abbr">KD-Faktor</div><div class="pg-lcard__full">Wettbewerbs-Abschlag</div><p class="pg-lcard__what">Formel: <code>(110 − KD) / 100</code>. Reduziert den EYS um den Anteil der Wettbewerbs-Härte.</p><p class="pg-lcard__note">Hält die Berechnung ehrlich: hohe Volumen bei hartem Wettbewerb werden runter-gerechnet.</p></article>
-    </div>
-
-    <div class="pg-hubpot reveal d2">
-      <div class="pg-hubpot__h">Hub-Potenzial — die drei Kategorien in der "Kategorie"-Spalte:</div>
-      <div class="pg-hubpot__grid">
-        <span class="pg-hp-tag" style="color:#FF7A00;border-color:#FF7A00"><b>★ Service-Hub</b> · Top-Level-Servicelinie</span>
-        <span class="pg-hp-tag" style="color:#7C3AED;border-color:#7C3AED"><b>◆ Branchen-Hub</b> · Vertikal-Anker</span>
-        <span class="pg-hp-tag" style="color:#9CA3AF;border-color:#9CA3AF"><b>· Sub-Page</b> · Variante unter einem Hub</span>
-      </div>
-    </div>
-
-    <div class="pg-quick reveal d2">
-      <strong>So liest sich die Tabelle in einem Satz:</strong> Sortiert nach EYS — der Seite mit der höchsten erwarteten Anfrage-Menge pro Monat zuerst. Jede Zeile zeigt die Anfrage selbst, ihre Kategorie, das Volumen, die Konkurrenz-Härte (KD), den LOS-Score und den EYS. Klick auf einen Spalten-Header sortiert nach dieser Kennzahl.
-    </div>
-
-    <div class="pg-sitemap-link reveal d2">
-      Brauchen Sie die <strong>vollständige Seitenliste gruppiert nach Servicebereich</strong>? → <a href="#sm-cover" data-tab-jump="sitemap">Zur Sitemap ↗</a>
-    </div>
-
-<!-- ============ Page Architecture Tree ============ -->
+    <!-- ============ Page Architecture Tree ============ -->
 <div class="pg-tree-section reveal d2">
   <div class="pg-tree-section__head">
     <span class="pg-tree-section__eyebrow" data-i18n="spg.tree.eyebrow">Page-Architektur</span>
@@ -3249,7 +3215,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         <span class="pg-tree__home-dot" aria-hidden="true"></span>
         <span class="pg-tree__home-label">cex.koeln</span>
       </div>
-      <button type="button" class="pg-tree__expand-all" id="pgTreeExpandAll">Expand all</button>
+      <button type="button" class="pg-tree__expand-all" id="pgTreeExpandAll" data-i18n="spg.tree.expandall">Expand all</button>
     </div>
 
     <div class="pg-tree__rail">
@@ -3257,11 +3223,11 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         <summary class="pg-tree__cluster-bar">
           <span class="pg-tree__cluster-tag">CLUSTER 1</span>
           <span class="pg-tree__cluster-name" data-i18n="spg.tree.cluster1.name">Projekte &amp; Prozesse · 14 service hubs</span>
-          <span class="pg-tree__cluster-count">88 pages</span>
+          <span class="pg-tree__cluster-count" data-i18n="spg.tree.cluster1.count">88 pages</span>
           <span class="pg-tree__chev" aria-hidden="true">▾</span>
         </summary>
         <div class="pg-tree__cluster-children">
-        <details class="pg-tree__hub">
+        <details class="pg-tree__hub" open>
           <summary class="pg-tree__hub-bar">
             <span class="pg-tree__hub-num">1.01</span>
             <span class="pg-tree__hub-name">Digitale Transformation</span>
@@ -3848,7 +3814,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         <summary class="pg-tree__cluster-bar">
           <span class="pg-tree__cluster-tag">CLUSTER 2</span>
           <span class="pg-tree__cluster-name" data-i18n="spg.tree.cluster2.name">Branchen · 12 sector hubs</span>
-          <span class="pg-tree__cluster-count">12 pages</span>
+          <span class="pg-tree__cluster-count" data-i18n="spg.tree.cluster2.count">12 pages</span>
           <span class="pg-tree__chev" aria-hidden="true">▾</span>
         </summary>
         <div class="pg-tree__cluster-children">
@@ -4037,6 +4003,142 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     </div>
   </div>
 </div>
+    <!-- ====== Collapsed exec details: status, KPI strip, metric-key legend ====== -->
+    <details class="spg-details-collapse reveal d1">
+      <summary class="spg-details-collapse__summary">
+        <span class="spg-details-collapse__icon" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="spg-details-collapse__label" data-i18n="spg.details.summary">Status, KPIs & Metrik-Schlüssel</span>
+        <span class="spg-details-collapse__hint" data-i18n="spg.details.hint">öffnen</span>
+      </summary>
+      <div class="spg-details-collapse__body">
+    <span class="pg-delivered-tag reveal">
+      <span class="pg-delivered-check" aria-hidden="true">
+        <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M2.5 7.5L5.5 10.5L11.5 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span data-i18n="spg.delivered.tag">Status-Update · Geliefert am 3. Juni 2026</span>
+    </span>
+
+    <h3 class="pg-delivered-h reveal d1" data-i18n-html="spg.delivered.h">100 Seiten — sortiert nach <em>erwarteter Anfrage-Menge.</em></h3>
+    <p class="pg-delivered-lead reveal d2" data-i18n-html="spg.delivered.lead">
+      Johannes, Hannes — aus <strong>2.893 auditierten Suchanfragen</strong> haben wir die <strong>100 Seiten</strong> mit dem höchsten Anfrage-Potenzial herausgefiltert. Sortiert nach <strong>EYS</strong> (Enquiry Yield Score) — der erwarteten Anfrage-Menge pro Monat.
+    </p>
+
+    <div class="pg-delivery reveal d2">
+      <div class="pg-delivery__col">
+        <span class="pg-delivery__lbl" data-i18n="spg.delivery.expected.lbl">Erwartete Lieferung</span>
+        <span class="pg-delivery__date" data-i18n="spg.delivery.expected.date">24. Juni 2026</span>
+        <span class="pg-delivery__detail" data-i18n="spg.delivery.expected.detail">Phase 06 · ~Woche 4 ab Kick-off (27. Mai 2026)</span>
+        <span class="pg-delivery__source" data-i18n="spg.delivery.expected.source">aus Zeitplan</span>
+      </div>
+      <div class="pg-delivery__arrow" aria-hidden="true">→</div>
+      <div class="pg-delivery__col pg-delivery__col--actual">
+        <span class="pg-delivery__lbl pg-delivery__lbl--green" data-i18n="spg.delivery.actual.lbl">Tatsächliche Lieferung</span>
+        <span class="pg-delivery__date pg-delivery__date--green" data-i18n="spg.delivery.actual.date">3. Juni 2026</span>
+        <span class="pg-delivery__detail" data-i18n="spg.delivery.actual.detail">Woche 1 ab Kick-off · vollständige Liste freigegeben</span>
+        <span class="pg-delivery__source pg-delivery__source--green" data-i18n="spg.delivery.actual.source">heute</span>
+      </div>
+      <div class="pg-delivery__delta">
+        <span class="pg-delivery__delta-num" data-i18n="spg.delivery.delta.num">−21</span>
+        <span class="pg-delivery__delta-lbl" data-i18n-html="spg.delivery.delta.lbl">Tage<br>vor Plan</span>
+      </div>
+    </div>
+<div class="pg-kpi-strip reveal d1">
+      <div class="pg-kpi"><div class="pg-kpi__num">100</div><div class="pg-kpi__label" data-i18n="spg.kpi.pages">Seiten total</div></div>
+      <div class="pg-kpi"><div class="pg-kpi__num">14</div><div class="pg-kpi__label" data-i18n="spg.kpi.servicehubs">Service-Hubs</div></div>
+      <div class="pg-kpi"><div class="pg-kpi__num">12</div><div class="pg-kpi__label" data-i18n="spg.kpi.branchen">Branchen-Hubs</div></div>
+      <div class="pg-kpi"><div class="pg-kpi__num">74</div><div class="pg-kpi__label" data-i18n="spg.kpi.subpages">Sub-Pages</div></div>
+      <div class="pg-kpi"><div class="pg-kpi__num">1,898<small style="font-size:.6em;opacity:.6"> k</small></div><div class="pg-kpi__label" data-i18n="spg.kpi.totaleys">Total-EYS</div></div>
+    </div>
+
+    <div class="pg-legend-head reveal d2">
+      <div class="pg-legend-eyebrow" data-i18n="spg.legend.eyebrow">Bevor Sie scrollen — Metrik-Schlüssel</div>
+      <h3 class="pg-legend-h" data-i18n="spg.legend.h">Was jede Spalte in der Liste bedeutet.</h3>
+      <p class="pg-legend-lead" data-i18n-html="spg.legend.lead"><strong>EYS</strong> ist ein Score, der die Relevanz für die Generierung qualifizierter Anfragen <strong>zwischen Keywords vergleichbar</strong> macht.</p>
+    </div>
+
+    <div class="pg-legend-grid reveal d2">
+      <article class="pg-lcard pg-lcard--featured">
+        <div class="pg-lcard__abbr">EYS</div>
+        <div class="pg-lcard__full" data-i18n="spg.lc.eys.full">Enquiry Yield Score</div>
+        <p class="pg-lcard__one" data-i18n="spg.lc.eys.one">Erwartete Anfragen pro Monat, wenn diese Seite auf Position 3 in Google rankt.</p>
+      </article>
+      <article class="pg-lcard">
+        <div class="pg-lcard__abbr">Vol</div>
+        <div class="pg-lcard__full" data-i18n="spg.lc.vol.full">Suchvolumen</div>
+        <p class="pg-lcard__one" data-i18n="spg.lc.vol.one">Wie viele Menschen diese Anfrage pro Monat in Google.de suchen.</p>
+      </article>
+      <article class="pg-lcard">
+        <div class="pg-lcard__abbr">KD</div>
+        <div class="pg-lcard__full" data-i18n="spg.lc.kd.full">Keyword Difficulty</div>
+        <p class="pg-lcard__one" data-i18n="spg.lc.kd.one">Wettbewerbs-Härte auf Position 1—10 (Semrush-Score 0—100, niedriger = einfacher).</p>
+      </article>
+      <article class="pg-lcard">
+        <div class="pg-lcard__abbr">LOS</div>
+        <div class="pg-lcard__full" data-i18n="spg.lc.los.full">Lead Opportunity Score</div>
+        <p class="pg-lcard__one" data-i18n="spg.lc.los.one">DM-internes Komposit aus Volumen, Intent, Wettbewerb und CEx-Fit (0—100).</p>
+      </article>
+      <article class="pg-lcard">
+        <div class="pg-lcard__abbr">CTR<sub>pos3</sub></div>
+        <div class="pg-lcard__full" data-i18n="spg.lc.ctr.full">Klickrate bei Position 3</div>
+        <p class="pg-lcard__one" data-i18n="spg.lc.ctr.one">Klickrate bei Ranking-Position 3 — Standardwert in unserer Berechnung: 10%.</p>
+      </article>
+      <article class="pg-lcard">
+        <div class="pg-lcard__abbr">Density</div>
+        <div class="pg-lcard__full" data-i18n="spg.lc.density.full">Beratungs-Dichte in der SERP</div>
+        <p class="pg-lcard__one" data-i18n="spg.lc.density.one">Wie viele Beratungs-Sites bereits in der Top-10-SERP ranken.</p>
+      </article>
+      <article class="pg-lcard">
+        <div class="pg-lcard__abbr">Intent</div>
+        <div class="pg-lcard__full" data-i18n="spg.lc.intent.full">Käufer-Intentions-Bonus</div>
+        <p class="pg-lcard__one" data-i18n="spg.lc.intent.one">Aufschlag, wenn die Anfrage Käufer-Signale wie Stadt, Branche oder „Beratung" enthält.</p>
+      </article>
+      <article class="pg-lcard">
+        <div class="pg-lcard__abbr" data-i18n="spg.lc.kdf.abbr">KD-Faktor</div>
+        <div class="pg-lcard__full" data-i18n="spg.lc.kdf.full">Wettbewerbs-Abschlag</div>
+        <p class="pg-lcard__one" data-i18n="spg.lc.kdf.one">Reduziert EYS um den Anteil der Wettbewerbs-Härte (Formel: (110 − KD) / 100).</p>
+      </article>
+    </div>
+        <p class="pg-lcard__note" data-i18n-html="spg.lc.eys.note"><strong>Auf gut Deutsch:</strong> "Wie viele Anfragen ist diese Seite wert, wenn sie rankt?" — Konservativ kalkuliert für Position 3. Bei Position 1 wäre der Wert 2,7× höher.</p>
+      </article>
+
+      <article class="pg-lcard"><div class="pg-lcard__abbr">Vol</div><div class="pg-lcard__full" data-i18n="spg.lc.vol.full">Suchvolumen</div><p class="pg-lcard__what" data-i18n="spg.lc.vol.what">Wie viele Menschen suchen diese Anfrage pro Monat in Google.de — aus Semrush abgefragt, live verifiziert.</p><div class="pg-lcard__range" data-i18n-html="spg.lc.vol.range">Range im Build: <b>10—1.000/mo</b></div><p class="pg-lcard__note" data-i18n="spg.lc.vol.note">10/mo klingt wenig, aber bei 30—40% Top-3-Klickrate × 2—3% Beratungs-Conversion = 1—2 Anfragen pro Quartal pro Seite. Bei 100 Seiten addiert sich das.</p></article>
+
+      <article class="pg-lcard"><div class="pg-lcard__abbr">KD</div><div class="pg-lcard__full">Keyword Difficulty</div><p class="pg-lcard__what" data-i18n="spg.lc.kd.what">Wie hart der Wettbewerb auf Position 1—10 ist. Semrush-Score von 0—100. Niedriger = einfacher zu ranken.</p><div class="pg-lcard__range" data-i18n-html="spg.lc.kd.range">Range im Build: <b>0—45</b> (überwiegend niedrig)</div><p class="pg-lcard__note" data-i18n="spg.lc.kd.note">Beratungs-Suchanfragen haben tendenziell niedrige KDs (10—30), weil wenige spezialisierte Beratungen mit ihnen ranken. Macht den Build im SEO-Sinne "günstig".</p></article>
+
+      <article class="pg-lcard"><div class="pg-lcard__abbr">LOS</div><div class="pg-lcard__full">Lead Opportunity Score</div><p class="pg-lcard__what" data-i18n="spg.lc.los.what">DM-internes Komposit aus Volumen, Käufer-Intention, Konkurrenz-Härte und CEx-Service-Fit. Skala 0—100.</p><div class="pg-lcard__range" data-i18n-html="spg.lc.los.range">Range im Build: <b>52—96</b></div><p class="pg-lcard__note" data-i18n-html="spg.lc.los.note">LOS ist der <em>qualitative</em> Vorfilter, EYS ist die <em>quantitative</em> Endbewertung. LOS sortiert "ist das eine gute Seite?", EYS antwortet "wie viel bringt sie konkret?".</p></article>
+
+      <article class="pg-lcard"><div class="pg-lcard__abbr">CTR<sub>pos3</sub></div><div class="pg-lcard__full" data-i18n="spg.lc.ctr.full">Klickrate bei Position 3</div><p class="pg-lcard__what" data-i18n-html="spg.lc.ctr.what">Anteil der Sucher, die bei Ranking-Position 3 klicken. Standardwert in unserer Berechnung: <b>0,10</b> (10%).</p><div class="pg-lcard__range" data-i18n-html="spg.lc.ctr.range">Industry-Benchmark: <b>0,27</b> (Pos 1) · <b>0,15</b> (Pos 2) · <b>0,10</b> (Pos 3)</div><p class="pg-lcard__note" data-i18n="spg.lc.ctr.note">Konservativ angesetzt. Realistisches Ziel: Pos 1—3 in 12—18 Monaten. Bei Pos 1 verdreifacht sich der EYS pro Seite.</p></article>
+
+      <article class="pg-lcard"><div class="pg-lcard__abbr">Density</div><div class="pg-lcard__full" data-i18n="spg.lc.density.full">Beratungs-Dichte in der SERP</div><p class="pg-lcard__what" data-i18n="spg.lc.density.what">Wie viele Beratungs-Websites bereits in der Top-10-SERP ranken. Indikator dafür, dass Google die Anfrage als Beratungs-Käufer-Suche einstuft.</p><div class="pg-lcard__range" data-i18n-html="spg.lc.density.range">Range: <b>1,0—3,5</b></div><p class="pg-lcard__note" data-i18n="spg.lc.density.note">Hohe Density = Google sieht es als Beratungs-Markt = wir können dort ranken.</p></article>
+
+      <article class="pg-lcard"><div class="pg-lcard__abbr">Intent</div><div class="pg-lcard__full" data-i18n="spg.lc.intent.full">Käufer-Intentions-Bonus</div><p class="pg-lcard__what" data-i18n="spg.lc.intent.what">Aufschlag, wenn die Anfrage Käufer-Signale enthält: +25% wenn Stadt-Name, +20% wenn Branchen-Name, +10% wenn "Beratung" im Begriff.</p><div class="pg-lcard__range" data-i18n-html="spg.lc.intent.range">Max-Bonus: <b>+60%</b></div><p class="pg-lcard__note" data-i18n="spg.lc.intent.note">"Prozessoptimierung Berlin" hat einen höheren Intent-Bonus als nur "Prozessoptimierung".</p></article>
+
+      <article class="pg-lcard"><div class="pg-lcard__abbr" data-i18n="spg.lc.kdf.abbr">KD-Faktor</div><div class="pg-lcard__full" data-i18n="spg.lc.kdf.full">Wettbewerbs-Abschlag</div><p class="pg-lcard__what" data-i18n-html="spg.lc.kdf.what">Formel: <code>(110 − KD) / 100</code>. Reduziert den EYS um den Anteil der Wettbewerbs-Härte.</p><p class="pg-lcard__note" data-i18n="spg.lc.kdf.note">Hält die Berechnung ehrlich: hohe Volumen bei hartem Wettbewerb werden runter-gerechnet.</p></article>
+    </div>
+
+    <div class="pg-hubpot reveal d2">
+      <div class="pg-hubpot__h" data-i18n="spg.hubpot.h">Hub-Potenzial — die drei Kategorien in der "Kategorie"-Spalte:</div>
+      <div class="pg-hubpot__grid">
+        <span class="pg-hp-tag" style="color:#FF7A00;border-color:#FF7A00" data-i18n-html="spg.hubpot.service"><b>★ Service-Hub</b> · Top-Level-Servicelinie</span>
+        <span class="pg-hp-tag" style="color:#7C3AED;border-color:#7C3AED" data-i18n-html="spg.hubpot.sector"><b>◆ Branchen-Hub</b> · Vertikal-Anker</span>
+        <span class="pg-hp-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-i18n-html="spg.hubpot.sub"><b>· Sub-Page</b> · Variante unter einem Hub</span>
+      </div>
+    </div>
+
+    <div class="pg-quick reveal d2" data-i18n-html="spg.legend.quick">
+      <strong>So liest sich die Tabelle in einem Satz:</strong> Sortiert nach EYS — der Seite mit der höchsten erwarteten Anfrage-Menge pro Monat zuerst. Jede Zeile zeigt die Anfrage selbst, ihre Kategorie, das Volumen, die Konkurrenz-Härte (KD), den LOS-Score und den EYS. Klick auf einen Spalten-Header sortiert nach dieser Kennzahl.
+    </div>
+
+    <div class="pg-sitemap-link reveal d2" data-i18n-html="spg.sitemap.cta">
+      Brauchen Sie die <strong>vollständige Seitenliste gruppiert nach Servicebereich</strong>? → <a href="#sm-cover" data-tab-jump="sitemap">Zur Sitemap ↗</a>
+    </div>
+      </div>
+    </details>
+
+
+
 
 <style>
 .pg-tree-section{margin:0 0 56px}
@@ -4113,8 +4215,12 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
   function syncLabel(){
     const detailsList = root.querySelectorAll('details');
     const allOpen = Array.from(detailsList).every(d => d.open);
-    btn.textContent = allOpen ? 'Collapse all' : 'Expand all';
+    const isDE = (document.documentElement.lang || 'de') === 'de';
+    btn.textContent = allOpen
+      ? (isDE ? 'Alle einklappen' : 'Collapse all')
+      : (isDE ? 'Alle aufklappen' : 'Expand all');
   }
+  document.addEventListener('langchange', syncLabel);
   btn.addEventListener('click', () => {
     const detailsList = root.querySelectorAll('details');
     const allOpen = Array.from(detailsList).every(d => d.open);
@@ -4129,16 +4235,16 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         <!-- Sticky filter bar -->
     <div class="pg-filter-bar" id="pgFilterBar">
       <div class="pg-filter-bar__inner">
-        <span class="pg-filter-bar__label">Filter</span>
-        <button class="pg-filter-pill is-active" data-filter="all">Alle <span class="pg-filter-pill__count">100</span></button>
-        <button class="pg-filter-pill" data-filter="current_hub" style="color:#FF7A00">★ Service-Hubs <span class="pg-filter-pill__count">14</span></button>
-        <button class="pg-filter-pill" data-filter="sector_hub" style="color:#7C3AED">◆ Branchen-Hubs <span class="pg-filter-pill__count">12</span></button>
-        <button class="pg-filter-pill" data-filter="sub_only" style="color:#616160">· Sub-Pages <span class="pg-filter-pill__count">72</span></button>
+        <span class="pg-filter-bar__label" data-i18n="pgf.label">Filter</span>
+        <button class="pg-filter-pill is-active" data-filter="all" data-i18n-html="pgf.all">Alle <span class="pg-filter-pill__count">100</span></button>
+        <button class="pg-filter-pill" data-filter="current_hub" style="color:#FF7A00" data-i18n-html="pgf.service">★ Service-Hubs <span class="pg-filter-pill__count">14</span></button>
+        <button class="pg-filter-pill" data-filter="sector_hub" style="color:#7C3AED" data-i18n-html="pgf.sector">◆ Branchen-Hubs <span class="pg-filter-pill__count">12</span></button>
+        <button class="pg-filter-pill" data-filter="sub_only" style="color:#616160" data-i18n-html="pgf.sub">· Sub-Pages <span class="pg-filter-pill__count">72</span></button>
         <span class="pg-filter-bar__divider" aria-hidden="true"></span>
-        <span class="pg-filter-bar__state" id="pgState">zeigt <b>Top 5</b> von <b>100</b></span>
+        <span class="pg-filter-bar__state" id="pgState" data-i18n-html="pgf.state">zeigt <b>Top 5</b> von <b>100</b></span>
         <div class="pg-filter-bar__actions">
-          <button type="button" class="pg-filter-bar__btn pg-filter-bar__btn--primary" id="pgShowAllBtn">⤓ Alle 98 anzeigen</button>
-          <button type="button" class="pg-filter-bar__btn pg-filter-bar__btn--secondary" id="pgResetBtn">↻ EYS-Sortierung</button>
+          <button type="button" class="pg-filter-bar__btn pg-filter-bar__btn--primary" id="pgShowAllBtn" data-i18n="pgf.showall">⤓ Alle 98 anzeigen</button>
+          <button type="button" class="pg-filter-bar__btn pg-filter-bar__btn--secondary" id="pgResetBtn" data-i18n="pgf.reset">↻ EYS-Sortierung</button>
         </div>
       </div>
     </div>
@@ -4147,9 +4253,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <div class="pg-thead">
         <button type="button" class="pg-th pg-th--rank" data-sort="rank">#</button>
         <span class="pg-th pg-th--icon"></span>
-        <button type="button" class="pg-th pg-th--kw"   data-sort="kw">Keyword <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span></button>
-        <button type="button" class="pg-th pg-th--cat"  data-sort="pot">Kategorie <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span></button>
-        <button type="button" class="pg-th pg-th--num"  data-sort="vol">Vol <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span></button>
+        <button type="button" class="pg-th pg-th--kw"   data-sort="kw" data-i18n-html="pgt.kw">Keyword <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span></button>
+        <button type="button" class="pg-th pg-th--cat"  data-sort="pot" data-i18n-html="pgt.cat">Kategorie <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span></button>
+        <button type="button" class="pg-th pg-th--num"  data-sort="vol" data-i18n-html="pgt.vol">Vol <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span></button>
         <button type="button" class="pg-th pg-th--num"  data-sort="kd">KD <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span></button>
         <button type="button" class="pg-th pg-th--num"  data-sort="los">LOS <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span></button>
         <button type="button" class="pg-th pg-th--num pg-th--active pg-th--desc" data-sort="eys">EYS <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span></button>
@@ -4160,7 +4266,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="1">01</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="change management beratung">change management beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">1000<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">23</span>
           <span class="pg-row__num pg-row__num--los">93.0</span>
@@ -4171,7 +4277,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="2">02</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="digitale transformation beratung">digitale transformation beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">720<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">11</span>
           <span class="pg-row__num pg-row__num--los">95.7</span>
@@ -4182,7 +4288,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="3">03</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="prozessberatung">prozessberatung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">720<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">10</span>
           <span class="pg-row__num pg-row__num--los">89.6</span>
@@ -4193,7 +4299,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="4">04</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="Unternehmensberatung Digitalisierung · Digitalisierungsberatung">Unternehmensberatung Digitalisierung · Digitalisierungsberatung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">590<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">18</span>
           <span class="pg-row__num pg-row__num--los">79.7</span>
@@ -4204,7 +4310,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="5">05</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="projektmanagement beratung">projektmanagement beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">590<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">20</span>
           <span class="pg-row__num pg-row__num--los">73.7</span>
@@ -4215,7 +4321,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="6">06</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="geschäftsprozessoptimierung">geschäftsprozessoptimierung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">480<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">15</span>
           <span class="pg-row__num pg-row__num--los">86.6</span>
@@ -4226,7 +4332,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="7">07</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="prozessoptimierung beratung">prozessoptimierung beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">260<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">12</span>
           <span class="pg-row__num pg-row__num--los">88.4</span>
@@ -4237,7 +4343,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="8">08</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="transformationsberatung">transformationsberatung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">210<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">7</span>
           <span class="pg-row__num pg-row__num--los">79.6</span>
@@ -4248,7 +4354,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="9">09</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberater (CH)">digitalisierungsberater (CH)</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">140<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">6</span>
           <span class="pg-row__num pg-row__num--los">64.4</span>
@@ -4259,7 +4365,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="10">10</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung mittelstand">digitalisierungsberatung mittelstand</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">90<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">17</span>
           <span class="pg-row__num pg-row__num--los">70.7</span>
@@ -4270,7 +4376,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="11">11</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung köln">digitalisierungsberatung köln</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">70<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">10</span>
           <span class="pg-row__num pg-row__num--los">81.1</span>
@@ -4281,7 +4387,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="12">12</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitale transformationsberatung">digitale transformationsberatung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">50<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">82.3</span>
@@ -4292,7 +4398,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="13">13</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="pmo beratung">pmo beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">50<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">69.4</span>
@@ -4303,7 +4409,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="14">14</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung düsseldorf">digitalisierungsberatung düsseldorf</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">40<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">84.1</span>
@@ -4314,7 +4420,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="15">15</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung erfurt">digitalisierungsberatung erfurt</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">40<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">84.1</span>
@@ -4325,7 +4431,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="16">16</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung mannheim">digitalisierungsberatung mannheim</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">40<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">84.1</span>
@@ -4336,7 +4442,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="17">17</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung oldenburg">digitalisierungsberatung oldenburg</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">40<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">84.1</span>
@@ -4347,7 +4453,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="18">18</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung potsdam">digitalisierungsberatung potsdam</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">40<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">84.1</span>
@@ -4358,7 +4464,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="19">19</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung rostock">digitalisierungsberatung rostock</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">40<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">84.1</span>
@@ -4369,7 +4475,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="20">20</span>
           <span class="pg-row__icon" style="color:#7C3AED">◆</span>
           <span class="pg-row__kw" title="beratung mittelstand">beratung mittelstand</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">50<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">27</span>
           <span class="pg-row__num pg-row__num--los">57.9</span>
@@ -4380,7 +4486,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="21">21</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="it projektmanagement beratung">it projektmanagement beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">40<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">71.6</span>
@@ -4391,7 +4497,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="22">22</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="beratung externe projektmanager">beratung externe projektmanager</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">40<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">71.6</span>
@@ -4402,7 +4508,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="23">23</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="agiles projektmanagement beratung">agiles projektmanagement beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">40<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">56.6</span>
@@ -4413,7 +4519,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="24">24</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="agiles projektmanagement beratung">agiles projektmanagement beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">40<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">54.1</span>
@@ -4424,7 +4530,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="25">25</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung deutschland">digitalisierungsberatung deutschland</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">stage</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">stage</span></span>
           <span class="pg-row__num pg-row__num--vol">40<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">8</span>
           <span class="pg-row__num pg-row__num--los">65.0</span>
@@ -4435,7 +4541,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="26">26</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberater saas">digitalisierungsberater saas</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">63.2</span>
@@ -4446,7 +4552,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="27">27</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="projektmanagement beratung mittelstand">projektmanagement beratung mittelstand</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">70.7</span>
@@ -4457,7 +4563,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="28">28</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="automotive requirements engineering">automotive requirements engineering</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">58.2</span>
@@ -4468,7 +4574,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="29">29</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung aachen">digitalisierungsberatung aachen</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">83.1</span>
@@ -4479,7 +4585,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="30">30</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung bonn">digitalisierungsberatung bonn</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">83.1</span>
@@ -4490,7 +4596,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="31">31</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung dortmund">digitalisierungsberatung dortmund</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">83.1</span>
@@ -4501,7 +4607,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="32">32</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung essen">digitalisierungsberatung essen</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">83.1</span>
@@ -4512,7 +4618,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="33">33</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung leipzig">digitalisierungsberatung leipzig</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">83.1</span>
@@ -4523,7 +4629,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="34">34</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung mainz">digitalisierungsberatung mainz</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">83.1</span>
@@ -4534,7 +4640,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="35">35</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung nürnberg">digitalisierungsberatung nürnberg</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">83.1</span>
@@ -4545,7 +4651,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="36">36</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung regensburg">digitalisierungsberatung regensburg</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">83.1</span>
@@ -4556,7 +4662,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="37">37</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung salzgitter">digitalisierungsberatung salzgitter</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">83.1</span>
@@ -4567,7 +4673,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="38">38</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung ulm">digitalisierungsberatung ulm</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">83.1</span>
@@ -4578,7 +4684,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="39">39</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung wolfsburg">digitalisierungsberatung wolfsburg</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">83.1</span>
@@ -4589,7 +4695,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="40">40</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung berlin">digitalisierungsberatung berlin</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">71.7</span>
@@ -4600,7 +4706,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="41">41</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung kmu">digitalisierungsberatung kmu</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">12</span>
           <span class="pg-row__num pg-row__num--los">68.3</span>
@@ -4611,7 +4717,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="42">42</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="transformationsberatung deutschland">transformationsberatung deutschland</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">stage</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">stage</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">78.2</span>
@@ -4622,7 +4728,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="43">43</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung typo3">digitalisierungsberatung typo3</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">stage</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">stage</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">63.2</span>
@@ -4633,7 +4739,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="44">44</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="projektmanagement beratung hybrid">projektmanagement beratung hybrid</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">70.7</span>
@@ -4644,7 +4750,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="45">45</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="projektmanagement beratung online">projektmanagement beratung online</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">70.7</span>
@@ -4655,7 +4761,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="46">46</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="projektmanagement beratung digital">projektmanagement beratung digital</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">70.7</span>
@@ -4666,7 +4772,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="47">47</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="projektmanagement interim beratung">projektmanagement interim beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">70.7</span>
@@ -4677,7 +4783,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="48">48</span>
           <span class="pg-row__icon" style="color:#7C3AED">◆</span>
           <span class="pg-row__kw" title="beratung kmu">beratung kmu</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">25</span>
           <span class="pg-row__num pg-row__num--los">57.7</span>
@@ -4688,7 +4794,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="49">49</span>
           <span class="pg-row__icon" style="color:#7C3AED">◆</span>
           <span class="pg-row__kw" title="beratung e-commerce">beratung e-commerce</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">25</span>
           <span class="pg-row__num pg-row__num--los">57.7</span>
@@ -4699,7 +4805,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="50">50</span>
           <span class="pg-row__icon" style="color:#7C3AED">◆</span>
           <span class="pg-row__kw" title="beratung automotive">beratung automotive</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">28</span>
           <span class="pg-row__num pg-row__num--los">58.6</span>
@@ -4710,7 +4816,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="51">51</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="transformationsberatung nrw">transformationsberatung nrw</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">88.6</span>
@@ -4721,7 +4827,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="52">52</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung hamburg">digitalisierungsberatung hamburg</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">71.3</span>
@@ -4732,7 +4838,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="53">53</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="projektmanagement beratung hamburg">projektmanagement beratung hamburg</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">79.9</span>
@@ -4743,7 +4849,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="54">54</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="projektmanagement beratung münchen">projektmanagement beratung münchen</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">79.9</span>
@@ -4754,7 +4860,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="55">55</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="projektmanagement beratung rheinland">projektmanagement beratung rheinland</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">79.9</span>
@@ -4765,7 +4871,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="56">56</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="projektmanagement logistik beratung">projektmanagement logistik beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">72.0</span>
@@ -4776,7 +4882,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="57">57</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung bremen">digitalisierungsberatung bremen</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">81.7</span>
@@ -4787,7 +4893,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="58">58</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung dresden">digitalisierungsberatung dresden</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">81.7</span>
@@ -4798,7 +4904,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="59">59</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung freiburg">digitalisierungsberatung freiburg</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">81.7</span>
@@ -4809,7 +4915,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="60">60</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung magdeburg">digitalisierungsberatung magdeburg</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">81.7</span>
@@ -4820,7 +4926,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="61">61</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung stuttgart">digitalisierungsberatung stuttgart</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">81.7</span>
@@ -4831,7 +4937,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="62">62</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung hessen">digitalisierungsberatung hessen</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">74.8</span>
@@ -4842,7 +4948,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="63">63</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung frankfurt">digitalisierungsberatung frankfurt</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">71.8</span>
@@ -4853,7 +4959,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="64">64</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung münchen">digitalisierungsberatung münchen</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">70.3</span>
@@ -4864,7 +4970,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="65">65</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="agile transformation beratung">agile transformation beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">52.0</span>
@@ -4875,7 +4981,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="66">66</span>
           <span class="pg-row__icon" style="color:#7C3AED">◆</span>
           <span class="pg-row__kw" title="beratung bauunternehmen digitalisierung">beratung bauunternehmen digitalisierung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">15</span>
           <span class="pg-row__num pg-row__num--los">64.5</span>
@@ -4886,7 +4992,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="67">67</span>
           <span class="pg-row__icon" style="color:#7C3AED">◆</span>
           <span class="pg-row__kw" title="beratung logistik digitalisierung">beratung logistik digitalisierung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">15</span>
           <span class="pg-row__num pg-row__num--los">64.5</span>
@@ -4897,7 +5003,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="68">68</span>
           <span class="pg-row__icon" style="color:#7C3AED">◆</span>
           <span class="pg-row__kw" title="beratung produktionsbetriebe industrie 4.0">beratung produktionsbetriebe industrie 4.0</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">15</span>
           <span class="pg-row__num pg-row__num--los">64.5</span>
@@ -4908,7 +5014,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="69">69</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung förderung">digitalisierungsberatung förderung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">stage</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">stage</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">54.5</span>
@@ -4919,7 +5025,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="70">70</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="agile coach beratung">agile coach beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">52.0</span>
@@ -4930,7 +5036,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="71">71</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="requirements engineering beratung">requirements engineering beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">51.6</span>
@@ -4941,7 +5047,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="72">72</span>
           <span class="pg-row__icon" style="color:#FF7A00">★</span>
           <span class="pg-row__kw" title="interim product owner">interim product owner</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#FF7A00;border-color:#FF7A00" data-cat="service">Service-Hub</span><span class="pg-cat-fmt">service</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">60.4</span>
@@ -4952,7 +5058,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="73">73</span>
           <span class="pg-row__icon" style="color:#7C3AED">◆</span>
           <span class="pg-row__kw" title="beratung medizintechnik">beratung medizintechnik</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">20</span>
           <span class="pg-row__num pg-row__num--los">61.0</span>
@@ -4963,7 +5069,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="74">74</span>
           <span class="pg-row__icon" style="color:#7C3AED">◆</span>
           <span class="pg-row__kw" title="beratung it dienstleister">beratung it dienstleister</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">20</span>
           <span class="pg-row__num pg-row__num--los">61.0</span>
@@ -4974,7 +5080,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="75">75</span>
           <span class="pg-row__icon" style="color:#7C3AED">◆</span>
           <span class="pg-row__kw" title="beratung energie versorger">beratung energie versorger</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">20</span>
           <span class="pg-row__num pg-row__num--los">61.0</span>
@@ -4985,7 +5091,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="76">76</span>
           <span class="pg-row__icon" style="color:#7C3AED">◆</span>
           <span class="pg-row__kw" title="beratung öffentlicher sektor">beratung öffentlicher sektor</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">20</span>
           <span class="pg-row__num pg-row__num--los">56.0</span>
@@ -4996,7 +5102,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="77">77</span>
           <span class="pg-row__icon" style="color:#7C3AED">◆</span>
           <span class="pg-row__kw" title="beratung finanzdienstleister">beratung finanzdienstleister</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">25</span>
           <span class="pg-row__num pg-row__num--los">59.0</span>
@@ -5007,7 +5113,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="78">78</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung wien">digitalisierungsberatung wien</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">15<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">80.7</span>
@@ -5018,7 +5124,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="79">79</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung zürich">digitalisierungsberatung zürich</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">15<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">80.7</span>
@@ -5029,7 +5135,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="80">80</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung nrw">digitalisierungsberatung nrw</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">15<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">74.9</span>
@@ -5040,7 +5146,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="81">81</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung für kmu in vorarlberg">digitalisierungsberatung für kmu in vorarlberg</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">80.5</span>
@@ -5051,7 +5157,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="82">82</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung für kmu in der ostschweiz">digitalisierungsberatung für kmu in der ostschweiz</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">80.5</span>
@@ -5062,7 +5168,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="83">83</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="wer berät zur digitalen prozessoptimierung in nrw">wer berät zur digitalen prozessoptimierung in nrw</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">86.2</span>
@@ -5073,7 +5179,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="84">84</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung für baufirmen">digitalisierungsberatung für baufirmen</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">70.0</span>
@@ -5084,7 +5190,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="85">85</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung für e-commerce shops">digitalisierungsberatung für e-commerce shops</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">70.0</span>
@@ -5095,7 +5201,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="86">86</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung für produktionsbetriebe">digitalisierungsberatung für produktionsbetriebe</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">70.0</span>
@@ -5106,7 +5212,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="87">87</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="projektmanagement beratung bauen">projektmanagement beratung bauen</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">70.0</span>
@@ -5117,7 +5223,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="88">88</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="projektmanagement beratung b2b">projektmanagement beratung b2b</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">67.5</span>
@@ -5128,7 +5234,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="89">89</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="beratung prozessoptimierung bauunternehmen">beratung prozessoptimierung bauunternehmen</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">80.0</span>
@@ -5139,7 +5245,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="90">90</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung braunschweig">digitalisierungsberatung braunschweig</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">5</span>
           <span class="pg-row__num pg-row__num--los">79.3</span>
@@ -5150,7 +5256,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="91">91</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="cloud-transformationsberatung">cloud-transformationsberatung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">75.0</span>
@@ -5161,7 +5267,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="92">92</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="it-transformationsberatung">it-transformationsberatung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">75.0</span>
@@ -5172,7 +5278,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="93">93</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="microsoft transformationsberatung">microsoft transformationsberatung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">72.5</span>
@@ -5183,7 +5289,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="94">94</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="supply chain transformationsberatung">supply chain transformationsberatung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">72.5</span>
@@ -5194,7 +5300,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="95">95</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="digitalisierungsberatung für führungskräfte">digitalisierungsberatung für führungskräfte</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">stage</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">stage</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">67.5</span>
@@ -5205,7 +5311,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="96">96</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="beratung ki prozessoptimierung">beratung ki prozessoptimierung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">80.0</span>
@@ -5216,7 +5322,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="97">97</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="end-to-end prozessoptimierung beratung">end-to-end prozessoptimierung beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">80.0</span>
@@ -5227,7 +5333,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="98">98</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="lean prozessoptimierung beratung">lean prozessoptimierung beratung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">method</span></span>
           <span class="pg-row__num pg-row__num--vol">10<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">0</span>
           <span class="pg-row__num pg-row__num--los">80.0</span>
@@ -5238,7 +5344,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="99">99</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="prozessoptimierung beratung berlin">prozessoptimierung beratung berlin</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">geo</span></span>
           <span class="pg-row__num pg-row__num--vol">50<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">12</span>
           <span class="pg-row__num pg-row__num--los">81.7</span>
@@ -5249,7 +5355,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <span class="pg-row__rank" data-rank="100">100</span>
           <span class="pg-row__icon" style="color:#9CA3AF">·</span>
           <span class="pg-row__kw" title="change management beratung mittelstand">change management beratung mittelstand</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-cat="sub">Sub-Page</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">40<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">8</span>
           <span class="pg-row__num pg-row__num--los">78.2</span>
@@ -5403,16 +5509,16 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <article class="pg-scen pg-scen--current">
         <div class="pg-scen__tag" data-i18n="spg.scen.current.tag">Basis-Paket · Status quo</div>
         <div class="pg-scen__count">100</div>
-        <div class="pg-scen__lbl">Seiten</div>
+        <div class="pg-scen__lbl" data-i18n="spg.scen.lbl">Seiten</div>
         <div class="pg-scen__sub" data-i18n="spg.scen.current.sub">Die 100 Suchanfragen mit dem höchsten Anfrage-Potenzial.</div>
         <ul class="pg-scen__list">
-          <li><span>Service-Hubs</span><b>14</b></li>
-          <li><span>Branchen-Hubs</span><b>12</b></li>
-          <li><span>Sub-Pages</span><b>74</b></li>
-          <li><span>Suchanfragen/mo</span><b>6.975</b></li>
+          <li><span data-i18n="spg.scen.li.service">Service-Hubs</span><b>14</b></li>
+          <li><span data-i18n="spg.scen.li.sector">Branchen-Hubs</span><b>12</b></li>
+          <li><span data-i18n="spg.scen.li.sub">Sub-Pages</span><b>74</b></li>
+          <li><span data-i18n="spg.scen.li.queries">Suchanfragen/mo</span><b>6.975</b></li>
         </ul>
         <div class="pg-scen__forecast">
-          <span class="pg-scen__f-label">Erwartung Monat 12</span>
+          <span class="pg-scen__f-label" data-i18n="spg.scen.flabel">Erwartung Monat 12</span>
           <span class="pg-scen__f-num">5—8<small>/mo</small></span>
           <span class="pg-scen__f-sub" data-i18n="spg.scen.fsub.current">Qualifizierte Erst-Anfragen</span>
         </div>
@@ -5421,16 +5527,16 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <article class="pg-scen pg-scen--aggressive">
         <div class="pg-scen__tag pg-scen__tag--alt" data-i18n="spg.scen.aggr.tag">Erweitertes Paket · +100 Seiten</div>
         <div class="pg-scen__count">~200</div>
-        <div class="pg-scen__lbl">Seiten · <span>+100</span></div>
+        <div class="pg-scen__lbl" data-i18n-html="spg.scen.lbl.plus100">Seiten · <span>+100</span></div>
         <div class="pg-scen__sub" data-i18n="spg.scen.aggr.sub">Plus 100 Suchanfragen mit moderatem Anfrage-Potenzial.</div>
         <ul class="pg-scen__list">
-          <li><span>Service-Hubs</span><b>22</b></li>
-          <li><span>Branchen-Hubs</span><b>20</b></li>
-          <li><span>Sub-Pages</span><b>158</b></li>
-          <li><span>Suchanfragen/mo</span><b>~10.500</b></li>
+          <li><span data-i18n="spg.scen.li.service">Service-Hubs</span><b>22</b></li>
+          <li><span data-i18n="spg.scen.li.sector">Branchen-Hubs</span><b>20</b></li>
+          <li><span data-i18n="spg.scen.li.sub">Sub-Pages</span><b>158</b></li>
+          <li><span data-i18n="spg.scen.li.queries">Suchanfragen/mo</span><b>~10.500</b></li>
         </ul>
         <div class="pg-scen__forecast">
-          <span class="pg-scen__f-label">Erwartung Monat 12</span>
+          <span class="pg-scen__f-label" data-i18n="spg.scen.flabel">Erwartung Monat 12</span>
           <span class="pg-scen__f-num pg-scen__f-num--alt">8—12<small>/mo</small></span>
           <span class="pg-scen__f-sub" data-i18n="spg.scen.fsub.aggr">Qualifizierte Erst-Anfragen · ~1,5× Basis</span>
         </div>
@@ -5439,26 +5545,26 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <article class="pg-scen pg-scen--maxvol">
         <div class="pg-scen__tag pg-scen__tag--max" data-i18n="spg.scen.max.tag">Maximum-Paket · +300 Seiten</div>
         <div class="pg-scen__count">~400</div>
-        <div class="pg-scen__lbl">Seiten · <span>+300</span></div>
+        <div class="pg-scen__lbl" data-i18n-html="spg.scen.lbl.plus300">Seiten · <span>+300</span></div>
         <div class="pg-scen__sub" data-i18n="spg.scen.max.sub">Plus 300 weitere Suchanfragen — auch kleinere und Nischen-Themen.</div>
         <ul class="pg-scen__list">
-          <li><span>Service-Hubs</span><b>22</b></li>
-          <li><span>Branchen-Hubs</span><b>20</b></li>
-          <li><span>Geo-Vollmatrix</span><b>165</b></li>
-          <li><span>Sektor×Service</span><b>60</b></li>
-          <li><span>Buying-Intent</span><b>28</b></li>
-          <li><span>Comparison</span><b>10</b></li>
-          <li><span>Long-Tail</span><b>95</b></li>
-          <li><span>Suchanfragen/mo</span><b>~13.600</b></li>
+          <li><span data-i18n="spg.scen.li.service">Service-Hubs</span><b>22</b></li>
+          <li><span data-i18n="spg.scen.li.sector">Branchen-Hubs</span><b>20</b></li>
+          <li><span data-i18n="spg.scen.li.geo">Geo-Vollmatrix</span><b>165</b></li>
+          <li><span data-i18n="spg.scen.li.sectorservice">Sektor×Service</span><b>60</b></li>
+          <li><span data-i18n="spg.scen.li.buying">Buying-Intent</span><b>28</b></li>
+          <li><span data-i18n="spg.scen.li.comparison">Comparison</span><b>10</b></li>
+          <li><span data-i18n="spg.scen.li.longtail">Long-Tail</span><b>95</b></li>
+          <li><span data-i18n="spg.scen.li.queries">Suchanfragen/mo</span><b>~13.600</b></li>
         </ul>
         <div class="pg-scen__forecast">
-          <span class="pg-scen__f-label">Erwartung Monat 12</span>
+          <span class="pg-scen__f-label" data-i18n="spg.scen.flabel">Erwartung Monat 12</span>
           <span class="pg-scen__f-num pg-scen__f-num--max">10—15<small>/mo</small></span>
           <span class="pg-scen__f-sub" data-i18n="spg.scen.fsub.max">Qualifizierte Erst-Anfragen · ~2,0× Basis</span>
         </div>
       </article>
     </div>
-    <p class="pg-scen-slides-hint">← Wischen für weitere Pakete →</p>
+    <p class="pg-scen-slides-hint" data-i18n="spg.scen.slides">← Wischen für weitere Pakete →</p>
 
     <aside class="pg-scen-caveat" role="note">
       <span class="pg-scen-caveat__tag" data-i18n="spg.caveat.tag">Hinweis zur Prognose</span>
@@ -6818,8 +6924,8 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         <span class="sm-sum__rank">B</span>
         <span class="sm-sum__dot" style="background:#7C3AED"></span>
         <span class="sm-sum__body">
-          <span class="sm-sum__name">Branchen-Hubs (Cluster 2)</span>
-          <span class="sm-sum__kw">12 vertikale Anker für Branchen-Anfragen</span>
+          <span class="sm-sum__name" data-i18n="sm.c2.name">Branchen-Hubs (Cluster 2)</span>
+          <span class="sm-sum__kw" data-i18n="sm.c2.kw">12 vertikale Anker für Branchen-Anfragen</span>
         </span>
         <span class="sm-sum__type" style="color:#7C3AED;border-color:#7C3AED">Cluster 2</span>
         <span class="sm-sum__count"><b>12</b> Seiten</span>
@@ -7147,6 +7253,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 .sm-sum{display:grid;grid-template-columns:32px 12px 1fr auto auto auto 18px;gap:14px;align-items:center;padding:20px 22px;cursor:pointer;list-style:none;background:linear-gradient(180deg,#faf6ec,rgba(250,246,236,0.6));border-bottom:1px solid transparent;transition:background 0.3s ease,border-color 0.3s ease}
 .sm-sum::-webkit-details-marker{display:none}
 .sm-sum::before{content:"GRUPPE";position:absolute;left:22px;top:8px;font-family:var(--mono);font-size:9px;font-weight:800;letter-spacing:0.16em;color:var(--ink-soft);opacity:0.55}
+html[lang="en"] .sm-sum::before{content:"GROUP"}
 .sm-card{position:relative}
 .sm-card[open] .sm-sum{background:#1A0E2E;border-bottom-color:rgba(255,255,255,0.1);color:#fff}
 .sm-card[open] .sm-sum::before{color:rgba(255,255,255,0.55);opacity:0.85}
@@ -7179,6 +7286,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 .sm-card[open] .sm-sum__chev{transform:rotate(180deg)}
 .sm-body{padding:14px 22px 18px;background:#fff;border-top:1px solid var(--rule);position:relative}
 .sm-body::before{content:"EINZELNE LANDING-PAGES IN DIESER GRUPPE";display:block;font-family:var(--mono);font-size:9.5px;font-weight:800;letter-spacing:0.14em;color:var(--ink-soft);opacity:0.7;padding:8px 0 12px;border-bottom:1px dashed var(--rule);margin-bottom:8px}
+html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP"}
 .sm-page-list{list-style:none;margin:0;padding:0}
 .sm-prow{display:grid;grid-template-columns:32px 40px 1fr 220px 70px 80px;gap:12px;align-items:center;padding:10px 14px;font-size:0.8125rem;border-bottom:1px solid var(--rule)}
 .sm-prow:last-child{border-bottom:none}
@@ -7293,29 +7401,26 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     filterBar.classList.add('is-revealed');
   }
 
-  // Sticky sitemap CTA: appear as soon as the page-guide section reaches the top of the viewport, then STAY
+  // Sticky sitemap CTA: hide while user is in the hero; reveal once the hero has scrolled fully past the sticky tab bar
+  const pgHero = document.getElementById('spg-cover');
   const pageGuideSection = document.getElementById('spg-delivered');
   const stickCta = document.querySelector('.pg-stick-cta');
-  if (pageGuideSection && stickCta) {
-    let revealed = false;
-    function revealStickCta() {
-      if (revealed) return;
-      const rect = pageGuideSection.getBoundingClientRect();
-      // Reveal once any part of the Page Guide section has scrolled past the top of the viewport
-      // OR is already inside it (handles direct-load to a hash deep in Tab 3)
-      if (rect.top < window.innerHeight * 0.8) {
-        stickCta.classList.add('is-revealed');
-        revealed = true;
-        window.removeEventListener('scroll', revealStickCta);
-      }
+  if (stickCta && (pgHero || pageGuideSection)) {
+    function updateStickCta() {
+      // Hide if active tab isn't seo-page-guide (defensive)
+      const activeTab = document.querySelector('.tab.is-active');
+      const isPageGuideTab = activeTab && activeTab.getAttribute('data-tab') === 'seo-page-guide';
+      if (!isPageGuideTab) { stickCta.classList.remove('is-revealed'); return; }
+      // Show only when the hero has scrolled out of view (its bottom passes 120px — the sticky-bar zone)
+      const heroBottom = pgHero ? pgHero.getBoundingClientRect().bottom : -1;
+      const shouldShow = heroBottom < 120;
+      stickCta.classList.toggle('is-revealed', shouldShow);
     }
-    window.addEventListener('scroll', revealStickCta, { passive: true });
-    // Run once on init in case the user already lands inside / past the section (hash jump, tab switch)
-    revealStickCta();
-    // Also run after tab switches into Tab 3
+    window.addEventListener('scroll', updateStickCta, { passive: true });
+    updateStickCta();
     document.addEventListener('click', e => {
-      const jump = e.target.closest('[data-tab-jump="seo-page-guide"]');
-      if (jump) setTimeout(revealStickCta, 250);
+      const jump = e.target.closest('[data-tab-jump]');
+      if (jump) setTimeout(updateStickCta, 250);
     });
   }
 
@@ -7386,7 +7491,12 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       const openCount = visibleCards.filter(c => c.open).length;
       const allOpen = visibleCards.length > 0 && openCount === visibleCards.length;
       toggleBtn.dataset.state = allOpen ? 'all-open' : 'mixed';
-      if (label) label.textContent = allOpen ? 'Alle einklappen' : 'Alle aufklappen';
+      if (label) {
+        const isDE = (document.documentElement.lang || 'de') === 'de';
+        label.textContent = allOpen
+          ? (isDE ? 'Alle einklappen' : 'Collapse all')
+          : (isDE ? 'Alle aufklappen' : 'Expand all');
+      }
       if (icon)  icon.textContent  = allOpen ? '⤒' : '⤓';
     }
     toggleBtn.addEventListener('click', () => {
@@ -7395,6 +7505,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       visibleCards.forEach(c => { c.open = shouldOpen; });
       syncState();
     });
+    document.addEventListener('langchange', syncState);
     cards.forEach(c => c.addEventListener('toggle', syncState));
     syncState();
   }
@@ -7414,7 +7525,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         <div class="foot-h">Document</div>
         <ul class="foot-list">
           <li><strong>Reference</strong>CEx-PP-v1.0 · May 2026</li>
-          <li><strong>Status</strong>SEO Page Approval</li>
+          <li><strong>Status</strong>Page Guide Approval</li>
           <li><strong>Author</strong>Digital Movement UK</li>
           <li><strong>For</strong>Johannes &amp; Hannes, CEx</li>
         </ul>
@@ -7425,7 +7536,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
           <li><strong>Email</strong><a href="mailto:alex@digitalmovement.uk">alex@digitalmovement.uk</a></li>
           <li><strong>Phone / WhatsApp</strong>+49 176 82360647</li>
           <li><strong>Web</strong>digitalmovement.uk</li>
-          <li><strong>Next step</strong>Website Design &amp; Page Production</li>
+          <li><strong>Next step</strong>Website Design + SEO Page Production</li>
         </ul>
       </div>
     </div>
@@ -7707,14 +7818,14 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       t('.foot-grid > div:nth-of-type(1) .foot-body', 'Ein spezialisiertes Studio, das conversion-getriebene Websites und SEO-Engines für ambitionierte Operator baut. Wir bauen das Asset und lassen es danach Zinsen tragen. <br><br>Diese Zusammenfassung ist der Arbeits-Blueprint für das CEx-Engagement. Alles, was unklar ist, alles, was Sie anders formuliert sehen möchten — wir hören es lieber jetzt als beim Vertrag.'),
       t('.foot-grid > div:nth-of-type(2) .foot-h', 'Dokument'),
       t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(1)', '<strong>Referenz</strong>CEx-PP-v1.0 · Mai 2026'),
-      t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(2)', '<strong>Status</strong>Vorvertragliche Zusammenfassung'),
+      t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(2)', '<strong>Status</strong>Freigabe Page Guide'),
       t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(3)', '<strong>Autor</strong>Digital Movement UK'),
       t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(4)', '<strong>Für</strong>Johannes & Hannes, CEx'),
       t('.foot-grid > div:nth-of-type(3) .foot-h', 'Kontakt'),
       t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(1)', '<strong>E-Mail</strong><a href="mailto:alex@digitalmovement.uk">alex@digitalmovement.uk</a>'),
       t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(2)', '<strong>Telefon / WhatsApp</strong>+49 176 82360647'),
       t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(3)', '<strong>Web</strong>digitalmovement.uk'),
-      t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(4)', '<strong>Nächster Schritt</strong>Freigabe dieses Plans → Vertrag'),
+      t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(4)', '<strong>Nächster Schritt</strong>Website-Design + SEO-Page-Produktion'),
       t('.foot-bottom > span:nth-of-type(1)', '© 2026 Digital Movement UK · Alle Rechte vorbehalten'),
       t('.foot-bottom > span:nth-of-type(2)', 'CEx Projektplan v1.0 <span class="divider-mono"></span> Vertraulich'),
 
@@ -7868,7 +7979,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       t('[data-i18n="pg.signoff.contactA.val"]', 'Raoul · Digital Movement UK'),
       t('[data-i18n="pg.signoff.contactB.label"]', 'E-Mail'),
       t('[data-i18n="pg.signoff.contactC.label"]', 'WhatsApp'),
-      t('[data-i18n="spg.eyebrow"]', 'Freigeschaltet — Geliefert am 3. Juni 2026'),
+      t('[data-i18n="spg.eyebrow"]', 'Geliefert am 3. Juni 2026'),
       t('[data-i18n-html="spg.title"]', 'Ihr <em>SEO Page Guide</em><br>— geliefert.'),
       t('[data-i18n-html="spg.lead"]', 'Jede Landing-Page, gemappt auf das Keyword, für das sie ranken wird — nach Service, Stadt und Branche aufgeschlüsselt. <strong>100 Seiten, 14 Service-Hubs, 12 Branchen-Hubs.</strong> 21 Tage vor Plan.'),
       t('[data-i18n="spg.flow.num"]', '02 — Wie er freigeschaltet wird'),
@@ -8227,7 +8338,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       t('[data-i18n="spg.tree.cluster2.name"]', 'Branchen · 12 sector hubs'),
       t('[data-i18n="spg.legend.eyebrow"]', 'Bevor Sie scrollen — Metrik-Schlüssel'),
       t('[data-i18n="spg.legend.h"]', 'Was jede Spalte in der Liste bedeutet.'),
-      t('[data-i18n-html="spg.legend.lead"]', 'Vier Kennzahlen entscheiden, ob eine Seite in der Production-Liste landet — und in welcher Reihenfolge. <strong>EYS</strong> ist die wichtigste, weil sie alles andere zusammenführt zu einer einzigen Vergleichszahl: <strong>erwartete qualifizierte Anfragen pro Monat</strong>.'),
+      t('[data-i18n-html="spg.legend.lead"]', '<strong>EYS</strong> ist ein Score, der die Relevanz für die Generierung qualifizierter Anfragen <strong>zwischen Keywords vergleichbar</strong> macht.'),
       t('[data-i18n-html="spg.legend.quick"]', '<strong>So liest sich die Tabelle in einem Satz:</strong> Sortiert nach EYS — der Seite mit der höchsten erwarteten Anfrage-Menge pro Monat zuerst. Jede Zeile zeigt die Anfrage selbst, ihre Kategorie, das Volumen, die Konkurrenz-Härte (KD), den LOS-Score und den EYS. Klick auf einen Spalten-Header sortiert nach dieser Kennzahl.'),
       t('[data-i18n-html="spg.sitemap.cta"]', 'Brauchen Sie die <strong>vollständige Seitenliste gruppiert nach Servicebereich</strong>? → <a href="#sm-cover" data-tab-jump="sitemap">Zur Sitemap ↗</a>'),
       t('[data-i18n-html="spg.maxvol.h"]', 'Drei Paket-Größen — drei <em>Anfrage-Prognosen.</em>'),
@@ -8279,6 +8390,92 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       t('[data-i18n="sm.toggle.expand"]', 'Alle aufklappen'),
       t('[data-i18n="sm.back"]', 'Zurück zum Page Guide'),
       t('[data-i18n="spg.stick.label"]', 'Show sitemap'),
+      // === Legend cards + tree QA pass ===
+      t('[data-i18n="spg.lc.eys.full"]', 'Enquiry Yield Score'),
+      t('[data-i18n-html="spg.lc.eys.what"]', 'Die <strong>erwartete Anfrage-Menge pro Monat</strong> wenn diese Seite auf Position 3 in Google rankt. Höherer EYS = mehr Anfragen. Vergleichbar über alle Seiten hinweg.'),
+      t('[data-i18n="spg.lc.eys.kdfactor"]', 'KD-Faktor'),
+      t('[data-i18n="spg.lc.eys.scale"]', '1.000'),
+      t('[data-i18n-html="spg.lc.eys.note"]', '<strong>Auf gut Deutsch:</strong> "Wie viele Anfragen ist diese Seite wert, wenn sie rankt?" — Konservativ kalkuliert für Position 3. Bei Position 1 wäre der Wert 2,7× höher.'),
+      t('[data-i18n="spg.lc.vol.full"]', 'Suchvolumen'),
+      t('[data-i18n="spg.lc.vol.what"]', 'Wie viele Menschen suchen diese Anfrage pro Monat in Google.de — aus Semrush abgefragt, live verifiziert.'),
+      t('[data-i18n-html="spg.lc.vol.range"]', 'Range im Build: <b>10—1.000/mo</b>'),
+      t('[data-i18n="spg.lc.vol.note"]', '10/mo klingt wenig, aber bei 30—40% Top-3-Klickrate × 2—3% Beratungs-Conversion = 1—2 Anfragen pro Quartal pro Seite. Bei 100 Seiten addiert sich das.'),
+      t('[data-i18n="spg.lc.kd.what"]', 'Wie hart der Wettbewerb auf Position 1—10 ist. Semrush-Score von 0—100. Niedriger = einfacher zu ranken.'),
+      t('[data-i18n-html="spg.lc.kd.range"]', 'Range im Build: <b>0—45</b> (überwiegend niedrig)'),
+      t('[data-i18n="spg.lc.kd.note"]', 'Beratungs-Suchanfragen haben tendenziell niedrige KDs (10—30), weil wenige spezialisierte Beratungen mit ihnen ranken. Macht den Build im SEO-Sinne "günstig".'),
+      t('[data-i18n="spg.lc.los.what"]', 'DM-internes Komposit aus Volumen, Käufer-Intention, Konkurrenz-Härte und CEx-Service-Fit. Skala 0—100.'),
+      t('[data-i18n-html="spg.lc.los.range"]', 'Range im Build: <b>52—96</b>'),
+      t('[data-i18n-html="spg.lc.los.note"]', 'LOS ist der <em>qualitative</em> Vorfilter, EYS ist die <em>quantitative</em> Endbewertung. LOS sortiert "ist das eine gute Seite?", EYS antwortet "wie viel bringt sie konkret?".'),
+      t('[data-i18n="spg.lc.ctr.full"]', 'Klickrate bei Position 3'),
+      t('[data-i18n-html="spg.lc.ctr.what"]', 'Anteil der Sucher, die bei Ranking-Position 3 klicken. Standardwert in unserer Berechnung: <b>0,10</b> (10%).'),
+      t('[data-i18n-html="spg.lc.ctr.range"]', 'Industry-Benchmark: <b>0,27</b> (Pos 1) · <b>0,15</b> (Pos 2) · <b>0,10</b> (Pos 3)'),
+      t('[data-i18n="spg.lc.ctr.note"]', 'Konservativ angesetzt. Realistisches Ziel: Pos 1—3 in 12—18 Monaten. Bei Pos 1 verdreifacht sich der EYS pro Seite.'),
+      t('[data-i18n="spg.lc.density.full"]', 'Beratungs-Dichte in der SERP'),
+      t('[data-i18n="spg.lc.density.what"]', 'Wie viele Beratungs-Websites bereits in der Top-10-SERP ranken. Indikator dafür, dass Google die Anfrage als Beratungs-Käufer-Suche einstuft.'),
+      t('[data-i18n-html="spg.lc.density.range"]', 'Range: <b>1,0—3,5</b>'),
+      t('[data-i18n="spg.lc.density.note"]', 'Hohe Density = Google sieht es als Beratungs-Markt = wir können dort ranken.'),
+      t('[data-i18n="spg.lc.intent.full"]', 'Käufer-Intentions-Bonus'),
+      t('[data-i18n="spg.lc.intent.what"]', 'Aufschlag, wenn die Anfrage Käufer-Signale enthält: +25% wenn Stadt-Name, +20% wenn Branchen-Name, +10% wenn "Beratung" im Begriff.'),
+      t('[data-i18n-html="spg.lc.intent.range"]', 'Max-Bonus: <b>+60%</b>'),
+      t('[data-i18n="spg.lc.intent.note"]', '"Prozessoptimierung Berlin" hat einen höheren Intent-Bonus als nur "Prozessoptimierung".'),
+      t('[data-i18n="spg.lc.kdf.abbr"]', 'KD-Faktor'),
+      t('[data-i18n="spg.lc.kdf.full"]', 'Wettbewerbs-Abschlag'),
+      t('[data-i18n-html="spg.lc.kdf.what"]', 'Formel: <code>(110 − KD) / 100</code>. Reduziert den EYS um den Anteil der Wettbewerbs-Härte.'),
+      t('[data-i18n="spg.lc.kdf.note"]', 'Hält die Berechnung ehrlich: hohe Volumen bei hartem Wettbewerb werden runter-gerechnet.'),
+      t('[data-i18n="spg.hubpot.h"]', 'Hub-Potenzial — die drei Kategorien in der "Kategorie"-Spalte:'),
+      t('[data-i18n-html="spg.hubpot.service"]', '<b>★ Service-Hub</b> · Top-Level-Servicelinie'),
+      t('[data-i18n-html="spg.hubpot.sector"]', '<b>◆ Branchen-Hub</b> · Vertikal-Anker'),
+      t('[data-i18n-html="spg.hubpot.sub"]', '<b>· Sub-Page</b> · Variante unter einem Hub'),
+      t('[data-i18n-html="spg.legend.quick"]', '<strong>So liest sich die Tabelle in einem Satz:</strong> Sortiert nach EYS — der Seite mit der höchsten erwarteten Anfrage-Menge pro Monat zuerst. Jede Zeile zeigt die Anfrage selbst, ihre Kategorie, das Volumen, die Konkurrenz-Härte (KD), den LOS-Score und den EYS. Klick auf einen Spalten-Header sortiert nach dieser Kennzahl.'),
+      t('[data-i18n-html="spg.sitemap.cta"]', 'Brauchen Sie die <strong>vollständige Seitenliste gruppiert nach Servicebereich</strong>? → <a href="#sm-cover" data-tab-jump="sitemap">Zur Sitemap ↗</a>'),
+      t('[data-i18n="spg.tree.expandall"]', 'Alle aufklappen'),
+      t('[data-i18n="spg.tree.cluster1.count"]', '88 Seiten'),
+      t('[data-i18n="spg.tree.cluster2.count"]', '12 Seiten'),
+      t('[data-i18n="spg.tree.cluster1.name"]', 'Projekte & Prozesse · 14 Service-Hubs'),
+      t('[data-i18n="spg.tree.cluster2.name"]', 'Branchen · 12 Branchen-Hubs'),
+      // === Filter bar, table headers, row tags, flow, maxvol, slides, sitemap QA ===
+      t('[data-i18n="pgf.label"]', 'Filter'),
+      t('[data-i18n-html="pgf.all"]', 'Alle <span class="pg-filter-pill__count">100</span>'),
+      t('[data-i18n-html="pgf.service"]', '★ Service-Hubs <span class="pg-filter-pill__count">14</span>'),
+      t('[data-i18n-html="pgf.sector"]', '◆ Branchen-Hubs <span class="pg-filter-pill__count">12</span>'),
+      t('[data-i18n-html="pgf.sub"]', '· Sub-Pages <span class="pg-filter-pill__count">72</span>'),
+      t('[data-i18n-html="pgf.state"]', 'zeigt <b>Top 5</b> von <b>100</b>'),
+      t('[data-i18n="pgf.showall"]', '⤓ Alle 98 anzeigen'),
+      t('[data-i18n="pgf.reset"]', '↻ EYS-Sortierung'),
+      t('[data-i18n-html="pgt.kw"]', 'Keyword <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span>'),
+      t('[data-i18n-html="pgt.cat"]', 'Kategorie <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span>'),
+      t('[data-i18n-html="pgt.vol"]', 'Vol <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span>'),
+      t('[data-i18n="spg.jumpcta"]', 'Zum Page Guide'),
+      t('[data-i18n="spg.flow.collapse"]', 'Phasen-Übersicht anzeigen'),
+      t('[data-i18n="spg.flow.delivered"]', 'Geliefert 3. Juni 2026'),
+      t('[data-i18n="spg.scen.lbl"]', 'Seiten'),
+      t('[data-i18n-html="spg.scen.lbl.plus100"]', 'Seiten · <span>+100</span>'),
+      t('[data-i18n-html="spg.scen.lbl.plus300"]', 'Seiten · <span>+300</span>'),
+      t('[data-i18n="spg.scen.flabel"]', 'Erwartung Monat 12'),
+      t('[data-i18n="spg.scen.slides"]', '← Wischen für weitere Pakete →'),
+      t('[data-i18n="spg.scen.li.service"]', 'Service-Hubs'),
+      t('[data-i18n="spg.scen.li.sector"]', 'Branchen-Hubs'),
+      t('[data-i18n="spg.scen.li.sub"]', 'Sub-Pages'),
+      t('[data-i18n="spg.scen.li.queries"]', 'Suchanfragen/mo'),
+      t('[data-i18n="spg.scen.li.geo"]', 'Geo-Vollmatrix'),
+      t('[data-i18n="spg.scen.li.sectorservice"]', 'Sektor×Service'),
+      t('[data-i18n="spg.scen.li.buying"]', 'Buying-Intent'),
+      t('[data-i18n="spg.scen.li.comparison"]', 'Comparison'),
+      t('[data-i18n="spg.scen.li.longtail"]', 'Long-Tail'),
+      t('[data-i18n="sm.c2.name"]', 'Branchen-Hubs (Cluster 2)'),
+      t('[data-i18n="sm.c2.kw"]', '12 vertikale Anker für Branchen-Anfragen'),
+      // === Restructure: collapsed details + one-sentence cards ===
+      t('[data-i18n="spg.details.summary"]', 'Status, KPIs & Metrik-Schlüssel'),
+      t('[data-i18n="spg.details.hint"]', 'öffnen'),
+      t('[data-i18n="spg.eyebrow"]', 'Geliefert am 3. Juni 2026'),
+      t('[data-i18n="spg.lc.eys.one"]', 'Erwartete Anfragen pro Monat, wenn diese Seite auf Position 3 in Google rankt.'),
+      t('[data-i18n="spg.lc.vol.one"]', 'Wie viele Menschen diese Anfrage pro Monat in Google.de suchen.'),
+      t('[data-i18n="spg.lc.kd.one"]', 'Wettbewerbs-Härte auf Position 1—10 (Semrush-Score 0—100, niedriger = einfacher).'),
+      t('[data-i18n="spg.lc.los.one"]', 'DM-internes Komposit aus Volumen, Intent, Wettbewerb und CEx-Fit (0—100).'),
+      t('[data-i18n="spg.lc.ctr.one"]', 'Klickrate bei Ranking-Position 3 — Standardwert in unserer Berechnung: 10%.'),
+      t('[data-i18n="spg.lc.density.one"]', 'Wie viele Beratungs-Sites bereits in der Top-10-SERP ranken.'),
+      t('[data-i18n="spg.lc.intent.one"]', 'Aufschlag, wenn die Anfrage Käufer-Signale wie Stadt, Branche oder „Beratung" enthält.'),
+      t('[data-i18n="spg.lc.kdf.one"]', 'Reduziert EYS um den Anteil der Wettbewerbs-Härte (Formel: (110 − KD) / 100).'),
     ],
 
     en: [
@@ -8535,14 +8732,14 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       t('.foot-grid > div:nth-of-type(1) .foot-body', 'A specialist studio building conversion-led websites and SEO engines for ambitious operators. We build the asset, then let it compound. <br><br>This summary is the working blueprint for the CEx engagement. Anything unclear, anything you\'d like reframed — we\'d rather hear it now than at contract.'),
       t('.foot-grid > div:nth-of-type(2) .foot-h', 'Document'),
       t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(1)', '<strong>Reference</strong>CEx-PP-v1.0 · May 2026'),
-      t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(2)', '<strong>Status</strong>Pre-contract executive summary'),
+      t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(2)', '<strong>Status</strong>Page Guide Approval'),
       t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(3)', '<strong>Author</strong>Digital Movement UK'),
       t('.foot-grid > div:nth-of-type(2) .foot-list li:nth-of-type(4)', '<strong>For</strong>Johannes &amp; Hannes, CEx'),
       t('.foot-grid > div:nth-of-type(3) .foot-h', 'Get in touch'),
       t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(1)', '<strong>Email</strong><a href="mailto:alex@digitalmovement.uk">alex@digitalmovement.uk</a>'),
       t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(2)', '<strong>Phone / WhatsApp</strong>+49 176 82360647'),
       t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(3)', '<strong>Web</strong>digitalmovement.uk'),
-      t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(4)', '<strong>Next step</strong>Sign-off on this plan → contract'),
+      t('.foot-grid > div:nth-of-type(3) .foot-list li:nth-of-type(4)', '<strong>Next step</strong>Website Design + SEO Page Production'),
       t('.foot-bottom > span:nth-of-type(1)', '© 2026 Digital Movement UK · All rights reserved'),
       t('.foot-bottom > span:nth-of-type(2)', 'CEx Project Plan v1.0 <span class="divider-mono"></span> Confidential'),
 
@@ -9055,7 +9252,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       t('[data-i18n="spg.tree.cluster2.name"]', 'Sectors · 12 sector hubs'),
       t('[data-i18n="spg.legend.eyebrow"]', 'Before you scroll — metric key'),
       t('[data-i18n="spg.legend.h"]', 'What each column in the list means.'),
-      t('[data-i18n-html="spg.legend.lead"]', 'Four metrics decide whether a page lands on the production list — and in what order. <strong>EYS</strong> is the most important because it rolls all the others up into a single comparable number: <strong>expected qualified enquiries per month</strong>.'),
+      t('[data-i18n-html="spg.legend.lead"]', '<strong>EYS</strong> is a score that makes the relevance for generating qualified enquiries <strong>comparable across keywords</strong>.'),
       t('[data-i18n-html="spg.legend.quick"]', '<strong>The table in one sentence:</strong> Sorted by EYS — the page with the highest expected enquiry volume per month first. Each row shows the query itself, its category, search volume, keyword difficulty (KD), LOS score and EYS. Click any column header to sort by that metric.'),
       t('[data-i18n-html="spg.sitemap.cta"]', 'Looking for the <strong>complete page list grouped by service area</strong>? → <a href="#sm-cover" data-tab-jump="sitemap">Open sitemap ↗</a>'),
       t('[data-i18n-html="spg.maxvol.h"]', 'Three package sizes — three <em>enquiry forecasts.</em>'),
@@ -9107,6 +9304,92 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       t('[data-i18n="sm.toggle.expand"]', 'Expand all'),
       t('[data-i18n="sm.back"]', 'Back to Page Guide'),
       t('[data-i18n="spg.stick.label"]', 'Show sitemap'),
+      // === Legend cards + tree QA pass ===
+      t('[data-i18n="spg.lc.eys.full"]', 'Enquiry Yield Score'),
+      t('[data-i18n-html="spg.lc.eys.what"]', 'The <strong>expected enquiry volume per month</strong> if this page ranks at Google position 3. Higher EYS = more enquiries. Comparable across all pages.'),
+      t('[data-i18n="spg.lc.eys.kdfactor"]', 'KD-factor'),
+      t('[data-i18n="spg.lc.eys.scale"]', '1,000'),
+      t('[data-i18n-html="spg.lc.eys.note"]', '<strong>In plain English:</strong> "How many enquiries is this page worth once it ranks?" — Calculated conservatively for position 3. At position 1, the value would be 2.7× higher.'),
+      t('[data-i18n="spg.lc.vol.full"]', 'Search volume'),
+      t('[data-i18n="spg.lc.vol.what"]', 'How many people search this query per month on Google.de — pulled from Semrush, verified live.'),
+      t('[data-i18n-html="spg.lc.vol.range"]', 'Range in build: <b>10—1,000/mo</b>'),
+      t('[data-i18n="spg.lc.vol.note"]', '10/mo sounds small, but at 30—40% top-3 click rate × 2—3% consulting conversion = 1—2 enquiries per quarter per page. Across 100 pages it compounds.'),
+      t('[data-i18n="spg.lc.kd.what"]', 'How hard the competition is for positions 1—10. Semrush score from 0—100. Lower = easier to rank.'),
+      t('[data-i18n-html="spg.lc.kd.range"]', 'Range in build: <b>0—45</b> (mostly low)'),
+      t('[data-i18n="spg.lc.kd.note"]', 'Consulting queries tend to have low KDs (10—30) because few specialised consultancies rank for them. Makes the build "cheap" in SEO terms.'),
+      t('[data-i18n="spg.lc.los.what"]', 'DM-internal composite of volume, buyer intent, competition difficulty and CEx service fit. Scale 0—100.'),
+      t('[data-i18n-html="spg.lc.los.range"]', 'Range in build: <b>52—96</b>'),
+      t('[data-i18n-html="spg.lc.los.note"]', 'LOS is the <em>qualitative</em> pre-filter, EYS is the <em>quantitative</em> final score. LOS asks "is this a good page?", EYS answers "what does it concretely bring?".'),
+      t('[data-i18n="spg.lc.ctr.full"]', 'Click rate at position 3'),
+      t('[data-i18n-html="spg.lc.ctr.what"]', 'Share of searchers that click at ranking position 3. Default in our calculation: <b>0.10</b> (10%).'),
+      t('[data-i18n-html="spg.lc.ctr.range"]', 'Industry benchmark: <b>0.27</b> (pos 1) · <b>0.15</b> (pos 2) · <b>0.10</b> (pos 3)'),
+      t('[data-i18n="spg.lc.ctr.note"]', 'Set conservatively. Realistic target: pos 1—3 in 12—18 months. At pos 1, EYS per page triples.'),
+      t('[data-i18n="spg.lc.density.full"]', 'Consulting density in the SERP'),
+      t('[data-i18n="spg.lc.density.what"]', 'How many consulting websites already rank in the top-10 SERP. An indicator that Google reads the query as a consulting-buyer search.'),
+      t('[data-i18n-html="spg.lc.density.range"]', 'Range: <b>1.0—3.5</b>'),
+      t('[data-i18n="spg.lc.density.note"]', 'High density = Google sees it as a consulting market = we can rank there.'),
+      t('[data-i18n="spg.lc.intent.full"]', 'Buyer-intent bonus'),
+      t('[data-i18n="spg.lc.intent.what"]', 'Premium added when the query contains buyer signals: +25% for a city name, +20% for a sector name, +10% if "Beratung" is in the term.'),
+      t('[data-i18n-html="spg.lc.intent.range"]', 'Max bonus: <b>+60%</b>'),
+      t('[data-i18n="spg.lc.intent.note"]', '"Prozessoptimierung Berlin" carries a higher intent bonus than just "Prozessoptimierung".'),
+      t('[data-i18n="spg.lc.kdf.abbr"]', 'KD-factor'),
+      t('[data-i18n="spg.lc.kdf.full"]', 'Competition discount'),
+      t('[data-i18n-html="spg.lc.kdf.what"]', 'Formula: <code>(110 − KD) / 100</code>. Reduces EYS by the share of competition difficulty.'),
+      t('[data-i18n="spg.lc.kdf.note"]', 'Keeps the calculation honest: high volume against hard competition gets discounted.'),
+      t('[data-i18n="spg.hubpot.h"]', 'Hub potential — the three categories in the "Category" column:'),
+      t('[data-i18n-html="spg.hubpot.service"]', '<b>★ Service hub</b> · Top-level service line'),
+      t('[data-i18n-html="spg.hubpot.sector"]', '<b>◆ Sector hub</b> · Vertical anchor'),
+      t('[data-i18n-html="spg.hubpot.sub"]', '<b>· Sub-page</b> · Variant under a hub'),
+      t('[data-i18n-html="spg.legend.quick"]', '<strong>The table in one sentence:</strong> Sorted by EYS — the page with the highest expected enquiry volume per month first. Each row shows the query itself, its category, the search volume, the competition difficulty (KD), the LOS score and the EYS. Click any column header to sort by that metric.'),
+      t('[data-i18n-html="spg.sitemap.cta"]', 'Need the <strong>complete page list grouped by service area</strong>? → <a href="#sm-cover" data-tab-jump="sitemap">Open sitemap ↗</a>'),
+      t('[data-i18n="spg.tree.expandall"]', 'Expand all'),
+      t('[data-i18n="spg.tree.cluster1.count"]', '88 pages'),
+      t('[data-i18n="spg.tree.cluster2.count"]', '12 pages'),
+      t('[data-i18n="spg.tree.cluster1.name"]', 'Projects & Processes · 14 service hubs'),
+      t('[data-i18n="spg.tree.cluster2.name"]', 'Sectors · 12 sector hubs'),
+      // === Filter bar, table headers, row tags, flow, maxvol, slides, sitemap QA ===
+      t('[data-i18n="pgf.label"]', 'Filter'),
+      t('[data-i18n-html="pgf.all"]', 'All <span class="pg-filter-pill__count">100</span>'),
+      t('[data-i18n-html="pgf.service"]', '★ Service hubs <span class="pg-filter-pill__count">14</span>'),
+      t('[data-i18n-html="pgf.sector"]', '◆ Sector hubs <span class="pg-filter-pill__count">12</span>'),
+      t('[data-i18n-html="pgf.sub"]', '· Sub-pages <span class="pg-filter-pill__count">72</span>'),
+      t('[data-i18n-html="pgf.state"]', 'showing <b>top 5</b> of <b>100</b>'),
+      t('[data-i18n="pgf.showall"]', '⤓ Show all 98'),
+      t('[data-i18n="pgf.reset"]', '↻ Reset to EYS'),
+      t('[data-i18n-html="pgt.kw"]', 'Keyword <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span>'),
+      t('[data-i18n-html="pgt.cat"]', 'Category <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span>'),
+      t('[data-i18n-html="pgt.vol"]', 'Vol <span class="pg-sort-arrows" aria-hidden="true"><span class="pg-arr pg-arr--up">▲</span><span class="pg-arr pg-arr--down">▼</span></span>'),
+      t('[data-i18n="spg.jumpcta"]', 'Open page guide'),
+      t('[data-i18n="spg.flow.collapse"]', 'Show phase overview'),
+      t('[data-i18n="spg.flow.delivered"]', 'Delivered 3 June 2026'),
+      t('[data-i18n="spg.scen.lbl"]', 'Pages'),
+      t('[data-i18n-html="spg.scen.lbl.plus100"]', 'Pages · <span>+100</span>'),
+      t('[data-i18n-html="spg.scen.lbl.plus300"]', 'Pages · <span>+300</span>'),
+      t('[data-i18n="spg.scen.flabel"]', 'Forecast at month 12'),
+      t('[data-i18n="spg.scen.slides"]', '← Swipe for more packages →'),
+      t('[data-i18n="spg.scen.li.service"]', 'Service hubs'),
+      t('[data-i18n="spg.scen.li.sector"]', 'Sector hubs'),
+      t('[data-i18n="spg.scen.li.sub"]', 'Sub-pages'),
+      t('[data-i18n="spg.scen.li.queries"]', 'Queries/mo'),
+      t('[data-i18n="spg.scen.li.geo"]', 'Geo full matrix'),
+      t('[data-i18n="spg.scen.li.sectorservice"]', 'Sector × service'),
+      t('[data-i18n="spg.scen.li.buying"]', 'Buying intent'),
+      t('[data-i18n="spg.scen.li.comparison"]', 'Comparison'),
+      t('[data-i18n="spg.scen.li.longtail"]', 'Long tail'),
+      t('[data-i18n="sm.c2.name"]', 'Sector hubs (Cluster 2)'),
+      t('[data-i18n="sm.c2.kw"]', '12 vertical anchors for sector queries'),
+      // === Restructure: collapsed details + one-sentence cards ===
+      t('[data-i18n="spg.details.summary"]', 'Status, KPIs & metric key'),
+      t('[data-i18n="spg.details.hint"]', 'open'),
+      t('[data-i18n="spg.eyebrow"]', 'Delivered on 3 June 2026'),
+      t('[data-i18n="spg.lc.eys.one"]', 'Expected enquiries per month if this page ranks at position 3 on Google.'),
+      t('[data-i18n="spg.lc.vol.one"]', 'How many people search this query per month on Google.de.'),
+      t('[data-i18n="spg.lc.kd.one"]', 'Competition difficulty on positions 1—10 (Semrush score 0—100, lower = easier).'),
+      t('[data-i18n="spg.lc.los.one"]', 'DM-internal composite of volume, intent, competition and CEx fit (0—100).'),
+      t('[data-i18n="spg.lc.ctr.one"]', 'Click rate at ranking position 3 — default in our calculation: 10%.'),
+      t('[data-i18n="spg.lc.density.one"]', 'How many consulting sites already rank in the top-10 SERP.'),
+      t('[data-i18n="spg.lc.intent.one"]', 'Premium when the query carries buyer signals like city, sector or "Beratung".'),
+      t('[data-i18n="spg.lc.kdf.one"]', 'Reduces EYS by the share of competition difficulty (formula: (110 − KD) / 100).'),
     ]
   };
 
@@ -9122,6 +9405,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     });
     document.documentElement.lang = lang;
     document.documentElement.classList.add('lang-ready');
+    document.dispatchEvent(new CustomEvent('langchange', { detail: { lang } }));
     document.querySelectorAll('.lang-opt').forEach(btn => {
       const isActive = btn.dataset.lang === lang;
       btn.classList.toggle('is-active', isActive);
@@ -9653,5 +9937,25 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 })();
 </script>
 
+<script>
+// Row category tag i18n hook (data-cat attribute → localized label)
+(function(){
+  function syncCatTags(){
+    const lang = document.documentElement.lang || 'de';
+    const map = {
+      service: lang === 'de' ? 'Service-Hub' : 'Service hub',
+      sector:  lang === 'de' ? 'Branchen-Hub' : 'Sector hub',
+      sub:     lang === 'de' ? 'Sub-Page' : 'Sub-page',
+    };
+    document.querySelectorAll('.pg-cat-tag[data-cat]').forEach(el => {
+      const k = el.getAttribute('data-cat');
+      if (map[k]) el.textContent = map[k];
+    });
+  }
+  document.addEventListener('langchange', syncCatTags);
+  document.addEventListener('DOMContentLoaded', syncCatTags);
+  if (document.readyState !== 'loading') syncCatTags();
+})();
+</script>
 </body>
 </html>
