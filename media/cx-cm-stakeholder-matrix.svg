@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="stkTitle stkDesc">
+  <title id="stkTitle">Stakeholder-Matrix Einfluss x Interesse</title>
+  <desc id="stkDesc">2x2 Matrix mit den vier Stakeholder-Quadranten und ihrer Betreuungs-Logik.</desc>
+  <rect width="600" height="400" fill="#FAF6EC"/>
+  <text x="40" y="40" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#1E2327">Stakeholder-Matrix</text>
+  <text x="40" y="60" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#5A6066">Einfluss x Interesse &mdash; vier Betreuungs-Strategien</text>
+  <!-- Matrix -->
+  <g transform="translate(110,90)">
+    <!-- Quadrants -->
+    <rect x="0" y="0" width="200" height="130" fill="#FFD24A" opacity="0.35" stroke="#1E2327" stroke-width="1"/>
+    <rect x="200" y="0" width="200" height="130" fill="#7C3AED" opacity="0.85" stroke="#1E2327" stroke-width="1"/>
+    <rect x="0" y="130" width="200" height="130" fill="#FAF6EC" stroke="#1E2327" stroke-width="1"/>
+    <rect x="200" y="130" width="200" height="130" fill="#FFD24A" opacity="0.6" stroke="#1E2327" stroke-width="1"/>
+    <!-- Top-left: high influence, low interest -->
+    <text x="100" y="55" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="800" fill="#1E2327">Zufrieden halten</text>
+    <text x="100" y="76" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#1E2327">Hoher Einfluss</text>
+    <text x="100" y="92" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#1E2327">Geringes Interesse</text>
+    <!-- Top-right: high influence, high interest -->
+    <text x="300" y="55" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="800" fill="#FAF6EC">Eng managen</text>
+    <text x="300" y="76" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#FAF6EC">Hoher Einfluss</text>
+    <text x="300" y="92" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#FAF6EC">Hohes Interesse</text>
+    <text x="300" y="110" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#FFD24A" font-weight="700">SPONSOREN</text>
+    <!-- Bottom-left: low influence, low interest -->
+    <text x="100" y="185" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="800" fill="#1E2327">Beobachten</text>
+    <text x="100" y="206" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#5A6066">Geringer Einfluss</text>
+    <text x="100" y="222" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#5A6066">Geringes Interesse</text>
+    <!-- Bottom-right: low influence, high interest -->
+    <text x="300" y="185" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="800" fill="#1E2327">Informieren</text>
+    <text x="300" y="206" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#1E2327">Geringer Einfluss</text>
+    <text x="300" y="222" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#1E2327">Hohes Interesse</text>
+    <text x="300" y="240" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#1E2327" font-weight="700">CHAMPIONS</text>
+  </g>
+  <!-- Y axis -->
+  <text x="40" y="100" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E2327" letter-spacing="1.2">EINFLUSS</text>
+  <line x1="95" y1="90" x2="95" y2="350" stroke="#1E2327" stroke-width="1.5"/>
+  <polygon points="95,85 91,95 99,95" fill="#1E2327"/>
+  <text x="60" y="120" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#5A6066">hoch</text>
+  <text x="60" y="340" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#5A6066">gering</text>
+  <!-- X axis -->
+  <line x1="105" y1="360" x2="520" y2="360" stroke="#1E2327" stroke-width="1.5"/>
+  <polygon points="525,360 515,356 515,364" fill="#1E2327"/>
+  <text x="280" y="380" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E2327" letter-spacing="1.2">INTERESSE</text>
+  <text x="120" y="375" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#5A6066">gering</text>
+  <text x="480" y="375" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#5A6066">hoch</text>
+</svg>

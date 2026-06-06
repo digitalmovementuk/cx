@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="KI 90-Tage-Roadmap: Discovery Tag 1 bis 30, Prototyp Tag 31 bis 60, Production Tag 61 bis 90">
+  <defs>
+    <style>
+      .bg{fill:#FAF6EC}
+      .ink{fill:#1E2327}
+      .grey{fill:#5A6066}
+      .label{font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:700;fill:#1E2327;letter-spacing:-0.01em}
+      .phase{font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:800;fill:#FAF6EC;letter-spacing:-0.02em}
+      .day{font-family:Inter,system-ui,sans-serif;font-size:11px;font-weight:600;fill:#FAF6EC;letter-spacing:0.04em}
+      .desc{font-family:Inter,system-ui,sans-serif;font-size:11px;font-weight:500;fill:#5A6066;line-height:1.4}
+      .title{font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:700;fill:#1E2327;letter-spacing:-0.01em}
+      .eyebrow{font-family:Inter,system-ui,sans-serif;font-size:10px;font-weight:700;fill:#5A6066;letter-spacing:0.16em;text-transform:uppercase}
+      .milestone{font-family:Inter,system-ui,sans-serif;font-size:10px;font-weight:700;fill:#1E2327}
+    </style>
+  </defs>
+  <rect class="bg" width="600" height="400"/>
+
+  <text class="eyebrow" x="40" y="36">90-Tage-Roadmap</text>
+  <text class="title" x="40" y="60">Discovery › Prototyp › Production.</text>
+
+  <!-- Timeline rail -->
+  <line x1="50" y1="220" x2="550" y2="220" stroke="#1E2327" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Phase 1: Discovery -->
+  <rect x="50" y="140" width="160" height="80" fill="#2563EB"/>
+  <text class="phase" x="130" y="172" text-anchor="middle">Discovery</text>
+  <text class="day" x="130" y="195" text-anchor="middle">Tag 1 — 30</text>
+
+  <!-- Phase 2: Prototyp -->
+  <rect x="220" y="140" width="160" height="80" fill="#7C3AED"/>
+  <text class="phase" x="300" y="172" text-anchor="middle">Prototyp</text>
+  <text class="day" x="300" y="195" text-anchor="middle">Tag 31 — 60</text>
+
+  <!-- Phase 3: Production -->
+  <rect x="390" y="140" width="160" height="80" fill="#1E2327"/>
+  <text class="phase" x="470" y="172" text-anchor="middle">Production</text>
+  <text class="day" x="470" y="195" text-anchor="middle">Tag 61 — 90</text>
+
+  <!-- Milestone markers -->
+  <circle cx="50" cy="220" r="6" fill="#FFD24A" stroke="#1E2327" stroke-width="1.5"/>
+  <circle cx="220" cy="220" r="6" fill="#FFD24A" stroke="#1E2327" stroke-width="1.5"/>
+  <circle cx="390" cy="220" r="6" fill="#FFD24A" stroke="#1E2327" stroke-width="1.5"/>
+  <circle cx="550" cy="220" r="6" fill="#FFD24A" stroke="#1E2327" stroke-width="1.5"/>
+
+  <!-- Milestones -->
+  <text class="milestone" x="50" y="248" text-anchor="middle">Kick-off</text>
+  <text class="milestone" x="220" y="248" text-anchor="middle">Use Case fixiert</text>
+  <text class="milestone" x="390" y="248" text-anchor="middle">Prototyp live</text>
+  <text class="milestone" x="550" y="248" text-anchor="middle">Übergabe</text>
+
+  <!-- Phase deliverables -->
+  <text class="desc" x="130" y="282" text-anchor="middle">Lagebild + Datenstrategie</text>
+  <text class="desc" x="130" y="296" text-anchor="middle">Use-Case-Backlog</text>
+  <text class="desc" x="130" y="310" text-anchor="middle">DSGVO-Klassifizierung</text>
+
+  <text class="desc" x="300" y="282" text-anchor="middle">RAG-Architektur</text>
+  <text class="desc" x="300" y="296" text-anchor="middle">Erstes lauffähiges Modell</text>
+  <text class="desc" x="300" y="310" text-anchor="middle">User-Test Sprint 1</text>
+
+  <text class="desc" x="470" y="282" text-anchor="middle">Schnittstellen + Monitoring</text>
+  <text class="desc" x="470" y="296" text-anchor="middle">Governance live</text>
+  <text class="desc" x="470" y="310" text-anchor="middle">Schulung + Handover</text>
+
+  <!-- Footer compliance band -->
+  <rect x="50" y="340" width="500" height="32" fill="#1E2327"/>
+  <text class="day" x="60" y="360" fill="#FFD24A">EU AI Act</text>
+  <text class="day" x="160" y="360" fill="#FAF6EC">DSGVO</text>
+  <text class="day" x="240" y="360" fill="#FAF6EC">Datensouveränität</text>
+  <text class="day" x="380" y="360" fill="#FAF6EC">Mitbestimmung früh</text>
+</svg>

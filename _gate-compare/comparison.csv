@@ -1,0 +1,33 @@
+check_id,check_name,prozessoptimierung-beratung/index.html,mittelstand/index.html
+A,Bigram uniqueness ≥50% vs hub + nearest sibling,PASS,PASS
+B,Not a doorway page (≥3 sections ≥150w each),PASS,PASS
+C,Title globally unique + 30–70 chars,PASS,PASS
+D,Meta description unique + 120–175 chars,PASS,PASS
+E,Exactly one <h1> + globally unique,PASS,PASS
+F,Geo-page local relevance (≥2 of 4),PASS,PASS
+G,Sector-page sector relevance (≥2 of 4),PASS,PASS
+H,E-E-A-T ≥2 of (author byline / trust / expertise),PASS,PASS
+I,"Internal-link: ≥3 inbound, ≥4 outbound",PASS,PASS
+J,Indexability: canonical set + in sitemap + not noindex'd + not robots-blocked,PASS,PASS
+K,Schema accuracy (matches visible content),PASS,PASS
+L,Every <img> has non-placeholder alt text,PASS,PASS
+M,"Core Web Vitals (LCP<2.5s, INP<200ms, CLS<0.1)",PASS,PASS
+N,HTTPS + canonical hygiene,PASS,PASS
+O,No keyword stuffing (sub-page density < 2× hub),PASS,PASS
+P,Hero contact form present + DSGVO-konform,PASS,PASS
+V,Mobile H1 overflow-safe (long German compound words),PASS,PASS
+R1,"Topical depth ≥1,500 content words",PASS,PASS
+R2,Intent-format match (service),PASS,PASS
+R3,Entity coverage ≥70%,PASS,PASS
+R4,PAA coverage ≥4 (of 4 questions),PASS,PASS
+R5,Featured-snippet structure (top 2 FAQs 40–80 words),PASS,FAIL
+R6,Inbound links incl. ≥1 from hub,PASS,PASS
+R7,"Ranking-grade CWV (LCP<1.5s, INP<100ms, CLS<0.05)",PASS,PASS
+R8,Schema enrichment (Service + FAQPage),PASS,PASS
+R9,Multimodal: ≥1 content image + (table OR svg),PASS,PASS
+R10,Author E-E-A-T (byline OR Person schema),PASS,PASS
+R11,Comparison content (for comparative queries),PASS,PASS
+R12,Original data / methodology / proprietary stat,PASS,PASS
+R13,Geo ranking-grade relevance (≥3 of 5),PASS,PASS
+R14,Sector ranking-grade relevance (≥4 of 6),PASS,PASS
+R15,Buying-intent CTA above-fold + social proof,PASS,PASS

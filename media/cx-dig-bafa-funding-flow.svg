@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="BAFA go-digital Förderungs-Ablauf">
+  <defs>
+    <style>
+      .ink{fill:#1E2327}
+      .cream{fill:#FAF6EC}
+      .purple{fill:#7C3AED}
+      .yellow{fill:#FFD24A}
+      .grey{fill:#5A6066}
+      .title{font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:800;fill:#1E2327;letter-spacing:-0.01em}
+      .lbl{font-family:Inter,system-ui,sans-serif;font-size:11px;font-weight:700;fill:#FAF6EC;letter-spacing:0.02em}
+      .lbl-dark{font-family:Inter,system-ui,sans-serif;font-size:11px;font-weight:700;fill:#1E2327}
+      .num{font-family:Inter,system-ui,sans-serif;font-size:10px;font-weight:800;letter-spacing:0.08em}
+      .sub{font-family:Inter,system-ui,sans-serif;font-size:9px;font-weight:500;fill:#5A6066}
+      .stat{font-family:Inter,system-ui,sans-serif;font-size:22px;font-weight:800;fill:#7C3AED;letter-spacing:-0.02em}
+      .flow{stroke:#1E2327;stroke-width:1.5;fill:none}
+    </style>
+  </defs>
+  <rect class="cream" width="600" height="400"/>
+  <text class="title" x="40" y="44">BAFA · go-digital · Digital Jetzt</text>
+  <text class="sub" x="40" y="60">Förderfähige Digitalisierungsberatung für Mittelstand &lt; 100 Mitarbeiter</text>
+  <line x1="40" y1="74" x2="120" y2="74" stroke="#FFD24A" stroke-width="3"/>
+
+  <!-- Step 1: Antrag -->
+  <rect class="purple" x="40" y="110" width="110" height="70" rx="2"/>
+  <text class="num" x="95" y="132" text-anchor="middle" fill="#FAF6EC">01 · ANTRAG</text>
+  <text class="lbl" x="95" y="156" text-anchor="middle">BAFA-Antrag</text>
+  <text class="lbl" x="95" y="170" text-anchor="middle">eingereicht</text>
+  <text class="sub" x="95" y="195" text-anchor="middle">durch CX-Experts</text>
+
+  <path class="flow" d="M155 145 L180 145 M175 141 L180 145 L175 149"/>
+
+  <!-- Step 2: Audit -->
+  <rect class="ink" x="185" y="110" width="110" height="70" rx="2"/>
+  <text class="num" x="240" y="132" text-anchor="middle" fill="#FFD24A">02 · AUDIT</text>
+  <text class="lbl" x="240" y="156" text-anchor="middle">Reifegrad-</text>
+  <text class="lbl" x="240" y="170" text-anchor="middle">Analyse</text>
+  <text class="sub" x="240" y="195" text-anchor="middle">3–4 Wochen</text>
+
+  <path class="flow" d="M300 145 L325 145 M320 141 L325 145 L320 149"/>
+
+  <!-- Step 3: Beratung -->
+  <rect class="grey" x="330" y="110" width="110" height="70" rx="2"/>
+  <text class="num" x="385" y="132" text-anchor="middle" fill="#FFD24A">03 · BERATUNG</text>
+  <text class="lbl" x="385" y="156" text-anchor="middle">Roadmap &amp;</text>
+  <text class="lbl" x="385" y="170" text-anchor="middle">Umsetzung</text>
+  <text class="sub" x="385" y="195" text-anchor="middle">6–12 Wochen</text>
+
+  <path class="flow" d="M445 145 L470 145 M465 141 L470 145 L465 149"/>
+
+  <!-- Step 4: Erstattung -->
+  <rect class="yellow" x="475" y="110" width="110" height="70" rx="2"/>
+  <text class="num" x="530" y="132" text-anchor="middle" fill="#1E2327">04 · ERSTATTUNG</text>
+  <text class="lbl-dark" x="530" y="156" text-anchor="middle">BAFA zahlt</text>
+  <text class="lbl-dark" x="530" y="170" text-anchor="middle">an KMU</text>
+  <text class="sub" x="530" y="195" text-anchor="middle">8–10 Wochen</text>
+
+  <!-- Bottom: Förderquote stats -->
+  <line x1="40" y1="230" x2="560" y2="230" stroke="#1E2327" stroke-width="0.5" stroke-dasharray="2 4"/>
+
+  <text class="stat" x="100" y="280" text-anchor="middle">50%</text>
+  <text class="lbl-dark" x="100" y="300" text-anchor="middle">go-digital</text>
+  <text class="sub" x="100" y="318" text-anchor="middle">Förderquote · max.</text>
+  <text class="sub" x="100" y="330" text-anchor="middle">16.500 € Zuschuss</text>
+
+  <text class="stat" x="300" y="280" text-anchor="middle">50%</text>
+  <text class="lbl-dark" x="300" y="300" text-anchor="middle">Digital Jetzt</text>
+  <text class="sub" x="300" y="318" text-anchor="middle">KMU bis 99 MA ·</text>
+  <text class="sub" x="300" y="330" text-anchor="middle">max. 50.000 € Zuschuss</text>
+
+  <text class="stat" x="500" y="280" text-anchor="middle">0 €</text>
+  <text class="lbl-dark" x="500" y="300" text-anchor="middle">Vorfinanzierung</text>
+  <text class="sub" x="500" y="318" text-anchor="middle">Antrag VOR</text>
+  <text class="sub" x="500" y="330" text-anchor="middle">Beratungsbeginn</text>
+
+  <text class="sub" x="40" y="370" fill="#5A6066">CX-Experts ist BAFA-zertifizierter Berater · Wir übernehmen Antrag, Nachweisführung, Abrechnung</text>
+</svg>

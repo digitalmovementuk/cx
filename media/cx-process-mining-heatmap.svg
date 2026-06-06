@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-label="Process-Mining Heat-Map: anonymisierte Engpass-Visualisierung eines Order-to-Cash-Prozesses">
+  <title>CX-Experts Process-Mining Heat-Map — Order-to-Cash</title>
+  <desc>Anonymisierte Visualisierung der Engpass-Heatmap eines CX-Experts Mandats: Auftragsannahme bis Geldeingang, gefärbt nach Durchlaufzeit-Anteil. Rot markierte Schritte sind Optimierungs-Hebel.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf6ec"/>
+      <stop offset="100%" stop-color="#f4efe3"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="380" fill="url(#bgGrad)"/>
+  <text x="40" y="38" font-family="Inter,system-ui,sans-serif" font-size="14" font-weight="800" fill="#1E2327" letter-spacing="0.5">PROCESS-MINING HEAT-MAP — ORDER-TO-CASH (ANONYMISIERT)</text>
+  <text x="40" y="60" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#5A5F63">Färbung nach Durchlaufzeit-Anteil · n = 18.420 Aufträge · Q1—Q2 2024 · CX-Mandat 280-MA-Spezialchemie</text>
+  <g font-family="Inter,system-ui,sans-serif" font-size="11" fill="#1E2327">
+    <rect x="40" y="100" width="100" height="60" fill="#FFC79A"/><text x="50" y="125">Bestellung</text><text x="50" y="142" font-size="10" fill="#5A5F63">1,2 h Median</text>
+    <line x1="140" y1="130" x2="180" y2="130" stroke="#1E2327" stroke-width="1.5"/>
+    <rect x="180" y="100" width="100" height="60" fill="#FF7A00"/><text x="190" y="125" fill="#fff">Kreditprüfung</text><text x="190" y="142" font-size="10" fill="#fff">3,8 Tage</text>
+    <line x1="280" y1="130" x2="320" y2="130" stroke="#1E2327" stroke-width="1.5"/>
+    <rect x="320" y="100" width="100" height="60" fill="#FFC79A"/><text x="330" y="125">Versand-Plan</text><text x="330" y="142" font-size="10" fill="#5A5F63">0,5 Tage</text>
+    <line x1="420" y1="130" x2="460" y2="130" stroke="#1E2327" stroke-width="1.5"/>
+    <rect x="460" y="100" width="100" height="60" fill="#FF7A00"/><text x="470" y="125" fill="#fff">Pick &amp; Pack</text><text x="470" y="142" font-size="10" fill="#fff">2,1 Tage</text>
+    <line x1="560" y1="130" x2="600" y2="130" stroke="#1E2327" stroke-width="1.5"/>
+    <rect x="600" y="100" width="100" height="60" fill="#FFE8D1"/><text x="610" y="125">Versand</text><text x="610" y="142" font-size="10" fill="#5A5F63">0,3 Tage</text>
+    <rect x="180" y="200" width="100" height="60" fill="#FF7A00"/><text x="190" y="225" fill="#fff">Rechnung</text><text x="190" y="242" font-size="10" fill="#fff">4,4 Tage</text>
+    <line x1="230" y1="160" x2="230" y2="200" stroke="#1E2327" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="280" y1="230" x2="600" y2="230" stroke="#1E2327" stroke-width="1.5"/>
+    <rect x="600" y="200" width="100" height="60" fill="#FFC79A"/><text x="610" y="225">Geldeingang</text><text x="610" y="242" font-size="10" fill="#5A5F63">4,6 Tage</text>
+  </g>
+  <g font-family="Inter,system-ui,sans-serif" font-size="10" fill="#1E2327">
+    <rect x="40" y="305" width="14" height="14" fill="#FFE8D1"/><text x="62" y="316">&lt; 1 Tag</text>
+    <rect x="130" y="305" width="14" height="14" fill="#FFC79A"/><text x="152" y="316">1—2 Tage</text>
+    <rect x="230" y="305" width="14" height="14" fill="#FF7A00"/><text x="252" y="316">&gt; 2 Tage — Hebel</text>
+    <text x="380" y="316" font-weight="700">Identifizierte Optimierungs-Hebel: Kreditprüfung · Pick &amp; Pack · Rechnung</text>
+  </g>
+  <text x="40" y="355" font-family="Inter,system-ui,sans-serif" font-size="10" fill="#5A5F63">Nach Restrukturierung (CX-Mandat, 14 Wochen): Median-Durchlaufzeit von 17 auf 6 Werktagen, DSO minus 9 Tage, Touchless-Quote 31 → 78 %.</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t-adm-title">
+  <title id="t-adm-title">TOGAF ADM — Architecture Development Method</title>
+  <rect width="600" height="400" fill="#FAF6EC"/>
+  <!-- Outer ring -->
+  <circle cx="300" cy="200" r="150" fill="none" stroke="#5A6066" stroke-width="1" stroke-dasharray="3 4" opacity="0.4"/>
+  <!-- Center: Requirements Management -->
+  <circle cx="300" cy="200" r="46" fill="#1E2327"/>
+  <text x="300" y="196" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#FFD24A" letter-spacing="0.06em">REQUIREMENTS</text>
+  <text x="300" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="600" fill="#FAF6EC">MANAGEMENT</text>
+  <!-- 8 phases around the ring -->
+  <!-- Phase A — Vision (top) -->
+  <g>
+    <circle cx="300" cy="50" r="32" fill="#7C3AED"/>
+    <text x="300" y="46" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#FAF6EC">A</text>
+    <text x="300" y="60" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#FAF6EC">Vision</text>
+  </g>
+  <!-- Phase B — Business (top-right) -->
+  <g>
+    <circle cx="406" cy="94" r="32" fill="#1E2327"/>
+    <text x="406" y="90" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#FFD24A">B</text>
+    <text x="406" y="104" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#FAF6EC">Business</text>
+  </g>
+  <!-- Phase C — Information Systems (right) -->
+  <g>
+    <circle cx="450" cy="200" r="32" fill="#1E2327"/>
+    <text x="450" y="196" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#FFD24A">C</text>
+    <text x="450" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#FAF6EC">Information</text>
+  </g>
+  <!-- Phase D — Technology (bottom-right) -->
+  <g>
+    <circle cx="406" cy="306" r="32" fill="#1E2327"/>
+    <text x="406" y="302" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#FFD24A">D</text>
+    <text x="406" y="316" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#FAF6EC">Technology</text>
+  </g>
+  <!-- Phase E — Opportunities (bottom) -->
+  <g>
+    <circle cx="300" cy="350" r="32" fill="#7C3AED"/>
+    <text x="300" y="346" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#FAF6EC">E</text>
+    <text x="300" y="360" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" font-weight="600" fill="#FAF6EC">Opportunities</text>
+  </g>
+  <!-- Phase F — Migration (bottom-left) -->
+  <g>
+    <circle cx="194" cy="306" r="32" fill="#1E2327"/>
+    <text x="194" y="302" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#FFD24A">F</text>
+    <text x="194" y="316" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#FAF6EC">Migration</text>
+  </g>
+  <!-- Phase G — Implementation (left) -->
+  <g>
+    <circle cx="150" cy="200" r="32" fill="#1E2327"/>
+    <text x="150" y="196" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#FFD24A">G</text>
+    <text x="150" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" font-weight="600" fill="#FAF6EC">Governance</text>
+  </g>
+  <!-- Phase H — Change Management (top-left) -->
+  <g>
+    <circle cx="194" cy="94" r="32" fill="#1E2327"/>
+    <text x="194" y="90" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#FFD24A">H</text>
+    <text x="194" y="104" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" font-weight="600" fill="#FAF6EC">Change Mgmt</text>
+  </g>
+  <!-- Direction arrow markers around ring -->
+  <g fill="#FFD24A" opacity="0.85">
+    <polygon points="354,68 362,76 354,80"/>
+    <polygon points="428,148 438,150 430,158"/>
+    <polygon points="430,242 438,250 428,252"/>
+    <polygon points="354,332 362,324 354,320"/>
+    <polygon points="246,332 238,324 246,320"/>
+    <polygon points="170,242 162,250 172,252"/>
+    <polygon points="172,148 162,150 170,158"/>
+    <polygon points="246,68 238,76 246,80"/>
+  </g>
+  <!-- Caption -->
+  <text x="300" y="388" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#5A6066" letter-spacing="0.04em">TOGAF ADM · 8 Phasen + Requirements Management</text>
+</svg>

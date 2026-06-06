@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="KI Use-Case-Trichter: 50 Ideen, 12 tragfähige Konzepte, 3 Piloten, 1 produktive Lösung">
+  <defs>
+    <linearGradient id="funnelTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <style>
+      .bg{fill:#FAF6EC}
+      .label{font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:600;fill:#1E2327}
+      .num{font-family:Inter,system-ui,sans-serif;font-size:22px;font-weight:800;fill:#FAF6EC;letter-spacing:-0.02em}
+      .desc{font-family:Inter,system-ui,sans-serif;font-size:11px;font-weight:500;fill:#5A6066}
+      .title{font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:700;fill:#1E2327;letter-spacing:-0.01em}
+      .eyebrow{font-family:Inter,system-ui,sans-serif;font-size:10px;font-weight:700;fill:#5A6066;letter-spacing:0.16em;text-transform:uppercase}
+    </style>
+  </defs>
+  <rect class="bg" width="600" height="400"/>
+  <text class="eyebrow" x="40" y="36">Use-Case-Trichter</text>
+  <text class="title" x="40" y="60">Von der Idee zur produktiven KI.</text>
+
+  <!-- Funnel band 1: 50 ideas -->
+  <polygon points="100,90 500,90 460,150 140,150" fill="url(#funnelTop)"/>
+  <text class="num" x="300" y="125" text-anchor="middle">50</text>
+  <text class="label" x="520" y="118">Rohe Ideen</text>
+  <text class="desc" x="520" y="135">Workshop + Interviews</text>
+
+  <!-- Funnel band 2: 12 viable -->
+  <polygon points="140,160 460,160 420,225 180,225" fill="#7C3AED"/>
+  <text class="num" x="300" y="200" text-anchor="middle">12</text>
+  <text class="label" x="440" y="192">Tragfähige Konzepte</text>
+  <text class="desc" x="440" y="208">Wert × Aufwand × Daten</text>
+
+  <!-- Funnel band 3: 3 pilots -->
+  <polygon points="180,235 420,235 380,300 220,300" fill="#1E2327"/>
+  <text class="num" x="300" y="275" text-anchor="middle">3</text>
+  <text class="label" x="400" y="266">Piloten</text>
+  <text class="desc" x="400" y="282">90 Tage Sprint</text>
+
+  <!-- Funnel band 4: 1 productive -->
+  <polygon points="220,310 380,310 350,370 250,370" fill="#FFD24A"/>
+  <text class="num" x="300" y="350" text-anchor="middle" fill="#1E2327">1</text>
+  <text class="label" x="370" y="340">Produktive Lösung</text>
+  <text class="desc" x="370" y="356">Übergabe an Betrieb</text>
+
+  <!-- Arrow -->
+  <line x1="65" y1="100" x2="65" y2="370" stroke="#1E2327" stroke-width="1.5"/>
+  <polygon points="60,365 70,365 65,378" fill="#1E2327"/>
+  <text class="eyebrow" x="58" y="392" transform="rotate(-90 58 392)">Priorisierung</text>
+</svg>

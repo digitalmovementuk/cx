@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="adkarTitle adkarDesc">
+  <title id="adkarTitle">ADKAR-Modell nach Prosci</title>
+  <desc id="adkarDesc">Die fuenf Stufen Awareness, Desire, Knowledge, Ability, Reinforcement als Sequenz visualisiert.</desc>
+  <rect width="600" height="400" fill="#FAF6EC"/>
+  <text x="40" y="48" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#1E2327" letter-spacing="-0.4">ADKAR &middot; Prosci-Modell</text>
+  <text x="40" y="70" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#5A6066">Fuenf Stufen individueller Veraenderung</text>
+  <line x1="40" y1="84" x2="560" y2="84" stroke="#1E2327" stroke-width="1" opacity="0.12"/>
+  <!-- Five stage circles connected -->
+  <g transform="translate(60,210)">
+    <line x1="40" y1="0" x2="460" y2="0" stroke="#1E2327" stroke-width="2" opacity="0.18" stroke-dasharray="4 6"/>
+    <!-- A -->
+    <circle cx="40" cy="0" r="34" fill="#7C3AED"/>
+    <text x="40" y="6" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800" fill="#FAF6EC">A</text>
+    <text x="40" y="60" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#1E2327">Awareness</text>
+    <text x="40" y="76" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#5A6066">Warum?</text>
+    <!-- D -->
+    <circle cx="155" cy="0" r="34" fill="#7C3AED"/>
+    <text x="155" y="6" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800" fill="#FAF6EC">D</text>
+    <text x="155" y="60" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#1E2327">Desire</text>
+    <text x="155" y="76" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#5A6066">Wollen</text>
+    <!-- K -->
+    <circle cx="270" cy="0" r="34" fill="#1E2327"/>
+    <text x="270" y="6" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800" fill="#FFD24A">K</text>
+    <text x="270" y="60" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#1E2327">Knowledge</text>
+    <text x="270" y="76" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#5A6066">Wissen</text>
+    <!-- Ab -->
+    <circle cx="385" cy="0" r="34" fill="#1E2327"/>
+    <text x="385" y="6" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800" fill="#FFD24A">A</text>
+    <text x="385" y="60" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#1E2327">Ability</text>
+    <text x="385" y="76" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#5A6066">Koennen</text>
+    <!-- R -->
+    <circle cx="500" cy="0" r="34" fill="#FFD24A" stroke="#1E2327" stroke-width="2"/>
+    <text x="500" y="6" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="800" fill="#1E2327">R</text>
+    <text x="500" y="60" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700" fill="#1E2327">Reinforcement</text>
+    <text x="500" y="76" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#5A6066">Verankerung</text>
+  </g>
+  <text x="60" y="140" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" fill="#5A6066" letter-spacing="1.4">VERSTEHEN</text>
+  <text x="290" y="140" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" fill="#5A6066" letter-spacing="1.4">BEFAEHIGEN</text>
+  <text x="490" y="140" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700" fill="#5A6066" letter-spacing="1.4">HALTEN</text>
+  <text x="40" y="360" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#5A6066">Jede Stufe ist eigenstaendige Voraussetzung. Ueberspringt das Change-Programm eine,</text>
+  <text x="40" y="376" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#5A6066">faellt die Adoption auf das Niveau der schwaechsten Stufe zurueck.</text>
+</svg>

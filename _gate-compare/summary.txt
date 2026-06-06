@@ -1,0 +1,4 @@
+index.html (prozessoptimierung-beratung): SHIP — 32/32 gates passed
+index.html (mittelstand): SHIP — 32/32 gates passed
+
+Gate asymmetry: 1 checks differ across pages: R5

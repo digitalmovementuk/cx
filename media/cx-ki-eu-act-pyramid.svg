@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="EU AI Act Risikopyramide: Unannehmbares Risiko, Hochrisiko, Begrenztes Risiko, Minimales Risiko">
+  <defs>
+    <style>
+      .bg{fill:#FAF6EC}
+      .label{font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:800;letter-spacing:-0.01em}
+      .desc{font-family:Inter,system-ui,sans-serif;font-size:11px;font-weight:500;fill:#5A6066}
+      .title{font-family:Inter,system-ui,sans-serif;font-size:14px;font-weight:700;fill:#1E2327;letter-spacing:-0.01em}
+      .eyebrow{font-family:Inter,system-ui,sans-serif;font-size:10px;font-weight:700;fill:#5A6066;letter-spacing:0.16em;text-transform:uppercase}
+      .duty{font-family:Inter,system-ui,sans-serif;font-size:11px;font-weight:600;fill:#1E2327}
+    </style>
+  </defs>
+  <rect class="bg" width="600" height="400"/>
+
+  <text class="eyebrow" x="40" y="36">EU AI Act Risikoklassen</text>
+  <text class="title" x="40" y="60">Vier Stufen — vier Pflichtprofile.</text>
+
+  <!-- Tier 1: Unacceptable (apex, red) -->
+  <polygon points="280,90 320,90 310,130 290,130" fill="#DC2626"/>
+  <text class="label" x="340" y="115" fill="#1E2327">Unannehmbares Risiko</text>
+  <text class="desc" x="340" y="130">Social Scoring, manipulative KI — verboten.</text>
+
+  <!-- Tier 2: High -->
+  <polygon points="250,140 350,140 340,200 260,200" fill="#7C3AED"/>
+  <text class="label" x="370" y="170" fill="#1E2327">Hochrisiko</text>
+  <text class="desc" x="370" y="185">Kredit, Personal, kritische Infrastruktur, Medizin.</text>
+  <text class="duty" x="370" y="200">Konformitätsbewertung + Dokumentation + Monitoring</text>
+
+  <!-- Tier 3: Limited -->
+  <polygon points="210,210 390,210 380,275 220,275" fill="#2563EB"/>
+  <text class="label" x="400" y="240" fill="#1E2327">Begrenztes Risiko</text>
+  <text class="desc" x="400" y="255">Chatbots, generative KI, Empfehlungs-Engines.</text>
+  <text class="duty" x="400" y="270">Transparenzpflicht: KI-Nutzung kenntlich machen</text>
+
+  <!-- Tier 4: Minimal -->
+  <polygon points="160,285 440,285 430,355 170,355" fill="#FFD24A"/>
+  <text class="label" x="50" y="310" fill="#1E2327">Minimales Risiko</text>
+  <text class="desc" x="50" y="325">Spam-Filter, Standard-Analytics.</text>
+  <text class="duty" x="50" y="340">Freiwillige Verhaltenskodizes empfohlen</text>
+
+  <!-- Base label -->
+  <text class="eyebrow" x="300" y="378" text-anchor="middle">Klassifizierung erfolgt in Phase 1 jedes Mandats</text>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Digitalisierungs-Roadmap in sechs Schritten">
+  <defs>
+    <style>
+      .ink{fill:#1E2327}
+      .cream{fill:#FAF6EC}
+      .purple{fill:#7C3AED}
+      .yellow{fill:#FFD24A}
+      .grey{fill:#5A6066}
+      .lbl{font-family:Inter,system-ui,sans-serif;font-size:11px;font-weight:700;fill:#1E2327;letter-spacing:0.02em}
+      .num{font-family:Inter,system-ui,sans-serif;font-size:10px;font-weight:800;fill:#FAF6EC;letter-spacing:0.08em}
+      .sub{font-family:Inter,system-ui,sans-serif;font-size:9px;font-weight:500;fill:#5A6066}
+      .title{font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:800;fill:#1E2327;letter-spacing:-0.01em}
+      .arrow{stroke:#1E2327;stroke-width:1.5;fill:none}
+    </style>
+  </defs>
+  <rect class="cream" width="600" height="400"/>
+  <text class="title" x="40" y="50">Digitalisierungs-Roadmap · 6 Schritte vom Status quo zur Skalierung</text>
+  <line x1="40" y1="68" x2="120" y2="68" stroke="#7C3AED" stroke-width="3"/>
+
+  <!-- Step 1: Status quo -->
+  <rect class="ink" x="40" y="120" width="80" height="80" rx="2"/>
+  <text class="num" x="80" y="142" text-anchor="middle">01</text>
+  <text class="lbl" x="80" y="170" text-anchor="middle" fill="#FAF6EC">Status quo</text>
+  <text class="sub" x="80" y="220" text-anchor="middle" fill="#5A6066">IT- &amp; Prozess-</text>
+  <text class="sub" x="80" y="232" text-anchor="middle" fill="#5A6066">Inventur</text>
+
+  <!-- arrow -->
+  <path class="arrow" d="M125 160 L145 160 M140 156 L145 160 L140 164"/>
+
+  <!-- Step 2: Reifegrad -->
+  <rect class="grey" x="150" y="120" width="80" height="80" rx="2"/>
+  <text class="num" x="190" y="142" text-anchor="middle">02</text>
+  <text class="lbl" x="190" y="170" text-anchor="middle" fill="#FAF6EC">Reifegrad</text>
+  <text class="sub" x="190" y="220" text-anchor="middle">Bewertung pro</text>
+  <text class="sub" x="190" y="232" text-anchor="middle">Domäne</text>
+
+  <path class="arrow" d="M235 160 L255 160 M250 156 L255 160 L250 164"/>
+
+  <!-- Step 3: Strategie -->
+  <rect class="purple" x="260" y="120" width="80" height="80" rx="2"/>
+  <text class="num" x="300" y="142" text-anchor="middle">03</text>
+  <text class="lbl" x="300" y="170" text-anchor="middle" fill="#FAF6EC">Strategie</text>
+  <text class="sub" x="300" y="220" text-anchor="middle">Zielbild &amp;</text>
+  <text class="sub" x="300" y="232" text-anchor="middle">Architektur</text>
+
+  <path class="arrow" d="M345 160 L365 160 M360 156 L365 160 L360 164"/>
+
+  <!-- Step 4: Use Cases -->
+  <rect class="yellow" x="370" y="120" width="80" height="80" rx="2"/>
+  <text class="num" x="410" y="142" text-anchor="middle" fill="#1E2327">04</text>
+  <text class="lbl" x="410" y="170" text-anchor="middle">Use Cases</text>
+  <text class="sub" x="410" y="220" text-anchor="middle">Priorisierte</text>
+  <text class="sub" x="410" y="232" text-anchor="middle">Vorhaben</text>
+
+  <path class="arrow" d="M455 160 L475 160 M470 156 L475 160 L470 164"/>
+
+  <!-- Step 5: Pilot -->
+  <rect class="grey" x="480" y="120" width="80" height="80" rx="2"/>
+  <text class="num" x="520" y="142" text-anchor="middle">05</text>
+  <text class="lbl" x="520" y="170" text-anchor="middle" fill="#FAF6EC">Pilot</text>
+  <text class="sub" x="520" y="220" text-anchor="middle">Erste Welle</text>
+  <text class="sub" x="520" y="232" text-anchor="middle">live</text>
+
+  <!-- Step 6: Skalierung (below, centred) -->
+  <path class="arrow" d="M520 205 L520 260 M516 255 L520 260 L524 255"/>
+  <rect class="ink" x="240" y="270" width="120" height="60" rx="2"/>
+  <text class="num" x="300" y="290" text-anchor="middle">06 · SKALIERUNG</text>
+  <text class="lbl" x="300" y="310" text-anchor="middle" fill="#FAF6EC">Welle 2–N · Übergabe</text>
+
+  <!-- Footer legend -->
+  <text class="sub" x="40" y="370" fill="#5A6066">Iterativ · Entscheidung nach jeder Phase · Sichtbare Ergebnisse statt 18-Monats-Strategiepapier</text>
+</svg>

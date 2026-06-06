@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="t-layers-title">
+  <title id="t-layers-title">Enterprise Architecture — vier Layer (Business / Application / Data / Technology)</title>
+  <rect width="600" height="400" fill="#FAF6EC"/>
+  <!-- Title -->
+  <text x="40" y="44" font-family="Inter,sans-serif" font-size="13" font-weight="800" fill="#1E2327" letter-spacing="0.04em">EA-STACK</text>
+  <text x="40" y="62" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#5A6066">Vier Layer · ArchiMate-Notation</text>
+  <!-- Business Layer -->
+  <g>
+    <rect x="40" y="86" width="520" height="64" fill="#7C3AED" rx="2"/>
+    <text x="60" y="112" font-family="Inter,sans-serif" font-size="14" font-weight="800" fill="#FAF6EC" letter-spacing="0.02em">BUSINESS LAYER</text>
+    <text x="60" y="132" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#FAF6EC" opacity="0.88">Capabilities · Value Streams · Geschäftsprozesse · Rollen · Produkte</text>
+    <rect x="430" y="100" width="110" height="36" fill="#FFD24A" rx="2"/>
+    <text x="485" y="123" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="800" fill="#1E2327">CIO · CDO · Fach</text>
+  </g>
+  <!-- Application Layer -->
+  <g>
+    <rect x="40" y="162" width="520" height="64" fill="#1E2327" rx="2"/>
+    <text x="60" y="188" font-family="Inter,sans-serif" font-size="14" font-weight="800" fill="#FFD24A" letter-spacing="0.02em">APPLICATION LAYER</text>
+    <text x="60" y="208" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#FAF6EC" opacity="0.82">Applikationen · Services · APIs · Microservices · Plattformen</text>
+    <rect x="430" y="176" width="110" height="36" fill="#FAF6EC" rx="2"/>
+    <text x="485" y="199" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="800" fill="#1E2327">Solution-Architekt</text>
+  </g>
+  <!-- Data Layer -->
+  <g>
+    <rect x="40" y="238" width="520" height="64" fill="#1E2327" rx="2"/>
+    <text x="60" y="264" font-family="Inter,sans-serif" font-size="14" font-weight="800" fill="#FFD24A" letter-spacing="0.02em">DATA LAYER</text>
+    <text x="60" y="284" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#FAF6EC" opacity="0.82">Datenobjekte · Domains · MDM · Data Mesh · Lakehouse · Governance</text>
+    <rect x="430" y="252" width="110" height="36" fill="#FAF6EC" rx="2"/>
+    <text x="485" y="275" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="800" fill="#1E2327">Daten-Architekt</text>
+  </g>
+  <!-- Technology Layer -->
+  <g>
+    <rect x="40" y="314" width="520" height="64" fill="#5A6066" rx="2"/>
+    <text x="60" y="340" font-family="Inter,sans-serif" font-size="14" font-weight="800" fill="#FAF6EC" letter-spacing="0.02em">TECHNOLOGY LAYER</text>
+    <text x="60" y="360" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#FAF6EC" opacity="0.92">Cloud · Netzwerk · Compute · Sicherheit · OT-Schicht</text>
+    <rect x="430" y="328" width="110" height="36" fill="#FFD24A" rx="2"/>
+    <text x="485" y="351" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="800" fill="#1E2327">Tech-Architekt</text>
+  </g>
+  <!-- Side connectors hinting dependency direction -->
+  <g stroke="#7C3AED" stroke-width="1.4" opacity="0.6">
+    <line x1="22" y1="118" x2="22" y2="346"/>
+    <polygon points="18,118 26,118 22,108" fill="#7C3AED" opacity="0.6"/>
+    <polygon points="18,346 26,346 22,356" fill="#7C3AED" opacity="0.6"/>
+  </g>
+  <text x="8" y="232" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#5A6066" letter-spacing="0.16em" transform="rotate(-90 8 232)">ABSTRAKTION</text>
+</svg>

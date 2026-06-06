@@ -1,0 +1,717 @@
+{
+  "/Users/raoulito/digital-movement-uk/Live Projects/CX/V1/github-cx/prozessoptimierung-beratung/index.html": [
+    {
+      "check_id": "A",
+      "name": "Bigram uniqueness ≥50% vs hub + nearest sibling",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "89.5% unique vs sibling (worst of 1)",
+      "evidence": {
+        "sibling_unique_pct": 89.5,
+        "nearest_sibling": "/Users/raoulito/digital-movement-uk/Live Projects/CX/V1/github-cx/prozessoptimierung-beratung/mittelstand/index.html",
+        "worst": 89.5
+      }
+    },
+    {
+      "check_id": "B",
+      "name": "Not a doorway page (≥3 sections ≥150w each)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "4 substantive sections (of 13)",
+      "evidence": {
+        "section_word_counts": [
+          260,
+          137,
+          120,
+          62,
+          111,
+          137,
+          123,
+          167,
+          88,
+          330,
+          371,
+          52,
+          48
+        ]
+      }
+    },
+    {
+      "check_id": "C",
+      "name": "Title globally unique + 30–70 chars",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "length": 45,
+        "duplicates": []
+      }
+    },
+    {
+      "check_id": "D",
+      "name": "Meta description unique + 120–175 chars",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "length": 154,
+        "duplicates": []
+      }
+    },
+    {
+      "check_id": "E",
+      "name": "Exactly one <h1> + globally unique",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "duplicates": []
+      }
+    },
+    {
+      "check_id": "F",
+      "name": "Geo-page local relevance (≥2 of 4)",
+      "passed": true,
+      "severity": "INFO",
+      "reason": "not a geo page",
+      "evidence": {}
+    },
+    {
+      "check_id": "G",
+      "name": "Sector-page sector relevance (≥2 of 4)",
+      "passed": true,
+      "severity": "INFO",
+      "reason": "not a sector page",
+      "evidence": {}
+    },
+    {
+      "check_id": "H",
+      "name": "E-E-A-T ≥2 of (author byline / trust / expertise)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "3/3 signals — author byline; Impressum + contact; expertise signal",
+      "evidence": {
+        "signals": 3
+      }
+    },
+    {
+      "check_id": "I",
+      "name": "Internal-link: ≥3 inbound, ≥4 outbound",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "6 inbound, 20 outbound",
+      "evidence": {
+        "in": 6,
+        "out": 20
+      }
+    },
+    {
+      "check_id": "J",
+      "name": "Indexability: canonical set + in sitemap + not noindex'd + not robots-blocked",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "issues": []
+      }
+    },
+    {
+      "check_id": "K",
+      "name": "Schema accuracy (matches visible content)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "issues": []
+      }
+    },
+    {
+      "check_id": "L",
+      "name": "Every <img> has non-placeholder alt text",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "0 missing alt, 0 placeholder; 1 content images total",
+      "evidence": {
+        "missing": 0,
+        "placeholder": 0
+      }
+    },
+    {
+      "check_id": "M",
+      "name": "Core Web Vitals (LCP<2.5s, INP<200ms, CLS<0.1)",
+      "passed": true,
+      "severity": "WARN",
+      "reason": "Lighthouse not run — check skipped",
+      "evidence": {}
+    },
+    {
+      "check_id": "N",
+      "name": "HTTPS + canonical hygiene",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "issues": []
+      }
+    },
+    {
+      "check_id": "O",
+      "name": "No keyword stuffing (sub-page density < 2× hub)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "sub 1.06% vs hub 1.06% — ratio 1.00×",
+      "evidence": {
+        "sub_density": 1.0589013898080741,
+        "hub_density": 1.0589013898080741,
+        "ratio": 1.0
+      }
+    },
+    {
+      "check_id": "P",
+      "name": "Hero contact form present + DSGVO-konform",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok — form + consent + Datenschutz link + Art. 6 + purpose + retention",
+      "evidence": {
+        "issues": []
+      }
+    },
+    {
+      "check_id": "V",
+      "name": "Mobile H1 overflow-safe (long German compound words)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok — overflow-wrap/word-break/hyphens rule present",
+      "evidence": {
+        "longest_word": 17,
+        "has_safety": true
+      }
+    },
+    {
+      "check_id": "R1",
+      "name": "Topical depth ≥1,500 content words",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "1511 content words",
+      "evidence": {
+        "word_count": 1511
+      }
+    },
+    {
+      "check_id": "R2",
+      "name": "Intent-format match (service)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "format='service' matched",
+      "evidence": {
+        "intent": "service"
+      }
+    },
+    {
+      "check_id": "R3",
+      "name": "Entity coverage ≥70%",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "9/9 entities (100%)",
+      "evidence": {
+        "present": [
+          "lean",
+          "six sigma",
+          "bpmn",
+          "celonis",
+          "iso 9001",
+          "mittelstand",
+          "process mining",
+          "camunda",
+          "signavio"
+        ],
+        "missing": []
+      }
+    },
+    {
+      "check_id": "R4",
+      "name": "PAA coverage ≥4 (of 4 questions)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "4 answered",
+      "evidence": {
+        "answered": [
+          "Was kostet eine Prozessoptimierung?",
+          "Wie lange dauert eine Prozessoptimierung?",
+          "Welche Methoden nutzt eine Prozessberatung?",
+          "Wann lohnt sich Prozessoptimierung?"
+        ],
+        "missing": []
+      }
+    },
+    {
+      "check_id": "R5",
+      "name": "Featured-snippet structure (top 2 FAQs 40–80 words)",
+      "passed": true,
+      "severity": "WARN",
+      "reason": "ok",
+      "evidence": {
+        "issues": []
+      }
+    },
+    {
+      "check_id": "R6",
+      "name": "Inbound links incl. ≥1 from hub",
+      "passed": true,
+      "severity": "INFO",
+      "reason": "page is the hub",
+      "evidence": {}
+    },
+    {
+      "check_id": "R7",
+      "name": "Ranking-grade CWV (LCP<1.5s, INP<100ms, CLS<0.05)",
+      "passed": true,
+      "severity": "WARN",
+      "reason": "Lighthouse not run — skipped",
+      "evidence": {}
+    },
+    {
+      "check_id": "R8",
+      "name": "Schema enrichment (Service + FAQPage)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "present: Service,FAQPage",
+      "evidence": {
+        "present": [
+          "Service",
+          "FAQPage"
+        ]
+      }
+    },
+    {
+      "check_id": "R9",
+      "name": "Multimodal: ≥1 content image + (table OR svg)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "img=1 tables=1 svgs=yes",
+      "evidence": {
+        "content_imgs": 1,
+        "tables": 1,
+        "svg": true
+      }
+    },
+    {
+      "check_id": "R10",
+      "name": "Author E-E-A-T (byline OR Person schema)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "byline": true,
+        "schema": true
+      }
+    },
+    {
+      "check_id": "R11",
+      "name": "Comparison content (for comparative queries)",
+      "passed": true,
+      "severity": "INFO",
+      "reason": "not a comparative query",
+      "evidence": {}
+    },
+    {
+      "check_id": "R12",
+      "name": "Original data / methodology / proprietary stat",
+      "passed": true,
+      "severity": "WARN",
+      "reason": "1 original-signal match(es)",
+      "evidence": {
+        "matches": 1
+      }
+    },
+    {
+      "check_id": "R13",
+      "name": "Geo ranking-grade relevance (≥3 of 5)",
+      "passed": true,
+      "severity": "INFO",
+      "reason": "not a geo page",
+      "evidence": {}
+    },
+    {
+      "check_id": "R14",
+      "name": "Sector ranking-grade relevance (≥4 of 6)",
+      "passed": true,
+      "severity": "INFO",
+      "reason": "not a sector page",
+      "evidence": {}
+    },
+    {
+      "check_id": "R15",
+      "name": "Buying-intent CTA above-fold + social proof",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "CTA-above-fold=True · social_proof=True · trust_chip=True",
+      "evidence": {
+        "signals": 3
+      }
+    }
+  ],
+  "/Users/raoulito/digital-movement-uk/Live Projects/CX/V1/github-cx/prozessoptimierung-beratung/mittelstand/index.html": [
+    {
+      "check_id": "A",
+      "name": "Bigram uniqueness ≥50% vs hub + nearest sibling",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "89.5% unique vs hub (worst of 2)",
+      "evidence": {
+        "hub_unique_pct": 89.5,
+        "sibling_unique_pct": 95.9,
+        "nearest_sibling": "/Users/raoulito/digital-movement-uk/Live Projects/CX/V1/github-cx/digitalisierungsberatung/index.html",
+        "worst": 89.5
+      }
+    },
+    {
+      "check_id": "B",
+      "name": "Not a doorway page (≥3 sections ≥150w each)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "7 substantive sections (of 11)",
+      "evidence": {
+        "section_word_counts": [
+          210,
+          110,
+          201,
+          143,
+          208,
+          153,
+          182,
+          340,
+          56,
+          298,
+          48
+        ]
+      }
+    },
+    {
+      "check_id": "C",
+      "name": "Title globally unique + 30–70 chars",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "length": 51,
+        "duplicates": []
+      }
+    },
+    {
+      "check_id": "D",
+      "name": "Meta description unique + 120–175 chars",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "length": 152,
+        "duplicates": []
+      }
+    },
+    {
+      "check_id": "E",
+      "name": "Exactly one <h1> + globally unique",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "duplicates": []
+      }
+    },
+    {
+      "check_id": "F",
+      "name": "Geo-page local relevance (≥2 of 4)",
+      "passed": true,
+      "severity": "INFO",
+      "reason": "not a geo page",
+      "evidence": {}
+    },
+    {
+      "check_id": "G",
+      "name": "Sector-page sector relevance (≥2 of 4)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "4/4 signals — sector 'mittelstand' mentioned 32×; case study signal; regulator / certification signal; Service schema with audience set",
+      "evidence": {
+        "signals": 4
+      }
+    },
+    {
+      "check_id": "H",
+      "name": "E-E-A-T ≥2 of (author byline / trust / expertise)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "3/3 signals — author byline; Impressum + contact; expertise signal",
+      "evidence": {
+        "signals": 3
+      }
+    },
+    {
+      "check_id": "I",
+      "name": "Internal-link: ≥3 inbound, ≥4 outbound",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "3 inbound, 15 outbound",
+      "evidence": {
+        "in": 3,
+        "out": 15
+      }
+    },
+    {
+      "check_id": "J",
+      "name": "Indexability: canonical set + in sitemap + not noindex'd + not robots-blocked",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "issues": []
+      }
+    },
+    {
+      "check_id": "K",
+      "name": "Schema accuracy (matches visible content)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "issues": []
+      }
+    },
+    {
+      "check_id": "L",
+      "name": "Every <img> has non-placeholder alt text",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "0 missing alt, 0 placeholder; 1 content images total",
+      "evidence": {
+        "missing": 0,
+        "placeholder": 0
+      }
+    },
+    {
+      "check_id": "M",
+      "name": "Core Web Vitals (LCP<2.5s, INP<200ms, CLS<0.1)",
+      "passed": true,
+      "severity": "WARN",
+      "reason": "Lighthouse not run — check skipped",
+      "evidence": {}
+    },
+    {
+      "check_id": "N",
+      "name": "HTTPS + canonical hygiene",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "issues": []
+      }
+    },
+    {
+      "check_id": "O",
+      "name": "No keyword stuffing (sub-page density < 2× hub)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "sub 1.53% vs hub 1.46% — ratio 1.05×",
+      "evidence": {
+        "sub_density": 1.5262110152621102,
+        "hub_density": 1.455989410986102,
+        "ratio": 1.048229474573204
+      }
+    },
+    {
+      "check_id": "P",
+      "name": "Hero contact form present + DSGVO-konform",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok — form + consent + Datenschutz link + Art. 6 + purpose + retention",
+      "evidence": {
+        "issues": []
+      }
+    },
+    {
+      "check_id": "V",
+      "name": "Mobile H1 overflow-safe (long German compound words)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok — overflow-wrap/word-break/hyphens rule present",
+      "evidence": {
+        "longest_word": 27,
+        "has_safety": true
+      }
+    },
+    {
+      "check_id": "R1",
+      "name": "Topical depth ≥1,500 content words",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "1507 content words",
+      "evidence": {
+        "word_count": 1507
+      }
+    },
+    {
+      "check_id": "R2",
+      "name": "Intent-format match (service)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "format='service' matched",
+      "evidence": {
+        "intent": "service"
+      }
+    },
+    {
+      "check_id": "R3",
+      "name": "Entity coverage ≥70%",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "8/11 entities (73%)",
+      "evidence": {
+        "present": [
+          "lean",
+          "bpmn",
+          "celonis",
+          "iso 9001",
+          "mittelstand",
+          "kmu",
+          "bafa",
+          "dsgvo"
+        ],
+        "missing": [
+          "six sigma",
+          "process mining",
+          "camunda"
+        ]
+      }
+    },
+    {
+      "check_id": "R4",
+      "name": "PAA coverage ≥4 (of 4 questions)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "4 answered",
+      "evidence": {
+        "answered": [
+          "Was kostet Prozessoptimierung im Mittelstand?",
+          "Wie lange dauert ein Prozessoptimierungs-Projekt?",
+          "Welche Förderung gibt es für Mittelstand-Beratung?",
+          "Wann lohnt sich Prozessoptimierung für KMU?"
+        ],
+        "missing": []
+      }
+    },
+    {
+      "check_id": "R5",
+      "name": "Featured-snippet structure (top 2 FAQs 40–80 words)",
+      "passed": false,
+      "severity": "WARN",
+      "reason": "FAQ #2 answer is 39 words (target 40–80)",
+      "evidence": {
+        "issues": [
+          "FAQ #2 answer is 39 words (target 40–80)"
+        ]
+      }
+    },
+    {
+      "check_id": "R6",
+      "name": "≥3 inbound + linked from hub",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "3 inbound; hub-link=yes",
+      "evidence": {
+        "inbound": 3,
+        "from_hub": true
+      }
+    },
+    {
+      "check_id": "R7",
+      "name": "Ranking-grade CWV (LCP<1.5s, INP<100ms, CLS<0.05)",
+      "passed": true,
+      "severity": "WARN",
+      "reason": "Lighthouse not run — skipped",
+      "evidence": {}
+    },
+    {
+      "check_id": "R8",
+      "name": "Schema enrichment (Service + FAQPage)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "present: Service,FAQPage",
+      "evidence": {
+        "present": [
+          "Service",
+          "FAQPage"
+        ]
+      }
+    },
+    {
+      "check_id": "R9",
+      "name": "Multimodal: ≥1 content image + (table OR svg)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "img=1 tables=1 svgs=yes",
+      "evidence": {
+        "content_imgs": 1,
+        "tables": 1,
+        "svg": true
+      }
+    },
+    {
+      "check_id": "R10",
+      "name": "Author E-E-A-T (byline OR Person schema)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "ok",
+      "evidence": {
+        "byline": true,
+        "schema": true
+      }
+    },
+    {
+      "check_id": "R11",
+      "name": "Comparison content (for comparative queries)",
+      "passed": true,
+      "severity": "INFO",
+      "reason": "not a comparative query",
+      "evidence": {}
+    },
+    {
+      "check_id": "R12",
+      "name": "Original data / methodology / proprietary stat",
+      "passed": true,
+      "severity": "WARN",
+      "reason": "1 original-signal match(es)",
+      "evidence": {
+        "matches": 1
+      }
+    },
+    {
+      "check_id": "R13",
+      "name": "Geo ranking-grade relevance (≥3 of 5)",
+      "passed": true,
+      "severity": "INFO",
+      "reason": "not a geo page",
+      "evidence": {}
+    },
+    {
+      "check_id": "R14",
+      "name": "Sector ranking-grade (≥4 of 6)",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "5/6 — mittelstand×32; named case; regulator; sector KPI; Service.audience schema",
+      "evidence": {
+        "signals": 5
+      }
+    },
+    {
+      "check_id": "R15",
+      "name": "Buying-intent CTA above-fold + social proof",
+      "passed": true,
+      "severity": "BLOCKER",
+      "reason": "CTA-above-fold=True · social_proof=True · trust_chip=True",
+      "evidence": {
+        "signals": 3
+      }
+    }
+  ]
+}

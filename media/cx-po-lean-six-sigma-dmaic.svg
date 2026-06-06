@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="dmaicTitle dmaicDesc">
+  <title id="dmaicTitle">Lean Six Sigma DMAIC-Zyklus</title>
+  <desc id="dmaicDesc">Define, Measure, Analyse, Improve, Control — der DMAIC-Zyklus von CX-Experts für strukturierte Prozessverbesserung.</desc>
+  <defs>
+    <style>
+      .ink{fill:#1E2327}
+      .muted{fill:#5A6066}
+      .stroke{stroke:#1E2327;stroke-width:1.6;fill:none}
+      .stroke-muted{stroke:#5A6066;stroke-width:1.2;fill:none}
+      .stroke-accent{stroke:#FF7A00;stroke-width:2;fill:none}
+      .dot-purple{fill:#7C3AED}
+      .dot-yellow{fill:#FFD24A}
+      .dot-accent{fill:#FF7A00}
+      .pill{fill:#FAF6EC;stroke:#1E2327;stroke-width:1.4}
+      .pill-accent{fill:#FAF6EC;stroke:#FF7A00;stroke-width:1.8}
+      text{font-family:Inter,Helvetica,Arial,sans-serif;fill:#1E2327}
+      .h{font-size:13px;font-weight:600;letter-spacing:-0.01em}
+      .b{font-size:10.5px;font-weight:400}
+      .lbl{font-size:9.5px;font-weight:500;fill:#5A6066;letter-spacing:0.06em;text-transform:uppercase}
+      .ttl{font-size:14px;font-weight:600;letter-spacing:-0.01em}
+      .ctr{font-size:11px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;fill:#5A6066}
+    </style>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="0" y="0" width="600" height="400" fill="#FAF6EC"/>
+
+  <!-- Title strip -->
+  <text x="40" y="42" class="lbl">Methode · CX-Experts</text>
+  <text x="40" y="62" class="ttl">DMAIC-Zyklus · Lean Six Sigma</text>
+  <line x1="40" y1="74" x2="200" y2="74" stroke="#1E2327" stroke-width="1.4"/>
+
+  <!-- Central circle -->
+  <circle cx="300" cy="220" r="58" fill="#FAF6EC" stroke="#1E2327" stroke-width="1.6"/>
+  <text x="300" y="216" text-anchor="middle" class="ctr">Verbesserung</text>
+  <text x="300" y="232" text-anchor="middle" class="ctr">je Zyklus</text>
+  <text x="300" y="250" text-anchor="middle" class="b" fill="#FF7A00" font-weight="600">20–40 %</text>
+
+  <!-- 5 nodes around — DMAIC -->
+  <!-- D: top -->
+  <g transform="translate(300,100)">
+    <circle r="32" class="pill"/>
+    <text y="-3" text-anchor="middle" class="h">D</text>
+    <text y="14" text-anchor="middle" class="b">Define</text>
+  </g>
+  <text x="300" y="56" text-anchor="middle" class="lbl">Problem &amp; Scope</text>
+
+  <!-- M: top-right -->
+  <g transform="translate(460,170)">
+    <circle r="32" class="pill"/>
+    <text y="-3" text-anchor="middle" class="h">M</text>
+    <text y="14" text-anchor="middle" class="b">Measure</text>
+  </g>
+  <text x="460" y="216" text-anchor="middle" class="lbl">Ist-Daten</text>
+
+  <!-- A: bottom-right -->
+  <g transform="translate(420,310)">
+    <circle r="32" class="pill"/>
+    <text y="-3" text-anchor="middle" class="h">A</text>
+    <text y="14" text-anchor="middle" class="b">Analyse</text>
+  </g>
+  <text x="420" y="356" text-anchor="middle" class="lbl">Root Cause</text>
+
+  <!-- I: bottom-left — highlighted -->
+  <g transform="translate(180,310)">
+    <circle r="32" class="pill-accent"/>
+    <text y="-3" text-anchor="middle" class="h">I</text>
+    <text y="14" text-anchor="middle" class="b">Improve</text>
+  </g>
+  <text x="180" y="356" text-anchor="middle" class="lbl" fill="#FF7A00">Soll-Design</text>
+
+  <!-- C: top-left -->
+  <g transform="translate(140,170)">
+    <circle r="32" class="pill"/>
+    <text y="-3" text-anchor="middle" class="h">C</text>
+    <text y="14" text-anchor="middle" class="b">Control</text>
+  </g>
+  <text x="140" y="216" text-anchor="middle" class="lbl">KPI-System</text>
+
+  <!-- Arcs between nodes (curved cycle) -->
+  <!-- D → M -->
+  <path d="M 326 122 A 110 110 0 0 1 438 146" class="stroke" marker-end="url(#arrowI)"/>
+  <!-- M → A -->
+  <path d="M 466 200 A 110 110 0 0 1 446 282" class="stroke" marker-end="url(#arrowI)"/>
+  <!-- A → I -->
+  <path d="M 388 322 A 110 110 0 0 1 214 322" class="stroke-accent" marker-end="url(#arrowA)"/>
+  <!-- I → C -->
+  <path d="M 154 282 A 110 110 0 0 1 134 200" class="stroke" marker-end="url(#arrowI)"/>
+  <!-- C → D -->
+  <path d="M 160 144 A 110 110 0 0 1 274 122" class="stroke" marker-end="url(#arrowI)"/>
+
+  <!-- Arrowheads -->
+  <defs>
+    <marker id="arrowI" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E2327"/>
+    </marker>
+    <marker id="arrowA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF7A00"/>
+    </marker>
+  </defs>
+
+  <!-- Footer caption -->
+  <text x="40" y="382" class="lbl">DMAIC = Define · Measure · Analyse · Improve · Control</text>
+</svg>

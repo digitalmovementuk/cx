@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="botTitle botDesc">
+  <title id="botTitle">BPMN-Swimlane mit Engpass-Identifikation</title>
+  <desc id="botDesc">Order-to-Cash Beispielprozess in BPMN-Swimlanes: Vertrieb, Auftragsmanagement, Logistik, Finanz. Der hervorgehobene Knoten in Auftragsmanagement ist der quantifizierte Engpass.</desc>
+  <defs>
+    <style>
+      .ink{fill:#1E2327}
+      .stroke{stroke:#1E2327;stroke-width:1.4;fill:#FAF6EC}
+      .stroke-thin{stroke:#5A6066;stroke-width:1;fill:none}
+      .lane{fill:#FFFFFF;stroke:#1E2327;stroke-width:1.2}
+      .lane-label{fill:#FAF6EC;stroke:#1E2327;stroke-width:1.2}
+      .node{fill:#FAF6EC;stroke:#1E2327;stroke-width:1.4}
+      .node-bot{fill:#FFFFFF;stroke:#FF7A00;stroke-width:2.4}
+      .node-bot-fill{fill:#FF7A00;opacity:0.08}
+      .start{fill:#FAF6EC;stroke:#1E2327;stroke-width:1.4}
+      .end-ev{fill:#1E2327;stroke:#1E2327;stroke-width:2}
+      .arrow{stroke:#1E2327;stroke-width:1.4;fill:none}
+      .arrow-bot{stroke:#FF7A00;stroke-width:2;fill:none}
+      .gate{fill:#FAF6EC;stroke:#1E2327;stroke-width:1.4}
+      text{font-family:Inter,Helvetica,Arial,sans-serif;fill:#1E2327}
+      .lbl-lane{font-size:10.5px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase}
+      .lbl-node{font-size:10px;font-weight:500}
+      .lbl-bot{font-size:10px;font-weight:600;fill:#FF7A00}
+      .ttl{font-size:14px;font-weight:600;letter-spacing:-0.01em}
+      .lbl{font-size:9.5px;font-weight:500;fill:#5A6066;letter-spacing:0.06em;text-transform:uppercase}
+      .metric{font-size:10.5px;font-weight:600;fill:#FF7A00}
+    </style>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E2327"/>
+    </marker>
+    <marker id="ar-bot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#FF7A00"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="600" height="400" fill="#FAF6EC"/>
+
+  <!-- Title -->
+  <text x="40" y="34" class="lbl">Engpass-Analyse · BPMN 2.0</text>
+  <text x="40" y="54" class="ttl">Order-to-Cash · 18.420 Auftragsdurchläufe</text>
+
+  <!-- Swim lanes -->
+  <!-- Lane labels (left) -->
+  <rect x="40" y="80" width="78" height="70" class="lane-label"/>
+  <rect x="40" y="150" width="78" height="70" class="lane-label"/>
+  <rect x="40" y="220" width="78" height="70" class="lane-label"/>
+  <rect x="40" y="290" width="78" height="70" class="lane-label"/>
+
+  <text x="79" y="120" text-anchor="middle" class="lbl-lane">Vertrieb</text>
+  <text x="79" y="190" text-anchor="middle" class="lbl-lane">Auftrags-</text>
+  <text x="79" y="203" text-anchor="middle" class="lbl-lane">mgmt</text>
+  <text x="79" y="260" text-anchor="middle" class="lbl-lane">Logistik</text>
+  <text x="79" y="330" text-anchor="middle" class="lbl-lane">Finanz</text>
+
+  <!-- Lane bodies -->
+  <rect x="118" y="80" width="442" height="70" class="lane"/>
+  <rect x="118" y="150" width="442" height="70" class="lane"/>
+  <rect x="118" y="220" width="442" height="70" class="lane"/>
+  <rect x="118" y="290" width="442" height="70" class="lane"/>
+
+  <!-- Start event (Vertrieb) -->
+  <circle cx="148" cy="115" r="12" class="start"/>
+  <text x="148" y="148" text-anchor="middle" class="lbl-node">Auftrag</text>
+
+  <!-- Task 1: Angebot prüfen (Vertrieb) -->
+  <rect x="180" y="100" width="78" height="30" rx="3" class="node"/>
+  <text x="219" y="119" text-anchor="middle" class="lbl-node">Angebot prüfen</text>
+
+  <!-- Connector V→A (down to AM) -->
+  <path d="M 219 130 L 219 165" class="arrow" marker-end="url(#ar)"/>
+
+  <!-- AM: Task — manuelle Prüfung — BOTTLENECK -->
+  <rect x="180" y="170" width="78" height="30" rx="3" class="node-bot-fill"/>
+  <rect x="180" y="170" width="78" height="30" rx="3" class="node-bot"/>
+  <text x="219" y="189" text-anchor="middle" class="lbl-node">Manuelle</text>
+  <text x="219" y="199" text-anchor="middle" class="lbl-bot">Klärung</text>
+
+  <!-- Bottleneck callout -->
+  <line x1="270" y1="185" x2="350" y2="185" class="stroke-thin"/>
+  <text x="355" y="180" class="lbl-bot">Engpass</text>
+  <text x="355" y="194" class="metric">+4.2 Tage Liegezeit</text>
+  <text x="355" y="207" class="lbl">62 % der Aufträge betroffen</text>
+
+  <!-- Gateway: Freigabe? -->
+  <g transform="translate(290,185)">
+    <polygon points="0,-14 14,0 0,14 -14,0" class="gate"/>
+    <text y="3" text-anchor="middle" class="lbl-node" font-size="9">Freigabe</text>
+  </g>
+
+  <!-- AM connectors -->
+  <path d="M 258 185 L 276 185" class="arrow-bot" marker-end="url(#ar-bot)"/>
+  <path d="M 304 185 L 470 185" class="arrow" marker-end="url(#ar)"/>
+
+  <!-- AM next task: Auftragsbestätigung -->
+  <rect x="470" y="170" width="78" height="30" rx="3" class="node"/>
+  <text x="509" y="189" text-anchor="middle" class="lbl-node">Auftrags-</text>
+  <text x="509" y="198" text-anchor="middle" class="lbl-node" font-size="9">bestätigung</text>
+
+  <!-- Down to Logistik -->
+  <path d="M 509 200 L 509 235" class="arrow" marker-end="url(#ar)"/>
+
+  <!-- Logistik: Picking -->
+  <rect x="470" y="240" width="78" height="30" rx="3" class="node"/>
+  <text x="509" y="259" text-anchor="middle" class="lbl-node">Kommiss. &amp;</text>
+  <text x="509" y="268" text-anchor="middle" class="lbl-node" font-size="9">Versand</text>
+
+  <!-- Across to left then down to Finanz -->
+  <path d="M 470 255 L 219 255" class="arrow" marker-end="url(#ar)"/>
+
+  <!-- Logistik task left: Versand-Doku -->
+  <rect x="180" y="240" width="78" height="30" rx="3" class="node"/>
+  <text x="219" y="259" text-anchor="middle" class="lbl-node">Versand-</text>
+  <text x="219" y="268" text-anchor="middle" class="lbl-node" font-size="9">dokumentation</text>
+
+  <path d="M 219 270 L 219 305" class="arrow" marker-end="url(#ar)"/>
+
+  <!-- Finanz: Rechnung -->
+  <rect x="180" y="310" width="78" height="30" rx="3" class="node"/>
+  <text x="219" y="329" text-anchor="middle" class="lbl-node">Rechnung &amp;</text>
+  <text x="219" y="338" text-anchor="middle" class="lbl-node" font-size="9">Geldeingang</text>
+
+  <path d="M 258 325 L 462 325" class="arrow" marker-end="url(#ar)"/>
+
+  <!-- End event -->
+  <circle cx="478" cy="325" r="12" class="end-ev"/>
+  <text x="478" y="358" text-anchor="middle" class="lbl-node">Cash</text>
+
+  <!-- Legend -->
+  <rect x="40" y="372" width="14" height="14" class="node-bot"/>
+  <text x="60" y="383" class="lbl">Engpass · quantifiziert durch Process Mining</text>
+
+  <rect x="320" y="372" width="14" height="14" class="node"/>
+  <text x="340" y="383" class="lbl">Standardaktivität · BPMN 2.0</text>
+</svg>
