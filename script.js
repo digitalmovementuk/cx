@@ -521,6 +521,15 @@ document.querySelectorAll('.outcomes__tab').forEach((button) => {
   });
 });
 
+document.querySelectorAll('form.form').forEach((f) => {
+  if (f === contactForm) return;
+  f.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const st = f.querySelector('.form__status');
+    if (st) st.textContent = 'Vorschau-Modus: Es wurden keine Daten übertragen.';
+  });
+});
+
 if (contactForm && formStatus) {
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -592,7 +601,7 @@ if (contactForm && formStatus) {
       // Once card top is near viewport top, start scaling down
       const exitProgress = Math.min(Math.max(-(rect.top - vh * 0.3) / (vh * 0.5), 0), 1);
       card.style.transformOrigin = '50% 100%';
-      card.style.transform = `scale(${1 - exitProgress * 0.08}) translateY(${-exitProgress * 20}px)`;
+      card.style.transform = `scale(${1 - exitProgress * 0.025}) translateY(${-exitProgress * 10}px)`;
       card.style.opacity = String(1 - exitProgress * 0.5);
       // Image scrub-in
       const video = card.querySelector('.cap-card__video');
