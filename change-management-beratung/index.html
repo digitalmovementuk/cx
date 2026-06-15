@@ -36,7 +36,7 @@ a{color:inherit;text-decoration:none}
 .nav-cta{padding:9px 14px;background:var(--cx-charcoal);color:#fff;font-weight:600;font-size:0.875rem;display:inline-flex;align-items:center;gap:8px;transition:background var(--dur) var(--ease)}
 .nav-cta:hover{background:var(--cx-charcoal-2)}
 .nav-cta__arrow{display:inline-flex;width:20px;height:20px;background:var(--cx-yellow);color:var(--cx-charcoal);align-items:center;justify-content:center}
-.hero{background:var(--cx-charcoal);color:#fff;padding:clamp(96px,12vw,160px) 0 clamp(80px,10vw,120px);position:relative;overflow:hidden}
+.hero{min-height:calc(100vh - 64px);background:var(--cx-charcoal);color:#fff;padding:clamp(96px,12vw,160px) 0 clamp(80px,10vw,120px);position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 85% 110%,rgba(255,122,0,0.18) 0%,transparent 55%);pointer-events:none}
 .hero__eyebrow{position:relative;display:inline-flex;align-items:center;gap:14px;font-size:0.75rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:28px;color:#fff}
 .hero__eyebrow::before{content:"";display:inline-block;width:24px;height:3px;background:var(--cx-yellow)}
@@ -1208,6 +1208,8 @@ body.has-drawer { overflow: hidden; }
   .cx-form__row input, .cx-form__row textarea, .cx-form__row select { margin-left: auto; margin-right: auto; }
 }
 /* /DM-MOBILE-CENTER */
+
+.card{padding:28px}
 </style>
 <footer class="footer">
  <div class="container footer__inner"><div class="footer__links"><strong>Branchen &amp; Regionen</strong> · <a href="../projektmanagement-beratung/logistik/index.html">Projektmanagement Logistik &amp; 3PL</a> · <a href="../projektmanagement-beratung/rheinland/index.html">Projektmanagement Rheinland</a></div>
