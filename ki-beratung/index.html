@@ -56,7 +56,7 @@ a{color:inherit;text-decoration:none}
 .btn__icon{display:inline-flex;width:26px;height:26px;background:var(--cx-charcoal);color:var(--cx-yellow);align-items:center;justify-content:center}
 .btn--ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.32)}
 .btn--ghost:hover{background:rgba(255,255,255,0.05)}
-.btn--ghost .btn__icon{background:rgba(255,255,255,0.12);color:#fff}
+.btn--ghost.btn__icon{background:rgba(255,255,255,0.12);color:#fff}
 
 .hero__trust{position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;padding-top:40px;border-top:1px solid var(--line-on-dark);max-width:780px}
 .trust-item{display:grid;gap:6px}
@@ -160,14 +160,14 @@ a{color:inherit;text-decoration:none}
 .topbar__actions{display:flex;align-items:center;gap:14px}
 .menu-btn{display:inline-flex;align-items:center;gap:12px;padding:9px 16px 9px 12px;background:transparent;border:1px solid var(--line);color:var(--cx-charcoal);font-family:inherit;font-weight:700;font-size:0.875rem;letter-spacing:-0.005em;cursor:pointer;transition:background var(--dur) var(--ease),border-color var(--dur) var(--ease),color var(--dur) var(--ease)}
 .menu-btn:hover{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
-.menu-btn:hover .menu-btn__icon span{background:var(--cx-yellow)}
+.menu-btn:hover.menu-btn__icon span{background:var(--cx-yellow)}
 .menu-btn__icon{display:inline-flex;flex-direction:column;justify-content:center;width:22px;height:18px;gap:3px}
 .menu-btn__icon span{display:block;height:2px;width:100%;background:var(--cx-charcoal);transition:transform var(--dur) var(--ease),opacity var(--dur) var(--ease),background var(--dur) var(--ease)}
 .menu-btn[aria-expanded="true"]{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span{background:var(--cx-yellow)}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span:nth-child(1){transform:translateY(5px) rotate(45deg)}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span:nth-child(2){opacity:0}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+.menu-btn[aria-expanded="true"].menu-btn__icon span{background:var(--cx-yellow)}
+.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
 
 .drawer{position:fixed;top:0;left:0;right:0;background:var(--cx-warm-2);border-bottom:1px solid var(--line);z-index:75;box-shadow:0 24px 48px -24px rgba(30,35,39,0.18);max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height 380ms var(--ease),opacity 220ms var(--ease),visibility 0s linear 220ms;padding-top:60px}
 .drawer.is-open{max-height:100vh;opacity:1;visibility:visible;transition:max-height 480ms var(--ease),opacity 220ms var(--ease) 80ms,visibility 0s linear}
@@ -181,7 +181,7 @@ a{color:inherit;text-decoration:none}
 .drawer__num{font-family:inherit;font-size:0.6875rem;font-weight:800;color:var(--cx-yellow);background:var(--cx-charcoal);width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;letter-spacing:0.04em}
 .drawer__title{font-size:0.9375rem;font-weight:700;color:var(--cx-charcoal);letter-spacing:-0.01em;line-height:1.3}
 .drawer__arrow{color:var(--cx-charcoal-3);font-size:1.125rem;transition:color var(--dur) var(--ease),transform var(--dur) var(--ease)}
-.drawer__link:hover .drawer__arrow{color:var(--cx-yellow);transform:translateX(3px)}
+.drawer__link:hover.drawer__arrow{color:var(--cx-yellow);transform:translateX(3px)}
 .drawer__footer{display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:20px 24px;background:var(--cx-charcoal);color:#fff;align-self:start}
 .drawer__footer-label{font-size:0.6875rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--cx-yellow)}
 .drawer__footer-h{margin:6px 0 12px;font-size:1.125rem;font-weight:700;letter-spacing:-0.01em;line-height:1.3}
@@ -211,27 +211,27 @@ a{color:inherit;text-decoration:none}
 .topbar__actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .menu-btn{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 11px;background:transparent;border:1px solid var(--line);color:var(--cx-charcoal);font-family:inherit;font-weight:700;font-size:0.8125rem;letter-spacing:-0.005em;cursor:pointer;transition:background 280ms var(--ease),border-color 280ms var(--ease),color 280ms var(--ease)}
 .menu-btn:hover{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
-.menu-btn:hover .menu-btn__icon span{background:var(--cx-yellow)}
+.menu-btn:hover.menu-btn__icon span{background:var(--cx-yellow)}
 .menu-btn__icon{display:inline-flex;flex-direction:column;justify-content:center;width:18px;height:14px;gap:3px}
 .menu-btn__icon span{display:block;height:1.5px;width:100%;background:var(--cx-charcoal);transition:transform 280ms var(--ease),opacity 280ms var(--ease),background 280ms var(--ease)}
 .menu-btn[aria-expanded="true"]{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span{background:var(--cx-yellow)}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span:nth-child(2){opacity:0}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span:nth-child(3){transform:translateY(-4.5px) rotate(-45deg)}
+.menu-btn[aria-expanded="true"].menu-btn__icon span{background:var(--cx-yellow)}
+.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(3){transform:translateY(-4.5px) rotate(-45deg)}
 .menu-btn__label{font-size:0.8125rem;font-weight:700}
 .nav-cta{padding:8px 14px;background:var(--cx-charcoal);color:#fff;font-weight:700;font-size:0.8125rem;letter-spacing:-0.005em;display:inline-flex;align-items:center;gap:9px;transition:background 280ms var(--ease)}
 .nav-cta:hover{background:var(--cx-charcoal-2)}
 .nav-cta__arrow{display:inline-flex;width:18px;height:18px;background:var(--cx-yellow);color:var(--cx-charcoal);align-items:center;justify-content:center;flex-shrink:0}
 .nav-cta__arrow svg{width:11px;height:11px}
 @media(max-width:680px){
-  .brand__divider,.brand__crumb{display:none}
+.brand__divider,.brand__crumb{display:none}
 }
 @media(max-width:540px){
-  .menu-btn__label{display:none}
-  .menu-btn{padding:8px 10px}
-  .nav-cta span:first-child{display:none}
-  .nav-cta{padding:8px 10px}
+.menu-btn__label{display:none}
+.menu-btn{padding:8px 10px}
+.nav-cta span:first-child{display:none}
+.nav-cta{padding:8px 10px}
 }
 
 /* === Content figures (Pass B images) === */
@@ -255,8 +255,8 @@ a{color:inherit;text-decoration:none}
 /* === Topbar visibility fix + reorder (CTA left of menu) === */
 .topbar{background:var(--cx-warm-2)!important;backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--cx-charcoal-3);box-shadow:0 1px 0 rgba(30,35,39,0.04),0 12px 28px -18px rgba(30,35,39,0.18)}
 .topbar__actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.topbar__actions .nav-cta{order:1}
-.topbar__actions .menu-btn{order:2}
+.topbar__actions.nav-cta{order:1}
+.topbar__actions.menu-btn{order:2}
 .menu-btn{background:rgba(30,35,39,0.04)}
 .menu-btn:hover{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
 </style>
@@ -264,136 +264,136 @@ a{color:inherit;text-decoration:none}
 
 <style id="cex-local-layout-reveal-fix">
 /* Local translation workbench preview: show all scroll-reveal sections inside file/iframe previews. */
-html { scroll-behavior: auto !important; }
+html { scroll-behavior: auto!important; }
 .reveal,
-.reveal .h-section,
-.reveal .h-lead,
-.reveal .benefit,
-.reveal .faq-item,
-.reveal .journey-step,
-.reveal .outcomes__panel-inner,
-.reveal .footer__brand-wrap,
-.reveal .footer__col {
-  opacity: 1 !important;
-  transform: none !important;
-  visibility: visible !important;
+.reveal.h-section,
+.reveal.h-lead,
+.reveal.benefit,
+.reveal.faq-item,
+.reveal.journey-step,
+.reveal.outcomes__panel-inner,
+.reveal.footer__brand-wrap,
+.reveal.footer__col {
+ opacity: 1!important;
+ transform: none!important;
+ visibility: visible!important;
 }
-.reveal .eyebrow__bar { width: 24px !important; }
+.reveal.eyebrow__bar { width: 24px!important; }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was kostet eine KI-Beratung?", "acceptedAnswer": {"@type": "Answer", "text": "Der Aufwand hängt vom Umfang (Scope) ab. Wir nennen und begründen eine belastbare Preisspanne im kostenlosen Erstgespräch, bevor Sie sich entscheiden. Größere Vorhaben begleiten wir in „Wellen\", sodass Sie nach jeder Phase neu entscheiden — und nie auf Verdacht in ein Großprojekt investieren."}}, {"@type": "Question", "name": "Wo fangen wir mit KI an?", "acceptedAnswer": {"@type": "Answer", "text": "Mit einem nüchternen Anwendungsfall-Scan: Wo im Haus gibt es viel Text, viele wiederkehrende Entscheidungen oder viel manuelle Suche. Daraus entsteht eine priorisierte Liste. Sie starten mit dem Anwendungsfall, der den besten Nutzen bei vertretbarem Aufwand verspricht."}}, {"@type": "Question", "name": "Brauchen wir erst eine große Datenstrategie, bevor wir starten?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht unbedingt. Wichtig ist, dass für den gewählten Anwendungsfall die nötigen Daten vorhanden, zugänglich und gut genug strukturiert sind — das prüfen wir gemeinsam vorab. Oft reicht eine fokussierte Datengrundlage für einen ersten echten Nutzen."}}, {"@type": "Question", "name": "Warum scheitern so viele KI-Vorhaben?", "acceptedAnswer": {"@type": "Answer", "text": "Aus unserer Erfahrung scheitern KI-Vorhaben in Organisationen an bekannten Faktoren erfolgreicher Transformationsprojekte: Begeisterung für die Technik, aber kein klar benannter Nutzen, keine tragfähigen Daten und kein Weg vom Piloten in den Betrieb. Dazu fehlt oft die Verantwortung für Qualität und Risiko. Wir drehen die Reihenfolge um — Nutzen, Daten, Pilot, Betrieb, Verantwortung — und bleiben, bis das Werkzeug im Alltag wirklich hilft."}}, {"@type": "Question", "name": "Wie gehen Sie mit Datenschutz und rechtlichen Anforderungen um?", "acceptedAnswer": {"@type": "Answer", "text": "Wir denken Datenschutz, Recht und Risiko von Anfang an mit, nicht als Nachgedanke. Anforderungen wie die DSGVO und der europäische Rechtsrahmen für KI werden bei der Auswahl und Gestaltung berücksichtigt. Orientierung dafür bieten anerkannte Stellen wie das BSI und international etwa die OECD mit ihren KI-Prinzipien. So bleibt der Einsatz nachvollziehbar und verantwortbar."}}, {"@type": "Question", "name": "Ersetzt KI dann unsere Mitarbeitenden?", "acceptedAnswer": {"@type": "Answer", "text": "Nein — in den Anwendungsfällen, die wir empfehlen, unterstützt KI die Menschen, statt sie zu ersetzen. Ihre Mitarbeitenden werden im Wesentlichen produktiver und effizienter: Sie können mehr leisten, bei höherer Qualität. Wiederkehrende Arbeit können sie oft auslagern auf KI. Im Resultat empfinden sie mehr Sinnhaftigkeit ihrer Arbeit und können sich zunehmend strategischen Fragen widmen."}}, {"@type": "Question", "name": "Was ist der Unterschied zwischen KI-Strategie und KI-Umsetzung?", "acceptedAnswer": {"@type": "Answer", "text": "Die Strategie klärt, wie KI Ihre Geschäftsziele unterstützen kann und in welchen Bereichen: Wo KI für Sie sinnvoll ist, und in welcher Reihenfolge — die Umsetzung hingegen bringt einen konkreten Anwendungsfall in den verlässlichen Betrieb. Wie bei jeder Strategie operationalisiert Ihr KI-Projekt die KI-Strategie. Beides gehört zusammen: Eine Strategie ohne Umsetzung bleibt eine Präsentation, eine Umsetzung ohne Strategie wird leicht zum Einzelfall ohne Anschluss. Wir liefern bei Bedarf beides, meist sequentiell."}}, {"@type": "Question", "name": "Wie lange dauert ein KI-Projekt?", "acceptedAnswer": {"@type": "Answer", "text": "Ein fokussierter Pilot zeigt in der Regel früh, ob der Nutzen real ist. Der Weg in den verlässlichen Betrieb braucht danach mehr Sorgfalt — Integration, Kontrolle, Verantwortung. Wir arbeiten bewusst nicht in starren Großprojekten, sondern in Phasen, die jeweils einen abgegrenzten Nutzen liefern, auf dem die nächste aufbaut."}}, {"@type": "Question", "name": "Arbeiten Sie auch mit kleineren Organisationen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Gerade dort lohnt sich der nüchterne, nutzenorientierte Ansatz, weil Budgets begrenzt sind und ein verfehltes KI-Projekt teuer wird. Wo ein großes Programm nicht passt, helfen ein kompakter Anwendungsfall-Scan, ein fokussierter Pilot oder Sparring für Ihre internen Verantwortlichen — so viel wie nötig, so schlank wie möglich."}}, {"@type": "Question", "name": "Woran erkennen wir, dass ein KI-Anwendungsfall sich wirklich lohnt?", "acceptedAnswer": {"@type": "Answer", "text": "An drei Dingen: Es gibt ein klar benanntes Problem mit spürbarem Aufwand heute, die nötigen Daten sind vorhanden und gut genug, und ein Mensch kann die Ergebnisse sinnvoll prüfen. Fehlt eines davon, ist Vorsicht geboten. Wir bewerten Kandidaten deshalb immer entlang von Nutzen, Datenlage und Risiko — und sagen offen, wenn ein Anwendungsfall trotz Begeisterung besser warten sollte, bis die Grundlagen stimmen."}}, {"@type": "Question", "name": "Wie vermeiden wir, dass ein KI-Pilot in der Schublade endet?", "acceptedAnswer": {"@type": "Answer", "text": "Indem der Weg in den Betrieb von Anfang an mitgedacht wird, nicht erst nach dem Piloten. Wir klären vorab, wie das Ergebnis in die bestehenden Abläufe und Systeme eingebunden wird, wer es im Alltag verantwortet und wie die Qualität laufend überwacht wird. Ein Pilot ist für uns kein Selbstzweck, sondern der kontrollierte erste Schritt eines Werkzeugs, das danach wirklich genutzt wird."}}, {"@type": "Question", "name": "Wie viel eigenes KI-Wissen brauchen wir dafür?", "acceptedAnswer": {"@type": "Answer", "text": "Weniger, als viele denken. Wichtiger als tiefe Technik-Kenntnis ist, dass Ihr Team versteht, wofür KI taugt, wo ihre Grenzen liegen und wie man Ergebnisse prüft. Die Stärke des Kunden liegt in seiner Kenntnis interner Prozesse und der eigenen Organisationskultur. Hier liegt der Input unserer Kunden."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was kostet eine KI-Beratung?", "acceptedAnswer": {"@type": "Answer", "text": "Der Aufwand hängt vom Umfang (Scope) ab. Wir nennen und begründen eine belastbare Preisspanne im kostenlosen Erstgespräch, bevor Sie sich entscheiden. Größere Vorhaben begleiten wir in „Wellen\", sodass Sie nach jeder Phase neu entscheiden — und nie auf Verdacht in ein Großprojekt investieren."}}, {"@type": "Question", "name": "Wo fangen wir mit KI an?", "acceptedAnswer": {"@type": "Answer", "text": "Mit einem strukturierten Anwendungsfall-Scan: Wo im Haus gibt es viel Text, viele wiederkehrende Entscheidungen oder viel manuelle Suche. Daraus entsteht eine priorisierte Liste. Sie starten mit dem Anwendungsfall, der den besten Nutzen bei vertretbarem Aufwand verspricht."}}, {"@type": "Question", "name": "Brauchen wir erst eine große Datenstrategie, bevor wir starten?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht unbedingt. Wichtig ist, dass für den gewählten Anwendungsfall die nötigen Daten vorhanden, zugänglich und gut genug strukturiert sind — das prüfen wir gemeinsam vorab. Oft reicht eine fokussierte Datengrundlage für einen ersten messbaren Nutzen."}}, {"@type": "Question", "name": "Warum scheitern so viele KI-Vorhaben?", "acceptedAnswer": {"@type": "Answer", "text": "Aus unserer Erfahrung scheitern KI-Vorhaben in Organisationen an bekannten Faktoren erfolgreicher Transformationsprojekte: Begeisterung für die Technik bei offenem Nutzen, fragmentierten Daten und fehlendem Weg vom Piloten in den Betrieb. Dazu fehlt oft die Verantwortung für Qualität und Risiko. Wir drehen die Reihenfolge um — Nutzen, Daten, Pilot, Betrieb, Verantwortung — und bleiben, bis das Werkzeug im Alltag messbar hilft."}}, {"@type": "Question", "name": "Wie gehen Sie mit Datenschutz und rechtlichen Anforderungen um?", "acceptedAnswer": {"@type": "Answer", "text": "Wir denken Datenschutz, Recht und Risiko von der ersten Phase an mit und verankern sie früh in Auswahl und Gestaltung. Anforderungen wie die DSGVO und der europäische Rechtsrahmen für KI werden bei der Auswahl und Gestaltung berücksichtigt. Orientierung dafür bieten anerkannte Stellen wie das BSI und international etwa die OECD mit ihren KI-Prinzipien. So bleibt der Einsatz nachvollziehbar und verantwortbar."}}, {"@type": "Question", "name": "Ersetzt KI dann unsere Mitarbeitenden?", "acceptedAnswer": {"@type": "Answer", "text": "Nein — in den Anwendungsfällen, die wir empfehlen, unterstützt KI die Menschen bei ihrer Arbeit. Ihre Mitarbeitenden werden im Wesentlichen produktiver und effizienter: Sie können mehr leisten, bei höherer Qualität. Wiederkehrende Arbeit können sie oft auslagern auf KI. Im Resultat empfinden sie mehr Sinnhaftigkeit ihrer Arbeit und können sich zunehmend strategischen Fragen widmen."}}, {"@type": "Question", "name": "Was ist der Unterschied zwischen KI-Strategie und KI-Umsetzung?", "acceptedAnswer": {"@type": "Answer", "text": "Die Strategie klärt, wie KI Ihre Geschäftsziele unterstützen kann und in welchen Bereichen: Wo KI für Sie sinnvoll ist, und in welcher Reihenfolge — die Umsetzung hingegen bringt einen konkreten Anwendungsfall in den verlässlichen Betrieb. Wie bei jeder Strategie operationalisiert Ihr KI-Projekt die KI-Strategie. Beides gehört zusammen: Erst die Umsetzung macht aus einer Strategie ein Ergebnis im Betrieb, und erst die Strategie gibt der Umsetzung Anschluss über den Einzelfall hinaus. Wir liefern bei Bedarf beides, meist sequentiell."}}, {"@type": "Question", "name": "Wie lange dauert ein KI-Projekt?", "acceptedAnswer": {"@type": "Answer", "text": "Ein fokussierter Pilot zeigt in der Regel früh, ob der Nutzen real ist. Der Weg in den verlässlichen Betrieb braucht danach mehr Sorgfalt — Integration, Kontrolle, Verantwortung. Wir arbeiten bewusst in klar abgegrenzten Phasen, die jeweils einen abgegrenzten Nutzen liefern, auf dem die nächste aufbaut."}}, {"@type": "Question", "name": "Arbeiten Sie auch mit kleineren Organisationen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Gerade dort lohnt sich der strukturierte, nutzenorientierte Ansatz, weil Budgets begrenzt sind und ein verfehltes KI-Projekt teuer wird. Wo ein großes Programm nicht passt, helfen ein kompakter Anwendungsfall-Scan, ein fokussierter Pilot oder Sparring für Ihre internen Verantwortlichen — so viel wie nötig, so schlank wie möglich."}}, {"@type": "Question", "name": "Woran erkennen wir, dass ein KI-Anwendungsfall sich wirklich lohnt?", "acceptedAnswer": {"@type": "Answer", "text": "An drei Dingen: Es gibt ein klar benanntes Problem mit spürbarem Aufwand heute, die nötigen Daten sind vorhanden und gut genug, und ein Mensch kann die Ergebnisse sinnvoll prüfen. Fehlt eines davon, ist Vorsicht geboten. Wir bewerten Kandidaten deshalb immer entlang von Nutzen, Datenlage und Risiko — und sagen offen, wenn ein Anwendungsfall trotz Begeisterung besser warten sollte, bis die Grundlagen stimmen."}}, {"@type": "Question", "name": "Wie vermeiden wir, dass ein KI-Pilot in der Schublade endet?", "acceptedAnswer": {"@type": "Answer", "text": "Indem der Weg in den Betrieb von Anfang an mitgedacht wird, bereits vor dem Piloten. Wir klären vorab, wie das Ergebnis in die bestehenden Abläufe und Systeme eingebunden wird, wer es im Alltag verantwortet und wie die Qualität laufend überwacht wird. Ein Pilot ist für uns der kontrollierte erste Schritt eines Werkzeugs, das danach produktiv genutzt wird."}}, {"@type": "Question", "name": "Wie viel eigenes KI-Wissen brauchen wir dafür?", "acceptedAnswer": {"@type": "Answer", "text": "Weniger, als viele denken. Wichtiger als tiefe Technik-Kenntnis ist, dass Ihr Team versteht, wofür KI taugt, wo ihre Grenzen liegen und wie man Ergebnisse prüft. Die Stärke des Kunden liegt in seiner Kenntnis interner Prozesse und der eigenen Organisationskultur. Hier liegt der Input unserer Kunden."}}]}</script>
 <style id="cx-hero-grid">
 .hero__grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(28px,3.5vw,52px);align-items:stretch;margin-bottom:40px;position:relative}
 .hero__copy{display:flex;flex-direction:column;justify-content:center;min-width:0}
-.hero__copy .hero__cta-row{margin-bottom:0}
+.hero__copy.hero__cta-row{margin-bottom:0}
 .hero__form-col{display:flex;align-items:center;min-width:0}
-.hero__form-col .cx-hero-form{margin:0!important;max-width:none!important;width:100%}
-@media(max-width:920px){.hero__grid{grid-template-columns:1fr;gap:24px}.hero__copy{text-align:center;align-items:center}.hero__form-col{justify-content:center}.hero__form-col .cx-hero-form{max-width:540px!important;margin:0 auto!important}}
+.hero__form-col.cx-hero-form{margin:0!important;max-width:none!important;width:100%}
+@media(max-width:920px){.hero__grid{grid-template-columns:1fr;gap:24px}.hero__copy{text-align:center;align-items:center}.hero__form-col{justify-content:center}.hero__form-col.cx-hero-form{max-width:540px!important;margin:0 auto!important}}
 </style>
 <style id="cx-nav-ported">
 :root{--acn-purple:var(--cx-yellow);--acn-black:var(--cx-charcoal);--acn-ink:var(--cx-charcoal);--ease-out:var(--ease);--font-display:var(--font-sans)}
 
 
 .skip-link {
-  position: absolute;
-  left: 0; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%);
-  top: 0;
-  background: var(--acn-black);
-  color: #fff;
-  padding: 12px 16px;
-  z-index: 999;
-  font-weight: 500;
-  text-decoration: none;
+ position: absolute;
+ left: 0; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%);
+ top: 0;
+ background: var(--acn-black);
+ color: #fff;
+ padding: 12px 16px;
+ z-index: 999;
+ font-weight: 500;
+ text-decoration: none;
 }
 
 .skip-link:focus { left: 16px; top: 16px; width: auto; height: auto; overflow: visible; clip-path: none; }
 
 
 /* ==========================================================================
-   Navigation
-   ========================================================================== */
+ Navigation
+ ========================================================================== */
 
 .nav {
-  position: fixed;
-  inset: 0 0 auto 0;
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  transition: background-color var(--dur) var(--ease-out), color var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out);
+ position: fixed;
+ inset: 0 0 auto 0;
+ z-index: 100;
+ background: rgba(0, 0, 0, 0.35);
+ backdrop-filter: blur(14px);
+ -webkit-backdrop-filter: blur(14px);
+ color: #fff;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+ transition: background-color var(--dur) var(--ease-out), color var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out);
 }
 
 
 .nav.is-scrolled {
-  background: rgba(255, 255, 255, 0.94);
-  color: var(--acn-ink);
-  border-bottom-color: var(--line);
+ background: rgba(255, 255, 255, 0.94);
+ color: var(--acn-ink);
+ border-bottom-color: var(--line);
 }
 
 
 .nav__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  width: 100%;
-  max-width: var(--container);
-  margin-inline: auto;
-  padding: 14px var(--container-px);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 32px;
+ width: 100%;
+ max-width: var(--container);
+ margin-inline: auto;
+ padding: 14px var(--container-px);
 }
 
 
 .nav__brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.125rem;
-  letter-spacing: -0.02em;
-  color: inherit;
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ text-decoration: none;
+ font-family: var(--font-display);
+ font-weight: 700;
+ font-size: 1.125rem;
+ letter-spacing: -0.02em;
+ color: inherit;
 }
 
 
 .nav__brand-mark {
-  display: inline-flex;
-  width: 28px;
-  height: 28px;
-  color: var(--cx-yellow);
-  background: var(--cx-charcoal);
-  padding: 4px;
-  transition: background-color var(--dur) var(--ease-out), color var(--dur) var(--ease-out);
+ display: inline-flex;
+ width: 28px;
+ height: 28px;
+ color: var(--cx-yellow);
+ background: var(--cx-charcoal);
+ padding: 4px;
+ transition: background-color var(--dur) var(--ease-out), color var(--dur) var(--ease-out);
 }
 
-.nav.is-scrolled .nav__brand-mark { background: var(--cx-charcoal); color: var(--cx-yellow); }
+.nav.is-scrolled.nav__brand-mark { background: var(--cx-charcoal); color: var(--cx-yellow); }
 
 .nav__brand-mark svg { width: 100%; height: 100%; }
 
 
 .nav__brand-text {
-  font-weight: 700;
-  letter-spacing: 0.02em;
+ font-weight: 700;
+ letter-spacing: 0.02em;
 }
 
 
 .nav__links {
-  display: flex;
-  align-items: center;
-  gap: 32px;
+ display: flex;
+ align-items: center;
+ gap: 32px;
 }
 
 .nav__links a {
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-decoration: none;
-  color: inherit;
-  letter-spacing: -0.005em;
-  position: relative;
-  padding: 6px 0;
-  opacity: 0.85;
-  transition: opacity var(--dur) var(--ease-out), color var(--dur) var(--ease-out);
+ font-size: 0.875rem;
+ font-weight: 500;
+ text-decoration: none;
+ color: inherit;
+ letter-spacing: -0.005em;
+ position: relative;
+ padding: 6px 0;
+ opacity: 0.85;
+ transition: opacity var(--dur) var(--ease-out), color var(--dur) var(--ease-out);
 }
 
 .nav__links a:hover { opacity: 1; }
@@ -401,304 +401,304 @@ html { scroll-behavior: auto !important; }
 .nav__links a.is-active { opacity: 1; }
 
 .nav__links a.is-active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  background: var(--acn-purple);
+ content: "";
+ position: absolute;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ height: 2px;
+ background: var(--acn-purple);
 }
 
 
 .nav__cta-group {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+ display: flex;
+ align-items: center;
+ gap: 12px;
 }
 
 
-.nav.is-scrolled .nav__desktop-cta {
-  background: var(--acn-black);
-  border-color: var(--acn-black);
-  color: #fff;
+.nav.is-scrolled.nav__desktop-cta {
+ background: var(--acn-black);
+ border-color: var(--acn-black);
+ color: #fff;
 }
 
-.nav .nav__desktop-cta {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.3);
-  color: #fff;
-  backdrop-filter: blur(8px);
+.nav.nav__desktop-cta {
+ background: rgba(255, 255, 255, 0.12);
+ border-color: rgba(255, 255, 255, 0.3);
+ color: #fff;
+ backdrop-filter: blur(8px);
 }
 
-.nav .nav__desktop-cta:hover {
-  background: var(--acn-purple);
-  border-color: var(--acn-purple);
+.nav.nav__desktop-cta:hover {
+ background: var(--acn-purple);
+ border-color: var(--acn-purple);
 }
 
-.nav.is-scrolled .nav__desktop-cta:hover {
-  background: var(--acn-purple);
-  border-color: var(--acn-purple);
+.nav.is-scrolled.nav__desktop-cta:hover {
+ background: var(--acn-purple);
+ border-color: var(--acn-purple);
 }
 
 
 .nav__menu {
-  display: none;
-  width: 44px;
-  height: 44px;
-  border: 1px solid currentColor;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
-  padding: 0;
+ display: none;
+ width: 44px;
+ height: 44px;
+ border: 1px solid currentColor;
+ background: transparent;
+ color: inherit;
+ cursor: pointer;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 5px;
+ padding: 0;
 }
 
 .nav__menu span {
-  display: block;
-  width: 18px;
-  height: 1.5px;
-  background: currentColor;
+ display: block;
+ width: 18px;
+ height: 1.5px;
+ background: currentColor;
 }
 
 
 .nav-drawer {
-  background: var(--acn-black);
-  color: #fff;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+ background: var(--acn-black);
+ color: #fff;
+ border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-drawer__inner {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 24px var(--container-px) 28px;
+ display: flex;
+ flex-direction: column;
+ gap: 4px;
+ padding: 24px var(--container-px) 28px;
 }
 
 .nav-drawer__inner a {
-  text-decoration: none;
-  color: inherit;
-  font-size: 1.125rem;
-  font-weight: 500;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  letter-spacing: -0.01em;
+ text-decoration: none;
+ color: inherit;
+ font-size: 1.125rem;
+ font-weight: 500;
+ padding: 14px 0;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ letter-spacing: -0.01em;
 }
 
 .nav-drawer__inner a:last-child { border-bottom: none; margin-top: 12px; }
 @media (max-width: 980px) {
 
-  .nav__links { display: none; }
+.nav__links { display: none; }
 
-  .nav__desktop-cta { display: none; }
+.nav__desktop-cta { display: none; }
 }
 
 /* Legacy mobile hamburger + drawer fully retired — cx-menu-btn is the single mobile menu */
 .nav__menu,
-.nav-drawer { display: none !important; }
+.nav-drawer { display: none!important; }
 
 
 body.has-drawer { overflow: hidden; }
 
 
 /* ==========================================================================
-   Wide hamburger menu + slide-down drawer (homepage, matches sub-pages)
-   ========================================================================== */
+ Wide hamburger menu + slide-down drawer (homepage, matches sub-pages)
+ ========================================================================== */
 .cx-menu-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 14px 8px 10px;
-  background: transparent;
-  border: 1px solid var(--line, rgba(0,0,0,0.18));
-  color: var(--cx-charcoal);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 0.8125rem;
-  letter-spacing: -0.005em;
-  cursor: pointer;
-  transition: background 280ms cubic-bezier(0.85,0,0,1),
-              border-color 280ms cubic-bezier(0.85,0,0,1),
-              color 280ms cubic-bezier(0.85,0,0,1);
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ padding: 8px 14px 8px 10px;
+ background: transparent;
+ border: 1px solid var(--line, rgba(0,0,0,0.18));
+ color: var(--cx-charcoal);
+ font-family: inherit;
+ font-weight: 700;
+ font-size: 0.8125rem;
+ letter-spacing: -0.005em;
+ cursor: pointer;
+ transition: background 280ms cubic-bezier(0.85,0,0,1),
+ border-color 280ms cubic-bezier(0.85,0,0,1),
+ color 280ms cubic-bezier(0.85,0,0,1);
 }
 
 .cx-menu-btn:hover {
-  background: var(--cx-charcoal);
-  color: #fff;
-  border-color: var(--cx-charcoal);
+ background: var(--cx-charcoal);
+ color: #fff;
+ border-color: var(--cx-charcoal);
 }
 
-.cx-menu-btn:hover .cx-menu-btn__icon span { background: var(--cx-yellow); }
+.cx-menu-btn:hover.cx-menu-btn__icon span { background: var(--cx-yellow); }
 
 .cx-menu-btn[aria-expanded="true"] {
-  background: var(--cx-charcoal);
-  color: #fff;
-  border-color: var(--cx-charcoal);
+ background: var(--cx-charcoal);
+ color: #fff;
+ border-color: var(--cx-charcoal);
 }
 
-.cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span { background: var(--cx-yellow); }
+.cx-menu-btn[aria-expanded="true"].cx-menu-btn__icon span { background: var(--cx-yellow); }
 
-.cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.cx-menu-btn[aria-expanded="true"].cx-menu-btn__icon span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
 
-.cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span:nth-child(2) { opacity: 0; }
+.cx-menu-btn[aria-expanded="true"].cx-menu-btn__icon span:nth-child(2) { opacity: 0; }
 
-.cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+.cx-menu-btn[aria-expanded="true"].cx-menu-btn__icon span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
 
 
 .cx-drawer {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  background: var(--cx-warm-2, #faf6ec);
-  border-bottom: 1px solid var(--line, rgba(0,0,0,0.18));
-  z-index: 75;
-  box-shadow: 0 24px 48px -24px rgba(30,35,39,0.18);
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  visibility: hidden;
-  transition: max-height 380ms cubic-bezier(0.85,0,0,1),
-              opacity 220ms cubic-bezier(0.85,0,0,1),
-              visibility 0s linear 220ms;
-  padding-top: 64px;
+ position: fixed;
+ top: 0; left: 0; right: 0;
+ background: var(--cx-warm-2, #faf6ec);
+ border-bottom: 1px solid var(--line, rgba(0,0,0,0.18));
+ z-index: 75;
+ box-shadow: 0 24px 48px -24px rgba(30,35,39,0.18);
+ max-height: 0;
+ overflow: hidden;
+ opacity: 0;
+ visibility: hidden;
+ transition: max-height 380ms cubic-bezier(0.85,0,0,1),
+ opacity 220ms cubic-bezier(0.85,0,0,1),
+ visibility 0s linear 220ms;
+ padding-top: 64px;
 }
 
 .cx-drawer.is-open {
-  max-height: 100vh;
-  opacity: 1;
-  visibility: visible;
-  transition: max-height 480ms cubic-bezier(0.85,0,0,1),
-              opacity 220ms cubic-bezier(0.85,0,0,1) 80ms,
-              visibility 0s linear;
+ max-height: 100vh;
+ opacity: 1;
+ visibility: visible;
+ transition: max-height 480ms cubic-bezier(0.85,0,0,1),
+ opacity 220ms cubic-bezier(0.85,0,0,1) 80ms,
+ visibility 0s linear;
 }
 
 .cx-drawer__inner {
-  max-width: var(--container, 1280px);
-  margin: 0 auto;
-  padding: 32px var(--container-px, clamp(24px,5vw,88px)) 36px;
-  display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: clamp(28px, 4vw, 56px);
+ max-width: var(--container, 1280px);
+ margin: 0 auto;
+ padding: 32px var(--container-px, clamp(24px,5vw,88px)) 36px;
+ display: grid;
+ grid-template-columns: 1.6fr 1fr;
+ gap: clamp(28px, 4vw, 56px);
 }
 @media (max-width: 880px) {
 
-  .cx-drawer__inner { grid-template-columns: 1fr; gap: 24px; padding: 20px var(--container-px, clamp(24px,5vw,88px)) 28px; }
+.cx-drawer__inner { grid-template-columns: 1fr; gap: 24px; padding: 20px var(--container-px, clamp(24px,5vw,88px)) 28px; }
 }
 
 .cx-drawer__section {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+ display: flex;
+ flex-direction: column;
+ gap: 8px;
 }
 
 .cx-drawer__label {
-  font-family: inherit;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--cx-charcoal-3);
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--line, rgba(0,0,0,0.18));
-  margin-bottom: 6px;
+ font-family: inherit;
+ font-size: 0.6875rem;
+ font-weight: 700;
+ letter-spacing: 0.22em;
+ text-transform: uppercase;
+ color: var(--cx-charcoal-3);
+ padding-bottom: 14px;
+ border-bottom: 1px solid var(--line, rgba(0,0,0,0.18));
+ margin-bottom: 6px;
 }
 
 .cx-drawer__link {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 18px;
-  padding: 14px 16px;
-  background: transparent;
-  border: 1px solid transparent;
-  text-decoration: none;
-  color: inherit;
-  transition: background 280ms cubic-bezier(0.85,0,0,1),
-              border-color 280ms cubic-bezier(0.85,0,0,1),
-              transform 280ms cubic-bezier(0.85,0,0,1);
+ display: grid;
+ grid-template-columns: auto 1fr auto;
+ align-items: center;
+ gap: 18px;
+ padding: 14px 16px;
+ background: transparent;
+ border: 1px solid transparent;
+ text-decoration: none;
+ color: inherit;
+ transition: background 280ms cubic-bezier(0.85,0,0,1),
+ border-color 280ms cubic-bezier(0.85,0,0,1),
+ transform 280ms cubic-bezier(0.85,0,0,1);
 }
 
 .cx-drawer__link:hover { background: #fff; border-color: var(--line, rgba(0,0,0,0.18)); transform: translateX(2px); }
 
 .cx-drawer__num {
-  font-family: inherit;
-  font-size: 0.6875rem;
-  font-weight: 800;
-  color: var(--cx-yellow);
-  background: var(--cx-charcoal);
-  width: 32px;
-  height: 32px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 0.04em;
+ font-family: inherit;
+ font-size: 0.6875rem;
+ font-weight: 800;
+ color: var(--cx-yellow);
+ background: var(--cx-charcoal);
+ width: 32px;
+ height: 32px;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ letter-spacing: 0.04em;
 }
 
 .cx-drawer__title {
-  font-size: 0.9375rem;
-  font-weight: 700;
-  color: var(--cx-charcoal);
-  letter-spacing: -0.01em;
-  line-height: 1.3;
+ font-size: 0.9375rem;
+ font-weight: 700;
+ color: var(--cx-charcoal);
+ letter-spacing: -0.01em;
+ line-height: 1.3;
 }
 
 .cx-drawer__arrow {
-  color: var(--cx-charcoal-3);
-  font-size: 1.125rem;
-  transition: color 280ms cubic-bezier(0.85,0,0,1),
-              transform 280ms cubic-bezier(0.85,0,0,1);
+ color: var(--cx-charcoal-3);
+ font-size: 1.125rem;
+ transition: color 280ms cubic-bezier(0.85,0,0,1),
+ transform 280ms cubic-bezier(0.85,0,0,1);
 }
 
-.cx-drawer__link:hover .cx-drawer__arrow { color: var(--cx-yellow); transform: translateX(3px); }
+.cx-drawer__link:hover.cx-drawer__arrow { color: var(--cx-yellow); transform: translateX(3px); }
 
 .cx-drawer__footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 20px 24px;
-  background: var(--cx-charcoal);
-  color: #fff;
-  align-self: start;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ gap: 24px;
+ padding: 20px 24px;
+ background: var(--cx-charcoal);
+ color: #fff;
+ align-self: start;
 }
 
 .cx-drawer__footer-label {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--cx-yellow);
+ font-size: 0.6875rem;
+ font-weight: 700;
+ letter-spacing: 0.22em;
+ text-transform: uppercase;
+ color: var(--cx-yellow);
 }
 
 .cx-drawer__footer-h {
-  margin: 6px 0 12px;
-  font-size: 1.125rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
+ margin: 6px 0 12px;
+ font-size: 1.125rem;
+ font-weight: 700;
+ letter-spacing: -0.01em;
+ line-height: 1.3;
 }
 
 .cx-drawer__footer-p {
-  margin: 0 0 18px;
-  font-size: 0.875rem;
-  line-height: 1.55;
-  color: rgba(255,255,255,0.78);
+ margin: 0 0 18px;
+ font-size: 0.875rem;
+ line-height: 1.55;
+ color: rgba(255,255,255,0.78);
 }
 
 .cx-drawer__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 11px 16px;
-  background: var(--cx-yellow);
-  color: var(--cx-charcoal);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  transition: background 280ms cubic-bezier(0.85,0,0,1), transform 280ms cubic-bezier(0.85,0,0,1);
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ padding: 11px 16px;
+ background: var(--cx-yellow);
+ color: var(--cx-charcoal);
+ font-size: 0.8125rem;
+ font-weight: 700;
+ letter-spacing: 0.04em;
+ text-decoration: none;
+ transition: background 280ms cubic-bezier(0.85,0,0,1), transform 280ms cubic-bezier(0.85,0,0,1);
 }
 
 .cx-drawer__cta:hover { background: var(--cx-yellow-soft); transform: translateY(-1px); }
@@ -706,64 +706,64 @@ body.has-drawer { overflow: hidden; }
 .cx-drawer__cta-arrow { font-size: 1rem; }
 
 .cx-drawer__close-hint {
-  font-size: 0.6875rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.55);
-  letter-spacing: 0.08em;
+ font-size: 0.6875rem;
+ font-weight: 600;
+ color: rgba(255,255,255,0.55);
+ letter-spacing: 0.08em;
 }
 
 .cx-drawer__close-hint kbd {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.6875rem;
-  background: rgba(255,255,255,0.1);
-  padding: 2px 7px;
-  border: 1px solid rgba(255,255,255,0.2);
-  margin: 0 3px;
+ font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+ font-size: 0.6875rem;
+ background: rgba(255,255,255,0.1);
+ padding: 2px 7px;
+ border: 1px solid rgba(255,255,255,0.2);
+ margin: 0 3px;
 }
 
 .cx-drawer-scrim {
-  position: fixed;
-  inset: 0;
-  background: rgba(30,35,39,0.42);
-  backdrop-filter: blur(2px);
-  z-index: 70;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 220ms cubic-bezier(0.85,0,0,1),
-              visibility 0s linear 220ms;
+ position: fixed;
+ inset: 0;
+ background: rgba(30,35,39,0.42);
+ backdrop-filter: blur(2px);
+ z-index: 70;
+ opacity: 0;
+ visibility: hidden;
+ transition: opacity 220ms cubic-bezier(0.85,0,0,1),
+ visibility 0s linear 220ms;
 }
 
 .cx-drawer-scrim.is-open {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 220ms cubic-bezier(0.85,0,0,1);
+ opacity: 1;
+ visibility: visible;
+ transition: opacity 220ms cubic-bezier(0.85,0,0,1);
 }
 @media (max-width: 560px) {
 
-  .cx-menu-btn { padding: 8px 10px; }
+.cx-menu-btn { padding: 8px 10px; }
 }
 
 
 /* ---- Nav: enter-from-top on load --------------------------------------- */
 
 .nav {
-  animation: acn-enter-from-top 700ms var(--acn-ease) backwards;
+ animation: acn-enter-from-top 700ms var(--acn-ease) backwards;
 }
 
 
 /* ---- Section nav indicator: scroll progress bar at top of nav --------- */
 
 .nav::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--cx-yellow);
-  transform-origin: left;
-  transform: scaleX(var(--scroll-progress, 0));
-  z-index: 2;
+ content: "";
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ height: 2px;
+ background: var(--cx-yellow);
+ transform-origin: left;
+ transform: scaleX(var(--scroll-progress, 0));
+ z-index: 2;
 }
 
 
@@ -779,27 +779,27 @@ body.has-drawer { overflow: hidden; }
 
 .cx-menu-btn { padding: 8px 14px 8px 11px; font-size: 0.8125rem; }
 
-.cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span:nth-child(1) { transform: translateY(4.5px) rotate(45deg); }
+.cx-menu-btn[aria-expanded="true"].cx-menu-btn__icon span:nth-child(1) { transform: translateY(4.5px) rotate(45deg); }
 
-.cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span:nth-child(3) { transform: translateY(-4.5px) rotate(-45deg); }
+.cx-menu-btn[aria-expanded="true"].cx-menu-btn__icon span:nth-child(3) { transform: translateY(-4.5px) rotate(-45deg); }
 
 .nav__cta-group { gap: 10px; }
 @media (max-width: 540px) {
 
-  .cx-menu-btn { padding: 8px 10px; }
+.cx-menu-btn { padding: 8px 10px; }
 }
 
 
 /* === Topbar visibility fix + reorder (homepage) === */
-.nav { background: var(--cx-warm-2) !important; backdrop-filter: saturate(180%) blur(18px); -webkit-backdrop-filter: saturate(180%) blur(18px); border-bottom: 1px solid var(--cx-charcoal-3); box-shadow: 0 1px 0 rgba(30,35,39,0.04), 0 12px 28px -18px rgba(30,35,39,0.18); }
+.nav { background: var(--cx-warm-2)!important; backdrop-filter: saturate(180%) blur(18px); -webkit-backdrop-filter: saturate(180%) blur(18px); border-bottom: 1px solid var(--cx-charcoal-3); box-shadow: 0 1px 0 rgba(30,35,39,0.04), 0 12px 28px -18px rgba(30,35,39,0.18); }
 
 .nav__cta-group { display: flex; align-items: center; gap: 10px; }
 
-.nav__cta-group .nav__desktop-cta { order: 1; }
+.nav__cta-group.nav__desktop-cta { order: 1; }
 
-.nav__cta-group .cx-menu-btn { order: 2; }
+.nav__cta-group.cx-menu-btn { order: 2; }
 
-.nav__cta-group .nav__menu { order: 3; }
+.nav__cta-group.nav__menu { order: 3; }
 
 .cx-menu-btn { background: rgba(30,35,39,0.04); }
 
@@ -807,24 +807,24 @@ body.has-drawer { overflow: hidden; }
 
 
 /* =========================================================================
-   Mobile polish: unified menu + slides carousel for Leistungen
-   ========================================================================= */
+ Mobile polish: unified menu + slides carousel for Leistungen
+ ========================================================================= */
 
 /* "Springen zu" anchor block — visible only when drawer is in its mobile (stacked) layout */
 .cx-drawer__section--mobile { display: none; }
 
 .cx-drawer__jump {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 16px;
-  border: 1px solid transparent;
-  font-size: 0.9375rem;
-  font-weight: 700;
-  letter-spacing: -0.005em;
-  color: var(--cx-charcoal);
-  text-decoration: none;
-  transition: background 280ms cubic-bezier(0.85,0,0,1), border-color 280ms cubic-bezier(0.85,0,0,1), transform 280ms cubic-bezier(0.85,0,0,1);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 14px 16px;
+ border: 1px solid transparent;
+ font-size: 0.9375rem;
+ font-weight: 700;
+ letter-spacing: -0.005em;
+ color: var(--cx-charcoal);
+ text-decoration: none;
+ transition: background 280ms cubic-bezier(0.85,0,0,1), border-color 280ms cubic-bezier(0.85,0,0,1), transform 280ms cubic-bezier(0.85,0,0,1);
 }
 
 .cx-drawer__jump:hover { background: #fff; border-color: var(--line); transform: translateX(2px); }
@@ -834,12 +834,12 @@ body.has-drawer { overflow: hidden; }
 .cx-drawer__jump:hover span { color: var(--cx-yellow); transform: translateX(3px); }
 @media (max-width: 880px) {
 
-  .cx-drawer__section--mobile { display: flex; flex-direction: column; gap: 6px; }
+.cx-drawer__section--mobile { display: flex; flex-direction: column; gap: 6px; }
 
-  /* The dark footer block adds visual weight on a small viewport — keep it compact */
-  .cx-drawer__footer { padding: 18px 20px; }
+ /* The dark footer block adds visual weight on a small viewport — keep it compact */
+.cx-drawer__footer { padding: 18px 20px; }
 
-  .cx-drawer__footer-p { display: none; }
+.cx-drawer__footer-p { display: none; }
 }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://cx-experts.de/"}, {"@type": "ListItem", "position": 2, "name": "KI-Beratung & Strategie", "item": "https://cx-experts.de/ki-beratung/"}]}</script>
@@ -847,13 +847,13 @@ body.has-drawer { overflow: hidden; }
 <style id="grid-coherence">
 /* Card-grid coherence: a grid with EXACTLY 4 cards renders 2×2 (never 3+1 orphan / negative space). 3- and 6-card grids unaffected. */
 @media(min-width:600px){
-  .cards:has(> :last-child:nth-child(4)),
-  .problem-grid:has(> :last-child:nth-child(4)),
-  .services-grid:has(> :last-child:nth-child(4)),
-  .diff-list:has(> :last-child:nth-child(4)),
-  .uses-grid:has(> :last-child:nth-child(4)),
-  .industries:has(> :last-child:nth-child(4)),
-  .compliance-block:has(> :last-child:nth-child(4)){grid-template-columns:repeat(2,1fr)!important}
+.cards:has(>:last-child:nth-child(4)),
+.problem-grid:has(>:last-child:nth-child(4)),
+.services-grid:has(>:last-child:nth-child(4)),
+.diff-list:has(>:last-child:nth-child(4)),
+.uses-grid:has(>:last-child:nth-child(4)),
+.industries:has(>:last-child:nth-child(4)),
+.compliance-block:has(>:last-child:nth-child(4)){grid-template-columns:repeat(2,1fr)!important}
 }
 </style>
 </head>
@@ -863,252 +863,252 @@ body.has-drawer { overflow: hidden; }
 
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
 <header>
-  <nav class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="../index.html" class="nav__brand" aria-label="CX Startseite">
-        <span class="nav__brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M11 7 L22 16 L11 25" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"/></svg></span>
-        <span class="nav__brand-text">CX</span>
-      </a>
-      <div class="nav__links" role="navigation" aria-label="Hauptnavigation">
-        <a href="#vorgehen">Vorgehen</a>
-        <a href="#vorteile">Vorteile</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <div class="nav__cta-group">
-        <button type="button" class="cx-menu-btn" id="cxMenuToggle" aria-label="Leistungen-Menü öffnen" aria-expanded="false" aria-controls="cxServicesDrawer">
-          <span class="cx-menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span class="cx-menu-btn__label">Leistungen</span>
-        </button>
-        <a href="#kontakt" class="btn btn--accent btn--small nav__desktop-cta">Erstgespräch anfragen <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
-      </div>
-    </div>
-  </nav>
+ <nav class="nav" id="nav">
+ <div class="nav__inner">
+ <a href="../index.html" class="nav__brand" aria-label="CX Startseite">
+ <span class="nav__brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M11 7 L22 16 L11 25" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"/></svg></span>
+ <span class="nav__brand-text">CX</span>
+ </a>
+ <div class="nav__links" role="navigation" aria-label="Hauptnavigation">
+ <a href="#vorgehen">Vorgehen</a>
+ <a href="#vorteile">Vorteile</a>
+ <a href="#faq">FAQ</a>
+ </div>
+ <div class="nav__cta-group">
+ <button type="button" class="cx-menu-btn" id="cxMenuToggle" aria-label="Leistungen-Menü öffnen" aria-expanded="false" aria-controls="cxServicesDrawer">
+ <span class="cx-menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+ <span class="cx-menu-btn__label">Leistungen</span>
+ </button>
+ <a href="#kontakt" class="btn btn--accent btn--small nav__desktop-cta">Erstgespräch anfragen <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
+ </div>
+ </div>
+ </nav>
 </header>
 <div class="cx-drawer-scrim" id="cxDrawerScrim" aria-hidden="true"></div>
 <aside class="cx-drawer" id="cxServicesDrawer" aria-hidden="true" role="dialog" aria-label="Leistungs-Navigation">
-  <div class="cx-drawer__inner">
-    <div class="cx-drawer__column">
-      <div class="cx-drawer__section">
-        <div class="cx-drawer__label">Säule 1 · Projekte &amp; Prozesse</div>
-        <a class="cx-drawer__link" href="../prozessoptimierung-beratung/index.html"><span class="cx-drawer__num">01</span><span class="cx-drawer__title">Prozessoptimierung &amp; BPM</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
-        <a class="cx-drawer__link" href="../projektmanagement-beratung/index.html"><span class="cx-drawer__num">02</span><span class="cx-drawer__title">Projektmanagement</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
-        <a class="cx-drawer__link" href="../digitalisierungsberatung/index.html"><span class="cx-drawer__num">03</span><span class="cx-drawer__title">Digitalisierung &amp; Transformation</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
-        <a class="cx-drawer__link" href="../change-management-beratung/index.html"><span class="cx-drawer__num">04</span><span class="cx-drawer__title">Change Management</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
-        <a class="cx-drawer__link" href="../ki-beratung/index.html"><span class="cx-drawer__num">05</span><span class="cx-drawer__title">KI-Beratung &amp; Strategie</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
-      </div>
-      <div class="cx-drawer__section" style="margin-top:24px">
-        <div class="cx-drawer__label">Säule 2 · Architektur</div>
-        <a class="cx-drawer__link" href="../enterprise-architecture-beratung/index.html"><span class="cx-drawer__num">06</span><span class="cx-drawer__title">Enterprise Architecture</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
-      </div>
-      <div class="cx-drawer__section cx-drawer__section--mobile" style="margin-top:24px">
-        <div class="cx-drawer__label">Springen zu</div>
-        <a class="cx-drawer__jump" href="#vorgehen">Vorgehen <span aria-hidden="true">→</span></a>
-        <a class="cx-drawer__jump" href="#vorteile">Vorteile <span aria-hidden="true">→</span></a>
-        <a class="cx-drawer__jump" href="#faq">FAQ <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-    <div class="cx-drawer__footer">
-      <div>
-        <div class="cx-drawer__footer-label">CX-Experts</div>
-        <div class="cx-drawer__footer-h">Zwei Säulen, sechs Beratungsfelder.</div>
-        <p class="cx-drawer__footer-p">Projekte &amp; Prozesse als Kernpfeiler, Enterprise Architecture als zweiter Schwerpunkt. Beide greifen ineinander.</p>
-        <a href="#kontakt" class="cx-drawer__cta"><span>Erstgespräch anfragen</span><span class="cx-drawer__cta-arrow">→</span></a>
-      </div>
-      <div class="cx-drawer__close-hint">Schließen mit <kbd>Esc</kbd> oder Klick außerhalb</div>
-    </div>
-  </div>
+ <div class="cx-drawer__inner">
+ <div class="cx-drawer__column">
+ <div class="cx-drawer__section">
+ <div class="cx-drawer__label">Säule 1 · Projekte &amp; Prozesse</div>
+ <a class="cx-drawer__link" href="../prozessoptimierung-beratung/index.html"><span class="cx-drawer__num">01</span><span class="cx-drawer__title">Prozessoptimierung &amp; BPM</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ <a class="cx-drawer__link" href="../projektmanagement-beratung/index.html"><span class="cx-drawer__num">02</span><span class="cx-drawer__title">Projektmanagement</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ <a class="cx-drawer__link" href="../digitalisierungsberatung/index.html"><span class="cx-drawer__num">03</span><span class="cx-drawer__title">Digitalisierung &amp; Transformation</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ <a class="cx-drawer__link" href="../change-management-beratung/index.html"><span class="cx-drawer__num">04</span><span class="cx-drawer__title">Change Management</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ <a class="cx-drawer__link" href="../ki-beratung/index.html"><span class="cx-drawer__num">05</span><span class="cx-drawer__title">KI-Beratung &amp; Strategie</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ </div>
+ <div class="cx-drawer__section" style="margin-top:24px">
+ <div class="cx-drawer__label">Säule 2 · Architektur</div>
+ <a class="cx-drawer__link" href="../enterprise-architecture-beratung/index.html"><span class="cx-drawer__num">06</span><span class="cx-drawer__title">Enterprise Architecture</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ </div>
+ <div class="cx-drawer__section cx-drawer__section--mobile" style="margin-top:24px">
+ <div class="cx-drawer__label">Springen zu</div>
+ <a class="cx-drawer__jump" href="#vorgehen">Vorgehen <span aria-hidden="true">→</span></a>
+ <a class="cx-drawer__jump" href="#vorteile">Vorteile <span aria-hidden="true">→</span></a>
+ <a class="cx-drawer__jump" href="#faq">FAQ <span aria-hidden="true">→</span></a>
+ </div>
+ </div>
+ <div class="cx-drawer__footer">
+ <div>
+ <div class="cx-drawer__footer-label">CX-Experts</div>
+ <div class="cx-drawer__footer-h">Zwei Säulen, sechs Beratungsfelder.</div>
+ <p class="cx-drawer__footer-p">Projekte &amp; Prozesse als Kernpfeiler, Enterprise Architecture als zweiter Schwerpunkt. Beide greifen ineinander.</p>
+ <a href="#kontakt" class="cx-drawer__cta"><span>Erstgespräch anfragen</span><span class="cx-drawer__cta-arrow">→</span></a>
+ </div>
+ <div class="cx-drawer__close-hint">Schließen mit <kbd>Esc</kbd> oder Klick außerhalb</div>
+ </div>
+ </div>
 </aside>
 
 <main>
 
 <!-- HERO -->
 <section class="hero" data-bench-role="hero">
-  <div class="container">
-    <div class="hero__grid">
-      <div class="hero__copy">
-      <div class="hero__eyebrow">KI-Beratung für Unternehmen</div>
-    <h1 class="hero__title">Vom Use Case <span class="accent">›</span> zur KI-Einführung</h1>
-    <p class="hero__lead">Eine erfolgreiche Einführung von künstlicher Intelligenz unterscheidet sich in der Einführung in Organisationen nicht wesentlich von anderen Digitalisierungs-Projekten. Maßgeblich für den Erfolg sind klare Anwendungsfälle, ein professionelles Anforderungsmanagement, eine ausreichende Datengrundlage und ein abgestimmter Projektmanagement-Plan, der den Piloten effektiv ausrollt. Wir sind Experten in der Umsetzung von KI-Transformations- und Digitalisierungs-Vorhaben und realisieren KI-Einführungen End-to-End, DSGVO-konform und mit einem praxiserprobten Stakeholder- und Anforderungsmanagement in Organisationen jeder Größe.</p>
-    <div class="hero__cta-row">
-      <a href="#kontakt" class="btn">Erstgespräch anfragen <span class="btn__icon">→</span></a>
-      <a href="#leistungen" class="btn btn--ghost">Leistungen ansehen <span class="btn__icon">↓</span></a>
-    </div>
-      </div>
-      <div class="hero__form-col">
-      <form class="cx-hero-form" action="mailto:kontakt@cx-experts.de" method="post" enctype="text/plain" aria-label="Erstgespräch anfragen" style="display:block;max-width:540px;margin:18px 0 6px;padding:16px 18px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.28);border-radius:14px">
-      <span style="display:block;font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FFB870;margin-bottom:10px">Erstgespräch anfragen · kostenlos &amp; unverbindlich</span>
-      <div style="display:flex;gap:8px;margin-bottom:8px">
-        <input type="text" name="name" placeholder="Vollständiger Name" required aria-label="Vollständiger Name" autocomplete="name" style="flex:1;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;min-width:0">
-        <input type="tel" name="phone" placeholder="Telefonnummer" required aria-label="Telefonnummer" autocomplete="tel" style="flex:1;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;min-width:0">
-      </div>
-      <input type="email" name="email" placeholder="Geschäfts-E-Mail" required aria-label="E-Mail" autocomplete="email" style="display:block;width:100%;box-sizing:border-box;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;margin-bottom:8px">
-      <textarea name="enquiry" rows="2" placeholder="Worum geht es? Ein, zwei Sätze genügen." required aria-label="Ihre Anfrage" style="display:block;width:100%;box-sizing:border-box;padding:12px 13px;font-size:16px;line-height:1.4;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;margin-bottom:10px;resize:vertical;font-family:inherit"></textarea>
-      <button type="submit" style="display:block;width:100%;padding:13px 18px;font-size:14px;font-weight:800;background:#FF7A00;color:#1E2327;border:none;border-radius:9px;cursor:pointer">Anfrage senden →</button>
-      <label style="display:flex;gap:8px;align-items:flex-start;font-size:11px;line-height:1.45;color:rgba(255,255,255,0.88);margin-top:10px"><input type="checkbox" name="dsgvo" required style="flex-shrink:0;margin-top:2px"><span>Ich willige in die Verarbeitung meiner Angaben gem. <a href="../datenschutz.html" style="color:#FFB870">Datenschutzerklärung</a> (Art. 6 Abs. 1 lit. b DSGVO) ein. Die Daten werden ausschließlich zur Beantwortung meiner Anfrage genutzt und nach Abschluss bzw. auf Widerruf gelöscht.</span></label>
-    </form>
-      </div>
-      </div>
-    <div class="hero__trust"><div class="trust-item"><div class="trust-item__num">Nutzen zuerst</div><div class="trust-item__label">echter Anwendungsfall statt Hype</div></div><div class="trust-item"><div class="trust-item__num">End-to-End</div><div class="trust-item__label">vom Use Case über den Piloten bis in den Betrieb</div></div><div class="trust-item"><div class="trust-item__num">DACH</div><div class="trust-item__label">branchenübergreifend · Organisationen jeder Größe</div></div></div>
-  </div>
+ <div class="container">
+ <div class="hero__grid">
+ <div class="hero__copy">
+ <div class="hero__eyebrow">KI-Beratung für Unternehmen</div>
+ <h1 class="hero__title">Vom Use Case <span class="accent">›</span> zur KI-Einführung</h1>
+ <p class="hero__lead">Eine erfolgreiche Einführung von künstlicher Intelligenz folgt in Organisationen weitgehend denselben Erfolgsregeln wie andere Digitalisierungs-Projekte. Maßgeblich für den Erfolg sind klare Anwendungsfälle, ein professionelles Anforderungsmanagement, eine ausreichende Datengrundlage und ein abgestimmter Projektmanagement-Plan, der den Piloten effektiv ausrollt. Wir sind Experten in der Umsetzung von KI-Transformations- und Digitalisierungs-Vorhaben und realisieren KI-Einführungen End-to-End, DSGVO-konform und mit einem praxiserprobten Stakeholder- und Anforderungsmanagement in Organisationen jeder Größe.</p>
+ <div class="hero__cta-row">
+ <a href="#kontakt" class="btn">Erstgespräch anfragen <span class="btn__icon">→</span></a>
+ <a href="#leistungen" class="btn btn--ghost">Leistungen ansehen <span class="btn__icon">↓</span></a>
+ </div>
+ </div>
+ <div class="hero__form-col">
+ <form class="cx-hero-form" action="mailto:kontakt@cx-experts.de" method="post" enctype="text/plain" aria-label="Erstgespräch anfragen" style="display:block;max-width:540px;margin:18px 0 6px;padding:16px 18px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.28);border-radius:14px">
+ <span style="display:block;font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FFB870;margin-bottom:10px">Erstgespräch anfragen · kostenlos &amp; unverbindlich</span>
+ <div style="display:flex;gap:8px;margin-bottom:8px">
+ <input type="text" name="name" placeholder="Vollständiger Name" required aria-label="Vollständiger Name" autocomplete="name" style="flex:1;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;min-width:0">
+ <input type="tel" name="phone" placeholder="Telefonnummer" required aria-label="Telefonnummer" autocomplete="tel" style="flex:1;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;min-width:0">
+ </div>
+ <input type="email" name="email" placeholder="Geschäfts-E-Mail" required aria-label="E-Mail" autocomplete="email" style="display:block;width:100%;box-sizing:border-box;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;margin-bottom:8px">
+ <textarea name="enquiry" rows="2" placeholder="Worum geht es? Ein, zwei Sätze genügen." required aria-label="Ihre Anfrage" style="display:block;width:100%;box-sizing:border-box;padding:12px 13px;font-size:16px;line-height:1.4;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;margin-bottom:10px;resize:vertical;font-family:inherit"></textarea>
+ <button type="submit" style="display:block;width:100%;padding:13px 18px;font-size:14px;font-weight:800;background:#FF7A00;color:#1E2327;border:none;border-radius:9px;cursor:pointer">Anfrage senden →</button>
+ <label style="display:flex;gap:8px;align-items:flex-start;font-size:11px;line-height:1.45;color:rgba(255,255,255,0.88);margin-top:10px"><input type="checkbox" name="dsgvo" required style="flex-shrink:0;margin-top:2px"><span>Ich willige in die Verarbeitung meiner Angaben gem. <a href="../datenschutz.html" style="color:#FFB870">Datenschutzerklärung</a> (Art. 6 Abs. 1 lit. b DSGVO) ein. Die Daten werden ausschließlich zur Beantwortung meiner Anfrage genutzt und nach Abschluss bzw. auf Widerruf gelöscht.</span></label>
+ </form>
+ </div>
+ </div>
+ <div class="hero__trust"><div class="trust-item"><div class="trust-item__num">Nutzen zuerst</div><div class="trust-item__label">realer Anwendungsfall vor der Technologie</div></div><div class="trust-item"><div class="trust-item__num">End-to-End</div><div class="trust-item__label">vom Use Case über den Piloten bis in den Betrieb</div></div><div class="trust-item"><div class="trust-item__num">DACH</div><div class="trust-item__label">branchenübergreifend · Organisationen jeder Größe</div></div></div>
+ </div>
 </section>
 
 <!-- PROBLEM FRAMING -->
 <section class="section section--paper reveal" data-bench-role="approach">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow">Warum KI-Vorhaben scheitern</div>
-      <h2 class="h-section">KI-Projekte scheitern meist an fehlendem IT-Projektmanagement.</h2>
-      <p class="h-lead">Erfolgreiche KI-Projekte müssen mehr sein als nur Hype. Sie beginnen mit realen, kundenspezifischen Anwendungsfällen, einer guten Datengrundlage, und einem Piloten, der hilft, zu verstehen, wie der Endnutzer die KI in der Praxis einsetzt. Ebenfalls maßgeblich sind Qualitäts- und Risikomanagement in den einzelnen Projektphasen (Sprints), sodass die Gesamtumsetzung sich fortwährend anpasst an neue Erkenntnisse, Nutzer-Anforderungen und externe regulatorische und technische Entwicklungen.</p>
-    </div>
-    <figure style="margin:0 0 30px"><img src="../media/cx-img-strategie.jpg" alt="Team prüft einen konkreten KI-Anwendungsfall statt dem Hype zu folgen" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">KI beginnt mit einem echten Anwendungsfall, nicht mit dem Werkzeug</figcaption></figure>
-    <p style="margin:0 0 24px;font-size:1.0625rem;font-weight:600;color:var(--cx-charcoal)">Gründe für ein Scheitern von KI-Einführungsprojekten aus der Praxis:</p>
-    <div class="problem-grid"><div class="problem-card"><div class="problem-card__num">01</div><h3>Hype statt echtem Anwendungsfall</h3><p>Alles dreht sich um die Technologie. In anderen Worten: Das Vorhaben startet mit dem „Werkzeug", nicht mit einem realen, kundenspezifischen Anwendungsfall. Ohne klar benannten Anwendernutzen, Prozessbeschreibungen und Nutzer-Anforderungen lässt sich weder sauber priorisieren noch der Erfolg messen.</p></div><div class="problem-card"><div class="problem-card__num">02</div><h3>Keine ausreichende Datengrundlage</h3><p>KI, wie jede Technologie, ist nur so gut wie die Datenqualität und Prozessqualität. Sind Daten fragmentiert, unvollständig oder schlecht gepflegt, kann auch KI keine vollständigen Anforderungen und Prozesse beschreiben und automatisieren. Da diese allerdings häufig auftretende Phänomene sind, ist ein agiler Ansatz – damit ist eine iterative Projektmethodik, die der Idee des „Learning &amp; Adapt" Rechnung trägt, gemeint – nützlich, da so schnell Defizite identifiziert und behoben werden können.</p></div><div class="problem-card"><div class="problem-card__num">03</div><h3>Der Pilot wird nie ausgerollt</h3><p>Ein Prototyp überzeugt in der Demo und bleibt dann stehen. Ohne abgestimmten Projektmanagement-Plan mit klaren Meilensteinen, Projekt-Deliverables und Input der Key-Stakeholder kann ein KI-Einführungsprojekt schnell in der Entwicklungsphase enden. Das Einbinden aller relevanten Personengruppen und die Darstellung von Projektfortschritten sowie Produkt-Mehrwerten ist hier ganz konkret ein wichtiger Hebel.</p></div><div class="problem-card"><div class="problem-card__num">04</div><h3>Kein Qualitäts- und Risikomanagement</h3><p>Wer prüft die Ergebnisse, wer verantwortet sie, was passiert bei Fehlern? Ohne Qualitäts- und Risikomanagement in den einzelnen Projektphasen wird KI zum unkalkulierbaren Risiko.</p></div></div>
-    <div class="problem-conclusion">Wir verkaufen keine KI-Versprechen. Wir behandeln die Einführung von KI wie ein professionell geführtes Digitalisierungs-Projekt. Wir wenden <strong>praxiserprobte Digitalisierungs- und IT-Projektmanagement-Methoden</strong> an. Diese vereinen agile und hybride Projektmanagement-Ansätze mit einem „state-of-the-art" IT-Anforderungsmanagement und einer nutzerzentrierten Entwicklung und Implementierung.</div>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow">Warum KI-Vorhaben scheitern</div>
+ <h2 class="h-section">KI-Projekte scheitern meist an fehlendem IT-Projektmanagement.</h2>
+ <p class="h-lead">Erfolgreiche KI-Projekte müssen mehr sein als nur Hype. Sie beginnen mit realen, kundenspezifischen Anwendungsfällen, einer guten Datengrundlage, und einem Piloten, der hilft, zu verstehen, wie der Endnutzer die KI in der Praxis einsetzt. Ebenfalls maßgeblich sind Qualitäts- und Risikomanagement in den einzelnen Projektphasen (Sprints), sodass die Gesamtumsetzung sich fortwährend anpasst an neue Erkenntnisse, Nutzer-Anforderungen und externe regulatorische und technische Entwicklungen.</p>
+ </div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-strategie.jpg" alt="Team prüft einen konkreten KI-Anwendungsfall vor der Technologie" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">KI beginnt mit einem realen Anwendungsfall und führt von dort zur passenden Technologie</figcaption></figure>
+ <p style="margin:0 0 24px;font-size:1.0625rem;font-weight:600;color:var(--cx-charcoal)">Gründe für ein Scheitern von KI-Einführungsprojekten aus der Praxis:</p>
+ <div class="problem-grid"><div class="problem-card"><div class="problem-card__num">01</div><h3>Technologie vor dem Anwendungsfall</h3><p>Alles dreht sich um die Technologie. In anderen Worten: Das Vorhaben startet mit dem „Werkzeug" und überspringt den realen, kundenspezifischen Anwendungsfall. Erst mit klar benanntem Anwendernutzen, Prozessbeschreibungen und Nutzer-Anforderungen lässt sich sauber priorisieren und der Erfolg messen.</p></div><div class="problem-card"><div class="problem-card__num">02</div><h3>Fragmentierte Datengrundlage</h3><p>KI, wie jede Technologie, ist nur so gut wie die Datenqualität und Prozessqualität. Sind Daten fragmentiert, unvollständig oder schlecht gepflegt, beschreibt und automatisiert auch KI Anforderungen und Prozesse nur lückenhaft. Da dies häufig auftretende Phänomene sind, hilft ein agiler Ansatz – damit ist eine iterative Projektmethodik, die der Idee des „Learning &amp; Adapt" Rechnung trägt, gemeint –, da so schnell Defizite identifiziert und behoben werden können.</p></div><div class="problem-card"><div class="problem-card__num">03</div><h3>Der Pilot bleibt vor dem Rollout stehen</h3><p>Ein Prototyp überzeugt in der Demo und bleibt dann stehen. Erst ein abgestimmter Projektmanagement-Plan mit klaren Meilensteinen, Projekt-Deliverables und Input der Key-Stakeholder führt ein KI-Einführungsprojekt über die Entwicklungsphase hinaus. Das Einbinden aller relevanten Personengruppen und die Darstellung von Projektfortschritten sowie Produkt-Mehrwerten ist hier ganz konkret ein wichtiger Hebel.</p></div><div class="problem-card"><div class="problem-card__num">04</div><h3>Offenes Qualitäts- und Risikomanagement</h3><p>Wer prüft die Ergebnisse, wer verantwortet sie, was passiert bei Fehlern? Erst ein geregeltes Qualitäts- und Risikomanagement in den einzelnen Projektphasen macht den KI-Einsatz kalkulierbar.</p></div></div>
+ <div class="problem-conclusion">Wir liefern belegbare Ergebnisse. Wir behandeln die Einführung von KI wie ein professionell geführtes Digitalisierungs-Projekt. Wir wenden <strong>praxiserprobte Digitalisierungs- und IT-Projektmanagement-Methoden</strong> an. Diese vereinen agile und hybride Projektmanagement-Ansätze mit einem „state-of-the-art" IT-Anforderungsmanagement und einer nutzerzentrierten Entwicklung und Implementierung.</div>
+ </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section section--white reveal" id="leistungen" data-bench-role="core-capability">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow">Unsere Leistungen</div>
-      <h2 class="h-section">Unsere sechs KI-Leistungsfelder</h2>
-      <p class="h-lead">Wir liefern den ganzen Bogen aus einer Hand: vom Anforderungsmanagement über die Datenqualitäts- und Prozessanalyse und das agile, hybride Projektmanagement bis zum KI-Engineering, das den Piloten in den produktiven Betrieb überführt, mit klarer Governance über Qualität und Risiko und einem Change-Management, das die Organisation mitnimmt. Anders als eine Beratung, die eine KI-Strategie schreibt und übergibt, realisieren wir die Einführung End-to-End, bis zum Ergebnis im Betrieb.</p>
-      <p class="h-lead">Im Mandat heißt das konkret: Wir priorisieren die Anwendungsfälle, die Aufwand und Nutzen am besten ausbalancieren, und prüfen ehrlich, ob die Datengrundlage trägt. Wir bauen einen fokussierten Piloten, der die richtige Frage beantwortet, und überführen ihn, sobald er sich bewährt, mit einem abgestimmten Projektmanagement-Plan in den integrierten Betrieb, mit Kontrolle durch den Menschen an den richtigen Stellen. Qualitäts- und Risikomanagement sowie die rechtlichen Anforderungen klären wir von der ersten Projektphase an. So entsteht ein Werkzeug, das im Alltag wirklich trägt, statt einer Demo, die niemand einsetzt.</p>
-    </div>
-    <figure style="margin:0 0 30px"><img src="../media/cx-img-analyse.jpg" alt="Ehrliche Prüfung von Anwendungsfall und Datengrundlage" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Zuerst der Nutzen und die Daten, dann das Modell</figcaption></figure>
-    <div class="services-grid"><div class="service-card"><div class="service-card__num">01</div><h3>Anforderungsmanagement</h3><p>Bevor ein KI-Modell entwickelt wird, klären wir gemeinsam, was die Organisation wirklich braucht: Zielgruppen, Zielformulierungen, reale Anwendungsfälle, Erwartungen der Stakeholder, sowie messbare Erfolgskriterien. Sauber erhobene Anforderungen sind die Grundlage und die Voraussetzung jeder erfolgreichen KI-Einführung, die später im Betrieb Bestand hat.</p></div><div class="service-card"><div class="service-card__num">02</div><h3>Datenqualitäts- und Prozessanalyse</h3><p>Wir prüfen, ob eine ausreichende Datengrundlage und Datenstruktur vorhanden sind, und analysieren die Prozesse, in die die KI eingreifen soll. Erst wenn Datenqualität und Abläufe verstanden sind, lässt sich verlässlich entscheiden, was machbar ist und was sich lohnt.</p></div><div class="service-card"><div class="service-card__num">03</div><h3>Agiles und hybrides Projektmanagement</h3><p>Wir führen die Einführung in klaren Projektphasen, agil wo Tempo und Lernen zählen, klassisch wo Termine und Abhängigkeiten feststehen. So bleibt das Vorhaben steuerbar und passt sich fortwährend an neue Erkenntnisse an.</p></div><div class="service-card"><div class="service-card__num">04</div><h3>Governance, Qualität und Risiko</h3><p>Klares Qualitäts- und Risikomanagement, geregelte Verantwortung und Rechtssicherheit. Wer prüft, wer verantwortet, was bei Fehlern passiert, ist geklärt, bevor KI in den Alltag geht.</p></div><div class="service-card"><div class="service-card__num">05</div><h3>KI-Engineering</h3><p>Wir bauen den Piloten und überführen ihn mit einem abgestimmten Projektmanagement-Plan in den produktiven Betrieb: Integration in bestehende Systeme, Monitoring und Kontrolle durch den Menschen an den richtigen Stellen. Technik im Dienst des Anwendungsfalls, nicht umgekehrt.</p></div><div class="service-card"><div class="service-card__num">06</div><h3>Change-Management</h3><p>Die beste KI nützt nichts, wenn sie im Alltag nicht angenommen wird. Wir begleiten den Wandel aktiv: Wir binden die Betroffenen früh ein, schaffen Akzeptanz, schulen die Endnutzer und verankern die neuen Abläufe, sodass die Lösung nicht nur technisch läuft, sondern auch gelebt wird.</p></div></div>
-    <ul class="value-list" style="margin-top:28px"><li>Realer, kundenspezifischer Anwendungsfall als Grundlage</li><li>Daten- und Machbarkeitsprüfung als Voraussetzung</li><li>Abgestimmter Projektmanagement-Plan für Transparenz und interne Legitimation</li><li>Qualitäts- und Risikomanagement von der ersten Projektphase an</li><li>Qualitätsmanagement und Change-Management für nachhaltige Akzeptanz</li></ul>
-    <style>
-    .cx-ig{margin:56px 0 0;padding:clamp(20px,3vw,34px);background:linear-gradient(180deg,#ffffff,#fbf7ee);border:1px solid var(--line);border-radius:18px}
-    .cx-ig__eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:0.72rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--cx-charcoal-3);margin-bottom:12px}
-    .cx-ig__eyebrow::before{content:"";display:inline-block;width:22px;height:3px;background:var(--cx-yellow)}
-    .cx-ig__title{margin:0 0 8px;font-size:clamp(1.25rem,2.2vw,1.625rem);font-weight:800;letter-spacing:-0.02em;line-height:1.16;color:var(--cx-charcoal)}
-    .cx-ig__lead{margin:0 0 18px;font-size:0.95rem;line-height:1.6;color:var(--muted);max-width:62ch}
-    .cx-ig__svg{display:block;width:100%;height:auto;max-width:760px;margin:6px auto 0}
-    .cx-ig__mobile{display:none;margin:6px 0 0;padding:0;list-style:none}
-    .cx-ig__m-goal{font-size:0.9rem;font-weight:700;color:var(--cx-charcoal);text-align:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:4px}
-    .cx-ig__m-goal strong{color:var(--cx-yellow)}
-    .cx-ig__m-item{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 14px}
-    .cx-ig__m-ic{flex:0 0 auto;width:40px;height:40px;border-radius:10px;background:var(--cx-charcoal);display:flex;align-items:center;justify-content:center}
-    .cx-ig__m-ic svg{width:22px;height:22px}
-    .cx-ig__m-name{font-size:0.9rem;font-weight:700;color:var(--cx-charcoal);line-height:1.25}
-    @media(max-width:620px){.cx-ig__svg{display:none}.cx-ig__mobile{display:grid;gap:9px}}
-    .cx-ig figcaption{margin-top:14px;font-size:0.78rem;color:var(--muted);line-height:1.55}
-    </style>
-    <figure class="cx-ig reveal" role="group" aria-label="Zusammenspiel der sechs Komponenten einer erfolgreichen KI-Einführung">
-      <div class="cx-ig__eyebrow">Zusammenspiel</div>
-      <h3 class="cx-ig__title">So greifen die sechs Komponenten ineinander.</h3>
-      <p class="cx-ig__lead">Keine Komponente steht für sich. Anforderungsmanagement, Datenqualitäts- und Prozessanalyse, agiles und hybrides Projektmanagement, Governance über Qualität und Risiko, KI-Engineering und Change-Management greifen ineinander und führen gemeinsam zu einer KI-Einführung, die im produktiven Betrieb Bestand hat.</p>
-      <svg class="cx-ig__svg" viewBox="0 0 1120 700" role="img" aria-label="Hexagon-Diagramm: sechs Leistungsfelder rund um eine erfolgreiche KI-Einführung" xmlns="http://www.w3.org/2000/svg" style="font-family:'Inter',system-ui,sans-serif"><title>Zusammenspiel der sechs Leistungsfelder</title><path d="M616.0 253.0 L682.0 138.7 L438.0 138.7 L504.0 253.0 Z" fill="#1E2327" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M672.0 350.0 L804.0 350.0 L682.0 138.7 L616.0 253.0 Z" fill="#262d33" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M616.0 447.0 L682.0 561.3 L804.0 350.0 L672.0 350.0 Z" fill="#1E2327" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M504.0 447.0 L438.0 561.3 L682.0 561.3 L616.0 447.0 Z" fill="#262d33" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M448.0 350.0 L316.0 350.0 L438.0 561.3 L504.0 447.0 Z" fill="#1E2327" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M504.0 253.0 L438.0 138.7 L316.0 350.0 L448.0 350.0 Z" fill="#262d33" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><polygon points="672.0,350.0 616.0,253.0 504.0,253.0 448.0,350.0 504.0,447.0 616.0,447.0" fill="#ffffff" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><text x="560.0" y="336.0" text-anchor="middle" font-size="15" font-weight="700" fill="#616160" letter-spacing="0.06em">FÜHRT ZU</text><text x="560.0" y="360.0" text-anchor="middle" font-size="22" font-weight="800" fill="#1E2327">Erfolgreiche</text><text x="560.0" y="384.0" text-anchor="middle" font-size="22" font-weight="800" fill="#1E2327">KI-Einführung</text><g transform="translate(533.0 145.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4.5" width="12" height="16" rx="2"/><rect x="9" y="2.5" width="6" height="3.5" rx="1.2"/><path d="M8.2 12.5l2.3 2.3 4.3-5"/></g><g transform="translate(687.2 234.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6"/><line x1="15" y1="15" x2="20" y2="20"/><line x1="8.6" y1="11.4" x2="8.6" y2="9.2"/><line x1="10.5" y1="11.4" x2="10.5" y2="7.6"/><line x1="12.4" y1="11.4" x2="12.4" y2="9.9"/></g><g transform="translate(687.2 412.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.6"/><rect x="10" y="10" width="4" height="4" rx="1"/><line x1="9.5" y1="7" x2="9.5" y2="4.5"/><line x1="14.5" y1="7" x2="14.5" y2="4.5"/><line x1="9.5" y1="19.5" x2="9.5" y2="17"/><line x1="14.5" y1="19.5" x2="14.5" y2="17"/><line x1="7" y1="9.5" x2="4.5" y2="9.5"/><line x1="7" y1="14.5" x2="4.5" y2="14.5"/><line x1="19.5" y1="9.5" x2="17" y2="9.5"/><line x1="19.5" y1="14.5" x2="17" y2="14.5"/></g><g transform="translate(533.0 501.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.8v5.2c0 4.8-3 7.7-7 8.9-4-1.2-7-4.1-7-8.9V5.8z"/><path d="M8.7 11.8l2.2 2.2 4.4-4.6"/></g><g transform="translate(378.8 412.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13a6 6 0 0 1 10.5-4"/><path d="M14.2 4.8l2.7 0.4-0.4 2.7"/><path d="M18 11a6 6 0 0 1-10.5 4"/><path d="M9.8 19.2l-2.7-0.4 0.4-2.7"/></g><g transform="translate(378.8 234.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8.5" r="2.6"/><circle cx="15.2" cy="8.5" r="2.6"/><path d="M4.5 18.5c0-3 2-4.6 4.5-4.6s4.5 1.6 4.5 4.6"/><path d="M14 14.2c2.3 0.1 4 1.7 4 4.3"/></g><text text-anchor="middle" font-size="20" font-weight="800" fill="#1E2327"><tspan x="560.0" y="82.0">Anforderungs­management</tspan></text><text text-anchor="start" font-size="20" font-weight="800" fill="#1E2327"><tspan x="792.1" y="203.5">Datenqualitäts- &</tspan><tspan x="792.1" y="228.5">Prozessanalyse</tspan></text><text text-anchor="start" font-size="20" font-weight="800" fill="#1E2327"><tspan x="792.1" y="484.0">KI-Engineering</tspan></text><text text-anchor="middle" font-size="20" font-weight="800" fill="#1E2327"><tspan x="560.0" y="605.5">Governance,</tspan><tspan x="560.0" y="630.5">Qualität & Risiko</tspan></text><text text-anchor="end" font-size="20" font-weight="800" fill="#1E2327"><tspan x="327.9" y="471.5">Agiles & hybrides</tspan><tspan x="327.9" y="496.5">Projektmanagement</tspan></text><text text-anchor="end" font-size="20" font-weight="800" fill="#1E2327"><tspan x="327.9" y="203.5">Change-</tspan><tspan x="327.9" y="228.5">Management</tspan></text></svg>
-      <ul class="cx-ig__mobile" aria-hidden="true"><li class="cx-ig__m-goal">Sechs Komponenten, ein Ziel: <strong>Erfolgreiche KI-Einführung</strong></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4.5" width="12" height="16" rx="2"/><rect x="9" y="2.5" width="6" height="3.5" rx="1.2"/><path d="M8.2 12.5l2.3 2.3 4.3-5"/></svg></span><span class="cx-ig__m-name">Anforderungsmanagement</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><line x1="15" y1="15" x2="20" y2="20"/><line x1="8.6" y1="11.4" x2="8.6" y2="9.2"/><line x1="10.5" y1="11.4" x2="10.5" y2="7.6"/><line x1="12.4" y1="11.4" x2="12.4" y2="9.9"/></svg></span><span class="cx-ig__m-name">Datenqualitäts- und Prozessanalyse</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.6"/><rect x="10" y="10" width="4" height="4" rx="1"/><line x1="9.5" y1="7" x2="9.5" y2="4.5"/><line x1="14.5" y1="7" x2="14.5" y2="4.5"/><line x1="9.5" y1="19.5" x2="9.5" y2="17"/><line x1="14.5" y1="19.5" x2="14.5" y2="17"/><line x1="7" y1="9.5" x2="4.5" y2="9.5"/><line x1="7" y1="14.5" x2="4.5" y2="14.5"/><line x1="19.5" y1="9.5" x2="17" y2="9.5"/><line x1="19.5" y1="14.5" x2="17" y2="14.5"/></svg></span><span class="cx-ig__m-name">KI-Engineering</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 2.8v5.2c0 4.8-3 7.7-7 8.9-4-1.2-7-4.1-7-8.9V5.8z"/><path d="M8.7 11.8l2.2 2.2 4.4-4.6"/></svg></span><span class="cx-ig__m-name">Governance, Qualität und Risiko</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13a6 6 0 0 1 10.5-4"/><path d="M14.2 4.8l2.7 0.4-0.4 2.7"/><path d="M18 11a6 6 0 0 1-10.5 4"/><path d="M9.8 19.2l-2.7-0.4 0.4-2.7"/></svg></span><span class="cx-ig__m-name">Agiles und hybrides Projektmanagement</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="2.6"/><circle cx="15.2" cy="8.5" r="2.6"/><path d="M4.5 18.5c0-3 2-4.6 4.5-4.6s4.5 1.6 4.5 4.6"/><path d="M14 14.2c2.3 0.1 4 1.7 4 4.3"/></svg></span><span class="cx-ig__m-name">Change-Management</span></li></ul>
-      <figcaption>Die sechs Leistungsfelder wirken zusammen: Anforderungsmanagement, Datenqualitäts- und Prozessanalyse, agiles und hybrides Projektmanagement, Governance über Qualität und Risiko, KI-Engineering sowie Change-Management führen gemeinsam zu einer erfolgreichen, produktiven KI-Einführung.</figcaption>
-    </figure>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow">Unsere Leistungen</div>
+ <h2 class="h-section">Unsere sechs KI-Leistungsfelder</h2>
+ <p class="h-lead">Wir liefern den ganzen Bogen aus einer Hand: vom Anforderungsmanagement über die Datenqualitäts- und Prozessanalyse und das agile, hybride Projektmanagement bis zum KI-Engineering, das den Piloten in den produktiven Betrieb überführt, mit klarer Governance über Qualität und Risiko und einem Change-Management, das die Organisation mitnimmt. Über die reine KI-Strategie hinaus realisieren wir die Einführung End-to-End, bis zum Ergebnis im produktiven Betrieb.</p>
+ <p class="h-lead">Im Mandat heißt das konkret: Wir priorisieren die Anwendungsfälle, die Aufwand und Nutzen am besten ausbalancieren, und prüfen, ob die Datengrundlage ausreicht. Wir bauen einen fokussierten Piloten, der die richtige Frage beantwortet, und überführen ihn, sobald er sich bewährt, mit einem abgestimmten Projektmanagement-Plan in den integrierten Betrieb, mit Kontrolle durch den Menschen an den richtigen Stellen. Qualitäts- und Risikomanagement sowie die rechtlichen Anforderungen klären wir von der ersten Projektphase an. So entsteht eine Lösung, die im Alltag verlässlich läuft und genutzt wird.</p>
+ </div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-analyse.jpg" alt="Prüfung von Anwendungsfall und Datengrundlage" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Zuerst der Nutzen und die Daten, dann das Modell</figcaption></figure>
+ <div class="services-grid"><div class="service-card"><div class="service-card__num">01</div><h3>Anforderungsmanagement</h3><p>Bevor ein KI-Modell entwickelt wird, klären wir gemeinsam, was die Organisation wirklich braucht: Zielgruppen, Zielformulierungen, reale Anwendungsfälle, Erwartungen der Stakeholder, sowie messbare Erfolgskriterien. Sauber erhobene Anforderungen sind die Grundlage und die Voraussetzung jeder erfolgreichen KI-Einführung, die später im Betrieb Bestand hat.</p></div><div class="service-card"><div class="service-card__num">02</div><h3>Datenqualitäts- und Prozessanalyse</h3><p>Wir prüfen, ob eine ausreichende Datengrundlage und Datenstruktur vorhanden sind, und analysieren die Prozesse, in die die KI eingreifen soll. Erst wenn Datenqualität und Abläufe verstanden sind, lässt sich verlässlich entscheiden, was machbar ist und was sich lohnt.</p></div><div class="service-card"><div class="service-card__num">03</div><h3>Agiles und hybrides Projektmanagement</h3><p>Wir führen die Einführung in klaren Projektphasen, agil wo Tempo und Lernen zählen, klassisch wo Termine und Abhängigkeiten feststehen. So bleibt das Vorhaben steuerbar und passt sich fortwährend an neue Erkenntnisse an.</p></div><div class="service-card"><div class="service-card__num">04</div><h3>Governance, Qualität und Risiko</h3><p>Klares Qualitäts- und Risikomanagement, geregelte Verantwortung und Rechtssicherheit. Wer prüft, wer verantwortet, was bei Fehlern passiert, ist geklärt, bevor KI in den Alltag geht.</p></div><div class="service-card"><div class="service-card__num">05</div><h3>KI-Engineering</h3><p>Wir bauen den Piloten und überführen ihn mit einem abgestimmten Projektmanagement-Plan in den produktiven Betrieb: Integration in bestehende Systeme, Monitoring und Kontrolle durch den Menschen an den richtigen Stellen. Die Technik richtet sich konsequent am Anwendungsfall aus.</p></div><div class="service-card"><div class="service-card__num">06</div><h3>Change-Management</h3><p>Die beste KI wirkt erst, wenn sie im Alltag angenommen wird. Wir begleiten den Wandel aktiv: Wir binden die Betroffenen früh ein, schaffen Akzeptanz, schulen die Endnutzer und verankern die neuen Abläufe, sodass die Lösung technisch läuft und zugleich im Alltag gelebt wird.</p></div></div>
+ <ul class="value-list" style="margin-top:28px"><li>Realer, kundenspezifischer Anwendungsfall als Grundlage</li><li>Daten- und Machbarkeitsprüfung als Voraussetzung</li><li>Abgestimmter Projektmanagement-Plan für Transparenz und interne Legitimation</li><li>Qualitäts- und Risikomanagement von der ersten Projektphase an</li><li>Qualitätsmanagement und Change-Management für nachhaltige Akzeptanz</li></ul>
+ <style>
+.cx-ig{margin:56px 0 0;padding:clamp(20px,3vw,34px);background:linear-gradient(180deg,#ffffff,#fbf7ee);border:1px solid var(--line);border-radius:18px}
+.cx-ig__eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:0.72rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--cx-charcoal-3);margin-bottom:12px}
+.cx-ig__eyebrow::before{content:"";display:inline-block;width:22px;height:3px;background:var(--cx-yellow)}
+.cx-ig__title{margin:0 0 8px;font-size:clamp(1.25rem,2.2vw,1.625rem);font-weight:800;letter-spacing:-0.02em;line-height:1.16;color:var(--cx-charcoal)}
+.cx-ig__lead{margin:0 0 18px;font-size:0.95rem;line-height:1.6;color:var(--muted);max-width:62ch}
+.cx-ig__svg{display:block;width:100%;height:auto;max-width:760px;margin:6px auto 0}
+.cx-ig__mobile{display:none;margin:6px 0 0;padding:0;list-style:none}
+.cx-ig__m-goal{font-size:0.9rem;font-weight:700;color:var(--cx-charcoal);text-align:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:4px}
+.cx-ig__m-goal strong{color:var(--cx-yellow)}
+.cx-ig__m-item{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:11px 14px}
+.cx-ig__m-ic{flex:0 0 auto;width:40px;height:40px;border-radius:10px;background:var(--cx-charcoal);display:flex;align-items:center;justify-content:center}
+.cx-ig__m-ic svg{width:22px;height:22px}
+.cx-ig__m-name{font-size:0.9rem;font-weight:700;color:var(--cx-charcoal);line-height:1.25}
+ @media(max-width:620px){.cx-ig__svg{display:none}.cx-ig__mobile{display:grid;gap:9px}}
+.cx-ig figcaption{margin-top:14px;font-size:0.78rem;color:var(--muted);line-height:1.55}
+ </style>
+ <figure class="cx-ig reveal" role="group" aria-label="Zusammenspiel der sechs Komponenten einer erfolgreichen KI-Einführung">
+ <div class="cx-ig__eyebrow">Zusammenspiel</div>
+ <h3 class="cx-ig__title">So greifen die sechs Komponenten ineinander.</h3>
+ <p class="cx-ig__lead">Jede Komponente wirkt im Zusammenspiel. Anforderungsmanagement, Datenqualitäts- und Prozessanalyse, agiles und hybrides Projektmanagement, Governance über Qualität und Risiko, KI-Engineering und Change-Management greifen ineinander und führen gemeinsam zu einer KI-Einführung, die im produktiven Betrieb Bestand hat.</p>
+ <svg class="cx-ig__svg" viewBox="0 0 1120 700" role="img" aria-label="Hexagon-Diagramm: sechs Leistungsfelder rund um eine erfolgreiche KI-Einführung" xmlns="http://www.w3.org/2000/svg" style="font-family:'Inter',system-ui,sans-serif"><title>Zusammenspiel der sechs Leistungsfelder</title><path d="M616.0 253.0 L682.0 138.7 L438.0 138.7 L504.0 253.0 Z" fill="#1E2327" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M672.0 350.0 L804.0 350.0 L682.0 138.7 L616.0 253.0 Z" fill="#262d33" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M616.0 447.0 L682.0 561.3 L804.0 350.0 L672.0 350.0 Z" fill="#1E2327" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M504.0 447.0 L438.0 561.3 L682.0 561.3 L616.0 447.0 Z" fill="#262d33" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M448.0 350.0 L316.0 350.0 L438.0 561.3 L504.0 447.0 Z" fill="#1E2327" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M504.0 253.0 L438.0 138.7 L316.0 350.0 L448.0 350.0 Z" fill="#262d33" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><polygon points="672.0,350.0 616.0,253.0 504.0,253.0 448.0,350.0 504.0,447.0 616.0,447.0" fill="#ffffff" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><text x="560.0" y="336.0" text-anchor="middle" font-size="15" font-weight="700" fill="#616160" letter-spacing="0.06em">FÜHRT ZU</text><text x="560.0" y="360.0" text-anchor="middle" font-size="22" font-weight="800" fill="#1E2327">Erfolgreiche</text><text x="560.0" y="384.0" text-anchor="middle" font-size="22" font-weight="800" fill="#1E2327">KI-Einführung</text><g transform="translate(533.0 145.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4.5" width="12" height="16" rx="2"/><rect x="9" y="2.5" width="6" height="3.5" rx="1.2"/><path d="M8.2 12.5l2.3 2.3 4.3-5"/></g><g transform="translate(687.2 234.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6"/><line x1="15" y1="15" x2="20" y2="20"/><line x1="8.6" y1="11.4" x2="8.6" y2="9.2"/><line x1="10.5" y1="11.4" x2="10.5" y2="7.6"/><line x1="12.4" y1="11.4" x2="12.4" y2="9.9"/></g><g transform="translate(687.2 412.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.6"/><rect x="10" y="10" width="4" height="4" rx="1"/><line x1="9.5" y1="7" x2="9.5" y2="4.5"/><line x1="14.5" y1="7" x2="14.5" y2="4.5"/><line x1="9.5" y1="19.5" x2="9.5" y2="17"/><line x1="14.5" y1="19.5" x2="14.5" y2="17"/><line x1="7" y1="9.5" x2="4.5" y2="9.5"/><line x1="7" y1="14.5" x2="4.5" y2="14.5"/><line x1="19.5" y1="9.5" x2="17" y2="9.5"/><line x1="19.5" y1="14.5" x2="17" y2="14.5"/></g><g transform="translate(533.0 501.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.8v5.2c0 4.8-3 7.7-7 8.9-4-1.2-7-4.1-7-8.9V5.8z"/><path d="M8.7 11.8l2.2 2.2 4.4-4.6"/></g><g transform="translate(378.8 412.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13a6 6 0 0 1 10.5-4"/><path d="M14.2 4.8l2.7 0.4-0.4 2.7"/><path d="M18 11a6 6 0 0 1-10.5 4"/><path d="M9.8 19.2l-2.7-0.4 0.4-2.7"/></g><g transform="translate(378.8 234.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8.5" r="2.6"/><circle cx="15.2" cy="8.5" r="2.6"/><path d="M4.5 18.5c0-3 2-4.6 4.5-4.6s4.5 1.6 4.5 4.6"/><path d="M14 14.2c2.3 0.1 4 1.7 4 4.3"/></g><text text-anchor="middle" font-size="20" font-weight="800" fill="#1E2327"><tspan x="560.0" y="82.0">Anforderungs­management</tspan></text><text text-anchor="start" font-size="20" font-weight="800" fill="#1E2327"><tspan x="792.1" y="203.5">Datenqualitäts- &</tspan><tspan x="792.1" y="228.5">Prozessanalyse</tspan></text><text text-anchor="start" font-size="20" font-weight="800" fill="#1E2327"><tspan x="792.1" y="484.0">KI-Engineering</tspan></text><text text-anchor="middle" font-size="20" font-weight="800" fill="#1E2327"><tspan x="560.0" y="605.5">Governance,</tspan><tspan x="560.0" y="630.5">Qualität & Risiko</tspan></text><text text-anchor="end" font-size="20" font-weight="800" fill="#1E2327"><tspan x="327.9" y="471.5">Agiles & hybrides</tspan><tspan x="327.9" y="496.5">Projektmanagement</tspan></text><text text-anchor="end" font-size="20" font-weight="800" fill="#1E2327"><tspan x="327.9" y="203.5">Change-</tspan><tspan x="327.9" y="228.5">Management</tspan></text></svg>
+ <ul class="cx-ig__mobile" aria-hidden="true"><li class="cx-ig__m-goal">Sechs Komponenten, ein Ziel: <strong>Erfolgreiche KI-Einführung</strong></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4.5" width="12" height="16" rx="2"/><rect x="9" y="2.5" width="6" height="3.5" rx="1.2"/><path d="M8.2 12.5l2.3 2.3 4.3-5"/></svg></span><span class="cx-ig__m-name">Anforderungsmanagement</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><line x1="15" y1="15" x2="20" y2="20"/><line x1="8.6" y1="11.4" x2="8.6" y2="9.2"/><line x1="10.5" y1="11.4" x2="10.5" y2="7.6"/><line x1="12.4" y1="11.4" x2="12.4" y2="9.9"/></svg></span><span class="cx-ig__m-name">Datenqualitäts- und Prozessanalyse</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.6"/><rect x="10" y="10" width="4" height="4" rx="1"/><line x1="9.5" y1="7" x2="9.5" y2="4.5"/><line x1="14.5" y1="7" x2="14.5" y2="4.5"/><line x1="9.5" y1="19.5" x2="9.5" y2="17"/><line x1="14.5" y1="19.5" x2="14.5" y2="17"/><line x1="7" y1="9.5" x2="4.5" y2="9.5"/><line x1="7" y1="14.5" x2="4.5" y2="14.5"/><line x1="19.5" y1="9.5" x2="17" y2="9.5"/><line x1="19.5" y1="14.5" x2="17" y2="14.5"/></svg></span><span class="cx-ig__m-name">KI-Engineering</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 2.8v5.2c0 4.8-3 7.7-7 8.9-4-1.2-7-4.1-7-8.9V5.8z"/><path d="M8.7 11.8l2.2 2.2 4.4-4.6"/></svg></span><span class="cx-ig__m-name">Governance, Qualität und Risiko</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13a6 6 0 0 1 10.5-4"/><path d="M14.2 4.8l2.7 0.4-0.4 2.7"/><path d="M18 11a6 6 0 0 1-10.5 4"/><path d="M9.8 19.2l-2.7-0.4 0.4-2.7"/></svg></span><span class="cx-ig__m-name">Agiles und hybrides Projektmanagement</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="2.6"/><circle cx="15.2" cy="8.5" r="2.6"/><path d="M4.5 18.5c0-3 2-4.6 4.5-4.6s4.5 1.6 4.5 4.6"/><path d="M14 14.2c2.3 0.1 4 1.7 4 4.3"/></svg></span><span class="cx-ig__m-name">Change-Management</span></li></ul>
+ <figcaption>Die sechs Leistungsfelder wirken zusammen: Anforderungsmanagement, Datenqualitäts- und Prozessanalyse, agiles und hybrides Projektmanagement, Governance über Qualität und Risiko, KI-Engineering sowie Change-Management führen gemeinsam zu einer erfolgreichen, produktiven KI-Einführung.</figcaption>
+ </figure>
+ </div>
 </section>
 
 <!-- METHODOLOGY -->
 <section class="section section--dark reveal" id="vorgehen" data-bench-role="process">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow eyebrow--on-dark">Unser Vorgehen</div>
-      <h2 class="h-section h-section--on-dark">Fünf Projektphasen – vom Anwendungsfall bis zur Verankerung im Betrieb.</h2>
-      <p class="h-lead h-lead--on-dark">Eine Zusammenarbeit läuft in fünf Phasen mit klaren Entscheidungspunkten. Nach jeder Phase liegt ein greifbares Ergebnis auf dem Tisch, und Sie entscheiden, ob die nächste folgt. Wir arbeiten kundenzentriert. Sie können den Mehrwert unserer Arbeit nach jedem Meilenstein eigenständig bewerten und sich für eine Projekt-Fortführung entscheiden. So haben Sie ein geringes Projekt-Umsetzungsrisiko, Transparenz und strategische Entscheidungsmöglichkeiten.</p>
-    </div>
-    <figure style="margin:0 0 30px"><img src="../media/cx-img-auswahl.jpg" alt="Gemeinsame Priorisierung der KI-Anwendungsfälle" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:rgba(250,246,236,0.6)">Nach jeder Phase ein greifbares Ergebnis und Ihre Entscheidung, ob es weitergeht</figcaption></figure>
-    <div class="method"><div class="method-step"><div class="method-step__num">Phase 01</div><div class="method-step__when">Auftakt</div><h3 class="method-step__title">Anwendungsfall-Scan</h3><p class="method-step__body">Sie erhalten eine priorisierte Liste realer Anwendungsfälle, geordnet nach Nutzen und Aufwand. Am Ende entscheiden Sie, mit welchem Kandidaten es weitergeht.</p></div><div class="method-step"><div class="method-step__num">Phase 02</div><div class="method-step__when">Prüfung</div><h3 class="method-step__title">Priorisierung &amp; Machbarkeit</h3><p class="method-step__body">Sie erhalten einen Machbarkeits-Check zum gewählten Fall, inklusive Datenlage und Aufwand. Ihre Entscheidung: Pilot starten oder den Fall zurückstellen.</p></div><div class="method-step"><div class="method-step__num">Phase 03</div><div class="method-step__when">Pilot</div><h3 class="method-step__title">Fokussierter Pilot</h3><p class="method-step__body">Sie sehen am realen Beispiel, ob der Nutzen trägt, in kurzen Sprints statt auf dem Papier. Ihre Entscheidung: in den Betrieb überführen oder stoppen.</p></div><div class="method-step"><div class="method-step__num">Phase 04</div><div class="method-step__when">Betrieb</div><h3 class="method-step__title">In den Betrieb überführen</h3><p class="method-step__body">Aus dem Piloten wird ein verlässlich integriertes Werkzeug, mit Monitoring und klaren Zuständigkeiten. Ihre Entscheidung: Umfangserweiterung und nächste Ausbaustufe.</p></div><div class="method-step"><div class="method-step__num">Phase 05</div><div class="method-step__when">Verankerung</div><h3 class="method-step__title">Governance &amp; Übergabe</h3><p class="method-step__body">Ihr Team übernimmt den laufenden Betrieb, Regeln und Routinen sind etabliert. Ihre Entscheidung: eigenständig weiterführen oder uns als Sparringspartner behalten.</p></div></div>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow eyebrow--on-dark">Unser Vorgehen</div>
+ <h2 class="h-section h-section--on-dark">Fünf Projektphasen – vom Anwendungsfall bis zur Verankerung im Betrieb.</h2>
+ <p class="h-lead h-lead--on-dark">Eine Zusammenarbeit läuft in fünf Phasen mit klaren Entscheidungspunkten. Nach jeder Phase liegt ein greifbares Ergebnis auf dem Tisch, und Sie entscheiden, ob die nächste folgt. Wir arbeiten kundenzentriert. Sie können den Mehrwert unserer Arbeit nach jedem Meilenstein eigenständig bewerten und sich für eine Projekt-Fortführung entscheiden. So haben Sie ein geringes Projekt-Umsetzungsrisiko, Transparenz und strategische Entscheidungsmöglichkeiten.</p>
+ </div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-auswahl.jpg" alt="Gemeinsame Priorisierung der KI-Anwendungsfälle" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:rgba(250,246,236,0.6)">Nach jeder Phase ein greifbares Ergebnis und Ihre Entscheidung, ob es weitergeht</figcaption></figure>
+ <div class="method"><div class="method-step"><div class="method-step__num">Phase 01</div><div class="method-step__when">Auftakt</div><h3 class="method-step__title">Anwendungsfall-Scan</h3><p class="method-step__body">Sie erhalten eine priorisierte Liste realer Anwendungsfälle, geordnet nach Nutzen und Aufwand. Am Ende entscheiden Sie, mit welchem Kandidaten es weitergeht.</p></div><div class="method-step"><div class="method-step__num">Phase 02</div><div class="method-step__when">Prüfung</div><h3 class="method-step__title">Priorisierung &amp; Machbarkeit</h3><p class="method-step__body">Sie erhalten einen Machbarkeits-Check zum gewählten Fall, inklusive Datenlage und Aufwand. Ihre Entscheidung: Pilot starten oder den Fall zurückstellen.</p></div><div class="method-step"><div class="method-step__num">Phase 03</div><div class="method-step__when">Pilot</div><h3 class="method-step__title">Fokussierter Pilot</h3><p class="method-step__body">Sie sehen am realen Beispiel, ob der Nutzen sich bestätigt, in kurzen Sprints am konkreten Fall. Ihre Entscheidung: in den Betrieb überführen oder stoppen.</p></div><div class="method-step"><div class="method-step__num">Phase 04</div><div class="method-step__when">Betrieb</div><h3 class="method-step__title">In den Betrieb überführen</h3><p class="method-step__body">Aus dem Piloten wird ein verlässlich integriertes Werkzeug, mit Monitoring und klaren Zuständigkeiten. Ihre Entscheidung: Umfangserweiterung und nächste Ausbaustufe.</p></div><div class="method-step"><div class="method-step__num">Phase 05</div><div class="method-step__when">Verankerung</div><h3 class="method-step__title">Governance &amp; Übergabe</h3><p class="method-step__body">Ihr Team übernimmt den laufenden Betrieb, Regeln und Routinen sind etabliert. Ihre Entscheidung: eigenständig weiterführen oder uns als Sparringspartner behalten.</p></div></div>
+ </div>
 </section>
 
 <!-- USE CASES -->
 <section class="section section--white reveal" data-bench-role="value">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow">Typische Anwendungsfälle</div>
-      <h2 class="h-section">Wo KI in der Anwendung Effektivität und Effizienz steigert.</h2>
-      <p class="h-lead">Eine Auswahl der Anwendungsfälle, die wir begleiten. Aus unserer Erfahrung liegt der größte Hebel oft dort, wo viel Text, viele wiederkehrende Entscheidungen oder viel manuelle Suche zusammenkommen — und wo der Mitarbeitende die Ergebnisse sinnvoll prüfen kann. Was die Investition relativiert: Ein gut gewählter Anwendungsfall spart dauerhaft Zeit, ein schlecht gewählter kostet nur Geld und Vertrauen.</p>
-    </div>
-    <figure style="margin:0 0 30px"><img src="../media/cx-img-anwendung.jpg" alt="KI-Unterstützung im täglichen Arbeitsumfeld" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Der Mitarbeitende prüft, die KI nimmt die Fleißarbeit ab</figcaption></figure>
-    <div class="uses-grid"><div class="use-card"><div class="use-card__tag">Wissen</div><h3>Wissens- &amp; Dokumentensuche</h3><p>Antworten aus internen Dokumenten in Sekunden statt im langen Suchen — mit Quellenangabe, damit das Ergebnis nachprüfbar bleibt.</p></div><div class="use-card"><div class="use-card__tag">Service</div><h3>Kundenservice-Unterstützung</h3><p>Entwürfe für Antworten, Zusammenfassungen von Anliegen, Vorschläge für die nächste Aktion — die Entscheidung bleibt beim Mitarbeitenden.</p></div><div class="use-card"><div class="use-card__tag">Planung</div><h3>Prognose &amp; Planung</h3><p>Bessere Schätzungen für Bedarf, Auslastung oder Nachfrage als Entscheidungshilfe.</p></div><div class="use-card"><div class="use-card__tag">Texte</div><h3>Entwürfe &amp; Zusammenfassungen</h3><p>Entwürfe für wiederkehrende Texte und Zusammenfassungen langer Unterlagen — der Mitarbeitende prüft und gibt frei.</p></div><div class="use-card"><div class="use-card__tag">Qualität</div><h3>Prüf- &amp; Qualitätsunterstützung</h3><p>Auffälligkeiten und mögliche Fehler früh sichtbar machen.</p></div><div class="use-card"><div class="use-card__tag">Routine</div><h3>Routine-Automatisierung mit Augenmaß</h3><p>Wiederkehrende, regelbasierte Schritte automatisieren, mit klaren Abgrenzungen zu menschlichen Aufgaben und Schritten.</p></div></div>
-    <ul class="value-list" style="margin-top:28px"><li>Weniger Such- und Fleißarbeit, mehr Zeit für strategische Entscheidungen und taktische Aufgaben</li><li>Zeitgleiche Effizienzgewinne und Qualitätssteigerung</li></ul>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow">Typische Anwendungsfälle</div>
+ <h2 class="h-section">Wo KI in der Anwendung Effektivität und Effizienz steigert.</h2>
+ <p class="h-lead">Eine Auswahl der Anwendungsfälle, die wir begleiten. Aus unserer Erfahrung liegt der größte Hebel oft dort, wo viel Text, viele wiederkehrende Entscheidungen oder viel manuelle Suche zusammenkommen — und wo der Mitarbeitende die Ergebnisse sinnvoll prüfen kann. Was die Investition relativiert: Ein gut gewählter Anwendungsfall spart dauerhaft Zeit, ein schlecht gewählter kostet nur Geld und Vertrauen.</p>
+ </div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-anwendung.jpg" alt="KI-Unterstützung im täglichen Arbeitsumfeld" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Der Mitarbeitende prüft, die KI nimmt die Fleißarbeit ab</figcaption></figure>
+ <div class="uses-grid"><div class="use-card"><div class="use-card__tag">Wissen</div><h3>Wissens- &amp; Dokumentensuche</h3><p>Antworten aus internen Dokumenten in Sekunden — mit Quellenangabe, damit das Ergebnis nachprüfbar bleibt.</p></div><div class="use-card"><div class="use-card__tag">Service</div><h3>Kundenservice-Unterstützung</h3><p>Entwürfe für Antworten, Zusammenfassungen von Anliegen, Vorschläge für die nächste Aktion — die Entscheidung bleibt beim Mitarbeitenden.</p></div><div class="use-card"><div class="use-card__tag">Planung</div><h3>Prognose &amp; Planung</h3><p>Bessere Schätzungen für Bedarf, Auslastung oder Nachfrage als Entscheidungshilfe.</p></div><div class="use-card"><div class="use-card__tag">Texte</div><h3>Entwürfe &amp; Zusammenfassungen</h3><p>Entwürfe für wiederkehrende Texte und Zusammenfassungen langer Unterlagen — der Mitarbeitende prüft und gibt frei.</p></div><div class="use-card"><div class="use-card__tag">Qualität</div><h3>Prüf- &amp; Qualitätsunterstützung</h3><p>Auffälligkeiten und mögliche Fehler früh sichtbar machen.</p></div><div class="use-card"><div class="use-card__tag">Routine</div><h3>Routine-Automatisierung mit Augenmaß</h3><p>Wiederkehrende, regelbasierte Schritte automatisieren, mit klaren Abgrenzungen zu menschlichen Aufgaben und Schritten.</p></div></div>
+ <ul class="value-list" style="margin-top:28px"><li>Weniger Such- und Fleißarbeit, mehr Zeit für strategische Entscheidungen und taktische Aufgaben</li><li>Zeitgleiche Effizienzgewinne und Qualitätssteigerung</li></ul>
+ </div>
 </section>
 
 <!-- INDUSTRIES (universalised) -->
 <section class="section section--paper reveal" data-bench-role="adaptability">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow">Zusammenarbeit</div>
-      <h2 class="h-section">Wir arbeiten klar, verlässlich und collaborative.</h2>
-      <p class="h-lead">Eine KI-Einführung gelingt nur gemeinsam, ob im kleinen Team oder im Konzern. Sie kennen Ihr Geschäft, Ihre Daten und Ihre Endnutzer, wir ergänzen das methodische Know-How, die Umsetzungskompetenz und die technische Implementierung. Unsere Arbeit zeichnet sich durch klar abgestimmte und kommunizierte Meilensteine, Projektrollen und Verantwortungsbereiche aus.</p>
-      <figure style="margin:24px auto 0;max-width:820px"><img src="../media/cx-img-team.jpg" alt="Gemeinsame Zusammenarbeit von Kundenteam und Beratung bei der KI-Einführung" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Sie kennen das Geschäft, wir bringen die Umsetzung</figcaption></figure>
-    </div>
-    <div class="industries"><div class="industry-card"><h3>Ihr Team kennt das Geschäft</h3><p>Sie bringen Fach- und Erfahrungswissen, kennen Ihre internen Prozesse und IT-Architektur, Software-Landschaft, und Ihre Endnutzer. Ohne dieses Wissen lässt sich kein guter Anwendungsfall finden und kein Ergebnis sinnvoll prüfen.</p></div><div class="industry-card"><h3>Wir bringen die fehlende Rolle</h3><p>Anforderungs-, Projekt-, Prozess- und Risikomanagement für KI, dazu die technische Umsetzung. Dies sind die Kernbereiche, in denen wir als Experten unsere Rollen ausfüllen und Ihr Projekt erfolgreich umsetzen.</p></div><div class="industry-card"><h3>Am Ende arbeitet Ihr Team eigenständig</h3><p>Wir befähigen, statt Abhängigkeit zu schaffen. Der laufende Betrieb gehört Ihnen, und auf Wunsch bleiben wir Sparringspartner.</p></div></div>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow">Zusammenarbeit</div>
+ <h2 class="h-section">Wir arbeiten klar, verlässlich und collaborative.</h2>
+ <p class="h-lead">Eine KI-Einführung gelingt nur gemeinsam, ob im kleinen Team oder im Konzern. Sie kennen Ihr Geschäft, Ihre Daten und Ihre Endnutzer, wir ergänzen das methodische Know-How, die Umsetzungskompetenz und die technische Implementierung. Unsere Arbeit zeichnet sich durch klar abgestimmte und kommunizierte Meilensteine, Projektrollen und Verantwortungsbereiche aus.</p>
+ <figure style="margin:24px auto 0;max-width:820px"><img src="../media/cx-img-team.jpg" alt="Gemeinsame Zusammenarbeit von Kundenteam und Beratung bei der KI-Einführung" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Sie kennen das Geschäft, wir bringen die Umsetzung</figcaption></figure>
+ </div>
+ <div class="industries"><div class="industry-card"><h3>Ihr Team kennt das Geschäft</h3><p>Sie bringen Fach- und Erfahrungswissen, kennen Ihre internen Prozesse und IT-Architektur, Software-Landschaft, und Ihre Endnutzer. Genau dieses Wissen macht einen guten Anwendungsfall auffindbar und ein Ergebnis sinnvoll prüfbar.</p></div><div class="industry-card"><h3>Wir bringen die fehlende Rolle</h3><p>Anforderungs-, Projekt-, Prozess- und Risikomanagement für KI, dazu die technische Umsetzung. Dies sind die Kernbereiche, in denen wir als Experten unsere Rollen ausfüllen und Ihr Projekt erfolgreich umsetzen.</p></div><div class="industry-card"><h3>Am Ende arbeitet Ihr Team eigenständig</h3><p>Wir befähigen Ihr Team zur eigenständigen Weiterführung. Der laufende Betrieb gehört Ihnen, und auf Wunsch bleiben wir Sparringspartner.</p></div></div>
+ </div>
 </section>
 
 <!-- DIFFERENTIATORS -->
 <section class="section section--white reveal" id="vorteile" data-bench-role="confidence">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow">Warum CX</div>
-      <h2 class="h-section">Was uns unterscheidet.</h2>
-      <p class="h-lead">Unser Ziel ist die erfolgreiche Umsetzung. Deshalb vertrauen wir nicht auf lange Meetings und Folien, sondern auf unsere praxiserprobte Methodik und konsequentes Projektmanagement.</p>
-    </div>
-    <figure style="margin:0 0 30px"><img src="../media/cx-img-unterschied.jpg" alt="Umsetzung mit Projektmanagement-Disziplin statt Demo oder Foliensatz" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Umsetzung mit Disziplin, nicht Demo und nicht Foliensatz</figcaption></figure>
-    <div class="diff-list"><div class="diff-item"><div class="diff-item__num">A</div><div><h3>Anders als die KI-Boutique</h3><p>Boutiquen sind oft ausgerichtet an ihr spezifisches Nischen-Modell und ihre Methodik. Als „Nordstern" unserer internen kundenzentrierten Team-Kultur richten wir hingegen alle Abläufe und Projektziele an die Anforderungen unserer Kunden aus. Entsprechend kombinieren wir KI Know-How mit Projektmanagement-Disziplin.</p></div></div><div class="diff-item"><div class="diff-item__num">B</div><div><h3>Anders als die große Strategieberatung</h3><p>Eine Strategie auf Folien klärt das Was, nicht das Wie. Wir sind angetrieben vom „Warum". Unsere Stärke liegt im „Wie" – in unserem praxiserprobten Methoden-Werkzeugkasten. Wir arbeiten schnell, pragmatisch und zielorientiert. Wir wollen mit möglichst wenig Ressourcen den Projektnutzen maximieren. Das ist unser Credo.</p></div></div><div class="diff-item"><div class="diff-item__num">C</div><div><h3>Anders als das Tool von der Stange</h3><p>Wir arbeiten an kundenspezifischen KI-Lösungen und KI-Tools, denn: Ein Standardprodukt ignoriert Ihre Daten, Prozesse und Anforderungen. Dabei passen wir die Lösung an Ihren realen Anwendungsfall an, anstatt umgekehrt.</p></div></div></div>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow">Warum CX</div>
+ <h2 class="h-section">Was uns unterscheidet.</h2>
+ <p class="h-lead">Unser Ziel ist die erfolgreiche Umsetzung. Deshalb setzen wir auf unsere praxiserprobte Methodik und konsequentes Projektmanagement, das jeden Schritt in greifbare Ergebnisse überführt.</p>
+ </div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-unterschied.jpg" alt="Umsetzung mit Projektmanagement-Disziplin bis zum Ergebnis im Betrieb" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Umsetzung mit Disziplin bis zum belegbaren Ergebnis</figcaption></figure>
+ <div class="diff-list"><div class="diff-item"><div class="diff-item__num">A</div><div><h3>Kundenanforderung als Nordstern</h3><p>KI-Boutiquen richten sich oft an ihrem spezifischen Nischen-Modell und ihrer Methodik aus. Als „Nordstern" unserer internen kundenzentrierten Team-Kultur richten wir alle Abläufe und Projektziele an den Anforderungen unserer Kunden aus. Entsprechend kombinieren wir KI Know-How mit Projektmanagement-Disziplin.</p></div></div><div class="diff-item"><div class="diff-item__num">B</div><div><h3>Stärke in der Umsetzung</h3><p>Eine Strategie auf Folien klärt das Was und lässt das Wie offen. Wir sind angetrieben vom „Warum". Unsere Stärke liegt im „Wie" – in unserem praxiserprobten Methoden-Werkzeugkasten. Wir arbeiten schnell, pragmatisch und zielorientiert. Wir wollen mit möglichst wenig Ressourcen den Projektnutzen maximieren. Das ist unser Credo.</p></div></div><div class="diff-item"><div class="diff-item__num">C</div><div><h3>Maßgeschneiderte KI-Lösung</h3><p>Wir arbeiten an kundenspezifischen KI-Lösungen und KI-Tools, denn: Ein Standardprodukt ignoriert Ihre Daten, Prozesse und Anforderungen. Dabei passen wir die Lösung an Ihren realen Anwendungsfall an.</p></div></div></div>
+ </div>
 </section>
 
 <!-- HOW WE WORK -->
 <section class="section section--dark reveal" data-bench-role="quality">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow eyebrow--on-dark">Recht &amp; Sicherheit</div>
-      <h2 class="h-section h-section--on-dark">Datenschutz, EU AI Act und DSGVO von der ersten Phase an.</h2>
-      <p class="h-lead h-lead--on-dark">Gerade im deutschen Markt entscheidet der rechtliche Rahmen mit darüber, ob ein KI-Vorhaben tragfähig ist. Wir denken Datenschutz, Recht und Sicherheit von Anfang an mit, nicht als Nachgedanke kurz vor dem Go-Live. Dafür arbeiten wir eng mit spezialisierten Rechtskanzleien zusammen.</p>
-    </div>
-    <figure style="margin:0 0 30px"><img src="../media/cx-img-vorgehen.jpg" alt="Datenschutz, EU AI Act und Sicherheit beim KI-Einsatz" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:rgba(250,246,236,0.6)">Recht und Sicherheit gehören in die Planung, nicht ans Ende</figcaption></figure>
-    <div class="compliance-block"><div class="compliance-item"><h3>DSGVO und Datenresidenz</h3><p>Welche personenbezogenen Daten fließen ein, wer hat Zugriff, wo werden sie verarbeitet? Das klären wir bei Auswahl und Gestaltung, bevor entwickelt wird.</p></div><div class="compliance-item"><h3>EU AI Act und Klassifizierung</h3><p>Wir ordnen den Anwendungsfall in den europäischen Risikorahmen und in die DSGVO-Regulatorik ein und planen den Aufwand für die Klassifizierung ein, statt ihn später als Überraschung zu erleben.</p></div><div class="compliance-item"><h3>Sicherheit und Orientierung</h3><p>Wir orientieren uns an anerkannten Stellen wie dem <a href="https://www.bsi.bund.de/" target="_blank" rel="noopener">BSI</a> und international an den KI-Prinzipien der <a href="https://www.oecd.org/" target="_blank" rel="noopener">OECD</a>, damit der Einsatz nachvollziehbar und sicher bleibt.</p></div></div>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow eyebrow--on-dark">Recht &amp; Sicherheit</div>
+ <h2 class="h-section h-section--on-dark">Datenschutz, EU AI Act und DSGVO von der ersten Phase an.</h2>
+ <p class="h-lead h-lead--on-dark">Gerade im deutschen Markt entscheidet der rechtliche Rahmen mit darüber, ob ein KI-Vorhaben tragfähig ist. Wir denken Datenschutz, Recht und Sicherheit von der ersten Phase an mit und verankern sie früh in Auswahl und Gestaltung. Dafür arbeiten wir eng mit spezialisierten Rechtskanzleien zusammen.</p>
+ </div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-vorgehen.jpg" alt="Datenschutz, EU AI Act und Sicherheit beim KI-Einsatz" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:rgba(250,246,236,0.6)">Recht und Sicherheit gehören von Beginn an in die Planung</figcaption></figure>
+ <div class="compliance-block"><div class="compliance-item"><h3>DSGVO und Datenresidenz</h3><p>Welche personenbezogenen Daten fließen ein, wer hat Zugriff, wo werden sie verarbeitet? Das klären wir bei Auswahl und Gestaltung, bevor entwickelt wird.</p></div><div class="compliance-item"><h3>EU AI Act und Klassifizierung</h3><p>Wir ordnen den Anwendungsfall in den europäischen Risikorahmen und in die DSGVO-Regulatorik ein und planen den Aufwand für die Klassifizierung früh und kalkulierbar ein.</p></div><div class="compliance-item"><h3>Sicherheit und Orientierung</h3><p>Wir orientieren uns an anerkannten Stellen wie dem <a href="https://www.bsi.bund.de/" target="_blank" rel="noopener">BSI</a> und international an den KI-Prinzipien der <a href="https://www.oecd.org/" target="_blank" rel="noopener">OECD</a>, damit der Einsatz nachvollziehbar und sicher bleibt.</p></div></div>
+ </div>
 </section>
 
 <!-- FAQ -->
 <section class="section section--white reveal" id="faq" data-bench-role="faq">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow">Häufig gestellte Fragen</div>
-      <h2 class="h-section">Fragen, die in den ersten Gesprächen immer kommen.</h2>
-    </div>
-    <div class="faq">
-      <details class="faq__item"><summary>Was kostet eine KI-Beratung?</summary><div class="faq__answer">Der Aufwand hängt vom Umfang (Scope) ab. Wir nennen und begründen eine belastbare Preisspanne im kostenlosen Erstgespräch, bevor Sie sich entscheiden. Größere Vorhaben begleiten wir in „Wellen", sodass Sie nach jeder Phase neu entscheiden — und nie auf Verdacht in ein Großprojekt investieren.</div></details>
-      <details class="faq__item"><summary>Wo fangen wir mit KI an?</summary><div class="faq__answer">Mit einem nüchternen Anwendungsfall-Scan: Wo im Haus gibt es viel Text, viele wiederkehrende Entscheidungen oder viel manuelle Suche. Daraus entsteht eine priorisierte Liste. Sie starten mit dem Anwendungsfall, der den besten Nutzen bei vertretbarem Aufwand verspricht.</div></details>
-      <details class="faq__item"><summary>Brauchen wir erst eine große Datenstrategie, bevor wir starten?</summary><div class="faq__answer">Nicht unbedingt. Wichtig ist, dass für den gewählten Anwendungsfall die nötigen Daten vorhanden, zugänglich und gut genug strukturiert sind — das prüfen wir gemeinsam vorab. Oft reicht eine fokussierte Datengrundlage für einen ersten echten Nutzen.</div></details>
-      <details class="faq__item"><summary>Warum scheitern so viele KI-Vorhaben?</summary><div class="faq__answer">Aus unserer Erfahrung scheitern KI-Vorhaben in Organisationen an bekannten Faktoren erfolgreicher Transformationsprojekte: Begeisterung für die Technik, aber kein klar benannter Nutzen, keine tragfähigen Daten und kein Weg vom Piloten in den Betrieb. Dazu fehlt oft die Verantwortung für Qualität und Risiko. Wir drehen die Reihenfolge um — Nutzen, Daten, Pilot, Betrieb, Verantwortung — und bleiben, bis das Werkzeug im Alltag wirklich hilft.</div></details>
-      <details class="faq__item"><summary>Wie gehen Sie mit Datenschutz und rechtlichen Anforderungen um?</summary><div class="faq__answer">Wir denken Datenschutz, Recht und Risiko von Anfang an mit, nicht als Nachgedanke. Anforderungen wie die DSGVO und der europäische Rechtsrahmen für KI werden bei der Auswahl und Gestaltung berücksichtigt. Orientierung dafür bieten anerkannte Stellen wie das <a href="https://www.bsi.bund.de/" target="_blank" rel="noopener">BSI</a> und international etwa die <a href="https://www.oecd.org/" target="_blank" rel="noopener">OECD</a> mit ihren KI-Prinzipien. So bleibt der Einsatz nachvollziehbar und verantwortbar.</div></details>
-      <details class="faq__item"><summary>Ersetzt KI dann unsere Mitarbeitenden?</summary><div class="faq__answer">Nein — in den Anwendungsfällen, die wir empfehlen, unterstützt KI die Menschen, statt sie zu ersetzen. Ihre Mitarbeitenden werden im Wesentlichen produktiver und effizienter: Sie können mehr leisten, bei höherer Qualität. Wiederkehrende Arbeit können sie oft auslagern auf KI. Im Resultat empfinden sie mehr Sinnhaftigkeit ihrer Arbeit und können sich zunehmend strategischen Fragen widmen.</div></details>
-      <details class="faq__item"><summary>Was ist der Unterschied zwischen KI-Strategie und KI-Umsetzung?</summary><div class="faq__answer">Die Strategie klärt, wie KI Ihre Geschäftsziele unterstützen kann und in welchen Bereichen: Wo KI für Sie sinnvoll ist, und in welcher Reihenfolge — die Umsetzung hingegen bringt einen konkreten Anwendungsfall in den verlässlichen Betrieb. Wie bei jeder Strategie operationalisiert Ihr KI-Projekt die KI-Strategie. Beides gehört zusammen: Eine Strategie ohne Umsetzung bleibt eine Präsentation, eine Umsetzung ohne Strategie wird leicht zum Einzelfall ohne Anschluss. Wir liefern bei Bedarf beides, meist sequentiell.</div></details>
-      <details class="faq__item"><summary>Wie lange dauert ein KI-Projekt?</summary><div class="faq__answer">Ein fokussierter Pilot zeigt in der Regel früh, ob der Nutzen real ist. Der Weg in den verlässlichen Betrieb braucht danach mehr Sorgfalt — Integration, Kontrolle, Verantwortung. Wir arbeiten bewusst nicht in starren Großprojekten, sondern in Phasen, die jeweils einen abgegrenzten Nutzen liefern, auf dem die nächste aufbaut.</div></details>
-      <details class="faq__item"><summary>Arbeiten Sie auch mit kleineren Organisationen?</summary><div class="faq__answer">Ja. Gerade dort lohnt sich der nüchterne, nutzenorientierte Ansatz, weil Budgets begrenzt sind und ein verfehltes KI-Projekt teuer wird. Wo ein großes Programm nicht passt, helfen ein kompakter Anwendungsfall-Scan, ein fokussierter Pilot oder Sparring für Ihre internen Verantwortlichen — so viel wie nötig, so schlank wie möglich.</div></details>
-      <details class="faq__item"><summary>Woran erkennen wir, dass ein KI-Anwendungsfall sich wirklich lohnt?</summary><div class="faq__answer">An drei Dingen: Es gibt ein klar benanntes Problem mit spürbarem Aufwand heute, die nötigen Daten sind vorhanden und gut genug, und ein Mensch kann die Ergebnisse sinnvoll prüfen. Fehlt eines davon, ist Vorsicht geboten. Wir bewerten Kandidaten deshalb immer entlang von Nutzen, Datenlage und Risiko — und sagen offen, wenn ein Anwendungsfall trotz Begeisterung besser warten sollte, bis die Grundlagen stimmen.</div></details>
-      <details class="faq__item"><summary>Wie vermeiden wir, dass ein KI-Pilot in der Schublade endet?</summary><div class="faq__answer">Indem der Weg in den Betrieb von Anfang an mitgedacht wird, nicht erst nach dem Piloten. Wir klären vorab, wie das Ergebnis in die bestehenden Abläufe und Systeme eingebunden wird, wer es im Alltag verantwortet und wie die Qualität laufend überwacht wird. Ein Pilot ist für uns kein Selbstzweck, sondern der kontrollierte erste Schritt eines Werkzeugs, das danach wirklich genutzt wird.</div></details>
-      <details class="faq__item"><summary>Wie viel eigenes KI-Wissen brauchen wir dafür?</summary><div class="faq__answer">Weniger, als viele denken. Wichtiger als tiefe Technik-Kenntnis ist, dass Ihr Team versteht, wofür KI taugt, wo ihre Grenzen liegen und wie man Ergebnisse prüft. Die Stärke des Kunden liegt in seiner Kenntnis interner Prozesse und der eigenen Organisationskultur. Hier liegt der Input unserer Kunden.</div></details>
-    </div>
-    <div class="cross-links"><a class="cross-link" href="mittelstand/index.html"><div class="cross-link__tag">Zielgruppe</div><div class="cross-link__title">KI-Beratung Mittelstand</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="unternehmen/index.html"><div class="cross-link__tag">Zielgruppe</div><div class="cross-link__title">KI-Beratung für Unternehmen</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="generative-ki/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">Generative KI</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="microsoft-365/index.html"><div class="cross-link__tag">Microsoft</div><div class="cross-link__title">KI in Microsoft 365</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="microsoft-copilot/index.html"><div class="cross-link__tag">Microsoft</div><div class="cross-link__title">Microsoft Copilot</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="industrie/index.html"><div class="cross-link__tag">Branche</div><div class="cross-link__title">KI in der Industrie</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="maschinenbau/index.html"><div class="cross-link__tag">Branche</div><div class="cross-link__title">KI im Maschinenbau</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="chatbot/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">KI-Chatbots</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="daten-ki/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">Daten &amp; KI</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="../prozessoptimierung-beratung/index.html"><div class="cross-link__tag">Säule 1 · Prozesse</div><div class="cross-link__title">Prozessoptimierung &amp; BPM</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../projektmanagement-beratung/index.html"><div class="cross-link__tag">Säule 1 · Projekte</div><div class="cross-link__title">Projektmanagement</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../digitalisierungsberatung/index.html"><div class="cross-link__tag">Säule 1 · Digital</div><div class="cross-link__title">Digitalisierung &amp; Transformation</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../change-management-beratung/index.html"><div class="cross-link__tag">Säule 1 · Change</div><div class="cross-link__title">Change Management</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../enterprise-architecture-beratung/index.html"><div class="cross-link__tag">Säule 2 · Architektur</div><div class="cross-link__title">Enterprise Architecture</div><div class="cross-link__arrow">→ Weiter</div></a></div>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow">Häufig gestellte Fragen</div>
+ <h2 class="h-section">Fragen, die in den ersten Gesprächen immer kommen.</h2>
+ </div>
+ <div class="faq">
+ <details class="faq__item"><summary>Was kostet eine KI-Beratung?</summary><div class="faq__answer">Der Aufwand hängt vom Umfang (Scope) ab. Wir nennen und begründen eine belastbare Preisspanne im kostenlosen Erstgespräch, bevor Sie sich entscheiden. Größere Vorhaben begleiten wir in „Wellen", sodass Sie nach jeder Phase neu entscheiden — und nie auf Verdacht in ein Großprojekt investieren.</div></details>
+ <details class="faq__item"><summary>Wo fangen wir mit KI an?</summary><div class="faq__answer">Mit einem strukturierten Anwendungsfall-Scan: Wo im Haus gibt es viel Text, viele wiederkehrende Entscheidungen oder viel manuelle Suche. Daraus entsteht eine priorisierte Liste. Sie starten mit dem Anwendungsfall, der den besten Nutzen bei vertretbarem Aufwand verspricht.</div></details>
+ <details class="faq__item"><summary>Brauchen wir erst eine große Datenstrategie, bevor wir starten?</summary><div class="faq__answer">Nicht unbedingt. Wichtig ist, dass für den gewählten Anwendungsfall die nötigen Daten vorhanden, zugänglich und gut genug strukturiert sind — das prüfen wir gemeinsam vorab. Oft reicht eine fokussierte Datengrundlage für einen ersten messbaren Nutzen.</div></details>
+ <details class="faq__item"><summary>Warum scheitern so viele KI-Vorhaben?</summary><div class="faq__answer">Aus unserer Erfahrung scheitern KI-Vorhaben in Organisationen an bekannten Faktoren erfolgreicher Transformationsprojekte: Begeisterung für die Technik bei offenem Nutzen, fragmentierten Daten und fehlendem Weg vom Piloten in den Betrieb. Dazu fehlt oft die Verantwortung für Qualität und Risiko. Wir drehen die Reihenfolge um — Nutzen, Daten, Pilot, Betrieb, Verantwortung — und bleiben, bis das Werkzeug im Alltag messbar hilft.</div></details>
+ <details class="faq__item"><summary>Wie gehen Sie mit Datenschutz und rechtlichen Anforderungen um?</summary><div class="faq__answer">Wir denken Datenschutz, Recht und Risiko von der ersten Phase an mit und verankern sie früh in Auswahl und Gestaltung. Anforderungen wie die DSGVO und der europäische Rechtsrahmen für KI werden bei der Auswahl und Gestaltung berücksichtigt. Orientierung dafür bieten anerkannte Stellen wie das <a href="https://www.bsi.bund.de/" target="_blank" rel="noopener">BSI</a> und international etwa die <a href="https://www.oecd.org/" target="_blank" rel="noopener">OECD</a> mit ihren KI-Prinzipien. So bleibt der Einsatz nachvollziehbar und verantwortbar.</div></details>
+ <details class="faq__item"><summary>Ersetzt KI dann unsere Mitarbeitenden?</summary><div class="faq__answer">Nein — in den Anwendungsfällen, die wir empfehlen, unterstützt KI die Menschen bei ihrer Arbeit. Ihre Mitarbeitenden werden im Wesentlichen produktiver und effizienter: Sie können mehr leisten, bei höherer Qualität. Wiederkehrende Arbeit können sie oft auslagern auf KI. Im Resultat empfinden sie mehr Sinnhaftigkeit ihrer Arbeit und können sich zunehmend strategischen Fragen widmen.</div></details>
+ <details class="faq__item"><summary>Was ist der Unterschied zwischen KI-Strategie und KI-Umsetzung?</summary><div class="faq__answer">Die Strategie klärt, wie KI Ihre Geschäftsziele unterstützen kann und in welchen Bereichen: Wo KI für Sie sinnvoll ist, und in welcher Reihenfolge — die Umsetzung hingegen bringt einen konkreten Anwendungsfall in den verlässlichen Betrieb. Wie bei jeder Strategie operationalisiert Ihr KI-Projekt die KI-Strategie. Beides gehört zusammen: Erst die Umsetzung macht aus einer Strategie ein Ergebnis im Betrieb, und erst die Strategie gibt der Umsetzung Anschluss über den Einzelfall hinaus. Wir liefern bei Bedarf beides, meist sequentiell.</div></details>
+ <details class="faq__item"><summary>Wie lange dauert ein KI-Projekt?</summary><div class="faq__answer">Ein fokussierter Pilot zeigt in der Regel früh, ob der Nutzen real ist. Der Weg in den verlässlichen Betrieb braucht danach mehr Sorgfalt — Integration, Kontrolle, Verantwortung. Wir arbeiten bewusst in klar abgegrenzten Phasen, die jeweils einen abgegrenzten Nutzen liefern, auf dem die nächste aufbaut.</div></details>
+ <details class="faq__item"><summary>Arbeiten Sie auch mit kleineren Organisationen?</summary><div class="faq__answer">Ja. Gerade dort lohnt sich der strukturierte, nutzenorientierte Ansatz, weil Budgets begrenzt sind und ein verfehltes KI-Projekt teuer wird. Wo ein großes Programm nicht passt, helfen ein kompakter Anwendungsfall-Scan, ein fokussierter Pilot oder Sparring für Ihre internen Verantwortlichen — so viel wie nötig, so schlank wie möglich.</div></details>
+ <details class="faq__item"><summary>Woran erkennen wir, dass ein KI-Anwendungsfall sich wirklich lohnt?</summary><div class="faq__answer">An drei Dingen: Es gibt ein klar benanntes Problem mit spürbarem Aufwand heute, die nötigen Daten sind vorhanden und gut genug, und ein Mensch kann die Ergebnisse sinnvoll prüfen. Fehlt eines davon, ist Vorsicht geboten. Wir bewerten Kandidaten deshalb immer entlang von Nutzen, Datenlage und Risiko — und sagen offen, wenn ein Anwendungsfall trotz Begeisterung besser warten sollte, bis die Grundlagen stimmen.</div></details>
+ <details class="faq__item"><summary>Wie vermeiden wir, dass ein KI-Pilot in der Schublade endet?</summary><div class="faq__answer">Indem der Weg in den Betrieb von Anfang an mitgedacht wird, bereits vor dem Piloten. Wir klären vorab, wie das Ergebnis in die bestehenden Abläufe und Systeme eingebunden wird, wer es im Alltag verantwortet und wie die Qualität laufend überwacht wird. Ein Pilot ist für uns der kontrollierte erste Schritt eines Werkzeugs, das danach produktiv genutzt wird.</div></details>
+ <details class="faq__item"><summary>Wie viel eigenes KI-Wissen brauchen wir dafür?</summary><div class="faq__answer">Weniger, als viele denken. Wichtiger als tiefe Technik-Kenntnis ist, dass Ihr Team versteht, wofür KI taugt, wo ihre Grenzen liegen und wie man Ergebnisse prüft. Die Stärke des Kunden liegt in seiner Kenntnis interner Prozesse und der eigenen Organisationskultur. Hier liegt der Input unserer Kunden.</div></details>
+ </div>
+ <div class="cross-links"><a class="cross-link" href="mittelstand/index.html"><div class="cross-link__tag">Zielgruppe</div><div class="cross-link__title">KI-Beratung Mittelstand</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="unternehmen/index.html"><div class="cross-link__tag">Zielgruppe</div><div class="cross-link__title">KI-Beratung für Unternehmen</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="generative-ki/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">Generative KI</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="microsoft-365/index.html"><div class="cross-link__tag">Microsoft</div><div class="cross-link__title">KI in Microsoft 365</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="microsoft-copilot/index.html"><div class="cross-link__tag">Microsoft</div><div class="cross-link__title">Microsoft Copilot</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="industrie/index.html"><div class="cross-link__tag">Branche</div><div class="cross-link__title">KI in der Industrie</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="maschinenbau/index.html"><div class="cross-link__tag">Branche</div><div class="cross-link__title">KI im Maschinenbau</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="chatbot/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">KI-Chatbots</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="daten-ki/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">Daten &amp; KI</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="../prozessoptimierung-beratung/index.html"><div class="cross-link__tag">Säule 1 · Prozesse</div><div class="cross-link__title">Prozessoptimierung &amp; BPM</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../projektmanagement-beratung/index.html"><div class="cross-link__tag">Säule 1 · Projekte</div><div class="cross-link__title">Projektmanagement</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../digitalisierungsberatung/index.html"><div class="cross-link__tag">Säule 1 · Digital</div><div class="cross-link__title">Digitalisierung &amp; Transformation</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../change-management-beratung/index.html"><div class="cross-link__tag">Säule 1 · Change</div><div class="cross-link__title">Change Management</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../enterprise-architecture-beratung/index.html"><div class="cross-link__tag">Säule 2 · Architektur</div><div class="cross-link__title">Enterprise Architecture</div><div class="cross-link__arrow">→ Weiter</div></a></div>
+ </div>
 </section>
 
 
 <!-- FINAL CTA -->
 <section class="final-cta" id="kontakt" data-bench-role="cta">
-  <div class="container">
-    <div class="final-cta__inner">
-      <div class="eyebrow eyebrow--on-dark">Nächster Schritt</div>
-      <h2>KI-Beratung <span class="accent">›</span> starten.</h2>
-      <p>Der erste Schritt ist ein Erstgespräch von 30–45 Minuten. Wir klären Ihren Ausgangspunkt, die wichtigsten Engpässe und ob CX der richtige Partner ist. Wenn nicht, verweisen wir auf jemanden, der besser passt.</p>
-      <a href="mailto:hallo@cx-experts.de?subject=KI-Beratung%20%E2%80%94%20Erstgespr%C3%A4ch" class="btn">Erstgespräch anfragen <span class="btn__icon">→</span></a>
-    </div>
-  </div>
+ <div class="container">
+ <div class="final-cta__inner">
+ <div class="eyebrow eyebrow--on-dark">Nächster Schritt</div>
+ <h2>KI-Beratung <span class="accent">›</span> starten.</h2>
+ <p>Der erste Schritt ist ein Erstgespräch von 30–45 Minuten. Wir klären Ihren Ausgangspunkt, die wichtigsten Engpässe und ob CX der richtige Partner ist. Wenn nicht, verweisen wir auf jemanden, der besser passt.</p>
+ <a href="mailto:hallo@cx-experts.de?subject=KI-Beratung%20%E2%80%94%20Erstgespr%C3%A4ch" class="btn">Erstgespräch anfragen <span class="btn__icon">→</span></a>
+ </div>
+ </div>
 </section>
 
 </main>
@@ -1126,105 +1126,105 @@ body.has-drawer { overflow: hidden; }
 
 <!-- ====== 4 mandatory substance blocks (HARD rule, hub-only) ====== -->
 <!-- ========================================================
-     SUBSTANCE BLOCK 1 (misdiagnosis) — TO BE COMPLETED BY HUMAN ONLY
-     DO NOT FILL WITH AI. Replace the placeholder paragraph
-     below with real practitioner content.
-     ======================================================== -->
+ SUBSTANCE BLOCK 1 (misdiagnosis) — TO BE COMPLETED BY HUMAN ONLY
+ DO NOT FILL WITH AI. Replace the placeholder paragraph
+ below with real practitioner content.
+ ======================================================== -->
 <section class="cx-substance-block" data-substance-id="1" data-substance-slot="misdiagnosis">
-  <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Fehldiagnose</div>
-  <h2 class="cx-substance-block__h">Ein KI-Use-Case, der im Use-Case-Trichter selbsterklärend wirkte und im Pilot scheiterte.</h2>
-  <div class="cx-substance-block__placeholder">
-    <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Was war das falsche Signal, das ihn nach oben sortierte? War es Datenqualität, ROI-Annahme, ein Compliance-Sachverhalt? Was haben Sie aus dem Scheitern in den Trichter eingebaut?
-  </div>
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Fehldiagnose</div>
+ <h2 class="cx-substance-block__h">Ein KI-Use-Case, der im Use-Case-Trichter selbsterklärend wirkte und im Pilot scheiterte.</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Was war das falsche Signal, das ihn nach oben sortierte? War es Datenqualität, ROI-Annahme, ein Compliance-Sachverhalt? Was haben Sie aus dem Scheitern in den Trichter eingebaut?
+ </div>
 </section>
 
 <!-- ========================================================
-     SUBSTANCE BLOCK 2 (methodology) — TO BE COMPLETED BY HUMAN ONLY
-     DO NOT FILL WITH AI. Replace the placeholder paragraph
-     below with real practitioner content.
-     ======================================================== -->
+ SUBSTANCE BLOCK 2 (methodology) — TO BE COMPLETED BY HUMAN ONLY
+ DO NOT FILL WITH AI. Replace the placeholder paragraph
+ below with real practitioner content.
+ ======================================================== -->
 <section class="cx-substance-block" data-substance-id="2" data-substance-slot="methodology">
-  <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Methodik angepasst</div>
-  <h2 class="cx-substance-block__h">Ein Mandat, in dem die Roadmap nach Phase 2 verworfen werden musste.</h2>
-  <div class="cx-substance-block__placeholder">
-    <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Was war der Auslöser? Datenproblem, Halluzinationsrate, EU-AI-Act-Klassifizierung? Wie wurde der Plan angepasst und was war der zusätzliche Aufwand?
-  </div>
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Methodik angepasst</div>
+ <h2 class="cx-substance-block__h">Ein Mandat, in dem die Roadmap nach Phase 2 verworfen werden musste.</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Was war der Auslöser? Datenproblem, Halluzinationsrate, EU-AI-Act-Klassifizierung? Wie wurde der Plan angepasst und was war der zusätzliche Aufwand?
+ </div>
 </section>
 
 <!-- ========================================================
-     SUBSTANCE BLOCK 3 (outcome) — TO BE COMPLETED BY HUMAN ONLY
-     DO NOT FILL WITH AI. Replace the placeholder paragraph
-     below with real practitioner content.
-     ======================================================== -->
+ SUBSTANCE BLOCK 3 (outcome) — TO BE COMPLETED BY HUMAN ONLY
+ DO NOT FILL WITH AI. Replace the placeholder paragraph
+ below with real practitioner content.
+ ======================================================== -->
 <section class="cx-substance-block" data-substance-id="3" data-substance-slot="outcome">
-  <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Reales Ergebnis</div>
-  <h2 class="cx-substance-block__h">Ein konkretes produktives KI-Mandat.</h2>
-  <div class="cx-substance-block__placeholder">
-    <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Branche, Anwendungsfall, gemessener Effekt — Antwortzeit, Genauigkeit, Kostenreduktion. Bitte konkrete Zahl, nicht „erhebliche Effizienzsteigerung".
-  </div>
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Reales Ergebnis</div>
+ <h2 class="cx-substance-block__h">Ein konkretes produktives KI-Mandat.</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Branche, Anwendungsfall, gemessener Effekt — Antwortzeit, Genauigkeit, Kostenreduktion. Bitte konkrete Zahl, nicht „erhebliche Effizienzsteigerung".
+ </div>
 </section>
 
 <!-- ========================================================
-     SUBSTANCE BLOCK 4 (cost) — TO BE COMPLETED BY HUMAN ONLY
-     DO NOT FILL WITH AI. Replace the placeholder paragraph
-     below with real practitioner content.
-     ======================================================== -->
+ SUBSTANCE BLOCK 4 (cost) — TO BE COMPLETED BY HUMAN ONLY
+ DO NOT FILL WITH AI. Replace the placeholder paragraph
+ below with real practitioner content.
+ ======================================================== -->
 <section class="cx-substance-block" data-substance-id="4" data-substance-slot="cost">
-  <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Realer Tagessatz · Reale Dauer</div>
-  <h2 class="cx-substance-block__h">Ein reales aktuelles KI-Mandat: Tagessatz, Pilotdauer, Produktivkostenrahmen, EU-AI-Act-Klassifizierungsaufwand.</h2>
-  <div class="cx-substance-block__placeholder">
-    <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Tagessatz, Pilotdauer in Wochen, monatliche Produktivkosten (Infra + Modell-API + Monitoring), Aufwand der Risiko-Klassifizierung in Personentagen.
-  </div>
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Realer Tagessatz · Reale Dauer</div>
+ <h2 class="cx-substance-block__h">Ein reales aktuelles KI-Mandat: Tagessatz, Pilotdauer, Produktivkostenrahmen, EU-AI-Act-Klassifizierungsaufwand.</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Tagessatz, Pilotdauer in Wochen, monatliche Produktivkosten (Infra + Modell-API + Monitoring), Aufwand der Risiko-Klassifizierung in Personentagen.
+ </div>
 </section>
 
 
 <!-- ========================================================
-     SUBSTANCE BLOCK 5 (market) — TO BE COMPLETED BY HUMAN ONLY
-     DO NOT FILL WITH AI. Replace the placeholder paragraph
-     below with real practitioner content.
-     ======================================================== -->
+ SUBSTANCE BLOCK 5 (market) — TO BE COMPLETED BY HUMAN ONLY
+ DO NOT FILL WITH AI. Replace the placeholder paragraph
+ below with real practitioner content.
+ ======================================================== -->
 <section class="cx-substance-block" data-substance-id="5" data-substance-slot="market">
-  <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Deutscher Markt</div>
-  <h2 class="cx-substance-block__h">Welche deutsche Markt- oder Regulierungsrealität hat den KI-Einsatz beeinflusst?</h2>
-  <div class="cx-substance-block__placeholder">
-    <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Nennen Sie einen konkreten Punkt wie EU-AI-Act-Einstufung, Datenschutz, Datenresidenz, Betriebsrat oder Kontrolle der Modellkosten.
-  </div>
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Deutscher Markt</div>
+ <h2 class="cx-substance-block__h">Welche deutsche Markt- oder Regulierungsrealität hat den KI-Einsatz beeinflusst?</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Nennen Sie einen konkreten Punkt wie EU-AI-Act-Einstufung, Datenschutz, Datenresidenz, Betriebsrat oder Kontrolle der Modellkosten.
+ </div>
 </section>
 
 <!-- E-E-A-T trust strip + bottom contact form (Pass A) -->
 <section class="cx-trust">
-  <div class="container">
-    <div class="cx-trust__grid">
-      <div class="cx-trust__col">
-        <div class="cx-trust__eyebrow">Wer dahinter steht</div>
-        <h2 class="cx-trust__h">Geführt von Johannes &amp; Hannes, persönlich und von erfahrenen Beratern.</h2>
-        <p class="cx-trust__lead">Beide haben über Jahre große Transformationsprojekte verantwortet, bevor sie CX-Experts gegründet haben. Sie führen jedes Mandat persönlich, kein Junior-Modell, kein Backoffice-Outsourcing.</p>
-        <ul class="cx-trust__creds">
-          <li><b>Erfahrene Berater</b> · jedes Mandat persönlich geführt</li>
-          <li><b>Branchenübergreifend</b> · vom Mittelstand bis zum Konzern</li>
-          <li><b>Strukturiertes Vorgehen</b> · nachvollziehbar und dokumentiert</li>
-          <li><b>DACH-weit</b> tätig</li>
-        </ul>
-        <p class="cx-trust__byline">Verfasst von <strong>Hannes Schäfer</strong>, Beratungspartner CX-Experts. Geprüft von <strong>Johannes Vogel</strong>, Geschäftsführender Gesellschafter.</p>
-      </div>
-      <div class="cx-trust__col">
-        <form class="cx-form" action="mailto:kontakt@cx-experts.de" method="post" enctype="text/plain">
-          <div class="cx-form__eyebrow">Erstgespräch · 30 Minuten, kostenlos</div>
-          <h3 class="cx-form__h">Sagen Sie uns, wo Sie stehen.</h3>
-          <label class="cx-form__row"><span>Name</span><input type="text" name="name" required></label>
-          <label class="cx-form__row"><span>E-Mail</span><input type="email" name="email" required></label>
-          <label class="cx-form__row"><span>Unternehmen</span><input type="text" name="unternehmen"></label>
-          <label class="cx-form__row"><span>Ihr Anliegen (kurz)</span><textarea name="anliegen" rows="3"></textarea></label>
-          <label class="cx-form__consent">
-            <input type="checkbox" name="dsgvo" required>
-            <span>Ich willige ein, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. Verarbeitung gemäß <a href="../datenschutz.html">Datenschutzerklärung</a>, Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO. Löschung nach Abschluss der Anfrage oder Widerruf.</span>
-          </label>
-          <button type="submit" class="cx-form__submit">Erstgespräch anfragen <span aria-hidden="true">→</span></button>
-          <div class="cx-form__hint">Antwort innerhalb von 24 Stunden, werktags.</div>
-        </form>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="cx-trust__grid">
+ <div class="cx-trust__col">
+ <div class="cx-trust__eyebrow">Wer dahinter steht</div>
+ <h2 class="cx-trust__h">Geführt von Johannes &amp; Hannes, persönlich und von erfahrenen Beratern.</h2>
+ <p class="cx-trust__lead">Beide haben über Jahre große Transformationsprojekte verantwortet, bevor sie CX-Experts gegründet haben. Sie führen jedes Mandat persönlich und durchgängig mit erfahrenen Beratern im eigenen Haus.</p>
+ <ul class="cx-trust__creds">
+ <li><b>Erfahrene Berater</b> · jedes Mandat persönlich geführt</li>
+ <li><b>Branchenübergreifend</b> · vom Mittelstand bis zum Konzern</li>
+ <li><b>Strukturiertes Vorgehen</b> · nachvollziehbar und dokumentiert</li>
+ <li><b>DACH-weit</b> tätig</li>
+ </ul>
+ <p class="cx-trust__byline">Verfasst von <strong>Hannes Schäfer</strong>, Beratungspartner CX-Experts. Geprüft von <strong>Johannes Vogel</strong>, Geschäftsführender Gesellschafter.</p>
+ </div>
+ <div class="cx-trust__col">
+ <form class="cx-form" action="mailto:kontakt@cx-experts.de" method="post" enctype="text/plain">
+ <div class="cx-form__eyebrow">Erstgespräch · 30 Minuten, kostenlos</div>
+ <h3 class="cx-form__h">Sagen Sie uns, wo Sie stehen.</h3>
+ <label class="cx-form__row"><span>Name</span><input type="text" name="name" required></label>
+ <label class="cx-form__row"><span>E-Mail</span><input type="email" name="email" required></label>
+ <label class="cx-form__row"><span>Unternehmen</span><input type="text" name="unternehmen"></label>
+ <label class="cx-form__row"><span>Ihr Anliegen (kurz)</span><textarea name="anliegen" rows="3"></textarea></label>
+ <label class="cx-form__consent">
+ <input type="checkbox" name="dsgvo" required>
+ <span>Ich willige ein, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. Verarbeitung gemäß <a href="../datenschutz.html">Datenschutzerklärung</a>, Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO. Löschung nach Abschluss der Anfrage oder Widerruf.</span>
+ </label>
+ <button type="submit" class="cx-form__submit">Erstgespräch anfragen <span aria-hidden="true">→</span></button>
+ <div class="cx-form__hint">Antwort innerhalb von 24 Stunden, werktags.</div>
+ </form>
+ </div>
+ </div>
+ </div>
 </section>
 <style>
 .cx-trust{background:#FAF6EC;color:#1E2327;padding:80px 0 64px;border-top:1px solid rgba(30,35,39,0.08)}
@@ -1251,44 +1251,61 @@ body.has-drawer { overflow: hidden; }
 .cx-form__hint{font-size:11px;color:#5A6066;margin-top:10px}
 .cx-trust__byline{margin:18px 0 0;font-size:13px;line-height:1.55;color:#5A6066;border-top:1px solid rgba(30,35,39,0.08);padding-top:14px}
 .cx-trust__byline strong{color:#1E2327;font-weight:700}
+
+/* DM-MOBILE-CENTER — mobile: headings · card copy · hero CTAs · footer · contact forms are centred (do not edit by hand; managed by apply_mobile_center.py) */
+@media (max-width: 820px) {
+  h1, h2, h3,
+  .hero__copy, .hero__eyebrow, .hero__lead, .hero p,
+  [class*="card"], [class*="card"] p, [class*="card"] li,
+  footer, .footer, .footer__inner, footer p, footer li,
+  .cx-form, .cx-form__eyebrow, .cx-form__h, .cx-form__row, .cx-form__hint,
+  form, form p, form label { text-align: center; }
+  .hero__cta-row, .final-cta__inner, .hero [class*="cta"], .hero [class*="btn-row"] {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .cx-form__consent { justify-content: center; }
+  form input, form textarea, form select,
+  .cx-form__row input, .cx-form__row textarea, .cx-form__row select { margin-left: auto; margin-right: auto; }
+}
+/* /DM-MOBILE-CENTER */
 </style>
 <footer class="footer">
-  <div class="container footer__inner"><div class="footer__links"><strong>KI-Themen</strong> · <a href="mittelstand/index.html">KI-Beratung Mittelstand</a> · <a href="unternehmen/index.html">KI-Beratung für Unternehmen</a> · <a href="generative-ki/index.html">Generative KI</a> · <a href="microsoft-365/index.html">KI in Microsoft 365</a> · <a href="microsoft-copilot/index.html">Microsoft Copilot</a> · <a href="industrie/index.html">KI in der Industrie</a> · <a href="maschinenbau/index.html">KI im Maschinenbau</a> · <a href="chatbot/index.html">KI-Chatbots</a> · <a href="daten-ki/index.html">Daten &amp; KI</a></div>
-    <div>© CX-Experts.de · KI-Beratung für den deutschen Mittelstand</div>
-    <div>Made in Köln · DSGVO-konform · EU AI Act-ready</div>
-  <div><a href="../sitemap/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Sitemap</a></div></div>
+ <div class="container footer__inner"><div class="footer__links"><strong>KI-Themen</strong> · <a href="mittelstand/index.html">KI-Beratung Mittelstand</a> · <a href="unternehmen/index.html">KI-Beratung für Unternehmen</a> · <a href="generative-ki/index.html">Generative KI</a> · <a href="microsoft-365/index.html">KI in Microsoft 365</a> · <a href="microsoft-copilot/index.html">Microsoft Copilot</a> · <a href="industrie/index.html">KI in der Industrie</a> · <a href="maschinenbau/index.html">KI im Maschinenbau</a> · <a href="chatbot/index.html">KI-Chatbots</a> · <a href="daten-ki/index.html">Daten &amp; KI</a></div>
+ <div>© CX-Experts.de · KI-Beratung für den deutschen Mittelstand</div>
+ <div>Made in Köln · DSGVO-konform · EU AI Act-ready</div>
+ <div><a href="../sitemap/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Sitemap</a></div></div>
 </footer>
 
 <script>
 (function(){
-  const btn = document.getElementById('menuToggle');
-  const drawer = document.getElementById('servicesDrawer');
-  const scrim = document.getElementById('drawerScrim');
-  if(!btn || !drawer || !scrim) return;
-  function open(){
-    btn.setAttribute('aria-expanded','true');
-    btn.setAttribute('aria-label','Leistungen-Menü schließen');
-    drawer.classList.add('is-open');
-    drawer.setAttribute('aria-hidden','false');
-    scrim.classList.add('is-open');
-    scrim.setAttribute('aria-hidden','false');
-    document.documentElement.style.overflow = 'hidden';
-  }
-  function close(){
-    btn.setAttribute('aria-expanded','false');
-    btn.setAttribute('aria-label','Leistungen-Menü öffnen');
-    drawer.classList.remove('is-open');
-    drawer.setAttribute('aria-hidden','true');
-    scrim.classList.remove('is-open');
-    scrim.setAttribute('aria-hidden','true');
-    document.documentElement.style.overflow = '';
-  }
-  function toggle(){
-    if(btn.getAttribute('aria-expanded') === 'true') close(); else open();
-  }
-  btn.addEventListener('click', toggle);
-  scrim.addEventListener('click', close);
-  document.addEventListener('keydown', e => { if(e.key === 'Escape') close(); });
+ const btn = document.getElementById('menuToggle');
+ const drawer = document.getElementById('servicesDrawer');
+ const scrim = document.getElementById('drawerScrim');
+ if(!btn ||!drawer ||!scrim) return;
+ function open(){
+ btn.setAttribute('aria-expanded','true');
+ btn.setAttribute('aria-label','Leistungen-Menü schließen');
+ drawer.classList.add('is-open');
+ drawer.setAttribute('aria-hidden','false');
+ scrim.classList.add('is-open');
+ scrim.setAttribute('aria-hidden','false');
+ document.documentElement.style.overflow = 'hidden';
+ }
+ function close(){
+ btn.setAttribute('aria-expanded','false');
+ btn.setAttribute('aria-label','Leistungen-Menü öffnen');
+ drawer.classList.remove('is-open');
+ drawer.setAttribute('aria-hidden','true');
+ scrim.classList.remove('is-open');
+ scrim.setAttribute('aria-hidden','true');
+ document.documentElement.style.overflow = '';
+ }
+ function toggle(){
+ if(btn.getAttribute('aria-expanded') === 'true') close(); else open();
+ }
+ btn.addEventListener('click', toggle);
+ scrim.addEventListener('click', close);
+ document.addEventListener('keydown', e => { if(e.key === 'Escape') close(); });
 })();
 </script>
 
@@ -1302,17 +1319,17 @@ document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
 <script>
 (function(){
-  var nav=document.getElementById('nav');
-  if(nav){var s=function(){nav.classList.toggle('is-scrolled',window.scrollY>40);};s();window.addEventListener('scroll',s,{passive:true});}
-  var btn=document.getElementById('cxMenuToggle'),dr=document.getElementById('cxServicesDrawer'),sc=document.getElementById('cxDrawerScrim');
-  if(btn&&dr&&sc){
-    var op=function(){btn.setAttribute('aria-expanded','true');dr.classList.add('is-open');dr.setAttribute('aria-hidden','false');sc.classList.add('is-open');sc.setAttribute('aria-hidden','false');document.body.classList.add('has-drawer');};
-    var cl=function(){btn.setAttribute('aria-expanded','false');dr.classList.remove('is-open');dr.setAttribute('aria-hidden','true');sc.classList.remove('is-open');sc.setAttribute('aria-hidden','true');document.body.classList.remove('has-drawer');};
-    btn.addEventListener('click',function(){dr.classList.contains('is-open')?cl():op();});
-    sc.addEventListener('click',cl);
-    document.addEventListener('keydown',function(e){if(e.key==='Escape')cl();});
-    dr.querySelectorAll('.cx-drawer__link,.cx-drawer__cta,.cx-drawer__jump').forEach(function(a){a.addEventListener('click',function(){setTimeout(cl,0);});});
-  }
+ var nav=document.getElementById('nav');
+ if(nav){var s=function(){nav.classList.toggle('is-scrolled',window.scrollY>40);};s();window.addEventListener('scroll',s,{passive:true});}
+ var btn=document.getElementById('cxMenuToggle'),dr=document.getElementById('cxServicesDrawer'),sc=document.getElementById('cxDrawerScrim');
+ if(btn&&dr&&sc){
+ var op=function(){btn.setAttribute('aria-expanded','true');dr.classList.add('is-open');dr.setAttribute('aria-hidden','false');sc.classList.add('is-open');sc.setAttribute('aria-hidden','false');document.body.classList.add('has-drawer');};
+ var cl=function(){btn.setAttribute('aria-expanded','false');dr.classList.remove('is-open');dr.setAttribute('aria-hidden','true');sc.classList.remove('is-open');sc.setAttribute('aria-hidden','true');document.body.classList.remove('has-drawer');};
+ btn.addEventListener('click',function(){dr.classList.contains('is-open')?cl():op();});
+ sc.addEventListener('click',cl);
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')cl();});
+ dr.querySelectorAll('.cx-drawer__link,.cx-drawer__cta,.cx-drawer__jump').forEach(function(a){a.addEventListener('click',function(){setTimeout(cl,0);});});
+ }
 })();
 </script>
 

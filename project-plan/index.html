@@ -7797,6 +7797,23 @@ html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP
 .sm-prow__los b{color:var(--ink);font-weight:800;font-size:0.75rem}
 .sm-foot{margin-top:32px;font-size:0.75rem;color:var(--ink-soft);text-align:center;line-height:1.6}
 .sm-foot code{font-family:var(--mono);background:#faf6ec;padding:1px 6px;border-radius:3px;color:var(--ink);font-size:0.6875rem}
+
+/* DM-MOBILE-CENTER — mobile: headings · card copy · hero CTAs · footer · contact forms are centred (do not edit by hand; managed by apply_mobile_center.py) */
+@media (max-width: 820px) {
+  h1, h2, h3,
+  .hero__copy, .hero__eyebrow, .hero__lead, .hero p,
+  [class*="card"], [class*="card"] p, [class*="card"] li,
+  footer, .footer, .footer__inner, footer p, footer li,
+  .cx-form, .cx-form__eyebrow, .cx-form__h, .cx-form__row, .cx-form__hint,
+  form, form p, form label { text-align: center; }
+  .hero__cta-row, .final-cta__inner, .hero [class*="cta"], .hero [class*="btn-row"] {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .cx-form__consent { justify-content: center; }
+  form input, form textarea, form select,
+  .cx-form__row input, .cx-form__row textarea, .cx-form__row select { margin-left: auto; margin-right: auto; }
+}
+/* /DM-MOBILE-CENTER */
 </style>
 
 <script>

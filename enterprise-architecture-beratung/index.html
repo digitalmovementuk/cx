@@ -47,7 +47,7 @@ a{color:inherit;text-decoration:none}
 .btn__icon{display:inline-flex;width:26px;height:26px;background:var(--cx-charcoal);color:var(--cx-yellow);align-items:center;justify-content:center}
 .btn--ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.32)}
 .btn--ghost:hover{background:rgba(255,255,255,0.05)}
-.btn--ghost .btn__icon{background:rgba(255,255,255,0.12);color:#fff}
+.btn--ghost.btn__icon{background:rgba(255,255,255,0.12);color:#fff}
 .hero__trust{position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;padding-top:40px;border-top:1px solid var(--line-on-dark);max-width:900px}
 .trust-item{display:grid;gap:6px}
 .trust-item__num{font-size:1.875rem;font-weight:800;letter-spacing:-0.02em;color:var(--cx-yellow);line-height:1}
@@ -113,7 +113,7 @@ a{color:inherit;text-decoration:none}
 .final-cta::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(255,122,0,0.10) 0%,transparent 55%);pointer-events:none}
 .final-cta__inner{position:relative;max-width:780px;text-align:center;margin:0 auto}
 .final-cta h2{margin:14px 0 18px;font-size:clamp(2.25rem,5vw,3.5rem);font-weight:800;line-height:1.04;letter-spacing:-0.035em;color:#fff}
-.final-cta h2 .accent{color:var(--cx-yellow)}
+.final-cta h2.accent{color:var(--cx-yellow)}
 .final-cta p{margin:0 auto 36px;font-size:1.0625rem;line-height:1.65;color:rgba(255,255,255,0.82);max-width:60ch}
 .footer{background:var(--cx-charcoal);color:rgba(255,255,255,0.6);padding:28px 0;border-top:1px solid var(--line-on-dark)}
 .footer__inner{display:flex;flex-wrap:wrap;gap:14px 32px;justify-content:space-between;align-items:center;font-size:0.8125rem}
@@ -126,10 +126,10 @@ a{color:inherit;text-decoration:none}
 .cross-link__title{font-size:1rem;font-weight:700;letter-spacing:-0.01em;color:var(--cx-charcoal);line-height:1.3}
 .cross-link__arrow{margin-top:8px;color:var(--cx-charcoal-3);font-size:0.875rem}
 .content-figure{margin:40px 0 0;padding:24px;background:var(--cx-warm-2);border:1px solid var(--line);display:grid;gap:14px}
-.section--dark .content-figure{background:rgba(255,255,255,0.04);border-color:var(--line-on-dark)}
+.section--dark.content-figure{background:rgba(255,255,255,0.04);border-color:var(--line-on-dark)}
 .content-figure img{display:block;width:100%;height:auto;max-width:720px;margin:0 auto}
 .content-figure figcaption{font-size:0.8125rem;line-height:1.55;color:var(--muted);letter-spacing:-0.005em;text-align:center;max-width:60ch;margin:0 auto}
-.section--dark .content-figure figcaption{color:rgba(255,255,255,0.7)}
+.section--dark.content-figure figcaption{color:rgba(255,255,255,0.7)}
 .deep-section{display:grid;gap:32px;margin-top:48px}
 .deep-section__block{padding:32px;background:#fff;border:1px solid var(--line)}
 .deep-section__block h3{margin:0 0 14px;font-size:1.1875rem;font-weight:700;letter-spacing:-0.01em;line-height:1.25}
@@ -147,14 +147,14 @@ a{color:inherit;text-decoration:none}
 .topbar__actions{display:flex;align-items:center;gap:14px}
 .menu-btn{display:inline-flex;align-items:center;gap:12px;padding:9px 16px 9px 12px;background:transparent;border:1px solid var(--line);color:var(--cx-charcoal);font-family:inherit;font-weight:700;font-size:0.875rem;letter-spacing:-0.005em;cursor:pointer;transition:background var(--dur) var(--ease),border-color var(--dur) var(--ease),color var(--dur) var(--ease)}
 .menu-btn:hover{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
-.menu-btn:hover .menu-btn__icon span{background:var(--cx-yellow)}
+.menu-btn:hover.menu-btn__icon span{background:var(--cx-yellow)}
 .menu-btn__icon{display:inline-flex;flex-direction:column;justify-content:center;width:22px;height:18px;gap:3px}
 .menu-btn__icon span{display:block;height:2px;width:100%;background:var(--cx-charcoal);transition:transform var(--dur) var(--ease),opacity var(--dur) var(--ease),background var(--dur) var(--ease)}
 .menu-btn[aria-expanded="true"]{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span{background:var(--cx-yellow)}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span:nth-child(1){transform:translateY(5px) rotate(45deg)}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span:nth-child(2){opacity:0}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+.menu-btn[aria-expanded="true"].menu-btn__icon span{background:var(--cx-yellow)}
+.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
 
 .drawer{position:fixed;top:0;left:0;right:0;background:var(--cx-warm-2);border-bottom:1px solid var(--line);z-index:75;box-shadow:0 24px 48px -24px rgba(30,35,39,0.18);max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height 380ms var(--ease),opacity 220ms var(--ease),visibility 0s linear 220ms;padding-top:60px}
 .drawer.is-open{max-height:100vh;opacity:1;visibility:visible;transition:max-height 480ms var(--ease),opacity 220ms var(--ease) 80ms,visibility 0s linear}
@@ -168,7 +168,7 @@ a{color:inherit;text-decoration:none}
 .drawer__num{font-family:inherit;font-size:0.6875rem;font-weight:800;color:var(--cx-yellow);background:var(--cx-charcoal);width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;letter-spacing:0.04em}
 .drawer__title{font-size:0.9375rem;font-weight:700;color:var(--cx-charcoal);letter-spacing:-0.01em;line-height:1.3}
 .drawer__arrow{color:var(--cx-charcoal-3);font-size:1.125rem;transition:color var(--dur) var(--ease),transform var(--dur) var(--ease)}
-.drawer__link:hover .drawer__arrow{color:var(--cx-yellow);transform:translateX(3px)}
+.drawer__link:hover.drawer__arrow{color:var(--cx-yellow);transform:translateX(3px)}
 .drawer__footer{display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:20px 24px;background:var(--cx-charcoal);color:#fff;align-self:start}
 .drawer__footer-label{font-size:0.6875rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--cx-yellow)}
 .drawer__footer-h{margin:6px 0 12px;font-size:1.125rem;font-weight:700;letter-spacing:-0.01em;line-height:1.3}
@@ -198,34 +198,34 @@ a{color:inherit;text-decoration:none}
 .topbar__actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
 .menu-btn{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 11px;background:transparent;border:1px solid var(--line);color:var(--cx-charcoal);font-family:inherit;font-weight:700;font-size:0.8125rem;letter-spacing:-0.005em;cursor:pointer;transition:background 280ms var(--ease),border-color 280ms var(--ease),color 280ms var(--ease)}
 .menu-btn:hover{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
-.menu-btn:hover .menu-btn__icon span{background:var(--cx-yellow)}
+.menu-btn:hover.menu-btn__icon span{background:var(--cx-yellow)}
 .menu-btn__icon{display:inline-flex;flex-direction:column;justify-content:center;width:18px;height:14px;gap:3px}
 .menu-btn__icon span{display:block;height:1.5px;width:100%;background:var(--cx-charcoal);transition:transform 280ms var(--ease),opacity 280ms var(--ease),background 280ms var(--ease)}
 .menu-btn[aria-expanded="true"]{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span{background:var(--cx-yellow)}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span:nth-child(2){opacity:0}
-.menu-btn[aria-expanded="true"] .menu-btn__icon span:nth-child(3){transform:translateY(-4.5px) rotate(-45deg)}
+.menu-btn[aria-expanded="true"].menu-btn__icon span{background:var(--cx-yellow)}
+.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
+.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(3){transform:translateY(-4.5px) rotate(-45deg)}
 .menu-btn__label{font-size:0.8125rem;font-weight:700}
 .nav-cta{padding:8px 14px;background:var(--cx-charcoal);color:#fff;font-weight:700;font-size:0.8125rem;letter-spacing:-0.005em;display:inline-flex;align-items:center;gap:9px;transition:background 280ms var(--ease)}
 .nav-cta:hover{background:var(--cx-charcoal-2)}
 .nav-cta__arrow{display:inline-flex;width:18px;height:18px;background:var(--cx-yellow);color:var(--cx-charcoal);align-items:center;justify-content:center;flex-shrink:0}
 .nav-cta__arrow svg{width:11px;height:11px}
 @media(max-width:680px){
-  .brand__divider,.brand__crumb{display:none}
+.brand__divider,.brand__crumb{display:none}
 }
 @media(max-width:540px){
-  .menu-btn__label{display:none}
-  .menu-btn{padding:8px 10px}
-  .nav-cta span:first-child{display:none}
-  .nav-cta{padding:8px 10px}
+.menu-btn__label{display:none}
+.menu-btn{padding:8px 10px}
+.nav-cta span:first-child{display:none}
+.nav-cta{padding:8px 10px}
 }
 
 /* === Topbar visibility fix + reorder (CTA left of menu) === */
 .topbar{background:var(--cx-warm-2)!important;backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--cx-charcoal-3);box-shadow:0 1px 0 rgba(30,35,39,0.04),0 12px 28px -18px rgba(30,35,39,0.18)}
 .topbar__actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.topbar__actions .nav-cta{order:1}
-.topbar__actions .menu-btn{order:2}
+.topbar__actions.nav-cta{order:1}
+.topbar__actions.menu-btn{order:2}
 .menu-btn{background:rgba(30,35,39,0.04)}
 .menu-btn:hover{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
 </style>
@@ -233,137 +233,137 @@ a{color:inherit;text-decoration:none}
 
 <style id="cex-local-layout-reveal-fix">
 /* Local translation workbench preview: show all scroll-reveal sections inside file/iframe previews. */
-html { scroll-behavior: auto !important; }
+html { scroll-behavior: auto!important; }
 .reveal,
-.reveal .h-section,
-.reveal .h-lead,
-.reveal .benefit,
-.reveal .faq-item,
-.reveal .journey-step,
-.reveal .outcomes__panel-inner,
-.reveal .footer__brand-wrap,
-.reveal .footer__col {
-  opacity: 1 !important;
-  transform: none !important;
-  visibility: visible !important;
+.reveal.h-section,
+.reveal.h-lead,
+.reveal.benefit,
+.reveal.faq-item,
+.reveal.journey-step,
+.reveal.outcomes__panel-inner,
+.reveal.footer__brand-wrap,
+.reveal.footer__col {
+ opacity: 1!important;
+ transform: none!important;
+ visibility: visible!important;
 }
-.reveal .eyebrow__bar { width: 24px !important; }
+.reveal.eyebrow__bar { width: 24px!important; }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "CX-Experts", "description": "Enterprise-Architecture-Beratung — von der Landkarte der IT-Landschaft über Zielbild und Roadmap bis zu Governance und Konsolidierung, branchenübergreifend für Organisationen jeder Größe, DACH-weit.", "areaServed": ["DE", "AT", "CH"], "address": {"@type": "PostalAddress", "addressLocality": "Köln", "addressCountry": "DE"}, "email": "kontakt@cx-experts.de", "url": "https://cx-experts.de"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was kostet eine Enterprise-Architecture-Beratung?", "acceptedAnswer": {"@type": "Answer", "text": "Der Aufwand hängt vom Umfang ab — von der Größe der Landschaft, der Datenlage und der gewünschten Tiefe. Wir nennen eine belastbare Spanne transparent im kostenlosen Erstgespräch, bevor Sie sich festlegen. Größere Vorhaben begleiten wir in Wellen, sodass Sie nach jeder Phase neu entscheiden — und nie auf Verdacht in ein Mehrjahres-Programm investieren."}}, {"@type": "Question", "name": "Wo fangen wir an?", "acceptedAnswer": {"@type": "Answer", "text": "Mit Transparenz: einer verständlichen Landkarte Ihrer Anwendungen, Kosten und Abhängigkeiten. Erst wenn das Ist-Bild steht, lohnt sich ein Zielbild. Sie starten dort, wo der Handlungsbedarf am größten ist — meist bei Doppelungen, teuren Altsystemen oder Stellen, an denen die Landschaft das Geschäft ausbremst."}}, {"@type": "Question", "name": "Brauchen wir dafür ein bestimmtes Rahmenwerk wie TOGAF?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht zwingend. Rahmenwerke wie TOGAF oder Modellierungssprachen wie ArchiMate sind nützliche Werkzeugkästen — aber kein Selbstzweck. Wir nutzen das, was zu Ihrer Reife und Ihrem Ziel passt, in der passenden Dosis. Wichtiger als das Etikett ist, dass Architektur am Ende bessere Entscheidungen ermöglicht. Mehr zu den Rahmenwerken finden Sie bei der Open Group."}}, {"@type": "Question", "name": "Warum bleibt Architektur-Arbeit oft wirkungslos?", "acceptedAnswer": {"@type": "Answer", "text": "Fast immer am gleichen Muster: Sie entsteht im Elfenbeinturm, hat keinen Bezug zum Geschäft und endet in Diagrammen statt Entscheidungen. Parallel wuchert die Landschaft ungesteuert weiter. Wir setzen deshalb bei Transparenz und konkreten Entscheidungen an — und etablieren leichtgewichtige Governance, damit aus Übersicht echte Steuerung wird."}}, {"@type": "Question", "name": "Wie machen Sie Architektur für Entscheider greifbar?", "acceptedAnswer": {"@type": "Answer", "text": "Indem wir aus IT-Technik Geschäftsfragen machen: Was kostet diese Landschaft, wo liegen Risiken, welche Doppelungen binden Geld, welche Abhängigkeiten bremsen Vorhaben? Eine gute Landkarte zeigt das auf einer Seite, nicht in hundert Diagrammen. So können auch Nicht-Techniker fundiert über Investitionen entscheiden — und Architektur bekommt das Gewicht, das sie braucht."}}, {"@type": "Question", "name": "Wie verhindern Sie, dass die Landschaft wieder wuchert?", "acceptedAnswer": {"@type": "Answer", "text": "Durch leichtgewichtige Governance: klare, einfache Entscheidungswege und ein paar tragfähige Prinzipien, an denen sich Beschaffung und Projekte ausrichten. Nicht ein dickes Regelwerk, das niemand liest, sondern wenige Regeln, die wirklich greifen. Entscheidend ist, dass Architektur-Entscheidungen sichtbar getroffen und nachgehalten werden — sonst beschafft bald wieder jeder Bereich für sich."}}, {"@type": "Question", "name": "Was ist der Unterschied zwischen Enterprise Architecture und IT-Strategie?", "acceptedAnswer": {"@type": "Answer", "text": "Die IT-Strategie setzt die Richtung — wohin und warum. Enterprise Architecture macht diese Richtung konkret in der Landschaft: welche Anwendungen, welche Schnittstellen, welche Reihenfolge. Beides gehört zusammen. Wir verbinden die strategische Ebene mit der konkreten Architektur, damit aus guten Absichten umsetzbare Entscheidungen werden."}}, {"@type": "Question", "name": "Wie lange dauert ein Architektur-Vorhaben?", "acceptedAnswer": {"@type": "Answer", "text": "Eine erste belastbare Landkarte entsteht in der Regel zügig und liefert sofort Nutzen. Zielbild, Roadmap und Konsolidierung laufen danach in Wellen. Wir arbeiten bewusst nicht in starren Mehrjahres-Blöcken — jede Phase ist einzeln beauftragbar und liefert einen abgegrenzten Nutzen, auf dem die nächste aufbaut."}}, {"@type": "Question", "name": "Arbeiten Sie auch mit kleineren Organisationen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Auch eine überschaubare Landschaft profitiert von Transparenz und klaren Entscheidungen — oft sogar besonders, weil jede Fehlinvestition stärker ins Gewicht fällt. Wo ein großes Programm nicht passt, helfen eine kompakte Landkarte, ein fokussiertes Zielbild oder Sparring für Ihre internen Verantwortlichen — so viel wie nötig, so schlank wie möglich."}}, {"@type": "Question", "name": "Wie gehen Sie mit gewachsenen Altsystemen um?", "acceptedAnswer": {"@type": "Answer", "text": "Mit Augenmaß statt Abrissbirne. Wir bewerten jedes Altsystem nach Nutzen, Kosten, Risiko und Ablöse-Aufwand und leiten daraus ab, was bleibt, was modernisiert und was abgelöst wird — in einer Reihenfolge, die Abhängigkeiten berücksichtigt. So vermeiden Sie sowohl den riskanten Big-Bang-Austausch als auch das endlose Weiterschleppen teurer Altlasten, und jeder Schritt zahlt sichtbar auf eine einfachere Landschaft ein."}}, {"@type": "Question", "name": "Können wir mit einem einzelnen Bereich starten?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, und oft ist das der klügste Einstieg. Statt die ganze Landschaft auf einmal zu kartieren, beginnen wir dort, wo der Druck am größten ist — ein Bereich, eine Domäne oder eine besonders teure Systemgruppe. Der erste sichtbare Erfolg schafft Vertrauen und liefert eine Vorlage, die sich danach auf weitere Bereiche übertragen lässt, ohne dass ein Großprojekt nötig wird."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Was kostet eine Enterprise-Architecture-Beratung?", "acceptedAnswer": {"@type": "Answer", "text": "Der Aufwand hängt vom Umfang ab — von der Größe der Landschaft, der Datenlage und der gewünschten Tiefe. Wir nennen eine belastbare Spanne transparent im kostenlosen Erstgespräch, bevor Sie sich festlegen. Größere Vorhaben begleiten wir in Wellen, sodass Sie nach jeder Phase neu entscheiden — und nie auf Verdacht in ein Mehrjahres-Programm investieren."}}, {"@type": "Question", "name": "Wo fangen wir an?", "acceptedAnswer": {"@type": "Answer", "text": "Mit Transparenz: einer verständlichen Landkarte Ihrer Anwendungen, Kosten und Abhängigkeiten. Erst wenn das Ist-Bild steht, lohnt sich ein Zielbild. Sie starten dort, wo der Handlungsbedarf am größten ist — meist bei Doppelungen, teuren Altsystemen oder Stellen, an denen die Landschaft das Geschäft ausbremst."}}, {"@type": "Question", "name": "Brauchen wir dafür ein bestimmtes Rahmenwerk wie TOGAF?", "acceptedAnswer": {"@type": "Answer", "text": "Selten zwingend. Rahmenwerke wie TOGAF oder Modellierungssprachen wie ArchiMate sind nützliche Werkzeugkästen — am besten gezielt eingesetzt. Wir nutzen das, was zu Ihrer Reife und Ihrem Ziel passt, in der passenden Dosis. Wichtiger als das Etikett ist, dass Architektur am Ende bessere Entscheidungen ermöglicht. Mehr zu den Rahmenwerken finden Sie bei der Open Group."}}, {"@type": "Question", "name": "Warum bleibt Architektur-Arbeit oft wirkungslos?", "acceptedAnswer": {"@type": "Answer", "text": "Fast immer am gleichen Muster: Sie entsteht im Elfenbeinturm, verliert den Bezug zum Geschäft und endet in Diagrammen, die Entscheidungen offenlassen. Parallel wuchert die Landschaft ungesteuert weiter. Wir setzen deshalb bei Transparenz und konkreten Entscheidungen an — und etablieren leichtgewichtige Governance, damit aus Übersicht echte Steuerung wird."}}, {"@type": "Question", "name": "Wie machen Sie Architektur für Entscheider greifbar?", "acceptedAnswer": {"@type": "Answer", "text": "Indem wir aus IT-Technik Geschäftsfragen machen: Was kostet diese Landschaft, wo liegen Risiken, welche Doppelungen binden Geld, welche Abhängigkeiten bremsen Vorhaben? Eine gute Landkarte zeigt das übersichtlich auf einer einzigen Seite und erspart hundert Diagramme. So können auch fachfremde Entscheider fundiert über Investitionen entscheiden — und Architektur bekommt das Gewicht, das sie braucht."}}, {"@type": "Question", "name": "Wie verhindern Sie, dass die Landschaft wieder wuchert?", "acceptedAnswer": {"@type": "Answer", "text": "Durch leichtgewichtige Governance: klare, einfache Entscheidungswege und ein paar tragfähige Prinzipien, an denen sich Beschaffung und Projekte ausrichten. Wenige Regeln, die wirklich greifen, wirken mehr als ein dickes Regelwerk, das niemand liest. Entscheidend ist, dass Architektur-Entscheidungen sichtbar getroffen und nachgehalten werden — sonst beschafft bald wieder jeder Bereich für sich."}}, {"@type": "Question", "name": "Was ist der Unterschied zwischen Enterprise Architecture und IT-Strategie?", "acceptedAnswer": {"@type": "Answer", "text": "Die IT-Strategie setzt die Richtung — wohin und warum. Enterprise Architecture macht diese Richtung konkret in der Landschaft: welche Anwendungen, welche Schnittstellen, welche Reihenfolge. Beides gehört zusammen. Wir verbinden die strategische Ebene mit der konkreten Architektur, damit aus guten Absichten umsetzbare Entscheidungen werden."}}, {"@type": "Question", "name": "Wie lange dauert ein Architektur-Vorhaben?", "acceptedAnswer": {"@type": "Answer", "text": "Eine erste belastbare Landkarte entsteht in der Regel zügig und liefert sofort Nutzen. Zielbild, Roadmap und Konsolidierung laufen danach in Wellen. Wir arbeiten bewusst nicht in starren Mehrjahres-Blöcken — jede Phase ist einzeln beauftragbar und liefert einen abgegrenzten Nutzen, auf dem die nächste aufbaut."}}, {"@type": "Question", "name": "Arbeiten Sie auch mit kleineren Organisationen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Auch eine überschaubare Landschaft profitiert von Transparenz und klaren Entscheidungen — oft sogar besonders, weil jede Fehlinvestition stärker ins Gewicht fällt. Wo ein großes Programm nicht passt, helfen eine kompakte Landkarte, ein fokussiertes Zielbild oder Sparring für Ihre internen Verantwortlichen — so viel wie nötig, so schlank wie möglich."}}, {"@type": "Question", "name": "Wie gehen Sie mit gewachsenen Altsystemen um?", "acceptedAnswer": {"@type": "Answer", "text": "Mit Augenmaß und gezieltem Vorgehen. Wir bewerten jedes Altsystem nach Nutzen, Kosten, Risiko und Ablöse-Aufwand und leiten daraus ab, was bleibt, was modernisiert und was abgelöst wird — in einer Reihenfolge, die Abhängigkeiten berücksichtigt. So vermeiden Sie sowohl den riskanten Big-Bang-Austausch als auch das endlose Weiterschleppen teurer Altlasten, und jeder Schritt zahlt sichtbar auf eine einfachere Landschaft ein."}}, {"@type": "Question", "name": "Können wir mit einem einzelnen Bereich starten?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, und oft ist das der klügste Einstieg. Wir beginnen gezielt dort, wo der Druck am größten ist — ein Bereich, eine Domäne oder eine besonders teure Systemgruppe — und nehmen die ganze Landschaft Schritt für Schritt in den Blick. Der erste sichtbare Erfolg schafft Vertrauen und liefert eine Vorlage, die sich danach auf weitere Bereiche übertragen lässt — gänzlich frei von einem Großprojekt."}}]}</script>
 <style id="cx-hero-grid">
 .hero__grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(28px,3.5vw,52px);align-items:stretch;margin-bottom:40px;position:relative}
 .hero__copy{display:flex;flex-direction:column;justify-content:center;min-width:0}
-.hero__copy .hero__cta-row{margin-bottom:0}
+.hero__copy.hero__cta-row{margin-bottom:0}
 .hero__form-col{display:flex;align-items:center;min-width:0}
-.hero__form-col .cx-hero-form{margin:0!important;max-width:none!important;width:100%}
-@media(max-width:920px){.hero__grid{grid-template-columns:1fr;gap:24px}.hero__copy{text-align:center;align-items:center}.hero__form-col{justify-content:center}.hero__form-col .cx-hero-form{max-width:540px!important;margin:0 auto!important}}
+.hero__form-col.cx-hero-form{margin:0!important;max-width:none!important;width:100%}
+@media(max-width:920px){.hero__grid{grid-template-columns:1fr;gap:24px}.hero__copy{text-align:center;align-items:center}.hero__form-col{justify-content:center}.hero__form-col.cx-hero-form{max-width:540px!important;margin:0 auto!important}}
 </style>
 <style id="cx-nav-ported">
 :root{--acn-purple:var(--cx-yellow);--acn-black:var(--cx-charcoal);--acn-ink:var(--cx-charcoal);--ease-out:var(--ease);--font-display:var(--font-sans)}
 
 
 .skip-link {
-  position: absolute;
-  left: 0; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%);
-  top: 0;
-  background: var(--acn-black);
-  color: #fff;
-  padding: 12px 16px;
-  z-index: 999;
-  font-weight: 500;
-  text-decoration: none;
+ position: absolute;
+ left: 0; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%);
+ top: 0;
+ background: var(--acn-black);
+ color: #fff;
+ padding: 12px 16px;
+ z-index: 999;
+ font-weight: 500;
+ text-decoration: none;
 }
 
 .skip-link:focus { left: 16px; top: 16px; width: auto; height: auto; overflow: visible; clip-path: none; }
 
 
 /* ==========================================================================
-   Navigation
-   ========================================================================== */
+ Navigation
+ ========================================================================== */
 
 .nav {
-  position: fixed;
-  inset: 0 0 auto 0;
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  transition: background-color var(--dur) var(--ease-out), color var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out);
+ position: fixed;
+ inset: 0 0 auto 0;
+ z-index: 100;
+ background: rgba(0, 0, 0, 0.35);
+ backdrop-filter: blur(14px);
+ -webkit-backdrop-filter: blur(14px);
+ color: #fff;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+ transition: background-color var(--dur) var(--ease-out), color var(--dur) var(--ease-out), border-color var(--dur) var(--ease-out);
 }
 
 
 .nav.is-scrolled {
-  background: rgba(255, 255, 255, 0.94);
-  color: var(--acn-ink);
-  border-bottom-color: var(--line);
+ background: rgba(255, 255, 255, 0.94);
+ color: var(--acn-ink);
+ border-bottom-color: var(--line);
 }
 
 
 .nav__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  width: 100%;
-  max-width: var(--container);
-  margin-inline: auto;
-  padding: 14px var(--container-px);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 32px;
+ width: 100%;
+ max-width: var(--container);
+ margin-inline: auto;
+ padding: 14px var(--container-px);
 }
 
 
 .nav__brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.125rem;
-  letter-spacing: -0.02em;
-  color: inherit;
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ text-decoration: none;
+ font-family: var(--font-display);
+ font-weight: 700;
+ font-size: 1.125rem;
+ letter-spacing: -0.02em;
+ color: inherit;
 }
 
 
 .nav__brand-mark {
-  display: inline-flex;
-  width: 28px;
-  height: 28px;
-  color: var(--cx-yellow);
-  background: var(--cx-charcoal);
-  padding: 4px;
-  transition: background-color var(--dur) var(--ease-out), color var(--dur) var(--ease-out);
+ display: inline-flex;
+ width: 28px;
+ height: 28px;
+ color: var(--cx-yellow);
+ background: var(--cx-charcoal);
+ padding: 4px;
+ transition: background-color var(--dur) var(--ease-out), color var(--dur) var(--ease-out);
 }
 
-.nav.is-scrolled .nav__brand-mark { background: var(--cx-charcoal); color: var(--cx-yellow); }
+.nav.is-scrolled.nav__brand-mark { background: var(--cx-charcoal); color: var(--cx-yellow); }
 
 .nav__brand-mark svg { width: 100%; height: 100%; }
 
 
 .nav__brand-text {
-  font-weight: 700;
-  letter-spacing: 0.02em;
+ font-weight: 700;
+ letter-spacing: 0.02em;
 }
 
 
 .nav__links {
-  display: flex;
-  align-items: center;
-  gap: 32px;
+ display: flex;
+ align-items: center;
+ gap: 32px;
 }
 
 .nav__links a {
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-decoration: none;
-  color: inherit;
-  letter-spacing: -0.005em;
-  position: relative;
-  padding: 6px 0;
-  opacity: 0.85;
-  transition: opacity var(--dur) var(--ease-out), color var(--dur) var(--ease-out);
+ font-size: 0.875rem;
+ font-weight: 500;
+ text-decoration: none;
+ color: inherit;
+ letter-spacing: -0.005em;
+ position: relative;
+ padding: 6px 0;
+ opacity: 0.85;
+ transition: opacity var(--dur) var(--ease-out), color var(--dur) var(--ease-out);
 }
 
 .nav__links a:hover { opacity: 1; }
@@ -371,304 +371,304 @@ html { scroll-behavior: auto !important; }
 .nav__links a.is-active { opacity: 1; }
 
 .nav__links a.is-active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  background: var(--acn-purple);
+ content: "";
+ position: absolute;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ height: 2px;
+ background: var(--acn-purple);
 }
 
 
 .nav__cta-group {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+ display: flex;
+ align-items: center;
+ gap: 12px;
 }
 
 
-.nav.is-scrolled .nav__desktop-cta {
-  background: var(--acn-black);
-  border-color: var(--acn-black);
-  color: #fff;
+.nav.is-scrolled.nav__desktop-cta {
+ background: var(--acn-black);
+ border-color: var(--acn-black);
+ color: #fff;
 }
 
-.nav .nav__desktop-cta {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.3);
-  color: #fff;
-  backdrop-filter: blur(8px);
+.nav.nav__desktop-cta {
+ background: rgba(255, 255, 255, 0.12);
+ border-color: rgba(255, 255, 255, 0.3);
+ color: #fff;
+ backdrop-filter: blur(8px);
 }
 
-.nav .nav__desktop-cta:hover {
-  background: var(--acn-purple);
-  border-color: var(--acn-purple);
+.nav.nav__desktop-cta:hover {
+ background: var(--acn-purple);
+ border-color: var(--acn-purple);
 }
 
-.nav.is-scrolled .nav__desktop-cta:hover {
-  background: var(--acn-purple);
-  border-color: var(--acn-purple);
+.nav.is-scrolled.nav__desktop-cta:hover {
+ background: var(--acn-purple);
+ border-color: var(--acn-purple);
 }
 
 
 .nav__menu {
-  display: none;
-  width: 44px;
-  height: 44px;
-  border: 1px solid currentColor;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
-  padding: 0;
+ display: none;
+ width: 44px;
+ height: 44px;
+ border: 1px solid currentColor;
+ background: transparent;
+ color: inherit;
+ cursor: pointer;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 5px;
+ padding: 0;
 }
 
 .nav__menu span {
-  display: block;
-  width: 18px;
-  height: 1.5px;
-  background: currentColor;
+ display: block;
+ width: 18px;
+ height: 1.5px;
+ background: currentColor;
 }
 
 
 .nav-drawer {
-  background: var(--acn-black);
-  color: #fff;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+ background: var(--acn-black);
+ color: #fff;
+ border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-drawer__inner {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 24px var(--container-px) 28px;
+ display: flex;
+ flex-direction: column;
+ gap: 4px;
+ padding: 24px var(--container-px) 28px;
 }
 
 .nav-drawer__inner a {
-  text-decoration: none;
-  color: inherit;
-  font-size: 1.125rem;
-  font-weight: 500;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  letter-spacing: -0.01em;
+ text-decoration: none;
+ color: inherit;
+ font-size: 1.125rem;
+ font-weight: 500;
+ padding: 14px 0;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ letter-spacing: -0.01em;
 }
 
 .nav-drawer__inner a:last-child { border-bottom: none; margin-top: 12px; }
 @media (max-width: 980px) {
 
-  .nav__links { display: none; }
+.nav__links { display: none; }
 
-  .nav__desktop-cta { display: none; }
+.nav__desktop-cta { display: none; }
 }
 
 /* Legacy mobile hamburger + drawer fully retired — cx-menu-btn is the single mobile menu */
 .nav__menu,
-.nav-drawer { display: none !important; }
+.nav-drawer { display: none!important; }
 
 
 body.has-drawer { overflow: hidden; }
 
 
 /* ==========================================================================
-   Wide hamburger menu + slide-down drawer (homepage, matches sub-pages)
-   ========================================================================== */
+ Wide hamburger menu + slide-down drawer (homepage, matches sub-pages)
+ ========================================================================== */
 .cx-menu-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 14px 8px 10px;
-  background: transparent;
-  border: 1px solid var(--line, rgba(0,0,0,0.18));
-  color: var(--cx-charcoal);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 0.8125rem;
-  letter-spacing: -0.005em;
-  cursor: pointer;
-  transition: background 280ms cubic-bezier(0.85,0,0,1),
-              border-color 280ms cubic-bezier(0.85,0,0,1),
-              color 280ms cubic-bezier(0.85,0,0,1);
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ padding: 8px 14px 8px 10px;
+ background: transparent;
+ border: 1px solid var(--line, rgba(0,0,0,0.18));
+ color: var(--cx-charcoal);
+ font-family: inherit;
+ font-weight: 700;
+ font-size: 0.8125rem;
+ letter-spacing: -0.005em;
+ cursor: pointer;
+ transition: background 280ms cubic-bezier(0.85,0,0,1),
+ border-color 280ms cubic-bezier(0.85,0,0,1),
+ color 280ms cubic-bezier(0.85,0,0,1);
 }
 
 .cx-menu-btn:hover {
-  background: var(--cx-charcoal);
-  color: #fff;
-  border-color: var(--cx-charcoal);
+ background: var(--cx-charcoal);
+ color: #fff;
+ border-color: var(--cx-charcoal);
 }
 
-.cx-menu-btn:hover .cx-menu-btn__icon span { background: var(--cx-yellow); }
+.cx-menu-btn:hover.cx-menu-btn__icon span { background: var(--cx-yellow); }
 
 .cx-menu-btn[aria-expanded="true"] {
-  background: var(--cx-charcoal);
-  color: #fff;
-  border-color: var(--cx-charcoal);
+ background: var(--cx-charcoal);
+ color: #fff;
+ border-color: var(--cx-charcoal);
 }
 
-.cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span { background: var(--cx-yellow); }
+.cx-menu-btn[aria-expanded="true"].cx-menu-btn__icon span { background: var(--cx-yellow); }
 
-.cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.cx-menu-btn[aria-expanded="true"].cx-menu-btn__icon span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
 
-.cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span:nth-child(2) { opacity: 0; }
+.cx-menu-btn[aria-expanded="true"].cx-menu-btn__icon span:nth-child(2) { opacity: 0; }
 
-.cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+.cx-menu-btn[aria-expanded="true"].cx-menu-btn__icon span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
 
 
 .cx-drawer {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  background: var(--cx-warm-2, #faf6ec);
-  border-bottom: 1px solid var(--line, rgba(0,0,0,0.18));
-  z-index: 75;
-  box-shadow: 0 24px 48px -24px rgba(30,35,39,0.18);
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  visibility: hidden;
-  transition: max-height 380ms cubic-bezier(0.85,0,0,1),
-              opacity 220ms cubic-bezier(0.85,0,0,1),
-              visibility 0s linear 220ms;
-  padding-top: 64px;
+ position: fixed;
+ top: 0; left: 0; right: 0;
+ background: var(--cx-warm-2, #faf6ec);
+ border-bottom: 1px solid var(--line, rgba(0,0,0,0.18));
+ z-index: 75;
+ box-shadow: 0 24px 48px -24px rgba(30,35,39,0.18);
+ max-height: 0;
+ overflow: hidden;
+ opacity: 0;
+ visibility: hidden;
+ transition: max-height 380ms cubic-bezier(0.85,0,0,1),
+ opacity 220ms cubic-bezier(0.85,0,0,1),
+ visibility 0s linear 220ms;
+ padding-top: 64px;
 }
 
 .cx-drawer.is-open {
-  max-height: 100vh;
-  opacity: 1;
-  visibility: visible;
-  transition: max-height 480ms cubic-bezier(0.85,0,0,1),
-              opacity 220ms cubic-bezier(0.85,0,0,1) 80ms,
-              visibility 0s linear;
+ max-height: 100vh;
+ opacity: 1;
+ visibility: visible;
+ transition: max-height 480ms cubic-bezier(0.85,0,0,1),
+ opacity 220ms cubic-bezier(0.85,0,0,1) 80ms,
+ visibility 0s linear;
 }
 
 .cx-drawer__inner {
-  max-width: var(--container, 1280px);
-  margin: 0 auto;
-  padding: 32px var(--container-px, clamp(24px,5vw,88px)) 36px;
-  display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: clamp(28px, 4vw, 56px);
+ max-width: var(--container, 1280px);
+ margin: 0 auto;
+ padding: 32px var(--container-px, clamp(24px,5vw,88px)) 36px;
+ display: grid;
+ grid-template-columns: 1.6fr 1fr;
+ gap: clamp(28px, 4vw, 56px);
 }
 @media (max-width: 880px) {
 
-  .cx-drawer__inner { grid-template-columns: 1fr; gap: 24px; padding: 20px var(--container-px, clamp(24px,5vw,88px)) 28px; }
+.cx-drawer__inner { grid-template-columns: 1fr; gap: 24px; padding: 20px var(--container-px, clamp(24px,5vw,88px)) 28px; }
 }
 
 .cx-drawer__section {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+ display: flex;
+ flex-direction: column;
+ gap: 8px;
 }
 
 .cx-drawer__label {
-  font-family: inherit;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--cx-charcoal-3);
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--line, rgba(0,0,0,0.18));
-  margin-bottom: 6px;
+ font-family: inherit;
+ font-size: 0.6875rem;
+ font-weight: 700;
+ letter-spacing: 0.22em;
+ text-transform: uppercase;
+ color: var(--cx-charcoal-3);
+ padding-bottom: 14px;
+ border-bottom: 1px solid var(--line, rgba(0,0,0,0.18));
+ margin-bottom: 6px;
 }
 
 .cx-drawer__link {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 18px;
-  padding: 14px 16px;
-  background: transparent;
-  border: 1px solid transparent;
-  text-decoration: none;
-  color: inherit;
-  transition: background 280ms cubic-bezier(0.85,0,0,1),
-              border-color 280ms cubic-bezier(0.85,0,0,1),
-              transform 280ms cubic-bezier(0.85,0,0,1);
+ display: grid;
+ grid-template-columns: auto 1fr auto;
+ align-items: center;
+ gap: 18px;
+ padding: 14px 16px;
+ background: transparent;
+ border: 1px solid transparent;
+ text-decoration: none;
+ color: inherit;
+ transition: background 280ms cubic-bezier(0.85,0,0,1),
+ border-color 280ms cubic-bezier(0.85,0,0,1),
+ transform 280ms cubic-bezier(0.85,0,0,1);
 }
 
 .cx-drawer__link:hover { background: #fff; border-color: var(--line, rgba(0,0,0,0.18)); transform: translateX(2px); }
 
 .cx-drawer__num {
-  font-family: inherit;
-  font-size: 0.6875rem;
-  font-weight: 800;
-  color: var(--cx-yellow);
-  background: var(--cx-charcoal);
-  width: 32px;
-  height: 32px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 0.04em;
+ font-family: inherit;
+ font-size: 0.6875rem;
+ font-weight: 800;
+ color: var(--cx-yellow);
+ background: var(--cx-charcoal);
+ width: 32px;
+ height: 32px;
+ display: inline-flex;
+ align-items: center;
+ justify-content: center;
+ letter-spacing: 0.04em;
 }
 
 .cx-drawer__title {
-  font-size: 0.9375rem;
-  font-weight: 700;
-  color: var(--cx-charcoal);
-  letter-spacing: -0.01em;
-  line-height: 1.3;
+ font-size: 0.9375rem;
+ font-weight: 700;
+ color: var(--cx-charcoal);
+ letter-spacing: -0.01em;
+ line-height: 1.3;
 }
 
 .cx-drawer__arrow {
-  color: var(--cx-charcoal-3);
-  font-size: 1.125rem;
-  transition: color 280ms cubic-bezier(0.85,0,0,1),
-              transform 280ms cubic-bezier(0.85,0,0,1);
+ color: var(--cx-charcoal-3);
+ font-size: 1.125rem;
+ transition: color 280ms cubic-bezier(0.85,0,0,1),
+ transform 280ms cubic-bezier(0.85,0,0,1);
 }
 
-.cx-drawer__link:hover .cx-drawer__arrow { color: var(--cx-yellow); transform: translateX(3px); }
+.cx-drawer__link:hover.cx-drawer__arrow { color: var(--cx-yellow); transform: translateX(3px); }
 
 .cx-drawer__footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 20px 24px;
-  background: var(--cx-charcoal);
-  color: #fff;
-  align-self: start;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ gap: 24px;
+ padding: 20px 24px;
+ background: var(--cx-charcoal);
+ color: #fff;
+ align-self: start;
 }
 
 .cx-drawer__footer-label {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--cx-yellow);
+ font-size: 0.6875rem;
+ font-weight: 700;
+ letter-spacing: 0.22em;
+ text-transform: uppercase;
+ color: var(--cx-yellow);
 }
 
 .cx-drawer__footer-h {
-  margin: 6px 0 12px;
-  font-size: 1.125rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
+ margin: 6px 0 12px;
+ font-size: 1.125rem;
+ font-weight: 700;
+ letter-spacing: -0.01em;
+ line-height: 1.3;
 }
 
 .cx-drawer__footer-p {
-  margin: 0 0 18px;
-  font-size: 0.875rem;
-  line-height: 1.55;
-  color: rgba(255,255,255,0.78);
+ margin: 0 0 18px;
+ font-size: 0.875rem;
+ line-height: 1.55;
+ color: rgba(255,255,255,0.78);
 }
 
 .cx-drawer__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 11px 16px;
-  background: var(--cx-yellow);
-  color: var(--cx-charcoal);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  transition: background 280ms cubic-bezier(0.85,0,0,1), transform 280ms cubic-bezier(0.85,0,0,1);
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ padding: 11px 16px;
+ background: var(--cx-yellow);
+ color: var(--cx-charcoal);
+ font-size: 0.8125rem;
+ font-weight: 700;
+ letter-spacing: 0.04em;
+ text-decoration: none;
+ transition: background 280ms cubic-bezier(0.85,0,0,1), transform 280ms cubic-bezier(0.85,0,0,1);
 }
 
 .cx-drawer__cta:hover { background: var(--cx-yellow-soft); transform: translateY(-1px); }
@@ -676,64 +676,64 @@ body.has-drawer { overflow: hidden; }
 .cx-drawer__cta-arrow { font-size: 1rem; }
 
 .cx-drawer__close-hint {
-  font-size: 0.6875rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.55);
-  letter-spacing: 0.08em;
+ font-size: 0.6875rem;
+ font-weight: 600;
+ color: rgba(255,255,255,0.55);
+ letter-spacing: 0.08em;
 }
 
 .cx-drawer__close-hint kbd {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.6875rem;
-  background: rgba(255,255,255,0.1);
-  padding: 2px 7px;
-  border: 1px solid rgba(255,255,255,0.2);
-  margin: 0 3px;
+ font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+ font-size: 0.6875rem;
+ background: rgba(255,255,255,0.1);
+ padding: 2px 7px;
+ border: 1px solid rgba(255,255,255,0.2);
+ margin: 0 3px;
 }
 
 .cx-drawer-scrim {
-  position: fixed;
-  inset: 0;
-  background: rgba(30,35,39,0.42);
-  backdrop-filter: blur(2px);
-  z-index: 70;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 220ms cubic-bezier(0.85,0,0,1),
-              visibility 0s linear 220ms;
+ position: fixed;
+ inset: 0;
+ background: rgba(30,35,39,0.42);
+ backdrop-filter: blur(2px);
+ z-index: 70;
+ opacity: 0;
+ visibility: hidden;
+ transition: opacity 220ms cubic-bezier(0.85,0,0,1),
+ visibility 0s linear 220ms;
 }
 
 .cx-drawer-scrim.is-open {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 220ms cubic-bezier(0.85,0,0,1);
+ opacity: 1;
+ visibility: visible;
+ transition: opacity 220ms cubic-bezier(0.85,0,0,1);
 }
 @media (max-width: 560px) {
 
-  .cx-menu-btn { padding: 8px 10px; }
+.cx-menu-btn { padding: 8px 10px; }
 }
 
 
 /* ---- Nav: enter-from-top on load --------------------------------------- */
 
 .nav {
-  animation: acn-enter-from-top 700ms var(--acn-ease) backwards;
+ animation: acn-enter-from-top 700ms var(--acn-ease) backwards;
 }
 
 
 /* ---- Section nav indicator: scroll progress bar at top of nav --------- */
 
 .nav::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--cx-yellow);
-  transform-origin: left;
-  transform: scaleX(var(--scroll-progress, 0));
-  z-index: 2;
+ content: "";
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ height: 2px;
+ background: var(--cx-yellow);
+ transform-origin: left;
+ transform: scaleX(var(--scroll-progress, 0));
+ z-index: 2;
 }
 
 
@@ -749,27 +749,27 @@ body.has-drawer { overflow: hidden; }
 
 .cx-menu-btn { padding: 8px 14px 8px 11px; font-size: 0.8125rem; }
 
-.cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span:nth-child(1) { transform: translateY(4.5px) rotate(45deg); }
+.cx-menu-btn[aria-expanded="true"].cx-menu-btn__icon span:nth-child(1) { transform: translateY(4.5px) rotate(45deg); }
 
-.cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span:nth-child(3) { transform: translateY(-4.5px) rotate(-45deg); }
+.cx-menu-btn[aria-expanded="true"].cx-menu-btn__icon span:nth-child(3) { transform: translateY(-4.5px) rotate(-45deg); }
 
 .nav__cta-group { gap: 10px; }
 @media (max-width: 540px) {
 
-  .cx-menu-btn { padding: 8px 10px; }
+.cx-menu-btn { padding: 8px 10px; }
 }
 
 
 /* === Topbar visibility fix + reorder (homepage) === */
-.nav { background: var(--cx-warm-2) !important; backdrop-filter: saturate(180%) blur(18px); -webkit-backdrop-filter: saturate(180%) blur(18px); border-bottom: 1px solid var(--cx-charcoal-3); box-shadow: 0 1px 0 rgba(30,35,39,0.04), 0 12px 28px -18px rgba(30,35,39,0.18); }
+.nav { background: var(--cx-warm-2)!important; backdrop-filter: saturate(180%) blur(18px); -webkit-backdrop-filter: saturate(180%) blur(18px); border-bottom: 1px solid var(--cx-charcoal-3); box-shadow: 0 1px 0 rgba(30,35,39,0.04), 0 12px 28px -18px rgba(30,35,39,0.18); }
 
 .nav__cta-group { display: flex; align-items: center; gap: 10px; }
 
-.nav__cta-group .nav__desktop-cta { order: 1; }
+.nav__cta-group.nav__desktop-cta { order: 1; }
 
-.nav__cta-group .cx-menu-btn { order: 2; }
+.nav__cta-group.cx-menu-btn { order: 2; }
 
-.nav__cta-group .nav__menu { order: 3; }
+.nav__cta-group.nav__menu { order: 3; }
 
 .cx-menu-btn { background: rgba(30,35,39,0.04); }
 
@@ -777,24 +777,24 @@ body.has-drawer { overflow: hidden; }
 
 
 /* =========================================================================
-   Mobile polish: unified menu + slides carousel for Leistungen
-   ========================================================================= */
+ Mobile polish: unified menu + slides carousel for Leistungen
+ ========================================================================= */
 
 /* "Springen zu" anchor block — visible only when drawer is in its mobile (stacked) layout */
 .cx-drawer__section--mobile { display: none; }
 
 .cx-drawer__jump {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 16px;
-  border: 1px solid transparent;
-  font-size: 0.9375rem;
-  font-weight: 700;
-  letter-spacing: -0.005em;
-  color: var(--cx-charcoal);
-  text-decoration: none;
-  transition: background 280ms cubic-bezier(0.85,0,0,1), border-color 280ms cubic-bezier(0.85,0,0,1), transform 280ms cubic-bezier(0.85,0,0,1);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 14px 16px;
+ border: 1px solid transparent;
+ font-size: 0.9375rem;
+ font-weight: 700;
+ letter-spacing: -0.005em;
+ color: var(--cx-charcoal);
+ text-decoration: none;
+ transition: background 280ms cubic-bezier(0.85,0,0,1), border-color 280ms cubic-bezier(0.85,0,0,1), transform 280ms cubic-bezier(0.85,0,0,1);
 }
 
 .cx-drawer__jump:hover { background: #fff; border-color: var(--line); transform: translateX(2px); }
@@ -804,12 +804,12 @@ body.has-drawer { overflow: hidden; }
 .cx-drawer__jump:hover span { color: var(--cx-yellow); transform: translateX(3px); }
 @media (max-width: 880px) {
 
-  .cx-drawer__section--mobile { display: flex; flex-direction: column; gap: 6px; }
+.cx-drawer__section--mobile { display: flex; flex-direction: column; gap: 6px; }
 
-  /* The dark footer block adds visual weight on a small viewport — keep it compact */
-  .cx-drawer__footer { padding: 18px 20px; }
+ /* The dark footer block adds visual weight on a small viewport — keep it compact */
+.cx-drawer__footer { padding: 18px 20px; }
 
-  .cx-drawer__footer-p { display: none; }
+.cx-drawer__footer-p { display: none; }
 }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://cx-experts.de/"}, {"@type": "ListItem", "position": 2, "name": "Enterprise Architecture", "item": "https://cx-experts.de/enterprise-architecture-beratung/"}]}</script>
@@ -817,13 +817,13 @@ body.has-drawer { overflow: hidden; }
 <style id="grid-coherence">
 /* Card-grid coherence: a grid with EXACTLY 4 cards renders 2×2 (never 3+1 orphan / negative space). 3- and 6-card grids unaffected. */
 @media(min-width:600px){
-  .cards:has(> :last-child:nth-child(4)),
-  .problem-grid:has(> :last-child:nth-child(4)),
-  .services-grid:has(> :last-child:nth-child(4)),
-  .diff-list:has(> :last-child:nth-child(4)),
-  .uses-grid:has(> :last-child:nth-child(4)),
-  .industries:has(> :last-child:nth-child(4)),
-  .compliance-block:has(> :last-child:nth-child(4)){grid-template-columns:repeat(2,1fr)!important}
+.cards:has(>:last-child:nth-child(4)),
+.problem-grid:has(>:last-child:nth-child(4)),
+.services-grid:has(>:last-child:nth-child(4)),
+.diff-list:has(>:last-child:nth-child(4)),
+.uses-grid:has(>:last-child:nth-child(4)),
+.industries:has(>:last-child:nth-child(4)),
+.compliance-block:has(>:last-child:nth-child(4)){grid-template-columns:repeat(2,1fr)!important}
 }
 </style>
 </head>
@@ -833,238 +833,238 @@ body.has-drawer { overflow: hidden; }
 
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
 <header>
-  <nav class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="../index.html" class="nav__brand" aria-label="CX Startseite">
-        <span class="nav__brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M11 7 L22 16 L11 25" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"/></svg></span>
-        <span class="nav__brand-text">CX</span>
-      </a>
-      <div class="nav__links" role="navigation" aria-label="Hauptnavigation">
-        <a href="#vorgehen">Vorgehen</a>
-        <a href="#vorteile">Vorteile</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <div class="nav__cta-group">
-        <button type="button" class="cx-menu-btn" id="cxMenuToggle" aria-label="Leistungen-Menü öffnen" aria-expanded="false" aria-controls="cxServicesDrawer">
-          <span class="cx-menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span class="cx-menu-btn__label">Leistungen</span>
-        </button>
-        <a href="#kontakt" class="btn btn--accent btn--small nav__desktop-cta">Erstgespräch anfragen <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
-      </div>
-    </div>
-  </nav>
+ <nav class="nav" id="nav">
+ <div class="nav__inner">
+ <a href="../index.html" class="nav__brand" aria-label="CX Startseite">
+ <span class="nav__brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M11 7 L22 16 L11 25" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter"/></svg></span>
+ <span class="nav__brand-text">CX</span>
+ </a>
+ <div class="nav__links" role="navigation" aria-label="Hauptnavigation">
+ <a href="#vorgehen">Vorgehen</a>
+ <a href="#vorteile">Vorteile</a>
+ <a href="#faq">FAQ</a>
+ </div>
+ <div class="nav__cta-group">
+ <button type="button" class="cx-menu-btn" id="cxMenuToggle" aria-label="Leistungen-Menü öffnen" aria-expanded="false" aria-controls="cxServicesDrawer">
+ <span class="cx-menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+ <span class="cx-menu-btn__label">Leistungen</span>
+ </button>
+ <a href="#kontakt" class="btn btn--accent btn--small nav__desktop-cta">Erstgespräch anfragen <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
+ </div>
+ </div>
+ </nav>
 </header>
 <div class="cx-drawer-scrim" id="cxDrawerScrim" aria-hidden="true"></div>
 <aside class="cx-drawer" id="cxServicesDrawer" aria-hidden="true" role="dialog" aria-label="Leistungs-Navigation">
-  <div class="cx-drawer__inner">
-    <div class="cx-drawer__column">
-      <div class="cx-drawer__section">
-        <div class="cx-drawer__label">Säule 1 — Projekte &amp; Prozesse</div>
-        <a class="cx-drawer__link" href="../prozessoptimierung-beratung/index.html"><span class="cx-drawer__num">01</span><span class="cx-drawer__title">Prozessoptimierung &amp; BPM</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
-        <a class="cx-drawer__link" href="../projektmanagement-beratung/index.html"><span class="cx-drawer__num">02</span><span class="cx-drawer__title">Projektmanagement</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
-        <a class="cx-drawer__link" href="../digitalisierungsberatung/index.html"><span class="cx-drawer__num">03</span><span class="cx-drawer__title">Digitalisierung &amp; Transformation</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
-        <a class="cx-drawer__link" href="../change-management-beratung/index.html"><span class="cx-drawer__num">04</span><span class="cx-drawer__title">Change Management</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
-        <a class="cx-drawer__link" href="../ki-beratung/index.html"><span class="cx-drawer__num">05</span><span class="cx-drawer__title">KI-Beratung &amp; Strategie</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
-      </div>
-      <div class="cx-drawer__section" style="margin-top:24px">
-        <div class="cx-drawer__label">Säule 2 — Architektur</div>
-        <a class="cx-drawer__link" href="../enterprise-architecture-beratung/index.html"><span class="cx-drawer__num">06</span><span class="cx-drawer__title">Enterprise Architecture</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
-      </div>
-      <div class="cx-drawer__section cx-drawer__section--mobile" style="margin-top:24px">
-        <div class="cx-drawer__label">Springen zu</div>
-        <a class="cx-drawer__jump" href="#vorgehen">Vorgehen <span aria-hidden="true">→</span></a>
-        <a class="cx-drawer__jump" href="#vorteile">Vorteile <span aria-hidden="true">→</span></a>
-        <a class="cx-drawer__jump" href="#faq">FAQ <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-    <div class="cx-drawer__footer">
-      <div>
-        <div class="cx-drawer__footer-label">CX-Experts</div>
-        <div class="cx-drawer__footer-h">Zwei Säulen, sechs Beratungsfelder.</div>
-        <p class="cx-drawer__footer-p">Projekte &amp; Prozesse als Kernpfeiler, Enterprise Architecture als zweiter Schwerpunkt. Beide greifen ineinander.</p>
-        <a href="#kontakt" class="cx-drawer__cta"><span>Erstgespräch anfragen</span><span class="cx-drawer__cta-arrow">→</span></a>
-      </div>
-      <div class="cx-drawer__close-hint">Schließen mit <kbd>Esc</kbd> oder Klick außerhalb</div>
-    </div>
-  </div>
+ <div class="cx-drawer__inner">
+ <div class="cx-drawer__column">
+ <div class="cx-drawer__section">
+ <div class="cx-drawer__label">Säule 1 — Projekte &amp; Prozesse</div>
+ <a class="cx-drawer__link" href="../prozessoptimierung-beratung/index.html"><span class="cx-drawer__num">01</span><span class="cx-drawer__title">Prozessoptimierung &amp; BPM</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ <a class="cx-drawer__link" href="../projektmanagement-beratung/index.html"><span class="cx-drawer__num">02</span><span class="cx-drawer__title">Projektmanagement</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ <a class="cx-drawer__link" href="../digitalisierungsberatung/index.html"><span class="cx-drawer__num">03</span><span class="cx-drawer__title">Digitalisierung &amp; Transformation</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ <a class="cx-drawer__link" href="../change-management-beratung/index.html"><span class="cx-drawer__num">04</span><span class="cx-drawer__title">Change Management</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ <a class="cx-drawer__link" href="../ki-beratung/index.html"><span class="cx-drawer__num">05</span><span class="cx-drawer__title">KI-Beratung &amp; Strategie</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ </div>
+ <div class="cx-drawer__section" style="margin-top:24px">
+ <div class="cx-drawer__label">Säule 2 — Architektur</div>
+ <a class="cx-drawer__link" href="../enterprise-architecture-beratung/index.html"><span class="cx-drawer__num">06</span><span class="cx-drawer__title">Enterprise Architecture</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ </div>
+ <div class="cx-drawer__section cx-drawer__section--mobile" style="margin-top:24px">
+ <div class="cx-drawer__label">Springen zu</div>
+ <a class="cx-drawer__jump" href="#vorgehen">Vorgehen <span aria-hidden="true">→</span></a>
+ <a class="cx-drawer__jump" href="#vorteile">Vorteile <span aria-hidden="true">→</span></a>
+ <a class="cx-drawer__jump" href="#faq">FAQ <span aria-hidden="true">→</span></a>
+ </div>
+ </div>
+ <div class="cx-drawer__footer">
+ <div>
+ <div class="cx-drawer__footer-label">CX-Experts</div>
+ <div class="cx-drawer__footer-h">Zwei Säulen, sechs Beratungsfelder.</div>
+ <p class="cx-drawer__footer-p">Projekte &amp; Prozesse als Kernpfeiler, Enterprise Architecture als zweiter Schwerpunkt. Beide greifen ineinander.</p>
+ <a href="#kontakt" class="cx-drawer__cta"><span>Erstgespräch anfragen</span><span class="cx-drawer__cta-arrow">→</span></a>
+ </div>
+ <div class="cx-drawer__close-hint">Schließen mit <kbd>Esc</kbd> oder Klick außerhalb</div>
+ </div>
+ </div>
 </aside>
 
 <main>
 
 <!-- HERO -->
 <section class="hero" data-bench-role="hero">
-  <div class="container">
-    <div class="hero__grid">
-      <div class="hero__copy">
-      <div class="hero__eyebrow">Enterprise Architecture Management</div>
-    <h1 class="hero__title">Architektur, die die <span class="accent">›</span> Strategie trägt.</h1>
-    <p class="hero__lead">Enterprise Architecture Management und IT-Architekturberatung — eine ehrliche Landkarte der Landschaft, ein Zielbild und eine Roadmap, die zu Strategie und Liefer-Realität passen. Aus Übersicht werden Entscheidungen — anbieter-unabhängig, für Organisationen jeder Größe, DACH-weit.</p>
-    <div class="hero__cta-row">
-      <a href="#kontakt" class="btn">Erstgespräch anfragen <span class="btn__icon">→</span></a>
-      <a href="#leistungen" class="btn btn--ghost">Leistungen ansehen <span class="btn__icon">↓</span></a>
-    </div>
-      </div>
-      <div class="hero__form-col">
-      <form class="cx-hero-form" action="mailto:kontakt@cx-experts.de" method="post" enctype="text/plain" aria-label="Erstgespräch anfragen" style="display:block;max-width:540px;margin:18px 0 6px;padding:16px 18px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.28);border-radius:14px">
-      <span style="display:block;font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FFB870;margin-bottom:10px">Erstgespräch anfragen — kostenlos &amp; unverbindlich</span>
-      <div style="display:flex;gap:8px;margin-bottom:8px">
-        <input type="text" name="name" placeholder="Vollständiger Name" required aria-label="Vollständiger Name" autocomplete="name" style="flex:1;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;min-width:0">
-        <input type="tel" name="phone" placeholder="Telefonnummer" required aria-label="Telefonnummer" autocomplete="tel" style="flex:1;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;min-width:0">
-      </div>
-      <input type="email" name="email" placeholder="Geschäfts-E-Mail" required aria-label="E-Mail" autocomplete="email" style="display:block;width:100%;box-sizing:border-box;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;margin-bottom:8px">
-      <textarea name="enquiry" rows="2" placeholder="Worum geht es? Ein, zwei Sätze genügen." required aria-label="Ihre Anfrage" style="display:block;width:100%;box-sizing:border-box;padding:12px 13px;font-size:16px;line-height:1.4;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;margin-bottom:10px;resize:vertical;font-family:inherit"></textarea>
-      <button type="submit" style="display:block;width:100%;padding:13px 18px;font-size:14px;font-weight:800;background:#FF7A00;color:#1E2327;border:none;border-radius:9px;cursor:pointer">Anfrage senden →</button>
-      <label style="display:flex;gap:8px;align-items:flex-start;font-size:11px;line-height:1.45;color:rgba(255,255,255,0.88);margin-top:10px"><input type="checkbox" name="dsgvo" required style="flex-shrink:0;margin-top:2px"><span>Ich willige in die Verarbeitung meiner Angaben gem. <a href="../datenschutz.html" style="color:#FFB870">Datenschutzerklärung</a> (Art. 6 Abs. 1 lit. b DSGVO) ein. Die Daten werden ausschließlich zur Beantwortung meiner Anfrage genutzt und nach Abschluss bzw. auf Widerruf gelöscht.</span></label>
-    </form>
-      </div>
-      </div>
-    <div class="hero__trust"><div class="trust-item"><div class="trust-item__num">Steuerung</div><div class="trust-item__label">aus Übersicht werden Entscheidungen</div></div><div class="trust-item"><div class="trust-item__num">End-to-End</div><div class="trust-item__label">von der Landkarte über das Zielbild bis zur Governance</div></div><div class="trust-item"><div class="trust-item__num">DACH</div><div class="trust-item__label">branchenübergreifend · Organisationen jeder Größe</div></div></div>
-  </div>
+ <div class="container">
+ <div class="hero__grid">
+ <div class="hero__copy">
+ <div class="hero__eyebrow">Enterprise Architecture Management</div>
+ <h1 class="hero__title">Architektur, die die <span class="accent">›</span> Strategie trägt.</h1>
+ <p class="hero__lead">Enterprise Architecture Management und IT-Architekturberatung — eine Landkarte der Landschaft, ein Zielbild und eine Roadmap, die zu Strategie und Liefer-Realität passen. Aus Übersicht werden Entscheidungen — anbieter-unabhängig, für Organisationen jeder Größe, DACH-weit.</p>
+ <div class="hero__cta-row">
+ <a href="#kontakt" class="btn">Erstgespräch anfragen <span class="btn__icon">→</span></a>
+ <a href="#leistungen" class="btn btn--ghost">Leistungen ansehen <span class="btn__icon">↓</span></a>
+ </div>
+ </div>
+ <div class="hero__form-col">
+ <form class="cx-hero-form" action="mailto:kontakt@cx-experts.de" method="post" enctype="text/plain" aria-label="Erstgespräch anfragen" style="display:block;max-width:540px;margin:18px 0 6px;padding:16px 18px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.28);border-radius:14px">
+ <span style="display:block;font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FFB870;margin-bottom:10px">Erstgespräch anfragen — kostenlos &amp; unverbindlich</span>
+ <div style="display:flex;gap:8px;margin-bottom:8px">
+ <input type="text" name="name" placeholder="Vollständiger Name" required aria-label="Vollständiger Name" autocomplete="name" style="flex:1;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;min-width:0">
+ <input type="tel" name="phone" placeholder="Telefonnummer" required aria-label="Telefonnummer" autocomplete="tel" style="flex:1;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;min-width:0">
+ </div>
+ <input type="email" name="email" placeholder="Geschäfts-E-Mail" required aria-label="E-Mail" autocomplete="email" style="display:block;width:100%;box-sizing:border-box;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;margin-bottom:8px">
+ <textarea name="enquiry" rows="2" placeholder="Worum geht es? Ein, zwei Sätze genügen." required aria-label="Ihre Anfrage" style="display:block;width:100%;box-sizing:border-box;padding:12px 13px;font-size:16px;line-height:1.4;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;margin-bottom:10px;resize:vertical;font-family:inherit"></textarea>
+ <button type="submit" style="display:block;width:100%;padding:13px 18px;font-size:14px;font-weight:800;background:#FF7A00;color:#1E2327;border:none;border-radius:9px;cursor:pointer">Anfrage senden →</button>
+ <label style="display:flex;gap:8px;align-items:flex-start;font-size:11px;line-height:1.45;color:rgba(255,255,255,0.88);margin-top:10px"><input type="checkbox" name="dsgvo" required style="flex-shrink:0;margin-top:2px"><span>Ich willige in die Verarbeitung meiner Angaben gem. <a href="../datenschutz.html" style="color:#FFB870">Datenschutzerklärung</a> (Art. 6 Abs. 1 lit. b DSGVO) ein. Die Daten werden ausschließlich zur Beantwortung meiner Anfrage genutzt und nach Abschluss bzw. auf Widerruf gelöscht.</span></label>
+ </form>
+ </div>
+ </div>
+ <div class="hero__trust"><div class="trust-item"><div class="trust-item__num">Steuerung</div><div class="trust-item__label">aus Übersicht werden Entscheidungen</div></div><div class="trust-item"><div class="trust-item__num">End-to-End</div><div class="trust-item__label">von der Landkarte über das Zielbild bis zur Governance</div></div><div class="trust-item"><div class="trust-item__num">DACH</div><div class="trust-item__label">branchenübergreifend · Organisationen jeder Größe</div></div></div>
+ </div>
 </section>
 
 <!-- PROBLEM FRAMING -->
 <section class="section section--paper reveal" data-bench-role="approach">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow">Warum Architektur-Arbeit verpufft</div>
-      <h2 class="h-section">Architektur scheitert selten am Modell.</h2>
-      <p class="h-lead">Sie scheitert daran, dass Architektur im Elfenbeinturm entsteht und niemand sie nutzt, dass sie keinen Bezug zum Geschäft hat, dass sie sich in Diagrammen und Werkzeugen verliert und dass die IT-Landschaft ohne Steuerung immer weiter wuchert. Diese Muster wiederholen sich quer durch Branchen und über jede Organisationsgröße hinweg.</p>
-    </div>
-    <figure style="margin:0 0 30px"><img src="../media/cx-img-strategie.jpg" alt="Team verschafft sich Überblick über die IT-Landschaft" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Architektur wirkt nur, wenn sie genutzt wird — nicht im Aktenschrank</figcaption></figure>
-    <div class="problem-grid"><div class="problem-card"><div class="problem-card__num">01</div><h3>Architektur im Elfenbeinturm</h3><p>Es entstehen umfangreiche Modelle und Dokumente, die niemand im Alltag öffnet. Die Architektur lebt neben der Organisation her, statt sie zu steuern.</p></div><div class="problem-card"><div class="problem-card__num">02</div><h3>Kein Bezug zum Geschäft</h3><p>Wenn Architektur nur IT-Technik beschreibt, bleibt sie für Entscheider abstrakt. Ohne Verbindung zu Zielen, Kosten und Risiken fehlt ihr das Gewicht.</p></div><div class="problem-card"><div class="problem-card__num">03</div><h3>Diagramme statt Entscheidungen</h3><p>Viel Aufwand fließt in schöne Bilder und das passende Werkzeug — aber die eigentlichen Fragen, was bleibt, was geht und was zusammengeführt wird, bleiben offen.</p></div><div class="problem-card"><div class="problem-card__num">04</div><h3>Wildwuchs ohne Steuerung</h3><p>Jeder Bereich beschafft eigene Systeme. Die Landschaft wächst unkontrolliert, Doppelungen und Abhängigkeiten nehmen zu — und mit ihnen Kosten und Risiko.</p></div></div>
-    <div class="problem-conclusion">Wir liefern keine Diagramme zum Selbstzweck. Wir bringen die <strong>Verbindung von Geschäft, IT-Landschaft und konkreten Entscheidungen</strong> in Ihre Architektur — damit aus Übersicht Steuerung wird. Genau hier scheitert die meiste Architektur-Arbeit: viel Modell, wenig Wirkung, und am Ende entscheidet doch wieder jeder Bereich für sich.</div>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow">Warum Architektur-Arbeit verpufft</div>
+ <h2 class="h-section">Architektur scheitert selten am Modell.</h2>
+ <p class="h-lead">Sie scheitert daran, dass Architektur im Elfenbeinturm entsteht und niemand sie nutzt, dass ihr der Bezug zum Geschäft fehlt, dass sie sich in Diagrammen und Werkzeugen verliert und dass die IT-Landschaft mangels Steuerung immer weiter wuchert. Diese Muster wiederholen sich quer durch Branchen und über jede Organisationsgröße hinweg.</p>
+ </div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-strategie.jpg" alt="Team verschafft sich Überblick über die IT-Landschaft" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Architektur wirkt nur, wenn sie genutzt wird — nicht im Aktenschrank</figcaption></figure>
+ <div class="problem-grid"><div class="problem-card"><div class="problem-card__num">01</div><h3>Architektur im Elfenbeinturm</h3><p>Es entstehen umfangreiche Modelle und Dokumente, die niemand im Alltag öffnet. Die Architektur lebt neben der Organisation her und steuert sie kaum.</p></div><div class="problem-card"><div class="problem-card__num">02</div><h3>Fehlender Bezug zum Geschäft</h3><p>Wenn Architektur nur IT-Technik beschreibt, bleibt sie für Entscheider abstrakt. Erst die Verbindung zu Zielen, Kosten und Risiken gibt ihr Gewicht.</p></div><div class="problem-card"><div class="problem-card__num">03</div><h3>Diagramme vor Entscheidungen</h3><p>Viel Aufwand fließt in schöne Bilder und das passende Werkzeug — aber die eigentlichen Fragen, was bleibt, was geht und was zusammengeführt wird, bleiben offen.</p></div><div class="problem-card"><div class="problem-card__num">04</div><h3>Wildwuchs mangels Steuerung</h3><p>Jeder Bereich beschafft eigene Systeme. Die Landschaft wächst unkontrolliert, Doppelungen und Abhängigkeiten nehmen zu — und mit ihnen Kosten und Risiko.</p></div></div>
+ <div class="problem-conclusion">Wir liefern Diagramme mit klarem Zweck. Wir bringen die <strong>Verbindung von Geschäft, IT-Landschaft und konkreten Entscheidungen</strong> in Ihre Architektur — damit aus Übersicht Steuerung wird. Genau hier entscheidet sich der Wert von Architektur-Arbeit: vom Modell zur Wirkung, mit Entscheidungen, die für die ganze Organisation gelten.</div>
+ </div>
 </section>
 
 <!-- SERVICES -->
 <section class="section section--white reveal" id="leistungen" data-bench-role="core-capability">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow">Unsere Leistungen</div>
-      <h2 class="h-section">Vier Leistungsfelder — von der Landkarte bis zur Governance.</h2>
-      <p class="h-lead">Wir liefern den ganzen Bogen aus einer Hand: eine ehrliche Landkarte Ihrer IT-Landschaft, ein Zielbild mit machbarer Roadmap, die Entscheidungs- und Steuerungsstrukturen, die Architektur wirksam machen, und die konkrete Konsolidierung gewachsener Systeme. Anders als eine Beratung, die ein Architektur-Dokument schreibt und übergibt, begleiten wir bis zur Entscheidung und Umsetzung.</p>
-      <p class="h-lead">Im Mandat heißt das konkret: Wir schaffen Transparenz darüber, welche Anwendungen es gibt, was sie kosten, wie sie zusammenhängen und welche Risiken in der Landschaft stecken. Wir entwickeln ein Zielbild, das sich an Geschäftszielen ausrichtet, und übersetzen es in eine priorisierte Roadmap. Wir etablieren leichtgewichtige Governance, damit Architektur-Entscheidungen tatsächlich getroffen und eingehalten werden — und begleiten die Konsolidierung, bis die Landschaft einfacher, günstiger und beherrschbarer ist. So wird Architektur zum Steuerungsinstrument, nicht zur Dokumentenablage.</p>
-    </div>
-    <figure style="margin:0 0 30px"><img src="../media/cx-img-analyse.jpg" alt="Transparenz über Anwendungen, Kosten und Abhängigkeiten" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Erst Transparenz über die Landschaft — dann das Zielbild</figcaption></figure>
-    <div class="services-grid"><div class="service-card"><div class="service-card__num">01</div><h3>Transparenz &amp; Landkarte</h3><p>Welche Anwendungen gibt es, was kosten sie, wie hängen sie zusammen, wo sind Risiken? Das Ergebnis ist eine verständliche Landkarte Ihrer Landschaft — die Grundlage jeder Entscheidung.</p></div><div class="service-card"><div class="service-card__num">02</div><h3>Zielbild &amp; Roadmap</h3><p>Ein Zielbild, das sich an Geschäftszielen ausrichtet, und eine priorisierte, machbare Roadmap dorthin — kein Idealbild auf dem Papier, sondern ein gangbarer Weg.</p></div><div class="service-card"><div class="service-card__num">03</div><h3>Governance &amp; Entscheidungen</h3><p>Leichtgewichtige Strukturen, damit Architektur-Entscheidungen wirklich getroffen und eingehalten werden — statt dass jeder Bereich wieder für sich beschafft.</p></div><div class="service-card"><div class="service-card__num">04</div><h3>Konsolidierung &amp; Modernisierung</h3><p>Wir begleiten den Weg zu einer einfacheren, günstigeren Landschaft: Doppelungen abbauen, Abhängigkeiten lösen, Altsysteme gezielt ablösen — Schritt für Schritt.</p></div></div>
-    <ul class="value-list" style="margin-top:28px"><li>Architektur am Geschäft ausgerichtet — nicht an der Technik allein</li><li>Transparenz über Anwendungen, Kosten und Abhängigkeiten</li><li>Entscheidungen statt Diagramme — Governance, die wirklich greift</li><li>Eine einfachere, beherrschbare Landschaft als Ziel</li></ul>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow">Unsere Leistungen</div>
+ <h2 class="h-section">Vier Leistungsfelder — von der Landkarte bis zur Governance.</h2>
+ <p class="h-lead">Wir liefern den ganzen Bogen aus einer Hand: eine Landkarte Ihrer IT-Landschaft, ein Zielbild mit machbarer Roadmap, die Entscheidungs- und Steuerungsstrukturen, die Architektur wirksam machen, und die konkrete Konsolidierung gewachsener Systeme. Wo eine Beratung beim Architektur-Dokument endet, begleiten wir bis zur Entscheidung und Umsetzung.</p>
+ <p class="h-lead">Im Mandat heißt das konkret: Wir schaffen Transparenz darüber, welche Anwendungen es gibt, was sie kosten, wie sie zusammenhängen und welche Risiken in der Landschaft stecken. Wir entwickeln ein Zielbild, das sich an Geschäftszielen ausrichtet, und übersetzen es in eine priorisierte Roadmap. Wir etablieren leichtgewichtige Governance, damit Architektur-Entscheidungen tatsächlich getroffen und eingehalten werden — und begleiten die Konsolidierung, bis die Landschaft einfacher, günstiger und beherrschbarer ist. So wird Architektur zum aktiven Steuerungsinstrument und geht über die bloße Dokumentenablage hinaus.</p>
+ </div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-analyse.jpg" alt="Transparenz über Anwendungen, Kosten und Abhängigkeiten" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Erst Transparenz über die Landschaft — dann das Zielbild</figcaption></figure>
+ <div class="services-grid"><div class="service-card"><div class="service-card__num">01</div><h3>Transparenz &amp; Landkarte</h3><p>Welche Anwendungen gibt es, was kosten sie, wie hängen sie zusammen, wo sind Risiken? Das Ergebnis ist eine verständliche Landkarte Ihrer Landschaft — die Grundlage jeder Entscheidung.</p></div><div class="service-card"><div class="service-card__num">02</div><h3>Zielbild &amp; Roadmap</h3><p>Ein Zielbild, das sich an Geschäftszielen ausrichtet, und eine priorisierte, machbare Roadmap dorthin — ein gangbarer Weg in der Praxis, weit über das Idealbild auf dem Papier hinaus.</p></div><div class="service-card"><div class="service-card__num">03</div><h3>Governance &amp; Entscheidungen</h3><p>Leichtgewichtige Strukturen, damit Architektur-Entscheidungen wirklich getroffen und eingehalten werden — sodass die Beschaffung wieder aus einer Hand gesteuert wird.</p></div><div class="service-card"><div class="service-card__num">04</div><h3>Konsolidierung &amp; Modernisierung</h3><p>Wir begleiten den Weg zu einer einfacheren, günstigeren Landschaft: Doppelungen abbauen, Abhängigkeiten lösen, Altsysteme gezielt ablösen — Schritt für Schritt.</p></div></div>
+ <ul class="value-list" style="margin-top:28px"><li>Architektur am Geschäft ausgerichtet — über die Technik hinaus gedacht</li><li>Transparenz über Anwendungen, Kosten und Abhängigkeiten</li><li>Entscheidungen aus Diagrammen — Governance, die wirklich greift</li><li>Eine einfachere, beherrschbare Landschaft als Ziel</li></ul>
+ </div>
 </section>
 
 <!-- METHODOLOGY -->
 <section class="section section--dark reveal" id="vorgehen" data-bench-role="process">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow eyebrow--on-dark">Unser Vorgehen</div>
-      <h2 class="h-section h-section--on-dark">Fünf Phasen — von der Bestandsaufnahme bis zur Governance.</h2>
-      <p class="h-lead h-lead--on-dark">Sie entscheiden nach jeder Phase, ob die nächste sinnvoll ist. Schrittweise Verbindlichkeit, schrittweise Wirkung — kein Mehrjahres-Programm auf Verdacht, sondern ein Weg, der sich nach jedem Schritt überprüfen lässt.</p>
-    </div>
-    <figure style="margin:0 0 30px"><img src="../media/cx-img-auswahl.jpg" alt="Gemeinsame Priorisierung der Architektur-Roadmap" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:rgba(250,246,236,0.6)">Ein Weg, der nach jeder Phase überprüfbar bleibt</figcaption></figure>
-    <div class="method"><div class="method-step"><div class="method-step__num">Phase 01</div><div class="method-step__when">Auftakt</div><h3 class="method-step__title">Bestandsaufnahme &amp; Landkarte</h3><p class="method-step__body">Anwendungen, Kosten, Abhängigkeiten und Risiken im Überblick. Ergebnis: eine verständliche Landkarte, die zeigt, wo Handlungsbedarf am größten ist.</p></div><div class="method-step"><div class="method-step__num">Phase 02</div><div class="method-step__when">Zielbild</div><h3 class="method-step__title">Zielarchitektur</h3><p class="method-step__body">Ein an Geschäftszielen ausgerichtetes Zielbild — wie soll die Landschaft in einigen Jahren aussehen, und warum. Konkret genug, um danach zu handeln.</p></div><div class="method-step"><div class="method-step__num">Phase 03</div><div class="method-step__when">Planung</div><h3 class="method-step__title">Roadmap &amp; Priorisierung</h3><p class="method-step__body">Der Weg vom Ist zum Soll in priorisierten Schritten — mit ehrlicher Einordnung von Aufwand, Nutzen und Abhängigkeiten.</p></div><div class="method-step"><div class="method-step__num">Phase 04</div><div class="method-step__when">Umsetzung</div><h3 class="method-step__title">Umsetzung begleiten</h3><p class="method-step__body">Wir begleiten die ersten Schritte der Konsolidierung und Modernisierung — als Architektur-Sparringspartner, der Entscheidungen vorbereitet und absichert.</p></div><div class="method-step"><div class="method-step__num">Phase 05</div><div class="method-step__when">Verankerung</div><h3 class="method-step__title">Governance verankern</h3><p class="method-step__body">Entscheidungswege und Prinzipien sind etabliert, Ihr Team steuert die Landschaft eigenständig weiter. Auf Wunsch bleiben wir Sparringspartner.</p></div></div>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow eyebrow--on-dark">Unser Vorgehen</div>
+ <h2 class="h-section h-section--on-dark">Fünf Phasen — von der Bestandsaufnahme bis zur Governance.</h2>
+ <p class="h-lead h-lead--on-dark">Sie entscheiden nach jeder Phase, ob die nächste sinnvoll ist. Schrittweise Verbindlichkeit, schrittweise Wirkung — ein überprüfbarer Weg in klaren Etappen, der sich nach jedem Schritt neu bewerten lässt.</p>
+ </div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-auswahl.jpg" alt="Gemeinsame Priorisierung der Architektur-Roadmap" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:rgba(250,246,236,0.6)">Ein Weg, der nach jeder Phase überprüfbar bleibt</figcaption></figure>
+ <div class="method"><div class="method-step"><div class="method-step__num">Phase 01</div><div class="method-step__when">Auftakt</div><h3 class="method-step__title">Bestandsaufnahme &amp; Landkarte</h3><p class="method-step__body">Anwendungen, Kosten, Abhängigkeiten und Risiken im Überblick. Ergebnis: eine verständliche Landkarte, die zeigt, wo Handlungsbedarf am größten ist.</p></div><div class="method-step"><div class="method-step__num">Phase 02</div><div class="method-step__when">Zielbild</div><h3 class="method-step__title">Zielarchitektur</h3><p class="method-step__body">Ein an Geschäftszielen ausgerichtetes Zielbild — wie soll die Landschaft in einigen Jahren aussehen, und warum. Konkret genug, um danach zu handeln.</p></div><div class="method-step"><div class="method-step__num">Phase 03</div><div class="method-step__when">Planung</div><h3 class="method-step__title">Roadmap &amp; Priorisierung</h3><p class="method-step__body">Der Weg vom Ist zum Soll in priorisierten Schritten — mit Einordnung von Aufwand, Nutzen und Abhängigkeiten.</p></div><div class="method-step"><div class="method-step__num">Phase 04</div><div class="method-step__when">Umsetzung</div><h3 class="method-step__title">Umsetzung begleiten</h3><p class="method-step__body">Wir begleiten die ersten Schritte der Konsolidierung und Modernisierung — als Architektur-Sparringspartner, der Entscheidungen vorbereitet und absichert.</p></div><div class="method-step"><div class="method-step__num">Phase 05</div><div class="method-step__when">Verankerung</div><h3 class="method-step__title">Governance verankern</h3><p class="method-step__body">Entscheidungswege und Prinzipien sind etabliert, Ihr Team steuert die Landschaft eigenständig weiter. Auf Wunsch bleiben wir Sparringspartner.</p></div></div>
+ </div>
 </section>
 
 <!-- USE CASES -->
 <section class="section section--white reveal" data-bench-role="value">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow">Typische Anlässe</div>
-      <h2 class="h-section">Wo Enterprise Architecture den größten Unterschied macht.</h2>
-      <p class="h-lead">Eine Auswahl der Anlässe, die wir am häufigsten begleiten. Gemeinsamer Nenner: Die IT-Landschaft ist zu komplex, zu teuer oder zu riskant geworden — und es fehlt die Übersicht, um die richtigen Entscheidungen zu treffen. Was die Investition relativiert: Eine ungesteuerte Landschaft kostet über die Jahre weit mehr an Betrieb, Doppelungen und Risiko, als ihre Ordnung kosten würde.</p>
-    </div>
-    <figure style="margin:0 0 30px"><img src="../media/cx-img-anwendung.jpg" alt="Eine einfachere, beherrschbare Anwendungslandschaft" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Ziel ist eine einfachere, beherrschbare Landschaft</figcaption></figure>
-    <div class="uses-grid"><div class="use-card"><div class="use-card__tag">Konsolidierung</div><h3>Anwendungslandschaft konsolidieren</h3><p>Doppelungen abbauen, Systeme zusammenführen, Altlasten ablösen — weniger Komplexität, weniger Kosten, weniger Risiko.</p></div><div class="use-card"><div class="use-card__tag">Modernisierung</div><h3>Cloud- &amp; Legacy-Modernisierung</h3><p>Einen tragfähigen Weg von Altsystemen in eine moderne Landschaft planen — schrittweise, mit klarer Reihenfolge statt Big Bang.</p></div><div class="use-card"><div class="use-card__tag">M&amp;A</div><h3>Integration nach Zusammenschluss</h3><p>Zwei IT-Landschaften zusammenführen: Was bleibt, was geht, was wird vereinheitlicht — entschieden auf Basis von Fakten, nicht Gewohnheit.</p></div><div class="use-card"><div class="use-card__tag">Integration</div><h3>Daten- &amp; Integrationsarchitektur</h3><p>Schnittstellen ordnen, Datenflüsse klären, Medienbrüche abbauen — damit Systeme sauber zusammenspielen statt nebeneinander.</p></div><div class="use-card"><div class="use-card__tag">Steuerung</div><h3>Governance aufbauen</h3><p>Leichtgewichtige Entscheidungswege und Prinzipien etablieren, damit die Landschaft nicht wieder unkontrolliert wuchert.</p></div><div class="use-card"><div class="use-card__tag">Kosten</div><h3>Kosten- &amp; Risiko-Transparenz</h3><p>Sichtbar machen, was die Landschaft kostet und wo Risiken liegen — die Grundlage für fundierte Investitions-Entscheidungen.</p></div></div>
-    <ul class="value-list" style="margin-top:28px"><li>Weniger Doppelungen, Abhängigkeiten und Altlasten</li><li>Klare, faktenbasierte Investitions-Entscheidungen</li><li>Eine Landschaft, die zum Geschäft passt — nicht umgekehrt</li><li>Steuerung, die hält, statt erneutem Wildwuchs</li></ul>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow">Typische Anlässe</div>
+ <h2 class="h-section">Wo Enterprise Architecture den größten Unterschied macht.</h2>
+ <p class="h-lead">Eine Auswahl der Anlässe, die wir am häufigsten begleiten. Gemeinsamer Nenner: Die IT-Landschaft ist zu komplex, zu teuer oder zu riskant geworden — und es fehlt die Übersicht, um die richtigen Entscheidungen zu treffen. Was die Investition relativiert: Eine ungesteuerte Landschaft kostet über die Jahre weit mehr an Betrieb, Doppelungen und Risiko, als ihre Ordnung kosten würde.</p>
+ </div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-anwendung.jpg" alt="Eine einfachere, beherrschbare Anwendungslandschaft" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Ziel ist eine einfachere, beherrschbare Landschaft</figcaption></figure>
+ <div class="uses-grid"><div class="use-card"><div class="use-card__tag">Konsolidierung</div><h3>Anwendungslandschaft konsolidieren</h3><p>Doppelungen abbauen, Systeme zusammenführen, Altlasten ablösen — weniger Komplexität, weniger Kosten, weniger Risiko.</p></div><div class="use-card"><div class="use-card__tag">Modernisierung</div><h3>Cloud- &amp; Legacy-Modernisierung</h3><p>Einen tragfähigen Weg von Altsystemen in eine moderne Landschaft planen — schrittweise, in klarer Reihenfolge und mit kontrolliertem Tempo.</p></div><div class="use-card"><div class="use-card__tag">M&amp;A</div><h3>Integration nach Zusammenschluss</h3><p>Zwei IT-Landschaften zusammenführen: Was bleibt, was geht, was wird vereinheitlicht — entschieden auf Basis von Fakten und sachlichen Kriterien.</p></div><div class="use-card"><div class="use-card__tag">Integration</div><h3>Daten- &amp; Integrationsarchitektur</h3><p>Schnittstellen ordnen, Datenflüsse klären, Medienbrüche abbauen — damit Systeme sauber ineinandergreifen und reibungslos zusammenspielen.</p></div><div class="use-card"><div class="use-card__tag">Steuerung</div><h3>Governance aufbauen</h3><p>Leichtgewichtige Entscheidungswege und Prinzipien etablieren, damit die Landschaft nicht wieder unkontrolliert wuchert.</p></div><div class="use-card"><div class="use-card__tag">Kosten</div><h3>Kosten- &amp; Risiko-Transparenz</h3><p>Sichtbar machen, was die Landschaft kostet und wo Risiken liegen — die Grundlage für fundierte Investitions-Entscheidungen.</p></div></div>
+ <ul class="value-list" style="margin-top:28px"><li>Weniger Doppelungen, Abhängigkeiten und Altlasten</li><li>Klare, faktenbasierte Investitions-Entscheidungen</li><li>Eine Landschaft, die sich am Geschäft ausrichtet</li><li>Steuerung, die hält und erneutem Wildwuchs vorbeugt</li></ul>
+ </div>
 </section>
 
 <!-- FRAMEWORKS EXPLAINER (topical depth — educational, third-person, no possession claims) -->
 <section class="section section--paper reveal" data-bench-role="frameworks">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow">Rahmenwerke im Überblick</div>
-      <h2 class="h-section">Die wichtigsten Architektur-Rahmenwerke — neutral erklärt.</h2>
-      <p class="h-lead">Welches Rahmenwerk passt, hängt von Reife und Ziel ab, nicht von der Mode. Hier die Ansätze, die in der Praxis den Ton angeben — damit Sie mitreden und mitentscheiden können. Wir nutzen, was zum Vorhaben passt, in der passenden Dosis; ein einzelnes Rahmenwerk als Selbstzweck verkaufen wir nicht.</p>
-    </div>
-    <div class="industries"><div class="industry-card"><h3>TOGAF</h3><p>Ein verbreitetes Rahmenwerk mit einem Vorgehensmodell für die Entwicklung von Unternehmensarchitektur. Stark, um Methode und gemeinsame Sprache in größere Vorhaben zu bringen. Herausgegeben von der <a href="https://www.opengroup.org/togaf" target="_blank" rel="noopener">Open Group</a>.</p></div><div class="industry-card"><h3>ArchiMate</h3><p>Eine standardisierte Modellierungssprache, um Geschäft, Anwendungen und Technik in einem zusammenhängenden Bild darzustellen. Ebenfalls von der <a href="https://www.opengroup.org/archimate-forum" target="_blank" rel="noopener">Open Group</a> gepflegt.</p></div><div class="industry-card"><h3>Zachman-Schema</h3><p>Ein Ordnungsschema, das Architektur aus verschiedenen Perspektiven systematisch sortiert. Weniger Vorgehensmodell, mehr Denkraster für Vollständigkeit.</p></div></div>
-    <div class="problem-conclusion">In der Praxis ist <strong>Augenmaß</strong> entscheidend: ein Rahmenwerk als Werkzeugkasten nutzen, nicht als Pflichtprogramm. Mehr zur Disziplin auch in der <a href="https://en.wikipedia.org/wiki/Enterprise_architecture" target="_blank" rel="noopener">offenen Wissensbasis</a>. Entscheidend ist nicht das Etikett, sondern dass Architektur Entscheidungen verbessert.</div>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow">Rahmenwerke im Überblick</div>
+ <h2 class="h-section">Die wichtigsten Architektur-Rahmenwerke — neutral erklärt.</h2>
+ <p class="h-lead">Welches Rahmenwerk passt, richtet sich nach Reife und Ziel, fernab jeder Mode. Hier die Ansätze, die in der Praxis den Ton angeben — damit Sie mitreden und mitentscheiden können. Wir nutzen, was zum Vorhaben passt, in der passenden Dosis; ein einzelnes Rahmenwerk verkaufen wir nur dort, wo es echten Mehrwert bringt.</p>
+ </div>
+ <div class="industries"><div class="industry-card"><h3>TOGAF</h3><p>Ein verbreitetes Rahmenwerk mit einem Vorgehensmodell für die Entwicklung von Unternehmensarchitektur. Stark, um Methode und gemeinsame Sprache in größere Vorhaben zu bringen. Herausgegeben von der <a href="https://www.opengroup.org/togaf" target="_blank" rel="noopener">Open Group</a>.</p></div><div class="industry-card"><h3>ArchiMate</h3><p>Eine standardisierte Modellierungssprache, um Geschäft, Anwendungen und Technik in einem zusammenhängenden Bild darzustellen. Ebenfalls von der <a href="https://www.opengroup.org/archimate-forum" target="_blank" rel="noopener">Open Group</a> gepflegt.</p></div><div class="industry-card"><h3>Zachman-Schema</h3><p>Ein Ordnungsschema, das Architektur aus verschiedenen Perspektiven systematisch sortiert. Weniger Vorgehensmodell, mehr Denkraster für Vollständigkeit.</p></div></div>
+ <div class="problem-conclusion">In der Praxis ist <strong>Augenmaß</strong> entscheidend: ein Rahmenwerk als Werkzeugkasten nutzen und gezielt einsetzen. Mehr zur Disziplin auch in der <a href="https://en.wikipedia.org/wiki/Enterprise_architecture" target="_blank" rel="noopener">offenen Wissensbasis</a>. Entscheidend ist der Nutzen: dass Architektur Entscheidungen verbessert, über jedes Etikett hinaus.</div>
+ </div>
 </section>
 
 <!-- INDUSTRIES (universalised) -->
 <section class="section section--white reveal" data-bench-role="adaptability">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow">Branchenübergreifend</div>
-      <h2 class="h-section">Ein Vorgehen, das in jeder Landschaft trägt.</h2>
-      <p class="h-lead">Die konkreten Systeme unterscheiden sich von Haus zu Haus — das Vorgehen bleibt dasselbe: zuerst Transparenz schaffen, dann ein geschäftsnahes Zielbild, dann priorisierte Schritte und tragfähige Governance. So lässt sich Architektur sowohl in einer überschaubaren Landschaft als auch über viele Bereiche, Standorte und Systeme hinweg verlässlich steuern.</p>
-      <figure style="margin:24px auto 0;max-width:820px"><img src="../media/cx-img-team.jpg" alt="Architektur über Bereiche und Systeme hinweg steuern" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Dasselbe Vorgehen — von der kleinen bis zur komplexen Landschaft</figcaption></figure>
-    </div>
-    <div class="industries"><div class="industry-card"><h3>Über Bereiche hinweg</h3><p>Wenn die Landschaft viele Bereiche und Systeme umfasst, fehlt oft jemand, der das Gesamtbild verantwortet. Genau diese Rolle bringen wir mit.</p></div><div class="industry-card"><h3>Für jede Organisationsgröße</h3><p>Von der überschaubaren bis zur komplexen Landschaft. Wir wählen die Tiefe, die das Vorhaben braucht — so viel Methode wie nötig, so wenig Apparat wie möglich.</p></div><div class="industry-card"><h3>Bei gewachsenen Landschaften</h3><p>Wo über Jahre Wildwuchs entstanden ist, schaffen wir zuerst Transparenz und Ordnung — und konsolidieren von dort aus Schritt für Schritt.</p></div></div>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow">Branchenübergreifend</div>
+ <h2 class="h-section">Ein Vorgehen, das in jeder Landschaft trägt.</h2>
+ <p class="h-lead">Die konkreten Systeme unterscheiden sich von Haus zu Haus — das Vorgehen bleibt dasselbe: zuerst Transparenz schaffen, dann ein geschäftsnahes Zielbild, dann priorisierte Schritte und tragfähige Governance. So lässt sich Architektur sowohl in einer überschaubaren Landschaft als auch über viele Bereiche, Standorte und Systeme hinweg verlässlich steuern.</p>
+ <figure style="margin:24px auto 0;max-width:820px"><img src="../media/cx-img-team.jpg" alt="Architektur über Bereiche und Systeme hinweg steuern" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Dasselbe Vorgehen — von der kleinen bis zur komplexen Landschaft</figcaption></figure>
+ </div>
+ <div class="industries"><div class="industry-card"><h3>Über Bereiche hinweg</h3><p>Wenn die Landschaft viele Bereiche und Systeme umfasst, fehlt oft jemand, der das Gesamtbild verantwortet. Genau diese Rolle bringen wir mit.</p></div><div class="industry-card"><h3>Für jede Organisationsgröße</h3><p>Von der überschaubaren bis zur komplexen Landschaft. Wir wählen die Tiefe, die das Vorhaben braucht — so viel Methode wie nötig, so wenig Apparat wie möglich.</p></div><div class="industry-card"><h3>Bei gewachsenen Landschaften</h3><p>Wo über Jahre Wildwuchs entstanden ist, schaffen wir zuerst Transparenz und Ordnung — und konsolidieren von dort aus Schritt für Schritt.</p></div></div>
+ </div>
 </section>
 
 <!-- DIFFERENTIATORS -->
 <section class="section section--white reveal" id="vorteile" data-bench-role="confidence">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow">Was uns unterscheidet</div>
-      <h2 class="h-section">Was unsere Architektur-Beratung von der Standardware unterscheidet.</h2>
-    </div>
-    <figure style="margin:0 0 30px"><img src="../media/cx-img-planung.jpg" alt="Architektur als Steuerungsinstrument, nahe an der Umsetzung" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Architektur nahe an Entscheidung und Umsetzung</figcaption></figure>
-    <figure style="margin:0 0 30px"><img src="../media/cx-img-unterschied.jpg" alt="Architektur, die Entscheidungen ermöglicht statt nur zu dokumentieren" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Wirkung entsteht durch Entscheidungen, nicht durch Dokumente</figcaption></figure>
-    <div class="diff-list"><div class="diff-item"><div class="diff-item__num">A</div><div><h3>Entscheidungen vor Diagrammen</h3><p>Wir messen Architektur an den Entscheidungen, die sie ermöglicht, nicht an der Schönheit der Modelle. Sie bekommen Steuerung, keine Bildergalerie.</p></div></div><div class="diff-item"><div class="diff-item__num">B</div><div><h3>Nah am Geschäft</h3><p>Wir übersetzen zwischen Geschäft und IT, damit Architektur für Entscheider greifbar wird — mit Bezug zu Zielen, Kosten und Risiken.</p></div></div><div class="diff-item"><div class="diff-item__num">C</div><div><h3>Wir bleiben bis zur Umsetzung</h3><p>Viele Berater liefern ein Zielbild und ziehen ab. Wir begleiten bis in die ersten Schritte der Konsolidierung — dort entscheidet sich der Nutzen.</p></div></div><div class="diff-item"><div class="diff-item__num">D</div><div><h3>Leichtgewichtig statt Apparat</h3><p>Wir bauen so viel Governance wie nötig und so wenig wie möglich — und befähigen Ihr Team, die Landschaft selbst zu steuern. Keine Abhängigkeit.</p></div></div></div>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow">Was uns unterscheidet</div>
+ <h2 class="h-section">Was unsere Architektur-Beratung von der Standardware unterscheidet.</h2>
+ </div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-planung.jpg" alt="Architektur als Steuerungsinstrument, nahe an der Umsetzung" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Architektur nahe an Entscheidung und Umsetzung</figcaption></figure>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-unterschied.jpg" alt="Architektur, die Entscheidungen ermöglicht und weit über reine Dokumentation hinausgeht" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Wirkung entsteht durch Entscheidungen, getragen von klaren Dokumenten</figcaption></figure>
+ <div class="diff-list"><div class="diff-item"><div class="diff-item__num">A</div><div><h3>Entscheidungen vor Diagrammen</h3><p>Wir messen Architektur an den Entscheidungen, die sie ermöglicht, weit mehr als an der Schönheit der Modelle. Sie bekommen Steuerung, die trägt — eine echte Entscheidungsgrundlage.</p></div></div><div class="diff-item"><div class="diff-item__num">B</div><div><h3>Nah am Geschäft</h3><p>Wir übersetzen zwischen Geschäft und IT, damit Architektur für Entscheider greifbar wird — mit Bezug zu Zielen, Kosten und Risiken.</p></div></div><div class="diff-item"><div class="diff-item__num">C</div><div><h3>Wir bleiben bis zur Umsetzung</h3><p>Viele Berater liefern ein Zielbild und ziehen ab. Wir begleiten bis in die ersten Schritte der Konsolidierung — dort entscheidet sich der Nutzen.</p></div></div><div class="diff-item"><div class="diff-item__num">D</div><div><h3>Leichtgewichtig vor Apparat</h3><p>Wir bauen so viel Governance wie nötig und so wenig wie möglich — und befähigen Ihr Team, die Landschaft selbst zu steuern. Auf Eigenständigkeit angelegt.</p></div></div></div>
+ </div>
 </section>
 
 <!-- HOW WE WORK -->
 <section class="section section--dark reveal" data-bench-role="quality">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow eyebrow--on-dark">Wie wir arbeiten</div>
-      <h2 class="h-section h-section--on-dark">Drei Prinzipien, auf die Sie sich verlassen können.</h2>
-      <p class="h-lead h-lead--on-dark">Gute Architektur lebt von Transparenz, Nähe zum Geschäft und Entscheidungen, die wirklich fallen. Wir arbeiten mit bewährten, etablierten Rahmenwerken — in der passenden Dosis, damit Ergebnisse belastbar sind und Ihre Organisation sie weiterführen kann.</p>
-    </div>
-    <figure style="margin:0 0 30px"><img src="../media/cx-img-vorgehen.jpg" alt="Strukturierte, nachvollziehbare Architektur-Arbeit" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:rgba(250,246,236,0.6)">Transparenz, Geschäftsnähe und Entscheidungen, die fallen</figcaption></figure>
-    <div class="compliance-block"><div class="compliance-item"><h3>Transparenz zuerst</h3><p>Ohne ehrliche Landkarte keine guten Entscheidungen. Wir schaffen Überblick über Anwendungen, Kosten und Abhängigkeiten, bevor wir umbauen.</p></div><div class="compliance-item"><h3>Nah am Geschäft</h3><p>Architektur dient dem Geschäft, nicht sich selbst. Jede Empfehlung hat einen Bezug zu Zielen, Kosten oder Risiko.</p></div><div class="compliance-item"><h3>Entscheidungen, die fallen</h3><p>Leichtgewichtige Governance sorgt dafür, dass Architektur-Entscheidungen getroffen, dokumentiert und eingehalten werden — und die Landschaft beherrschbar bleibt.</p></div></div>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow eyebrow--on-dark">Wie wir arbeiten</div>
+ <h2 class="h-section h-section--on-dark">Drei Prinzipien, auf die Sie sich verlassen können.</h2>
+ <p class="h-lead h-lead--on-dark">Gute Architektur lebt von Transparenz, Nähe zum Geschäft und Entscheidungen, die wirklich fallen. Wir arbeiten mit bewährten, etablierten Rahmenwerken — in der passenden Dosis, damit Ergebnisse belastbar sind und Ihre Organisation sie weiterführen kann.</p>
+ </div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-vorgehen.jpg" alt="Strukturierte, nachvollziehbare Architektur-Arbeit" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:rgba(250,246,236,0.6)">Transparenz, Geschäftsnähe und Entscheidungen, die fallen</figcaption></figure>
+ <div class="compliance-block"><div class="compliance-item"><h3>Transparenz zuerst</h3><p>Gute Entscheidungen brauchen eine Landkarte. Wir schaffen Überblick über Anwendungen, Kosten und Abhängigkeiten, bevor wir umbauen.</p></div><div class="compliance-item"><h3>Nah am Geschäft</h3><p>Architektur dient dem Geschäft und richtet sich ganz daran aus. Jede Empfehlung hat einen Bezug zu Zielen, Kosten oder Risiko.</p></div><div class="compliance-item"><h3>Entscheidungen, die fallen</h3><p>Leichtgewichtige Governance sorgt dafür, dass Architektur-Entscheidungen getroffen, dokumentiert und eingehalten werden — und die Landschaft beherrschbar bleibt.</p></div></div>
+ </div>
 </section>
 
 <!-- FAQ -->
 <section class="section section--white reveal" id="faq" data-bench-role="faq">
-  <div class="container">
-    <div class="section__head">
-      <div class="eyebrow">Häufig gestellte Fragen</div>
-      <h2 class="h-section">Fragen, die in den ersten Gesprächen immer kommen.</h2>
-    </div>
-    <div class="faq">
-      <details class="faq__item"><summary>Was kostet eine Enterprise-Architecture-Beratung?</summary><div class="faq__answer">Der Aufwand hängt vom Umfang ab — von der Größe der Landschaft, der Datenlage und der gewünschten Tiefe. Wir nennen eine belastbare Spanne transparent im kostenlosen Erstgespräch, bevor Sie sich festlegen. Größere Vorhaben begleiten wir in Wellen, sodass Sie nach jeder Phase neu entscheiden — und nie auf Verdacht in ein Mehrjahres-Programm investieren.</div></details>
-      <details class="faq__item"><summary>Wo fangen wir an?</summary><div class="faq__answer">Mit Transparenz: einer verständlichen Landkarte Ihrer Anwendungen, Kosten und Abhängigkeiten. Erst wenn das Ist-Bild steht, lohnt sich ein Zielbild. Sie starten dort, wo der Handlungsbedarf am größten ist — meist bei Doppelungen, teuren Altsystemen oder Stellen, an denen die Landschaft das Geschäft ausbremst.</div></details>
-      <details class="faq__item"><summary>Brauchen wir dafür ein bestimmtes Rahmenwerk wie TOGAF?</summary><div class="faq__answer">Nicht zwingend. Rahmenwerke wie TOGAF oder Modellierungssprachen wie ArchiMate sind nützliche Werkzeugkästen — aber kein Selbstzweck. Wir nutzen das, was zu Ihrer Reife und Ihrem Ziel passt, in der passenden Dosis. Wichtiger als das Etikett ist, dass Architektur am Ende bessere Entscheidungen ermöglicht. Mehr zu den Rahmenwerken finden Sie bei der <a href="https://www.opengroup.org/" target="_blank" rel="noopener">Open Group</a>.</div></details>
-      <details class="faq__item"><summary>Warum bleibt Architektur-Arbeit oft wirkungslos?</summary><div class="faq__answer">Fast immer am gleichen Muster: Sie entsteht im Elfenbeinturm, hat keinen Bezug zum Geschäft und endet in Diagrammen statt Entscheidungen. Parallel wuchert die Landschaft ungesteuert weiter. Wir setzen deshalb bei Transparenz und konkreten Entscheidungen an — und etablieren leichtgewichtige Governance, damit aus Übersicht echte Steuerung wird.</div></details>
-      <details class="faq__item"><summary>Wie machen Sie Architektur für Entscheider greifbar?</summary><div class="faq__answer">Indem wir aus IT-Technik Geschäftsfragen machen: Was kostet diese Landschaft, wo liegen Risiken, welche Doppelungen binden Geld, welche Abhängigkeiten bremsen Vorhaben? Eine gute Landkarte zeigt das auf einer Seite, nicht in hundert Diagrammen. So können auch Nicht-Techniker fundiert über Investitionen entscheiden — und Architektur bekommt das Gewicht, das sie braucht.</div></details>
-      <details class="faq__item"><summary>Wie verhindern Sie, dass die Landschaft wieder wuchert?</summary><div class="faq__answer">Durch leichtgewichtige Governance: klare, einfache Entscheidungswege und ein paar tragfähige Prinzipien, an denen sich Beschaffung und Projekte ausrichten. Nicht ein dickes Regelwerk, das niemand liest, sondern wenige Regeln, die wirklich greifen. Entscheidend ist, dass Architektur-Entscheidungen sichtbar getroffen und nachgehalten werden — sonst beschafft bald wieder jeder Bereich für sich.</div></details>
-      <details class="faq__item"><summary>Was ist der Unterschied zwischen Enterprise Architecture und IT-Strategie?</summary><div class="faq__answer">Die IT-Strategie setzt die Richtung — wohin und warum. Enterprise Architecture macht diese Richtung konkret in der Landschaft: welche Anwendungen, welche Schnittstellen, welche Reihenfolge. Beides gehört zusammen. Wir verbinden die strategische Ebene mit der konkreten Architektur, damit aus guten Absichten umsetzbare Entscheidungen werden.</div></details>
-      <details class="faq__item"><summary>Wie lange dauert ein Architektur-Vorhaben?</summary><div class="faq__answer">Eine erste belastbare Landkarte entsteht in der Regel zügig und liefert sofort Nutzen. Zielbild, Roadmap und Konsolidierung laufen danach in Wellen. Wir arbeiten bewusst nicht in starren Mehrjahres-Blöcken — jede Phase ist einzeln beauftragbar und liefert einen abgegrenzten Nutzen, auf dem die nächste aufbaut.</div></details>
-      <details class="faq__item"><summary>Arbeiten Sie auch mit kleineren Organisationen?</summary><div class="faq__answer">Ja. Auch eine überschaubare Landschaft profitiert von Transparenz und klaren Entscheidungen — oft sogar besonders, weil jede Fehlinvestition stärker ins Gewicht fällt. Wo ein großes Programm nicht passt, helfen eine kompakte Landkarte, ein fokussiertes Zielbild oder Sparring für Ihre internen Verantwortlichen — so viel wie nötig, so schlank wie möglich.</div></details>
-      <details class="faq__item"><summary>Wie gehen Sie mit gewachsenen Altsystemen um?</summary><div class="faq__answer">Mit Augenmaß statt Abrissbirne. Wir bewerten jedes Altsystem nach Nutzen, Kosten, Risiko und Ablöse-Aufwand und leiten daraus ab, was bleibt, was modernisiert und was abgelöst wird — in einer Reihenfolge, die Abhängigkeiten berücksichtigt. So vermeiden Sie sowohl den riskanten Big-Bang-Austausch als auch das endlose Weiterschleppen teurer Altlasten, und jeder Schritt zahlt sichtbar auf eine einfachere, günstigere und besser beherrschbare Landschaft ein, deren Betrieb dauerhaft weniger Aufwand und Risiko bindet.</div></details>
-      <details class="faq__item"><summary>Können wir mit einem einzelnen Bereich starten?</summary><div class="faq__answer">Ja, und oft ist das der klügste Einstieg. Statt die ganze Landschaft auf einmal zu kartieren, beginnen wir dort, wo der Druck am größten ist — ein Bereich, eine Domäne oder eine besonders teure Systemgruppe. Der erste sichtbare Erfolg schafft Vertrauen und liefert eine erprobte Vorlage, die sich danach Schritt für Schritt auf weitere Bereiche und Domänen übertragen lässt, ohne dass jemals ein riskantes Großprojekt nötig wird.</div></details>
-    </div>
-    <div class="cross-links"><a class="cross-link" href="it-architektur/index.html"><div class="cross-link__tag">Vertiefung</div><div class="cross-link__title">IT-Architektur-Beratung</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="../prozessoptimierung-beratung/index.html"><div class="cross-link__tag">Säule 1 · Prozesse</div><div class="cross-link__title">Prozessoptimierung &amp; BPM</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../projektmanagement-beratung/index.html"><div class="cross-link__tag">Säule 1 · Projekte</div><div class="cross-link__title">Projektmanagement</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../digitalisierungsberatung/index.html"><div class="cross-link__tag">Säule 1 · Digital</div><div class="cross-link__title">Digitalisierung &amp; Transformation</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../change-management-beratung/index.html"><div class="cross-link__tag">Säule 1 · Change</div><div class="cross-link__title">Change Management</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../ki-beratung/index.html"><div class="cross-link__tag">Säule 1 · KI</div><div class="cross-link__title">KI-Beratung &amp; Strategie</div><div class="cross-link__arrow">→ Weiter</div></a></div>
-  </div>
+ <div class="container">
+ <div class="section__head">
+ <div class="eyebrow">Häufig gestellte Fragen</div>
+ <h2 class="h-section">Fragen, die in den ersten Gesprächen immer kommen.</h2>
+ </div>
+ <div class="faq">
+ <details class="faq__item"><summary>Was kostet eine Enterprise-Architecture-Beratung?</summary><div class="faq__answer">Der Aufwand hängt vom Umfang ab — von der Größe der Landschaft, der Datenlage und der gewünschten Tiefe. Wir nennen eine belastbare Spanne transparent im kostenlosen Erstgespräch, bevor Sie sich festlegen. Größere Vorhaben begleiten wir in Wellen, sodass Sie nach jeder Phase neu entscheiden — und nie auf Verdacht in ein Mehrjahres-Programm investieren.</div></details>
+ <details class="faq__item"><summary>Wo fangen wir an?</summary><div class="faq__answer">Mit Transparenz: einer verständlichen Landkarte Ihrer Anwendungen, Kosten und Abhängigkeiten. Erst wenn das Ist-Bild steht, lohnt sich ein Zielbild. Sie starten dort, wo der Handlungsbedarf am größten ist — meist bei Doppelungen, teuren Altsystemen oder Stellen, an denen die Landschaft das Geschäft ausbremst.</div></details>
+ <details class="faq__item"><summary>Brauchen wir dafür ein bestimmtes Rahmenwerk wie TOGAF?</summary><div class="faq__answer">Selten zwingend. Rahmenwerke wie TOGAF oder Modellierungssprachen wie ArchiMate sind nützliche Werkzeugkästen — am besten gezielt eingesetzt. Wir nutzen das, was zu Ihrer Reife und Ihrem Ziel passt, in der passenden Dosis. Wichtiger als das Etikett ist, dass Architektur am Ende bessere Entscheidungen ermöglicht. Mehr zu den Rahmenwerken finden Sie bei der <a href="https://www.opengroup.org/" target="_blank" rel="noopener">Open Group</a>.</div></details>
+ <details class="faq__item"><summary>Warum bleibt Architektur-Arbeit oft wirkungslos?</summary><div class="faq__answer">Fast immer am gleichen Muster: Sie entsteht im Elfenbeinturm, verliert den Bezug zum Geschäft und endet in Diagrammen, die Entscheidungen offenlassen. Parallel wuchert die Landschaft ungesteuert weiter. Wir setzen deshalb bei Transparenz und konkreten Entscheidungen an — und etablieren leichtgewichtige Governance, damit aus Übersicht echte Steuerung wird.</div></details>
+ <details class="faq__item"><summary>Wie machen Sie Architektur für Entscheider greifbar?</summary><div class="faq__answer">Indem wir aus IT-Technik Geschäftsfragen machen: Was kostet diese Landschaft, wo liegen Risiken, welche Doppelungen binden Geld, welche Abhängigkeiten bremsen Vorhaben? Eine gute Landkarte zeigt das übersichtlich auf einer einzigen Seite und erspart hundert Diagramme. So können auch fachfremde Entscheider fundiert über Investitionen entscheiden — und Architektur bekommt das Gewicht, das sie braucht.</div></details>
+ <details class="faq__item"><summary>Wie verhindern Sie, dass die Landschaft wieder wuchert?</summary><div class="faq__answer">Durch leichtgewichtige Governance: klare, einfache Entscheidungswege und ein paar tragfähige Prinzipien, an denen sich Beschaffung und Projekte ausrichten. Wenige Regeln, die wirklich greifen, wirken mehr als ein dickes Regelwerk, das niemand liest. Entscheidend ist, dass Architektur-Entscheidungen sichtbar getroffen und nachgehalten werden — sonst beschafft bald wieder jeder Bereich für sich.</div></details>
+ <details class="faq__item"><summary>Was ist der Unterschied zwischen Enterprise Architecture und IT-Strategie?</summary><div class="faq__answer">Die IT-Strategie setzt die Richtung — wohin und warum. Enterprise Architecture macht diese Richtung konkret in der Landschaft: welche Anwendungen, welche Schnittstellen, welche Reihenfolge. Beides gehört zusammen. Wir verbinden die strategische Ebene mit der konkreten Architektur, damit aus guten Absichten umsetzbare Entscheidungen werden.</div></details>
+ <details class="faq__item"><summary>Wie lange dauert ein Architektur-Vorhaben?</summary><div class="faq__answer">Eine erste belastbare Landkarte entsteht in der Regel zügig und liefert sofort Nutzen. Zielbild, Roadmap und Konsolidierung laufen danach in Wellen. Wir arbeiten bewusst nicht in starren Mehrjahres-Blöcken — jede Phase ist einzeln beauftragbar und liefert einen abgegrenzten Nutzen, auf dem die nächste aufbaut.</div></details>
+ <details class="faq__item"><summary>Arbeiten Sie auch mit kleineren Organisationen?</summary><div class="faq__answer">Ja. Auch eine überschaubare Landschaft profitiert von Transparenz und klaren Entscheidungen — oft sogar besonders, weil jede Fehlinvestition stärker ins Gewicht fällt. Wo ein großes Programm nicht passt, helfen eine kompakte Landkarte, ein fokussiertes Zielbild oder Sparring für Ihre internen Verantwortlichen — so viel wie nötig, so schlank wie möglich.</div></details>
+ <details class="faq__item"><summary>Wie gehen Sie mit gewachsenen Altsystemen um?</summary><div class="faq__answer">Mit Augenmaß und gezieltem Vorgehen. Wir bewerten jedes Altsystem nach Nutzen, Kosten, Risiko und Ablöse-Aufwand und leiten daraus ab, was bleibt, was modernisiert und was abgelöst wird — in einer Reihenfolge, die Abhängigkeiten berücksichtigt. So vermeiden Sie sowohl den riskanten Big-Bang-Austausch als auch das endlose Weiterschleppen teurer Altlasten, und jeder Schritt zahlt sichtbar auf eine einfachere, günstigere und besser beherrschbare Landschaft ein, deren Betrieb dauerhaft weniger Aufwand und Risiko bindet.</div></details>
+ <details class="faq__item"><summary>Können wir mit einem einzelnen Bereich starten?</summary><div class="faq__answer">Ja, und oft ist das der klügste Einstieg. Wir beginnen gezielt dort, wo der Druck am größten ist — ein Bereich, eine Domäne oder eine besonders teure Systemgruppe — und nehmen die ganze Landschaft Schritt für Schritt in den Blick. Der erste sichtbare Erfolg schafft Vertrauen und liefert eine erprobte Vorlage, die sich danach Schritt für Schritt auf weitere Bereiche und Domänen übertragen lässt — gänzlich frei von einem riskanten Großprojekt.</div></details>
+ </div>
+ <div class="cross-links"><a class="cross-link" href="it-architektur/index.html"><div class="cross-link__tag">Vertiefung</div><div class="cross-link__title">IT-Architektur-Beratung</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="../prozessoptimierung-beratung/index.html"><div class="cross-link__tag">Säule 1 · Prozesse</div><div class="cross-link__title">Prozessoptimierung &amp; BPM</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../projektmanagement-beratung/index.html"><div class="cross-link__tag">Säule 1 · Projekte</div><div class="cross-link__title">Projektmanagement</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../digitalisierungsberatung/index.html"><div class="cross-link__tag">Säule 1 · Digital</div><div class="cross-link__title">Digitalisierung &amp; Transformation</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../change-management-beratung/index.html"><div class="cross-link__tag">Säule 1 · Change</div><div class="cross-link__title">Change Management</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../ki-beratung/index.html"><div class="cross-link__tag">Säule 1 · KI</div><div class="cross-link__title">KI-Beratung &amp; Strategie</div><div class="cross-link__arrow">→ Weiter</div></a></div>
+ </div>
 </section>
 
 
 <!-- FINAL CTA -->
 <section class="final-cta" id="kontakt" data-bench-role="cta">
-  <div class="container">
-    <div class="final-cta__inner">
-      <div class="eyebrow eyebrow--on-dark">Nächster Schritt</div>
-      <h2>Enterprise Architecture <span class="accent">›</span> starten.</h2>
-      <p>Der erste Schritt ist ein Erstgespräch von 30–45 Minuten. Wir klären Ihre Ausgangslage, den EA-Reifegrad und ob CX der richtige Partner ist. Wenn nicht, verweisen wir auf jemanden, der besser passt.</p>
-      <a href="mailto:hallo@cx-experts.de?subject=Enterprise%20Architecture%20%E2%80%94%20Erstgespr%C3%A4ch" class="btn">Erstgespräch anfragen <span class="btn__icon">→</span></a>
-    </div>
-  </div>
+ <div class="container">
+ <div class="final-cta__inner">
+ <div class="eyebrow eyebrow--on-dark">Nächster Schritt</div>
+ <h2>Enterprise Architecture <span class="accent">›</span> starten.</h2>
+ <p>Der erste Schritt ist ein Erstgespräch von 30–45 Minuten. Wir klären Ihre Ausgangslage, den EA-Reifegrad und ob CX der richtige Partner ist. Wenn nicht, verweisen wir auf jemanden, der besser passt.</p>
+ <a href="mailto:hallo@cx-experts.de?subject=Enterprise%20Architecture%20%E2%80%94%20Erstgespr%C3%A4ch" class="btn">Erstgespräch anfragen <span class="btn__icon">→</span></a>
+ </div>
+ </div>
 </section>
 
 </main>
@@ -1082,105 +1082,105 @@ body.has-drawer { overflow: hidden; }
 
 <!-- ====== 4 mandatory substance blocks (HARD rule, hub-only) ====== -->
 <!-- ========================================================
-     SUBSTANCE BLOCK 1 (misdiagnosis) — TO BE COMPLETED BY HUMAN ONLY
-     DO NOT FILL WITH AI. Replace the placeholder paragraph
-     below with real practitioner content.
-     ======================================================== -->
+ SUBSTANCE BLOCK 1 (misdiagnosis) — TO BE COMPLETED BY HUMAN ONLY
+ DO NOT FILL WITH AI. Replace the placeholder paragraph
+ below with real practitioner content.
+ ======================================================== -->
 <section class="cx-substance-block" data-substance-id="1" data-substance-slot="misdiagnosis">
-  <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Fehldiagnose</div>
-  <h2 class="cx-substance-block__h">Ein Architektur-Board-Review, bei dem die ursprüngliche Initiative-Diagnose falsch war.</h2>
-  <div class="cx-substance-block__placeholder">
-    <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Was war die Lücke zwischen RFC und tatsächlichem Bedarf? Wer hat den Befund gefunden — Reviewer, Implementing Team, Betrieb? Und welche Rolle spielte der Bestandsdaten-Stand dabei?
-  </div>
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Fehldiagnose</div>
+ <h2 class="cx-substance-block__h">Ein Architektur-Board-Review, bei dem die ursprüngliche Initiative-Diagnose falsch war.</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Was war die Lücke zwischen RFC und tatsächlichem Bedarf? Wer hat den Befund gefunden — Reviewer, Implementing Team, Betrieb? Und welche Rolle spielte der Bestandsdaten-Stand dabei?
+ </div>
 </section>
 
 <!-- ========================================================
-     SUBSTANCE BLOCK 2 (methodology) — TO BE COMPLETED BY HUMAN ONLY
-     DO NOT FILL WITH AI. Replace the placeholder paragraph
-     below with real practitioner content.
-     ======================================================== -->
+ SUBSTANCE BLOCK 2 (methodology) — TO BE COMPLETED BY HUMAN ONLY
+ DO NOT FILL WITH AI. Replace the placeholder paragraph
+ below with real practitioner content.
+ ======================================================== -->
 <section class="cx-substance-block" data-substance-id="2" data-substance-slot="methodology">
-  <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Methodik angepasst</div>
-  <h2 class="cx-substance-block__h">Ein ADR, das Sie nachträglich aufgehoben oder substantiell überarbeitet haben.</h2>
-  <div class="cx-substance-block__placeholder">
-    <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Was wurde im Original übersehen — ein nicht-funktionaler Sachverhalt, eine regulatorische Anforderung, ein Bestandsabhängigkeit? Wie viel war die Rückabwicklung wert?
-  </div>
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Methodik angepasst</div>
+ <h2 class="cx-substance-block__h">Ein ADR, das Sie nachträglich aufgehoben oder substantiell überarbeitet haben.</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Was wurde im Original übersehen — ein nicht-funktionaler Sachverhalt, eine regulatorische Anforderung, ein Bestandsabhängigkeit? Wie viel war die Rückabwicklung wert?
+ </div>
 </section>
 
 <!-- ========================================================
-     SUBSTANCE BLOCK 3 (outcome) — TO BE COMPLETED BY HUMAN ONLY
-     DO NOT FILL WITH AI. Replace the placeholder paragraph
-     below with real practitioner content.
-     ======================================================== -->
+ SUBSTANCE BLOCK 3 (outcome) — TO BE COMPLETED BY HUMAN ONLY
+ DO NOT FILL WITH AI. Replace the placeholder paragraph
+ below with real practitioner content.
+ ======================================================== -->
 <section class="cx-substance-block" data-substance-id="3" data-substance-slot="outcome">
-  <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Reales Ergebnis</div>
-  <h2 class="cx-substance-block__h">Ein konkretes EA-Mandat.</h2>
-  <div class="cx-substance-block__placeholder">
-    <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Sektor, Initialscope, Anzahl gelieferter ADRs, Architektur-Compliance-Rate nach 12 Monaten. Bitte mit Zahl, nicht „erfolgreich verankert".
-  </div>
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Reales Ergebnis</div>
+ <h2 class="cx-substance-block__h">Ein konkretes EA-Mandat.</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Sektor, Initialscope, Anzahl gelieferter ADRs, Architektur-Compliance-Rate nach 12 Monaten. Bitte mit Zahl, nicht „erfolgreich verankert".
+ </div>
 </section>
 
 <!-- ========================================================
-     SUBSTANCE BLOCK 4 (cost) — TO BE COMPLETED BY HUMAN ONLY
-     DO NOT FILL WITH AI. Replace the placeholder paragraph
-     below with real practitioner content.
-     ======================================================== -->
+ SUBSTANCE BLOCK 4 (cost) — TO BE COMPLETED BY HUMAN ONLY
+ DO NOT FILL WITH AI. Replace the placeholder paragraph
+ below with real practitioner content.
+ ======================================================== -->
 <section class="cx-substance-block" data-substance-id="4" data-substance-slot="cost">
-  <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Realer Tagessatz · Reale Dauer</div>
-  <h2 class="cx-substance-block__h">Ein reales aktuelles EA-Mandat: Tagessatz, Architektur-Board-Frequenz, ADR-Durchlaufzeit.</h2>
-  <div class="cx-substance-block__placeholder">
-    <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Tatsächlicher Tagessatz, Architektur-Board-Frequenz, durchschnittliche ADR-Durchlaufzeit von RFC bis Ratifizierung in Werktagen. Bitte den jüngsten Fall.
-  </div>
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Realer Tagessatz · Reale Dauer</div>
+ <h2 class="cx-substance-block__h">Ein reales aktuelles EA-Mandat: Tagessatz, Architektur-Board-Frequenz, ADR-Durchlaufzeit.</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Tatsächlicher Tagessatz, Architektur-Board-Frequenz, durchschnittliche ADR-Durchlaufzeit von RFC bis Ratifizierung in Werktagen. Bitte den jüngsten Fall.
+ </div>
 </section>
 
 
 <!-- ========================================================
-     SUBSTANCE BLOCK 5 (market) — TO BE COMPLETED BY HUMAN ONLY
-     DO NOT FILL WITH AI. Replace the placeholder paragraph
-     below with real practitioner content.
-     ======================================================== -->
+ SUBSTANCE BLOCK 5 (market) — TO BE COMPLETED BY HUMAN ONLY
+ DO NOT FILL WITH AI. Replace the placeholder paragraph
+ below with real practitioner content.
+ ======================================================== -->
 <section class="cx-substance-block" data-substance-id="5" data-substance-slot="market">
-  <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Deutscher Markt</div>
-  <h2 class="cx-substance-block__h">Welche Markt- oder Konzernrealität hat die Architekturentscheidung verändert?</h2>
-  <div class="cx-substance-block__placeholder">
-    <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Nennen Sie eine konkrete Realität: Legacy-Landschaft, Security Audit, reguliertes Reporting, SAP-Abhängigkeit, Einkauf oder Architecture-Board-Politik.
-  </div>
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Deutscher Markt</div>
+ <h2 class="cx-substance-block__h">Welche Markt- oder Konzernrealität hat die Architekturentscheidung verändert?</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Nennen Sie eine konkrete Realität: Legacy-Landschaft, Security Audit, reguliertes Reporting, SAP-Abhängigkeit, Einkauf oder Architecture-Board-Politik.
+ </div>
 </section>
 
 <!-- E-E-A-T trust strip + bottom contact form (Pass A) -->
 <section class="cx-trust">
-  <div class="container">
-    <div class="cx-trust__grid">
-      <div class="cx-trust__col">
-        <div class="cx-trust__eyebrow">Wer dahinter steht</div>
-        <h2 class="cx-trust__h">Geführt von Johannes &amp; Hannes — persönlich, von erfahrenen Beratern.</h2>
-        <p class="cx-trust__lead">Beide haben über Jahre große Transformationsprojekte verantwortet, bevor sie CX-Experts gegründet haben. Sie führen jedes Mandat persönlich — kein Junior-Modell, kein Backoffice-Outsourcing.</p>
-        <ul class="cx-trust__creds">
-          <li><b>Erfahrene Berater</b> — jedes Mandat persönlich geführt</li>
-          <li><b>Branchenübergreifend</b> · vom Mittelstand bis zum Konzern</li>
-          <li><b>Strukturiertes Vorgehen</b> · nachvollziehbar und dokumentiert</li>
-          <li><b>DACH-weit</b> tätig</li>
-        </ul>
-        <p class="cx-trust__byline">Verfasst von <strong>Hannes Schäfer</strong>, Beratungspartner CX-Experts. Geprüft von <strong>Johannes Vogel</strong>, Geschäftsführender Gesellschafter.</p>
-      </div>
-      <div class="cx-trust__col">
-        <form class="cx-form" action="mailto:kontakt@cx-experts.de" method="post" enctype="text/plain">
-          <div class="cx-form__eyebrow">Erstgespräch — 30 Minuten, kostenlos</div>
-          <h3 class="cx-form__h">Sagen Sie uns, wo Sie stehen.</h3>
-          <label class="cx-form__row"><span>Name</span><input type="text" name="name" required></label>
-          <label class="cx-form__row"><span>E-Mail</span><input type="email" name="email" required></label>
-          <label class="cx-form__row"><span>Unternehmen</span><input type="text" name="unternehmen"></label>
-          <label class="cx-form__row"><span>Ihr Anliegen (kurz)</span><textarea name="anliegen" rows="3"></textarea></label>
-          <label class="cx-form__consent">
-            <input type="checkbox" name="dsgvo" required>
-            <span>Ich willige ein, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. Verarbeitung gemäß <a href="../datenschutz.html">Datenschutzerklärung</a>, Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO. Löschung nach Abschluss der Anfrage oder Widerruf.</span>
-          </label>
-          <button type="submit" class="cx-form__submit">Erstgespräch anfragen <span aria-hidden="true">→</span></button>
-          <div class="cx-form__hint">Antwort innerhalb von 24 Stunden, werktags.</div>
-        </form>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="cx-trust__grid">
+ <div class="cx-trust__col">
+ <div class="cx-trust__eyebrow">Wer dahinter steht</div>
+ <h2 class="cx-trust__h">Geführt von Johannes &amp; Hannes — persönlich, von erfahrenen Beratern.</h2>
+ <p class="cx-trust__lead">Beide haben über Jahre große Transformationsprojekte verantwortet, bevor sie CX-Experts gegründet haben. Sie führen jedes Mandat persönlich — mit Senior-Beratern an Ihrer Seite und der Arbeit im eigenen Haus.</p>
+ <ul class="cx-trust__creds">
+ <li><b>Erfahrene Berater</b> — jedes Mandat persönlich geführt</li>
+ <li><b>Branchenübergreifend</b> · vom Mittelstand bis zum Konzern</li>
+ <li><b>Strukturiertes Vorgehen</b> · nachvollziehbar und dokumentiert</li>
+ <li><b>DACH-weit</b> tätig</li>
+ </ul>
+ <p class="cx-trust__byline">Verfasst von <strong>Hannes Schäfer</strong>, Beratungspartner CX-Experts. Geprüft von <strong>Johannes Vogel</strong>, Geschäftsführender Gesellschafter.</p>
+ </div>
+ <div class="cx-trust__col">
+ <form class="cx-form" action="mailto:kontakt@cx-experts.de" method="post" enctype="text/plain">
+ <div class="cx-form__eyebrow">Erstgespräch — 30 Minuten, kostenlos</div>
+ <h3 class="cx-form__h">Sagen Sie uns, wo Sie stehen.</h3>
+ <label class="cx-form__row"><span>Name</span><input type="text" name="name" required></label>
+ <label class="cx-form__row"><span>E-Mail</span><input type="email" name="email" required></label>
+ <label class="cx-form__row"><span>Unternehmen</span><input type="text" name="unternehmen"></label>
+ <label class="cx-form__row"><span>Ihr Anliegen (kurz)</span><textarea name="anliegen" rows="3"></textarea></label>
+ <label class="cx-form__consent">
+ <input type="checkbox" name="dsgvo" required>
+ <span>Ich willige ein, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. Verarbeitung gemäß <a href="../datenschutz.html">Datenschutzerklärung</a>, Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO. Löschung nach Abschluss der Anfrage oder Widerruf.</span>
+ </label>
+ <button type="submit" class="cx-form__submit">Erstgespräch anfragen <span aria-hidden="true">→</span></button>
+ <div class="cx-form__hint">Antwort innerhalb von 24 Stunden, werktags.</div>
+ </form>
+ </div>
+ </div>
+ </div>
 </section>
 <style>
 .cx-trust{background:#FAF6EC;color:#1E2327;padding:80px 0 64px;border-top:1px solid rgba(30,35,39,0.08)}
@@ -1207,44 +1207,61 @@ body.has-drawer { overflow: hidden; }
 .cx-form__hint{font-size:11px;color:#5A6066;margin-top:10px}
 .cx-trust__byline{margin:18px 0 0;font-size:13px;line-height:1.55;color:#5A6066;border-top:1px solid rgba(30,35,39,0.08);padding-top:14px}
 .cx-trust__byline strong{color:#1E2327;font-weight:700}
+
+/* DM-MOBILE-CENTER — mobile: headings · card copy · hero CTAs · footer · contact forms are centred (do not edit by hand; managed by apply_mobile_center.py) */
+@media (max-width: 820px) {
+  h1, h2, h3,
+  .hero__copy, .hero__eyebrow, .hero__lead, .hero p,
+  [class*="card"], [class*="card"] p, [class*="card"] li,
+  footer, .footer, .footer__inner, footer p, footer li,
+  .cx-form, .cx-form__eyebrow, .cx-form__h, .cx-form__row, .cx-form__hint,
+  form, form p, form label { text-align: center; }
+  .hero__cta-row, .final-cta__inner, .hero [class*="cta"], .hero [class*="btn-row"] {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .cx-form__consent { justify-content: center; }
+  form input, form textarea, form select,
+  .cx-form__row input, .cx-form__row textarea, .cx-form__row select { margin-left: auto; margin-right: auto; }
+}
+/* /DM-MOBILE-CENTER */
 </style>
 <footer class="footer">
-  <div class="container footer__inner"><div class="footer__links"><strong>Branchen &amp; Regionen</strong> · <a href="../projektmanagement-beratung/logistik/index.html">Projektmanagement Logistik &amp; 3PL</a> · <a href="../projektmanagement-beratung/rheinland/index.html">Projektmanagement Rheinland</a></div>
-    <div>© CX-Experts.de · Enterprise Architecture für tragfähige IT-Strategien</div>
-    <div>Made in Köln · DSGVO-konform · DACH-weit</div>
-  <div><a href="../sitemap/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Sitemap</a></div></div>
+ <div class="container footer__inner"><div class="footer__links"><strong>Branchen &amp; Regionen</strong> · <a href="../projektmanagement-beratung/logistik/index.html">Projektmanagement Logistik &amp; 3PL</a> · <a href="../projektmanagement-beratung/rheinland/index.html">Projektmanagement Rheinland</a></div>
+ <div>© CX-Experts.de · Enterprise Architecture für tragfähige IT-Strategien</div>
+ <div>Made in Köln · DSGVO-konform · DACH-weit</div>
+ <div><a href="../sitemap/" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Sitemap</a></div></div>
 </footer>
 
 <script>
 (function(){
-  const btn = document.getElementById('menuToggle');
-  const drawer = document.getElementById('servicesDrawer');
-  const scrim = document.getElementById('drawerScrim');
-  if(!btn || !drawer || !scrim) return;
-  function open(){
-    btn.setAttribute('aria-expanded','true');
-    btn.setAttribute('aria-label','Leistungen-Menü schließen');
-    drawer.classList.add('is-open');
-    drawer.setAttribute('aria-hidden','false');
-    scrim.classList.add('is-open');
-    scrim.setAttribute('aria-hidden','false');
-    document.documentElement.style.overflow = 'hidden';
-  }
-  function close(){
-    btn.setAttribute('aria-expanded','false');
-    btn.setAttribute('aria-label','Leistungen-Menü öffnen');
-    drawer.classList.remove('is-open');
-    drawer.setAttribute('aria-hidden','true');
-    scrim.classList.remove('is-open');
-    scrim.setAttribute('aria-hidden','true');
-    document.documentElement.style.overflow = '';
-  }
-  function toggle(){
-    if(btn.getAttribute('aria-expanded') === 'true') close(); else open();
-  }
-  btn.addEventListener('click', toggle);
-  scrim.addEventListener('click', close);
-  document.addEventListener('keydown', e => { if(e.key === 'Escape') close(); });
+ const btn = document.getElementById('menuToggle');
+ const drawer = document.getElementById('servicesDrawer');
+ const scrim = document.getElementById('drawerScrim');
+ if(!btn ||!drawer ||!scrim) return;
+ function open(){
+ btn.setAttribute('aria-expanded','true');
+ btn.setAttribute('aria-label','Leistungen-Menü schließen');
+ drawer.classList.add('is-open');
+ drawer.setAttribute('aria-hidden','false');
+ scrim.classList.add('is-open');
+ scrim.setAttribute('aria-hidden','false');
+ document.documentElement.style.overflow = 'hidden';
+ }
+ function close(){
+ btn.setAttribute('aria-expanded','false');
+ btn.setAttribute('aria-label','Leistungen-Menü öffnen');
+ drawer.classList.remove('is-open');
+ drawer.setAttribute('aria-hidden','true');
+ scrim.classList.remove('is-open');
+ scrim.setAttribute('aria-hidden','true');
+ document.documentElement.style.overflow = '';
+ }
+ function toggle(){
+ if(btn.getAttribute('aria-expanded') === 'true') close(); else open();
+ }
+ btn.addEventListener('click', toggle);
+ scrim.addEventListener('click', close);
+ document.addEventListener('keydown', e => { if(e.key === 'Escape') close(); });
 })();
 </script>
 
@@ -1258,17 +1275,17 @@ document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
 <script>
 (function(){
-  var nav=document.getElementById('nav');
-  if(nav){var s=function(){nav.classList.toggle('is-scrolled',window.scrollY>40);};s();window.addEventListener('scroll',s,{passive:true});}
-  var btn=document.getElementById('cxMenuToggle'),dr=document.getElementById('cxServicesDrawer'),sc=document.getElementById('cxDrawerScrim');
-  if(btn&&dr&&sc){
-    var op=function(){btn.setAttribute('aria-expanded','true');dr.classList.add('is-open');dr.setAttribute('aria-hidden','false');sc.classList.add('is-open');sc.setAttribute('aria-hidden','false');document.body.classList.add('has-drawer');};
-    var cl=function(){btn.setAttribute('aria-expanded','false');dr.classList.remove('is-open');dr.setAttribute('aria-hidden','true');sc.classList.remove('is-open');sc.setAttribute('aria-hidden','true');document.body.classList.remove('has-drawer');};
-    btn.addEventListener('click',function(){dr.classList.contains('is-open')?cl():op();});
-    sc.addEventListener('click',cl);
-    document.addEventListener('keydown',function(e){if(e.key==='Escape')cl();});
-    dr.querySelectorAll('.cx-drawer__link,.cx-drawer__cta,.cx-drawer__jump').forEach(function(a){a.addEventListener('click',function(){setTimeout(cl,0);});});
-  }
+ var nav=document.getElementById('nav');
+ if(nav){var s=function(){nav.classList.toggle('is-scrolled',window.scrollY>40);};s();window.addEventListener('scroll',s,{passive:true});}
+ var btn=document.getElementById('cxMenuToggle'),dr=document.getElementById('cxServicesDrawer'),sc=document.getElementById('cxDrawerScrim');
+ if(btn&&dr&&sc){
+ var op=function(){btn.setAttribute('aria-expanded','true');dr.classList.add('is-open');dr.setAttribute('aria-hidden','false');sc.classList.add('is-open');sc.setAttribute('aria-hidden','false');document.body.classList.add('has-drawer');};
+ var cl=function(){btn.setAttribute('aria-expanded','false');dr.classList.remove('is-open');dr.setAttribute('aria-hidden','true');sc.classList.remove('is-open');sc.setAttribute('aria-hidden','true');document.body.classList.remove('has-drawer');};
+ btn.addEventListener('click',function(){dr.classList.contains('is-open')?cl():op();});
+ sc.addEventListener('click',cl);
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')cl();});
+ dr.querySelectorAll('.cx-drawer__link,.cx-drawer__cta,.cx-drawer__jump').forEach(function(a){a.addEventListener('click',function(){setTimeout(cl,0);});});
+ }
 })();
 </script>
 
