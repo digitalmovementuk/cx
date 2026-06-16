@@ -7806,6 +7806,108 @@ html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP
   footer, .footer, .footer__inner, footer p, footer li,
   .cx-form, .cx-form__eyebrow, .cx-form__h, .cx-form__row, .cx-form__hint,
   form, form p, form label { text-align: center; }
+  .method,
+  .method-steps,
+  .method-step,
+  .method-step__body,
+  .method-step__title,
+  .method-step__when,
+  .diff-item,
+  .use-card,
+  .industry-card,
+  .compliance-item,
+  .bv-phase,
+  .step-card {
+    text-align: center;
+  }
+  .method-step__num,
+  .method-step__when,
+  .service-card__num,
+  .problem-card__num,
+  .diff-item__num,
+  .use-card__tag,
+  .bv-phase-num,
+  .bv-phase-range,
+  .ph-tag,
+  .svc-tag,
+  .ws-tag {
+    display: flex!important;
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .ph-tag-wrap { justify-content: center!important; }
+  .problem-grid,
+  .services-grid,
+  .method,
+  .method-steps,
+  .uses-grid,
+  .industries,
+  .diff-list,
+  .compliance-block {
+    grid-template-columns: 1fr!important;
+  }
+  .diff-item {
+    grid-template-columns: 1fr!important;
+    justify-items: center;
+    gap: 14px;
+  }
+  .diff-item > div:not(.diff-item__num) { text-align: center; }
+  h1, h2, h3,
+  .h-section,
+  .cx-proof__h,
+  .hero__title,
+  .section__head {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+  }
+  .cx-trust__creds {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    grid-template-columns: 1fr!important;
+  }
+  .cx-trust__creds li,
+  .cx-trust__creds b {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .cx-trust,
+  .cx-trust__grid,
+  .cx-trust__col,
+  .cx-trust__eyebrow,
+  .cx-trust__h,
+  .cx-trust__lead,
+  .cx-trust__creds,
+  .cx-trust__creds li,
+  .cx-trust__creds b,
+  .cx-trust__byline {
+    text-align: center;
+  }
+  .cx-trust__lead,
+  .cx-trust__creds,
+  .cx-trust__byline {
+    margin-left: auto!important;
+    margin-right: auto!important;
+  }
+  .cx-trust__creds { justify-items: center; }
+  .tree-major-summary b,
+  .tree-branch-summary b {
+    white-space: normal!important;
+    overflow-wrap: anywhere;
+  }
+  .tree-actions {
+    margin-left: 0!important;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .hero__cta-row, .final-cta__inner, .hero [class*="cta"], .hero [class*="btn-row"] {
     display: flex; flex-direction: column; align-items: center; justify-content: center;
   }

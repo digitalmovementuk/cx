@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"KI-Beratung für Unternehmen","alternateName":["Künstliche Intelligenz Beratung","AI Beratung","KI-Berater"],"description":"KI-Beratung vom priorisierten Anwendungsfall über Pilot und Integration bis in den produktiven Betrieb. Mit Anforderungsmanagement, Datenprüfung, Governance und Datenschutz von Anfang an.","provider":{"@type":"Organization","name":"CX","url":"https://cx-experts.de"},"areaServed":["DE","AT","CH"],"serviceType":"KI-Beratung","hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Anforderungsmanagement"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Datenqualitäts- und Prozessanalyse"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Agiles und hybrides Projektmanagement"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Governance, Qualität und Risiko"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"KI-Engineering"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Change-Management"}}]}}
+{"@context":"https://schema.org","@type":"Service","name":"KI-Beratung für kundenspezifische Anwendungsfälle","alternateName":["Künstliche Intelligenz Beratung","AI Beratung","KI-Berater"],"description":"KI-Beratung für Unternehmen: klare Anwendungsfälle, belastbare Daten, Pilot, Betrieb und Governance. DSGVO-konform und mit Blick auf den EU AI Act.","provider":{"@type":"Organization","name":"CX","url":"https://cx-experts.de"},"areaServed":["DE","AT","CH"],"serviceType":"KI-Beratung","hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Anforderungsmanagement"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Datenqualitäts- und Prozessanalyse"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Agiles und hybrides Projektmanagement"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Governance, Qualität und Risiko"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"KI-Engineering"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Change-Management"}}]}}
 </script>
 
 <style>
@@ -53,14 +53,14 @@ a{color:inherit;text-decoration:none}
 .nav-cta__arrow{display:inline-flex;width:20px;height:20px;background:var(--cx-yellow);color:var(--cx-charcoal);align-items:center;justify-content:center}
 
 /* hero */
-.hero{background:var(--cx-charcoal);color:#fff;padding:clamp(96px,12vw,160px) 0 clamp(80px,10vw,120px);position:relative;overflow:hidden}
+.hero{background:var(--cx-charcoal);color:#fff;padding:clamp(64px,7vw,96px) 0 clamp(56px,6vw,80px);position:relative;overflow:hidden;min-height:calc(100dvh - 74px)}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 85% 110%,rgba(255,122,0,0.18) 0%,transparent 55%);pointer-events:none}
-.hero__eyebrow{position:relative;display:inline-flex;align-items:center;gap:14px;font-size:0.75rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:28px;color:#fff}
+.hero__eyebrow{position:relative;display:inline-flex;align-items:center;gap:14px;font-size:0.75rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:18px;color:#fff}
 .hero__eyebrow::before{content:"";display:inline-block;width:24px;height:3px;background:var(--cx-yellow)}
-.hero__title{position:relative;font-size:clamp(2.5rem,6vw,5rem);font-weight:800;line-height:1.02;letter-spacing:-0.04em;margin:0 0 28px;max-width:18ch;text-wrap:balance}
+.hero__title{position:relative;font-size:clamp(2.35rem,4.8vw,4.25rem);font-weight:800;line-height:1.02;letter-spacing:-0.035em;margin:0 0 22px;max-width:22ch;text-wrap:balance;overflow-wrap:break-word;hyphens:auto}
 .hero__title span.accent{color:var(--cx-yellow)}
-.hero__lead{position:relative;font-size:clamp(1.0625rem,1.4vw,1.3125rem);line-height:1.6;color:rgba(255,255,255,0.82);max-width:62ch;margin:0 0 40px;letter-spacing:-0.005em}
-.hero__cta-row{position:relative;display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:48px}
+.hero__lead{position:relative;font-size:clamp(1rem,1.18vw,1.1875rem);line-height:1.55;color:rgba(255,255,255,0.82);max-width:56ch;margin:0 0 26px;letter-spacing:-0.005em}
+.hero__cta-row{position:relative;display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:0}
 .btn{display:inline-flex;align-items:center;gap:12px;padding:14px 18px 14px 22px;background:var(--cx-yellow);color:var(--cx-charcoal);font-weight:700;letter-spacing:-0.005em;font-size:0.9375rem;transition:background var(--dur) var(--ease),transform var(--dur) var(--ease)}
 .btn:hover{background:var(--cx-yellow-soft);transform:translateY(-1px)}
 .btn__icon{display:inline-flex;width:26px;height:26px;background:var(--cx-charcoal);color:var(--cx-yellow);align-items:center;justify-content:center}
@@ -68,9 +68,9 @@ a{color:inherit;text-decoration:none}
 .btn--ghost:hover{background:rgba(255,255,255,0.05)}
 .btn--ghost.btn__icon{background:rgba(255,255,255,0.12);color:#fff}
 
-.hero__trust{position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;padding-top:40px;border-top:1px solid var(--line-on-dark);max-width:780px}
+.hero__trust{position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding-top:24px;border-top:1px solid var(--line-on-dark);max-width:860px}
 .trust-item{display:grid;gap:6px}
-.trust-item__num{font-size:1.875rem;font-weight:800;letter-spacing:-0.02em;color:var(--cx-yellow);line-height:1}
+.trust-item__num{font-size:1.45rem;font-weight:800;letter-spacing:-0.02em;color:var(--cx-yellow);line-height:1}
 .trust-item__label{font-size:0.8125rem;color:rgba(255,255,255,0.7);line-height:1.4}
 
 /* sections shared */
@@ -101,6 +101,7 @@ a{color:inherit;text-decoration:none}
 .service-card p{margin:0;font-size:0.9375rem;line-height:1.65;color:var(--muted)}
 
 /* methodology */
+.card{padding:28px}
 .method{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;margin-top:56px;border-top:1px solid var(--line-on-dark)}
 .method-step{padding:32px 28px;border-right:1px solid var(--line-on-dark);border-bottom:1px solid var(--line-on-dark);position:relative}
 .method-step:last-child{border-right:none}
@@ -144,6 +145,12 @@ a{color:inherit;text-decoration:none}
 .faq__item summary::after{content:"+";display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--cx-yellow);color:var(--cx-charcoal);font-weight:700;font-size:1.125rem;flex:0 0 32px;transition:transform var(--dur) var(--ease)}
 .faq__item[open] summary::after{content:"−"}
 .faq__answer{padding:0 0 32px;font-size:0.9375rem;line-height:1.7;color:var(--muted);max-width:72ch}
+.cross-links{margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.cross-link{display:grid;gap:6px;padding:18px 20px;background:#fff;border:1px solid var(--line);transition:transform var(--dur) var(--ease),border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.cross-link:hover{transform:translateY(-2px);border-color:rgba(0,0,0,0.28);box-shadow:0 20px 34px -26px rgba(0,0,0,0.22)}
+.cross-link__tag{font-size:0.66rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--cx-yellow)}
+.cross-link__title{font-size:0.95rem;font-weight:800;line-height:1.3;color:var(--cx-charcoal)}
+.cross-link__arrow{font-size:0.78rem;font-weight:700;color:var(--muted)}
 
 /* final cta */
 .final-cta{background:var(--cx-charcoal);color:#fff;padding:clamp(80px,10vw,120px) 0;position:relative;overflow:hidden}
@@ -245,7 +252,7 @@ a{color:inherit;text-decoration:none}
 }
 
 /* === Content figures (Pass B images) === */
-.cx-figure{margin:48px auto 0;max-width:760px;display:block}
+.cx-figure{margin:48px auto 0;max-width:780px;display:block}
 .cx-figure img{display:block;width:100%;height:auto;background:var(--cx-warm-2);border:1px solid var(--line)}
 .cx-figure figcaption{margin-top:14px;font-size:0.8125rem;line-height:1.55;color:var(--muted);text-align:center;letter-spacing:-0.005em}
 .cx-figure--on-dark figcaption{color:rgba(255,255,255,0.7)}
@@ -269,6 +276,7 @@ a{color:inherit;text-decoration:none}
 .topbar__actions.menu-btn{order:2}
 .menu-btn{background:rgba(30,35,39,0.04)}
 .menu-btn:hover{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Hannes Schäfer","jobTitle":"Beratungspartner CX-Experts","worksFor":{"@type":"Organization","name":"CX-Experts"}}</script>
 
@@ -290,28 +298,9 @@ html { scroll-behavior: auto!important; }
 }
 .reveal.eyebrow__bar { width: 24px!important; }
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question", "name": "Was kostet eine KI-Beratung?", "acceptedAnswer": {"@type": "Answer", "text": "Der Aufwand hängt von Ziel, Datenlage und Umfang ab. Im kostenlosen Erstgespräch nennen wir eine belastbare Preisspanne und erklären, woraus sie sich ergibt. Größere Vorhaben schneiden wir in klare Phasen, damit Sie nach jedem Schritt neu entscheiden können."}},
-    {"@type": "Question", "name": "Wo fangen wir mit KI an?", "acceptedAnswer": {"@type": "Answer", "text": "Mit einem strukturierten Anwendungsfall-Scan. Wir prüfen, wo heute viel manueller Aufwand entsteht, wo viele Dokumente oder Entscheidungen zusammenkommen und wo KI einen messbaren Nutzen bringen kann. Daraus entsteht eine priorisierte Liste sinnvoller Startpunkte."}},
-    {"@type": "Question", "name": "Brauchen wir erst eine große Datenstrategie, bevor wir starten?", "acceptedAnswer": {"@type": "Answer", "text": "Nicht unbedingt. Wichtig ist, dass für den gewählten Anwendungsfall die nötigen Daten vorhanden, zugänglich und gut genug strukturiert sind. Das prüfen wir gemeinsam vorab. Oft reicht eine fokussierte Datengrundlage für einen ersten messbaren Nutzen."}},
-    {"@type": "Question", "name": "Warum scheitern so viele KI-Vorhaben?", "acceptedAnswer": {"@type": "Answer", "text": "Häufig startet das Projekt mit der Technologie, bevor Nutzen, Datenlage, Verantwortung und Betrieb geklärt sind. Dann überzeugt ein Pilot vielleicht in der Demo, kommt aber nicht im Alltag an. Wir drehen die Reihenfolge um: erst Nutzen und Daten, dann Pilot, Betrieb und Verantwortung."}},
-    {"@type": "Question", "name": "Wie gehen Sie mit Datenschutz und rechtlichen Anforderungen um?", "acceptedAnswer": {"@type": "Answer", "text": "Wir denken Datenschutz, Recht und Risiko von der ersten Phase an mit und verankern sie früh in Auswahl und Gestaltung. Anforderungen wie die DSGVO und der europäische Rechtsrahmen für KI werden bei der Auswahl und Gestaltung berücksichtigt. Orientierung dafür bieten anerkannte Stellen wie das BSI und international etwa die OECD mit ihren KI-Prinzipien. So bleibt der Einsatz nachvollziehbar und verantwortbar."}},
-    {"@type": "Question", "name": "Ersetzt KI dann unsere Mitarbeitenden?", "acceptedAnswer": {"@type": "Answer", "text": "In den Anwendungsfällen, die wir empfehlen, unterstützt KI Menschen bei ihrer Arbeit. Sie übernimmt wiederkehrende Recherche-, Prüf- oder Entwurfsaufgaben, während Mitarbeitende Ergebnisse bewerten, entscheiden und Verantwortung tragen. So entsteht mehr Zeit für anspruchsvollere Aufgaben."}},
-    {"@type": "Question", "name": "Was ist der Unterschied zwischen KI-Strategie und KI-Umsetzung?", "acceptedAnswer": {"@type": "Answer", "text": "Die Strategie klärt, wo KI zu Ihren Geschäftszielen passt und in welcher Reihenfolge Sie vorgehen sollten. Die Umsetzung bringt einen konkreten Anwendungsfall in den Betrieb. Beides gehört zusammen: Ohne Umsetzung bleibt Strategie abstrakt, ohne Strategie bleibt Umsetzung schnell ein isolierter Einzelversuch."}},
-    {"@type": "Question", "name": "Wie lange dauert ein KI-Projekt?", "acceptedAnswer": {"@type": "Answer", "text": "Ein fokussierter Pilot kann oft relativ früh zeigen, ob der Nutzen real ist. Der Weg in den Betrieb braucht danach mehr Sorgfalt: Integration, Kontrolle, Verantwortung und Schulung. Deshalb arbeiten wir in abgegrenzten Phasen, die jeweils ein prüfbares Ergebnis liefern."}},
-    {"@type": "Question", "name": "Arbeiten Sie auch mit kleineren Organisationen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Gerade dort lohnt sich der strukturierte, nutzenorientierte Ansatz, weil Budgets begrenzt sind und ein verfehltes KI-Projekt teuer wird. Wo ein großes Programm nicht passt, helfen ein kompakter Anwendungsfall-Scan, ein fokussierter Pilot oder Sparring für Ihre internen Verantwortlichen. So viel wie nötig, so schlank wie möglich."}},
-    {"@type": "Question", "name": "Woran erkennen wir, dass ein KI-Anwendungsfall sich wirklich lohnt?", "acceptedAnswer": {"@type": "Answer", "text": "An drei Dingen: Es gibt ein klar benanntes Problem mit spürbarem Aufwand heute, die nötigen Daten sind vorhanden und gut genug, und ein Mensch kann die Ergebnisse sinnvoll prüfen. Fehlt eines davon, ist Vorsicht geboten. Wir bewerten Kandidaten deshalb immer entlang von Nutzen, Datenlage und Risiko."}},
-    {"@type": "Question", "name": "Wie vermeiden wir, dass ein KI-Pilot in der Schublade endet?", "acceptedAnswer": {"@type": "Answer", "text": "Wir planen den Weg in den Betrieb bereits vor dem Piloten. Dazu gehören bestehende Abläufe und Systeme, Verantwortlichkeiten, Qualitätssicherung und spätere Nutzung durch das Team. Der Pilot ist der kontrollierte erste Schritt zu einem Werkzeug, das produktiv genutzt werden kann."}},
-    {"@type": "Question", "name": "Wie viel eigenes KI-Wissen brauchen wir dafür?", "acceptedAnswer": {"@type": "Answer", "text": "Weniger, als viele denken. Wichtig ist, dass Ihr Team den eigenen Prozess kennt und versteht, wo KI helfen kann, wo Grenzen liegen und wie Ergebnisse geprüft werden. Das tiefe technische und methodische Wissen bringen wir ein."}}
-  ]
-}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Was kostet eine KI-Beratung?","acceptedAnswer":{"@type":"Answer","text":"Der Aufwand hängt von Anwendungsfall, Datenlage, Risikoklasse, Integrationsbedarf und gewünschter Rollout-Begleitung ab. Im Erstgespräch klären wir, ob ein kompakter Anwendungsfall-Check reicht oder ein KI-Programm mit Governance, MVP, Evaluation und Betrieb sinnvoll ist."}},{"@type":"Question","name":"Wo fangen wir mit KI an?","acceptedAnswer":{"@type":"Answer","text":"Der Start liegt bei einem konkreten Anwendungsfall und einer klaren Verantwortlichkeit. Danach werden Nutzen, Nutzergruppe, Datenquellen, Risiken, Freigabewege und Erfolgskriterien aufgenommen. Auf dieser Grundlage wird entschieden, ob ein MVP sinnvoll ist."}},{"@type":"Question","name":"Brauchen wir erst eine große Datenstrategie, bevor wir starten?","acceptedAnswer":{"@type":"Answer","text":"Für den ersten Schritt reicht oft eine fokussierte Datenprüfung zum gewählten Anwendungsfall. Entscheidend ist, ob die benötigten Daten vorhanden, zugänglich, erlaubt nutzbar und qualitativ ausreichend sind. Größere Dateninitiativen werden sichtbar, wenn der Use Case es verlangt."}},{"@type":"Question","name":"Warum scheitern so viele KI-Vorhaben?","acceptedAnswer":{"@type":"Answer","text":"Häufig fehlen KI-Governance, Datenreife, klare Erfolgskriterien, fachliche Evaluation und ein Betriebsmodell. Ein Pilot kann in der Demo überzeugen und im Alltag trotzdem scheitern, wenn Freigabewege, Monitoring, Support und menschliche Kontrolle fehlen."}},{"@type":"Question","name":"Wie gehen Sie mit Datenschutz und rechtlichen Anforderungen um?","acceptedAnswer":{"@type":"Answer","text":"Datenschutz, Sicherheit, EU-AI-Act-Relevanz, Rollen, menschliche Kontrolle und Dokumentation werden früh in die Projektsteuerung aufgenommen. Anforderungen wie DSGVO und europäischer KI-Rechtsrahmen werden bei Auswahl, Gestaltung und Betrieb berücksichtigt. Orientierung bieten anerkannte Stellen wie das BSI und international die OECD mit ihren KI-Prinzipien."}},{"@type":"Question","name":"Ersetzt KI dann unsere Mitarbeitenden?","acceptedAnswer":{"@type":"Answer","text":"In den Anwendungsfällen, die wir empfehlen, unterstützt KI Menschen bei ihrer Arbeit. Sie übernimmt wiederkehrende Recherche-, Prüf- oder Entwurfsaufgaben. Mitarbeitende bewerten Ergebnisse, entscheiden über Freigaben und tragen Verantwortung."}},{"@type":"Question","name":"Was ist der Unterschied zwischen KI-Strategie und KI-Umsetzung?","acceptedAnswer":{"@type":"Answer","text":"Die Strategie klärt Anwendungsfälle, Nutzen, Prioritäten und Rahmenbedingungen. Die Umsetzung bringt einen konkreten Anwendungsfall über MVP, Evaluation, Governance, Rollout und Betrieb in die Nutzung. Beide Ebenen müssen zusammengeführt werden, damit KI dauerhaft steuerbar bleibt."}},{"@type":"Question","name":"Wie lange dauert ein KI-Projekt?","acceptedAnswer":{"@type":"Answer","text":"Ein fokussierter MVP kann früh zeigen, ob Nutzen und Qualität tragfähig sind. Der Weg in den Betrieb braucht zusätzliche Arbeit: Integration, Freigaben, Monitoring, Support, Schulung und Hypercare. Deshalb arbeiten wir in Phasen mit jeweils prüfbarem Ergebnis."}},{"@type":"Question","name":"Arbeiten Sie auch mit kleineren Organisationen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Kleinere Organisationen brauchen dieselbe Klarheit, aber weniger Overhead. Governance, Datenprüfung, MVP und Betrieb werden so schlank aufgesetzt, dass sie zu Budget, Teamgröße und Entscheidungsgeschwindigkeit passen."}},{"@type":"Question","name":"Woran erkennen wir, dass ein KI-Anwendungsfall sich wirklich lohnt?","acceptedAnswer":{"@type":"Answer","text":"Ein guter Anwendungsfall hat ein klares Problem, messbaren Aufwand, geeignete Daten, prüfbare Ergebnisse und einen realistischen Weg in den Betrieb. Fehlt einer dieser Punkte, wird der Fall zurückgestellt oder vorbereitet, bevor investiert wird."}},{"@type":"Question","name":"Wie vermeiden wir, dass ein KI-Pilot in der Schublade endet?","acceptedAnswer":{"@type":"Answer","text":"Der Betrieb wird vor dem MVP mitgedacht. Dazu gehören Systemintegration, Verantwortlichkeiten, Qualitätssicherung, Freigabewege, Monitoring, Support, Schulung und Nutzenmessung. Der Pilot wird dadurch zum kontrollierten ersten Schritt in die produktive Nutzung."}},{"@type":"Question","name":"Wie viel eigenes KI-Wissen brauchen wir dafür?","acceptedAnswer":{"@type":"Answer","text":"Ihr Team muss vor allem den eigenen Prozess, die Daten und die fachlichen Entscheidungen kennen. Wir bringen Methodik, technische Bewertung, Governance, Projektsteuerung und Umsetzungserfahrung ein. Während des Projekts wird Ihr Team gezielt befähigt."}}]}</script>
 <style id="cx-hero-grid">
-.hero__grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(28px,3.5vw,52px);align-items:stretch;margin-bottom:40px;position:relative}
+.hero__grid{display:grid;grid-template-columns:1.08fr 0.92fr;gap:clamp(24px,3vw,42px);align-items:center;margin-bottom:28px;position:relative}
 .hero__copy{display:flex;flex-direction:column;justify-content:center;min-width:0}
 .hero__copy.hero__cta-row{margin-bottom:0}
 .hero__form-col{display:flex;align-items:center;min-width:0}
@@ -956,28 +945,28 @@ body.has-drawer { overflow: hidden; }
  <div class="hero__grid">
  <div class="hero__copy">
  <div class="hero__eyebrow">KI-Beratung für Unternehmen</div>
- <h1 class="hero__title">KI-Beratung vom Anwendungsfall bis in den Betrieb</h1>
- <p class="hero__lead">Eine erfolgreiche KI-Einführung beginnt nicht mit einem Tool, sondern mit einem klaren geschäftlichen Nutzen. Wir helfen Unternehmen, passende Anwendungsfälle zu finden, Anforderungen sauber zu klären, Daten realistisch zu bewerten und Piloten so aufzusetzen, dass daraus ein verlässliches Werkzeug im Arbeitsalltag wird. Dabei verbinden wir KI-Fachwissen mit Projektmanagement, Datenschutz, Governance und Change-Management.</p>
+ <h1 class="hero__title">KI-Beratung für kundenspezifische Anwendungsfälle</h1>
+ <p class="hero__lead">Wir bringen KI aus der Idee in den Alltag: klarer Nutzen, belastbare Daten, Datenschutz, Qualität und Risiko.</p>
  <div class="hero__cta-row">
  <a href="#kontakt" class="btn">Erstgespräch anfragen <span class="btn__icon">→</span></a>
  <a href="#leistungen" class="btn btn--ghost">Leistungen ansehen <span class="btn__icon">↓</span></a>
  </div>
  </div>
  <div class="hero__form-col">
- <form class="cx-hero-form" action="mailto:kontakt@cx-experts.de" method="post" enctype="text/plain" aria-label="Erstgespräch anfragen" style="display:block;max-width:540px;margin:18px 0 6px;padding:16px 18px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.28);border-radius:14px">
- <span style="display:block;font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FFB870;margin-bottom:10px">Erstgespräch anfragen · kostenlos &amp; unverbindlich</span>
- <div style="display:flex;gap:8px;margin-bottom:8px">
- <input type="text" name="name" placeholder="Vollständiger Name" required aria-label="Vollständiger Name" autocomplete="name" style="flex:1;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;min-width:0">
- <input type="tel" name="phone" placeholder="Telefonnummer" required aria-label="Telefonnummer" autocomplete="tel" style="flex:1;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;min-width:0">
+ <form class="cx-hero-form" action="mailto:kontakt@cx-experts.de" method="post" enctype="text/plain" aria-label="Erstgespräch anfragen" style="display:block;max-width:480px;margin:0;padding:14px 16px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.28);border-radius:14px">
+ <span style="display:block;font-size:10px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#FFB870;margin-bottom:8px">Erstgespräch anfragen · kostenlos &amp; unverbindlich</span>
+ <div style="display:flex;gap:8px;margin-bottom:7px">
+ <input type="text" name="name" placeholder="Name" required aria-label="Vollständiger Name" autocomplete="name" style="flex:1;padding:10px 12px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;min-width:0">
+ <input type="tel" name="phone" placeholder="Telefon" required aria-label="Telefonnummer" autocomplete="tel" style="flex:1;padding:10px 12px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;min-width:0">
  </div>
- <input type="email" name="email" placeholder="Geschäfts-E-Mail" required aria-label="E-Mail" autocomplete="email" style="display:block;width:100%;box-sizing:border-box;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;margin-bottom:8px">
- <textarea name="enquiry" rows="2" placeholder="Worum geht es? Ein, zwei Sätze genügen." required aria-label="Ihre Anfrage" style="display:block;width:100%;box-sizing:border-box;padding:12px 13px;font-size:16px;line-height:1.4;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;margin-bottom:10px;resize:vertical;font-family:inherit"></textarea>
- <button type="submit" style="display:block;width:100%;padding:13px 18px;font-size:14px;font-weight:800;background:#FF7A00;color:#1E2327;border:none;border-radius:9px;cursor:pointer">Anfrage senden →</button>
- <label style="display:flex;gap:8px;align-items:flex-start;font-size:11px;line-height:1.45;color:rgba(255,255,255,0.88);margin-top:10px"><input type="checkbox" name="dsgvo" required style="flex-shrink:0;margin-top:2px"><span>Ich willige in die Verarbeitung meiner Angaben gem. <a href="../datenschutz.html" style="color:#FFB870">Datenschutzerklärung</a> (Art. 6 Abs. 1 lit. b DSGVO) ein. Die Daten werden ausschließlich zur Beantwortung meiner Anfrage genutzt und nach Abschluss bzw. auf Widerruf gelöscht.</span></label>
+ <input type="email" name="email" placeholder="Geschäfts-E-Mail" required aria-label="E-Mail" autocomplete="email" style="display:block;width:100%;box-sizing:border-box;padding:10px 12px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;margin-bottom:7px">
+ <textarea name="enquiry" rows="2" placeholder="Worum geht es?" required aria-label="Ihre Anfrage" style="display:block;width:100%;box-sizing:border-box;padding:10px 12px;font-size:16px;line-height:1.35;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:9px;margin-bottom:8px;resize:vertical;font-family:inherit"></textarea>
+ <button type="submit" style="display:block;width:100%;padding:11px 16px;font-size:14px;font-weight:800;background:#FF7A00;color:#1E2327;border:none;border-radius:9px;cursor:pointer">Anfrage senden →</button>
+ <label style="display:flex;gap:8px;align-items:flex-start;font-size:10px;line-height:1.35;color:rgba(255,255,255,0.88);margin-top:8px"><input type="checkbox" name="dsgvo" required style="flex-shrink:0;margin-top:2px"><span>Ich habe die <a href="../datenschutz.html" style="color:#FFB870">Datenschutzerklärung</a> gelesen. Die Angaben werden nur zur Anfragebearbeitung genutzt.</span></label>
  </form>
  </div>
  </div>
- <div class="hero__trust"><div class="trust-item"><div class="trust-item__num">Nutzen zuerst</div><div class="trust-item__label">realer Anwendungsfall vor der Technologie</div></div><div class="trust-item"><div class="trust-item__num">Bis zum Betrieb</div><div class="trust-item__label">vom Pilot bis zur verlässlichen Nutzung im Alltag</div></div><div class="trust-item"><div class="trust-item__num">DACH</div><div class="trust-item__label">branchenübergreifend · vom Mittelstand bis zum Konzern</div></div></div>
+ <div class="hero__trust"><div class="trust-item"><div class="trust-item__num">Nutzen zuerst</div><div class="trust-item__label">Anwendungsfall vor Technologie</div></div><div class="trust-item"><div class="trust-item__num">Bis Betrieb</div><div class="trust-item__label">Pilot, Integration, Übergabe</div></div><div class="trust-item"><div class="trust-item__num">DACH</div><div class="trust-item__label">für Mittelstand und Konzern</div></div></div>
  </div>
 </section>
 
@@ -986,13 +975,13 @@ body.has-drawer { overflow: hidden; }
  <div class="container">
  <div class="section__head">
  <div class="eyebrow">Warum KI-Vorhaben scheitern</div>
- <h2 class="h-section">KI-Projekte scheitern selten an der Idee. Meist scheitern sie an der Umsetzung.</h2>
- <p class="h-lead">Ein tragfähiges KI-Projekt braucht mehr als Begeisterung für neue Technologie. Entscheidend sind ein konkreter Anwendungsfall, belastbare Daten, klare Anforderungen und ein Pilot, der zeigt, wie Menschen die Lösung im Alltag wirklich nutzen. Dazu kommen Qualitäts- und Risikomanagement, damit das Projekt auf neue Erkenntnisse, Nutzeranforderungen und regulatorische Vorgaben reagieren kann.</p>
+ <h2 class="h-section">KI-Projekte scheitern meist an fehlendem IT-Projektmanagement.</h2>
+ <p class="h-lead">Erfolgreiche KI-Projekte müssen mehr sein als nur Hype. Sie beginnen mit realen, kundenspezifischen Anwendungsfällen, einer guten Datengrundlage, und einem Piloten, der hilft, zu verstehen, wie der Endnutzer die KI in der Praxis einsetzt. Ebenfalls maßgeblich sind Qualitäts- und Risikomanagement in den einzelnen Projektphasen (Sprints), sodass die Gesamtumsetzung sich fortwährend anpasst an neue Erkenntnisse, Nutzer-Anforderungen und externe regulatorische und technische Entwicklungen.</p>
  </div>
  <figure style="margin:0 0 30px"><img src="../media/cx-img-strategie.jpg" alt="Team prüft einen konkreten KI-Anwendungsfall vor der Technologie" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">KI beginnt mit einem realen Anwendungsfall und führt von dort zur passenden Technologie</figcaption></figure>
  <p style="margin:0 0 24px;font-size:1.0625rem;font-weight:600;color:var(--cx-charcoal)">Gründe für ein Scheitern von KI-Einführungsprojekten aus der Praxis:</p>
- <div class="problem-grid"><div class="problem-card"><div class="problem-card__num">01</div><h3>Technologie vor dem Anwendungsfall</h3><p>Das Vorhaben startet mit einem Werkzeug, bevor klar ist, welches Problem es lösen soll. Erst wenn Nutzen, Prozess, Nutzergruppe und Erfolgskriterien sauber beschrieben sind, lässt sich ein KI-Projekt sinnvoll priorisieren und später messen.</p></div><div class="problem-card"><div class="problem-card__num">02</div><h3>Fragmentierte Datengrundlage</h3><p>KI kann nur so gut arbeiten wie die Daten und Prozesse, auf denen sie aufsetzt. Sind Daten unvollständig, schlecht gepflegt oder über mehrere Systeme verteilt, entstehen schnell unzuverlässige Ergebnisse. Deshalb prüfen wir Datenlage und Prozessqualität früh und arbeiten iterativ, damit Schwachstellen schnell sichtbar werden.</p></div><div class="problem-card"><div class="problem-card__num">03</div><h3>Der Pilot bleibt vor dem Rollout stehen</h3><p>Ein erster Pilot kann in der Demo überzeugen und im Alltag trotzdem stecken bleiben. Für den Weg in den Betrieb braucht es klare Meilensteine, Verantwortlichkeiten, Abstimmung mit den betroffenen Teams und einen realistischen Plan für Integration, Schulung und laufende Qualitätssicherung.</p></div><div class="problem-card"><div class="problem-card__num">04</div><h3>Offenes Qualitäts- und Risikomanagement</h3><p>Wer prüft die Ergebnisse? Wer verantwortet sie? Was passiert bei Fehlern? Diese Fragen müssen geklärt sein, bevor KI produktiv genutzt wird. Nur so bleibt der Einsatz nachvollziehbar, kontrollierbar und rechtssicher.</p></div></div>
- <div class="problem-conclusion">Wir behandeln KI-Einführungen wie professionell geführte Digitalisierungsprojekte. Das bedeutet: klare Anforderungen, kurze Lernschleifen, saubere Entscheidungen, gute Dokumentation und ein Umsetzungsplan, der den Nutzen im Betrieb belegt.</div>
+ <div class="problem-grid"><div class="problem-card"><div class="problem-card__num">01</div><h3>Technologie vor dem Anwendungsfall</h3><p>Alles dreht sich um die Technologie. In anderen Worten: Das Vorhaben startet mit dem „Werkzeug" und überspringt den realen, kundenspezifischen Anwendungsfall. Erst mit klar benanntem Anwendernutzen, Prozessbeschreibungen und Nutzer-Anforderungen lässt sich sauber priorisieren und der Erfolg messen.</p></div><div class="problem-card"><div class="problem-card__num">02</div><h3>Fragmentierte Datengrundlage</h3><p>KI, wie jede Technologie, ist nur so gut wie die Datenqualität und Prozessqualität. Sind Daten fragmentiert, unvollständig oder schlecht gepflegt, beschreibt und automatisiert auch KI Anforderungen und Prozesse nur lückenhaft. Da dies häufig auftretende Phänomene sind, hilft ein agiler Ansatz – damit ist eine iterative Projektmethodik, die der Idee des „Learning &amp; Adapt" Rechnung trägt, gemeint –, da so schnell Defizite identifiziert und behoben werden können.</p></div><div class="problem-card"><div class="problem-card__num">03</div><h3>Der Pilot bleibt vor dem Rollout stehen</h3><p>Ein Prototyp überzeugt in der Demo und bleibt dann stehen. Erst ein abgestimmter Projektmanagement-Plan mit klaren Meilensteinen, Projekt-Deliverables und Input der Key-Stakeholder führt ein KI-Einführungsprojekt über die Entwicklungsphase hinaus. Das Einbinden aller relevanten Personengruppen und die Darstellung von Projektfortschritten sowie Produkt-Mehrwerten ist hier ganz konkret ein wichtiger Hebel.</p></div><div class="problem-card"><div class="problem-card__num">04</div><h3>Offenes Qualitäts- und Risikomanagement</h3><p>Wer prüft die Ergebnisse, wer verantwortet sie, was passiert bei Fehlern? Erst ein geregeltes Qualitäts- und Risikomanagement in den einzelnen Projektphasen macht den KI-Einsatz kalkulierbar.</p></div></div>
+ <div class="problem-conclusion">Wir liefern belegbare Ergebnisse. Wir behandeln die Einführung von KI wie ein professionell geführtes Digitalisierungs-Projekt. Wir wenden <strong>praxiserprobte Digitalisierungs- und IT-Projektmanagement-Methoden</strong> an. Diese vereinen agile und hybride Projektmanagement-Ansätze mit einem „state-of-the-art" IT-Anforderungsmanagement und einer nutzerzentrierten Entwicklung und Implementierung.</div>
  </div>
 </section>
 
@@ -1002,12 +991,12 @@ body.has-drawer { overflow: hidden; }
  <div class="section__head">
  <div class="eyebrow">Unsere Leistungen</div>
  <h2 class="h-section">Unsere sechs KI-Leistungsfelder</h2>
- <p class="h-lead">Wir begleiten den gesamten Weg: vom Anforderungsmanagement über Daten- und Prozessanalyse bis zu Projektsteuerung, KI-Engineering, Governance und Change-Management. So bleibt KI nicht bei Strategiepapieren oder einzelnen Testläufen stehen, sondern wird Schritt für Schritt in den produktiven Betrieb überführt.</p>
- <p class="h-lead">Im Mandat priorisieren wir zuerst die Anwendungsfälle mit dem besten Verhältnis aus Nutzen, Aufwand und Risiko. Danach prüfen wir die Datenlage, bauen einen fokussierten Piloten und führen die Lösung bei Erfolg kontrolliert in bestehende Abläufe und Systeme ein. Der Mensch bleibt dort eingebunden, wo Prüfung, Freigabe oder Verantwortung erforderlich sind.</p>
+ <p class="h-lead">Wir liefern den ganzen Bogen aus einer Hand: vom Anforderungsmanagement über die Datenqualitäts- und Prozessanalyse und das agile, hybride Projektmanagement bis zum KI-Engineering, das den Piloten in den produktiven Betrieb überführt, mit klarer Governance über Qualität und Risiko und einem Change-Management, das die Organisation mitnimmt. Über die reine KI-Strategie hinaus realisieren wir die Einführung End-to-End, bis zum Ergebnis im produktiven Betrieb.</p>
+ <p class="h-lead">Im Mandat heißt das konkret: Wir priorisieren die Anwendungsfälle, die Aufwand und Nutzen am besten ausbalancieren, und prüfen, ob die Datengrundlage ausreicht. Wir bauen einen fokussierten Piloten, der die richtige Frage beantwortet, und überführen ihn, sobald er sich bewährt, mit einem abgestimmten Projektmanagement-Plan in den integrierten Betrieb, mit Kontrolle durch den Menschen an den richtigen Stellen. Qualitäts- und Risikomanagement sowie die rechtlichen Anforderungen klären wir von der ersten Projektphase an. So entsteht eine Lösung, die im Alltag verlässlich läuft und genutzt wird.</p>
  </div>
  <figure style="margin:0 0 30px"><img src="../media/cx-img-analyse.jpg" alt="Prüfung von Anwendungsfall und Datengrundlage" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Zuerst der Nutzen und die Daten, dann das Modell</figcaption></figure>
- <div class="services-grid"><div class="service-card"><div class="service-card__num">01</div><h3>Anforderungsmanagement</h3><p>Bevor ein KI-Modell entsteht, klären wir, was Ihre Organisation wirklich braucht: Ziel, Nutzergruppe, Prozess, Anforderungen der Fachbereiche und messbare Erfolgskriterien. So entsteht eine belastbare Grundlage für Entscheidungen und spätere Umsetzung.</p></div><div class="service-card"><div class="service-card__num">02</div><h3>Datenqualitäts- und Prozessanalyse</h3><p>Wir prüfen, ob die nötigen Daten vorhanden, zugänglich und geeignet sind. Gleichzeitig analysieren wir die Abläufe, in denen KI unterstützen soll. Erst dann lässt sich seriös bewerten, was machbar ist und was sich wirtschaftlich lohnt.</p></div><div class="service-card"><div class="service-card__num">03</div><h3>Agiles und hybrides Projektmanagement</h3><p>Wir steuern die Einführung in klaren Phasen: agil, wo Tempo und Lernen wichtig sind, und klassisch, wo Termine, Abhängigkeiten und Freigaben verlässlich geplant werden müssen.</p></div><div class="service-card"><div class="service-card__num">04</div><h3>Governance, Qualität und Risiko</h3><p>Wir regeln früh, wer Ergebnisse prüft, wer Entscheidungen trifft und wie Risiken dokumentiert werden. Dadurch wird KI im Alltag kontrollierbar und für Fachbereich, IT und Management nachvollziehbar.</p></div><div class="service-card"><div class="service-card__num">05</div><h3>KI-Engineering</h3><p>Wir bauen den Piloten und überführen ihn bei Erfolg in den Betrieb: mit Integration in bestehende Systeme, Monitoring, klaren Freigaben und menschlicher Kontrolle an den richtigen Stellen.</p></div><div class="service-card"><div class="service-card__num">06</div><h3>Change-Management</h3><p>KI entfaltet Wirkung erst, wenn Menschen sie akzeptieren und sicher nutzen. Wir binden betroffene Teams früh ein, schulen Anwenderinnen und Anwender und verankern neue Abläufe im Arbeitsalltag.</p></div></div>
- <ul class="value-list" style="margin-top:28px"><li>Konkreter Anwendungsfall als Ausgangspunkt</li><li>Daten- und Machbarkeitsprüfung vor größeren Investitionen</li><li>Transparenter Projektplan mit klaren Entscheidungen</li><li>Qualitäts- und Risikomanagement von Anfang an</li><li>Change-Management für Akzeptanz und nachhaltige Nutzung</li></ul>
+ <div class="services-grid"><div class="service-card"><div class="service-card__num">01</div><h3>Anforderungsmanagement</h3><p>Bevor ein KI-Modell entwickelt wird, klären wir gemeinsam, was die Organisation wirklich braucht: Zielgruppen, Zielformulierungen, reale Anwendungsfälle, Erwartungen der Stakeholder, sowie messbare Erfolgskriterien. Sauber erhobene Anforderungen sind die Grundlage und die Voraussetzung jeder erfolgreichen KI-Einführung, die später im Betrieb Bestand hat.</p></div><div class="service-card"><div class="service-card__num">02</div><h3>Datenqualitäts- und Prozessanalyse</h3><p>Wir prüfen, ob eine ausreichende Datengrundlage und Datenstruktur vorhanden sind, und analysieren die Prozesse, in die die KI eingreifen soll. Erst wenn Datenqualität und Abläufe verstanden sind, lässt sich verlässlich entscheiden, was machbar ist und was sich lohnt.</p></div><div class="service-card"><div class="service-card__num">03</div><h3>Agiles und hybrides Projektmanagement</h3><p>Wir führen die Einführung in klaren Projektphasen, agil wo Tempo und Lernen zählen, klassisch wo Termine und Abhängigkeiten feststehen. So bleibt das Vorhaben steuerbar und passt sich fortwährend an neue Erkenntnisse an.</p></div><div class="service-card"><div class="service-card__num">04</div><h3>Governance, Qualität und Risiko</h3><p>Klares Qualitäts- und Risikomanagement, geregelte Verantwortung und Rechtssicherheit. Wer prüft, wer verantwortet, was bei Fehlern passiert, ist geklärt, bevor KI in den Alltag geht.</p></div><div class="service-card"><div class="service-card__num">05</div><h3>KI-Engineering</h3><p>Wir bauen den Piloten und überführen ihn mit einem abgestimmten Projektmanagement-Plan in den produktiven Betrieb: Integration in bestehende Systeme, Monitoring und Kontrolle durch den Menschen an den richtigen Stellen. Die Technik richtet sich konsequent am Anwendungsfall aus.</p></div><div class="service-card"><div class="service-card__num">06</div><h3>Change-Management</h3><p>Die beste KI wirkt erst, wenn sie im Alltag angenommen wird. Wir begleiten den Wandel aktiv: Wir binden die Betroffenen früh ein, schaffen Akzeptanz, schulen die Endnutzer und verankern die neuen Abläufe, sodass die Lösung technisch läuft und zugleich im Alltag gelebt wird.</p></div></div>
+ <ul class="value-list" style="margin-top:28px"><li>Realer, kundenspezifischer Anwendungsfall als Grundlage</li><li>Daten- und Machbarkeitsprüfung als Voraussetzung</li><li>Abgestimmter Projektmanagement-Plan für Transparenz und interne Legitimation</li><li>Qualitäts- und Risikomanagement von der ersten Projektphase an</li><li>Qualitätsmanagement und Change-Management für nachhaltige Akzeptanz</li></ul>
  <style>
 .cx-ig{margin:56px 0 0;padding:clamp(20px,3vw,34px);background:linear-gradient(180deg,#ffffff,#fbf7ee);border:1px solid var(--line);border-radius:18px}
 .cx-ig__eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:0.72rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--cx-charcoal-3);margin-bottom:12px}
@@ -1028,51 +1017,52 @@ body.has-drawer { overflow: hidden; }
  <figure class="cx-ig reveal" role="group" aria-label="Zusammenspiel der sechs Komponenten einer erfolgreichen KI-Einführung">
  <div class="cx-ig__eyebrow">Zusammenspiel</div>
  <h3 class="cx-ig__title">So greifen die sechs Komponenten ineinander.</h3>
- <p class="cx-ig__lead">Jede Komponente erfüllt eine eigene Aufgabe. Erst im Zusammenspiel aus Anforderungen, Daten, Projektsteuerung, Governance, Engineering und Change entsteht eine KI-Lösung, die im Betrieb stabil bleibt.</p>
+ <p class="cx-ig__lead">Jede Komponente wirkt im Zusammenspiel. Anforderungsmanagement, Datenqualitäts- und Prozessanalyse, agiles und hybrides Projektmanagement, Governance über Qualität und Risiko, KI-Engineering und Change-Management greifen ineinander und führen gemeinsam zu einer KI-Einführung, die im produktiven Betrieb Bestand hat.</p>
  <svg class="cx-ig__svg" viewBox="0 0 1120 700" role="img" aria-label="Hexagon-Diagramm: sechs Leistungsfelder rund um eine erfolgreiche KI-Einführung" xmlns="http://www.w3.org/2000/svg" style="font-family:'Inter',system-ui,sans-serif"><title>Zusammenspiel der sechs Leistungsfelder</title><path d="M616.0 253.0 L682.0 138.7 L438.0 138.7 L504.0 253.0 Z" fill="#1E2327" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M672.0 350.0 L804.0 350.0 L682.0 138.7 L616.0 253.0 Z" fill="#262d33" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M616.0 447.0 L682.0 561.3 L804.0 350.0 L672.0 350.0 Z" fill="#1E2327" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M504.0 447.0 L438.0 561.3 L682.0 561.3 L616.0 447.0 Z" fill="#262d33" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M448.0 350.0 L316.0 350.0 L438.0 561.3 L504.0 447.0 Z" fill="#1E2327" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><path d="M504.0 253.0 L438.0 138.7 L316.0 350.0 L448.0 350.0 Z" fill="#262d33" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><polygon points="672.0,350.0 616.0,253.0 504.0,253.0 448.0,350.0 504.0,447.0 616.0,447.0" fill="#ffffff" stroke="#fbf7ee" stroke-width="6" stroke-linejoin="round"/><text x="560.0" y="336.0" text-anchor="middle" font-size="15" font-weight="700" fill="#616160" letter-spacing="0.06em">FÜHRT ZU</text><text x="560.0" y="360.0" text-anchor="middle" font-size="22" font-weight="800" fill="#1E2327">Erfolgreiche</text><text x="560.0" y="384.0" text-anchor="middle" font-size="22" font-weight="800" fill="#1E2327">KI-Einführung</text><g transform="translate(533.0 145.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4.5" width="12" height="16" rx="2"/><rect x="9" y="2.5" width="6" height="3.5" rx="1.2"/><path d="M8.2 12.5l2.3 2.3 4.3-5"/></g><g transform="translate(687.2 234.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6"/><line x1="15" y1="15" x2="20" y2="20"/><line x1="8.6" y1="11.4" x2="8.6" y2="9.2"/><line x1="10.5" y1="11.4" x2="10.5" y2="7.6"/><line x1="12.4" y1="11.4" x2="12.4" y2="9.9"/></g><g transform="translate(687.2 412.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1.6"/><rect x="10" y="10" width="4" height="4" rx="1"/><line x1="9.5" y1="7" x2="9.5" y2="4.5"/><line x1="14.5" y1="7" x2="14.5" y2="4.5"/><line x1="9.5" y1="19.5" x2="9.5" y2="17"/><line x1="14.5" y1="19.5" x2="14.5" y2="17"/><line x1="7" y1="9.5" x2="4.5" y2="9.5"/><line x1="7" y1="14.5" x2="4.5" y2="14.5"/><line x1="19.5" y1="9.5" x2="17" y2="9.5"/><line x1="19.5" y1="14.5" x2="17" y2="14.5"/></g><g transform="translate(533.0 501.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.8v5.2c0 4.8-3 7.7-7 8.9-4-1.2-7-4.1-7-8.9V5.8z"/><path d="M8.7 11.8l2.2 2.2 4.4-4.6"/></g><g transform="translate(378.8 412.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13a6 6 0 0 1 10.5-4"/><path d="M14.2 4.8l2.7 0.4-0.4 2.7"/><path d="M18 11a6 6 0 0 1-10.5 4"/><path d="M9.8 19.2l-2.7-0.4 0.4-2.7"/></g><g transform="translate(378.8 234.0) scale(2.25)" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8.5" r="2.6"/><circle cx="15.2" cy="8.5" r="2.6"/><path d="M4.5 18.5c0-3 2-4.6 4.5-4.6s4.5 1.6 4.5 4.6"/><path d="M14 14.2c2.3 0.1 4 1.7 4 4.3"/></g><text text-anchor="middle" font-size="20" font-weight="800" fill="#1E2327"><tspan x="560.0" y="82.0">Anforderungs­management</tspan></text><text text-anchor="start" font-size="20" font-weight="800" fill="#1E2327"><tspan x="792.1" y="203.5">Datenqualitäts- &</tspan><tspan x="792.1" y="228.5">Prozessanalyse</tspan></text><text text-anchor="start" font-size="20" font-weight="800" fill="#1E2327"><tspan x="792.1" y="484.0">KI-Engineering</tspan></text><text text-anchor="middle" font-size="20" font-weight="800" fill="#1E2327"><tspan x="560.0" y="605.5">Governance,</tspan><tspan x="560.0" y="630.5">Qualität & Risiko</tspan></text><text text-anchor="end" font-size="20" font-weight="800" fill="#1E2327"><tspan x="327.9" y="471.5">Agiles & hybrides</tspan><tspan x="327.9" y="496.5">Projektmanagement</tspan></text><text text-anchor="end" font-size="20" font-weight="800" fill="#1E2327"><tspan x="327.9" y="203.5">Change-</tspan><tspan x="327.9" y="228.5">Management</tspan></text></svg>
  <ul class="cx-ig__mobile" aria-hidden="true"><li class="cx-ig__m-goal">Sechs Komponenten, ein Ziel: <strong>Erfolgreiche KI-Einführung</strong></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4.5" width="12" height="16" rx="2"/><rect x="9" y="2.5" width="6" height="3.5" rx="1.2"/><path d="M8.2 12.5l2.3 2.3 4.3-5"/></svg></span><span class="cx-ig__m-name">Anforderungsmanagement</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><line x1="15" y1="15" x2="20" y2="20"/><line x1="8.6" y1="11.4" x2="8.6" y2="9.2"/><line x1="10.5" y1="11.4" x2="10.5" y2="7.6"/><line x1="12.4" y1="11.4" x2="12.4" y2="9.9"/></svg></span><span class="cx-ig__m-name">Datenqualitäts- und Prozessanalyse</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.6"/><rect x="10" y="10" width="4" height="4" rx="1"/><line x1="9.5" y1="7" x2="9.5" y2="4.5"/><line x1="14.5" y1="7" x2="14.5" y2="4.5"/><line x1="9.5" y1="19.5" x2="9.5" y2="17"/><line x1="14.5" y1="19.5" x2="14.5" y2="17"/><line x1="7" y1="9.5" x2="4.5" y2="9.5"/><line x1="7" y1="14.5" x2="4.5" y2="14.5"/><line x1="19.5" y1="9.5" x2="17" y2="9.5"/><line x1="19.5" y1="14.5" x2="17" y2="14.5"/></svg></span><span class="cx-ig__m-name">KI-Engineering</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 2.8v5.2c0 4.8-3 7.7-7 8.9-4-1.2-7-4.1-7-8.9V5.8z"/><path d="M8.7 11.8l2.2 2.2 4.4-4.6"/></svg></span><span class="cx-ig__m-name">Governance, Qualität und Risiko</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13a6 6 0 0 1 10.5-4"/><path d="M14.2 4.8l2.7 0.4-0.4 2.7"/><path d="M18 11a6 6 0 0 1-10.5 4"/><path d="M9.8 19.2l-2.7-0.4 0.4-2.7"/></svg></span><span class="cx-ig__m-name">Agiles und hybrides Projektmanagement</span></li><li class="cx-ig__m-item"><span class="cx-ig__m-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FF8A33" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="2.6"/><circle cx="15.2" cy="8.5" r="2.6"/><path d="M4.5 18.5c0-3 2-4.6 4.5-4.6s4.5 1.6 4.5 4.6"/><path d="M14 14.2c2.3 0.1 4 1.7 4 4.3"/></svg></span><span class="cx-ig__m-name">Change-Management</span></li></ul>
- <figcaption>Die sechs Leistungsfelder greifen ineinander und verbinden fachlichen Nutzen, technische Umsetzung, Verantwortung und Akzeptanz.</figcaption>
+ <figcaption>Die sechs Leistungsfelder wirken zusammen: Anforderungsmanagement, Datenqualitäts- und Prozessanalyse, agiles und hybrides Projektmanagement, Governance über Qualität und Risiko, KI-Engineering sowie Change-Management führen gemeinsam zu einer erfolgreichen, produktiven KI-Einführung.</figcaption>
  </figure>
  </div>
 </section>
 
-<!-- METHODOLOGY -->
 <section class="section section--dark reveal" id="vorgehen" data-bench-role="process">
  <div class="container">
  <div class="section__head">
  <div class="eyebrow eyebrow--on-dark">Unser Vorgehen</div>
- <h2 class="h-section h-section--on-dark">Fünf Projektphasen – vom Anwendungsfall bis zur Verankerung im Betrieb.</h2>
- <p class="h-lead h-lead--on-dark">Eine Zusammenarbeit läuft in fünf klaren Phasen. Nach jeder Phase liegt ein greifbares Ergebnis vor, und Sie entscheiden bewusst über den nächsten Schritt. So behalten Sie Transparenz, Kontrolle über das Budget und die Möglichkeit, den Kurs früh anzupassen.</p>
+ <h2 class="h-section h-section--on-dark">So wird ein KI-Vorhaben umgesetzt.</h2>
+ <p class="h-lead h-lead--on-dark">Nach der Auswahl eines geeigneten Anwendungsfalls wird KI wie ein Produkt- und Transformationsvorhaben geführt: mit KI-Governance, Datenprüfung, Risikobewertung, Lösungsdesign, MVP, Evaluation, Rollout und Betrieb. Dadurch entsteht ein steuerbarer Weg in die produktive Nutzung.</p>
+ <p class="h-lead h-lead--on-dark">Das Vorgehen verbindet bewährte Standards aus KI-Governance, Datenmanagement, Informationssicherheit, agiler Produktentwicklung, MLOps/LLMOps und Change Management. Jede Phase liefert ein überprüfbares Ergebnis, bevor Budget, Kapazitäten und technische Umsetzung erweitert werden.</p>
  </div>
- <figure style="margin:0 0 30px"><img src="../media/cx-img-auswahl.jpg" alt="Gemeinsame Priorisierung der KI-Anwendungsfälle" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:rgba(250,246,236,0.6)">Nach jeder Phase ein greifbares Ergebnis und Ihre Entscheidung, ob es weitergeht</figcaption></figure>
- <div class="method"><div class="method-step"><div class="method-step__num">Phase 01</div><div class="method-step__when">Auftakt</div><h3 class="method-step__title">Anwendungsfall-Scan</h3><p class="method-step__body">Sie erhalten eine priorisierte Liste realer Anwendungsfälle, geordnet nach Nutzen, Aufwand und Risiko. Danach wählen Sie den stärksten Kandidaten aus.</p></div><div class="method-step"><div class="method-step__num">Phase 02</div><div class="method-step__when">Prüfung</div><h3 class="method-step__title">Priorisierung &amp; Machbarkeit</h3><p class="method-step__body">Wir prüfen Datenlage, Prozess, Aufwand und rechtliche Rahmenbedingungen. Danach entscheiden Sie, ob ein Pilot sinnvoll ist oder der Fall zurückgestellt wird.</p></div><div class="method-step"><div class="method-step__num">Phase 03</div><div class="method-step__when">Pilot</div><h3 class="method-step__title">Fokussierter Pilot</h3><p class="method-step__body">Der Pilot beantwortet eine konkrete Frage am realen Beispiel. Danach ist klar, ob der Nutzen belastbar genug für den Betrieb ist.</p></div><div class="method-step"><div class="method-step__num">Phase 04</div><div class="method-step__when">Betrieb</div><h3 class="method-step__title">In den Betrieb überführen</h3><p class="method-step__body">Aus dem Piloten wird ein integriertes Werkzeug mit Monitoring, Zuständigkeiten und klaren Freigabewegen.</p></div><div class="method-step"><div class="method-step__num">Phase 05</div><div class="method-step__when">Verankerung</div><h3 class="method-step__title">Governance &amp; Übergabe</h3><p class="method-step__body">Ihr Team übernimmt Regeln, Routinen und laufenden Betrieb. Auf Wunsch bleiben wir als Sparringspartner an Ihrer Seite.</p></div></div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-auswahl.jpg" alt="Steuerung eines KI-Vorhabens von Governance bis Betrieb" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:rgba(250,246,236,0.6)">KI wird über Governance, Datenreife, Evaluation, Rollout und Betrieb steuerbar gemacht</figcaption></figure>
+ <div class="method"><div class="method-step"><div class="method-step__num">Phase 01</div><div class="method-step__when">Mandat</div><h3 class="method-step__title">KI-Governance &amp; Verantwortlichkeit</h3><p class="method-step__body">Sponsor, Produktverantwortliche, Fachbereich, IT, Datenschutz, Recht und Betriebsverantwortung werden benannt. Entscheidungsrechte, Risikoklasse und menschliche Kontrolle werden früh geklärt.</p></div><div class="method-step"><div class="method-step__num">Phase 02</div><div class="method-step__when">Nutzen</div><h3 class="method-step__title">Anwendungsfall &amp; Erfolgskriterien</h3><p class="method-step__body">Problem, Nutzergruppe, Prozesskontext, erwarteter Nutzen, Grenzen und Messgrößen werden beschrieben. Der Anwendungsfall wird nur weitergeführt, wenn Nutzen, Aufwand und Risiko zusammenpassen.</p></div><div class="method-step"><div class="method-step__num">Phase 03</div><div class="method-step__when">Reifegrad</div><h3 class="method-step__title">Daten, Sicherheit &amp; Risiko</h3><p class="method-step__body">Datenquellen, Qualität, Zugriffe, Datenschutz, Informationssicherheit, EU-AI-Act-Relevanz und Prüfpflichten werden bewertet. Dadurch entsteht eine belastbare Grundlage für die technische Umsetzung.</p></div><div class="method-step"><div class="method-step__num">Phase 04</div><div class="method-step__when">Design</div><h3 class="method-step__title">Lösungsdesign &amp; Architektur</h3><p class="method-step__body">Make-or-buy, Modell- oder Tool-Auswahl, Wissenszugriff, Systemintegration, Logging, Monitoring, Freigaben und Leitplanken werden definiert. Die Lösung wird passend zum Prozess entworfen.</p></div><div class="method-step"><div class="method-step__num">Phase 05</div><div class="method-step__when">MVP</div><h3 class="method-step__title">Pilot, Tests &amp; Evaluation</h3><p class="method-step__body">Ein MVP wird mit realistischen Daten und Nutzerfeedback geprüft. Qualität, Fehlerbilder, Aufwand, Akzeptanz und Risikoverhalten werden bewertet, bevor der Rollout vorbereitet wird.</p></div><div class="method-step"><div class="method-step__num">Phase 06</div><div class="method-step__when">Einführung</div><h3 class="method-step__title">Rollout &amp; Nutzung</h3><p class="method-step__body">Rollout-Wellen, Schulung, Support, Freigabewege, Kommunikationsplan und Betriebsübergabe werden geführt. Nutzung und Akzeptanz werden nach dem Go-live aktiv begleitet.</p></div><div class="method-step"><div class="method-step__num">Phase 07</div><div class="method-step__when">Betrieb</div><h3 class="method-step__title">Monitoring &amp; Verbesserung</h3><p class="method-step__body">Qualität, Kosten, Nutzung, Vorfälle, Datenänderungen und Verbesserungsbedarf werden laufend geprüft. So bleibt die KI-Lösung kontrollierbar und entwicklungsfähig.</p></div></div>
  </div>
 </section>
 
-<!-- USE CASES -->
+<!-- IMPLEMENTATION OUTPUTS -->
 <section class="section section--white reveal" data-bench-role="value">
  <div class="container">
  <div class="section__head">
- <div class="eyebrow">Typische Anwendungsfälle</div>
- <h2 class="h-section">Wo KI in der Anwendung Effektivität und Effizienz steigert.</h2>
- <p class="h-lead">Wir begleiten vor allem Anwendungsfälle, in denen viel Text, viele wiederkehrende Entscheidungen oder aufwendige manuelle Recherche zusammenkommen. Der größte Nutzen entsteht dort, wo Mitarbeitende die Ergebnisse sinnvoll prüfen können und die KI ihnen spürbar Arbeit abnimmt.</p>
+ <div class="eyebrow">Projekt-Ergebnisse</div>
+ <h2 class="h-section">Was im KI-Projekt konkret entsteht.</h2>
+ <p class="h-lead">Ein KI-Vorhaben braucht klare Entscheidungsgrundlagen für Führung, Fachbereich, IT, Datenschutz und Betrieb. Sie zeigen, warum ein Anwendungsfall verfolgt wird, wie er geprüft wird und wie er sicher genutzt werden kann.</p>
+ <p class="h-lead">Diese Ergebnisse schaffen Transparenz über Nutzen, Datenreife, Risiken, Qualität, Betriebskosten, Verantwortlichkeiten und Rollout-Fähigkeit. So bleibt das Projekt steuerbar, auch wenn technische Erkenntnisse, regulatorische Anforderungen oder Nutzerfeedback neue Entscheidungen erfordern.</p>
  </div>
- <figure style="margin:0 0 30px"><img src="../media/cx-img-anwendung.jpg" alt="KI-Unterstützung im täglichen Arbeitsumfeld" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Mitarbeitende prüfen die Ergebnisse, KI übernimmt wiederkehrende Routinearbeit</figcaption></figure>
- <div class="uses-grid"><div class="use-card"><div class="use-card__tag">Wissen</div><h3>Wissens- &amp; Dokumentensuche</h3><p>Antworten aus internen Dokumenten in Sekunden, inklusive Quellenangabe, damit Ergebnisse nachvollziehbar bleiben.</p></div><div class="use-card"><div class="use-card__tag">Service</div><h3>Kundenservice-Unterstützung</h3><p>Antwortentwürfe, Zusammenfassungen von Anliegen und Vorschläge für den nächsten Schritt. Die Entscheidung bleibt beim Team.</p></div><div class="use-card"><div class="use-card__tag">Planung</div><h3>Prognose &amp; Planung</h3><p>Bessere Einschätzungen zu Bedarf, Auslastung oder Nachfrage, damit Entscheidungen schneller und fundierter getroffen werden können.</p></div><div class="use-card"><div class="use-card__tag">Texte</div><h3>Entwürfe &amp; Zusammenfassungen</h3><p>Entwürfe für wiederkehrende Texte und Zusammenfassungen langer Unterlagen. Menschen prüfen, ergänzen und geben frei.</p></div><div class="use-card"><div class="use-card__tag">Qualität</div><h3>Prüf- &amp; Qualitätsunterstützung</h3><p>Auffälligkeiten, Lücken und mögliche Fehler früher erkennen, bevor sie im Prozess teuer werden.</p></div><div class="use-card"><div class="use-card__tag">Routine</div><h3>Routine-Automatisierung mit Augenmaß</h3><p>Wiederkehrende, regelbasierte Schritte automatisieren, mit klarer Abgrenzung zu Aufgaben, die menschliche Verantwortung brauchen.</p></div></div>
- <ul class="value-list" style="margin-top:28px"><li>Weniger Such- und Routinearbeit, mehr Zeit für Entscheidungen</li><li>Effizienzgewinne und Qualitätsverbesserung im selben Prozess</li></ul>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-anwendung.jpg" alt="KI-Projektteam prüft Qualität, Risiko und Rollout-Fähigkeit" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Qualität, Risiko, Nutzung und Betrieb werden als Projektergebnisse geführt</figcaption></figure>
+ <div class="uses-grid"><div class="use-card"><div class="use-card__tag">Portfolio</div><h3>KI-Anwendungsfall-Portfolio</h3><p>Anwendungsfälle werden nach Nutzen, Datenlage, Risiko, Aufwand und Betriebsfähigkeit bewertet. Daraus entsteht eine klare Reihenfolge für Entscheidungen.</p></div><div class="use-card"><div class="use-card__tag">Governance</div><h3>KI-Governance-Regeln</h3><p>Verantwortlichkeiten, Freigabewege, menschliche Kontrolle, Dokumentationspflichten und Entscheidungsrechte werden verbindlich festgelegt.</p></div><div class="use-card"><div class="use-card__tag">Daten</div><h3>Datenreifeprüfung</h3><p>Datenquellen, Qualität, Zugriffsrechte, Schutzbedarf und Prozessbezug werden geprüft, bevor die technische Lösung gebaut wird.</p></div><div class="use-card"><div class="use-card__tag">Risiko</div><h3>Risiko- und Compliance-Bewertung</h3><p>Datenschutz, Sicherheit, EU-AI-Act-Relevanz, Fehlerrisiken, Transparenz und menschliche Prüfung werden dokumentiert und in die Umsetzung übersetzt.</p></div><div class="use-card"><div class="use-card__tag">MVP</div><h3>Evaluationsbericht</h3><p>Der Pilot wird anhand echter Kriterien bewertet: Ergebnisqualität, Fehlerbilder, Nutzerfeedback, Prozessnutzen, Kosten und Integrationsaufwand.</p></div><div class="use-card"><div class="use-card__tag">Betrieb</div><h3>Betriebsmodell und Betriebshandbuch</h3><p>Monitoring, Support, Freigaben, Vorfallmanagement, Verbesserungsroutine und Verantwortlichkeiten werden für den laufenden Betrieb beschrieben.</p></div></div>
+ <ul class="value-list" style="margin-top:28px"><li>Anwendungsfälle nach Nutzen, Datenreife und Risiko priorisiert</li><li>Governance, Qualität und Betrieb vor dem Rollout geklärt</li><li>MVP anhand realer Kriterien bewertet</li><li>Monitoring, Support und Verbesserungsroutine für den laufenden Einsatz vorbereitet</li></ul>
  </div>
 </section>
 
-<!-- INDUSTRIES (universalised) -->
+<!-- STANDARDS -->
 <section class="section section--paper reveal" data-bench-role="adaptability">
  <div class="container">
  <div class="section__head">
- <div class="eyebrow">Zusammenarbeit</div>
- <h2 class="h-section">Wir arbeiten klar, verlässlich und partnerschaftlich.</h2>
- <p class="h-lead">Eine KI-Einführung gelingt nur gemeinsam, ob im kleinen Team oder im Konzern. Sie kennen Ihr Geschäft, Ihre Daten und Ihre Nutzerinnen und Nutzer. Wir ergänzen Methodik, Umsetzungserfahrung und technische Kompetenz. Von Anfang an sind Meilensteine, Rollen und Verantwortlichkeiten klar abgestimmt.</p>
- <figure style="margin:24px auto 0;max-width:820px"><img src="../media/cx-img-team.jpg" alt="Gemeinsame Zusammenarbeit von Kundenteam und Beratung bei der KI-Einführung" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Sie kennen das Geschäft, wir bringen die Umsetzung</figcaption></figure>
+ <div class="eyebrow">Best-Practice-Standards</div>
+ <h2 class="h-section">Bewährte Standards für KI-Einführung, pragmatisch angewendet.</h2>
+ <p class="h-lead">KI wird stabiler, wenn fachlicher Nutzen, Daten, Sicherheit, Verantwortung und Betrieb gemeinsam geführt werden. Wir verbinden KI-Governance, Datenmanagement, Informationssicherheit, Modell- und Qualitätsbewertung, Change Management und Betriebsführung zu einem umsetzbaren Vorgehen.</p>
+ <figure style="margin:24px auto 0;max-width:820px"><img src="../media/cx-img-team.jpg" alt="Fachbereich, IT, Datenschutz und Beratung steuern ein KI-Vorhaben gemeinsam" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Fachbereich, IT, Datenschutz und Betrieb arbeiten mit einer gemeinsamen Entscheidungsgrundlage</figcaption></figure>
  </div>
- <div class="industries"><div class="industry-card"><h3>Ihr Team kennt das Geschäft</h3><p>Sie bringen Fachwissen, Erfahrung, Prozesskenntnis, IT-Kontext und Nähe zu den späteren Nutzerinnen und Nutzern mit. Dieses Wissen entscheidet darüber, ob ein Anwendungsfall wirklich trägt.</p></div><div class="industry-card"><h3>Wir bringen die Umsetzungsrolle</h3><p>Wir übernehmen Anforderungsmanagement, Projektsteuerung, Prozessanalyse, Risikomanagement und technische Umsetzung für KI. So wird aus einer Idee ein steuerbares Vorhaben.</p></div><div class="industry-card"><h3>Ihr Team kann später selbst weiterarbeiten</h3><p>Wir richten die Lösung so aus, dass Ihr Team den laufenden Betrieb übernehmen kann. Auf Wunsch bleiben wir danach als Sparringspartner verfügbar.</p></div></div>
+ <div class="industries"><div class="industry-card"><h3>KI-Governance</h3><p>Verantwortlichkeiten, Risikoklasse, menschliche Aufsicht, Dokumentation, Freigaben und Kontrollpunkte werden vor produktiver Nutzung geklärt.</p></div><div class="industry-card"><h3>Daten-Governance &amp; Sicherheit</h3><p>Datenqualität, Berechtigungen, Schutzbedarf, Speicherorte, Schnittstellen und Zugriffskonzepte werden geprüft, bevor ein Modell oder Tool breit genutzt wird.</p></div><div class="industry-card"><h3>MLOps und LLMOps</h3><p>Qualitätsmessung, Versionierung, Monitoring, Kostenkontrolle, Logging, Fehlerbehandlung und Verbesserungszyklen werden als Teil des Betriebsmodells geplant.</p></div><div class="industry-card"><h3>Change und Nutzung</h3><p>Rollen, Schulung, Kommunikationsplan, Support und Nutzungsroutinen werden vorbereitet, damit die Lösung im Arbeitsalltag akzeptiert und sicher angewendet wird.</p></div></div>
  </div>
 </section>
 
@@ -1081,11 +1071,11 @@ body.has-drawer { overflow: hidden; }
  <div class="container">
  <div class="section__head">
  <div class="eyebrow">Warum CX</div>
- <h2 class="h-section">Was uns unterscheidet.</h2>
- <p class="h-lead">Unser Ziel ist nicht ein beeindruckender Pilot, sondern ein Ergebnis, das im Betrieb funktioniert. Deshalb arbeiten wir methodisch, pragmatisch und mit konsequenter Projektsteuerung.</p>
+ <h2 class="h-section">Vier Punkte, die KI-Umsetzung kontrollierbar machen.</h2>
+ <p class="h-lead">Unser Ziel ist ein KI-Einsatz, der im Betrieb funktioniert und verantwortbar bleibt. Deshalb prüfen wir technische Machbarkeit, Nutzen, Datenreife, Risikoverhalten, Nutzerakzeptanz und Betriebsfähigkeit gemeinsam.</p>
  </div>
- <figure style="margin:0 0 30px"><img src="../media/cx-img-unterschied.jpg" alt="Umsetzung mit Projektmanagement-Disziplin bis zum Ergebnis im Betrieb" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Umsetzung mit Disziplin bis zum belegbaren Ergebnis</figcaption></figure>
- <div class="diff-list"><div class="diff-item"><div class="diff-item__num">A</div><div><h3>Ihr Nutzen gibt die Richtung vor</h3><p>Wir richten das Projekt nicht an einem Lieblingsmodell oder einer Standardlösung aus, sondern an Ihrem konkreten Problem. KI-Fachwissen verbinden wir mit Projektmanagement, damit aus Anforderungen belastbare Ergebnisse werden.</p></div></div><div class="diff-item"><div class="diff-item__num">B</div><div><h3>Stärke in der Umsetzung</h3><p>Eine Strategie klärt, was möglich ist. Entscheidend ist danach die Umsetzung: Prioritäten setzen, Daten prüfen, Abhängigkeiten steuern, Nutzer einbinden und die Lösung in den Betrieb bringen.</p></div></div><div class="diff-item"><div class="diff-item__num">C</div><div><h3>Passgenaue KI-Lösung</h3><p>Standardprodukte passen selten genau zu Daten, Prozessen und Verantwortung in Ihrer Organisation. Wir entwickeln die Lösung so, dass sie zu Ihrem Anwendungsfall und Ihrem Arbeitsalltag passt.</p></div></div></div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-unterschied.jpg" alt="KI-Umsetzung mit Governance, Evaluation und Betrieb" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:var(--muted)">Umsetzung mit Governance, Evaluation und Betriebsdisziplin</figcaption></figure>
+ <div class="diff-list"><div class="diff-item"><div class="diff-item__num">A</div><div><h3>Anwendungsfall vor Modellwahl</h3><p>Der konkrete Anwendungsfall bestimmt Datenbedarf, Lösungstyp, Prüfprozess und Betriebsmodell. Die fachliche Entscheidung führt die Technologieauswahl.</p></div></div><div class="diff-item"><div class="diff-item__num">B</div><div><h3>Qualität wird messbar</h3><p>Ergebnisse werden gegen fachliche Kriterien geprüft. Fehlerbilder, Halluzinationen, Kosten, Laufzeit, Nacharbeit und Nutzerfeedback fließen in die Entscheidung ein.</p></div></div><div class="diff-item"><div class="diff-item__num">C</div><div><h3>Risiken werden geführt</h3><p>Datenschutz, Sicherheit, Verzerrungen, Rechte, Nachvollziehbarkeit und menschliche Kontrolle werden dokumentiert und in Freigabewege übersetzt.</p></div></div><div class="diff-item"><div class="diff-item__num">D</div><div><h3>Betrieb wird mitgebaut</h3><p>Monitoring, Support, Verantwortlichkeiten, Verbesserungsroutine und Kostenkontrolle werden vor dem Rollout geplant. So bleibt KI nach dem Go-live beherrschbar.</p></div></div></div>
  </div>
 </section>
 
@@ -1093,12 +1083,13 @@ body.has-drawer { overflow: hidden; }
 <section class="section section--dark reveal" data-bench-role="quality">
  <div class="container">
  <div class="section__head">
- <div class="eyebrow eyebrow--on-dark">Recht &amp; Sicherheit</div>
- <h2 class="h-section h-section--on-dark">Datenschutz, EU AI Act und DSGVO von der ersten Phase an.</h2>
- <p class="h-lead h-lead--on-dark">Gerade im deutschen Markt entscheidet der rechtliche Rahmen mit darüber, ob ein KI-Vorhaben tragfähig ist. Wir denken Datenschutz, Recht und Sicherheit von der ersten Phase an mit und verankern sie früh in Auswahl und Gestaltung. Dafür arbeiten wir eng mit spezialisierten Rechtskanzleien zusammen.</p>
+ <div class="eyebrow eyebrow--on-dark">KI-Steuerung im Alltag</div>
+ <h2 class="h-section h-section--on-dark">Qualität, Risiko und Nutzung bleiben laufend sichtbar.</h2>
+ <p class="h-lead h-lead--on-dark">KI-Projekte brauchen nach dem MVP einen verlässlichen Steuerungsrhythmus. Entscheidungen, Datenfragen, Qualitätsbefunde, Risiken, Nutzerfeedback, Kosten und Betriebsfragen werden regelmäßig zusammengeführt. Dadurch bleibt klar, was produktionsreif ist und wo nachgesteuert werden muss.</p>
+ <p class="h-lead h-lead--on-dark">Gerade im deutschen Markt gehören Datenschutz, Informationssicherheit, EU-AI-Act-Relevanz und menschliche Kontrolle von Beginn an in die Projektsteuerung. Bei rechtlichen Detailfragen arbeiten wir mit spezialisierten Rechtskanzleien zusammen.</p>
  </div>
- <figure style="margin:0 0 30px"><img src="../media/cx-img-vorgehen.jpg" alt="Datenschutz, EU AI Act und Sicherheit beim KI-Einsatz" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:rgba(250,246,236,0.6)">Recht und Sicherheit gehören von Beginn an in die Planung</figcaption></figure>
- <div class="compliance-block"><div class="compliance-item"><h3>DSGVO und Datenresidenz</h3><p>Welche personenbezogenen Daten fließen ein, wer hat Zugriff, wo werden sie verarbeitet? Das klären wir bei Auswahl und Gestaltung, bevor entwickelt wird.</p></div><div class="compliance-item"><h3>EU AI Act und Klassifizierung</h3><p>Wir ordnen den Anwendungsfall in den europäischen Risikorahmen und in die DSGVO-Regulatorik ein und planen den Aufwand für die Klassifizierung früh und kalkulierbar ein.</p></div><div class="compliance-item"><h3>Sicherheit und Orientierung</h3><p>Wir orientieren uns an anerkannten Stellen wie dem <a href="https://www.bsi.bund.de/" target="_blank" rel="noopener">BSI</a> und international an den KI-Prinzipien der <a href="https://www.oecd.org/" target="_blank" rel="noopener">OECD</a>, damit der Einsatz nachvollziehbar und sicher bleibt.</p></div></div>
+ <figure style="margin:0 0 30px"><img src="../media/cx-img-vorgehen.jpg" alt="KI-Steuerung mit Qualität, Risiko, Datenschutz und Betrieb" width="1200" height="560" loading="lazy" style="width:100%;height:auto;display:block;border-radius:12px"><figcaption style="margin-top:8px;font-size:0.75rem;color:rgba(250,246,236,0.6)">Qualität, Risiko, Datenschutz und Betrieb werden gemeinsam gesteuert</figcaption></figure>
+ <div class="compliance-block"><div class="compliance-item"><h3>Qualitätslog und Testkriterien</h3><p>Antwortqualität, Quellenbezug, Fehlerbilder, Nacharbeit, Laufzeit und Nutzerfeedback werden dokumentiert. Dadurch entsteht eine klare Entscheidungsgrundlage für Rollout oder Anpassung.</p></div><div class="compliance-item"><h3>Risiko- und Freigabelogik</h3><p>Datenschutz, Sicherheit, Schutzbedarf, menschliche Prüfung, Freigabewege und EU-AI-Act-Relevanz werden in die Projektsteuerung aufgenommen.</p></div><div class="compliance-item"><h3>Betrieb und Verbesserung</h3><p>Monitoring, Support, Kostenkontrolle, Vorfallmanagement und Verbesserungs-Backlog werden vorbereitet. Orientierung bieten anerkannte Stellen wie das <a href="https://www.bsi.bund.de/" target="_blank" rel="noopener">BSI</a> und die KI-Prinzipien der <a href="https://www.oecd.org/" target="_blank" rel="noopener">OECD</a>.</p></div></div>
  </div>
 </section>
 
@@ -1110,18 +1101,18 @@ body.has-drawer { overflow: hidden; }
  <h2 class="h-section">Fragen, die in den ersten Gesprächen immer kommen.</h2>
  </div>
  <div class="faq">
- <details class="faq__item"><summary>Was kostet eine KI-Beratung?</summary><div class="faq__answer">Der Aufwand hängt von Ziel, Datenlage und Umfang ab. Im kostenlosen Erstgespräch nennen wir eine belastbare Preisspanne und erklären, woraus sie sich ergibt. Größere Vorhaben schneiden wir in klare Phasen, damit Sie nach jedem Schritt neu entscheiden können.</div></details>
- <details class="faq__item"><summary>Wo fangen wir mit KI an?</summary><div class="faq__answer">Mit einem strukturierten Anwendungsfall-Scan. Wir prüfen, wo heute viel manueller Aufwand entsteht, wo viele Dokumente oder Entscheidungen zusammenkommen und wo KI einen messbaren Nutzen bringen kann. Daraus entsteht eine priorisierte Liste sinnvoller Startpunkte.</div></details>
- <details class="faq__item"><summary>Brauchen wir erst eine große Datenstrategie, bevor wir starten?</summary><div class="faq__answer">Nicht unbedingt. Wichtig ist, dass für den gewählten Anwendungsfall die nötigen Daten vorhanden, zugänglich und gut genug strukturiert sind — das prüfen wir gemeinsam vorab. Oft reicht eine fokussierte Datengrundlage für einen ersten messbaren Nutzen.</div></details>
- <details class="faq__item"><summary>Warum scheitern so viele KI-Vorhaben?</summary><div class="faq__answer">Häufig startet das Projekt mit der Technologie, bevor Nutzen, Datenlage, Verantwortung und Betrieb geklärt sind. Dann überzeugt ein Pilot vielleicht in der Demo, kommt aber nicht im Alltag an. Wir drehen die Reihenfolge um: erst Nutzen und Daten, dann Pilot, Betrieb und Verantwortung.</div></details>
- <details class="faq__item"><summary>Wie gehen Sie mit Datenschutz und rechtlichen Anforderungen um?</summary><div class="faq__answer">Wir denken Datenschutz, Recht und Risiko von der ersten Phase an mit und verankern sie früh in Auswahl und Gestaltung. Anforderungen wie die DSGVO und der europäische Rechtsrahmen für KI werden bei der Auswahl und Gestaltung berücksichtigt. Orientierung dafür bieten anerkannte Stellen wie das <a href="https://www.bsi.bund.de/" target="_blank" rel="noopener">BSI</a> und international etwa die <a href="https://www.oecd.org/" target="_blank" rel="noopener">OECD</a> mit ihren KI-Prinzipien. So bleibt der Einsatz nachvollziehbar und verantwortbar.</div></details>
- <details class="faq__item"><summary>Ersetzt KI dann unsere Mitarbeitenden?</summary><div class="faq__answer">In den Anwendungsfällen, die wir empfehlen, unterstützt KI Menschen bei ihrer Arbeit. Sie übernimmt wiederkehrende Recherche-, Prüf- oder Entwurfsaufgaben, während Mitarbeitende Ergebnisse bewerten, entscheiden und Verantwortung tragen. So entsteht mehr Zeit für anspruchsvollere Aufgaben.</div></details>
- <details class="faq__item"><summary>Was ist der Unterschied zwischen KI-Strategie und KI-Umsetzung?</summary><div class="faq__answer">Die Strategie klärt, wo KI zu Ihren Geschäftszielen passt und in welcher Reihenfolge Sie vorgehen sollten. Die Umsetzung bringt einen konkreten Anwendungsfall in den Betrieb. Beides gehört zusammen: Ohne Umsetzung bleibt Strategie abstrakt, ohne Strategie bleibt Umsetzung schnell ein isolierter Einzelversuch.</div></details>
- <details class="faq__item"><summary>Wie lange dauert ein KI-Projekt?</summary><div class="faq__answer">Ein fokussierter Pilot kann oft relativ früh zeigen, ob der Nutzen real ist. Der Weg in den Betrieb braucht danach mehr Sorgfalt: Integration, Kontrolle, Verantwortung und Schulung. Deshalb arbeiten wir in abgegrenzten Phasen, die jeweils ein prüfbares Ergebnis liefern.</div></details>
- <details class="faq__item"><summary>Arbeiten Sie auch mit kleineren Organisationen?</summary><div class="faq__answer">Ja. Gerade dort lohnt sich der strukturierte, nutzenorientierte Ansatz, weil Budgets begrenzt sind und ein verfehltes KI-Projekt teuer wird. Wo ein großes Programm nicht passt, helfen ein kompakter Anwendungsfall-Scan, ein fokussierter Pilot oder Sparring für Ihre internen Verantwortlichen — so viel wie nötig, so schlank wie möglich.</div></details>
- <details class="faq__item"><summary>Woran erkennen wir, dass ein KI-Anwendungsfall sich wirklich lohnt?</summary><div class="faq__answer">An drei Dingen: Es gibt ein klar benanntes Problem mit spürbarem Aufwand heute, die nötigen Daten sind vorhanden und gut genug, und ein Mensch kann die Ergebnisse sinnvoll prüfen. Fehlt eines davon, ist Vorsicht geboten. Wir bewerten Kandidaten deshalb immer entlang von Nutzen, Datenlage und Risiko — und sagen offen, wenn ein Anwendungsfall trotz Begeisterung besser warten sollte, bis die Grundlagen stimmen.</div></details>
- <details class="faq__item"><summary>Wie vermeiden wir, dass ein KI-Pilot in der Schublade endet?</summary><div class="faq__answer">Wir planen den Weg in den Betrieb bereits vor dem Piloten. Dazu gehören bestehende Abläufe und Systeme, Verantwortlichkeiten, Qualitätssicherung und spätere Nutzung durch das Team. Der Pilot ist der kontrollierte erste Schritt zu einem Werkzeug, das produktiv genutzt werden kann.</div></details>
- <details class="faq__item"><summary>Wie viel eigenes KI-Wissen brauchen wir dafür?</summary><div class="faq__answer">Weniger, als viele denken. Wichtig ist, dass Ihr Team den eigenen Prozess kennt und versteht, wo KI helfen kann, wo Grenzen liegen und wie Ergebnisse geprüft werden. Das tiefe technische und methodische Wissen bringen wir ein.</div></details>
+ <details class="faq__item"><summary>Was kostet eine KI-Beratung?</summary><div class="faq__answer">Der Aufwand hängt von Anwendungsfall, Datenlage, Risikoklasse, Integrationsbedarf und gewünschter Rollout-Begleitung ab. Im Erstgespräch klären wir, ob ein kompakter Anwendungsfall-Check reicht oder ein KI-Programm mit Governance, MVP, Evaluation und Betrieb sinnvoll ist.</div></details>
+ <details class="faq__item"><summary>Wo fangen wir mit KI an?</summary><div class="faq__answer">Der Start liegt bei einem konkreten Anwendungsfall und einer klaren Verantwortlichkeit. Danach werden Nutzen, Nutzergruppe, Datenquellen, Risiken, Freigabewege und Erfolgskriterien aufgenommen. Auf dieser Grundlage wird entschieden, ob ein MVP sinnvoll ist.</div></details>
+ <details class="faq__item"><summary>Brauchen wir erst eine große Datenstrategie, bevor wir starten?</summary><div class="faq__answer">Für den ersten Schritt reicht oft eine fokussierte Datenprüfung zum gewählten Anwendungsfall. Entscheidend ist, ob die benötigten Daten vorhanden, zugänglich, erlaubt nutzbar und qualitativ ausreichend sind. Größere Dateninitiativen werden sichtbar, wenn der Use Case es verlangt.</div></details>
+ <details class="faq__item"><summary>Warum scheitern so viele KI-Vorhaben?</summary><div class="faq__answer">Häufig fehlen KI-Governance, Datenreife, klare Erfolgskriterien, fachliche Evaluation und ein Betriebsmodell. Ein Pilot kann in der Demo überzeugen und im Alltag trotzdem scheitern, wenn Freigabewege, Monitoring, Support und menschliche Kontrolle fehlen.</div></details>
+ <details class="faq__item"><summary>Wie gehen Sie mit Datenschutz und rechtlichen Anforderungen um?</summary><div class="faq__answer">Datenschutz, Sicherheit, EU-AI-Act-Relevanz, Rollen, menschliche Kontrolle und Dokumentation werden früh in die Projektsteuerung aufgenommen. Anforderungen wie DSGVO und europäischer KI-Rechtsrahmen werden bei Auswahl, Gestaltung und Betrieb berücksichtigt. Orientierung bieten anerkannte Stellen wie das <a href="https://www.bsi.bund.de/" target="_blank" rel="noopener">BSI</a> und international die <a href="https://www.oecd.org/" target="_blank" rel="noopener">OECD</a> mit ihren KI-Prinzipien.</div></details>
+ <details class="faq__item"><summary>Ersetzt KI dann unsere Mitarbeitenden?</summary><div class="faq__answer">In den Anwendungsfällen, die wir empfehlen, unterstützt KI Menschen bei ihrer Arbeit. Sie übernimmt wiederkehrende Recherche-, Prüf- oder Entwurfsaufgaben. Mitarbeitende bewerten Ergebnisse, entscheiden über Freigaben und tragen Verantwortung.</div></details>
+ <details class="faq__item"><summary>Was ist der Unterschied zwischen KI-Strategie und KI-Umsetzung?</summary><div class="faq__answer">Die Strategie klärt Anwendungsfälle, Nutzen, Prioritäten und Rahmenbedingungen. Die Umsetzung bringt einen konkreten Anwendungsfall über MVP, Evaluation, Governance, Rollout und Betrieb in die Nutzung. Beide Ebenen müssen zusammengeführt werden, damit KI dauerhaft steuerbar bleibt.</div></details>
+ <details class="faq__item"><summary>Wie lange dauert ein KI-Projekt?</summary><div class="faq__answer">Ein fokussierter MVP kann früh zeigen, ob Nutzen und Qualität tragfähig sind. Der Weg in den Betrieb braucht zusätzliche Arbeit: Integration, Freigaben, Monitoring, Support, Schulung und Hypercare. Deshalb arbeiten wir in Phasen mit jeweils prüfbarem Ergebnis.</div></details>
+ <details class="faq__item"><summary>Arbeiten Sie auch mit kleineren Organisationen?</summary><div class="faq__answer">Ja. Kleinere Organisationen brauchen dieselbe Klarheit, aber weniger Overhead. Governance, Datenprüfung, MVP und Betrieb werden so schlank aufgesetzt, dass sie zu Budget, Teamgröße und Entscheidungsgeschwindigkeit passen.</div></details>
+ <details class="faq__item"><summary>Woran erkennen wir, dass ein KI-Anwendungsfall sich wirklich lohnt?</summary><div class="faq__answer">Ein guter Anwendungsfall hat ein klares Problem, messbaren Aufwand, geeignete Daten, prüfbare Ergebnisse und einen realistischen Weg in den Betrieb. Fehlt einer dieser Punkte, wird der Fall zurückgestellt oder vorbereitet, bevor investiert wird.</div></details>
+ <details class="faq__item"><summary>Wie vermeiden wir, dass ein KI-Pilot in der Schublade endet?</summary><div class="faq__answer">Der Betrieb wird vor dem MVP mitgedacht. Dazu gehören Systemintegration, Verantwortlichkeiten, Qualitätssicherung, Freigabewege, Monitoring, Support, Schulung und Nutzenmessung. Der Pilot wird dadurch zum kontrollierten ersten Schritt in die produktive Nutzung.</div></details>
+ <details class="faq__item"><summary>Wie viel eigenes KI-Wissen brauchen wir dafür?</summary><div class="faq__answer">Ihr Team muss vor allem den eigenen Prozess, die Daten und die fachlichen Entscheidungen kennen. Wir bringen Methodik, technische Bewertung, Governance, Projektsteuerung und Umsetzungserfahrung ein. Während des Projekts wird Ihr Team gezielt befähigt.</div></details>
  </div>
  <div class="cross-links"><a class="cross-link" href="mittelstand/index.html"><div class="cross-link__tag">Zielgruppe</div><div class="cross-link__title">KI-Beratung Mittelstand</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="unternehmen/index.html"><div class="cross-link__tag">Zielgruppe</div><div class="cross-link__title">KI-Beratung für Unternehmen</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="generative-ki/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">Generative KI</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="microsoft-365/index.html"><div class="cross-link__tag">Microsoft</div><div class="cross-link__title">KI in Microsoft 365</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="microsoft-copilot/index.html"><div class="cross-link__tag">Microsoft</div><div class="cross-link__title">Microsoft Copilot</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="industrie/index.html"><div class="cross-link__tag">Branche</div><div class="cross-link__title">KI in der Industrie</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="maschinenbau/index.html"><div class="cross-link__tag">Branche</div><div class="cross-link__title">KI im Maschinenbau</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="chatbot/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">KI-Chatbots</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="daten-ki/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">Daten &amp; KI</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="../prozessoptimierung-beratung/index.html"><div class="cross-link__tag">Säule 1 · Prozesse</div><div class="cross-link__title">Prozessoptimierung &amp; BPM</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../projektmanagement-beratung/index.html"><div class="cross-link__tag">Säule 1 · Projekte</div><div class="cross-link__title">Projektmanagement</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../digitalisierungsberatung/index.html"><div class="cross-link__tag">Säule 1 · Digital</div><div class="cross-link__title">Digitalisierung &amp; Transformation</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../change-management-beratung/index.html"><div class="cross-link__tag">Säule 1 · Change</div><div class="cross-link__title">Change Management</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../enterprise-architecture-beratung/index.html"><div class="cross-link__tag">Säule 2 · Architektur</div><div class="cross-link__title">Enterprise Architecture</div><div class="cross-link__arrow">→ Weiter</div></a></div>
  </div>
@@ -1133,8 +1124,8 @@ body.has-drawer { overflow: hidden; }
  <div class="container">
  <div class="final-cta__inner">
  <div class="eyebrow eyebrow--on-dark">Nächster Schritt</div>
- <h2>KI-Beratung <span class="accent">›</span> starten.</h2>
- <p>Der erste Schritt ist ein Erstgespräch von 30 bis 45 Minuten. Wir klären Ihren Ausgangspunkt, die wichtigsten Engpässe und ob CX der richtige Partner für Ihr Vorhaben ist. Wenn ein anderer Weg sinnvoller ist, sagen wir das offen.</p>
+ <h2>KI-Vorhaben <span class="accent">›</span> steuerbar starten.</h2>
+ <p>Der erste Schritt ist ein Erstgespräch von 30 bis 45 Minuten. Wir klären Anwendungsfall, Datenlage, Verantwortlichkeiten, Risiken und den möglichen Weg in den Betrieb. Danach lässt sich einschätzen, ob ein Anwendungsfall-Check, MVP oder breiteres KI-Programm sinnvoll ist.</p>
  <a href="mailto:hallo@cx-experts.de?subject=KI-Beratung%20%E2%80%94%20Erstgespr%C3%A4ch" class="btn">Erstgespräch anfragen <span class="btn__icon">→</span></a>
  </div>
  </div>
@@ -1146,7 +1137,7 @@ body.has-drawer { overflow: hidden; }
 
 <style>
 .cx-proof{background:var(--cx-warm);padding:clamp(72px,8vw,112px) 0}
-.cx-proof__head{max-width:760px;margin:0 auto 36px;text-align:center}
+.cx-proof__head{max-width:780px;margin:0 auto 36px;text-align:center}
 .cx-proof__eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:0.72rem;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--cx-charcoal-3);margin-bottom:14px}
 .cx-proof__eyebrow::before{content:"";display:inline-block;width:22px;height:3px;background:var(--cx-yellow)}
 .cx-proof__h{margin:0;font-size:clamp(2rem,4vw,3rem);line-height:1.08;letter-spacing:-0.03em;color:var(--cx-charcoal)}
@@ -1160,31 +1151,75 @@ body.has-drawer { overflow: hidden; }
 <section class="cx-proof reveal" aria-labelledby="praxis-check">
  <div class="container">
  <div class="cx-proof__head">
- <div class="cx-proof__eyebrow">Praxischeck vor dem Piloten</div>
- <h2 class="cx-proof__h" id="praxis-check">Diese Fragen klären wir, bevor Sie in KI investieren.</h2>
- <p class="cx-proof__lead">Gute KI-Beratung schützt vor teuren Scheinlösungen. Deshalb prüfen wir früh, ob ein Anwendungsfall fachlich trägt, technisch machbar ist und im Arbeitsalltag wirklich genutzt werden kann.</p>
+ <div class="cx-proof__eyebrow">Praxischeck vor dem KI-Programmstart</div>
+ <h2 class="cx-proof__h" id="praxis-check">Diese Fragen klären wir, bevor ein KI-Vorhaben skaliert wird.</h2>
+ <p class="cx-proof__lead">Ein KI-Projekt wird erst belastbar, wenn Nutzen, Daten, Risiko, Qualität, Rollout und Betrieb zusammenpassen. Deshalb prüfen wir diese Punkte, bevor Budget und Kapazitäten in die breite Umsetzung fließen.</p>
  </div>
  <div class="cx-proof__grid">
- <div class="cx-proof__card"><h3>Passt der Anwendungsfall?</h3><p>Wir klären, welches Problem gelöst wird, wer die Lösung nutzt, wie Erfolg gemessen wird und ob der erwartete Nutzen den Aufwand rechtfertigt.</p></div>
- <div class="cx-proof__card"><h3>Reichen Daten und Prozesse aus?</h3><p>Wir prüfen Datenqualität, Zugriffsrechte, Prozessschritte und Systemlandschaft, bevor ein Pilot auf einer wackligen Grundlage startet.</p></div>
- <div class="cx-proof__card"><h3>Ist der Betrieb realistisch?</h3><p>Wir planen Zuständigkeiten, Monitoring, Freigaben, Schulung und Qualitätssicherung mit, damit der Pilot nicht nach der Demo stehen bleibt.</p></div>
- <div class="cx-proof__card"><h3>Sind Risiken beherrschbar?</h3><p>Wir betrachten Datenschutz, Sicherheit, EU-AI-Act-Anforderungen und menschliche Kontrolle von Anfang an, damit Entscheidungen nachvollziehbar bleiben.</p></div>
+ <div class="cx-proof__card"><h3>Wer verantwortet den KI-Einsatz?</h3><p>Wir klären Sponsor, Produktverantwortliche, Fachbereich, IT, Datenschutz, Betrieb und Freigabewege, bevor produktive Nutzung geplant wird.</p></div>
+ <div class="cx-proof__card"><h3>Welche Daten dürfen genutzt werden?</h3><p>Datenquellen, Zugriffsrechte, Schutzbedarf, Qualität und Prozessbezug werden geprüft, bevor ein MVP aufgesetzt wird.</p></div>
+ <div class="cx-proof__card"><h3>Wie wird Qualität gemessen?</h3><p>Wir definieren Testkriterien, Fehlerbilder, Nutzerfeedback, Freigaben und menschliche Kontrolle, damit Ergebnisse überprüfbar bleiben.</p></div>
+ <div class="cx-proof__card"><h3>Wie bleibt der Betrieb stabil?</h3><p>Monitoring, Support, Kostenkontrolle, Vorfallmanagement, Schulung und Verbesserungsroutine werden vor dem Rollout geplant.</p></div>
  </div>
  </div>
 </section>
 
 <!-- E-E-A-T trust strip + bottom contact form (Pass A) -->
+<style>
+.cx-substance-block{background:#FFF8DC;border:2px dashed #B8941F;border-radius:14px;padding:46px 28px 24px;margin:32px auto;max-width:780px;position:relative}
+.cx-substance-block::before{content:"HUMAN QUESTION BOX — ANSWER REQUIRED";position:absolute;top:12px;left:24px;background:#FFD24A;color:#1E2327;font-family:ui-monospace,Menlo,monospace;font-size:9px;font-weight:800;letter-spacing:0.18em;padding:4px 10px;border-radius:99px}
+.cx-substance-block__eyebrow{font-family:ui-monospace,Menlo,monospace;font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#B8941F;margin-bottom:8px;margin-top:6px}
+.cx-substance-block__h{font-family:Inter,system-ui,sans-serif;font-size:1.0625rem;font-weight:800;letter-spacing:-0.012em;margin:0 0 12px;color:#1E2327;line-height:1.3}
+.cx-substance-block__placeholder{background:#fff;border-left:3px solid #B8941F;padding:14px 16px;font-size:14px;line-height:1.55;color:#3A4046;border-radius:4px}
+.cx-substance-block__placeholder strong{color:#B8941F;font-weight:800;display:block;margin-bottom:6px;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase}
+</style>
+<section class="cx-substance-block" data-substance-id="1" data-substance-slot="misdiagnosis">
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Fehldiagnose</div>
+ <h2 class="cx-substance-block__h">Ein KI-Use-Case, der im Use-Case-Trichter selbsterklärend wirkte und im Pilot scheiterte.</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Was war das falsche Signal, das ihn nach oben sortierte? War es Datenqualität, ROI-Annahme, ein Compliance-Sachverhalt? Was haben Sie aus dem Scheitern in den Trichter eingebaut?
+ </div>
+</section>
+<section class="cx-substance-block" data-substance-id="2" data-substance-slot="methodology">
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Methodik angepasst</div>
+ <h2 class="cx-substance-block__h">Ein Mandat, in dem die Roadmap nach Phase 2 verworfen werden musste.</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Was war der Auslöser? Datenproblem, Halluzinationsrate, EU-AI-Act-Klassifizierung? Wie wurde der Plan angepasst und was war der zusätzliche Aufwand?
+ </div>
+</section>
+<section class="cx-substance-block" data-substance-id="3" data-substance-slot="outcome">
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Reales Ergebnis</div>
+ <h2 class="cx-substance-block__h">Ein konkretes produktives KI-Mandat.</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Branche, Anwendungsfall, gemessener Effekt — Antwortzeit, Genauigkeit, Kostenreduktion. Bitte konkrete Zahl, nicht „erhebliche Effizienzsteigerung".
+ </div>
+</section>
+<section class="cx-substance-block" data-substance-id="4" data-substance-slot="cost">
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Realer Tagessatz · Reale Dauer</div>
+ <h2 class="cx-substance-block__h">Ein reales aktuelles KI-Mandat: Tagessatz, Pilotdauer, Produktivkostenrahmen, EU-AI-Act-Klassifizierungsaufwand.</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Tagessatz, Pilotdauer in Wochen, monatliche Produktivkosten (Infra + Modell-API + Monitoring), Aufwand der Risiko-Klassifizierung in Personentagen.
+ </div>
+</section>
+<section class="cx-substance-block" data-substance-id="5" data-substance-slot="market">
+ <div class="cx-substance-block__eyebrow">Aus unserer Praxis · Deutscher Markt</div>
+ <h2 class="cx-substance-block__h">Welche deutsche Markt- oder Regulierungsrealität hat den KI-Einsatz beeinflusst?</h2>
+ <div class="cx-substance-block__placeholder">
+ <strong>HUMAN INSERT — DO NOT FILL WITH AI:</strong> Nennen Sie einen konkreten Punkt wie EU-AI-Act-Einstufung, Datenschutz, Datenresidenz, Betriebsrat oder Kontrolle der Modellkosten.
+ </div>
+</section>
+
 <section class="cx-trust">
  <div class="container">
  <div class="cx-trust__grid">
  <div class="cx-trust__col">
  <div class="cx-trust__eyebrow">Wer dahinter steht</div>
  <h2 class="cx-trust__h">Geführt von Johannes &amp; Hannes, persönlich und von erfahrenen Beratern.</h2>
- <p class="cx-trust__lead">Beide haben über Jahre große Transformationsprojekte verantwortet, bevor sie CX-Experts gegründet haben. Sie führen jedes Mandat persönlich und durchgängig mit erfahrenen Beratern im eigenen Haus.</p>
+ <p class="cx-trust__lead">Beide haben über Jahre große Transformations- und Digitalisierungsprojekte verantwortet, bevor sie CX-Experts gegründet haben. Sie führen jedes KI-Mandat persönlich und achten darauf, dass Anwendungsfall, Daten, Governance, MVP, Rollout und Betrieb zusammenpassen.</p>
  <ul class="cx-trust__creds">
  <li><b>Erfahrene Berater</b> · jedes Mandat persönlich geführt</li>
  <li><b>Branchenübergreifend</b> · vom Mittelstand bis zum Konzern</li>
- <li><b>Strukturiertes Vorgehen</b> · nachvollziehbar und dokumentiert</li>
+ <li><b>Strukturiertes Vorgehen</b> · Governance, MVP, Rollout, Betrieb</li>
  <li><b>DACH-weit</b> tätig</li>
  </ul>
  <p class="cx-trust__byline">Ihre Ansprechpartner sind <strong>Hannes Schäfer</strong>, Beratungspartner CX-Experts, und <strong>Johannes Vogel</strong>, Geschäftsführender Gesellschafter.</p>
@@ -1242,8 +1277,167 @@ body.has-drawer { overflow: hidden; }
   footer, .footer, .footer__inner, footer p, footer li,
   .cx-form, .cx-form__eyebrow, .cx-form__h, .cx-form__row, .cx-form__hint,
   form, form p, form label { text-align: center; }
+  .method,
+  .method-steps,
+  .method-step,
+  .method-step__body,
+  .method-step__title,
+  .method-step__when,
+  .diff-item,
+  .use-card,
+  .industry-card,
+  .compliance-item,
+  .bv-phase,
+  .step-card {
+    text-align: center;
+  }
+  .method-step__num,
+  .method-step__when,
+  .service-card__num,
+  .problem-card__num,
+  .diff-item__num,
+  .use-card__tag,
+  .bv-phase-num,
+  .bv-phase-range,
+  .ph-tag,
+  .svc-tag,
+  .ws-tag {
+    display: flex!important;
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .ph-tag-wrap { justify-content: center!important; }
+  .problem-grid,
+  .services-grid,
+  .method,
+  .method-steps,
+  .uses-grid,
+  .industries,
+  .diff-list,
+  .compliance-block {
+    grid-template-columns: 1fr!important;
+  }
+  .diff-item {
+    grid-template-columns: 1fr!important;
+    justify-items: center;
+    gap: 14px;
+  }
+  .diff-item > div:not(.diff-item__num) { text-align: center; }
+  h1, h2, h3,
+  .h-section,
+  .cx-proof__h,
+  .hero__title,
+  .section__head {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+  }
+  .cx-trust__creds {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    grid-template-columns: 1fr!important;
+  }
+  .cx-trust__creds li,
+  .cx-trust__creds b {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .cx-trust,
+  .cx-trust__grid,
+  .cx-trust__col,
+  .cx-trust__eyebrow,
+  .cx-trust__h,
+  .cx-trust__lead,
+  .cx-trust__creds,
+  .cx-trust__creds li,
+  .cx-trust__creds b,
+  .cx-trust__byline {
+    text-align: center;
+  }
+  .cx-trust__lead,
+  .cx-trust__creds,
+  .cx-trust__byline {
+    margin-left: auto!important;
+    margin-right: auto!important;
+  }
+  .cx-trust__creds { justify-items: center; }
+  .tree-major-summary b,
+  .tree-branch-summary b {
+    white-space: normal!important;
+    overflow-wrap: anywhere;
+  }
+  .tree-actions {
+    margin-left: 0!important;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .eyebrow,
+  [class*="__eyebrow"] {
+    display: flex!important;
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
   .hero__cta-row, .final-cta__inner, .hero [class*="cta"], .hero [class*="btn-row"] {
     display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+
+  html, body { max-width: 100%; overflow-x: hidden; }
+  .cx-trust__grid,
+  .cx-trust__col,
+  .cx-form {
+    width: 100%!important;
+    max-width: 100%!important;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .hero__form-col {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+  }
+  .hero__form-col .cx-hero-form {
+    width: 100%!important;
+    max-width: 540px!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    box-sizing: border-box;
+  }
+  .hero__form-col .cx-hero-form > div {
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  .hero__form-col .cx-hero-form input,
+  .hero__form-col .cx-hero-form textarea,
+  .hero__form-col .cx-hero-form button,
+  .hero__form-col .cx-hero-form label,
+  .hero__form-col .cx-hero-form span {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .faq,
+  .faq__item,
+  .faq__item summary,
+  .faq__answer {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
   .cx-form__consent { justify-content: center; }
   form input, form textarea, form select,

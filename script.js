@@ -371,55 +371,72 @@ if (navLinks.length) {
 
 const caseStudies = [
   {
-    title: 'Wenn Anforderungen unscharf bleiben und der Backlog Fahrt verliert.',
+    title: 'Wenn Digitalisierung starten soll, aber Zielbild, Architektur und Prozesse noch nicht zusammenpassen.',
     challenge:
-      'Stakeholder ziehen in unterschiedliche Richtungen, User Stories sind dünn, Akzeptanzkriterien fehlen und der Product Owner ist überlastet oder unbesetzt.',
+      'Fachbereiche erwarten schnelle Ergebnisse, IT muss bestehende Systeme schützen, mehrere Initiativen konkurrieren um Ressourcen und der konkrete Nutzen ist noch nicht messbar.',
     focus:
-      'Requirements Engineering und Interim Product Owner Unterstützung schärfen Anforderungen, ordnen Backlog und Priorität und führen die PO-Rolle, bis sie intern wieder tragfähig ist.',
+      'CX klärt Zielbild, Ist-IT-Architektur und Prozesslandschaft, priorisiert Maßnahmen im Backlog und plant die Umsetzung in Wellen mit Reviews und Hypercare.',
     change:
-      'Teams arbeiten an klaren, verhandelten Anforderungen — mit verlässlicher Priorisierung und einem Backlog, der Entscheidungen wirklich stützt.',
+      'Aus einem großen Vorhaben wird ein steuerbares Programm mit klarer Reihenfolge, Verantwortlichen und messbaren Zwischenergebnissen.',
     stats: [
-      ['Anforderungen', 'verhandelt &amp; klar'],
-      ['Backlog', 'priorisiert geführt'],
-      ['Product Owner', 'interim oder Coaching'],
+      ['Zielbild', 'entscheidbar'],
+      ['Backlog', 'nach Nutzen priorisiert'],
+      ['Wellen', 'reviewfähig geplant'],
     ],
-    principleTitle: 'Erst Anforderungen, dann Lösung',
+    principleTitle: 'Erst Zielbild, dann Welle',
     principleCopy:
-      'CX beginnt nicht mit Features, sondern mit dem realen Bedarf. So entstehen Backlogs, die Entscheidungen tragen statt sie zu verschleppen.',
+      'Jede Welle bekommt Nutzen, Entscheidungspunkt, Verantwortliche und Übergabe. So bleibt Transformation groß genug im Ziel und klein genug in der Umsetzung.',
   },
   {
-    title: 'Wenn Digitalisierung oder Transformation startet, aber das Zielbild noch unscharf ist.',
+    title: 'Wenn KI-Piloten laufen, aber Nutzen, Daten, Governance und Betrieb unklar bleiben.',
     challenge:
-      'Neue Systeme, Plattformen oder Operating-Model-Schritte werden diskutiert, während Prozesse, Rollen, Anforderungen und Reihenfolge im Hintergrund noch nicht sauber geordnet sind.',
+      'Einzelne Teams testen Tools, aber Datenzugriff, Rechte, Qualität, Haftung, Prozessintegration und Akzeptanz sind noch nicht belastbar geklärt.',
     focus:
-      'Digitalisierungs- und Transformationsberatung verbindet Prozesssicht, Zielbild, Anforderungsklarheit und Maßnahmenlogik, damit Veränderung kleiner und realistischer planbar wird.',
+      'CX bewertet Anwendungsfälle, Datenbasis, Berechtigungen, Risiken, Governance und Betriebsmodell und übersetzt geeignete Ideen in Pilot, Rollout und Change-Plan.',
     change:
-      'Transformation wird nicht größer und diffuser, sondern greifbarer, geordneter und besser an die reale Organisation anschließbar.',
+      'KI wird vom Experiment zu einer nutzbaren Arbeitsweise mit klaren Grenzen, messbarem Nutzen und realistischen Voraussetzungen.',
     stats: [
-      ['Prozesse', 'sauber betrachtet'],
-      ['Zielbild', 'verhandelt'],
-      ['Maßnahmen', 'realistisch geordnet'],
+      ['Use Cases', 'fachlich bewertet'],
+      ['Daten', 'zugänglich geprüft'],
+      ['Governance', 'mitgeführt'],
     ],
-    principleTitle: 'Nicht schlechte Abläufe digital kopieren',
+    principleTitle: 'KI braucht Prozessklarheit',
     principleCopy:
-      'Das Ziel ist nicht mehr Technologie um ihrer selbst willen, sondern bessere Abläufe mit einer brauchbaren Umsetzungsreihenfolge.',
+      'Ein Modell allein verbessert noch keinen Ablauf. Erst wenn Aufgabe, Daten, Rechte, Übergabe und Verantwortung stimmen, entsteht verlässlicher Nutzen.',
   },
   {
-    title: 'Wenn Projekte laufen, aber Steuerung, Scope und Lieferpfad schwimmen.',
+    title: 'Wenn Prozesse stocken oder Projekte laufen, aber Steuerung und Verantwortung fehlen.',
     challenge:
-      'Meetings nehmen zu, Rollen sind unscharf, Risiken werden spät sichtbar und Fortschritt bleibt schwer lesbar, obwohl das Team dauernd beschäftigt ist.',
+      'Abläufe dauern zu lange, Entscheidungen wandern durch zu viele Schleifen, Risiken werden spät sichtbar und Teams sind beschäftigt, ohne dass Fortschritt sicher greifbar wird.',
     focus:
-      'Projektmanagement und Delivery-Beratung bringen Struktur in Scope, Steuerung, Entscheidungen und Lieferrhythmus — agil oder klassisch, je nach Vorhaben.',
+      'CX verbindet Prozessaufnahme, Kennzahlen, Rollen, PMO, Projektstruktur, Backlog, Eskalationswege und Review-Takt zu einem arbeitsfähigen Steuerungsmodell.',
     change:
-      'Umsetzung bekommt wieder Richtung, ein klareres Steuerungsmodell und bessere Voraussetzungen für verlässliche Entscheidungen.',
+      'Prozesse werden messbar verbessert, Projekte werden lesbarer geführt und Entscheidungen können früher getroffen werden.',
     stats: [
-      ['Scope', 'geschärft'],
-      ['Steuerung', 'klarer geführt'],
-      ['Delivery', 'wieder lesbar'],
+      ['Prozesse', 'messbar gemacht'],
+      ['Projekte', 'klarer gesteuert'],
+      ['Entscheidungen', 'früher getroffen'],
     ],
-    principleTitle: 'Weniger Methodenlärm, mehr Führungslogik',
+    principleTitle: 'Steuerung beginnt im Alltag',
     principleCopy:
-      'CX nutzt agile oder klassische Elemente nur dann, wenn sie helfen. Entscheidend ist, dass das Projekt wieder lesbar und steuerbar wird.',
+      'Methodik hilft nur, wenn Rollen, Daten, Termine und Entscheidungen im täglichen Arbeiten greifen. Genau dort wird die Struktur angesetzt.',
+  },
+  {
+    title: 'Wenn Anwendungen, Daten, Rollen und Veränderung auseinanderlaufen.',
+    challenge:
+      'Neue Systeme, alte Schnittstellen, ungeklärte Verantwortlichkeiten und hohe Change-Belastung treffen aufeinander. Strategie und Alltag passen nicht mehr sauber zusammen.',
+    focus:
+      'CX verbindet Enterprise Architecture, Change Management und Governance: Zielarchitektur, Roadmap, Stakeholder, Kommunikation, Training und Betriebsübergabe.',
+    change:
+      'Architekturentscheidungen, Veränderungsarbeit und Umsetzung folgen derselben Richtung. Das reduziert Reibung zwischen Fachseite, IT, Führung und Betrieb.',
+    stats: [
+      ['Architektur', 'geordnet'],
+      ['Change', 'geplant'],
+      ['Betrieb', 'früh einbezogen'],
+    ],
+    principleTitle: 'Architektur muss getragen werden',
+    principleCopy:
+      'Eine Zielarchitektur wirkt erst, wenn Menschen, Rollen und Prozesse mitziehen. Deshalb werden technische und organisatorische Entscheidungen gemeinsam geführt.',
   },
 ];
 

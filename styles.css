@@ -677,7 +677,7 @@ body.has-drawer { overflow: hidden; }
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 100dvh;
   background: var(--acn-black);
   color: #fff;
   overflow: hidden;
@@ -993,6 +993,86 @@ body.has-drawer { overflow: hidden; }
   color: var(--acn-purple-2);
 }
 
+@media (min-width: 981px) and (max-height: 940px) {
+  .hero {
+    min-height: 100vh;
+    padding-top: 82px;
+    padding-bottom: 34px;
+  }
+  .hero__grid {
+    gap: clamp(40px, 5vw, 76px);
+  }
+  .hero__copy {
+    gap: 26px;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero__lead-wrap,
+  .hero__lead-bar,
+  .hero__cta,
+  .hero__title-text,
+  .hero__title-glyph {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero__form-wrap {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero__title {
+    font-size: clamp(2.4rem, 4.15vw, 3.55rem);
+    line-height: 1.02;
+  }
+  .hero__title-glyph {
+    width: clamp(38px, 5.4vw, 62px);
+    height: clamp(38px, 5.4vw, 62px);
+  }
+  .hero__lead {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+  .hero__lead-wrap {
+    max-width: 600px;
+  }
+  .hero__card {
+    padding: 22px 28px;
+  }
+  .hero__card .form__privacy {
+    display: none;
+  }
+  .hero__card .form__sub {
+    margin-bottom: 10px;
+    font-size: 0.8125rem;
+  }
+  .hero__card .form {
+    gap: 8px;
+  }
+  .hero__card .form__label {
+    gap: 5px;
+    font-size: 0.75rem;
+  }
+  .hero__card .form__input,
+  .hero__card .form__textarea {
+    padding: 9px 11px;
+    font-size: 0.875rem;
+  }
+  .hero__card .form__textarea {
+    min-height: 52px;
+  }
+  .hero__card .form__consent {
+    gap: 8px;
+    font-size: 0.75rem;
+    line-height: 1.35;
+  }
+  .hero__card .form__submit {
+    min-height: 44px;
+    padding: 12px 16px;
+  }
+}
+
 .hero__scroll-cue {
   position: absolute;
   bottom: 24px;
@@ -1023,6 +1103,17 @@ body.has-drawer { overflow: hidden; }
   .hero { min-height: auto; padding-top: 92px; padding-bottom: 56px; }
   .hero__grid { grid-template-columns: 1fr; gap: 40px; }
   .hero__scroll-cue { display: none; }
+  .hero__copy,
+  .hero__form-wrap,
+  .hero__lead-wrap,
+  .hero__lead-bar,
+  .hero__cta,
+  .hero__title-text,
+  .hero__title-glyph {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* ==========================================================================
@@ -1667,12 +1758,13 @@ body.has-drawer { overflow: hidden; }
 
 .outcomes__tabs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   margin-bottom: 32px;
 }
+@media (max-width: 980px) { .outcomes__tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 700px) { .outcomes__tabs { grid-template-columns: 1fr; } }
 
 .outcomes__tab {
@@ -3490,4 +3582,163 @@ body.has-privacy-dialog { overflow: hidden; }
   .trustband__items { font-size: 0.875rem; }
   .trustband__items span { padding: 0 14px; }
   .trustband__items span:not(:last-child)::after { right: -1px; width: 3px; height: 3px; }
+}
+
+.card{padding:28px}
+
+@media (max-width: 820px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .eyebrow,
+  [class*="__eyebrow"] {
+    display: flex !important;
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .method,
+  .method-steps,
+  .method-step,
+  .method-step__body,
+  .method-step__title,
+  .method-step__when,
+  .diff-item,
+  .use-card,
+  .industry-card,
+  .compliance-item,
+  .bv-phase,
+  .step-card {
+    text-align: center;
+  }
+
+  .method-step__num,
+  .method-step__when,
+  .service-card__num,
+  .problem-card__num,
+  .diff-item__num,
+  .use-card__tag,
+  .bv-phase-num,
+  .bv-phase-range,
+  .ph-tag,
+  .svc-tag,
+  .ws-tag {
+    display: flex !important;
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .ph-tag-wrap { justify-content: center !important; }
+
+  .problem-grid,
+  .services-grid,
+  .method,
+  .method-steps,
+  .uses-grid,
+  .industries,
+  .diff-list,
+  .compliance-block {
+    grid-template-columns: 1fr !important;
+  }
+
+  .diff-item {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    gap: 14px;
+  }
+
+  .diff-item > div:not(.diff-item__num) { text-align: center; }
+
+  h1,
+  h2,
+  h3,
+  .h-section,
+  .cx-proof__h,
+  .hero__title,
+  .section__head {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+  }
+
+  .cx-trust__creds {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    grid-template-columns: 1fr !important;
+  }
+
+  .cx-trust__creds li,
+  .cx-trust__creds b {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .cx-trust,
+  .cx-trust__grid,
+  .cx-trust__col,
+  .cx-trust__eyebrow,
+  .cx-trust__h,
+  .cx-trust__lead,
+  .cx-trust__creds,
+  .cx-trust__creds li,
+  .cx-trust__creds b,
+  .cx-trust__byline {
+    text-align: center;
+  }
+
+  .cx-trust__lead,
+  .cx-trust__creds,
+  .cx-trust__byline {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .cx-trust__creds { justify-items: center; }
+
+  .tree-major-summary b,
+  .tree-branch-summary b {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+
+  .tree-actions {
+    margin-left: 0 !important;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cx-trust__grid,
+  .cx-trust__col,
+  .cx-form {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .faq,
+  .faq__item,
+  .faq__item summary,
+  .faq__answer {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
 }
