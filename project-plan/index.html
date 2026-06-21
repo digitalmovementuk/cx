@@ -1328,7 +1328,7 @@ body.is-reading .scroll-cue{opacity:0;transform:translateX(-50%) translateY(12px
   width:30px;height:30px;
   display:inline-flex;align-items:center;justify-content:center;
   background:rgba(124,58,237,0.10);
-  color:#7C3AED;
+  color:var(--cx-charcoal-3);
   border-radius:50%;
   transition:transform 0.3s ease,background 0.25s ease;
   font-weight:800;
@@ -1364,11 +1364,11 @@ body.is-reading .scroll-cue{opacity:0;transform:translateX(-50%) translateY(12px
 }
 .spg-details-collapse > summary::-webkit-details-marker{display:none}
 .spg-details-collapse > summary:hover{background:#f4efe3}
-.spg-details-collapse__icon{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:rgba(124,58,237,0.12);color:#7C3AED;transition:transform 0.3s ease}
+.spg-details-collapse__icon{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:rgba(124,58,237,0.12);color:var(--cx-charcoal-3);transition:transform 0.3s ease}
 .spg-details-collapse[open] .spg-details-collapse__icon{transform:rotate(180deg)}
 .spg-details-collapse__label{flex:1;font-size:13px}
 .spg-details-collapse__hint{font-size:11px;color:var(--ink-mute);font-weight:600;letter-spacing:0.16em}
-.spg-details-collapse[open] .spg-details-collapse__hint{color:#7C3AED}
+.spg-details-collapse[open] .spg-details-collapse__hint{color:var(--cx-charcoal-3)}
 .spg-details-collapse__body{padding:28px 22px 18px;border-top:1px solid var(--rule)}
 
 /* Single-sentence metric card */
@@ -1403,7 +1403,7 @@ body.is-reading .scroll-cue{opacity:0;transform:translateX(-50%) translateY(12px
 
 /* List head section (new) */
 .pg-list-head{margin:8px 0 18px;max-width:780px}
-.pg-list-head__eyebrow{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#7C3AED;padding:4px 10px;background:rgba(124,58,237,0.10);border-radius:99px;margin-bottom:10px}
+.pg-list-head__eyebrow{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--cx-charcoal-3);padding:4px 10px;background:rgba(124,58,237,0.10);border-radius:99px;margin-bottom:10px}
 .pg-list-head__h{margin:0 0 8px;font-family:var(--display);font-size:clamp(1.375rem,2.6vw,1.875rem);font-weight:800;letter-spacing:-0.018em;line-height:1.2;color:var(--ink)}
 .pg-list-head__h em{font-style:normal;color:#F59425}
 .pg-list-head__lead{margin:0;font-size:0.9375rem;line-height:1.55;color:var(--ink-soft)}
@@ -2512,7 +2512,7 @@ body.is-reading .scroll-cue{opacity:0;transform:translateX(-50%) translateY(12px
     <div class="pg-hero-meta reveal d3">
       <div class="pg-meta-cell">
         <span class="pg-meta-label" data-i18n="pg.cover.metaA.label">Prepared for</span>
-        <span class="pg-meta-val" data-i18n="pg.cover.metaA.val">Johannes · CX-Experts</span>
+        <span class="pg-meta-val" data-i18n="pg.cover.metaA.val">Johannes · CEx</span>
       </div>
       <div class="pg-meta-cell">
         <span class="pg-meta-label" data-i18n="pg.cover.metaB.label">Prepared by</span>
@@ -3025,7 +3025,7 @@ body.is-reading .scroll-cue{opacity:0;transform:translateX(-50%) translateY(12px
 </section>
 <style>
 .jump-cta-wrap{position:absolute;left:50%;bottom:32px;transform:translateX(-50%);display:inline-flex;flex-direction:column;align-items:center;gap:10px;z-index:10;transition:transform 0.4s ease,opacity 0.4s ease}
-.jump-cta{display:inline-flex;align-items:center;padding:14px 22px;background:#7C3AED;border:1px solid #7C3AED;color:#fff;font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;border-radius:999px;text-decoration:none;transition:background 0.35s ease,border-color 0.35s ease,box-shadow 0.35s ease;line-height:1.2;box-shadow:0 14px 32px -14px rgba(124,58,237,0.55),0 4px 10px -4px rgba(124,58,237,0.32)}
+.jump-cta{display:inline-flex;align-items:center;padding:14px 22px;background:var(--cx-charcoal-3);border:1px solid var(--cx-charcoal-3);color:#fff;font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;border-radius:999px;text-decoration:none;transition:background 0.35s ease,border-color 0.35s ease,box-shadow 0.35s ease;line-height:1.2;box-shadow:0 14px 32px -14px rgba(124,58,237,0.55),0 4px 10px -4px rgba(124,58,237,0.32)}
 .jump-cta:hover{background:#6D28D9;border-color:#6D28D9;box-shadow:0 22px 44px -16px rgba(124,58,237,0.7),0 6px 14px -4px rgba(124,58,237,0.4)}
 .jump-cta-wrap:hover{transform:translateX(-50%) translateY(-3px)}
 .jump-cta__label{display:inline-flex;align-items:center;color:#fff}
@@ -4198,7 +4198,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <div class="pg-hubpot__h" data-i18n="spg.hubpot.h">Hub-Potenzial — die drei Kategorien in der "Kategorie"-Spalte:</div>
       <div class="pg-hubpot__grid">
         <span class="pg-hp-tag" style="color:#FF7A00;border-color:#FF7A00" data-i18n-html="spg.hubpot.service"><b>★ Service-Hub</b> · Top-Level-Servicelinie</span>
-        <span class="pg-hp-tag" style="color:#7C3AED;border-color:#7C3AED" data-i18n-html="spg.hubpot.sector"><b>◆ Branchen-Hub</b> · Vertikal-Anker</span>
+        <span class="pg-hp-tag" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)" data-i18n-html="spg.hubpot.sector"><b>◆ Branchen-Hub</b> · Vertikal-Anker</span>
         <span class="pg-hp-tag" style="color:#9CA3AF;border-color:#9CA3AF" data-i18n-html="spg.hubpot.sub"><b>· Sub-Page</b> · Variante unter einem Hub</span>
       </div>
     </div>
@@ -4229,13 +4229,13 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 .pg-tree__home{display:inline-flex;align-items:center;gap:12px;padding:14px 28px 14px 22px;background:#1A0E2E;color:#fff;font-family:var(--display);font-weight:800;font-size:1.0625rem;letter-spacing:-0.012em;border-radius:99px;box-shadow:0 12px 24px -14px rgba(26,14,46,0.4)}
 .pg-tree__home-dot{width:9px;height:9px;border-radius:50%;background:#F59425;box-shadow:0 0 0 0 rgba(245,148,37,0.55);animation:pg-tree-pulse 1.8s ease-in-out infinite}
 @keyframes pg-tree-pulse{0%,100%{box-shadow:0 0 0 0 rgba(245,148,37,0.55)}50%{box-shadow:0 0 0 6px rgba(245,148,37,0)}}
-.pg-tree__expand-all{font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;background:none;border:none;color:#7C3AED;cursor:pointer;padding:4px 0 0 8px;text-align:left}
+.pg-tree__expand-all{font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;background:none;border:none;color:var(--cx-charcoal-3);cursor:pointer;padding:4px 0 0 8px;text-align:left}
 .pg-tree__expand-all:hover{color:#5B21B6}
 
 .pg-tree__rail{position:relative;margin-left:8px;padding-left:24px;border-left:1.5px solid rgba(124,58,237,0.28)}
 .pg-tree__cluster{margin:0 0 16px;position:relative}
 .pg-tree__cluster::before{content:"";position:absolute;left:-24px;top:24px;width:24px;height:1.5px;background:rgba(124,58,237,0.28)}
-.pg-tree__cluster-bar{display:grid;grid-template-columns:auto 1fr auto auto;gap:14px;align-items:center;padding:14px 22px;background:#7C3AED;color:#fff;border-radius:99px;font-family:var(--display);font-weight:700;font-size:1rem;cursor:pointer;list-style:none;transition:background 0.3s ease,box-shadow 0.3s ease;box-shadow:0 12px 24px -14px rgba(124,58,237,0.4)}
+.pg-tree__cluster-bar{display:grid;grid-template-columns:auto 1fr auto auto;gap:14px;align-items:center;padding:14px 22px;background:var(--cx-charcoal-3);color:#fff;border-radius:99px;font-family:var(--display);font-weight:700;font-size:1rem;cursor:pointer;list-style:none;transition:background 0.3s ease,box-shadow 0.3s ease;box-shadow:0 12px 24px -14px rgba(124,58,237,0.4)}
 .pg-tree__cluster-bar::-webkit-details-marker{display:none}
 .pg-tree__cluster-bar:hover{background:#6D28D9}
 .pg-tree__cluster--c2 .pg-tree__cluster-bar{background:#5B21B6}
@@ -4255,7 +4255,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 .pg-tree__hub-bar:hover{border-color:rgba(124,58,237,0.4);box-shadow:0 12px 24px -16px rgba(124,58,237,0.2);transform:translateY(-1px)}
 .pg-tree__hub-num{font-family:var(--mono);font-size:0.75rem;font-weight:600;color:var(--ink-soft);letter-spacing:0.04em}
 .pg-tree__hub-name{font-family:var(--display);font-size:1rem;font-weight:800;letter-spacing:-0.012em;color:var(--ink)}
-.pg-tree__hub-count{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 9px;background:#7C3AED;color:#fff;font-family:var(--mono);font-size:0.75rem;font-weight:800;border-radius:99px}
+.pg-tree__hub-count{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 9px;background:var(--cx-charcoal-3);color:#fff;font-family:var(--mono);font-size:0.75rem;font-weight:800;border-radius:99px}
 
 .pg-tree__hub-children{position:relative;margin:10px 0 0 28px;padding-left:24px;border-left:1.5px solid rgba(124,58,237,0.16);display:flex;flex-direction:column;gap:8px}
 .pg-tree__leaf{position:relative;display:inline-flex;align-items:center;gap:10px;padding:7px 14px;background:#fff7e8;border:1px solid rgba(245,148,37,0.18);border-radius:99px;font-family:var(--mono);font-size:0.8125rem;width:fit-content;max-width:100%;flex-wrap:wrap}
@@ -4266,7 +4266,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 .pg-tree__leaf-tag{display:inline-flex;align-items:center;padding:3px 10px;font-family:ui-monospace,Menlo,monospace;font-size:0.6875rem;font-weight:700;letter-spacing:0.04em;color:#fff;border-radius:99px;background:#0F8C61}
 .pg-tree__leaf-tag--hub{background:#0F8C61}
 .pg-tree__leaf-tag--geo{background:#3B82F6}
-.pg-tree__leaf-tag--sector{background:#7C3AED}
+.pg-tree__leaf-tag--sector{background:var(--cx-charcoal-3)}
 .pg-tree__leaf-tag--sub{background:#6B7280}
 
 @media(max-width:760px){
@@ -4320,7 +4320,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         <span class="pg-filter-bar__label" data-i18n="pgf.label">Filter</span>
         <button class="pg-filter-pill is-active" data-filter="all" data-i18n-html="pgf.all">Alle <span class="pg-filter-pill__count">118</span></button>
         <button class="pg-filter-pill" data-filter="current_hub" style="color:#FF7A00" data-i18n-html="pgf.service">★ Service-Hubs <span class="pg-filter-pill__count">15</span></button>
-        <button class="pg-filter-pill" data-filter="sector_hub" style="color:#7C3AED" data-i18n-html="pgf.sector">◆ Branchen-Hubs <span class="pg-filter-pill__count">12</span></button>
+        <button class="pg-filter-pill" data-filter="sector_hub" style="color:var(--cx-charcoal-3)" data-i18n-html="pgf.sector">◆ Branchen-Hubs <span class="pg-filter-pill__count">12</span></button>
         <button class="pg-filter-pill" data-filter="sub_only" style="color:#616160" data-i18n-html="pgf.sub">· Sub-Pages <span class="pg-filter-pill__count">91</span></button>
         <span class="pg-filter-bar__divider" aria-hidden="true"></span>
         <span class="pg-filter-bar__state" id="pgState" data-i18n-html="pgf.state">zeigt <b>Top 10</b> von <b>118</b></span>
@@ -4753,9 +4753,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 
         <div class="pg-row pg-row--sector_hub" data-pot="sector_hub" data-eys="12678" data-vol="50" data-kd="27" data-los="57.9" data-kw="beratung mittelstand">
           <span class="pg-row__rank" data-rank="38">38</span>
-          <span class="pg-row__icon" style="color:#7C3AED">◆</span>
+          <span class="pg-row__icon" style="color:var(--cx-charcoal-3)">◆</span>
           <span class="pg-row__kw" title="beratung mittelstand">beratung mittelstand</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">50<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">27</span>
           <span class="pg-row__num pg-row__num--los">57.9</span>
@@ -5072,9 +5072,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 
         <div class="pg-row pg-row--sector_hub" data-pot="sector_hub" data-eys="7790" data-vol="30" data-kd="25" data-los="57.7" data-kw="beratung kmu">
           <span class="pg-row__rank" data-rank="67">67</span>
-          <span class="pg-row__icon" style="color:#7C3AED">◆</span>
+          <span class="pg-row__icon" style="color:var(--cx-charcoal-3)">◆</span>
           <span class="pg-row__kw" title="beratung kmu">beratung kmu</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">25</span>
           <span class="pg-row__num pg-row__num--los">57.7</span>
@@ -5083,9 +5083,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 
         <div class="pg-row pg-row--sector_hub" data-pot="sector_hub" data-eys="7790" data-vol="30" data-kd="25" data-los="57.7" data-kw="beratung e-commerce">
           <span class="pg-row__rank" data-rank="68">68</span>
-          <span class="pg-row__icon" style="color:#7C3AED">◆</span>
+          <span class="pg-row__icon" style="color:var(--cx-charcoal-3)">◆</span>
           <span class="pg-row__kw" title="beratung e-commerce">beratung e-commerce</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">25</span>
           <span class="pg-row__num pg-row__num--los">57.7</span>
@@ -5094,9 +5094,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 
         <div class="pg-row pg-row--sector_hub" data-pot="sector_hub" data-eys="7515" data-vol="30" data-kd="28" data-los="58.6" data-kw="beratung automotive">
           <span class="pg-row__rank" data-rank="69">69</span>
-          <span class="pg-row__icon" style="color:#7C3AED">◆</span>
+          <span class="pg-row__icon" style="color:var(--cx-charcoal-3)">◆</span>
           <span class="pg-row__kw" title="beratung automotive">beratung automotive</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">30<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">28</span>
           <span class="pg-row__num pg-row__num--los">58.6</span>
@@ -5281,9 +5281,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 
         <div class="pg-row pg-row--sector_hub" data-pot="sector_hub" data-eys="5805" data-vol="20" data-kd="15" data-los="64.5" data-kw="beratung bauunternehmen digitalisierung">
           <span class="pg-row__rank" data-rank="86">86</span>
-          <span class="pg-row__icon" style="color:#7C3AED">◆</span>
+          <span class="pg-row__icon" style="color:var(--cx-charcoal-3)">◆</span>
           <span class="pg-row__kw" title="beratung bauunternehmen digitalisierung">beratung bauunternehmen digitalisierung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">15</span>
           <span class="pg-row__num pg-row__num--los">64.5</span>
@@ -5292,9 +5292,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 
         <div class="pg-row pg-row--sector_hub" data-pot="sector_hub" data-eys="5805" data-vol="20" data-kd="15" data-los="64.5" data-kw="beratung logistik digitalisierung">
           <span class="pg-row__rank" data-rank="87">87</span>
-          <span class="pg-row__icon" style="color:#7C3AED">◆</span>
+          <span class="pg-row__icon" style="color:var(--cx-charcoal-3)">◆</span>
           <span class="pg-row__kw" title="beratung logistik digitalisierung">beratung logistik digitalisierung</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">15</span>
           <span class="pg-row__num pg-row__num--los">64.5</span>
@@ -5303,9 +5303,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 
         <div class="pg-row pg-row--sector_hub" data-pot="sector_hub" data-eys="5805" data-vol="20" data-kd="15" data-los="64.5" data-kw="beratung produktionsbetriebe industrie 4.0">
           <span class="pg-row__rank" data-rank="88">88</span>
-          <span class="pg-row__icon" style="color:#7C3AED">◆</span>
+          <span class="pg-row__icon" style="color:var(--cx-charcoal-3)">◆</span>
           <span class="pg-row__kw" title="beratung produktionsbetriebe industrie 4.0">beratung produktionsbetriebe industrie 4.0</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">15</span>
           <span class="pg-row__num pg-row__num--los">64.5</span>
@@ -5358,9 +5358,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 
         <div class="pg-row pg-row--sector_hub" data-pot="sector_hub" data-eys="5499" data-vol="20" data-kd="20" data-los="61.0" data-kw="beratung medizintechnik">
           <span class="pg-row__rank" data-rank="93">93</span>
-          <span class="pg-row__icon" style="color:#7C3AED">◆</span>
+          <span class="pg-row__icon" style="color:var(--cx-charcoal-3)">◆</span>
           <span class="pg-row__kw" title="beratung medizintechnik">beratung medizintechnik</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">20</span>
           <span class="pg-row__num pg-row__num--los">61.0</span>
@@ -5369,9 +5369,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 
         <div class="pg-row pg-row--sector_hub" data-pot="sector_hub" data-eys="5499" data-vol="20" data-kd="20" data-los="61.0" data-kw="beratung it dienstleister">
           <span class="pg-row__rank" data-rank="94">94</span>
-          <span class="pg-row__icon" style="color:#7C3AED">◆</span>
+          <span class="pg-row__icon" style="color:var(--cx-charcoal-3)">◆</span>
           <span class="pg-row__kw" title="beratung it dienstleister">beratung it dienstleister</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">20</span>
           <span class="pg-row__num pg-row__num--los">61.0</span>
@@ -5380,9 +5380,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 
         <div class="pg-row pg-row--sector_hub" data-pot="sector_hub" data-eys="5499" data-vol="20" data-kd="20" data-los="61.0" data-kw="beratung energie versorger">
           <span class="pg-row__rank" data-rank="95">95</span>
-          <span class="pg-row__icon" style="color:#7C3AED">◆</span>
+          <span class="pg-row__icon" style="color:var(--cx-charcoal-3)">◆</span>
           <span class="pg-row__kw" title="beratung energie versorger">beratung energie versorger</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">20</span>
           <span class="pg-row__num pg-row__num--los">61.0</span>
@@ -5391,9 +5391,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 
         <div class="pg-row pg-row--sector_hub" data-pot="sector_hub" data-eys="5499" data-vol="20" data-kd="20" data-los="56.0" data-kw="beratung öffentlicher sektor">
           <span class="pg-row__rank" data-rank="96">96</span>
-          <span class="pg-row__icon" style="color:#7C3AED">◆</span>
+          <span class="pg-row__icon" style="color:var(--cx-charcoal-3)">◆</span>
           <span class="pg-row__kw" title="beratung öffentlicher sektor">beratung öffentlicher sektor</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">20</span>
           <span class="pg-row__num pg-row__num--los">56.0</span>
@@ -5402,9 +5402,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 
         <div class="pg-row pg-row--sector_hub" data-pot="sector_hub" data-eys="5194" data-vol="20" data-kd="25" data-los="59.0" data-kw="beratung finanzdienstleister">
           <span class="pg-row__rank" data-rank="97">97</span>
-          <span class="pg-row__icon" style="color:#7C3AED">◆</span>
+          <span class="pg-row__icon" style="color:var(--cx-charcoal-3)">◆</span>
           <span class="pg-row__kw" title="beratung finanzdienstleister">beratung finanzdienstleister</span>
-          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:#7C3AED;border-color:#7C3AED" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
+          <span class="pg-row__cat"><span class="pg-cat-tag" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)" data-cat="sector">Branchen-Hub</span><span class="pg-cat-fmt">sector</span></span>
           <span class="pg-row__num pg-row__num--vol">20<small>/mo</small></span>
           <span class="pg-row__num pg-row__num--kd">25</span>
           <span class="pg-row__num pg-row__num--los">59.0</span>
@@ -6022,12 +6022,12 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     <details class="sm-card sm-card--service" data-sm-type="service" >
       <summary class="sm-sum">
         <span class="sm-sum__rank">01</span>
-        <span class="sm-sum__dot" style="background:#7C3AED"></span>
+        <span class="sm-sum__dot" style="background:var(--cx-charcoal-3)"></span>
         <span class="sm-sum__body">
           <span class="sm-sum__name">Digitale Transformation</span>
           <span class="sm-sum__kw">digitale transformation beratung</span>
         </span>
-        <span class="sm-sum__type" style="color:#7C3AED;border-color:#7C3AED">Single</span>
+        <span class="sm-sum__type" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)">Single</span>
         <span class="sm-sum__count"><b>1</b> Seiten</span>
         <span class="sm-sum__vol"><span class="sm-sum__vol-sum">Σ</span> <b>720</b><small>/mo</small></span>
         <span class="sm-sum__chev">▾</span>
@@ -6035,7 +6035,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <div class="sm-body"><ul class="sm-page-list">
         <li class="sm-prow sm-prow--hub">
           <span class="sm-prow__num">01</span>
-          <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+          <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
           <div class="sm-prow__link">
             <span class="sm-prow__kw">digitale transformation beratung</span>
             <span class="sm-prow__slug">/digitale-transformation-beratung/</span>
@@ -6048,12 +6048,12 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     <details class="sm-card sm-card--service" data-sm-type="service" >
       <summary class="sm-sum">
         <span class="sm-sum__rank">02</span>
-        <span class="sm-sum__dot" style="background:#7C3AED"></span>
+        <span class="sm-sum__dot" style="background:var(--cx-charcoal-3)"></span>
         <span class="sm-sum__body">
           <span class="sm-sum__name">Change Management</span>
           <span class="sm-sum__kw">change management beratung</span>
         </span>
-        <span class="sm-sum__type" style="color:#7C3AED;border-color:#7C3AED">Hub + 9</span>
+        <span class="sm-sum__type" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)">Hub + 9</span>
         <span class="sm-sum__count"><b>10</b> Seiten</span>
         <span class="sm-sum__vol"><span class="sm-sum__vol-sum">Σ</span> <b>1660</b><small>/mo</small></span>
         <span class="sm-sum__chev">▾</span>
@@ -6061,7 +6061,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <div class="sm-body"><ul class="sm-page-list">
         <li class="sm-prow sm-prow--hub">
           <span class="sm-prow__num">01</span>
-          <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+          <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
           <div class="sm-prow__link">
             <span class="sm-prow__kw">change management beratung</span>
             <span class="sm-prow__slug">/change-management-beratung/</span>
@@ -6174,12 +6174,12 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     <details class="sm-card sm-card--service" data-sm-type="service" >
       <summary class="sm-sum">
         <span class="sm-sum__rank">03</span>
-        <span class="sm-sum__dot" style="background:#7C3AED"></span>
+        <span class="sm-sum__dot" style="background:var(--cx-charcoal-3)"></span>
         <span class="sm-sum__body">
           <span class="sm-sum__name">Prozessberatung</span>
           <span class="sm-sum__kw">prozessberatung</span>
         </span>
-        <span class="sm-sum__type" style="color:#7C3AED;border-color:#7C3AED">Single</span>
+        <span class="sm-sum__type" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)">Single</span>
         <span class="sm-sum__count"><b>1</b> Seiten</span>
         <span class="sm-sum__vol"><span class="sm-sum__vol-sum">Σ</span> <b>720</b><small>/mo</small></span>
         <span class="sm-sum__chev">▾</span>
@@ -6187,7 +6187,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <div class="sm-body"><ul class="sm-page-list">
         <li class="sm-prow sm-prow--hub">
           <span class="sm-prow__num">03</span>
-          <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+          <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
           <div class="sm-prow__link">
             <span class="sm-prow__kw">prozessberatung</span>
             <span class="sm-prow__slug">/prozessberatung/</span>
@@ -6281,12 +6281,12 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     <details class="sm-card sm-card--service" data-sm-type="service" >
       <summary class="sm-sum">
         <span class="sm-sum__rank">05</span>
-        <span class="sm-sum__dot" style="background:#7C3AED"></span>
+        <span class="sm-sum__dot" style="background:var(--cx-charcoal-3)"></span>
         <span class="sm-sum__body">
           <span class="sm-sum__name">Geschäftsprozessoptimierung</span>
           <span class="sm-sum__kw">geschäftsprozessoptimierung</span>
         </span>
-        <span class="sm-sum__type" style="color:#7C3AED;border-color:#7C3AED">Single</span>
+        <span class="sm-sum__type" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)">Single</span>
         <span class="sm-sum__count"><b>1</b> Seiten</span>
         <span class="sm-sum__vol"><span class="sm-sum__vol-sum">Σ</span> <b>480</b><small>/mo</small></span>
         <span class="sm-sum__chev">▾</span>
@@ -6294,7 +6294,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <div class="sm-body"><ul class="sm-page-list">
         <li class="sm-prow sm-prow--hub">
           <span class="sm-prow__num">10</span>
-          <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+          <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
           <div class="sm-prow__link">
             <span class="sm-prow__kw">geschäftsprozessoptimierung</span>
             <span class="sm-prow__slug">/geschaeftsprozessoptimierung/</span>
@@ -7111,12 +7111,12 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     <details class="sm-card sm-card--service" data-sm-type="service" >
       <summary class="sm-sum">
         <span class="sm-sum__rank">09</span>
-        <span class="sm-sum__dot" style="background:#7C3AED"></span>
+        <span class="sm-sum__dot" style="background:var(--cx-charcoal-3)"></span>
         <span class="sm-sum__body">
           <span class="sm-sum__name">PMO-Beratung</span>
           <span class="sm-sum__kw">pmo beratung</span>
         </span>
-        <span class="sm-sum__type" style="color:#7C3AED;border-color:#7C3AED">Single</span>
+        <span class="sm-sum__type" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)">Single</span>
         <span class="sm-sum__count"><b>1</b> Seiten</span>
         <span class="sm-sum__vol"><span class="sm-sum__vol-sum">Σ</span> <b>50</b><small>/mo</small></span>
         <span class="sm-sum__chev">▾</span>
@@ -7124,7 +7124,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <div class="sm-body"><ul class="sm-page-list">
         <li class="sm-prow sm-prow--hub">
           <span class="sm-prow__num">80</span>
-          <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+          <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
           <div class="sm-prow__link">
             <span class="sm-prow__kw">pmo beratung</span>
             <span class="sm-prow__slug">/pmo-beratung/</span>
@@ -7137,12 +7137,12 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     <details class="sm-card sm-card--service" data-sm-type="service" >
       <summary class="sm-sum">
         <span class="sm-sum__rank">10</span>
-        <span class="sm-sum__dot" style="background:#7C3AED"></span>
+        <span class="sm-sum__dot" style="background:var(--cx-charcoal-3)"></span>
         <span class="sm-sum__body">
           <span class="sm-sum__name">Interim Product Owner</span>
           <span class="sm-sum__kw">interim product owner</span>
         </span>
-        <span class="sm-sum__type" style="color:#7C3AED;border-color:#7C3AED">Single</span>
+        <span class="sm-sum__type" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)">Single</span>
         <span class="sm-sum__count"><b>1</b> Seiten</span>
         <span class="sm-sum__vol"><span class="sm-sum__vol-sum">Σ</span> <b>20</b><small>/mo</small></span>
         <span class="sm-sum__chev">▾</span>
@@ -7150,7 +7150,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <div class="sm-body"><ul class="sm-page-list">
         <li class="sm-prow sm-prow--hub">
           <span class="sm-prow__num">81</span>
-          <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+          <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
           <div class="sm-prow__link">
             <span class="sm-prow__kw">interim product owner</span>
             <span class="sm-prow__slug">/interim-product-owner/</span>
@@ -7163,12 +7163,12 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     <details class="sm-card sm-card--service" data-sm-type="service" >
       <summary class="sm-sum">
         <span class="sm-sum__rank">11</span>
-        <span class="sm-sum__dot" style="background:#7C3AED"></span>
+        <span class="sm-sum__dot" style="background:var(--cx-charcoal-3)"></span>
         <span class="sm-sum__body">
           <span class="sm-sum__name">Agiles Projektmanagement</span>
           <span class="sm-sum__kw">agiles projektmanagement beratung</span>
         </span>
-        <span class="sm-sum__type" style="color:#7C3AED;border-color:#7C3AED">Single</span>
+        <span class="sm-sum__type" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)">Single</span>
         <span class="sm-sum__count"><b>1</b> Seiten</span>
         <span class="sm-sum__vol"><span class="sm-sum__vol-sum">Σ</span> <b>40</b><small>/mo</small></span>
         <span class="sm-sum__chev">▾</span>
@@ -7176,7 +7176,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <div class="sm-body"><ul class="sm-page-list">
         <li class="sm-prow sm-prow--hub">
           <span class="sm-prow__num">82</span>
-          <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+          <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
           <div class="sm-prow__link">
             <span class="sm-prow__kw">agiles projektmanagement beratung</span>
             <span class="sm-prow__slug">/agiles-projektmanagement-beratung/</span>
@@ -7189,12 +7189,12 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     <details class="sm-card sm-card--service" data-sm-type="service" >
       <summary class="sm-sum">
         <span class="sm-sum__rank">12</span>
-        <span class="sm-sum__dot" style="background:#7C3AED"></span>
+        <span class="sm-sum__dot" style="background:var(--cx-charcoal-3)"></span>
         <span class="sm-sum__body">
           <span class="sm-sum__name">Agile Transformation</span>
           <span class="sm-sum__kw">agile transformation beratung</span>
         </span>
-        <span class="sm-sum__type" style="color:#7C3AED;border-color:#7C3AED">Single</span>
+        <span class="sm-sum__type" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)">Single</span>
         <span class="sm-sum__count"><b>1</b> Seiten</span>
         <span class="sm-sum__vol"><span class="sm-sum__vol-sum">Σ</span> <b>20</b><small>/mo</small></span>
         <span class="sm-sum__chev">▾</span>
@@ -7202,7 +7202,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <div class="sm-body"><ul class="sm-page-list">
         <li class="sm-prow sm-prow--hub">
           <span class="sm-prow__num">83</span>
-          <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+          <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
           <div class="sm-prow__link">
             <span class="sm-prow__kw">agile transformation beratung</span>
             <span class="sm-prow__slug">/agile-transformation-beratung/</span>
@@ -7215,12 +7215,12 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     <details class="sm-card sm-card--service" data-sm-type="service" >
       <summary class="sm-sum">
         <span class="sm-sum__rank">13</span>
-        <span class="sm-sum__dot" style="background:#7C3AED"></span>
+        <span class="sm-sum__dot" style="background:var(--cx-charcoal-3)"></span>
         <span class="sm-sum__body">
           <span class="sm-sum__name">Agile Coach</span>
           <span class="sm-sum__kw">agile coach beratung</span>
         </span>
-        <span class="sm-sum__type" style="color:#7C3AED;border-color:#7C3AED">Single</span>
+        <span class="sm-sum__type" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)">Single</span>
         <span class="sm-sum__count"><b>1</b> Seiten</span>
         <span class="sm-sum__vol"><span class="sm-sum__vol-sum">Σ</span> <b>20</b><small>/mo</small></span>
         <span class="sm-sum__chev">▾</span>
@@ -7228,7 +7228,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <div class="sm-body"><ul class="sm-page-list">
         <li class="sm-prow sm-prow--hub">
           <span class="sm-prow__num">84</span>
-          <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+          <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
           <div class="sm-prow__link">
             <span class="sm-prow__kw">agile coach beratung</span>
             <span class="sm-prow__slug">/agile-coach-beratung/</span>
@@ -7404,12 +7404,12 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
     <details class="sm-card sm-card--branchen" data-sm-type="branchen">
       <summary class="sm-sum">
         <span class="sm-sum__rank">B</span>
-        <span class="sm-sum__dot" style="background:#7C3AED"></span>
+        <span class="sm-sum__dot" style="background:var(--cx-charcoal-3)"></span>
         <span class="sm-sum__body">
           <span class="sm-sum__name" data-i18n="sm.c2.name">Branchen-Hubs (Cluster 2)</span>
           <span class="sm-sum__kw" data-i18n="sm.c2.kw">12 vertikale Anker für Branchen-Anfragen</span>
         </span>
-        <span class="sm-sum__type" style="color:#7C3AED;border-color:#7C3AED">Cluster 2</span>
+        <span class="sm-sum__type" style="color:var(--cx-charcoal-3);border-color:var(--cx-charcoal-3)">Cluster 2</span>
         <span class="sm-sum__count"><b>12</b> Seiten</span>
         <span class="sm-sum__vol"><span class="sm-sum__vol-sum">Σ</span> <b>300</b><small>/mo</small></span>
         <span class="sm-sum__chev">▾</span>
@@ -7417,7 +7417,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
       <div class="sm-body"><ul class="sm-page-list">
     <li class="sm-prow sm-prow--hub">
       <span class="sm-prow__num">87</span>
-      <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+      <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
       <div class="sm-prow__link">
         <span class="sm-prow__kw">beratung bauunternehmen digitalisierung</span>
         <span class="sm-prow__slug">/branchen/bauunternehmen/</span>
@@ -7428,7 +7428,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         </li>
     <li class="sm-prow sm-prow--hub">
       <span class="sm-prow__num">88</span>
-      <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+      <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
       <div class="sm-prow__link">
         <span class="sm-prow__kw">beratung logistik digitalisierung</span>
         <span class="sm-prow__slug">/branchen/logistik/</span>
@@ -7439,7 +7439,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         </li>
     <li class="sm-prow sm-prow--hub">
       <span class="sm-prow__num">89</span>
-      <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+      <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
       <div class="sm-prow__link">
         <span class="sm-prow__kw">beratung produktionsbetriebe industrie 4.0</span>
         <span class="sm-prow__slug">/branchen/produktion/</span>
@@ -7450,7 +7450,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         </li>
     <li class="sm-prow sm-prow--hub">
       <span class="sm-prow__num">90</span>
-      <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+      <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
       <div class="sm-prow__link">
         <span class="sm-prow__kw">beratung medizintechnik</span>
         <span class="sm-prow__slug">/branchen/medizintechnik/</span>
@@ -7461,7 +7461,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         </li>
     <li class="sm-prow sm-prow--hub">
       <span class="sm-prow__num">91</span>
-      <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+      <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
       <div class="sm-prow__link">
         <span class="sm-prow__kw">beratung it dienstleister</span>
         <span class="sm-prow__slug">/branchen/it-dienstleister/</span>
@@ -7472,7 +7472,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         </li>
     <li class="sm-prow sm-prow--hub">
       <span class="sm-prow__num">92</span>
-      <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+      <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
       <div class="sm-prow__link">
         <span class="sm-prow__kw">beratung energie versorger</span>
         <span class="sm-prow__slug">/branchen/energie-versorger/</span>
@@ -7483,7 +7483,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         </li>
     <li class="sm-prow sm-prow--hub">
       <span class="sm-prow__num">93</span>
-      <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+      <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
       <div class="sm-prow__link">
         <span class="sm-prow__kw">beratung finanzdienstleister</span>
         <span class="sm-prow__slug">/branchen/finanzdienstleister/</span>
@@ -7494,7 +7494,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         </li>
     <li class="sm-prow sm-prow--hub">
       <span class="sm-prow__num">94</span>
-      <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+      <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
       <div class="sm-prow__link">
         <span class="sm-prow__kw">beratung automotive</span>
         <span class="sm-prow__slug">/branchen/automotive/</span>
@@ -7505,7 +7505,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         </li>
     <li class="sm-prow sm-prow--hub">
       <span class="sm-prow__num">95</span>
-      <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+      <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
       <div class="sm-prow__link">
         <span class="sm-prow__kw">beratung mittelstand</span>
         <span class="sm-prow__slug">/branchen/mittelstand/</span>
@@ -7516,7 +7516,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         </li>
     <li class="sm-prow sm-prow--hub">
       <span class="sm-prow__num">96</span>
-      <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+      <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
       <div class="sm-prow__link">
         <span class="sm-prow__kw">beratung kmu</span>
         <span class="sm-prow__slug">/branchen/kmu/</span>
@@ -7527,7 +7527,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         </li>
     <li class="sm-prow sm-prow--hub">
       <span class="sm-prow__num">97</span>
-      <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+      <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
       <div class="sm-prow__link">
         <span class="sm-prow__kw">beratung e-commerce</span>
         <span class="sm-prow__slug">/branchen/e-commerce/</span>
@@ -7538,7 +7538,7 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
         </li>
     <li class="sm-prow sm-prow--hub">
       <span class="sm-prow__num">98</span>
-      <span class="sm-prow__kind" style="color:#7C3AED">Hub</span>
+      <span class="sm-prow__kind" style="color:var(--cx-charcoal-3)">Hub</span>
       <div class="sm-prow__link">
         <span class="sm-prow__kw">beratung öffentlicher sektor</span>
         <span class="sm-prow__slug">/branchen/oeffentlicher-sektor/</span>
@@ -7634,9 +7634,9 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 .pg-quick{padding:18px 22px;background:rgba(245,148,37,0.06);border-left:3px solid #F59425;font-size:0.875rem;line-height:1.65;color:var(--ink);margin-bottom:16px;border-radius:0 8px 8px 0}
 .pg-quick strong{color:var(--ink);font-weight:700}
 
-.pg-sitemap-link{padding:14px 22px;background:linear-gradient(90deg,rgba(124,58,237,0.06),rgba(124,58,237,0));border:1px solid rgba(124,58,237,0.22);border-left:3px solid #7C3AED;font-size:0.875rem;color:var(--ink);margin-bottom:32px;border-radius:0 8px 8px 0}
+.pg-sitemap-link{padding:14px 22px;background:linear-gradient(90deg,rgba(124,58,237,0.06),rgba(124,58,237,0));border:1px solid rgba(124,58,237,0.22);border-left:3px solid var(--cx-charcoal-3);font-size:0.875rem;color:var(--ink);margin-bottom:32px;border-radius:0 8px 8px 0}
 .pg-sitemap-link strong{color:var(--ink);font-weight:700}
-.pg-sitemap-link a{color:#7C3AED;font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;cursor:pointer}
+.pg-sitemap-link a{color:var(--cx-charcoal-3);font-weight:700;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;cursor:pointer}
 .pg-sitemap-link a:hover{color:#5B21B6}
 
 /* Sticky filter bar */
@@ -7708,15 +7708,15 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 .sm-section{background:linear-gradient(180deg,#faf6ec 0%,#fff 100%);color:var(--ink);padding:80px 0 60px;position:relative;overflow:hidden;border-top:1px solid var(--rule)}
 .sm-section::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 90% 0%,rgba(124,58,237,0.10) 0%,transparent 60%);pointer-events:none}
 .sm-section .wrap{position:relative;z-index:1}
-.sm-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;background:rgba(124,58,237,0.08);color:#7C3AED;border:1px solid rgba(124,58,237,0.28);border-radius:99px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase}
-.sm-eyebrow-icon{display:inline-flex;color:#7C3AED}
+.sm-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;background:rgba(124,58,237,0.08);color:var(--cx-charcoal-3);border:1px solid rgba(124,58,237,0.28);border-radius:99px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase}
+.sm-eyebrow-icon{display:inline-flex;color:var(--cx-charcoal-3)}
 .sm-back{position:fixed;left:24px;bottom:24px;z-index:60;display:inline-flex;align-items:center;gap:10px;padding:11px 18px 11px 14px;background:#fff;color:var(--ink);border:1px solid var(--rule);border-radius:99px;font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;box-shadow:0 14px 32px -14px rgba(0,0,0,0.22),0 4px 10px -4px rgba(0,0,0,0.10);transition:background 0.3s ease,border-color 0.3s ease,transform 0.3s ease,box-shadow 0.3s ease,color 0.3s ease}
 .sm-back:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateX(-3px);box-shadow:0 22px 44px -16px rgba(0,0,0,0.32),0 6px 14px -4px rgba(0,0,0,0.16)}
-.sm-back__icon{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:rgba(124,58,237,0.12);color:#7C3AED;border-radius:50%;transition:background 0.3s ease,color 0.3s ease}
+.sm-back__icon{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:rgba(124,58,237,0.12);color:var(--cx-charcoal-3);border-radius:50%;transition:background 0.3s ease,color 0.3s ease}
 .sm-back:hover .sm-back__icon{background:rgba(255,255,255,0.18);color:#fff}
 @media(max-width:760px){.sm-back{font-size:10px;padding:10px 14px 10px 10px;gap:8px;left:14px;bottom:14px}.sm-back__icon{width:20px;height:20px}}
 .sm-h{font-family:var(--display);font-weight:800;line-height:1.04;letter-spacing:-0.03em;font-size:clamp(2rem,4vw,3.25rem);margin:24px 0 18px;max-width:24ch}
-.sm-h em{color:#7C3AED;background:none;-webkit-text-fill-color:#7C3AED;font-style:normal;font-weight:800}
+.sm-h em{color:var(--cx-charcoal-3);background:none;-webkit-text-fill-color:var(--cx-charcoal-3);font-style:normal;font-weight:800}
 .sm-lead{color:var(--ink-soft);font-size:clamp(1rem,1.2vw,1.125rem);line-height:1.65;max-width:74ch;margin:0}
 .sm-list-section{background:#fff;padding:40px 0 100px;color:var(--ink)}
 .sm-bar{display:flex;align-items:center;gap:14px;padding:14px 18px;background:#faf6ec;border:1px solid var(--rule);margin-bottom:18px;flex-wrap:wrap;border-radius:8px}
@@ -7729,18 +7729,18 @@ body.is-reading .jump-cta-wrap{opacity:0;transform:translateX(-50%) translateY(1
 .sm-bar__toggle[data-state="all-open"] .sm-bar__toggle-icon{transform:rotate(180deg)}
 @media(max-width:760px){.sm-bar__toggle-wrap{margin-left:0;width:100%;justify-content:flex-end}}
 .sm-bar__search{flex:1;min-width:200px;max-width:360px;padding:9px 14px;border:1px solid var(--rule);background:#fff;font-family:var(--font-sans);font-size:0.875rem;color:var(--ink);border-radius:6px}
-.sm-bar__search:focus{outline:none;border-color:#7C3AED;box-shadow:0 0 0 3px rgba(124,58,237,0.12)}
+.sm-bar__search:focus{outline:none;border-color:var(--cx-charcoal-3);box-shadow:0 0 0 3px rgba(124,58,237,0.12)}
 .sm-bar__actions{display:flex;gap:6px;flex-wrap:wrap}
 .sm-bar__pill{padding:7px 12px;background:#fff;border:1px solid var(--rule);font-size:0.75rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:6px;color:var(--ink);border-radius:99px;font-family:var(--font-sans)}
 .sm-bar__pill b{font-family:var(--mono);font-size:0.625rem;padding:2px 6px;background:rgba(0,0,0,0.06);font-weight:700;border-radius:99px}
 .sm-bar__pill:hover{border-color:var(--ink)}
-.sm-bar__pill.is-active{background:#7C3AED;color:#fff;border-color:#7C3AED}
+.sm-bar__pill.is-active{background:var(--cx-charcoal-3);color:#fff;border-color:var(--cx-charcoal-3)}
 .sm-bar__pill.is-active b{background:rgba(255,255,255,0.18);color:#fff}
 .sm-list{display:flex;flex-direction:column;gap:10px}
 .sm-card{background:#fff;border:1px solid var(--rule);border-left:3px solid;border-radius:8px;overflow:hidden;transition:box-shadow 0.4s}
 .sm-card.is-hidden{display:none}
 .sm-card.sm-card--service{border-left-color:#F59425}
-.sm-card.sm-card--branchen{border-left-color:#7C3AED}
+.sm-card.sm-card--branchen{border-left-color:var(--cx-charcoal-3)}
 .sm-card[open]{box-shadow:0 8px 20px -16px rgba(0,0,0,0.12)}
 .sm-sum{display:grid;grid-template-columns:32px 12px 1fr auto auto auto 18px;gap:14px;align-items:center;padding:20px 22px;cursor:pointer;list-style:none;background:linear-gradient(180deg,#faf6ec,rgba(250,246,236,0.6));border-bottom:1px solid transparent;transition:background 0.3s ease,border-color 0.3s ease}
 .sm-sum::-webkit-details-marker{display:none}
@@ -8456,7 +8456,7 @@ html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP
       t('[data-i18n-html="pg.cover.title"]', 'Ihre Website,<br><em>nach Nachfrage gebaut.</em>'),
       t('[data-i18n="pg.cover.lead"]', 'Jede Seite auf der neuen cx-experts.de steht hier, weil echte Käufer im DACH-Raum aktiv nach dem suchen, was CX liefert. Das hier ist die Auswahl — Sie geben frei, wir bauen.'),
       t('[data-i18n="pg.cover.metaA.label"]', 'Vorbereitet für'),
-      t('[data-i18n="pg.cover.metaA.val"]', 'Johannes · CX-Experts'),
+      t('[data-i18n="pg.cover.metaA.val"]', 'Johannes · CEx'),
       t('[data-i18n="pg.cover.metaB.label"]', 'Vorbereitet von'),
       t('[data-i18n="pg.cover.metaB.val"]', 'Digital Movement UK'),
       t('[data-i18n="pg.cover.metaC.label"]', 'Datum'),
@@ -9366,7 +9366,7 @@ html[lang="en"] .sm-body::before{content:"INDIVIDUAL LANDING PAGES IN THIS GROUP
       t('[data-i18n-html="pg.cover.title"]', 'Your website,<br><em>mapped to demand.</em>'),
       t('[data-i18n="pg.cover.lead"]', 'Every page on the new cx-experts.de is here because real buyers across DACH are actively searching for what CX delivers. This is the menu — sign off and we build.'),
       t('[data-i18n="pg.cover.metaA.label"]', 'Prepared for'),
-      t('[data-i18n="pg.cover.metaA.val"]', 'Johannes · CX-Experts'),
+      t('[data-i18n="pg.cover.metaA.val"]', 'Johannes · CEx'),
       t('[data-i18n="pg.cover.metaB.label"]', 'Prepared by'),
       t('[data-i18n="pg.cover.metaB.val"]', 'Digital Movement UK'),
       t('[data-i18n="pg.cover.metaC.label"]', 'Date'),
