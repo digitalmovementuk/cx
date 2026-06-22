@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" font-family="Inter, Arial, sans-serif" role="img" aria-label="Projektablauf eines Architektur-Vorhabens in fünf Meilensteinen: Scoping, Dokumentation, Analyse, Planung, Verankern — mit dem Artefakt je Meilenstein">
+  <rect width="1000" height="360" fill="#ffffff"/>
+  <style>
+    .phase{fill:#1E2327;font-weight:800;font-size:16px}
+    .art{fill:#6b665c;font-size:12.5px}
+    .axis{stroke:#e6e1d8;stroke-width:6;stroke-linecap:round}
+    .prog{stroke:#FF7A00;stroke-width:6;stroke-linecap:round}
+    .node{fill:#FF7A00}
+    .nodetxt{fill:#1E2327;font-weight:800;font-size:14px}
+    .gate{fill:#9a3412;font-size:10px;font-weight:700;letter-spacing:.04em}
+    .foot{fill:#1E2327;font-weight:700;font-size:13px}
+    .footsub{fill:#6b665c;font-size:12.5px}
+  </style>
+
+  <!-- axis -->
+  <line x1="130" y1="168" x2="870" y2="168" class="axis"/>
+  <line x1="130" y1="168" x2="870" y2="168" class="prog"/>
+
+  <!-- decision-gate hints between milestones -->
+  <text x="222" y="150" text-anchor="middle" class="gate">▸ ENTSCHEIDUNG</text>
+  <text x="407" y="150" text-anchor="middle" class="gate">▸ ENTSCHEIDUNG</text>
+  <text x="592" y="150" text-anchor="middle" class="gate">▸ ENTSCHEIDUNG</text>
+  <text x="777" y="150" text-anchor="middle" class="gate">▸ ENTSCHEIDUNG</text>
+
+  <!-- 1 Scoping -->
+  <text x="130" y="108" text-anchor="middle" class="phase">Scoping</text>
+  <circle cx="130" cy="168" r="19" class="node"/><text x="130" y="173" text-anchor="middle" class="nodetxt">1</text>
+  <text x="130" y="214" text-anchor="middle" class="art">Scoping-Bericht</text>
+  <text x="130" y="231" text-anchor="middle" class="art">+ Empfehlung</text>
+
+  <!-- 2 Dokumentation -->
+  <text x="315" y="108" text-anchor="middle" class="phase">Dokumentation</text>
+  <circle cx="315" cy="168" r="19" class="node"/><text x="315" y="173" text-anchor="middle" class="nodetxt">2</text>
+  <text x="315" y="214" text-anchor="middle" class="art">Ist-Landkarte</text>
+  <text x="315" y="231" text-anchor="middle" class="art">im Werkzeug</text>
+
+  <!-- 3 Analyse -->
+  <text x="500" y="108" text-anchor="middle" class="phase">Analyse</text>
+  <circle cx="500" cy="168" r="19" class="node"/><text x="500" y="173" text-anchor="middle" class="nodetxt">3</text>
+  <text x="500" y="214" text-anchor="middle" class="art">Schwachstellen-</text>
+  <text x="500" y="231" text-anchor="middle" class="art">Befund</text>
+
+  <!-- 4 Planung -->
+  <text x="685" y="108" text-anchor="middle" class="phase">Planung</text>
+  <circle cx="685" cy="168" r="19" class="node"/><text x="685" y="173" text-anchor="middle" class="nodetxt">4</text>
+  <text x="685" y="214" text-anchor="middle" class="art">Zielarchitektur</text>
+  <text x="685" y="231" text-anchor="middle" class="art">+ Roadmap</text>
+
+  <!-- 5 Verankern -->
+  <text x="870" y="108" text-anchor="middle" class="phase">Verankern</text>
+  <circle cx="870" cy="168" r="19" class="node"/><text x="870" y="173" text-anchor="middle" class="nodetxt">5</text>
+  <text x="870" y="214" text-anchor="middle" class="art">Governance</text>
+  <text x="870" y="231" text-anchor="middle" class="art">+ Betrieb</text>
+
+  <!-- footer band -->
+  <line x1="130" y1="290" x2="870" y2="290" stroke="#e6e1d8" stroke-width="1.5"/>
+  <text x="130" y="320" class="foot">Einzeln beauftragbar — Sie entscheiden nach jeder Phase.</text>
+  <text x="870" y="320" text-anchor="end" class="footsub">Strategischer Horizont: 1–5 Jahre</text>
+</svg>
