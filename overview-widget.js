@@ -1,5 +1,5 @@
 /* ============================================================================
-   CX-Experts — TEMPORARY client overview widget
+   CEx — TEMPORARY client overview widget
    A centered pill in the sticky top bar (red pulsing LIVE dot) → opens a branded
    table of the priority pages with Volumen · KD · LOS · EYS · Anfragen/Mt. (12 Mt.)
    and per-page LIVE status. Data: overview-data.json (refreshed daily 08:00 WITA by
@@ -100,7 +100,7 @@
       '<div class="ov-modal" role="dialog" aria-label="SEO-Projekt Überblick">' +
         '<div class="ov-head">' +
           '<button class="ov-x" aria-label="Schließen">×</button>' +
-          '<div class="ov-kick">CX-Experts · SEO-Projekt · Live-Überblick</div>' +
+          '<div class="ov-kick">CEx · SEO-Projekt · Live-Überblick</div>' +
           '<div class="ov-h">Prioritätsseiten — Volumen, Aufwand & erwartete Anfragen</div>' +
           '<div class="ov-sub">Zuletzt synchronisiert: ' + (data.synced_at || "—") + '  ·  täglich 08:00 WITA</div>' +
           '<div class="ov-stats">' +
