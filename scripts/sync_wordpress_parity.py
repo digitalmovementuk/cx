@@ -358,7 +358,7 @@ def normalize_founder_schema(text: str) -> str:
 
 def sync_page(path: Path) -> None:
     text = path.read_text(encoding="utf-8")
-    text = re.sub(r'<script\b[^>]+src=["\'][^"\']*(?:overview-widget|cookie-consent)\.js[^"\']*["\'][^>]*>\s*</script>', "", text, flags=re.I)
+    text = re.sub(r'<script\b[^>]+src=["\'][^"\']*(?:cookie-consent)\.js[^"\']*["\'][^>]*>\s*</script>', "", text, flags=re.I)
     text = re.sub(r'<script\b[^>]*>\s*window\.CEX_DS_PATH=.*?</script>', "", text, flags=re.I | re.S)
 
     override = LEGAL_OVERRIDES.get(path)
@@ -425,14 +425,6 @@ def main() -> None:
         raise SystemExit("Missing public pages: " + ", ".join(missing))
     for path in PUBLIC:
         sync_page(path)
-    # Remove the public widget include from any internal/noindex artefact too.
-    for path in ROOT.rglob("*.html"):
-        if any(part in {".git", "_audit", "_gate-compare"} for part in path.parts):
-            continue
-        text = path.read_text(encoding="utf-8")
-        clean = re.sub(r'<script\b[^>]+src=["\'][^"\']*overview-widget\.js[^"\']*["\'][^>]*>\s*</script>', "", text, flags=re.I)
-        if clean != text:
-            path.write_text(clean, encoding="utf-8")
     sitemap = ROOT / 'sitemap.xml'
     if sitemap.exists():
         xml = sitemap.read_text(encoding='utf-8')
