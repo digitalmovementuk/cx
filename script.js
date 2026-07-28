@@ -7,6 +7,10 @@ const contactForm = document.getElementById('contact');
 const formStatus = document.getElementById('form-status');
 const navLinks = Array.from(document.querySelectorAll('.nav__links a'));
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const isStaticCExSite = document.body.classList.contains('cex-static-site');
+const cexScriptUrl = document.currentScript?.src || window.location.href;
+const privacyPageUrl = isStaticCExSite ? new URL('datenschutz.html', cexScriptUrl).href : '/datenschutz/';
+const imprintPageUrl = isStaticCExSite ? new URL('impressum.html', cexScriptUrl).href : '/impressum/';
 const consentStorageKey = 'cxPrivacyConsent.v1';
 const consentDefaults = {
   necessary: true,
@@ -83,7 +87,11 @@ function openConsentDialog() {
   setConsentChoices(stored?.categories || consentDefaults);
   dialog.hidden = false;
   document.body.classList.add('has-privacy-dialog');
-  requestAnimationFrame(() => dialog.querySelector('.privacy-consent__primary')?.focus());
+  requestAnimationFrame(() => {
+    const panel = dialog.querySelector('.privacy-consent__panel');
+    if (panel) panel.scrollTop = 0;
+    dialog.querySelector('.privacy-consent__close')?.focus({ preventScroll: true });
+  });
 }
 
 function injectConsentDialog() {
@@ -105,8 +113,8 @@ function injectConsentDialog() {
               welche Kategorien möglich wären. Optionale Kategorien bleiben aus, bis Sie zustimmen.
             </p>
             <div class="privacy-consent__links" aria-label="Rechtliche Links">
-              <a href="./datenschutz.html">Datenschutz</a>
-              <a href="./impressum.html">Impressum</a>
+              <a href="${privacyPageUrl}">Datenschutz</a>
+              <a href="${imprintPageUrl}">Impressum</a>
             </div>
           </div>
 
@@ -235,6 +243,12 @@ window.addEventListener('resize', updateHeroMotion);
 
 injectConsentDialog();
 
+window.CExCookies = {
+  open: openConsentDialog,
+  close: closeConsentDialog,
+  read: readConsent,
+};
+
 if (!readConsent()) {
   openConsentDialog();
 }
@@ -245,6 +259,42 @@ document.addEventListener('click', (event) => {
     openConsentDialog();
   }
 });
+
+// GitHub Pages cannot run the WordPress REST endpoint. On the static preview,
+// open a pre-filled email in the visitor's mail program; WordPress binds the
+// same visual forms to its private REST/API storage instead.
+if (isStaticCExSite) {
+  document.querySelectorAll('form[data-cex-static-contact]').forEach((form) => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const status = form.querySelector('.cex-form-status');
+      const honeypot = form.querySelector('[name="website"]');
+      if (honeypot?.value) {
+        if (status) status.textContent = 'Vielen Dank. Ihre Anfrage wurde vorbereitet.';
+        return;
+      }
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const labels = {
+        name: 'Name', email: 'E-Mail', phone: 'Telefon', company: 'Unternehmen',
+        unternehmen: 'Unternehmen', subject: 'Thema', message: 'Nachricht',
+        nachricht: 'Nachricht', service: 'Leistung', challenge: 'Anliegen'
+      };
+      const lines = [];
+      new FormData(form).forEach((value, key) => {
+        if (key === 'website' || value instanceof File || !String(value).trim()) return;
+        lines.push(`${labels[key.toLowerCase()] || key}: ${String(value).trim()}`);
+      });
+      const subject = `CEx Anfrage – ${document.querySelector('h1')?.textContent.trim() || document.title}`;
+      const body = `${lines.join('\n')}\n\nGesendet von: ${window.location.href}`;
+      if (status) status.textContent = 'Ihr E-Mail-Programm wird geöffnet.';
+      window.location.href = `mailto:kontakt@cex.koeln?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  });
+}
 
 if (hero && !prefersReducedMotion.matches) {
   hero.addEventListener(
@@ -375,7 +425,7 @@ const caseStudies = [
     challenge:
       'Fachbereiche erwarten schnelle Ergebnisse, IT muss bestehende Systeme schützen, mehrere Initiativen konkurrieren um Ressourcen und der konkrete Nutzen ist noch nicht messbar.',
     focus:
-      'CX klärt Zielbild, Ist-IT-Architektur und Prozesslandschaft, priorisiert Maßnahmen im Backlog und plant die Umsetzung in Wellen mit Reviews und Hypercare.',
+      'CEx klärt Zielbild, Ist-IT-Architektur und Prozesslandschaft, priorisiert Maßnahmen im Backlog und plant die Umsetzung in Wellen mit Reviews und Hypercare.',
     change:
       'Aus einem großen Vorhaben wird ein steuerbares Programm mit klarer Reihenfolge, Verantwortlichen und messbaren Zwischenergebnissen.',
     stats: [
@@ -392,7 +442,7 @@ const caseStudies = [
     challenge:
       'Einzelne Teams testen Tools, aber Datenzugriff, Rechte, Qualität, Haftung, Prozessintegration und Akzeptanz sind noch nicht belastbar geklärt.',
     focus:
-      'CX bewertet Anwendungsfälle, Datenbasis, Berechtigungen, Risiken, Governance und Betriebsmodell und übersetzt geeignete Ideen in Pilot, Rollout und Change-Plan.',
+      'CEx bewertet Anwendungsfälle, Datenbasis, Berechtigungen, Risiken, Governance und Betriebsmodell und übersetzt geeignete Ideen in Pilot, Rollout und Change-Plan.',
     change:
       'KI wird vom Experiment zu einer nutzbaren Arbeitsweise mit klaren Grenzen, messbarem Nutzen und realistischen Voraussetzungen.',
     stats: [
@@ -409,7 +459,7 @@ const caseStudies = [
     challenge:
       'Abläufe dauern zu lange, Entscheidungen wandern durch zu viele Schleifen, Risiken werden spät sichtbar und Teams sind beschäftigt, ohne dass Fortschritt sicher greifbar wird.',
     focus:
-      'CX verbindet Prozessaufnahme, Kennzahlen, Rollen, PMO, Projektstruktur, Backlog, Eskalationswege und Review-Takt zu einem arbeitsfähigen Steuerungsmodell.',
+      'CEx verbindet Prozessaufnahme, Kennzahlen, Rollen, PMO, Projektstruktur, Backlog, Eskalationswege und Review-Takt zu einem arbeitsfähigen Steuerungsmodell.',
     change:
       'Prozesse werden messbar verbessert, Projekte werden lesbarer geführt und Entscheidungen können früher getroffen werden.',
     stats: [
@@ -426,7 +476,7 @@ const caseStudies = [
     challenge:
       'Neue Systeme, alte Schnittstellen, ungeklärte Verantwortlichkeiten und hohe Change-Belastung treffen aufeinander. Strategie und Alltag passen nicht mehr sauber zusammen.',
     focus:
-      'CX verbindet Enterprise Architecture, Change Management und Governance: Zielarchitektur, Roadmap, Stakeholder, Kommunikation, Training und Betriebsübergabe.',
+      'CEx verbindet Enterprise Architecture, Change Management und Governance: Zielarchitektur, Roadmap, Stakeholder, Kommunikation, Training und Betriebsübergabe.',
     change:
       'Architekturentscheidungen, Veränderungsarbeit und Umsetzung folgen derselben Richtung. Das reduziert Reibung zwischen Fachseite, IT, Führung und Betrieb.',
     stats: [
@@ -538,23 +588,6 @@ document.querySelectorAll('.outcomes__tab').forEach((button) => {
   });
 });
 
-document.querySelectorAll('form.form').forEach((f) => {
-  if (f === contactForm) return;
-  f.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const st = f.querySelector('.form__status');
-    if (st) st.textContent = 'Vorschau-Modus: Es wurden keine Daten übertragen.';
-  });
-});
-
-if (contactForm && formStatus) {
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    formStatus.textContent =
-      'Danke. In dieser lokalen Vorschau wurden keine Daten versendet oder gespeichert.';
-  });
-}
-
 /* ============================================================
  * Trust band: duplicate items so the marquee loops seamlessly
  * ========================================================== */
@@ -571,6 +604,55 @@ if (contactForm && formStatus) {
     clone.setAttribute('aria-hidden', 'true');
     items.parentNode.appendChild(clone);
   }
+})();
+
+// Paint the lightweight hero poster first, then start the decorative video.
+(function () {
+  const video = document.querySelector('.hero__video');
+  const source = video && video.querySelector('source[data-src]');
+  if (!video || !source || window.matchMedia('(prefers-reduced-motion: reduce)').matches || navigator.connection?.saveData) return;
+  const start = function () {
+    if (!source.dataset.src) return;
+    ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach(function (eventName) {
+      window.removeEventListener(eventName, start);
+    });
+    source.src = source.dataset.src;
+    source.removeAttribute('data-src');
+    video.load();
+    video.play().catch(function () {});
+  };
+  ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach(function (eventName) {
+    window.addEventListener(eventName, start, { once: true, passive: true });
+  });
+  window.addEventListener('load', function () { window.setTimeout(start, 15000); }, { once: true });
+})();
+
+// Load decorative capability-card video only shortly before its card enters
+// view. This avoids downloading several large files during the first paint.
+(function () {
+  const videos = Array.from(document.querySelectorAll('.cap-card__video'));
+  if (!videos.length) return;
+  const mayAnimate = !window.matchMedia('(prefers-reduced-motion: reduce)').matches && !navigator.connection?.saveData;
+  const load = function (video) {
+    const source = video.querySelector('source[data-src]');
+    if (!source || !source.dataset.src) return;
+    source.src = source.dataset.src;
+    source.removeAttribute('data-src');
+    video.load();
+    if (mayAnimate) video.play().catch(function () {});
+  };
+  if (!('IntersectionObserver' in window)) {
+    videos.forEach(load);
+    return;
+  }
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      load(entry.target);
+      observer.unobserve(entry.target);
+    });
+  }, { rootMargin: '500px 0px' });
+  videos.forEach(function (video) { observer.observe(video); });
 })();
 
 /* ============================================================
@@ -699,7 +781,7 @@ if (contactForm && formStatus) {
   });
   scrim.addEventListener('click', close);
   document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-  drawer.querySelectorAll('.cx-drawer__link, .cx-drawer__cta').forEach(a => {
+  drawer.querySelectorAll('.cx-drawer__link, .cx-drawer__cta, .cx-drawer__jump').forEach(a => {
     a.addEventListener('click', () => setTimeout(close, 0));
   });
 })();

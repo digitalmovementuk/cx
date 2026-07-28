@@ -1,0 +1,753 @@
+/* CEx WordPress final visual-system layer — loaded after all migrated page CSS. */
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-latin-400-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-latin-500-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-latin-600-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-latin-700-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/inter-latin-800-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
+body.cex-migrated-page {
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --container: 1280px;
+  --container-px: clamp(24px, 5vw, 72px);
+  --section-py: clamp(88px, 8vw, 112px);
+  min-width: 320px;
+  font-family: var(--font-sans);
+  font-size: 16px !important;
+  line-height: 1.6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+.cex-migrated-page .nav__inner {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+}
+.cex-migrated-page .nav__brand img {
+  width: 120px !important;
+  height: 48px !important;
+  object-fit: contain;
+}
+
+/* Keep the shared header CTA readable even when legacy page styles collide. */
+.cex-migrated-page .nav .nav__desktop-cta {
+  background: #1e2327 !important;
+  border-color: #1e2327 !important;
+  color: #faf6ec !important;
+}
+.cex-migrated-page .nav .nav__desktop-cta:hover,
+.cex-migrated-page .nav .nav__desktop-cta:focus-visible {
+  background: #f4cf5d !important;
+  border-color: #f4cf5d !important;
+  color: #1e2327 !important;
+}
+
+/* Dark sections use one accessible heading/lead treatment on every page. */
+.cex-migrated-page .section--dark .eyebrow {
+  color: #fff !important;
+}
+.cex-migrated-page .section--dark .h-lead {
+  color: rgba(255, 255, 255, 0.86) !important;
+}
+
+.cex-migrated-page .h-section,
+.cex-migrated-page .cx-trust__h {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 3.65vw, 3.25rem) !important;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.cex-migrated-page .h-lead,
+.cex-migrated-page .cx-trust__lead {
+  font-size: clamp(1.0625rem, 1.25vw, 1.1875rem);
+  line-height: 1.6;
+}
+.cex-migrated-page :is(.service-card, .problem-card, .use-card, .industry-card, .diff-item, .method-step) h3 {
+  font-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+.cex-migrated-page :is(.service-card, .problem-card, .use-card, .industry-card, .diff-item, .method-step) p,
+.cex-migrated-page .legal-card p,
+.cex-migrated-page .legal-card li {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.cex-migrated-page .section__head {
+  max-width: 960px;
+  margin-bottom: clamp(36px, 4vw, 56px);
+}
+.cex-migrated-page main figure img {
+  border-radius: 14px !important;
+}
+.cex-migrated-page .cex-page-visual {
+  width: 100%;
+  max-width: var(--container);
+  margin: clamp(32px, 4vw, 48px) auto 0;
+  padding-inline: var(--container-px);
+}
+.cex-migrated-page .cex-page-visual img {
+  width: 100%;
+  max-width: 100%;
+  height: clamp(300px, 34vw, 520px);
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 24px 60px -32px rgba(30, 35, 39, 0.4);
+}
+body.cex-migrated-page.home > main > .cex-page-visual {
+  max-width: none;
+  margin-top: 0;
+  padding-inline: 0;
+}
+body.cex-migrated-page.home > main > .cex-page-visual img {
+  height: clamp(260px, 32vw, 460px);
+  border-radius: 0 !important;
+}
+
+.cex-migrated-page :is(.btn, .cx-form__submit, .cx-hero-form button[type="submit"]) {
+  min-height: 48px;
+  border-radius: 8px !important;
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+.cex-migrated-page form :is(input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]), select) {
+  min-height: 48px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+.cex-migrated-page form textarea {
+  min-height: 96px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+.cex-migrated-page :is(.form__consent, .cx-form__consent, .cx-hero-form label) {
+  font-size: 0.75rem !important;
+  line-height: 1.5 !important;
+}
+.cex-migrated-page :is(input, textarea, select, button, a):focus-visible {
+  outline: 3px solid #ff7a00;
+  outline-offset: 3px;
+}
+.cex-migrated-page .cex-honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  min-height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+.cex-migrated-page .cex-form-status {
+  min-height: 1.5em;
+  margin: 10px 0 0;
+  color: currentColor;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+/* Final accessibility overrides shared by static HTML and WordPress. */
+.cex-migrated-page .cx-form__eyebrow {
+  color: #08704f !important;
+}
+.cex-migrated-page .cx-hero-form > label > span > a[href*="datenschutz"] {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.cex-migrated-page .cross-link__tag {
+  color: #7b3700 !important;
+}
+.cex-migrated-page #cxMenuToggle,
+.cex-migrated-page .cx-menu-btn,
+.cex-migrated-page button.footer__cookie {
+  min-height: 44px !important;
+}
+.cex-migrated-page #cxMenuToggle,
+.cex-migrated-page .cx-menu-btn {
+  min-width: 44px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.cex-migrated-page button.footer__cookie {
+  padding-block: 7px !important;
+}
+
+/* Service-page hero: one gutter, one type scale, compact enough for a laptop. */
+@media (min-width: 921px) {
+  body.cex-migrated-page:not(.home) .hero {
+    display: block;
+    min-height: calc(100dvh - 64px);
+    padding: clamp(48px, 6vh, 68px) 0 clamp(30px, 4vh, 48px);
+  }
+  body.cex-migrated-page:not(.home) .hero > .container {
+    width: 100%;
+  }
+  body.cex-migrated-page:not(.home) .hero__grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(390px, 0.8fr);
+    gap: clamp(28px, 3vw, 44px);
+    max-width: none;
+    margin: 0 0 24px;
+    padding: 0;
+    align-items: center;
+  }
+  body.cex-migrated-page:not(.home) .hero__copy {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    max-width: none;
+    text-align: left;
+  }
+  body.cex-migrated-page:not(.home) .hero__eyebrow {
+    margin: 0 0 14px;
+  }
+  body.cex-migrated-page:not(.home) .hero__title {
+    max-width: none;
+    margin: 0 0 18px;
+    font-size: clamp(3rem, 3.8vw, 3.625rem);
+    font-weight: 800;
+    line-height: 1.03;
+    letter-spacing: -0.042em;
+    text-transform: none;
+    overflow-wrap: break-word;
+    word-break: normal;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+    text-wrap: balance;
+  }
+  body.cex-migrated-page:not(.home) .hero__lead {
+    max-width: 64ch;
+    margin: 0 0 22px;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+  }
+  body.cex-migrated-page:not(.home) .hero__cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  body.cex-migrated-page:not(.home) .hero__cta-row .btn {
+    padding: 13px 20px;
+  }
+  body.cex-migrated-page:not(.home) .hero__form-col {
+    align-items: center;
+  }
+  body.cex-migrated-page:not(.home) .hero__form-col .cx-hero-form {
+    width: 100% !important;
+    max-width: 500px !important;
+    margin: 0 !important;
+    padding: 16px !important;
+    border-radius: 14px !important;
+  }
+  body.cex-migrated-page:not(.home) .cx-hero-form :is(input:not([type="checkbox"]), textarea, button) {
+    min-height: 44px !important;
+  }
+  body.cex-migrated-page:not(.home) .cx-hero-form textarea {
+    min-height: 72px !important;
+  }
+  body.cex-migrated-page:not(.home) .hero__trust {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 921px) and (max-height: 820px) {
+  body.cex-migrated-page:not(.home) .hero {
+    padding-top: 38px;
+    padding-bottom: 26px;
+  }
+  body.cex-migrated-page:not(.home) .hero__grid {
+    margin-bottom: 18px;
+  }
+  body.cex-migrated-page:not(.home) .hero__title {
+    margin-bottom: 14px;
+    font-size: clamp(2.75rem, 3.45vw, 3.25rem);
+  }
+  body.cex-migrated-page:not(.home) .hero__lead {
+    margin-bottom: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  body.cex-migrated-page:not(.home) .hero__form-col .cx-hero-form {
+    padding: 13px 14px !important;
+  }
+  body.cex-migrated-page:not(.home) .hero__form-col .cx-hero-form > span:first-child {
+    margin-bottom: 7px !important;
+  }
+  body.cex-migrated-page:not(.home) .cx-hero-form textarea {
+    min-height: 56px !important;
+  }
+  body.cex-migrated-page:not(.home) .hero__trust {
+    padding-top: 16px;
+  }
+}
+
+@media (min-width: 921px) and (max-width: 1599px) {
+  .cex-migrated-page .method {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  .cex-migrated-page .method .method-step {
+    min-width: 0;
+    padding: 28px 24px;
+  }
+}
+
+/* Homepage hero actions: the enquiry action is primary on every screen. */
+.cex-migrated-page .hero__cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.cex-migrated-page .hero__cta-group .hero__cta {
+  min-height: 48px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 8px;
+}
+.cex-migrated-page .hero__cta-group .hero__cta--primary {
+  color: #1e2327;
+  background: #ff7a00;
+  border-color: #ff7a00;
+  font-weight: 700;
+}
+.cex-migrated-page .hero__cta-group .hero__cta--primary .hero__cta-icon {
+  color: #fff;
+  background: #1e2327;
+}
+
+/* Legal/support pages use the same scale and readable body size. */
+.cex-migrated-page .legal-hero {
+  padding: clamp(88px, 10vw, 128px) 0 clamp(48px, 6vw, 72px);
+}
+.cex-migrated-page .legal-hero__title {
+  font-size: clamp(2.75rem, 4.5vw, 3.625rem);
+  font-weight: 800;
+}
+.cex-migrated-page .legal-hero__lead {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+.cex-migrated-page .legal-inline-button {
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+/* Static service pages do not load the homepage stylesheet. Keep the shared
+   consent dialog fully functional and out of the document flow here too. */
+.cex-migrated-page .privacy-consent {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+}
+.cex-migrated-page .privacy-consent[hidden] {
+  display: none !important;
+}
+body.cex-migrated-page.has-privacy-dialog {
+  overflow: hidden;
+}
+.cex-migrated-page .privacy-consent__panel {
+  position: relative;
+  width: min(100%, 640px);
+  max-height: 90dvh;
+  overflow-y: auto;
+  padding: clamp(24px, 4vw, 40px);
+  background: #fff;
+  color: var(--cx-charcoal);
+  border: 1px solid var(--line);
+  box-shadow: 0 28px 80px -30px rgba(0, 0, 0, 0.72);
+  scrollbar-gutter: stable;
+}
+.cex-migrated-page .privacy-consent__panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--cx-yellow);
+}
+.cex-migrated-page .privacy-consent__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.cex-migrated-page .privacy-consent__close:hover {
+  background: var(--cx-yellow);
+  color: var(--cx-charcoal);
+}
+.cex-migrated-page .privacy-consent__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--cx-charcoal);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.cex-migrated-page .privacy-consent__eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 3px;
+  background: var(--cx-yellow);
+}
+.cex-migrated-page .privacy-consent__content h2 {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.cex-migrated-page .privacy-consent__content p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+.cex-migrated-page .privacy-consent__links {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-size: 0.8125rem;
+}
+.cex-migrated-page .privacy-consent__links a {
+  color: var(--cx-charcoal);
+  text-decoration: underline;
+  text-decoration-color: var(--cx-yellow);
+  text-underline-offset: 3px;
+}
+.cex-migrated-page .privacy-consent__options {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+  border-top: 1px solid var(--line);
+}
+.cex-migrated-page .privacy-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.cex-migrated-page .privacy-option strong,
+.cex-migrated-page .privacy-option small {
+  display: block;
+}
+.cex-migrated-page .privacy-option strong {
+  color: var(--cx-charcoal);
+  font-size: 0.9375rem;
+}
+.cex-migrated-page .privacy-option small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+.cex-migrated-page .privacy-option input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  accent-color: var(--cx-yellow);
+}
+.cex-migrated-page .privacy-option--locked input[type="checkbox"] {
+  opacity: 0.6;
+}
+.cex-migrated-page .privacy-consent__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cex-migrated-page .privacy-consent__actions button {
+  flex: 1 1 160px;
+  padding: 12px 16px;
+  border: 1px solid var(--cx-charcoal);
+  background: #fff;
+  color: var(--cx-charcoal);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.cex-migrated-page .privacy-consent__secondary:hover {
+  background: var(--cx-charcoal);
+  color: #fff;
+}
+.cex-migrated-page .privacy-consent__primary {
+  background: var(--cx-yellow) !important;
+  border-color: var(--cx-yellow) !important;
+  color: var(--cx-charcoal) !important;
+}
+.cex-migrated-page .privacy-consent__close,
+.cex-migrated-page .privacy-consent__actions button {
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 8px;
+}
+
+@media (max-width: 920px) {
+  body.cex-migrated-page {
+    --container-px: clamp(20px, 5.5vw, 28px);
+    --section-py: 64px;
+    font-size: 16px !important;
+  }
+  .cex-migrated-page .nav__inner {
+    min-height: 64px;
+  }
+  .cex-migrated-page .nav__brand img {
+    width: 100px !important;
+    height: 40px !important;
+  }
+  .cex-migrated-page .h-section,
+  .cex-migrated-page .cx-trust__h {
+    font-size: clamp(1.875rem, 8vw, 2.25rem) !important;
+    line-height: 1.1;
+  }
+  .cex-migrated-page .h-lead,
+  .cex-migrated-page .cx-trust__lead {
+    font-size: 1rem;
+  }
+  body.cex-migrated-page.home .hero {
+    min-height: 0;
+    padding-top: 72px;
+    padding-bottom: 40px;
+  }
+  body.cex-migrated-page.home .hero__grid {
+    gap: 22px;
+  }
+  body.cex-migrated-page.home .hero__copy {
+    gap: 20px;
+  }
+  body.cex-migrated-page.home .hero__title {
+    font-size: clamp(2rem, 9.4vw, 2.25rem);
+    line-height: 1.02;
+  }
+  body.cex-migrated-page.home .hero__lead {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .cex-migrated-page .cex-page-visual {
+    margin-top: 28px;
+    padding-inline: var(--container-px);
+  }
+  .cex-migrated-page .cex-page-visual img,
+  body.cex-migrated-page.home > main > .cex-page-visual img {
+    height: clamp(240px, 72vw, 360px);
+  }
+
+  body.cex-migrated-page:not(.home) .hero {
+    display: block;
+    min-height: 0;
+    padding: 52px 0 28px;
+  }
+  body.cex-migrated-page:not(.home) .hero__grid {
+    display: block;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  body.cex-migrated-page:not(.home) .hero__copy {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    max-width: none;
+    text-align: center;
+  }
+  body.cex-migrated-page:not(.home) .hero__eyebrow {
+    margin: 0 auto 14px !important;
+  }
+  body.cex-migrated-page:not(.home) .hero__title {
+    width: 100%;
+    max-width: min(18ch, 100%);
+    margin: 0 auto 18px;
+    font-size: clamp(2.125rem, 9.5vw, 2.625rem);
+    line-height: 1.04;
+    letter-spacing: -0.038em;
+    text-align: center;
+    text-transform: none;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    text-wrap: balance;
+  }
+  body.cex-migrated-page:not(.home) .hero__lead {
+    max-width: 42rem;
+    margin: 0 auto 22px;
+    font-size: 1rem;
+    line-height: 1.55;
+    text-align: center;
+  }
+  body.cex-migrated-page:not(.home) .hero__cta-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  body.cex-migrated-page:not(.home) .hero__cta-row .btn {
+    width: min(100%, 320px);
+    justify-content: center;
+  }
+  body.cex-migrated-page:not(.home) .hero__cta-row .btn--ghost {
+    display: none;
+  }
+  body.cex-migrated-page:not(.home) .hero__form-col,
+  body.cex-migrated-page.home .hero__form-wrap {
+    display: none !important;
+  }
+  body.cex-migrated-page:not(.home) .hero__trust {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 26px;
+    padding-top: 18px;
+    text-align: center;
+  }
+  .cex-migrated-page .trust-item__num,
+  .cex-migrated-page .trust-item__label,
+  .cex-migrated-page .cross-link__tag,
+  .cex-migrated-page .mining-step__num {
+    margin-inline: auto;
+    text-align: center !important;
+  }
+  body.cex-migrated-page:not(.home) .trust-item__num {
+    font-size: clamp(0.875rem, 4vw, 1.125rem);
+    overflow-wrap: anywhere;
+  }
+  body.cex-migrated-page:not(.home) .trust-item__label {
+    display: none;
+  }
+
+  .cex-migrated-page .hero__cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .cex-migrated-page .hero__cta-group .hero__cta {
+    width: min(100%, 320px);
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .cex-migrated-page .legal-hero {
+    padding: 72px 0 52px;
+    text-align: center;
+  }
+  .cex-migrated-page .legal-hero__eyebrow {
+    margin-inline: auto;
+  }
+  .cex-migrated-page .legal-hero__title,
+  .cex-migrated-page .legal-hero__lead {
+    margin-inline: auto;
+    text-align: center;
+  }
+  .cex-migrated-page .legal-hero__title {
+    font-size: clamp(2.125rem, 10vw, 2.75rem);
+  }
+
+  .cex-migrated-page .privacy-consent {
+    align-items: flex-start;
+    padding: 12px;
+  }
+  .cex-migrated-page .privacy-consent__panel {
+    max-height: calc(100dvh - 24px);
+    padding: 24px 18px 18px;
+  }
+  .cex-migrated-page .privacy-consent__content {
+    padding-top: 8px;
+    text-align: left;
+  }
+  .cex-migrated-page .privacy-consent__eyebrow {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .cex-migrated-page .privacy-consent__actions {
+    flex-direction: column;
+  }
+  .cex-migrated-page .privacy-consent__actions button {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 420px) {
+  body.cex-migrated-page:not(.home) .hero__trust {
+    gap: 8px;
+  }
+  .cex-migrated-page .nav__desktop-cta {
+    padding-inline: 12px;
+    font-size: 0.75rem;
+  }
+  body.cex-migrated-page.home .hero__cta--secondary {
+    display: none;
+  }
+}
+
+/* Legal pages keep one useful action in the compact header. */
+@media (max-width: 980px) {
+  body.cex-legal-page .nav__cta-group {
+    display: flex !important;
+    margin-left: auto;
+  }
+  body.cex-legal-page .nav__desktop-cta {
+    display: inline-flex !important;
+    min-height: 44px;
+    padding-inline: 12px !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cex-migrated-page *,
+  .cex-migrated-page *::before,
+  .cex-migrated-page *::after {
+    scroll-behavior: auto !important;
+  }
+}

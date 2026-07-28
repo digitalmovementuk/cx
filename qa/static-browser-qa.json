@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "generatedAt": "2026-07-15T13:47:39.291Z",
+    "baseUrl": "http://127.0.0.1:9410/",
+    "routeCount": 36,
+    "expectedRenders": 72,
+    "completedRenders": 72,
+    "failedRenders": 0,
+    "checkFailureCounts": {},
+    "shareAssets": {
+      "occurrences": 216,
+      "uniqueRequests": 38,
+      "failures": 0,
+      "passed": true
+    },
+    "passed": true
+  },
+  "failures": []
+}

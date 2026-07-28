@@ -1,9 +1,9 @@
 /* ==========================================================================
-   CX × Accenture-style design system
+   CEx × Accenture-style design system
    ========================================================================== */
 
 :root {
-  /* CX brand palette ----------------------------------------------------- */
+  /* CEx brand palette ---------------------------------------------------- */
   /* Primary 1: Charcoal */
   --cx-charcoal:    #1E2327;
   --cx-charcoal-2:  #2A3035;
@@ -1324,7 +1324,7 @@ body.has-drawer { overflow: hidden; }
   border-left-color: var(--cx-charcoal);
 }
 .caps__pillar-num {
-  color: var(--cx-yellow);
+  color: #8a3d00;
   font-weight: 800;
 }
 .caps__pillar-band--second .caps__pillar-num {
@@ -2094,25 +2094,33 @@ body.has-drawer { overflow: hidden; }
   .cx-trust__grid { grid-template-columns: 1.05fr 0.95fr; }
 }
 .cx-trust__founders {
-  display: flex;
-  gap: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 176px));
+  gap: 24px;
   margin: 26px 0 22px;
-  flex-wrap: wrap;
   align-items: flex-start;
 }
 .cx-trust__founders figure {
   margin: 0;
   text-align: center;
-  max-width: 160px;
+  min-width: 0;
 }
 .cx-trust__founders img {
-  width: 160px;
-  height: 160px;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  height: auto;
   object-fit: cover;
+  object-position: center 18%;
   border-radius: 14px;
   display: block;
   margin: 0 auto 10px;
   background: var(--cx-warm-3);
+}
+.cx-trust__heading {
+  max-width: 18ch;
+  text-wrap: balance;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
 }
 .cx-trust__founders b {
   display: block;
@@ -2177,9 +2185,16 @@ body.has-drawer { overflow: hidden; }
   line-height: 1.65;
 }
 @media (max-width: 560px) {
-  .cx-trust__founders { justify-content: center; }
-  .cx-trust__founders figure { max-width: 170px; }
-  .cx-trust__founders img { width: 170px; height: 170px; }
+  .cx-trust__founders {
+    grid-template-columns: repeat(2, minmax(0, 156px));
+    gap: 14px;
+    justify-content: center;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .cx-trust__founders { grid-template-columns: repeat(2, minmax(0, 140px)); }
 }
 
 /* ==========================================================================

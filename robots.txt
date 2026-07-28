@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cx-experts.de/sitemap.xml
+Sitemap: https://cex.koeln/sitemap.xml

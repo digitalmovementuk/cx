@@ -1,0 +1,164 @@
+/* Canonical founder block — homepage is the content and visual reference. */
+.cx-trust {
+  background: #f4efe3 !important;
+  color: #1e2327 !important;
+}
+
+.cx-trust .cx-trust__col:first-child .eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  width: fit-content !important;
+  margin: 0 0 24px !important;
+  color: #1e2327 !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  line-height: 1.55 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+}
+
+.cx-trust .cx-trust__col:first-child .eyebrow::before,
+.cx-trust .cx-trust__col:first-child .eyebrow::after {
+  display: none !important;
+  content: none !important;
+}
+
+.cx-trust .cx-trust__grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: clamp(36px, 5vw, 64px) !important;
+  align-items: start !important;
+}
+
+.cx-trust .cx-trust__heading {
+  margin: 0 !important;
+  max-width: 18ch !important;
+  color: #1e2327 !important;
+  font-family: Inter, system-ui, sans-serif !important;
+  font-size: clamp(2.25rem, 4.6vw, 4rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.03em !important;
+  text-wrap: balance;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+
+.cx-trust .cx-trust__col:first-child > .h-lead {
+  max-width: 42ch !important;
+  margin: 0 !important;
+  color: #616160 !important;
+  font-size: clamp(1.0625rem, 1.3vw, 1.25rem) !important;
+  line-height: 1.55 !important;
+  letter-spacing: -0.005em !important;
+}
+
+.cx-trust .cx-trust__founders {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 176px)) !important;
+  gap: 24px !important;
+  margin: 26px 0 22px !important;
+  align-items: start !important;
+}
+
+.cx-trust .cx-trust__founders figure {
+  margin: 0 !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  text-align: center !important;
+}
+
+.cx-trust .cx-trust__founders img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 5 !important;
+  object-fit: cover !important;
+  object-position: center 18% !important;
+  margin: 0 auto 10px !important;
+  border-radius: 14px !important;
+}
+
+.cx-trust .cx-trust__founders b {
+  display: block !important;
+  font-size: 1.02rem !important;
+  line-height: 1.25 !important;
+  color: #1e2327 !important;
+}
+
+.cx-trust .cx-trust__founders span {
+  display: block !important;
+  margin-top: 3px !important;
+  font-size: 0.84rem !important;
+  line-height: 1.35 !important;
+  color: #616160 !important;
+  opacity: 1 !important;
+}
+
+.cx-trust .cx-trust__creds {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 10px 24px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.cx-trust .cx-trust__byline {
+  margin: 18px 0 0 !important;
+  padding-top: 14px !important;
+  border-top: 1px solid rgba(30, 35, 39, 0.08) !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  color: #404549 !important;
+}
+
+.cx-trust .cx-trust__byline strong,
+.cx-trust .cx-trust__creds b {
+  color: #1e2327 !important;
+}
+
+@media (min-width: 880px) {
+  .cx-trust .cx-trust__grid {
+    grid-template-columns: 1.05fr 0.95fr !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .cx-trust .cx-trust__col:first-child,
+  .cx-trust .cx-trust__heading,
+  .cx-trust .cx-trust__lead,
+  .cx-trust .h-lead,
+  .cx-trust .cx-trust__byline {
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .cx-trust .cx-trust__col:first-child .eyebrow,
+  .cx-trust .cx-trust__col:first-child .cx-trust__eyebrow {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .cx-trust .cx-trust__creds {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .cx-trust .cx-trust__founders {
+    grid-template-columns: repeat(2, minmax(0, 156px)) !important;
+    gap: 14px !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .cx-trust .cx-trust__founders {
+    grid-template-columns: repeat(2, minmax(0, 140px)) !important;
+  }
+}

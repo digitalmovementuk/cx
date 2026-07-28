@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "sourceRoutes": 36,
+    "internalLinkOccurrences": 1305,
+    "uniqueTargets": 268,
+    "fragmentTargetsChecked": 222,
+    "passed": true,
+    "failureCount": 0
+  },
+  "failures": []
+}

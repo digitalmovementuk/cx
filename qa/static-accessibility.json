@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "available": true,
+    "expectedRenders": 72,
+    "rendersRan": 72,
+    "skippedOrErroredRenders": 0,
+    "failingRenders": 0,
+    "violationRules": [],
+    "passed": true
+  },
+  "failures": []
+}
