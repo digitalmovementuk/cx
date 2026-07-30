@@ -1177,8 +1177,9 @@ a { color: inherit; }
   line-height: 1.02;
   letter-spacing: -0.03em;
   color: inherit;
-  max-width: 16ch;
+  max-width: 20ch;
   text-wrap: balance;
+  text-wrap: pretty;
 }
 .h-section--center { text-align: center; margin-inline: auto; }
 .h-section--on-dark { color: #fff; }
@@ -1190,8 +1191,25 @@ a { color: inherit; }
   color: var(--muted);
   max-width: 42ch;
   letter-spacing: -0.005em;
+  text-wrap: pretty;
 }
 .h-lead--on-dark { color: rgba(255, 255, 255, 0.78); }
+
+/* Card / step headings: avoid a lone word stranding on the wrapped last line */
+.problem-card h3,
+.service-card h3,
+.use-card h3,
+.industry-card h3,
+.method-step__title,
+.pm-visual__head h3,
+.pm-governance__layer h4,
+.pm-choice__card h4,
+.pm-practice__card h3,
+.pm-practice__signal h3,
+.digital-practice__card h3,
+.digital-practice__principle h3 {
+  text-wrap: pretty;
+}
 
 /* ==========================================================================
    Capabilities cards
