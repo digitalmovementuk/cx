@@ -33,15 +33,6 @@ a{color:inherit;text-decoration:none}
 .section--white{background:var(--cx-warm-2)}
 .section--paper{background:var(--cx-warm)}
 .section--dark{background:var(--cx-charcoal);color:#fff}
-.progress-bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--cx-yellow);z-index:100;transition:width 80ms linear}
-.topbar{position:sticky;top:0;background:rgba(250,246,236,0.94);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line);z-index:80}
-.topbar__inner{max-width:var(--container);margin:0 auto;padding:14px var(--container-px);display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:inline-flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-0.01em}
-.brand__mark{width:28px;height:28px;background:var(--cx-yellow);display:inline-flex;align-items:center;justify-content:center}
-.brand__mark svg{width:18px;height:18px}
-.nav-cta{padding:9px 14px;background:var(--cx-charcoal);color:#fff;font-weight:600;font-size:0.875rem;display:inline-flex;align-items:center;gap:8px;transition:background var(--dur) var(--ease)}
-.nav-cta:hover{background:var(--cx-charcoal-2)}
-.nav-cta__arrow{display:inline-flex;width:20px;height:20px;background:var(--cx-yellow);color:var(--cx-charcoal);align-items:center;justify-content:center}
 .hero{min-height:calc(100vh - 64px);background:var(--cx-charcoal);color:#fff;padding:clamp(96px,12vw,160px) 0 clamp(80px,10vw,120px);position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 85% 110%,rgba(255,122,0,0.18) 0%,transparent 55%);pointer-events:none}
 .hero__eyebrow{position:relative;display:inline-flex;align-items:center;gap:14px;font-size:0.75rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:28px;color:#fff}
@@ -134,93 +125,6 @@ a{color:inherit;text-decoration:none}
 .cross-link__title{font-size:1rem;font-weight:700;letter-spacing:-0.01em;color:var(--cx-charcoal);line-height:1.3}
 .cross-link__arrow{margin-top:8px;color:var(--cx-charcoal-3);font-size:0.875rem}
 @media (max-width:720px){.hero__title{font-size:clamp(2rem,9vw,3rem)}.h-section{font-size:clamp(1.625rem,7vw,2.25rem)}}
-
-/* === Wide hamburger menu + slide-down drawer === */
-.topbar{position:sticky;top:0;background:rgba(250,246,236,0.94);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line);z-index:80}
-.topbar__actions{display:flex;align-items:center;gap:14px}
-.menu-btn{display:inline-flex;align-items:center;gap:12px;padding:9px 16px 9px 12px;background:transparent;border:1px solid var(--line);color:var(--cx-charcoal);font-family:inherit;font-weight:700;font-size:0.875rem;letter-spacing:-0.005em;cursor:pointer;transition:background var(--dur) var(--ease),border-color var(--dur) var(--ease),color var(--dur) var(--ease)}
-.menu-btn:hover{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
-.menu-btn:hover.menu-btn__icon span{background:var(--cx-yellow)}
-.menu-btn__icon{display:inline-flex;flex-direction:column;justify-content:center;width:22px;height:18px;gap:3px}
-.menu-btn__icon span{display:block;height:2px;width:100%;background:var(--cx-charcoal);transition:transform var(--dur) var(--ease),opacity var(--dur) var(--ease),background var(--dur) var(--ease)}
-.menu-btn[aria-expanded="true"]{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
-.menu-btn[aria-expanded="true"].menu-btn__icon span{background:var(--cx-yellow)}
-.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(1){transform:translateY(5px) rotate(45deg)}
-.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(2){opacity:0}
-.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
-
-.drawer{position:fixed;top:0;left:0;right:0;background:var(--cx-warm-2);border-bottom:1px solid var(--line);z-index:75;box-shadow:0 24px 48px -24px rgba(30,35,39,0.18);max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height 380ms var(--ease),opacity 220ms var(--ease),visibility 0s linear 220ms;padding-top:60px}
-.drawer.is-open{max-height:100vh;opacity:1;visibility:visible;transition:max-height 480ms var(--ease),opacity 220ms var(--ease) 80ms,visibility 0s linear}
-.drawer__inner{max-width:var(--container);margin:0 auto;padding:32px var(--container-px) 36px;display:grid;grid-template-columns:1.6fr 1fr;gap:clamp(28px,4vw,56px)}
-@media(max-width:880px){.drawer__inner{grid-template-columns:1fr;gap:24px;padding:20px var(--container-px) 28px}}
-.drawer__section{display:flex;flex-direction:column;gap:8px}
-.drawer__label{font-family:inherit;font-size:0.6875rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--cx-charcoal-3);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:6px}
-.drawer__link{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;padding:14px 16px;background:transparent;border:1px solid transparent;transition:background var(--dur) var(--ease),border-color var(--dur) var(--ease),transform var(--dur) var(--ease)}
-.drawer__link:hover{background:#fff;border-color:var(--line);transform:translateX(2px)}
-.drawer__link.is-current{background:var(--cx-yellow-tint);border-color:var(--cx-yellow);pointer-events:none}
-.drawer__num{font-family:inherit;font-size:0.6875rem;font-weight:800;color:var(--cx-yellow);background:var(--cx-charcoal);width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;letter-spacing:0.04em}
-.drawer__title{font-size:0.9375rem;font-weight:700;color:var(--cx-charcoal);letter-spacing:-0.01em;line-height:1.3}
-.drawer__arrow{color:var(--cx-charcoal-3);font-size:1.125rem;transition:color var(--dur) var(--ease),transform var(--dur) var(--ease)}
-.drawer__link:hover.drawer__arrow{color:var(--cx-yellow);transform:translateX(3px)}
-.drawer__footer{display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:20px 24px;background:var(--cx-charcoal);color:#fff;align-self:start}
-.drawer__footer-label{font-size:0.6875rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--cx-yellow)}
-.drawer__footer-h{margin:6px 0 12px;font-size:1.125rem;font-weight:700;letter-spacing:-0.01em;line-height:1.3}
-.drawer__footer-p{margin:0 0 18px;font-size:0.875rem;line-height:1.55;color:rgba(255,255,255,0.78)}
-.drawer__home{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;background:transparent;border:1px solid rgba(255,255,255,0.28);color:#fff;font-size:0.8125rem;font-weight:600;letter-spacing:0.04em;transition:background var(--dur) var(--ease),border-color var(--dur) var(--ease);align-self:flex-start}
-.drawer__home:hover{background:var(--cx-yellow);color:var(--cx-charcoal);border-color:var(--cx-yellow)}
-.drawer__home-arrow{font-size:1rem}
-.drawer__close-hint{font-size:0.6875rem;font-weight:600;color:rgba(255,255,255,0.55);letter-spacing:0.08em}
-.drawer__close-hint kbd{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.6875rem;background:rgba(255,255,255,0.1);padding:2px 7px;border:1px solid rgba(255,255,255,0.2);margin:0 3px}
-.drawer-scrim{position:fixed;inset:0;background:rgba(30,35,39,0.42);backdrop-filter:blur(2px);z-index:70;opacity:0;visibility:hidden;transition:opacity 220ms var(--ease),visibility 0s linear 220ms}
-.drawer-scrim.is-open{opacity:1;visibility:visible;transition:opacity 220ms var(--ease)}
-@media(max-width:560px){.menu-btn span:not(.menu-btn__icon):not(.menu-btn__icon span){display:none}.menu-btn{padding:9px 10px}}
-
-/* === Polished topbar additions === */
-.topbar{border-bottom:1px solid var(--line);background:rgba(250,246,236,0.92);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px)}
-.topbar__inner{height:64px;padding:0 var(--container-px);gap:18px}
-.topbar__brand-row{display:flex;align-items:center;gap:14px;min-width:0}
-.brand{padding:6px 0;letter-spacing:-0.015em}
-.brand__mark{width:26px;height:26px}
-.brand__mark svg{width:16px;height:16px}
-.brand__text{font-size:0.9375rem;font-weight:800;letter-spacing:-0.015em;color:var(--cx-charcoal)}
-.brand__divider{width:1px;height:18px;background:var(--line);flex-shrink:0}
-.brand__crumb{display:inline-flex;align-items:center;gap:6px;font-size:0.8125rem;font-weight:600;color:var(--cx-charcoal-3);letter-spacing:-0.005em;min-width:0}
-.brand__crumb > span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.brand__crumb-chev{display:inline-flex;color:var(--cx-charcoal-3);width:10px;height:10px;flex-shrink:0}
-.brand__crumb-chev svg{width:10px;height:10px}
-.topbar__actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.menu-btn{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 11px;background:transparent;border:1px solid var(--line);color:var(--cx-charcoal);font-family:inherit;font-weight:700;font-size:0.8125rem;letter-spacing:-0.005em;cursor:pointer;transition:background 280ms var(--ease),border-color 280ms var(--ease),color 280ms var(--ease)}
-.menu-btn:hover{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
-.menu-btn:hover.menu-btn__icon span{background:var(--cx-yellow)}
-.menu-btn__icon{display:inline-flex;flex-direction:column;justify-content:center;width:18px;height:14px;gap:3px}
-.menu-btn__icon span{display:block;height:1.5px;width:100%;background:var(--cx-charcoal);transition:transform 280ms var(--ease),opacity 280ms var(--ease),background 280ms var(--ease)}
-.menu-btn[aria-expanded="true"]{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
-.menu-btn[aria-expanded="true"].menu-btn__icon span{background:var(--cx-yellow)}
-.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
-.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(2){opacity:0}
-.menu-btn[aria-expanded="true"].menu-btn__icon span:nth-child(3){transform:translateY(-4.5px) rotate(-45deg)}
-.menu-btn__label{font-size:0.8125rem;font-weight:700}
-.nav-cta{padding:8px 14px;background:var(--cx-charcoal);color:#fff;font-weight:700;font-size:0.8125rem;letter-spacing:-0.005em;display:inline-flex;align-items:center;gap:9px;transition:background 280ms var(--ease)}
-.nav-cta:hover{background:var(--cx-charcoal-2)}
-.nav-cta__arrow{display:inline-flex;width:18px;height:18px;background:var(--cx-yellow);color:var(--cx-charcoal);align-items:center;justify-content:center;flex-shrink:0}
-.nav-cta__arrow svg{width:11px;height:11px}
-@media(max-width:680px){
-.brand__divider,.brand__crumb{display:none}
-}
-@media(max-width:540px){
-.menu-btn__label{display:none}
-.menu-btn{padding:8px 10px}
-.nav-cta span:first-child{display:none}
-.nav-cta{padding:8px 10px}
-}
-
-/* === Topbar visibility fix + reorder (CTA left of menu) === */
-.topbar{background:var(--cx-warm-2)!important;backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--cx-charcoal-3);box-shadow:0 1px 0 rgba(30,35,39,0.04),0 12px 28px -18px rgba(30,35,39,0.18)}
-.topbar__actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.topbar__actions.nav-cta{order:1}
-.topbar__actions.menu-btn{order:2}
-.menu-btn{background:rgba(30,35,39,0.04)}
-.menu-btn:hover{background:var(--cx-charcoal);color:#fff;border-color:var(--cx-charcoal)}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Hans-Helmut Scheel", "jobTitle": "Gründer", "worksFor": {"@type": "Organization", "name": "CEx"}}</script>
 
@@ -339,39 +243,6 @@ html { scroll-behavior: auto!important; }
 }
 
 
-.nav__links {
- display: flex;
- align-items: center;
- gap: 32px;
-}
-
-.nav__links a {
- font-size: 0.875rem;
- font-weight: 500;
- text-decoration: none;
- color: inherit;
- letter-spacing: -0.005em;
- position: relative;
- padding: 6px 0;
- opacity: 0.85;
- transition: opacity var(--dur) var(--ease-out), color var(--dur) var(--ease-out);
-}
-
-.nav__links a:hover { opacity: 1; }
-
-.nav__links a.is-active { opacity: 1; }
-
-.nav__links a.is-active::after {
- content: "";
- position: absolute;
- left: 0;
- right: 0;
- bottom: 0;
- height: 2px;
- background: var(--acn-purple);
-}
-
-
 .nav__cta-group {
  display: flex;
  align-items: center;
@@ -401,68 +272,11 @@ html { scroll-behavior: auto!important; }
  background: var(--acn-purple);
  border-color: var(--acn-purple);
 }
-
-
-.nav__menu {
- display: none;
- width: 44px;
- height: 44px;
- border: 1px solid currentColor;
- background: transparent;
- color: inherit;
- cursor: pointer;
- align-items: center;
- justify-content: center;
- flex-direction: column;
- gap: 5px;
- padding: 0;
-}
-
-.nav__menu span {
- display: block;
- width: 18px;
- height: 1.5px;
- background: currentColor;
-}
-
-
-.nav-drawer {
- background: var(--acn-black);
- color: #fff;
- border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.nav-drawer__inner {
- display: flex;
- flex-direction: column;
- gap: 4px;
- padding: 24px var(--container-px) 28px;
-}
-
-.nav-drawer__inner a {
- text-decoration: none;
- color: inherit;
- font-size: 1.125rem;
- font-weight: 500;
- padding: 14px 0;
- border-bottom: 1px solid rgba(255, 255, 255, 0.1);
- letter-spacing: -0.01em;
-}
-
-.nav-drawer__inner a:last-child { border-bottom: none; margin-top: 12px; }
 @media (max-width: 980px) {
 
-.nav__links { display: none; }
 
 .nav__desktop-cta { display: none; }
 }
-
-/* Legacy mobile hamburger + drawer fully retired — cx-menu-btn is the single mobile menu */
-.nav__menu,
-.nav-drawer { display: none!important; }
-
-
-body.has-drawer { overflow: hidden; }
 
 
 /* ==========================================================================
@@ -729,14 +543,10 @@ body.has-drawer { overflow: hidden; }
 
 
 
-/* === Polished topbar (homepage) === */
 .nav__inner { height: 64px; padding-top: 0; padding-bottom: 0; }
 
-.nav__links { gap: 22px; font-size: 0.8125rem; font-weight: 600; }
 
-.nav__links a { padding: 6px 0; letter-spacing: -0.005em; color: var(--cx-charcoal-3); transition: color 280ms cubic-bezier(0.85,0,0,1); }
 
-.nav__links a:hover { color: var(--cx-charcoal); }
 
 .cx-menu-btn { padding: 8px 14px 8px 11px; font-size: 0.8125rem; }
 
@@ -759,8 +569,6 @@ body.has-drawer { overflow: hidden; }
 .nav__cta-group.nav__desktop-cta { order: 1; }
 
 .nav__cta-group.cx-menu-btn { order: 2; }
-
-.nav__cta-group.nav__menu { order: 3; }
 
 .cx-menu-btn { background: rgba(30,35,39,0.04); }
 
@@ -1060,31 +868,40 @@ body.has-drawer { overflow: hidden; }
 <link rel="stylesheet" href="../../polish.css?v=20260715">
 </head>
 <body class="cex-migrated-page cex-static-site">
-
-<div class="progress-bar" id="progressBar"></div>
-
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
-<header>
- <nav class="nav" id="nav">
- <div class="nav__inner">
- <a href="../../index.html" class="nav__brand" aria-label="CEx Startseite"><img src="../../media/cex-logo.png" alt="CEx" width="120" height="48" srcset="../../media/cex-logo-2x.png 2x"></a>
- <div class="nav__links" role="navigation" aria-label="Hauptnavigation">
- <a href="#vorgehen">Vorgehen</a>
- <a href="#vorteile">Vorteile</a>
- <a href="#faq">FAQ</a>
- </div>
- <div class="nav__cta-group">
- <button type="button" class="cx-menu-btn" id="cxMenuToggle" aria-label="Leistungen-Menü öffnen" aria-expanded="false" aria-controls="cxServicesDrawer">
- <span class="cx-menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
- <span class="cx-menu-btn__label">Leistungen</span>
- </button>
- <a href="#kontakt" class="btn btn--accent btn--small nav__desktop-cta">Erstgespräch anfragen <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"/></svg></span></a>
- </div>
- </div>
- </nav>
+<header class="cx-header">
+  <nav class="nav" id="nav" aria-label="Hauptnavigation">
+    <div class="nav__inner">
+
+      <div class="nav__lead">
+        <a href="../../index.html" class="nav__brand" aria-label="CEx — zur Startseite">
+          <img src="../../media/cex-logo.png" alt="CEx" width="120" height="48" srcset="../../media/cex-logo-2x.png 2x">
+        </a>
+        <ul class="nav__primary">
+          <li><a href="#vorgehen">Vorgehen</a></li>
+          <li><a href="#vorteile">Vorteile</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__slot" role="presentation"></div>
+
+      <div class="nav__actions">
+        <a href="#kontakt" class="btn btn--accent btn--small nav__cta" data-cta-label="Erstgespräch anfragen">
+          <span class="nav__cta-text">Erstgespräch anfragen</span>
+          <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"/></svg></span>
+        </a>
+        <button type="button" class="cx-menu-btn" id="cxMenuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="cxServicesDrawer">
+          <span class="cx-menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="cx-menu-btn__label">Menü</span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
 </header>
 <div class="cx-drawer-scrim" id="cxDrawerScrim" aria-hidden="true"></div>
-<aside class="cx-drawer" id="cxServicesDrawer" aria-hidden="true" role="dialog" aria-label="Leistungs-Navigation">
+<aside class="cx-drawer" id="cxServicesDrawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Hauptmenü" tabindex="-1">
  <div class="cx-drawer__inner">
  <div class="cx-drawer__column">
  <div class="cx-drawer__section">
@@ -1093,7 +910,7 @@ body.has-drawer { overflow: hidden; }
  <a class="cx-drawer__link" href="../../projektmanagement-beratung/index.html"><span class="cx-drawer__num">02</span><span class="cx-drawer__title">Projektmanagement</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
  <a class="cx-drawer__link" href="../../digitalisierungsberatung/index.html"><span class="cx-drawer__num">03</span><span class="cx-drawer__title">Digitalisierung &amp; Transformation</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
  <a class="cx-drawer__link" href="../../change-management-beratung/index.html"><span class="cx-drawer__num">04</span><span class="cx-drawer__title">Change Management</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
- <a class="cx-drawer__link" href="../../ki-beratung/index.html"><span class="cx-drawer__num">05</span><span class="cx-drawer__title">KI-Beratung &amp; Strategie</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ <a class="cx-drawer__link is-current" href="../../ki-beratung/index.html" aria-current="page"><span class="cx-drawer__num">05</span><span class="cx-drawer__title">KI-Beratung &amp; Strategie</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
  </div>
  <div class="cx-drawer__section" style="margin-top:24px">
  <div class="cx-drawer__label">Säule 2 — Architektur</div>
@@ -1234,7 +1051,7 @@ body.has-drawer { overflow: hidden; }
 
 
 <!-- FINAL CTA -->
-<section class="final-cta" id="kontakt" data-bench-role="cta">
+<section class="final-cta" id="naechster-schritt" data-bench-role="cta">
  <div class="container">
  <div class="final-cta__inner">
  <div class="eyebrow eyebrow--on-dark">Nächster Schritt</div>
@@ -1268,7 +1085,7 @@ body.has-drawer { overflow: hidden; }
 </section>
 
 <!-- E-E-A-T trust strip + bottom contact form (Pass A) -->
-<section class="cx-trust">
+<section class="cx-trust" id="kontakt">
  <div class="container">
  <div class="cx-trust__grid">
  <div class="cx-trust__col">
@@ -1313,66 +1130,14 @@ body.has-drawer { overflow: hidden; }
 
 
 
+
 </main>
 <footer class="footer"><div class="container footer__grid"><div class="footer__col footer__brand"><div class="footer__logo">CE<span>x</span></div><p>Beratung für Enterprise Architecture, Prozesse, Projektmanagement, KI und Digitalisierung — für tragfähige IT- und Geschäftsentscheidungen. Köln · DACH-weit.</p></div><div class="footer__col"><strong>Leistungen</strong><a href="../../ki-beratung/">KI-Beratung</a><a href="../../digitalisierungsberatung/">Digitalisierung</a><a href="../../prozessoptimierung-beratung/">Prozessoptimierung</a><a href="../../projektmanagement-beratung/">Projektmanagement</a><a href="../../change-management-beratung/">Change Management</a><a href="../../enterprise-architecture-beratung/">Enterprise Architecture</a></div><div class="footer__col"><strong>Rechtliches</strong><a href="../../impressum.html">Impressum</a><a href="../../datenschutz.html">Datenschutz</a><button type="button" class="footer__cookie" onclick="window.CExCookies&&window.CExCookies.open()">Cookie-Einstellungen</button><a href="../../sitemap/">Sitemap</a></div><div class="footer__col"><strong>Kontakt</strong><a href="mailto:kontakt@cex.koeln">kontakt@cex.koeln</a><a href="../../index.html#contact">Erstgespräch anfragen</a></div></div><div class="container footer__bottom"><div>© 2026 CEx · Alle Rechte vorbehalten.</div><div>Made in Köln · Datenschutzbewusst · DACH-weit</div></div></footer>
 
 <script>
-(function(){
- const btn = document.getElementById('menuToggle');
- const drawer = document.getElementById('servicesDrawer');
- const scrim = document.getElementById('drawerScrim');
- if(!btn ||!drawer ||!scrim) return;
- function open(){
- btn.setAttribute('aria-expanded','true');
- btn.setAttribute('aria-label','Leistungen-Menü schließen');
- drawer.classList.add('is-open');
- drawer.setAttribute('aria-hidden','false');
- scrim.classList.add('is-open');
- scrim.setAttribute('aria-hidden','false');
- document.documentElement.style.overflow = 'hidden';
- }
- function close(){
- btn.setAttribute('aria-expanded','false');
- btn.setAttribute('aria-label','Leistungen-Menü öffnen');
- drawer.classList.remove('is-open');
- drawer.setAttribute('aria-hidden','true');
- scrim.classList.remove('is-open');
- scrim.setAttribute('aria-hidden','true');
- document.documentElement.style.overflow = '';
- }
- function toggle(){
- if(btn.getAttribute('aria-expanded') === 'true') close(); else open();
- }
- btn.addEventListener('click', toggle);
- scrim.addEventListener('click', close);
- document.addEventListener('keydown', e => { if(e.key === 'Escape') close(); });
-})();
-</script>
-
-<script>
-const pb=document.getElementById('progressBar');
-function sp(){const h=document.documentElement;const t=h.scrollHeight-h.clientHeight;pb.style.width=(t>0?Math.min(100,h.scrollTop/t*100):0)+'%';}
-window.addEventListener('scroll',sp,{passive:true});sp();
 const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');ro.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 </script>
-
-<script>
-(function(){
- var nav=document.getElementById('nav');
- if(nav){var s=function(){nav.classList.toggle('is-scrolled',window.scrollY>40);};s();window.addEventListener('scroll',s,{passive:true});}
- var btn=document.getElementById('cxMenuToggle'),dr=document.getElementById('cxServicesDrawer'),sc=document.getElementById('cxDrawerScrim');
- if(btn&&dr&&sc){
- var op=function(){btn.setAttribute('aria-expanded','true');dr.classList.add('is-open');dr.setAttribute('aria-hidden','false');sc.classList.add('is-open');sc.setAttribute('aria-hidden','false');document.body.classList.add('has-drawer');};
- var cl=function(){btn.setAttribute('aria-expanded','false');dr.classList.remove('is-open');dr.setAttribute('aria-hidden','true');sc.classList.remove('is-open');sc.setAttribute('aria-hidden','true');document.body.classList.remove('has-drawer');};
- btn.addEventListener('click',function(){dr.classList.contains('is-open')?cl():op();});
- sc.addEventListener('click',cl);
- document.addEventListener('keydown',function(e){if(e.key==='Escape')cl();});
- dr.querySelectorAll('.cx-drawer__link,.cx-drawer__cta,.cx-drawer__jump').forEach(function(a){a.addEventListener('click',function(){setTimeout(cl,0);});});
- }
-})();
-</script>
-
 
 <script src="../../overview-widget.js" defer></script>
 <script src="../../script.js?v=20260715" defer></script>

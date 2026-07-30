@@ -257,58 +257,40 @@
  <body class="cex-migrated-page cex-static-site home">
  <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
- <header>
- <nav class="nav" id="nav">
- <div class="nav__inner">
- <a href="#top" class="nav__brand" aria-label="CEx Startseite"><img src="media/cex-logo.png" alt="CEx" width="120" height="48" srcset="media/cex-logo-2x.png 2x"></a>
+ <header class="cx-header">
+   <nav class="nav" id="nav" aria-label="Hauptnavigation">
+     <div class="nav__inner">
 
- <div class="nav__links" role="navigation" aria-label="Hauptnavigation">
- <a href="#journey">Vorgehen</a>
- <a href="#benefits">Vorteile</a>
- <a href="#faq">FAQ</a>
- </div>
+       <div class="nav__lead">
+         <a href="index.html" class="nav__brand" aria-label="CEx — zur Startseite">
+           <img src="media/cex-logo.png" alt="CEx" width="120" height="48" srcset="media/cex-logo-2x.png 2x">
+         </a>
+         <ul class="nav__primary">
+           <li><a href="#journey">Vorgehen</a></li>
+           <li><a href="#benefits">Vorteile</a></li>
+           <li><a href="#faq">FAQ</a></li>
+         </ul>
+       </div>
 
- <div class="nav__cta-group">
- <button type="button" class="cx-menu-btn" id="cxMenuToggle" aria-label="Leistungen-Menü öffnen" aria-expanded="false" aria-controls="cxServicesDrawer">
- <span class="cx-menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
- <span class="cx-menu-btn__label">Leistungen</span>
- </button>
- <a href="#contact" class="btn btn--accent btn--small nav__desktop-cta">
- Erstgespräch anfragen
- <span class="btn__icon" aria-hidden="true">
- <svg viewBox="0 0 16 16" fill="none">
- <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
- </svg>
- </span>
- </a>
- <button
- class="nav__menu"
- type="button"
- aria-label="Open navigation menu"
- aria-expanded="false"
- aria-controls="mobile-nav"
- >
- <span></span>
- <span></span>
- <span></span>
- </button>
- </div>
- </div>
+       <div class="nav__slot" role="presentation"></div>
 
- <div class="nav-drawer" id="mobile-nav" hidden>
- <div class="nav-drawer__inner">
- <a href="#journey">Vorgehen</a>
- <a href="#benefits">Vorteile</a>
- <a href="#outcomes">Einsatzfelder</a>
- <a href="#faq">FAQ</a>
- <a href="#contact" class="btn btn--accent btn--small">Erstgespräch anfragen</a>
- </div>
- </div>
- </nav>
+       <div class="nav__actions">
+         <a href="#kontakt" class="btn btn--accent btn--small nav__cta" data-cta-label="Erstgespräch anfragen">
+           <span class="nav__cta-text">Erstgespräch anfragen</span>
+           <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"/></svg></span>
+         </a>
+         <button type="button" class="cx-menu-btn" id="cxMenuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="cxServicesDrawer">
+           <span class="cx-menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+           <span class="cx-menu-btn__label">Menü</span>
+         </button>
+       </div>
+
+     </div>
+   </nav>
  </header>
 
  <div class="cx-drawer-scrim" id="cxDrawerScrim" aria-hidden="true"></div>
- <aside class="cx-drawer" id="cxServicesDrawer" aria-hidden="true" role="dialog" aria-label="Leistungs-Navigation">
+ <aside class="cx-drawer" id="cxServicesDrawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Hauptmenü" tabindex="-1">
  <div class="cx-drawer__inner">
  <div class="cx-drawer__column">
  <div class="cx-drawer__section">
@@ -336,7 +318,7 @@
  <div class="cx-drawer__footer-label">CEx</div>
  <div class="cx-drawer__footer-h">Zwei Säulen, sechs Beratungsfelder.</div>
  <p class="cx-drawer__footer-p">KI, Digitalisierung, Prozesse, Projekte, Change und Architektur greifen ineinander und werden in eine klare Reihenfolge gebracht.</p>
- <a href="#contact" class="cx-drawer__cta"><span>Erstgespräch anfragen</span><span class="cx-drawer__cta-arrow">→</span></a>
+ <a href="#kontakt" class="cx-drawer__cta"><span>Erstgespräch anfragen</span><span class="cx-drawer__cta-arrow">→</span></a>
  </div>
  <div class="cx-drawer__close-hint">Schließen mit <kbd>Esc</kbd> oder Klick außerhalb</div>
  </div>
@@ -1176,7 +1158,7 @@
  </div>
  </section>
 
- <section class="section final-cta">
+ <section class="section final-cta" id="kontakt">
  <div class="container">
  <div class="final-cta__inner reveal">
  <div class="eyebrow eyebrow--on-dark eyebrow--center"><span class="eyebrow__bar" aria-hidden="true"></span><span class="eyebrow__index">07</span><span>Nächster Schritt</span></div>
@@ -1255,6 +1237,7 @@
  
 
  
+
 
 
 

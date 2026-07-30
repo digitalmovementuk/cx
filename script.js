@@ -1,11 +1,8 @@
 const nav = document.getElementById('nav');
-const navMenu = document.querySelector('.nav__menu');
-const mobileNav = document.getElementById('mobile-nav');
-const stickyCta = document.getElementById('stickyCta');
 const hero = document.getElementById('top');
 const contactForm = document.getElementById('contact');
 const formStatus = document.getElementById('form-status');
-const navLinks = Array.from(document.querySelectorAll('.nav__links a'));
+const navLinks = Array.from(document.querySelectorAll('.nav__primary a'));
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const isStaticCExSite = document.body.classList.contains('cex-static-site');
 const cexScriptUrl = document.currentScript?.src || window.location.href;
@@ -222,21 +219,6 @@ function onScroll() {
   updateScrollProgress();
 }
 
-function setDrawerState(isOpen) {
-  if (!navMenu || !mobileNav) {
-    return;
-  }
-
-  navMenu.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  mobileNav.hidden = !isOpen;
-  document.body.classList.toggle('has-drawer', isOpen);
-
-  if (isOpen) {
-    const firstLink = mobileNav.querySelector('a');
-    firstLink?.focus();
-  }
-}
-
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 window.addEventListener('resize', updateHeroMotion);
@@ -320,23 +302,6 @@ if (hero && !prefersReducedMotion.matches) {
   });
 }
 
-if (navMenu && mobileNav) {
-  navMenu.addEventListener('click', () => {
-    const isOpen = navMenu.getAttribute('aria-expanded') === 'true';
-    setDrawerState(!isOpen);
-  });
-
-  mobileNav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => setDrawerState(false));
-  });
-
-  window.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      setDrawerState(false);
-    }
-  });
-}
-
 const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -352,37 +317,6 @@ const revealObserver = new IntersectionObserver(
 document.querySelectorAll('.reveal').forEach((element) => {
   revealObserver.observe(element);
 });
-
-if (hero && stickyCta) {
-  const finalCta = document.querySelector('.final-cta');
-  const footer = document.querySelector('.footer');
-  const state = { pastHero: false, inFinalCta: false, inFooter: false };
-
-  const sync = () => {
-    const shouldShow = state.pastHero && !state.inFinalCta && !state.inFooter;
-    stickyCta.classList.toggle('is-visible', shouldShow);
-    stickyCta.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
-    stickyCta.toggleAttribute('inert', !shouldShow);
-  };
-
-  new IntersectionObserver(
-    ([entry]) => { state.pastHero = !entry.isIntersecting; sync(); },
-    { threshold: 0.2 }
-  ).observe(hero);
-
-  if (finalCta) {
-    new IntersectionObserver(
-      ([entry]) => { state.inFinalCta = entry.isIntersecting; sync(); },
-      { threshold: 0.1 }
-    ).observe(finalCta);
-  }
-  if (footer) {
-    new IntersectionObserver(
-      ([entry]) => { state.inFooter = entry.isIntersecting; sync(); },
-      { threshold: 0.01 }
-    ).observe(footer);
-  }
-}
 
 if (navLinks.length) {
   const sectionMap = new Map(
@@ -751,37 +685,57 @@ document.querySelectorAll('.outcomes__tab').forEach((button) => {
 })();
 
 /* ==========================================================================
-   Wide hamburger services drawer (homepage)
+   Hauptmenü-Drawer — einziger Handler (Topbar v2)
    ========================================================================== */
 (function () {
   const btn = document.getElementById('cxMenuToggle');
   const drawer = document.getElementById('cxServicesDrawer');
   const scrim = document.getElementById('cxDrawerScrim');
   if (!btn || !drawer || !scrim) return;
+
+  const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+  const isOpen = () => drawer.classList.contains('is-open');
+
   function open() {
     btn.setAttribute('aria-expanded', 'true');
-    btn.setAttribute('aria-label', 'Leistungen-Menü schließen');
+    btn.setAttribute('aria-label', 'Menü schließen');
     drawer.classList.add('is-open');
     drawer.setAttribute('aria-hidden', 'false');
     scrim.classList.add('is-open');
     scrim.setAttribute('aria-hidden', 'false');
     document.documentElement.style.overflow = 'hidden';
+    const first = drawer.querySelector(FOCUSABLE);
+    if (first) first.focus();
   }
-  function close() {
+
+  function close(returnFocus) {
     btn.setAttribute('aria-expanded', 'false');
-    btn.setAttribute('aria-label', 'Leistungen-Menü öffnen');
+    btn.setAttribute('aria-label', 'Menü öffnen');
     drawer.classList.remove('is-open');
     drawer.setAttribute('aria-hidden', 'true');
     scrim.classList.remove('is-open');
     scrim.setAttribute('aria-hidden', 'true');
     document.documentElement.style.overflow = '';
+    if (returnFocus) btn.focus();
   }
-  btn.addEventListener('click', () => {
-    if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
+
+  btn.addEventListener('click', () => { isOpen() ? close(false) : open(); });
+  scrim.addEventListener('click', () => close(true));
+
+  document.addEventListener('keydown', (event) => {
+    if (!isOpen()) return;
+    if (event.key === 'Escape') { close(true); return; }
+    if (event.key !== 'Tab') return;
+    const items = [btn, ...drawer.querySelectorAll(FOCUSABLE)].filter(
+      (el) => el.offsetWidth || el.offsetHeight || el === document.activeElement
+    );
+    if (!items.length) return;
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
   });
-  scrim.addEventListener('click', close);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-  drawer.querySelectorAll('.cx-drawer__link, .cx-drawer__cta, .cx-drawer__jump').forEach(a => {
-    a.addEventListener('click', () => setTimeout(close, 0));
-  });
+
+  drawer.querySelectorAll('.cx-drawer__link, .cx-drawer__cta, .cx-drawer__jump')
+    .forEach((a) => a.addEventListener('click', () => setTimeout(() => close(false), 0)));
 })();

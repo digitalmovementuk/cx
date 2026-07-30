@@ -49,31 +49,6 @@ body.cex-migrated-page {
   text-rendering: optimizeLegibility;
 }
 
-.cex-migrated-page .nav__inner {
-  width: 100%;
-  max-width: var(--container);
-  margin-inline: auto;
-  padding-inline: var(--container-px);
-}
-.cex-migrated-page .nav__brand img {
-  width: 120px !important;
-  height: 48px !important;
-  object-fit: contain;
-}
-
-/* Keep the shared header CTA readable even when legacy page styles collide. */
-.cex-migrated-page .nav .nav__desktop-cta {
-  background: #1e2327 !important;
-  border-color: #1e2327 !important;
-  color: #faf6ec !important;
-}
-.cex-migrated-page .nav .nav__desktop-cta:hover,
-.cex-migrated-page .nav .nav__desktop-cta:focus-visible {
-  background: #f4cf5d !important;
-  border-color: #f4cf5d !important;
-  color: #1e2327 !important;
-}
-
 /* Dark sections use one accessible heading/lead treatment on every page. */
 .cex-migrated-page .section--dark .eyebrow {
   color: #fff !important;
@@ -192,17 +167,8 @@ body.cex-migrated-page.home > main > .cex-page-visual img {
 .cex-migrated-page .cross-link__tag {
   color: #7b3700 !important;
 }
-.cex-migrated-page #cxMenuToggle,
-.cex-migrated-page .cx-menu-btn,
 .cex-migrated-page button.footer__cookie {
   min-height: 44px !important;
-}
-.cex-migrated-page #cxMenuToggle,
-.cex-migrated-page .cx-menu-btn {
-  min-width: 44px !important;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 .cex-migrated-page button.footer__cookie {
   padding-block: 7px !important;
@@ -539,13 +505,6 @@ body.cex-migrated-page.has-privacy-dialog {
     --section-py: 64px;
     font-size: 16px !important;
   }
-  .cex-migrated-page .nav__inner {
-    min-height: 64px;
-  }
-  .cex-migrated-page .nav__brand img {
-    width: 100px !important;
-    height: 40px !important;
-  }
   .cex-migrated-page .h-section,
   .cex-migrated-page .cx-trust__h {
     font-size: clamp(1.875rem, 8vw, 2.25rem) !important;
@@ -721,26 +680,8 @@ body.cex-migrated-page.has-privacy-dialog {
   body.cex-migrated-page:not(.home) .hero__trust {
     gap: 8px;
   }
-  .cex-migrated-page .nav__desktop-cta {
-    padding-inline: 12px;
-    font-size: 0.75rem;
-  }
   body.cex-migrated-page.home .hero__cta--secondary {
     display: none;
-  }
-}
-
-/* Legal pages keep one useful action in the compact header. */
-@media (max-width: 980px) {
-  body.cex-legal-page .nav__cta-group {
-    display: flex !important;
-    margin-left: auto;
-  }
-  body.cex-legal-page .nav__desktop-cta {
-    display: inline-flex !important;
-    min-height: 44px;
-    padding-inline: 12px !important;
-    font-size: 0.75rem !important;
   }
 }
 
@@ -751,3 +692,266 @@ body.cex-migrated-page.has-privacy-dialog {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==========================================================================
+   CEX TOPBAR v2 — kanonisch, 2026-07-28
+   Gilt für alle 36 öffentlichen Seiten. Ersetzt jede frühere Nav-Regel.
+   Mittel-Slot ist dauerhaft freigehalten (temporäre LIVE-Pill des
+   Client-Overview-Widgets liegt dort, position:fixed, z-index 99998).
+   ENTFERNUNG DER PILL: siehe Block "NACH ENTFERNUNG DER PILL" am Ende.
+   ========================================================================== */
+
+:root {
+  --cx-nav-h: 64px;
+  --cx-nav-slot: 300px;   /* Mindestbreite des freigehaltenen Mittelfelds */
+  --cx-nav-gap: 24px;
+}
+
+html { scroll-padding-top: calc(var(--cx-nav-h) + 16px); }
+
+/* ---- Bar-Rahmen ---------------------------------------------------------- */
+.cex-migrated-page .nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  background: var(--cx-warm-2);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  backdrop-filter: saturate(180%) blur(18px);
+  color: var(--cx-charcoal);
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;
+  transition: box-shadow 280ms cubic-bezier(0.85, 0, 0, 1);
+}
+.cex-migrated-page .nav.is-scrolled {
+  box-shadow: 0 1px 0 rgba(30, 35, 39, 0.04), 0 12px 28px -18px rgba(30, 35, 39, 0.18);
+}
+/* Scroll-Fortschritt: einziger Indikator, an der Unterkante der Bar */
+.cex-migrated-page .nav::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -1px;
+  width: 100%; height: 2px;
+  background: var(--cx-yellow);
+  transform-origin: left;
+  transform: scaleX(var(--scroll-progress, 0));
+}
+
+/* ---- Drei-Zonen-Raster --------------------------------------------------- */
+.cex-migrated-page .nav__inner {
+  display: grid;
+  grid-template-columns: auto minmax(var(--cx-nav-slot), 1fr) auto;
+  align-items: center;
+  gap: var(--cx-nav-gap);
+  width: 100%;
+  max-width: var(--container);
+  min-height: var(--cx-nav-h);
+  height: var(--cx-nav-h);
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+  padding-block: 0;
+}
+.cex-migrated-page .nav__lead {
+  display: flex;
+  align-items: center;
+  gap: var(--cx-nav-gap);
+  min-width: 0;
+}
+.cex-migrated-page .nav__slot { min-width: var(--cx-nav-slot); height: 1px; }
+.cex-migrated-page .nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* ---- Marke --------------------------------------------------------------- */
+.cex-migrated-page .nav__brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.cex-migrated-page .nav__brand img {
+  width: 120px !important;
+  height: 48px !important;
+  object-fit: contain;
+  display: block;
+}
+
+/* ---- In-Page-Anker ------------------------------------------------------- */
+.cex-migrated-page .nav__primary {
+  display: none;              /* erst ab 1200px sichtbar */
+  align-items: center;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cex-migrated-page .nav__primary li { margin: 0; }
+.cex-migrated-page .nav__primary a {
+  position: relative;
+  display: inline-block;
+  padding: 6px 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  text-decoration: none;
+  color: var(--cx-charcoal-3);
+  transition: color 280ms cubic-bezier(0.85, 0, 0, 1);
+}
+.cex-migrated-page .nav__primary a:hover { color: var(--cx-charcoal); }
+.cex-migrated-page .nav__primary a.is-active { color: var(--cx-charcoal); }
+.cex-migrated-page .nav__primary a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 2px;
+  background: var(--cx-yellow);
+}
+
+/* ---- CTA ----------------------------------------------------------------- */
+.cex-migrated-page .nav .nav__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 16px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+  background: #1e2327 !important;
+  border: 1px solid #1e2327 !important;
+  color: #faf6ec !important;
+  border-radius: 0;
+  text-decoration: none;
+  transition: background-color 280ms cubic-bezier(0.85, 0, 0, 1),
+              border-color 280ms cubic-bezier(0.85, 0, 0, 1),
+              color 280ms cubic-bezier(0.85, 0, 0, 1);
+}
+.cex-migrated-page .nav .nav__cta:hover,
+.cex-migrated-page .nav .nav__cta:focus-visible {
+  background: var(--cx-yellow) !important;
+  border-color: var(--cx-yellow) !important;
+  color: var(--cx-charcoal) !important;
+}
+.cex-migrated-page .nav .nav__cta .btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px; height: 20px;
+  flex-shrink: 0;
+  background: var(--cx-yellow);
+  color: var(--cx-charcoal);
+  transition: transform 280ms cubic-bezier(0.85, 0, 0, 1), background 280ms, color 280ms;
+}
+.cex-migrated-page .nav .nav__cta:hover .btn__icon { background: var(--cx-charcoal); color: var(--cx-yellow); transform: translateX(3px); }
+.cex-migrated-page .nav .nav__cta .btn__icon svg { width: 12px; height: 12px; }
+
+/* ---- Menü-Button --------------------------------------------------------- */
+.cex-migrated-page .nav .cx-menu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 10px 14px 10px 11px;
+  background: rgba(30, 35, 39, 0.04);
+  border: 1px solid var(--line);
+  color: var(--cx-charcoal);
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  cursor: pointer;
+  border-radius: 0;
+}
+.cex-migrated-page .nav .cx-menu-btn:hover,
+.cex-migrated-page .nav .cx-menu-btn[aria-expanded="true"] {
+  background: var(--cx-charcoal);
+  border-color: var(--cx-charcoal);
+  color: #fff;
+}
+.cex-migrated-page .nav .cx-menu-btn__icon { width: 18px; height: 14px; gap: 3px; }
+.cex-migrated-page .nav .cx-menu-btn__icon span { height: 1.5px; }
+.cex-migrated-page .nav .cx-menu-btn:hover .cx-menu-btn__icon span,
+.cex-migrated-page .nav .cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span { background: var(--cx-yellow); }
+
+/* ---- Fokus --------------------------------------------------------------- */
+.cex-migrated-page .nav a:focus-visible,
+.cex-migrated-page .nav button:focus-visible,
+.cex-migrated-page .cx-drawer a:focus-visible {
+  outline: 2px solid var(--cx-yellow);
+  outline-offset: 3px;
+}
+
+/* ---- Drawer-Anpassungen -------------------------------------------------- */
+.cex-migrated-page .cx-drawer { padding-top: var(--cx-nav-h); }
+/* "Springen zu" ist die einzige Quelle der In-Page-Anker, sobald die
+   Bar-Links weg sind — also überall ausser auf grossem Desktop sichtbar. */
+.cex-migrated-page .cx-drawer__section--mobile { display: flex; flex-direction: column; gap: 6px; }
+@media (min-width: 1200px) {
+  .cex-migrated-page .cx-drawer__section--mobile { display: none; }
+}
+
+/* ---- Hero-Freiraum (AGENTS.md: fixe Nav darf Hero nie verdecken) --------- */
+body.cex-migrated-page:not(.home) .hero {
+  padding-top: max(clamp(48px, 6vh, 68px), calc(var(--cx-nav-h) + 24px));
+}
+
+/* ==========================================================================
+   Breakpoints
+   ========================================================================== */
+
+/* ≥1200px — volle Bar: Marke + 3 Anker | Slot | CTA mit Label | Menü mit Label */
+@media (min-width: 1200px) {
+  .cex-migrated-page .nav__primary { display: flex; }
+}
+@media (min-width: 1440px) {
+  :root { --cx-nav-slot: 340px; }
+}
+
+/* ≤1199px — Anker wandern in den Drawer, Menü-Button wird Icon-only */
+@media (max-width: 1199px) {
+  :root { --cx-nav-slot: 260px; }
+  .cex-migrated-page .nav .cx-menu-btn__label { display: none; }
+  .cex-migrated-page .nav .cx-menu-btn { width: 44px; padding: 0; gap: 0; }
+}
+
+/* ≤920px — kompakte Bar; CTA wird Icon-only, sonst kollidiert sie mit der Pill */
+@media (max-width: 920px) {
+  :root { --cx-nav-h: 56px; --cx-nav-gap: 12px; }
+  .cex-migrated-page .nav__inner { min-height: 56px; height: 56px; }
+  .cex-migrated-page .nav__brand img { width: 100px !important; height: 40px !important; }
+  .cex-migrated-page .nav .nav__cta-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .cex-migrated-page .nav .nav__cta { width: 44px; padding: 0; gap: 0; justify-content: center; }
+  .cex-migrated-page .nav .nav__cta .btn__icon { width: 100%; height: 100%; background: transparent; color: #faf6ec; }
+  .cex-migrated-page .nav .nav__cta:hover .btn__icon { background: transparent; color: var(--cx-charcoal); }
+  .cex-migrated-page .nav .nav__cta .btn__icon svg { width: 15px; height: 15px; }
+  /* AGENTS.md: Mikro-Labels auf Mobile zentrieren */
+  .cex-migrated-page .cx-drawer__label { text-align: center; }
+}
+
+/* ≤620px — Pill verliert ihr Textlabel, Slot darf schrumpfen */
+@media (max-width: 620px) {
+  :root { --cx-nav-h: 52px; --cx-nav-slot: 100px; }
+  .cex-migrated-page .nav__inner { min-height: 52px; height: 52px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cex-migrated-page .nav,
+  .cex-migrated-page .nav *,
+  .cex-migrated-page .cx-drawer,
+  .cex-migrated-page .cx-drawer * { transition-duration: 0.01ms !important; animation: none !important; }
+}
+
+/* ==========================================================================
+   NACH ENTFERNUNG DER PILL  (overview-widget.js gelöscht)
+   Genau drei Änderungen, sonst nichts:
+     1. :root { --cx-nav-slot: 0px; }  in allen vier Breakpoint-Blöcken
+     2. @media (min-width:1200px) → @media (min-width:980px) für .nav__primary
+        und @media (max-width:1199px) → (max-width:979px)
+     3. Den ≤920px-Block "nav__cta-text visually hidden" streichen; stattdessen
+        @media (max-width:520px) { … } — das CTA-Label bleibt bis 520px sichtbar.
+   Die Bar bleibt sonst identisch.
+   ========================================================================== */

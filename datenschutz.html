@@ -36,21 +36,65 @@
   <body class="cex-migrated-page cex-static-site cex-legal-page">
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-    <header>
-      <nav class="nav" id="nav">
-        <div class="container nav__inner">
-          <a href="./index.html#top" class="nav__brand" aria-label="CEx Startseite"><img src="media/cex-logo.png" alt="CEx" style="height:26px;width:auto;display:block" srcset="media/cex-logo-2x.png 2x"></a>
-          <div class="nav__links">
-            <a href="./index.html#capabilities">Leistungen</a>
-            <a href="./index.html#journey">Vorgehen</a>
-            <a href="./index.html#faq">FAQ</a>
+    <header class="cx-header">
+      <nav class="nav" id="nav" aria-label="Hauptnavigation">
+        <div class="nav__inner">
+
+          <div class="nav__lead">
+            <a href="index.html" class="nav__brand" aria-label="CEx — zur Startseite">
+              <img src="media/cex-logo.png" alt="CEx" width="120" height="48" srcset="media/cex-logo-2x.png 2x">
+            </a>
+            <ul class="nav__primary">
+              <li><a href="index.html#journey">Vorgehen</a></li>
+              <li><a href="index.html#benefits">Vorteile</a></li>
+              <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
           </div>
-          <div class="nav__cta-group">
-            <a href="./index.html#contact" class="btn btn--accent btn--small nav__desktop-cta">Erstgespräch anfragen</a>
+
+          <div class="nav__slot" role="presentation"></div>
+
+          <div class="nav__actions">
+            <a href="index.html#kontakt" class="btn btn--accent btn--small nav__cta" data-cta-label="Erstgespräch anfragen">
+              <span class="nav__cta-text">Erstgespräch anfragen</span>
+              <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"/></svg></span>
+            </a>
+            <button type="button" class="cx-menu-btn" id="cxMenuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="cxServicesDrawer">
+              <span class="cx-menu-btn__icon" aria-hidden="true"><span></span><span></span><span></span></span>
+              <span class="cx-menu-btn__label">Menü</span>
+            </button>
           </div>
+
         </div>
       </nav>
     </header>
+    <div class="cx-drawer-scrim" id="cxDrawerScrim" aria-hidden="true"></div>
+    <aside class="cx-drawer" id="cxServicesDrawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Hauptmenü" tabindex="-1">
+      <div class="cx-drawer__inner">
+        <div class="cx-drawer__column">
+          <div class="cx-drawer__section">
+            <div class="cx-drawer__label">Säule 1 — Projekte &amp; Prozesse</div>
+            <a class="cx-drawer__link" href="prozessoptimierung-beratung/index.html"><span class="cx-drawer__num">01</span><span class="cx-drawer__title">Prozessoptimierung &amp; BPM</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+            <a class="cx-drawer__link" href="projektmanagement-beratung/index.html"><span class="cx-drawer__num">02</span><span class="cx-drawer__title">Projektmanagement</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+            <a class="cx-drawer__link" href="digitalisierungsberatung/index.html"><span class="cx-drawer__num">03</span><span class="cx-drawer__title">Digitalisierung &amp; Transformation</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+            <a class="cx-drawer__link" href="change-management-beratung/index.html"><span class="cx-drawer__num">04</span><span class="cx-drawer__title">Change Management</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+            <a class="cx-drawer__link" href="ki-beratung/index.html"><span class="cx-drawer__num">05</span><span class="cx-drawer__title">KI-Beratung &amp; Strategie</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+          </div>
+          <div class="cx-drawer__section" style="margin-top:24px">
+            <div class="cx-drawer__label">Säule 2 — Architektur</div>
+            <a class="cx-drawer__link" href="enterprise-architecture-beratung/index.html"><span class="cx-drawer__num">06</span><span class="cx-drawer__title">Enterprise Architecture</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="cx-drawer__footer">
+          <div>
+            <div class="cx-drawer__footer-label">CEx</div>
+            <div class="cx-drawer__footer-h">Zwei Säulen, sechs Beratungsfelder.</div>
+            <p class="cx-drawer__footer-p">Projekte &amp; Prozesse als Kernpfeiler, Enterprise Architecture als zweiter Schwerpunkt. Beide greifen ineinander.</p>
+            <a href="index.html#kontakt" class="cx-drawer__cta"><span>Erstgespräch anfragen</span><span class="cx-drawer__cta-arrow">→</span></a>
+          </div>
+          <div class="cx-drawer__close-hint">Schließen mit <kbd>Esc</kbd> oder Klick außerhalb</div>
+        </div>
+      </div>
+    </aside>
 
     <main id="main" class="legal-main">
   <section class="legal-hero">
@@ -119,7 +163,6 @@
     </div>
   </section>
 
-<script src="overview-widget.js" defer></script>
 </main>
 <footer class="footer"><div class="container footer__grid"><div class="footer__col footer__brand"><div class="footer__logo">CE<span>x</span></div><p>Beratung für Enterprise Architecture, Prozesse, Projektmanagement, KI und Digitalisierung — für tragfähige IT- und Geschäftsentscheidungen. Köln · DACH-weit.</p></div><div class="footer__col"><strong>Leistungen</strong><a href="ki-beratung/">KI-Beratung</a><a href="digitalisierungsberatung/">Digitalisierung</a><a href="prozessoptimierung-beratung/">Prozessoptimierung</a><a href="projektmanagement-beratung/">Projektmanagement</a><a href="change-management-beratung/">Change Management</a><a href="enterprise-architecture-beratung/">Enterprise Architecture</a></div><div class="footer__col"><strong>Rechtliches</strong><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><button type="button" class="footer__cookie" onclick="window.CExCookies&&window.CExCookies.open()">Cookie-Einstellungen</button><a href="sitemap/">Sitemap</a></div><div class="footer__col"><strong>Kontakt</strong><a href="mailto:kontakt@cex.koeln">kontakt@cex.koeln</a><a href="index.html#contact">Erstgespräch anfragen</a></div></div><div class="container footer__bottom"><div>© 2026 CEx · Alle Rechte vorbehalten.</div><div>Made in Köln · Datenschutzbewusst · DACH-weit</div></div></footer></body>
 </html>
