@@ -610,6 +610,192 @@ html { scroll-behavior: auto!important; }
 
 .cx-drawer__footer-p { display: none; }
 }
+
+/* =========================================================================
+   NAV POLISH 2026-07-30 — sleeker top bar (visual pass only)
+   Overrides polish.css "CEX TOPBAR v2" (loaded after this inline block and
+   with higher specificity) — hence the .cex-migrated-page.cex-static-site
+   prefix, and !important only on properties polish.css itself marks
+   !important. IA, markup and breakpoint behaviour are unchanged.
+   ========================================================================= */
+
+/* ---- Bar: translucent cream + blur at rest; opaque + soft elevation scrolled */
+.cex-migrated-page.cex-static-site .nav {
+  background: rgba(250, 246, 236, 0.88) !important;
+  -webkit-backdrop-filter: saturate(170%) blur(16px);
+  backdrop-filter: saturate(170%) blur(16px);
+  border-bottom: 1px solid rgba(30, 35, 39, 0.07);
+  box-shadow: none;
+  transition: background-color 320ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 320ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 320ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation: cx-nav-enter 640ms cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+.cex-migrated-page.cex-static-site .nav.is-scrolled {
+  background: rgba(250, 246, 236, 0.96) !important;
+  border-bottom-color: rgba(30, 35, 39, 0.11);
+  box-shadow: 0 1px 0 rgba(30, 35, 39, 0.02),
+              0 12px 32px -16px rgba(30, 35, 39, 0.18);
+}
+@keyframes cx-nav-enter {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Desktop: a touch more air at rest, gentle compression once scrolling */
+@media (min-width: 921px) {
+  .cex-migrated-page.cex-static-site .nav__inner {
+    height: 68px;
+    min-height: 0;
+    transition: height 320ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .cex-migrated-page.cex-static-site .nav.is-scrolled .nav__inner { height: 58px; }
+}
+
+/* ---- Primary links: sliding yellow underline, charcoal on hover */
+.cex-migrated-page.cex-static-site .nav__lead { gap: 34px; }
+.cex-migrated-page.cex-static-site .nav__primary { gap: 26px; }
+.cex-migrated-page.cex-static-site .nav__actions { gap: 12px; }
+.cex-migrated-page.cex-static-site .nav__primary a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 1px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--cx-charcoal-3);
+  transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cex-migrated-page.cex-static-site .nav__primary a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 2px;
+  height: 2px;
+  background: var(--cx-yellow);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 260ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cex-migrated-page.cex-static-site .nav__primary a:hover,
+.cex-migrated-page.cex-static-site .nav__primary a:focus-visible,
+.cex-migrated-page.cex-static-site .nav__primary a.is-active { color: var(--cx-charcoal); }
+.cex-migrated-page.cex-static-site .nav__primary a:hover::after,
+.cex-migrated-page.cex-static-site .nav__primary a:focus-visible::after,
+.cex-migrated-page.cex-static-site .nav__primary a.is-active::after { transform: scaleX(1); }
+
+/* ---- CTA: tighter type, unified 44px control height, lift on hover */
+.cex-migrated-page.cex-static-site .nav .nav__cta {
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 14px 0 18px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border-radius: 8px !important;
+  background: var(--cx-charcoal) !important;
+  border: 1px solid var(--cx-charcoal) !important;
+  color: var(--cx-warm-2) !important;
+  box-shadow: 0 1px 2px rgba(30, 35, 39, 0.10);
+  transform: translateY(0);
+  transition: background-color 220ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 220ms cubic-bezier(0.4, 0, 0.2, 1),
+              color 220ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 220ms cubic-bezier(0.4, 0, 0.2, 1),
+              transform 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cex-migrated-page.cex-static-site .nav .nav__cta:hover,
+.cex-migrated-page.cex-static-site .nav .nav__cta:focus-visible {
+  background: var(--cx-yellow) !important;
+  border-color: var(--cx-yellow) !important;
+  color: var(--cx-charcoal) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -8px rgba(255, 122, 0, 0.55);
+}
+.cex-migrated-page.cex-static-site .nav .nav__cta:active {
+  background: var(--cx-yellow-2, #E66E00) !important;
+  border-color: var(--cx-yellow-2, #E66E00) !important;
+  transform: translateY(0);
+  box-shadow: 0 3px 10px -6px rgba(255, 122, 0, 0.5);
+}
+.cex-migrated-page.cex-static-site .nav .nav__cta .btn__icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: var(--cx-yellow);
+  color: var(--cx-charcoal);
+  transition: transform 220ms cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 220ms cubic-bezier(0.4, 0, 0.2, 1),
+              color 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cex-migrated-page.cex-static-site .nav .nav__cta:hover .btn__icon,
+.cex-migrated-page.cex-static-site .nav .nav__cta:focus-visible .btn__icon {
+  background: var(--cx-charcoal);
+  color: var(--cx-yellow);
+  transform: translateX(2px);
+}
+
+/* ---- Menü button: ghost twin of the CTA (same height + radius) */
+.cex-migrated-page.cex-static-site .nav .cx-menu-btn {
+  gap: 9px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 16px 0 13px;
+  background: transparent;
+  border: 1px solid rgba(30, 35, 39, 0.16);
+  border-radius: 8px;
+  color: var(--cx-charcoal);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background-color 220ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 220ms cubic-bezier(0.4, 0, 0.2, 1),
+              color 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cex-migrated-page.cex-static-site .nav .cx-menu-btn:hover,
+.cex-migrated-page.cex-static-site .nav .cx-menu-btn[aria-expanded="true"] {
+  background: var(--cx-charcoal);
+  border-color: var(--cx-charcoal);
+  color: #fff;
+}
+
+/* Hamburger icon: previously unstyled on these pages (styles.css is not
+   loaded here), so the three <span> lines rendered invisible. */
+.cex-migrated-page.cex-static-site .nav .cx-menu-btn__icon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 16px;
+  height: 12px;
+}
+.cex-migrated-page.cex-static-site .nav .cx-menu-btn__icon span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  border-radius: 1px;
+  background: currentColor;
+  transition: transform 280ms cubic-bezier(0.85, 0, 0, 1),
+              opacity 280ms cubic-bezier(0.85, 0, 0, 1),
+              background-color 280ms cubic-bezier(0.85, 0, 0, 1);
+}
+.cex-migrated-page.cex-static-site .nav .cx-menu-btn:hover .cx-menu-btn__icon span,
+.cex-migrated-page.cex-static-site .nav .cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span { background: var(--cx-yellow); }
+.cex-migrated-page.cex-static-site .nav .cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span:nth-child(1) { transform: translateY(5.25px) rotate(45deg); }
+.cex-migrated-page.cex-static-site .nav .cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span:nth-child(2) { opacity: 0; }
+.cex-migrated-page.cex-static-site .nav .cx-menu-btn[aria-expanded="true"] .cx-menu-btn__icon span:nth-child(3) { transform: translateY(-5.25px) rotate(-45deg); }
+
+/* ---- Breakpoint parity with polish.css (its media rules have lower
+   specificity than the base rules above, so they are restated here) */
+@media (max-width: 1199px) {
+  .cex-migrated-page.cex-static-site .nav .cx-menu-btn { width: 44px; padding: 0; gap: 0; justify-content: center; }
+}
+@media (max-width: 920px) {
+  .cex-migrated-page.cex-static-site .nav .nav__cta { width: 44px; padding: 0; gap: 0; justify-content: center; }
+  .cex-migrated-page.cex-static-site .nav .nav__cta .btn__icon { width: 100%; height: 100%; border-radius: 8px; background: transparent; color: var(--cx-warm-2); }
+  .cex-migrated-page.cex-static-site .nav .nav__cta:hover .btn__icon,
+  .cex-migrated-page.cex-static-site .nav .nav__cta:focus-visible .btn__icon { background: transparent; color: var(--cx-charcoal); transform: none; }
+  .cex-migrated-page.cex-static-site .nav .nav__cta .btn__icon svg { width: 15px; height: 15px; }
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://cex.koeln/"},{"@type":"ListItem","position":2,"name":"KI-Beratung","item":"https://cex.koeln/ki-beratung/"},{"@type":"ListItem","position":3,"name":"Generative KI › produktiv und verlässlich.","item":"https://cex.koeln/ki-beratung/generative-ki/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".hero__lead", ".faq"]}}</script>
