@@ -178,7 +178,7 @@ body.cex-migrated-page.home > main > .cex-page-visual img {
 @media (min-width: 921px) {
   body.cex-migrated-page:not(.home) .hero {
     display: block;
-    min-height: calc(100dvh - 64px);
+    min-height: 0;
     padding: clamp(48px, 6vh, 68px) 0 clamp(30px, 4vh, 48px);
   }
   body.cex-migrated-page:not(.home) .hero > .container {
