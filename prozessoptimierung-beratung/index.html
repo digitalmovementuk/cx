@@ -963,7 +963,9 @@ html { scroll-behavior: auto!important; }
 .growth-map__effects-label{margin-top:24px;font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--cx-charcoal-3)}
 .growth-map__effects{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
 .growth-effect{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;padding:18px;background:var(--cx-charcoal);color:#fff}
-.growth-effect strong{font-size:.8125rem;color:var(--cx-yellow)}
+/* A2: Effektivitaet und Effizienz sind die Kernaussage der Grafik und lagen auf
+   derselben Groesse wie ihr Erklaertext — dadurch war der Zusammenhang nicht lesbar. */
+.growth-effect strong{font-size:1.0625rem;line-height:1.2;letter-spacing:-.01em;color:var(--cx-yellow)}
 .growth-effect span{font-size:.8125rem;line-height:1.5;color:rgba(255,255,255,.76)}
 .growth-map figcaption,.evidence-panel figcaption{margin-top:16px;font-size:.8125rem;line-height:1.55;color:var(--muted)}
 
@@ -975,7 +977,10 @@ html { scroll-behavior: auto!important; }
  body.cex-migrated-page .method .method-step+.method-step{border-left:1px solid var(--line-on-dark)!important}
 }
 
-.delivery-evidence{display:grid;gap:18px;margin-top:40px}
+/* A7: Zeitrahmen-Panel an das Process-Mining-Panel anbinden — die beiden lagen
+   als getrennte Karten nebeneinander und wirkten dadurch verloren. */
+.delivery-evidence{display:grid;gap:0;margin-top:40px}
+.delivery-evidence>*+*{border-top:0}
 .evidence-panel{margin:0;padding:clamp(24px,4vw,36px);background:#fff;border:1px solid var(--line)}
 .evidence-panel__head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);gap:32px;align-items:end;margin-bottom:26px}
 .evidence-panel__head p{margin:0;font-size:.9rem;line-height:1.6;color:var(--muted)}
@@ -996,7 +1001,9 @@ html { scroll-behavior: auto!important; }
 .delivery-stage{position:relative;padding:0 18px 4px 22px;border-left:1px solid var(--line)}
 .delivery-stage::before{content:"";position:absolute;left:-6px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--cx-charcoal);box-shadow:0 0 0 5px #fff}
 .delivery-stage:last-child::before{background:var(--cx-yellow)}
-.delivery-stage__time{display:block;margin-bottom:12px;font-size:.9375rem;font-weight:800;color:var(--cx-charcoal)}
+/* A7: die Wochen sind das eigentliche Datum und muessen groesser sein als der
+   Phasenname darunter (vorher .9375rem — gleich gross wie die Stuetzzeile). */
+.delivery-stage__time{display:block;margin-bottom:10px;font-size:1.25rem;font-weight:800;line-height:1.15;letter-spacing:-.01em;font-variant-numeric:tabular-nums;color:var(--cx-charcoal)}
 .delivery-stage__phase{display:block;margin-bottom:5px;font-size:.6875rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--cx-charcoal-3)}
 .delivery-stage strong{font-size:.875rem;line-height:1.35;color:var(--cx-charcoal)}
 
@@ -1306,6 +1313,18 @@ body.cex-migrated-page:not(.home) .hero>.container{position:relative;z-index:1}
  body.cex-migrated-page:not(.home) .hero__trust .trust-item{min-width:0;padding-right:clamp(18px,3vw,38px)}
  body.cex-migrated-page:not(.home) .hero__trust .trust-item+.trust-item{padding-left:clamp(18px,3vw,38px);border-left:1px solid rgba(255,255,255,.12)}
  body.cex-migrated-page:not(.home) .hero__trust .trust-item__label{max-width:38ch}
+}
+
+/* A11: "Wie wir arbeiten" stand linksbuendig in der halben Breite, rechts blieb
+   eine grosse Leerflaeche. Kopfzeile auf die zweispaltige Anordnung umgestellt,
+   die diese Seite ohnehin schon nutzt (.evidence-panel__head): H2 links,
+   Lead rechts, Grundlinie gemeinsam. */
+@media(min-width:900px){
+ .section[data-bench-role="quality"] .section__head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:clamp(32px,4vw,56px);align-items:end}
+ .section[data-bench-role="quality"] .section__head>.eyebrow{grid-column:1/-1}
+ /* !important noetig: polish.css:62 setzt die H2-Groesse selbst mit !important. */
+ .section[data-bench-role="quality"] .section__head>.h-section{max-width:none;font-size:clamp(1.75rem,2.6vw,2.375rem)!important}
+ .section[data-bench-role="quality"] .section__head>.h-lead{margin:0;max-width:none}
 }
 
 /* MOBILE — Fuenf-Phasen-Block. Muss zuletzt im Stylesheet stehen. */
