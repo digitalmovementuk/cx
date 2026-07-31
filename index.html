@@ -328,9 +328,10 @@
  <main id="main">
  <section class="hero" id="top">
  <div class="hero__video-shell" aria-hidden="true">
- <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="media/page-home.jpg" disablepictureinpicture>
- <source data-src="media/cx-hero-background-calm.mp4" type="video/mp4" />
+ <video class="hero__video" autoplay muted loop playsinline preload="auto" disablepictureinpicture>
+ <source src="media/cx-hero-background-calm.mp4" type="video/mp4" />
  </video>
+ <script>(function(){var v=document.currentScript.previousElementSibling;if(v&&window.matchMedia('(max-width: 820px)').matches){v.querySelector('source').src='media/cx-hero-background-calm-mobile.mp4';v.load();}})();</script>
  <div class="hero__video-overlay"></div>
  </div>
 

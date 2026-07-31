@@ -540,25 +540,25 @@ document.querySelectorAll('.outcomes__tab').forEach((button) => {
   }
 })();
 
-// Paint the lightweight hero poster first, then start the decorative video.
+// Hero video plays from the first paint (src + autoplay live in the markup).
+// This only nudges autoplay along where a browser stalled it, and stops the
+// video for reduced-motion or data-saver users.
 (function () {
   const video = document.querySelector('.hero__video');
-  const source = video && video.querySelector('source[data-src]');
-  if (!video || !source || window.matchMedia('(prefers-reduced-motion: reduce)').matches || navigator.connection?.saveData) return;
-  const start = function () {
-    if (!source.dataset.src) return;
-    ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach(function (eventName) {
-      window.removeEventListener(eventName, start);
-    });
-    source.src = source.dataset.src;
-    source.removeAttribute('data-src');
-    video.load();
-    video.play().catch(function () {});
+  if (!video) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || navigator.connection?.saveData) {
+    video.autoplay = false;
+    video.pause();
+    return;
+  }
+  const play = function () {
+    if (video.paused) video.play().catch(function () {});
   };
-  ['pointerdown', 'touchstart', 'keydown', 'scroll'].forEach(function (eventName) {
-    window.addEventListener(eventName, start, { once: true, passive: true });
+  play();
+  video.addEventListener('canplay', play, { once: true });
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) play();
   });
-  window.addEventListener('load', function () { window.setTimeout(start, 15000); }, { once: true });
 })();
 
 // Load decorative capability-card video only shortly before its card enters
