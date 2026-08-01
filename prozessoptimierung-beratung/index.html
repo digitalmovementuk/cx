@@ -1010,6 +1010,25 @@ html { scroll-behavior: auto!important; }
 .impact-card__num{display:inline-flex;width:max-content;margin-bottom:30px;padding:6px 9px;border-radius:999px;background:var(--cx-charcoal);font-size:.6875rem;font-weight:800;letter-spacing:.1em;color:#fff}
 .impact-card:nth-child(4) .impact-card__num{background:var(--cx-yellow);color:var(--cx-charcoal)}
 
+/* Leistungsfelder: redaktioneller Einstieg, zwei Schwerpunktkarten und vier kompakte Felder. */
+.process-services-intro{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(36px,5vw,64px);align-items:center;margin-bottom:clamp(36px,5vw,56px)}
+.process-services-intro .section__head{margin:0}
+.process-services-intro .h-section{max-width:none;font-size:clamp(2rem,3vw,2.4rem);text-wrap:wrap}
+.process-services-intro .cex-page-visual{margin:0;box-shadow:0 24px 50px -38px rgba(30,35,39,.38)}
+.process-services-intro .cex-page-visual img{aspect-ratio:16/10;object-position:center}
+#leistungen .services-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;margin-top:0}
+#leistungen .service-card{position:relative;min-width:0;overflow:hidden;padding:clamp(24px,2.5vw,32px);border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:none}
+#leistungen .service-card:nth-child(-n+2){grid-column:span 6;min-height:300px;border-top:3px solid var(--cx-yellow)}
+#leistungen .service-card:nth-child(n+3){grid-column:span 6;min-height:240px}
+#leistungen .service-card__num{width:46px;height:46px;margin-bottom:clamp(22px,3vw,32px);border-radius:12px;font-size:.6875rem}
+#leistungen .service-card h3{max-width:100%;margin:0 0 14px;font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.25;overflow-wrap:anywhere!important;word-break:normal!important;hyphens:none!important}
+#leistungen .service-card p{max-width:62ch;margin:0;font-size:.9rem;line-height:1.65;overflow-wrap:anywhere}
+#leistungen .service-card:nth-child(-n+2) p{max-width:56ch}
+@media(max-width:1180px) and (min-width:821px){
+ .process-services-intro{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px}
+ #leistungen .service-card:nth-child(n){grid-column:span 6;min-height:0}
+}
+
 @media(max-width:1100px) and (min-width:821px){
  body.cex-migrated-page .method .method-step{padding:28px 18px 30px}
  body.cex-migrated-page .method-step::before{left:18px;width:20px}
@@ -1049,6 +1068,16 @@ html { scroll-behavior: auto!important; }
  .mandate-principle{border-left:1px solid var(--line)}
  .mandate-principle::before{left:50%;transform:translateX(-50%)}
  .impact-card{min-height:0}
+ .process-services-intro{grid-template-columns:1fr;gap:28px;margin-bottom:32px}
+ .process-services-intro .section__head{margin:0 auto}
+ .process-services-intro .h-section{font-size:clamp(1.75rem,7vw,2rem)}
+ .process-services-intro .cex-page-visual{width:100%;margin:0}
+ .process-services-intro .cex-page-visual img{aspect-ratio:4/3}
+ #leistungen .services-grid{grid-template-columns:1fr!important;gap:14px}
+ #leistungen .service-card:nth-child(n){grid-column:auto;min-height:0;padding:26px 22px}
+ #leistungen .service-card__num{margin-right:auto;margin-left:auto}
+ #leistungen .service-card h3{font-size:1.0625rem;line-height:1.3}
+ #leistungen .service-card p{max-width:34ch;margin-right:auto;margin-left:auto}
 }
 </style>
 <meta name="theme-color" content="#1E2327"><style>
@@ -1477,12 +1506,14 @@ body.cex-migrated-page:not(.home) .hero>.container{position:relative;z-index:1}
 <!-- SERVICES -->
 <section class="section section--white reveal" id="leistungen" data-bench-role="core-capability">
  <div class="container">
-  <div class="section__head">
-   <div class="eyebrow">Unsere Leistungen</div>
-   <h2 class="h-section">Sechs Leistungsfelder prägen unsere Arbeit.</h2>
-   <p class="h-lead">Sie reichen von der Analyse und Neugestaltung über Automatisierung und Umsetzungssteuerung bis zur Einarbeitung des internen Teams.</p>
+  <div class="process-services-intro">
+   <div class="section__head">
+    <div class="eyebrow">Unsere Leistungen</div>
+    <h2 class="h-section">Sechs Leistungsfelder<br>prägen unsere Arbeit.</h2>
+    <p class="h-lead">Sie reichen von der Analyse und Neugestaltung über Automatisierung und Umsetzungssteuerung bis zur Einarbeitung des internen Teams.</p>
+   </div>
+   <figure class="cex-page-visual"><img src="../media/page-prozessoptimierung-beratung.jpg" alt="Mitarbeiter beobachtet einen Produktionsablauf zur Prozessverbesserung" width="2000" height="1333" loading="lazy" decoding="async"></figure>
   </div>
-  <figure class="cex-page-visual"><img src="../media/page-prozessoptimierung-beratung.jpg" alt="Mitarbeiter beobachtet einen Produktionsablauf zur Prozessverbesserung" width="2000" height="1333" loading="lazy" decoding="async"></figure>
   <div class="services-grid"><div class="service-card"><div class="service-card__num">01</div><h3>Prozessanalyse mit Daten</h3><p>Wir erfassen den heutigen Ablauf und werten vorhandene Daten aus. Wenn es sinnvoll ist, nutzen wir dafür auch Process Mining, also die softwaregestützte Auswertung von Prozessdaten. So werden Engpässe, Wartezeiten und unnötige Schleifen sichtbar. Sie erhalten eine verständliche Übersicht mit konkreten Möglichkeiten und nächsten Schritten.</p></div><div class="service-card"><div class="service-card__num">02</div><h3>Geschäftsprozessmanagement &amp; Modellierung</h3><p>Wir vergleichen den heutigen Ablauf mit dem gewünschten Zustand. Dabei prüfen wir doppelte Arbeit, getrennte Datenbestände und Sicherheitslücken. Den künftigen Prozess beschreiben wir so, dass Fachbereich und IT ihn gemeinsam verstehen und umsetzen können.</p></div><div class="service-card"><div class="service-card__num">03</div><h3>Prozessautomatisierung mit Software und KI</h3><p>Wiederkehrende, fest geregelte Schritte können Software oder KI übernehmen. Beurteilung und Freigabe bleiben bei den zuständigen Menschen.</p></div><div class="service-card"><div class="service-card__num">04</div><h3>Umsetzung und Verantwortung auf Zeit</h3><p>Wir begleiten die Umsetzung, übernehmen bei Bedarf zeitweise Verantwortung und arbeiten das interne Team ein. Das Mandat endet erst, wenn der Ablauf im täglichen Betrieb funktioniert.</p></div><div class="service-card"><div class="service-card__num">05</div><h3>Kennzahlen und Verantwortung</h3><p>Wenige aussagekräftige Kennzahlen, eindeutige Zuständigkeiten und feste Prüftermine sorgen dafür, dass aus jeder Abweichung eine konkrete Maßnahme wird.</p></div><div class="service-card"><div class="service-card__num">06</div><h3>Veränderungsbegleitung und Befähigung</h3><p>Die Mitarbeitenden gestalten den neuen Ablauf mit und werden befähigt, ihn zu tragen — so wird er gelebte Praxis.</p></div></div>
  </div>
 </section>
