@@ -47,7 +47,7 @@
 
 .cx-trust .cx-trust__col:first-child > .h-lead {
   max-width: 42ch !important;
-  margin: 0 !important;
+  margin: clamp(20px, 2vw, 28px) 0 0 !important;
   color: #616160 !important;
   font-size: clamp(1.0625rem, 1.3vw, 1.25rem) !important;
   line-height: 1.55 !important;
