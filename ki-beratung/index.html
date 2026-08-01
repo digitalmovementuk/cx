@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="https://cex.koeln/media/page-ki-beratung.jpg">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="icon" type="image/png" sizes="32x32" href="../media/cex-favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="../media/cex-favicon-16.png"><link rel="apple-touch-icon" href="../media/cex-apple-touch.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"KI-Beratung für kundenspezifische Anwendungsfälle","alternateName":["Künstliche Intelligenz Beratung","AI Beratung","KI-Berater"],"description":"KI-Beratung für Unternehmen: passende Anwendungsfälle, geeignete Daten, ein sicherer Praxistest und ein geregelter Betrieb. DSGVO-konform und mit Blick auf die EU-KI-Verordnung.","provider":{"@type":"Organization","name":"CEx","url":"https://cex.koeln"},"areaServed":["DE","AT","CH"],"serviceType":"KI-Beratung","hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Anforderungsmanagement"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Datenqualitäts- und Prozessanalyse"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Agiles und hybrides Projektmanagement"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Verantwortung, Qualität und Risiko"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Technische KI-Umsetzung"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Veränderungsbegleitung"}}]}}
+{"@context":"https://schema.org","@type":"Service","name":"KI-Beratung für kundenspezifische Anwendungsfälle","alternateName":["Künstliche Intelligenz Beratung","AI Beratung","KI-Berater"],"description":"KI-Beratung für Unternehmen: passende Anwendungsfälle, geeignete Daten, ein sicherer Praxistest und ein geregelter Betrieb. DSGVO-konform und mit Blick auf die EU-KI-Verordnung.","provider":{"@type":"Organization","name":"CEx","url":"https://cex.koeln"},"areaServed":["DE","AT","CH"],"serviceType":"KI-Beratung","hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Anforderungsmanagement"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Datenqualitäts- und Prozessanalyse"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Agiles und hybrides Projektmanagement"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Verantwortung, Qualität und Risiko"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Technische KI-Umsetzung"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Change Management"}}]}}
 </script>
 
 <style>
@@ -132,9 +132,24 @@ a{color:inherit;text-decoration:none}
 .cross-links{margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 .cross-link{display:grid;gap:6px;padding:18px 20px;background:#fff;border:1px solid var(--line);transition:transform var(--dur) var(--ease),border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
 .cross-link:hover{transform:translateY(-2px);border-color:rgba(0,0,0,0.28);box-shadow:0 20px 34px -26px rgba(0,0,0,0.22)}
+.cross-link:focus-visible{outline:3px solid var(--cx-yellow);outline-offset:3px}
 .cross-link__tag{font-size:0.66rem;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--cx-yellow)}
 .cross-link__title{font-size:0.95rem;font-weight:800;line-height:1.3;color:var(--cx-charcoal)}
 .cross-link__arrow{font-size:0.78rem;font-weight:700;color:var(--muted)}
+.link-section .section__head{max-width:850px}
+.link-section .cross-links{margin-top:0}
+.link-section .cross-links--topics{grid-template-columns:repeat(3,minmax(0,1fr))}
+.link-section .cross-links--services{grid-template-columns:repeat(6,minmax(0,1fr))}
+.link-section .cross-links--services .cross-link{grid-column:span 2}
+.link-section .cross-links--services .cross-link:nth-last-child(-n+2){grid-column:span 3}
+.link-section .cross-link{min-height:142px;padding:22px;align-content:space-between;background:var(--cx-warm-2)}
+.link-section .cross-link__title{font-size:1rem}
+.link-group+.link-group{margin-top:52px;padding-top:40px;border-top:1px solid var(--line)}
+.link-group__head{display:flex;align-items:center;gap:16px;margin:0 0 20px}
+.link-group__num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;flex:0 0 34px;background:var(--cx-yellow);font-size:.72rem;font-weight:800;letter-spacing:.08em}
+.link-group__title{margin:0;font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.2;letter-spacing:-.02em}
+@media(max-width:1150px){.link-section .cross-links--services{grid-template-columns:repeat(2,minmax(0,1fr))}.link-section .cross-links--services .cross-link{grid-column:auto}.link-section .cross-links--services .cross-link:last-child{grid-column:1/-1}}
+@media(max-width:720px){.link-section .cross-links--topics,.link-section .cross-links--services{grid-template-columns:1fr}.link-section .cross-links--services .cross-link:last-child{grid-column:auto}.link-section .cross-link{min-height:124px;text-align:center;justify-items:center}.link-group__head{justify-content:center;flex-direction:column;gap:10px}.link-group+.link-group{margin-top:40px;padding-top:32px}}
 
 /* final cta */
 .final-cta{background:var(--cx-charcoal);color:#fff;padding:clamp(80px,10vw,120px) 0;position:relative;overflow:hidden}
@@ -861,12 +876,12 @@ html { scroll-behavior: auto!important; }
 }
 </style>
 <meta name="theme-color" content="#1E2327"><style>
-.cx-ig{margin:56px 0 0;padding:clamp(20px,3vw,34px);background:linear-gradient(180deg,#ffffff,#fbf7ee);border:1px solid var(--line);border-radius:18px}
+.cx-ig{margin:56px 0 0;padding:clamp(20px,3vw,34px);background:linear-gradient(180deg,#ffffff,#fbf7ee);border:1px solid var(--line);border-radius:24px;box-shadow:0 28px 70px -58px rgba(30,35,39,.65)}
 .cx-ig__eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:0.72rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--cx-charcoal-3);margin-bottom:12px}
 .cx-ig__eyebrow::before{content:"";display:inline-block;width:22px;height:3px;background:var(--cx-yellow)}
-.cx-ig__title{margin:0 0 8px;font-size:clamp(1.25rem,2.2vw,1.625rem);font-weight:800;letter-spacing:-0.02em;line-height:1.16;color:var(--cx-charcoal)}
-.cx-ig__lead{margin:0 0 18px;font-size:0.95rem;line-height:1.6;color:var(--muted);max-width:62ch}
-.cx-ig figcaption{margin-top:14px;font-size:0.78rem;color:var(--muted);line-height:1.55}
+.cx-ig__title{margin:0 0 10px;font-size:clamp(1.5rem,2.8vw,2.25rem);font-weight:800;letter-spacing:-0.035em;line-height:1.1;color:var(--cx-charcoal)}
+.cx-ig__lead{margin:0 0 26px;font-size:clamp(.95rem,1.3vw,1.05rem);line-height:1.65;color:var(--muted);max-width:68ch}
+.cx-ig figcaption{margin-top:16px;font-size:0.82rem;color:var(--muted);line-height:1.55;text-align:center}
  </style>
 <style>
 .cx-proof{background:var(--cx-warm);padding:clamp(72px,8vw,112px) 0}
@@ -1098,6 +1113,7 @@ html { scroll-behavior: auto!important; }
 <meta name="twitter:image:alt" content="Beratungsteam bewertet gemeinsam Daten und KI-Anwendungsfälle">
 <meta name="robots" content="noindex, follow">
 <link rel="preload" href="../fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/inter-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../founders.css?v=20260731">
 <link rel="stylesheet" href="../polish.css?v=20260715">
 <link rel="stylesheet" href="../hub-quality.css?v=20260801">
@@ -1139,15 +1155,18 @@ body.cex-migrated-page .method-step__when{font-size:.6875rem;font-weight:600;let
 }
 </style>
 <style id="ki-feedback-refinement">
-/* Client-feedback pass: consistent language, connected visuals and clearer decision flow. */
-.cx-ig__map{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,.7fr) minmax(0,1fr);gap:12px;align-items:stretch;margin-top:26px}
-.cx-ig__node,.cx-ig__goal{min-height:112px;padding:18px;border-radius:14px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
-.cx-ig__node{background:#fff;border:1px solid var(--line)}
-.cx-ig__node:nth-child(1){grid-column:1;grid-row:1}.cx-ig__node:nth-child(2){grid-column:3;grid-row:1}.cx-ig__node:nth-child(3){grid-column:1;grid-row:2}.cx-ig__node:nth-child(4){grid-column:3;grid-row:2}.cx-ig__node:nth-child(5){grid-column:1;grid-row:3}.cx-ig__node:nth-child(6){grid-column:3;grid-row:3}
-.cx-ig__goal{grid-column:2;grid-row:1 / span 3;background:var(--cx-charcoal);color:#fff;border:1px solid rgba(255,255,255,.2);position:relative}
-.cx-ig__goal::before,.cx-ig__goal::after{content:"";position:absolute;left:50%;width:1px;height:20px;background:var(--cx-yellow);transform:translateX(-50%)}.cx-ig__goal::before{top:18px}.cx-ig__goal::after{bottom:18px}
-.cx-ig__node-num{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;margin-bottom:8px;background:var(--cx-yellow);font-size:.7rem;font-weight:800;color:var(--cx-charcoal)}
-.cx-ig__node strong{font-size:.91rem;line-height:1.25;color:var(--cx-charcoal)}.cx-ig__goal span{font-size:.67rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--cx-yellow);margin-bottom:8px}.cx-ig__goal strong{font-size:1rem;line-height:1.18}
+/* Client-feedback pass: an Imagegen scene makes the six connections visible;
+   real HTML labels stay crisp, translatable and accessible. */
+.cx-ig__scene{position:relative;overflow:hidden;border-radius:18px;background:var(--cx-charcoal);border:1px solid rgba(30,35,39,.22);box-shadow:0 24px 60px -40px rgba(30,35,39,.85)}
+.cx-ig__art{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.cx-ig__map{position:absolute;inset:0;margin:0;padding:0;list-style:none}
+.cx-ig__node,.cx-ig__goal{position:absolute;box-sizing:border-box;z-index:1}
+.cx-ig__node{left:31%;top:var(--node-y);width:30%;min-height:62px;transform:translateY(-50%);display:grid;grid-template-columns:34px minmax(0,1fr);align-items:center;gap:11px;padding:10px 13px;background:rgba(30,35,39,.9);border:1px solid rgba(255,255,255,.16);border-left:3px solid var(--cx-yellow);border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.24);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff}
+.cx-ig__node-num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--cx-yellow);font-size:.68rem;font-weight:800;color:var(--cx-charcoal);font-variant-numeric:tabular-nums}
+.cx-ig__node strong{font-size:clamp(.68rem,1vw,.88rem);line-height:1.22;color:#fff;text-wrap:balance}
+.cx-ig__goal{left:67%;top:50%;width:27%;min-height:142px;transform:translateY(-50%);padding:22px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:rgba(250,246,236,.94);color:var(--cx-charcoal);border:1px solid rgba(255,255,255,.8);border-radius:16px;box-shadow:0 18px 48px rgba(0,0,0,.28);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.cx-ig__goal::before{content:"";width:34px;height:4px;margin-bottom:14px;background:var(--cx-yellow);border-radius:99px}
+.cx-ig__goal span{font-size:.64rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--cx-charcoal-3);margin-bottom:7px}.cx-ig__goal strong{font-size:clamp(1rem,1.6vw,1.4rem);line-height:1.12;letter-spacing:-.025em}
 .ki-usecase-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:clamp(24px,4vw,56px);align-items:center;margin-top:46px}.ki-questions{display:grid;gap:12px}.ki-question{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:19px 20px;background:#fff;border:1px solid var(--line);border-radius:12px}.ki-question__num{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--cx-yellow);font-size:.69rem;font-weight:800}.ki-question h3{margin:0 0 5px;font-size:1rem;line-height:1.28}.ki-question p{margin:0;color:var(--muted);font-size:.91rem;line-height:1.55}
 .ki-funnel{margin:0;padding:24px;background:var(--cx-warm);border:1px solid var(--line);border-radius:16px}.ki-funnel__eyebrow{font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--cx-charcoal-3);margin-bottom:9px}.ki-funnel h3{margin:0 0 10px;font-size:1.22rem;line-height:1.2}.ki-funnel p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.6}.ki-funnel__steps{display:grid;gap:8px;margin:20px 0}.ki-funnel__step{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:9px;font-size:.9rem;font-weight:700}.ki-funnel__step span{display:grid;place-items:center;width:26px;height:26px;flex:0 0 26px;border-radius:50%;background:var(--cx-charcoal);color:#fff;font-size:.7rem}.ki-funnel__switch{padding:14px 15px;background:#1e2327;color:#fff;border-radius:10px;font-size:.9rem;line-height:1.45}.ki-funnel__switch strong{color:var(--cx-yellow)}
 .ki-case-study{margin-top:64px;padding:clamp(28px,4.5vw,52px);background:var(--cx-charcoal);color:#fff;border-radius:18px;overflow:hidden;position:relative}.ki-case-study::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--cx-yellow)}.ki-case-study__head{max-width:800px}.ki-case-study__eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:14px;color:var(--cx-yellow);font-size:.7rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase}.ki-case-study__eyebrow::before{content:"";width:20px;height:2px;background:currentColor}.ki-case-study h3{margin:0 0 14px;font-size:clamp(1.75rem,3.4vw,2.75rem);line-height:1.08;letter-spacing:-.035em}.ki-case-study__lead{margin:0;max-width:70ch;color:rgba(255,255,255,.75);font-size:1rem;line-height:1.7}
@@ -1157,8 +1176,101 @@ body.cex-migrated-page .method-step__when{font-size:.6875rem;font-weight:600;let
 .ki-quality{background:var(--cx-warm)!important;color:var(--cx-charcoal)}.ki-quality .h-section{color:var(--cx-charcoal)!important}.ki-quality .h-lead{color:var(--muted)!important}.ki-quality .compliance-item{background:#fff;border:1px solid var(--line);border-radius:12px;position:relative;overflow:hidden}.ki-quality .compliance-item::before{content:"";display:block;width:40px;height:3px;background:var(--cx-yellow);margin-bottom:18px}.ki-quality .compliance-item h3{color:var(--cx-charcoal)}.ki-quality .compliance-item p{color:var(--muted)}
 .method-step{border-radius:12px!important;box-shadow:inset 0 3px 0 var(--cx-yellow)}.method-step__meta{align-items:center!important}.method-step__num{display:grid!important;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--cx-yellow);color:var(--cx-charcoal)!important;letter-spacing:0!important}.method-step__when{border-left:0!important;padding-left:0!important;color:rgba(255,255,255,.66)!important}.method-step__title{min-height:2.5em}.method-step__body{max-width:33ch}
 #faq .faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;border:0;margin-top:42px}.faq__item{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}.faq__item[open]{border-color:rgba(30,35,39,.34);box-shadow:0 12px 30px -26px rgba(30,35,39,.55)}.faq__item summary{padding:19px 20px;min-height:72px;font-size:.98rem}.faq__answer{padding:0 20px 22px;font-size:.91rem}.faq__item summary::after{border-radius:50%;width:28px;height:28px;flex-basis:28px;font-size:1rem}
-@media(max-width:820px){.cx-ig__map{grid-template-columns:1fr 1fr}.cx-ig__node:nth-child(n){grid-column:auto;grid-row:auto}.cx-ig__goal{grid-column:1/-1;grid-row:auto;min-height:92px;order:-1}.cx-ig__goal::before,.cx-ig__goal::after{display:none}.ki-usecase-grid{grid-template-columns:1fr}.ki-funnel{order:-1}.ki-case-flow{grid-template-columns:1fr 1fr}.ki-case-compare{grid-template-columns:1fr}#faq .faq{grid-template-columns:1fr}.ki-principles{padding:22px 16px}}
-@media(max-width:560px){.cx-ig__map{grid-template-columns:1fr}.cx-ig__node,.cx-ig__goal{grid-column:1!important;min-height:auto}.cx-ig__node{align-items:center}.ki-question{grid-template-columns:34px 1fr;padding:17px 15px}.ki-question__num{width:28px;height:28px}.ki-case-study{margin-top:48px;padding:28px 18px}.ki-case-study__head{text-align:center}.ki-case-study__eyebrow{justify-content:center}.ki-case-flow{grid-template-columns:1fr}.ki-case-flow__step{min-height:auto;text-align:center}.ki-case-flow__num{margin-left:auto;margin-right:auto}.ki-case-card__label,.ki-case-card h4{text-align:center}.faq__item summary{min-height:64px;padding:17px 16px}.faq__answer{padding:0 16px 20px}}
+@media(max-width:900px){
+ .cx-ig__art{aspect-ratio:3/2}
+ .cx-ig__map{position:relative;inset:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:18px}
+ .cx-ig__node,.cx-ig__goal{position:relative;left:auto;top:auto;width:auto;min-height:76px;transform:none}
+ .cx-ig__node{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;padding:14px;text-align:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-top:3px solid var(--cx-yellow);border-radius:12px;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+ .cx-ig__node strong{font-size:.84rem;max-width:28ch}
+ .cx-ig__goal{grid-column:1/-1;min-height:112px;padding:20px;background:var(--cx-warm-2);border-radius:12px;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+ .ki-usecase-grid{grid-template-columns:1fr}.ki-funnel{order:-1}.ki-case-flow{grid-template-columns:1fr 1fr}.ki-case-compare{grid-template-columns:1fr}#faq .faq{grid-template-columns:1fr}.ki-principles{padding:22px 16px}
+}
+@media(max-width:560px){.cx-ig{text-align:center}.cx-ig__eyebrow{justify-content:center}.cx-ig__lead{margin-left:auto;margin-right:auto}.cx-ig__map{grid-template-columns:1fr;padding:14px}.cx-ig__node,.cx-ig__goal{grid-column:1;min-height:auto}.cx-ig__node{padding:15px}.ki-question{grid-template-columns:34px 1fr;padding:17px 15px}.ki-question__num{width:28px;height:28px}.ki-case-study{margin-top:48px;padding:28px 18px}.ki-case-study__head{text-align:center}.ki-case-study__eyebrow{justify-content:center}.ki-case-flow{grid-template-columns:1fr}.ki-case-flow__step{min-height:auto;text-align:center}.ki-case-flow__num{margin-left:auto;margin-right:auto}.ki-case-card__label,.ki-case-card h4{text-align:center}.faq__item summary{min-height:64px;padding:17px 16px}.faq__answer{padding:0 16px 20px}}
+</style>
+<style id="ki-process-sequence">
+/* Seven-step process thread aligned with the newer CEx hub-page system. */
+#vorgehen.process-sequence .process-sequence__layout{display:grid;grid-template-columns:minmax(320px,.88fr) minmax(0,1.12fr);gap:clamp(48px,6vw,80px);align-items:start}
+#vorgehen.process-sequence .section__head{position:sticky;top:112px;max-width:500px;margin:0}
+#vorgehen.process-sequence .section__head .h-section{max-width:13ch;font-size:clamp(2.5rem,3.35vw,3rem)!important}
+#vorgehen.process-sequence .section__head .h-lead{max-width:44ch}
+body.cex-migrated-page #vorgehen .process-timeline{position:relative;display:grid!important;grid-template-columns:1fr!important;gap:0!important;margin:0!important;padding:0!important;border:0!important;list-style:none}
+body.cex-migrated-page #vorgehen .process-timeline::before{content:"";position:absolute;z-index:0;top:28px;bottom:28px;left:27px;width:2px;background:linear-gradient(180deg,var(--cx-yellow),rgba(255,122,0,.34) 70%,rgba(255,255,255,.18))}
+body.cex-migrated-page #vorgehen .process-timeline .method-step{position:relative;display:grid!important;grid-template-columns:56px minmax(0,1fr)!important;grid-column:auto!important;gap:24px!important;min-width:0;padding:0 0 24px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+body.cex-migrated-page #vorgehen .process-timeline .method-step::before{display:none!important}
+body.cex-migrated-page #vorgehen .process-timeline .method-step:last-child{padding-bottom:0!important}
+body.cex-migrated-page #vorgehen .process-timeline .method-step__num{position:relative;z-index:2;display:grid!important;place-items:center;width:56px!important;height:56px!important;margin:0!important;padding:0!important;border:0!important;border-radius:12px!important;background:var(--cx-yellow)!important;box-shadow:0 0 0 8px var(--cx-charcoal)!important;font-size:.72rem!important;font-weight:800;line-height:1;letter-spacing:.08em!important;color:var(--cx-charcoal)!important;font-variant-numeric:tabular-nums}
+body.cex-migrated-page #vorgehen .process-timeline .method-step__content{min-width:0;padding:2px 0 30px;border-bottom:1px solid var(--line-on-dark)}
+body.cex-migrated-page #vorgehen .process-timeline .method-step:last-child .method-step__content{padding-bottom:4px;border-bottom:0}
+body.cex-migrated-page #vorgehen .process-timeline .method-step__when{display:block!important;width:auto;max-width:none;margin:0 0 8px!important;padding:0!important;border:0!important;overflow:visible;font-size:.6875rem!important;font-weight:700;line-height:1.3;letter-spacing:.15em!important;text-transform:uppercase;text-overflow:clip;color:var(--cx-yellow-soft)!important;white-space:normal}
+body.cex-migrated-page #vorgehen .process-timeline .method-step__title{max-width:32ch;min-height:0;margin:0 0 10px;font-size:clamp(1.125rem,1.6vw,1.35rem)!important;font-weight:700;line-height:1.25;color:#fff;letter-spacing:-.015em;hyphens:none;overflow-wrap:normal}
+body.cex-migrated-page #vorgehen .process-timeline .method-step__body{max-width:66ch;margin:0;font-size:1rem!important;line-height:1.65!important;color:rgba(255,255,255,.74);overflow-wrap:break-word}
+body.cex-migrated-page #vorgehen .process-timeline .method-step:last-child .method-step__title{color:var(--cx-yellow-soft)}
+@media(max-width:1050px){
+ #vorgehen.process-sequence .process-sequence__layout{grid-template-columns:1fr;gap:56px}
+ #vorgehen.process-sequence .section__head{position:static;max-width:780px}
+ #vorgehen.process-sequence .section__head .h-section{max-width:24ch}
+ body.cex-migrated-page #vorgehen .process-timeline{max-width:900px}
+}
+@media(max-width:820px){
+ #vorgehen.process-sequence .process-sequence__layout{gap:40px}
+ #vorgehen.process-sequence .section__head{margin:0 auto;text-align:center}
+ #vorgehen.process-sequence .section__head .h-section{max-width:15ch;font-size:clamp(2rem,9vw,2.5rem)!important}
+ #vorgehen.process-sequence .section__head .h-lead{max-width:40ch;margin-right:auto;margin-left:auto}
+ body.cex-migrated-page #vorgehen .process-timeline::before{left:50%;transform:translateX(-50%)}
+ body.cex-migrated-page #vorgehen .process-timeline .method-step{display:flex!important;flex-direction:column;align-items:center;gap:0!important;padding:0 0 32px!important;text-align:center}
+ body.cex-migrated-page #vorgehen .process-timeline .method-step:last-child{padding-bottom:0!important}
+ body.cex-migrated-page #vorgehen .process-timeline .method-step__num{margin:0 auto 18px!important}
+ body.cex-migrated-page #vorgehen .process-timeline .method-step__content{position:relative;z-index:1;width:100%;box-sizing:border-box;padding:22px 18px 32px;border-top:1px solid var(--line-on-dark);border-bottom:0;background:var(--cx-charcoal)}
+ body.cex-migrated-page #vorgehen .process-timeline .method-step:last-child .method-step__content{padding-bottom:4px}
+ body.cex-migrated-page #vorgehen .process-timeline .method-step__when,
+ body.cex-migrated-page #vorgehen .process-timeline .method-step__title,
+ body.cex-migrated-page #vorgehen .process-timeline .method-step__body{margin-right:auto!important;margin-left:auto!important;text-align:center}
+ body.cex-migrated-page #vorgehen .process-timeline .method-step__title{max-width:26ch}
+ body.cex-migrated-page #vorgehen .process-timeline .method-step__body{max-width:40ch}
+}
+@media(prefers-reduced-motion:reduce){#vorgehen.process-sequence .section__head{position:static}}
+</style>
+<style id="ki-foundations-system">
+.ki-foundations-section .ki-foundations__head{max-width:820px;margin:0 auto 48px;text-align:center}
+.ki-foundations-section .ki-foundations__head .eyebrow{justify-content:center}
+.ki-foundations-section .ki-foundations__head .h-lead{max-width:62ch;margin-right:auto;margin-left:auto}
+.ki-foundation-system{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,.72fr) minmax(0,1fr);grid-template-areas:"one core two" "three core four";gap:20px 32px;align-items:stretch;padding:clamp(24px,3.5vw,44px);background:linear-gradient(145deg,rgba(255,255,255,.78),rgba(237,229,210,.62));border:1px solid var(--line);border-radius:22px;box-shadow:0 28px 70px -58px rgba(30,35,39,.65)}
+.ki-foundation-core{grid-area:core;position:relative;z-index:2;min-height:100%;padding:32px 26px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--cx-charcoal);color:#fff;border-radius:16px;box-shadow:0 22px 46px -28px rgba(30,35,39,.86)}
+.ki-foundation-core::before,.ki-foundation-core::after{content:"";position:absolute;pointer-events:none}
+.ki-foundation-core::before{width:230px;height:230px;border:1px solid rgba(255,122,0,.22);border-radius:50%;box-shadow:0 0 0 34px rgba(255,122,0,.045),0 0 0 68px rgba(255,255,255,.025)}
+.ki-foundation-core::after{top:0;left:50%;width:2px;height:32px;transform:translateX(-50%);background:var(--cx-yellow)}
+.ki-foundation-core>*{position:relative;z-index:1}
+.ki-foundation-core__label{margin-bottom:12px;font-size:.67rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--cx-yellow-soft)}
+.ki-foundation-core strong{max-width:9ch;font-size:clamp(1.55rem,2.4vw,2.1rem);line-height:1.08;letter-spacing:-.035em}
+.ki-foundation-core small{max-width:21ch;margin-top:16px;font-size:.76rem;line-height:1.55;color:rgba(255,255,255,.62)}
+.ki-foundation-card{position:relative;z-index:1;min-height:208px;padding:24px;display:flex;flex-direction:column;justify-content:flex-start;background:rgba(255,255,255,.88);border:1px solid rgba(30,35,39,.13);border-radius:14px;box-shadow:0 16px 36px -34px rgba(30,35,39,.65)}
+.ki-foundation-card--1{grid-area:one}.ki-foundation-card--2{grid-area:two}.ki-foundation-card--3{grid-area:three}.ki-foundation-card--4{grid-area:four}
+.ki-foundation-card--1::after,.ki-foundation-card--3::after,.ki-foundation-card--2::before,.ki-foundation-card--4::before{content:"";position:absolute;top:50%;width:32px;height:1px;background:linear-gradient(90deg,rgba(255,122,0,.28),var(--cx-yellow))}
+.ki-foundation-card--1::after,.ki-foundation-card--3::after{right:-33px}
+.ki-foundation-card--2::before,.ki-foundation-card--4::before{left:-33px;transform:rotate(180deg)}
+.ki-foundation-card__meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}
+.ki-foundation-card__num{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--cx-yellow);color:var(--cx-charcoal);font-size:.69rem;font-weight:800;font-variant-numeric:tabular-nums}
+.ki-foundation-card__icon{display:grid;place-items:center;width:40px;height:40px;border-radius:11px;background:var(--cx-charcoal);color:var(--cx-yellow)}
+.ki-foundation-card__icon svg{width:21px;height:21px}
+.ki-foundation-card h3{margin:0 0 10px;font-size:1.08rem;line-height:1.25;letter-spacing:-.015em;color:var(--cx-charcoal);text-wrap:balance}
+.ki-foundation-card p{margin:0;max-width:42ch;font-size:.93rem;line-height:1.62;color:var(--muted)}
+@media(max-width:1050px){
+ .ki-foundation-system{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"core core" "one two" "three four";gap:16px;padding:28px}
+ .ki-foundation-core{min-height:230px}
+ .ki-foundation-card{min-height:190px}
+ .ki-foundation-card::before,.ki-foundation-card::after{display:none}
+}
+@media(max-width:640px){
+ .ki-foundations-section .ki-foundations__head{margin-bottom:32px}
+ .ki-foundation-system{grid-template-columns:1fr;grid-template-areas:"core" "one" "two" "three" "four";gap:14px;padding:14px}
+ .ki-foundation-system::before{content:"";position:absolute;z-index:0;top:220px;bottom:24px;left:50%;width:2px;transform:translateX(-50%);background:linear-gradient(180deg,var(--cx-yellow),rgba(255,122,0,.16))}
+ .ki-foundation-core{min-height:206px;padding:28px 20px}
+ .ki-foundation-core::before{width:190px;height:190px}
+ .ki-foundation-card{min-height:0;padding:22px 18px;align-items:center;text-align:center}
+ .ki-foundation-card__meta{flex-direction:column;justify-content:center;margin-bottom:16px}
+ .ki-foundation-card__icon{display:none}
+ .ki-foundation-card h3,.ki-foundation-card p{margin-right:auto;margin-left:auto;text-align:center}
+}
 </style>
 </head>
 <body class="cex-migrated-page cex-static-site">
@@ -1203,7 +1315,7 @@ body.cex-migrated-page .method-step__when{font-size:.6875rem;font-weight:600;let
  <a class="cx-drawer__link" href="../prozessoptimierung-beratung/index.html"><span class="cx-drawer__num">01</span><span class="cx-drawer__title">Prozessoptimierung &amp; BPM</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
  <a class="cx-drawer__link" href="../projektmanagement-beratung/index.html"><span class="cx-drawer__num">02</span><span class="cx-drawer__title">Projektmanagement</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
  <a class="cx-drawer__link" href="../digitalisierungsberatung/index.html"><span class="cx-drawer__num">03</span><span class="cx-drawer__title">Digitalisierung &amp; Transformation</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
- <a class="cx-drawer__link" href="../change-management-beratung/index.html"><span class="cx-drawer__num">04</span><span class="cx-drawer__title">Veränderungsbegleitung</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
+ <a class="cx-drawer__link" href="../change-management-beratung/index.html"><span class="cx-drawer__num">04</span><span class="cx-drawer__title">Change Management</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
  <a class="cx-drawer__link is-current" href="../ki-beratung/index.html" aria-current="page"><span class="cx-drawer__num">05</span><span class="cx-drawer__title">KI-Beratung &amp; Strategie</span><span class="cx-drawer__arrow" aria-hidden="true">→</span></a>
  </div>
  <div class="cx-drawer__section" style="margin-top:24px">
@@ -1286,35 +1398,46 @@ body.cex-migrated-page .method-step__when{font-size:.6875rem;font-weight:600;let
  <p class="h-lead">Die sechs Felder verbinden Anforderung, Wissensbasis, Umsetzung und Betrieb. Je nach Anwendungsfall setzen wir unterschiedliche Schwerpunkte.</p>
  </div>
  
- <div class="services-grid"><div class="service-card"><div class="service-card__num">01</div><h3>Anforderungsmanagement</h3><p>Wir klären Ziel, Nutzer, Prozess und messbare Erfolgskriterien, bevor ein Werkzeug ausgewählt oder entwickelt wird.</p></div><div class="service-card"><div class="service-card__num">02</div><h3>Datenqualität und Prozessanalyse</h3><p>Wir prüfen, ob die benötigten Informationen zugänglich, gepflegt und für den konkreten Anwendungsfall ausreichend sind.</p></div><div class="service-card"><div class="service-card__num">03</div><h3>Agiles und hybrides Projektmanagement</h3><p>Wir verbinden kurze Lernschleifen mit festen Meilensteinen, damit das Vorhaben flexibel bleibt und trotzdem verlässlich geführt wird.</p></div><div class="service-card"><div class="service-card__num">04</div><h3>Verantwortung, Qualität und Risiko</h3><p>Verantwortung, Prüfschritte, Freigaben und der Umgang mit Fehlern werden vor der produktiven Nutzung festgelegt.</p></div><div class="service-card"><div class="service-card__num">05</div><h3>Technische KI-Umsetzung</h3><p>Wir bauen und testen den fokussierten Piloten, integrieren ihn passend in Ihre Landschaft und bereiten den Betrieb vor.</p></div><div class="service-card"><div class="service-card__num">06</div><h3>Veränderungsbegleitung</h3><p>Wir binden die Menschen ein, die mit der Lösung arbeiten, und führen neue Abläufe, Schulung und Unterstützung gemeinsam im Alltag ein.</p></div></div>
+ <div class="services-grid"><div class="service-card"><div class="service-card__num">01</div><h3>Anforderungsmanagement</h3><p>Wir klären Ziel, Nutzer, Prozess und messbare Erfolgskriterien, bevor ein Werkzeug ausgewählt oder entwickelt wird.</p></div><div class="service-card"><div class="service-card__num">02</div><h3>Datenqualität und Prozessanalyse</h3><p>Wir prüfen, ob die benötigten Informationen zugänglich, gepflegt und für den konkreten Anwendungsfall ausreichend sind.</p></div><div class="service-card"><div class="service-card__num">03</div><h3>Agiles und hybrides Projektmanagement</h3><p>Wir verbinden kurze Lernschleifen mit festen Meilensteinen, damit das Vorhaben flexibel bleibt und trotzdem verlässlich geführt wird.</p></div><div class="service-card"><div class="service-card__num">04</div><h3>Verantwortung, Qualität und Risiko</h3><p>Verantwortung, Prüfschritte, Freigaben und der Umgang mit Fehlern werden vor der produktiven Nutzung festgelegt.</p></div><div class="service-card"><div class="service-card__num">05</div><h3>Technische KI-Umsetzung</h3><p>Wir bauen und testen den fokussierten Piloten, integrieren ihn passend in Ihre Landschaft und bereiten den Betrieb vor.</p></div><div class="service-card"><div class="service-card__num">06</div><h3>Change Management</h3><p>Wir binden die Menschen ein, die mit der Lösung arbeiten, und führen neue Abläufe, Schulung und Unterstützung gemeinsam im Alltag ein.</p></div></div>
  
- <figure class="cx-ig reveal" role="group" aria-label="Zusammenspiel der sechs Leistungsfelder einer erfolgreichen KI-Einführung">
+ <figure class="cx-ig reveal" id="zusammenspiel" role="group" aria-label="Zusammenspiel der sechs Leistungsfelder einer erfolgreichen KI-Einführung">
  <div class="cx-ig__eyebrow">Zusammenspiel</div>
  <h3 class="cx-ig__title">So greifen die sechs Leistungsfelder ineinander.</h3>
  <p class="cx-ig__lead">Jedes Feld hat eine eigene Aufgabe. Zusammen führen sie von der Anforderung über die geprüfte Wissensbasis bis in einen verantwortungsvoll geführten Betrieb.</p>
- <div class="cx-ig__map" role="list" aria-label="Die sechs KI-Leistungsfelder im Zusammenspiel">
-  <div class="cx-ig__node" role="listitem"><span class="cx-ig__node-num">01</span><strong>Anforderungsmanagement</strong></div>
-  <div class="cx-ig__node" role="listitem"><span class="cx-ig__node-num">02</span><strong>Datenqualität und Prozessanalyse</strong></div>
-  <div class="cx-ig__node" role="listitem"><span class="cx-ig__node-num">03</span><strong>Agiles und hybrides Projektmanagement</strong></div>
-  <div class="cx-ig__node" role="listitem"><span class="cx-ig__node-num">04</span><strong>Verantwortung, Qualität und Risiko</strong></div>
-  <div class="cx-ig__node" role="listitem"><span class="cx-ig__node-num">05</span><strong>Technische KI-Umsetzung</strong></div>
-  <div class="cx-ig__node" role="listitem"><span class="cx-ig__node-num">06</span><strong>Veränderungsbegleitung</strong></div>
-  <div class="cx-ig__goal"><span>Gemeinsames Ziel</span><strong>Erfolgreiche<br>KI-Einführung</strong></div>
+ <div class="cx-ig__scene">
+  <img class="cx-ig__art" src="../media/ki-leistungsfelder-zusammenspiel-v2.jpg" alt="" width="1536" height="1024" decoding="async" aria-hidden="true">
+  <ol class="cx-ig__map" aria-label="Die sechs KI-Leistungsfelder und ihr gemeinsames Ziel">
+   <li class="cx-ig__node" style="--node-y:13.1%"><span class="cx-ig__node-num">01</span><strong>Anforderungsmanagement</strong></li>
+   <li class="cx-ig__node" style="--node-y:26.4%"><span class="cx-ig__node-num">02</span><strong>Datenqualität und Prozessanalyse</strong></li>
+   <li class="cx-ig__node" style="--node-y:40.4%"><span class="cx-ig__node-num">03</span><strong>Agiles und hybrides Projektmanagement</strong></li>
+   <li class="cx-ig__node" style="--node-y:55%"><span class="cx-ig__node-num">04</span><strong>Verantwortung, Qualität und Risiko</strong></li>
+   <li class="cx-ig__node" style="--node-y:69.7%"><span class="cx-ig__node-num">05</span><strong>Technische KI-Umsetzung</strong></li>
+   <li class="cx-ig__node" style="--node-y:83.9%"><span class="cx-ig__node-num">06</span><strong>Veränderungsbegleitung</strong></li>
+   <li class="cx-ig__goal"><span>Gemeinsames Ziel</span><strong>Erfolgreiche<br>KI-Einführung</strong></li>
+  </ol>
  </div>
  <figcaption>Die sechs Leistungsfelder führen von der ersten Anforderung bis in einen verantwortungsvoll geführten Betrieb.</figcaption>
  </figure>
  </div>
 </section>
 
-<section class="section section--dark reveal" id="vorgehen" data-bench-role="process">
- <div class="container">
- <div class="section__head">
- <div class="eyebrow eyebrow--on-dark">Unser Vorgehen</div>
- <h2 class="h-section h-section--on-dark">So wird ein KI-Vorhaben umgesetzt.</h2>
- <p class="h-lead h-lead--on-dark">Nach der Auswahl eines geeigneten Anwendungsfalls führen wir KI als Produkt- und Veränderungsvorhaben: mit eindeutigen Zuständigkeiten, einer geprüften Wissensbasis, einem abgegrenzten Pilot und einem vorbereiteten Betrieb.</p>
- </div>
- 
- <div class="method"><div class="method-step"><div class="method-step__meta"><span class="method-step__num">01</span><span class="method-step__when">Mandat</span></div><h3 class="method-step__title">Verantwortung und Regeln für KI</h3><p class="method-step__body">Auftraggeber, Produktverantwortung, Fachbereich, IT, Datenschutz, Recht und Betrieb werden benannt. Früh wird geklärt, wer entscheidet, welches Risiko besteht und wo ein Mensch prüfen oder freigeben muss.</p></div><div class="method-step"><div class="method-step__meta"><span class="method-step__num">02</span><span class="method-step__when">Nutzen</span></div><h3 class="method-step__title">Anwendungsfall &amp; Erfolgskriterien</h3><p class="method-step__body">Problem, Nutzergruppe, Prozesskontext, erwarteter Nutzen, Grenzen und Messgrößen werden beschrieben. Der Anwendungsfall wird nur weitergeführt, wenn Nutzen, Aufwand und Risiko zusammenpassen.</p></div><div class="method-step"><div class="method-step__meta"><span class="method-step__num">03</span><span class="method-step__when">Reifegrad</span></div><h3 class="method-step__title">Daten, Sicherheit &amp; Risiko</h3><p class="method-step__body">Datenquellen, Qualität, Zugriffe, Datenschutz, Informationssicherheit, Einordnung nach der EU-KI-Verordnung und Prüfpflichten werden bewertet. Dadurch entsteht eine verlässliche Grundlage für die technische Umsetzung.</p></div><div class="method-step"><div class="method-step__meta"><span class="method-step__num">04</span><span class="method-step__when">Konzept</span></div><h3 class="method-step__title">Lösung und technische Einbindung</h3><p class="method-step__body">Wir prüfen, ob eine fertige Lösung genügt oder eine eigene Entwicklung sinnvoll ist. Danach legen wir Auswahl, Wissenszugriff, Einbindung in bestehende Systeme, Protokollierung, laufende Überwachung und Freigaben fest.</p></div><div class="method-step"><div class="method-step__meta"><span class="method-step__num">05</span><span class="method-step__when">Pilotversion</span></div><h3 class="method-step__title">Pilot, Tests und fachliche Prüfung</h3><p class="method-step__body">Eine begrenzte Pilotversion wird mit realistischen Daten und Rückmeldungen der späteren Nutzer geprüft. Vor der Einführung bewerten wir Qualität, typische Fehler, Aufwand, Akzeptanz und Risiken.</p></div><div class="method-step"><div class="method-step__meta"><span class="method-step__num">06</span><span class="method-step__when">Einführung</span></div><h3 class="method-step__title">Einführung und Nutzung</h3><p class="method-step__body">Die Einführung erfolgt schrittweise. Schulung, Unterstützung, Freigaben, Kommunikation und Übergabe an den Betrieb werden vorbereitet. Nach dem Start prüfen wir Nutzung und Akzeptanz.</p></div><div class="method-step"><div class="method-step__meta"><span class="method-step__num">07</span><span class="method-step__when">Betrieb</span></div><h3 class="method-step__title">Beobachten und verbessern</h3><p class="method-step__body">Wir prüfen laufend Qualität, Kosten, Nutzung, Vorfälle und Veränderungen an den Daten. So bleibt die KI-Lösung kontrollierbar und kann gezielt verbessert werden.</p></div></div>
+<section class="section section--dark reveal process-sequence" id="vorgehen" data-bench-role="process">
+ <div class="container process-sequence__layout">
+  <div class="section__head">
+   <div class="eyebrow eyebrow--on-dark">Unser Vorgehen</div>
+   <h2 class="h-section h-section--on-dark">So wird ein KI-Vorhaben umgesetzt.</h2>
+   <p class="h-lead h-lead--on-dark">Nach der Auswahl eines geeigneten Anwendungsfalls führen wir KI als Produkt- und Veränderungsvorhaben: mit eindeutigen Zuständigkeiten, einer geprüften Wissensbasis, einem abgegrenzten Pilot und einem vorbereiteten Betrieb.</p>
+  </div>
+
+  <ol class="method process-timeline" aria-label="Sieben Phasen von der Verantwortung bis zum kontrollierten KI-Betrieb">
+   <li class="method-step"><span class="method-step__num" aria-hidden="true">01</span><div class="method-step__content"><span class="method-step__when">Mandat</span><h3 class="method-step__title">Verantwortung und Regeln für KI</h3><p class="method-step__body">Auftraggeber, Produktverantwortung, Fachbereich, IT, Datenschutz, Recht und Betrieb werden benannt. Früh wird geklärt, wer entscheidet, welches Risiko besteht und wo ein Mensch prüfen oder freigeben muss.</p></div></li>
+   <li class="method-step"><span class="method-step__num" aria-hidden="true">02</span><div class="method-step__content"><span class="method-step__when">Nutzen</span><h3 class="method-step__title">Anwendungsfall &amp; Erfolgskriterien</h3><p class="method-step__body">Problem, Nutzergruppe, Prozesskontext, erwarteter Nutzen, Grenzen und Messgrößen werden beschrieben. Der Anwendungsfall wird nur weitergeführt, wenn Nutzen, Aufwand und Risiko zusammenpassen.</p></div></li>
+   <li class="method-step"><span class="method-step__num" aria-hidden="true">03</span><div class="method-step__content"><span class="method-step__when">Reifegrad</span><h3 class="method-step__title">Daten, Sicherheit &amp; Risiko</h3><p class="method-step__body">Datenquellen, Qualität, Zugriffe, Datenschutz, Informationssicherheit, Einordnung nach der EU-KI-Verordnung und Prüfpflichten werden bewertet. Dadurch entsteht eine verlässliche Grundlage für die technische Umsetzung.</p></div></li>
+   <li class="method-step"><span class="method-step__num" aria-hidden="true">04</span><div class="method-step__content"><span class="method-step__when">Konzept</span><h3 class="method-step__title">Lösung und technische Einbindung</h3><p class="method-step__body">Wir prüfen, ob eine fertige Lösung genügt oder eine eigene Entwicklung sinnvoll ist. Danach legen wir Auswahl, Wissenszugriff, Einbindung in bestehende Systeme, Protokollierung, laufende Überwachung und Freigaben fest.</p></div></li>
+   <li class="method-step"><span class="method-step__num" aria-hidden="true">05</span><div class="method-step__content"><span class="method-step__when">Pilotversion</span><h3 class="method-step__title">Pilot, Tests und fachliche Prüfung</h3><p class="method-step__body">Eine begrenzte Pilotversion wird mit realistischen Daten und Rückmeldungen der späteren Nutzer geprüft. Vor der Einführung bewerten wir Qualität, typische Fehler, Aufwand, Akzeptanz und Risiken.</p></div></li>
+   <li class="method-step"><span class="method-step__num" aria-hidden="true">06</span><div class="method-step__content"><span class="method-step__when">Einführung</span><h3 class="method-step__title">Einführung und Nutzung</h3><p class="method-step__body">Die Einführung erfolgt schrittweise. Schulung, Unterstützung, Freigaben, Kommunikation und Übergabe an den Betrieb werden vorbereitet. Nach dem Start prüfen wir Nutzung und Akzeptanz.</p></div></li>
+   <li class="method-step"><span class="method-step__num" aria-hidden="true">07</span><div class="method-step__content"><span class="method-step__when">Betrieb</span><h3 class="method-step__title">Beobachten und verbessern</h3><p class="method-step__body">Wir prüfen laufend Qualität, Kosten, Nutzung, Vorfälle und Veränderungen an den Daten. So bleibt die KI-Lösung kontrollierbar und kann gezielt verbessert werden.</p></div></li>
+  </ol>
  </div>
 </section>
 
@@ -1341,34 +1464,39 @@ body.cex-migrated-page .method-step__when{font-size:.6875rem;font-weight:600;let
  <article class="ki-case-study" aria-labelledby="ki-advisor-fallbeispiel">
   <div class="ki-case-study__head">
    <div class="ki-case-study__eyebrow">Praxisbeispiel · Bank</div>
-   <h3 id="ki-advisor-fallbeispiel">KI-Advisor im Kundenservice: Die Wissensbasis entscheidet.</h3>
-   <p class="ki-case-study__lead">In einem Bankprojekt unterstützt ein KI-Advisor Mitarbeitende im Kundenservice dabei, passende Informationen schneller zu finden. Das Vorhaben konnte weitergeführt werden, weil die benötigten Inhalte bereits gut dokumentiert, strukturiert und nutzbar waren.</p>
+   <h3 id="ki-advisor-fallbeispiel">KI-Advisor im Kundenservice: Eine belastbare Wissensbasis entscheidet über den Einsatz.</h3>
+   <p class="ki-case-study__lead">In einem Bankprojekt hilft ein KI-Advisor den Mitarbeitenden im Kundenservice, freigegebene Informationen zu wiederkehrenden Kundenfragen schneller zu finden. Das Vorhaben wurde fortgeführt, weil die benötigten Inhalte bereits schriftlich dokumentiert, strukturiert und für den Advisor zugänglich waren.</p>
   </div>
   <div class="ki-case-flow" aria-label="Ablauf des KI-Advisors">
-   <div class="ki-case-flow__step"><span class="ki-case-flow__num">01</span><strong>Konkrete Kundenfrage</strong><p>Der Anwendungsfall ist auf wiederkehrende Servicefragen begrenzt.</p></div>
-   <div class="ki-case-flow__step"><span class="ki-case-flow__num">02</span><strong>Freigegebene Wissensbasis</strong><p>Der Advisor greift auf gepflegte und zugängliche Informationen zu.</p></div>
-   <div class="ki-case-flow__step"><span class="ki-case-flow__num">03</span><strong>Kurzer Antwortvorschlag</strong><p>Die Ausgabe bleibt fokussiert, nachvollziehbar und auf die Frage bezogen.</p></div>
-   <div class="ki-case-flow__step"><span class="ki-case-flow__num">04</span><strong>Prüfung durch Menschen</strong><p>Die Servicekraft bewertet den Vorschlag und entscheidet über die Verwendung.</p></div>
+   <div class="ki-case-flow__step"><span class="ki-case-flow__num">01</span><strong>Konkrete Kundenfrage</strong><p>Der Advisor bearbeitet ausschließlich wiederkehrende, klar abgegrenzte Servicefragen.</p></div>
+   <div class="ki-case-flow__step"><span class="ki-case-flow__num">02</span><strong>Freigegebene Wissensbasis</strong><p>Der Advisor nutzt gepflegte, freigegebene und technisch zugängliche Informationen.</p></div>
+   <div class="ki-case-flow__step"><span class="ki-case-flow__num">03</span><strong>Kurzer Antwortvorschlag</strong><p>Die kurze Antwort bezieht sich direkt auf die Kundenfrage und bleibt anhand der Wissensbasis nachvollziehbar.</p></div>
+   <div class="ki-case-flow__step"><span class="ki-case-flow__num">04</span><strong>Prüfung durch Menschen</strong><p>Die Servicekraft prüft den Vorschlag und entscheidet, ob und wie sie ihn verwendet.</p></div>
   </div>
   <div class="ki-case-compare">
-   <section class="ki-case-card" aria-labelledby="ki-fall-tragfaehig"><div class="ki-case-card__label">Warum der Fall umsetzbar war</div><h4 id="ki-fall-tragfaehig">Aufgabe und Grundlage passten zusammen.</h4><div class="hub-result-grid"><div class="hub-result">Konkreter Nutzen für den Kundenservice</div><div class="hub-result">Schriftlich gepflegtes Wissen</div><div class="hub-result">Freigegebene Quellen</div><div class="hub-result">Kurze Antwort mit menschlicher Prüfung</div></div></section>
-   <section class="ki-case-card" aria-labelledby="ki-fall-stopp"><div class="ki-case-card__label">Warum ähnliche Ideen gestoppt wurden</div><h4 id="ki-fall-stopp">Die Wissensbasis reichte nicht aus.</h4><div class="hub-result-grid"><div class="hub-result">Entscheidendes Wissen war nicht dokumentiert</div><div class="hub-result">Erfahrung steckte vor allem in Köpfen</div><div class="hub-result">Aktuelle, freigegebene Quellen fehlten</div><div class="hub-result">Aufgabe und Prüfergebnis waren zu breit</div></div></section>
+   <section class="ki-case-card" aria-labelledby="ki-fall-tragfaehig"><div class="ki-case-card__label">Warum der Fall umsetzbar war</div><h4 id="ki-fall-tragfaehig">Anwendungsfall und Wissensbasis passten zusammen.</h4><div class="hub-result-grid"><div class="hub-result">Klarer Nutzen: relevante Informationen schneller finden</div><div class="hub-result">Benötigtes Wissen war schriftlich gepflegt</div><div class="hub-result">Aktuelle Quellen waren freigegeben und zugänglich</div><div class="hub-result">Kurze Antwortvorschläge wurden vor der Verwendung geprüft</div></div></section>
+   <section class="ki-case-card" aria-labelledby="ki-fall-stopp"><div class="ki-case-card__label">Warum ähnliche Ideen gestoppt wurden</div><h4 id="ki-fall-stopp">Die erforderliche Wissensbasis war unvollständig oder nicht nutzbar.</h4><div class="hub-result-grid"><div class="hub-result">Entscheidungsrelevantes Wissen war nicht schriftlich dokumentiert</div><div class="hub-result">Fachwissen lag nur als persönliche Erfahrung vor</div><div class="hub-result">Aktuelle oder freigegebene Quellen waren nicht verfügbar</div><div class="hub-result">Fragestellung und erwartetes Prüfergebnis waren nicht klar genug begrenzt</div></div></section>
   </div>
-  <div class="ki-case-study__rule"><strong>Praxisregel:</strong> KI bleibt ein Werkzeug für ein konkret formuliertes Ziel. Umfangreiche Verträge oder Gesetzessammlungen werden in abgegrenzte Prüfaufgaben und relevante Quellenabschnitte zerlegt. Ein KI-Anwendungsfall geht erst in den Pilot, wenn Ziel, Datenbasis, Antwortgrenze und menschliche Kontrolle feststehen.</div>
+  <div class="ki-case-study__rule"><strong>Praxisregel:</strong> KI wird für ein klar definiertes Ziel eingesetzt. Umfangreiche Verträge oder Gesetzessammlungen werden in klar abgegrenzte Prüfaufgaben zerlegt; der Advisor erhält nur die dafür relevanten Quellenabschnitte. Ein KI-Anwendungsfall startet erst als Pilot, wenn Ziel, freigegebene Wissensbasis, zulässiger Antwortumfang und menschliche Prüfung verbindlich festgelegt sind.</div>
  </article>
  </div>
 </section>
 
 <!-- STANDARDS -->
-<section class="section section--paper reveal" data-bench-role="adaptability">
+<section class="section section--paper reveal ki-foundations-section" data-bench-role="adaptability" aria-labelledby="ki-foundations-title">
  <div class="container">
- <div class="section__head">
+ <header class="section__head ki-foundations__head">
  <div class="eyebrow">Bewährte Grundlagen</div>
- <h2 class="h-section">Was vor dem produktiven KI-Einsatz geregelt sein muss.</h2>
+ <h2 class="h-section" id="ki-foundations-title">Was vor dem produktiven KI-Einsatz geregelt sein muss.</h2>
  <p class="h-lead">Für einen verlässlichen Einsatz müssen Nutzen, Daten, Sicherheit, Verantwortung und Betrieb zusammenpassen.</p>
- 
+ </header>
+ <div class="ki-foundation-system" role="group" aria-label="Vier Grundlagen für einen produktiven KI-Einsatz">
+  <div class="ki-foundation-core" aria-label="Gemeinsamer Rahmen: produktiver KI-Einsatz"><span class="ki-foundation-core__label">Gemeinsamer Rahmen</span><strong>Produktiver KI-Einsatz</strong><small>Nutzen · Daten · Sicherheit · Verantwortung · Betrieb</small></div>
+  <article class="ki-foundation-card ki-foundation-card--1"><div class="ki-foundation-card__meta"><span class="ki-foundation-card__num">01</span><span class="ki-foundation-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.6-2.8 7.5-7 9-4.2-1.5-7-4.4-7-9V6z"/><path d="M8.5 11.5l2.2 2.2 4.8-5"/></svg></span></div><h3>Verantwortung und Regeln</h3><p>Verantwortlichkeiten, Risikoklasse, menschliche Aufsicht, Dokumentation, Freigaben und Kontrollpunkte werden vor produktiver Nutzung geklärt.</p></article>
+  <article class="ki-foundation-card ki-foundation-card--2"><div class="ki-foundation-card__meta"><span class="ki-foundation-card__num">02</span><span class="ki-foundation-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="6" rx="6" ry="3"/><path d="M4 6v5c0 1.7 2.7 3 6 3 1.1 0 2.1-.1 3-.4M4 11v5c0 1.7 2.7 3 6 3"/><rect x="14" y="12" width="7" height="7" rx="1.5"/><path d="M16 12V9.8a1.5 1.5 0 013 0V12"/></svg></span></div><h3>Datenverantwortung und Sicherheit</h3><p>Datenqualität, Berechtigungen, Schutzbedarf, Speicherorte, Schnittstellen und Zugriffskonzepte werden geprüft, bevor ein Modell oder Werkzeug breit genutzt wird.</p></article>
+  <article class="ki-foundation-card ki-foundation-card--3"><div class="ki-foundation-card__meta"><span class="ki-foundation-card__num">03</span><span class="ki-foundation-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 21h10M12 18v3M6.5 11h2l1.5-3 3 6 1.5-3h3"/></svg></span></div><h3>Verlässlicher KI-Betrieb</h3><p>Wir planen von Anfang an, wie Qualität, Versionen, Kosten und Fehler im laufenden Betrieb geprüft und dokumentiert werden.</p></article>
+  <article class="ki-foundation-card ki-foundation-card--4"><div class="ki-foundation-card__meta"><span class="ki-foundation-card__num">04</span><span class="ki-foundation-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2"/><path d="M3.5 19c0-3.2 2.3-5 5.5-5s5.5 1.8 5.5 5M15 14c3.2 0 5.5 1.5 5.5 4.5"/></svg></span></div><h3>Einführung und Nutzung</h3><p>Rollen, Schulung, Kommunikation, Unterstützung und feste Abläufe werden vorbereitet, damit die Lösung im Arbeitsalltag sicher und sinnvoll genutzt wird.</p></article>
  </div>
- <div class="industries"><div class="industry-card"><h3>Verantwortung und Regeln</h3><p>Verantwortlichkeiten, Risikoklasse, menschliche Aufsicht, Dokumentation, Freigaben und Kontrollpunkte werden vor produktiver Nutzung geklärt.</p></div><div class="industry-card"><h3>Datenverantwortung und Sicherheit</h3><p>Datenqualität, Berechtigungen, Schutzbedarf, Speicherorte, Schnittstellen und Zugriffskonzepte werden geprüft, bevor ein Modell oder Werkzeug breit genutzt wird.</p></div><div class="industry-card"><h3>Verlässlicher KI-Betrieb</h3><p>Wir planen von Anfang an, wie Qualität, Versionen, Kosten und Fehler im laufenden Betrieb geprüft und dokumentiert werden.</p></div><div class="industry-card"><h3>Einführung und Nutzung</h3><p>Rollen, Schulung, Kommunikation, Unterstützung und feste Abläufe werden vorbereitet, damit die Lösung im Arbeitsalltag sicher und sinnvoll genutzt wird.</p></div></div>
  </div>
 </section>
 
@@ -1420,7 +1548,25 @@ body.cex-migrated-page .method-step__when{font-size:.6875rem;font-weight:600;let
  <details class="faq__item"><summary>Wie vermeiden wir, dass ein KI-Pilot in der Schublade endet?</summary><div class="faq__answer">Der spätere Betrieb wird schon vor der Pilotversion geplant. Dazu gehören Einbindung in bestehende Systeme, Verantwortlichkeiten, Qualitätssicherung, Freigaben, laufende Überwachung, Unterstützung, Schulung und Nutzenmessung. Der Pilot wird dadurch zum kontrollierten ersten Schritt in die produktive Nutzung.</div></details>
  <details class="faq__item"><summary>Wie viel eigenes KI-Wissen brauchen wir dafür?</summary><div class="faq__answer">Ihr Team muss vor allem den eigenen Prozess, die Daten und die fachlichen Entscheidungen kennen. Wir bringen ein verständliches Vorgehen, technische Bewertung, Regeln für einen verantwortlichen Einsatz, Projektsteuerung und Umsetzungserfahrung ein. Während des Projekts wird Ihr Team gezielt befähigt.</div></details>
  </div>
- <div class="cross-links"><a class="cross-link" href="mittelstand/index.html"><div class="cross-link__tag">Zielgruppe</div><div class="cross-link__title">KI-Beratung Mittelstand</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="unternehmen/index.html"><div class="cross-link__tag">Zielgruppe</div><div class="cross-link__title">KI-Beratung für Unternehmen</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="generative-ki/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">Generative KI</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="microsoft-365/index.html"><div class="cross-link__tag">Microsoft</div><div class="cross-link__title">KI in Microsoft 365</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="microsoft-copilot/index.html"><div class="cross-link__tag">Microsoft</div><div class="cross-link__title">Microsoft Copilot</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="industrie/index.html"><div class="cross-link__tag">Branche</div><div class="cross-link__title">KI in der Industrie</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="maschinenbau/index.html"><div class="cross-link__tag">Branche</div><div class="cross-link__title">KI im Maschinenbau</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="chatbot/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">KI-Chatbots</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="daten-ki/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">Daten &amp; KI</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="../prozessoptimierung-beratung/index.html"><div class="cross-link__tag">Säule 1 — Prozesse</div><div class="cross-link__title">Prozessoptimierung &amp; BPM</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../projektmanagement-beratung/index.html"><div class="cross-link__tag">Säule 1 — Projekte</div><div class="cross-link__title">Projektmanagement</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../digitalisierungsberatung/index.html"><div class="cross-link__tag">Säule 1 — Digital</div><div class="cross-link__title">Digitalisierung &amp; Transformation</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../change-management-beratung/index.html"><div class="cross-link__tag">Säule 1 — Veränderung</div><div class="cross-link__title">Veränderungsbegleitung</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../enterprise-architecture-beratung/index.html"><div class="cross-link__tag">Säule 2 — Architektur</div><div class="cross-link__title">Enterprise Architecture</div><div class="cross-link__arrow">→ Weiter</div></a></div>
+ </div>
+</section>
+
+<!-- RELATED TOPICS -->
+<section class="section section--paper reveal link-section" id="weitere-themen" data-bench-role="internal-links" aria-labelledby="related-topics-title">
+ <div class="container">
+  <header class="section__head">
+   <div class="eyebrow">Weitere Beratungsthemen</div>
+   <h2 class="h-section" id="related-topics-title">Vertiefen Sie Ihr KI-Vorhaben.</h2>
+   <p class="h-lead">Wählen Sie die passende Zielgruppe, Technologie oder Branche. Wenn das Vorhaben zusätzlich Prozesse, Projekte, Veränderung oder Architektur betrifft, führen die angrenzenden Beratungsfelder weiter.</p>
+  </header>
+  <div class="link-group" aria-labelledby="ki-topics-title">
+   <div class="link-group__head"><span class="link-group__num" aria-hidden="true">01</span><h3 class="link-group__title" id="ki-topics-title">KI-Beratung nach Bedarf</h3></div>
+   <div class="cross-links cross-links--topics"><a class="cross-link" href="mittelstand/index.html"><div class="cross-link__tag">Zielgruppe</div><div class="cross-link__title">KI-Beratung Mittelstand</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="unternehmen/index.html"><div class="cross-link__tag">Zielgruppe</div><div class="cross-link__title">KI-Beratung für Unternehmen</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="generative-ki/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">Generative KI</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="microsoft-365/index.html"><div class="cross-link__tag">Microsoft</div><div class="cross-link__title">KI in Microsoft 365</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="microsoft-copilot/index.html"><div class="cross-link__tag">Microsoft</div><div class="cross-link__title">Microsoft Copilot</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="industrie/index.html"><div class="cross-link__tag">Branche</div><div class="cross-link__title">KI in der Industrie</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="maschinenbau/index.html"><div class="cross-link__tag">Branche</div><div class="cross-link__title">KI im Maschinenbau</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="chatbot/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">KI-Chatbots</div><div class="cross-link__arrow">→ Ansehen</div></a><a class="cross-link" href="daten-ki/index.html"><div class="cross-link__tag">Thema</div><div class="cross-link__title">Daten &amp; KI</div><div class="cross-link__arrow">→ Ansehen</div></a></div>
+  </div>
+  <div class="link-group" aria-labelledby="related-services-title">
+   <div class="link-group__head"><span class="link-group__num" aria-hidden="true">02</span><h3 class="link-group__title" id="related-services-title">Angrenzende Beratungsfelder</h3></div>
+   <div class="cross-links cross-links--services"><a class="cross-link" href="../prozessoptimierung-beratung/index.html"><div class="cross-link__tag">Prozesse</div><div class="cross-link__title">Prozessoptimierung &amp; BPM</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../projektmanagement-beratung/index.html"><div class="cross-link__tag">Projekte</div><div class="cross-link__title">Projektmanagement</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../digitalisierungsberatung/index.html"><div class="cross-link__tag">Digitalisierung</div><div class="cross-link__title">Digitalisierung &amp; Transformation</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../change-management-beratung/index.html"><div class="cross-link__tag">Veränderung</div><div class="cross-link__title">Veränderungsbegleitung</div><div class="cross-link__arrow">→ Weiter</div></a><a class="cross-link" href="../enterprise-architecture-beratung/index.html"><div class="cross-link__tag">Architektur</div><div class="cross-link__title">Enterprise Architecture</div><div class="cross-link__arrow">→ Weiter</div></a></div>
+  </div>
  </div>
 </section>
 
@@ -1512,7 +1658,7 @@ body.cex-migrated-page .method-step__when{font-size:.6875rem;font-weight:600;let
 
 
 </main>
-<footer class="footer"><div class="container footer__grid"><div class="footer__col footer__brand"><div class="footer__logo">CE<span>x</span></div><p>Beratung für Unternehmensarchitektur, Prozesse, Projektmanagement, KI und Digitalisierung — für gute IT- und Geschäftsentscheidungen. Köln · DACH-weit.</p></div><div class="footer__col"><strong>Leistungen</strong><a href="../ki-beratung/">KI-Beratung</a><a href="../digitalisierungsberatung/">Digitalisierung</a><a href="../prozessoptimierung-beratung/">Prozessoptimierung</a><a href="../projektmanagement-beratung/">Projektmanagement</a><a href="../change-management-beratung/">Veränderungsbegleitung</a><a href="../enterprise-architecture-beratung/">Unternehmensarchitektur</a></div><div class="footer__col"><strong>Rechtliches</strong><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><button type="button" class="footer__cookie" onclick="window.CExCookies&&window.CExCookies.open()">Cookie-Einstellungen</button><a href="../sitemap/">Sitemap</a></div><div class="footer__col"><strong>Kontakt</strong><a href="mailto:kontakt@cex.koeln">kontakt@cex.koeln</a><a href="../index.html#contact">Erstgespräch anfragen</a></div></div><div class="container footer__bottom"><div>© 2026 CEx · Alle Rechte vorbehalten.</div><div>Made in Köln · Datenschutzbewusst · DACH-weit</div></div></footer>
+<footer class="footer"><div class="container footer__grid"><div class="footer__col footer__brand"><div class="footer__logo">CE<span>x</span></div><p>Beratung für Unternehmensarchitektur, Prozesse, Projektmanagement, KI und Digitalisierung — für gute IT- und Geschäftsentscheidungen. Köln · DACH-weit.</p></div><div class="footer__col"><strong>Leistungen</strong><a href="../ki-beratung/">KI-Beratung</a><a href="../digitalisierungsberatung/">Digitalisierung</a><a href="../prozessoptimierung-beratung/">Prozessoptimierung</a><a href="../projektmanagement-beratung/">Projektmanagement</a><a href="../change-management-beratung/">Change Management</a><a href="../enterprise-architecture-beratung/">Unternehmensarchitektur</a></div><div class="footer__col"><strong>Rechtliches</strong><a href="../impressum.html">Impressum</a><a href="../datenschutz.html">Datenschutz</a><button type="button" class="footer__cookie" onclick="window.CExCookies&&window.CExCookies.open()">Cookie-Einstellungen</button><a href="../sitemap/">Sitemap</a></div><div class="footer__col"><strong>Kontakt</strong><a href="mailto:kontakt@cex.koeln">kontakt@cex.koeln</a><a href="../index.html#contact">Erstgespräch anfragen</a></div></div><div class="container footer__bottom"><div>© 2026 CEx · Alle Rechte vorbehalten.</div><div>Made in Köln · Datenschutzbewusst · DACH-weit</div></div></footer>
 
 <script>
 const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');ro.unobserve(e.target);}});},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
