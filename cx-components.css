@@ -319,3 +319,118 @@ p, li, dt, dd, figcaption, summary, blockquote {
 .form__label:has(input[type="tel"]) .form__optional,
 .cx-form__row:has(input[type="tel"]) .form__optional,
 label:has(input[name="phone"]) .form__optional { display: none; }
+
+
+/* ==========================================================================
+   6. "Aus der Praxis" — a named consultant answering a real question
+   --------------------------------------------------------------------------
+   The Enterprise-Architecture hub used to close with four rhetorical questions
+   in the cx-proof grid. They were questions nobody had actually asked, and they
+   had no answers underneath them — so the block promised evidence and delivered
+   a restatement of the service. Hannes replaced them with three questions he is
+   genuinely asked in first meetings, each with the answer he gives, including
+   the numbers.
+
+   That content is long-form, so it cannot live in a 260px card. Each item is a
+   two-column row instead: the question holds the left column and stays readable
+   as a standalone line for skimmers, the answer runs down the right at a normal
+   measure. Numbers worth remembering are lifted out into chips below the answer.
+
+   Shared, not page-local: the same shape fits any hub page where a founder can
+   answer a real question with real figures.
+   ========================================================================== */
+
+.cx-practice { display:grid; gap:20px }
+
+.cx-practice__item {
+  background:#fff;
+  border:1px solid var(--line);
+  padding:clamp(24px,3vw,38px);
+  display:grid;
+  grid-template-columns:minmax(230px,300px) 1fr;
+  gap:clamp(20px,3vw,44px);
+  align-items:start;
+}
+
+.cx-practice__label {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size:0.72rem;
+  font-weight:800;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--cx-charcoal-3);
+  margin-bottom:12px;
+}
+.cx-practice__label::before {
+  content:"";
+  display:inline-block;
+  width:18px;
+  height:3px;
+  background:var(--cx-accent);
+}
+
+.cx-practice__q {
+  margin:0;
+  font-size:clamp(1.12rem,1.7vw,1.38rem);
+  line-height:1.28;
+  letter-spacing:-0.01em;
+  color:var(--cx-charcoal);
+}
+
+.cx-practice__a {
+  margin:0;
+  font-size:1rem;
+  line-height:1.72;
+  color:var(--muted);
+}
+.cx-practice__a + .cx-practice__a { margin-top:14px }
+.cx-practice__cases + .cx-practice__a { margin-top:18px }
+
+/* The three mandate types inside the third answer. A rule on the left, not a
+   bullet: these are named cases with a duration each, not a list of equals. */
+.cx-practice__cases { list-style:none; margin:18px 0 0; padding:0; display:grid; gap:16px }
+.cx-practice__case { border-left:3px solid var(--cx-warm-4); padding-left:16px }
+.cx-practice__case strong { display:block; margin-bottom:4px; font-size:0.98rem; color:var(--cx-charcoal) }
+.cx-practice__case span { display:block; font-size:0.95rem; line-height:1.65; color:var(--muted) }
+.cx-practice__case em {
+  display:block;
+  margin-top:6px;
+  font-style:normal;
+  font-size:0.82rem;
+  font-weight:700;
+  letter-spacing:0.04em;
+  color:var(--cx-charcoal-2);
+}
+
+/* Numbers lifted out of the prose so a skimmer gets the answer without reading it. */
+.cx-practice__facts { list-style:none; margin:20px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:10px }
+.cx-practice__fact {
+  background:var(--cx-warm-2);
+  border:1px solid var(--cx-warm-4);
+  padding:8px 12px;
+  font-size:0.82rem;
+  line-height:1.35;
+  color:var(--cx-charcoal-2);
+}
+.cx-practice__fact b { color:var(--cx-charcoal); font-weight:800 }
+
+/* Who "wir" and "ich" are. Sits above the questions so the voice is anchored
+   before the first answer is read. */
+.cx-practice__by {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:22px 0 34px;
+}
+.cx-practice__by img { width:46px; height:46px; object-fit:cover; border:1px solid var(--line) }
+.cx-practice__by span { font-size:0.9rem; line-height:1.45; color:var(--muted); text-align:left }
+.cx-practice__by b { display:block; color:var(--cx-charcoal) }
+
+@media (max-width:860px) {
+  .cx-practice__item { grid-template-columns:1fr; gap:16px; text-align:left }
+  .cx-practice__q, .cx-practice__a, .cx-practice__case, .cx-practice__label { text-align:left }
+  .cx-practice__by { justify-content:flex-start; margin:20px 0 26px }
+}
