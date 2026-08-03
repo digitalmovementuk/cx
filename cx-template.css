@@ -1090,7 +1090,7 @@ body.cex-migrated-page:not(.home) .hero>.container { position:relative; z-index:
   gap:8px;
   padding:14px 22px;
   background:var(--cx-charcoal);
-  color:#fff;
+  color:var(--cx-surface);
   font-family:inherit;
   font-weight:800;
   font-size:14px;
@@ -1100,7 +1100,8 @@ body.cex-migrated-page:not(.home) .hero>.container { position:relative; z-index:
   cursor:pointer;
   transition:background 0.2s;
 }
-.cx-form__submit:hover { background:#000 }
+/* Was #000 — the one pure black on the site. The ink is #1E2327. */
+.cx-form__submit:hover { background:var(--cx-charcoal-2) }
 .cx-form__hint { font-size:11px; color:var(--cx-charcoal-3); margin-top:10px }
 
 /* --------------------------------------------------------------------------
