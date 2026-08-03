@@ -14,7 +14,7 @@
   var ROOT = me.replace(/overview-widget\.js(\?.*)?$/, "");
 
   var CSS = `
-  :root{--ov-ink:#1E2327;--ov-acc:#FF7A00;--ov-warm:#E8E8E8;--ov-line:rgba(30,35,39,.12);--ov-mut:#5A6066}
+  :root{--ov-ink:#1E2327;--ov-acc:#FF7A00;--ov-warm:#F3F0ED;--ov-line:rgba(30,35,39,.12);--ov-mut:#4E555C}
   /* TEMP overview state: clear the centred in-page nav links so the LIVE button never overlaps */
   .nav__links{display:none!important}
   .ov-pill{position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:99998;
@@ -22,7 +22,7 @@
     background:#1E2327;color:#fff;font:800 12.5px/1 Inter,system-ui,sans-serif;letter-spacing:.02em;
     border:1px solid rgba(255,255,255,.14);box-shadow:0 8px 24px -8px rgba(0,0,0,.45);cursor:pointer;
     -webkit-tap-highlight-color:transparent;transition:transform .15s ease, background .2s}
-  .ov-pill:hover{background:#000;transform:translateX(-50%) translateY(1px)}
+  .ov-pill:hover{background:#3B4148;transform:translateX(-50%) translateY(1px)}
   .ov-dot{width:9px;height:9px;border-radius:50%;background:#ff3b30;box-shadow:0 0 0 0 rgba(255,59,48,.7);
     animation:ovpulse 1.6s infinite}
   @keyframes ovpulse{0%{box-shadow:0 0 0 0 rgba(255,59,48,.7)}70%{box-shadow:0 0 0 7px rgba(255,59,48,0)}100%{box-shadow:0 0 0 0 rgba(255,59,48,0)}}
@@ -56,7 +56,7 @@
   .ov-tbl tr:hover td{background:rgba(255,122,0,.05)}
   .ov-rank{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;background:#1E2327;color:#fff;font:800 11px/1 Inter;margin-right:8px}
   .ov-tier{display:inline-block;font:800 9px/1 ui-monospace;letter-spacing:.1em;text-transform:uppercase;padding:3px 7px;border-radius:5px;margin-left:8px;vertical-align:middle}
-  .ov-tier.Hub{background:#FFE0B8;color:#8a4b00}.ov-tier.Spoke{background:#E7E2D4;color:#5A6066}
+  .ov-tier.Hub{background:#FFE0B8;color:#8a4b00}.ov-tier.Spoke{background:#E2DDD7;color:#4E555C}
   .ov-pg{color:var(--ov-ink);text-decoration:none;font-weight:700;border-bottom:2px solid rgba(255,122,0,.35)}
   .ov-pg:hover{border-bottom-color:var(--ov-acc)}
   .ov-clu{font-size:11px;color:var(--ov-mut)}
