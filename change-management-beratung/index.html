@@ -584,7 +584,9 @@ body.change-management-page .cx-form__submit { border-radius:0;min-height:48px; 
  body.change-management-page [data-bench-role="adaptability"] .industries,
  body.change-management-page [data-bench-role="confidence"] .diff-list,
  body.change-management-page [data-bench-role="frameworks"] .industries { grid-template-columns:1fr!important; }
- body.change-management-page [data-bench-role="adaptability"] .industry-card { grid-template-columns:1fr;justify-items:center;row-gap:12px; }
+ /* justify-items:start, not center — the number chip and title line up with the
+    body text underneath instead of floating over it. */
+ body.change-management-page [data-bench-role="adaptability"] .industry-card { grid-template-columns:1fr;justify-items:start;row-gap:12px; }
  body.change-management-page [data-bench-role="adaptability"] .industry-card::before { grid-row:auto; }
  body.change-management-page [data-bench-role="adaptability"] .industry-card h3,
  body.change-management-page [data-bench-role="adaptability"] .industry-card p { grid-column:1; }

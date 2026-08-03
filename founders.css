@@ -80,8 +80,12 @@
   border-radius:0 !important;
 }
 
+/* Two lines' worth of space whether the name needs them or not. "Hans-Helmut
+   "Hannes" Scheel" wraps and "Johannes Reusch" does not, so without this the
+   two "Gründer" labels sat 20px out of line with each other. */
 .cx-trust .cx-trust__founders b {
   display: block !important;
+  min-height: 2.5em !important;
   font-size: 1.02rem !important;
   line-height: 1.25 !important;
   color: var(--cx-charcoal) !important;

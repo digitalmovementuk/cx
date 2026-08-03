@@ -96,13 +96,17 @@
 
 
 body.cex-migrated-page .service-card__head .service-card__num{margin-bottom:0}
-body.cex-migrated-page .service-card.service-card--wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(240px,.72fr) minmax(0,1.28fr);align-items:center;gap:clamp(32px,6vw,88px)}
-body.cex-migrated-page .service-card--wide .service-card__head{margin-bottom:0}
-body.cex-migrated-page .service-card--wide p{max-width:68ch}
+/* The fifth card used to be a full-row `--wide` variant: grid-column:1/-1 with
+   its title and text side by side. The grid is a wrapping flex now, so
+   grid-column does nothing and the card sat at half width with a 240px title
+   column and a 162px text column beside it — a fifth card that looked nothing
+   like the other four. It is an ordinary service card again; three on top and
+   two below, both of the bottom two half the row. */
 @media(max-width:820px){
- body.cex-migrated-page .service-card.service-card--wide{grid-column:auto;display:flex;gap:0}
- body.cex-migrated-page .service-card--wide .service-card__head{margin-bottom:24px}
- .service-card__head{flex-direction:column;justify-content:center;gap:16px;text-align:center}
+ /* align-items stays flush left: in a column the desktop `center` shrink-wraps
+    the title and centres it over body text that is left-aligned, which is the
+    house rule for cards on mobile. */
+ .service-card__head{flex-direction:column;align-items:flex-start;gap:16px;text-align:left}
 }
 
 
@@ -703,7 +707,7 @@ body.cex-migrated-page #vorgehen .process-timeline .method-step:last-child .meth
   <article class="service-card"><div class="service-card__head"><div class="service-card__num">02</div><h3>Technik</h3></div><p>Wir prüfen Systeme, Schnittstellen, Datenflüsse, technische Abhängigkeiten und Risiken. So wird sichtbar, was der gewünschte Zustand technisch erfordert.</p></article>
   <article class="service-card"><div class="service-card__head"><div class="service-card__num">03</div><h3>Prozesse</h3></div><p>Die Prozesslandschaft wird aufgenommen und bewertet. Rollen, Übergaben, Medienbrüche und manuelle Schritte werden geklärt, bevor Soll-Prozesse und digitale Abläufe festgelegt werden.</p></article>
   <article class="service-card"><div class="service-card__head"><div class="service-card__num">04</div><h3>Projektmanagement</h3></div><p>Aus Zielbild und Ist-Analyse entsteht ein Projektplan mit Arbeitspaketen, Verantwortlichkeiten, Abhängigkeiten und Entscheidungspunkten. Damit lässt sich die Umsetzung verlässlich planen.</p></article>
-  <article class="service-card service-card--wide"><div class="service-card__head"><div class="service-card__num">05</div><h3>Mensch &amp; Kultur</h3></div><p>Mitarbeitende werden von Anfang an einbezogen. Schulung, Kommunikation, neue Rollen und Arbeitsweisen werden so geplant, dass die Veränderung im Alltag getragen wird.</p></article>
+  <article class="service-card"><div class="service-card__head"><div class="service-card__num">05</div><h3>Mensch &amp; Kultur</h3></div><p>Mitarbeitende werden von Anfang an einbezogen. Schulung, Kommunikation, neue Rollen und Arbeitsweisen werden so geplant, dass die Veränderung im Alltag getragen wird.</p></article>
  </div>
  </div>
 </section>

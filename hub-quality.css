@@ -35,11 +35,18 @@ body.cex-migrated-page .industries {
   align-items: stretch;
 }
 
+/* align-self, not height:100%. These grids are wrapping flex now (see section 2
+   of cx-components.css), and a flex item only stretches to its line when its
+   cross size is `auto`. height:100% is not auto, so it opted every card out of
+   the stretch and each one fell back to its own content height — that is why
+   the BPMN card sat 26px shorter than the Lean card beside it. align-self does
+   the same job in a grid and is the one flex actually honours. */
 body.cex-migrated-page .problem-card,
 body.cex-migrated-page .service-card,
 body.cex-migrated-page .use-card,
 body.cex-migrated-page .industry-card {
-  height: 100%;
+  height: auto;
+  align-self: stretch;
   border-radius:0;
 }
 

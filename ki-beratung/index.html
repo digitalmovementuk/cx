@@ -508,10 +508,12 @@ body.cex-migrated-page #vorgehen .process-timeline .method-step:last-child .meth
  .ki-foundation-system::before{content:"";position:absolute;z-index:0;top:220px;bottom:24px;left:50%;width:2px;transform:translateX(-50%);background:linear-gradient(180deg,var(--cx-yellow),rgba(255,122,0,.16))}
  .ki-foundation-core{min-height:206px;padding:28px 20px}
  .ki-foundation-core::before{width:190px;height:190px}
- .ki-foundation-card{min-height:0;padding:22px 18px;align-items:center;text-align:center}
- .ki-foundation-card__meta{flex-direction:column;justify-content:center;margin-bottom:16px}
+ /* Flush left, like every other card on a narrow screen: a centred title over a
+    centred four-line paragraph makes the reader hunt for the start of each line. */
+ .ki-foundation-card{min-height:0;padding:22px 18px;align-items:flex-start;text-align:left}
+ .ki-foundation-card__meta{flex-direction:column;align-items:flex-start;margin-bottom:16px}
  .ki-foundation-card__icon{display:none}
- .ki-foundation-card h3,.ki-foundation-card p{margin-right:auto;margin-left:auto;text-align:center}
+ .ki-foundation-card h3,.ki-foundation-card p{margin-right:auto;margin-left:0;text-align:left}
 }
 </style>
 </head>

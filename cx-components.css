@@ -136,14 +136,21 @@
   align-items: stretch;
 }
 
-/* min-width:0 so a long word inside a card can't veto the shrink. */
+/* min-width:0 so a long word inside a card can't veto the shrink.
+
+   height:auto matters as much. A flex item only stretches to the height of its
+   line when its cross size is `auto` — a card carrying height:100%, which is
+   what these all had from their days as grid items, opts out of the stretch and
+   falls back to its own content height. That is how the BPMN card ended up 26px
+   shorter than the Lean card beside it. align-self says the same thing the
+   container's align-items already says, and survives a card that sets its own. */
 .services-grid > *,
 .uses-grid > *,
 .industries > *,
 .cross-links > *,
 .topic-grid > *,
 .sm-grid > *,
-.pm-practice__grid > * { min-width: 0; }
+.pm-practice__grid > * { min-width: 0; height: auto; align-self: stretch; }
 
 /* Basis per grid = the minmax() floor it used to carry, so full rows keep the
    card count and width they already had. */
