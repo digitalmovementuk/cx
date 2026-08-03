@@ -165,12 +165,7 @@ body.cex-migrated-page.home > main > .cex-page-visual img {
      fails. --muted is 7.3:1 and is already the site's secondary ink. */
   color: var(--muted) !important;
 }
-.cex-migrated-page .cx-hero-form > label > span > a[href*="datenschutz"] {
-  color: #ffffff !important;
-  text-decoration: underline !important;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
+
 .cex-migrated-page .cross-link__tag {
   color: var(--cx-accent-3) !important;
 }
@@ -183,111 +178,25 @@ body.cex-migrated-page.home > main > .cex-page-visual img {
 
 /* Service-page hero: one gutter, one type scale, compact enough for a laptop. */
 @media (min-width: 921px) {
-  body.cex-migrated-page:not(.home) .hero {
-    display: block;
-    min-height: 0;
-    padding: clamp(48px, 6vh, 68px) 0 clamp(30px, 4vh, 48px);
-  }
-  body.cex-migrated-page:not(.home) .hero > .container {
-    width: 100%;
-  }
-  body.cex-migrated-page:not(.home) .hero__grid {
-    grid-template-columns: minmax(0, 1.2fr) minmax(390px, 0.8fr);
-    gap: clamp(28px, 3vw, 44px);
-    max-width: none;
-    margin: 0 0 24px;
-    padding: 0;
-    align-items: center;
-  }
-  body.cex-migrated-page:not(.home) .hero__copy {
-    display: flex;
-    align-items: flex-start;
-    gap: 0;
-    max-width: none;
-    text-align: left;
-  }
-  body.cex-migrated-page:not(.home) .hero__eyebrow {
-    margin: 0 0 14px;
-  }
-  body.cex-migrated-page:not(.home) .hero__title {
-    max-width: none;
-    margin: 0 0 18px;
-    font-size: clamp(3rem, 3.8vw, 3.625rem);
-    font-weight: 800;
-    line-height: 1.03;
-    letter-spacing: -0.042em;
-    text-transform: none;
-    overflow-wrap: break-word;
-    word-break: normal;
-    -webkit-hyphens: manual;
-    hyphens: manual;
-    text-wrap: balance;
-  }
-  body.cex-migrated-page:not(.home) .hero__lead {
-    max-width: 64ch;
-    margin: 0 0 22px;
-    font-size: 1.0625rem;
-    line-height: 1.55;
-  }
-  body.cex-migrated-page:not(.home) .hero__cta-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  body.cex-migrated-page:not(.home) .hero__cta-row .btn {
-    padding: 13px 20px;
-  }
-  body.cex-migrated-page:not(.home) .hero__form-col {
-    align-items: center;
-  }
-  body.cex-migrated-page:not(.home) .hero__form-col .cx-hero-form {
-    width: 100% !important;
-    max-width: 500px !important;
-    margin: 0 !important;
-    padding: 16px !important;
-    border-radius:0 !important;
-  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   body.cex-migrated-page:not(.home) .cx-hero-form :is(input:not([type="checkbox"]), textarea, button) {
     min-height: 44px !important;
   }
-  body.cex-migrated-page:not(.home) .cx-hero-form textarea {
-    min-height: 72px !important;
-  }
-  body.cex-migrated-page:not(.home) .hero__trust {
-    margin-top: 0;
-  }
+  
+  
 }
 
-@media (min-width: 921px) and (max-height: 820px) {
-  body.cex-migrated-page:not(.home) .hero {
-    padding-top: 38px;
-    padding-bottom: 26px;
-  }
-  body.cex-migrated-page:not(.home) .hero__grid {
-    margin-bottom: 18px;
-  }
-  body.cex-migrated-page:not(.home) .hero__title {
-    margin-bottom: 14px;
-    font-size: clamp(2.75rem, 3.45vw, 3.25rem);
-  }
-  body.cex-migrated-page:not(.home) .hero__lead {
-    margin-bottom: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  body.cex-migrated-page:not(.home) .hero__form-col .cx-hero-form {
-    padding: 13px 14px !important;
-  }
-  body.cex-migrated-page:not(.home) .hero__form-col .cx-hero-form > span:first-child {
-    margin-bottom: 7px !important;
-  }
-  body.cex-migrated-page:not(.home) .cx-hero-form textarea {
-    min-height: 56px !important;
-  }
-  body.cex-migrated-page:not(.home) .hero__trust {
-    padding-top: 16px;
-  }
-}
+
 
 @media (min-width: 921px) and (max-width: 1599px) {
   .cex-migrated-page .method {
@@ -300,28 +209,10 @@ body.cex-migrated-page.home > main > .cex-page-visual img {
 }
 
 /* Homepage hero actions: the enquiry action is primary on every screen. */
-.cex-migrated-page .hero__cta-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-}
-.cex-migrated-page .hero__cta-group .hero__cta {
-  min-height: 48px;
-  padding: 10px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  border-radius:0;
-}
-.cex-migrated-page .hero__cta-group .hero__cta--primary {
-  color: var(--cx-charcoal);
-  background: var(--cx-accent);
-  border-color: var(--cx-accent);
-  font-weight: 700;
-}
-.cex-migrated-page .hero__cta-group .hero__cta--primary .hero__cta-icon {
-  color: #fff;
-  background: var(--cx-charcoal);
-}
+
+
+
+
 
 /* Legal/support pages use the same scale and readable body size. */
 .cex-migrated-page .legal-hero {
@@ -521,25 +412,11 @@ body.cex-migrated-page.has-privacy-dialog {
   .cex-migrated-page .cx-trust__lead {
     font-size: 1rem;
   }
-  body.cex-migrated-page.home .hero {
-    min-height: 0;
-    padding-top: 72px;
-    padding-bottom: 40px;
-  }
-  body.cex-migrated-page.home .hero__grid {
-    gap: 22px;
-  }
-  body.cex-migrated-page.home .hero__copy {
-    gap: 20px;
-  }
-  body.cex-migrated-page.home .hero__title {
-    font-size: clamp(2rem, 9.4vw, 2.25rem);
-    line-height: 1.02;
-  }
-  body.cex-migrated-page.home .hero__lead {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
+  
+  
+  
+  
+  
   .cex-migrated-page .cex-page-visual {
     margin-top: 28px;
     padding-inline: var(--container-px);
@@ -549,74 +426,17 @@ body.cex-migrated-page.has-privacy-dialog {
     height: clamp(240px, 72vw, 360px);
   }
 
-  body.cex-migrated-page:not(.home) .hero {
-    display: block;
-    min-height: 0;
-    padding: 52px 0 28px;
-  }
-  body.cex-migrated-page:not(.home) .hero__grid {
-    display: block;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-  }
-  body.cex-migrated-page:not(.home) .hero__copy {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    max-width: none;
-    text-align: center;
-  }
-  body.cex-migrated-page:not(.home) .hero__eyebrow {
-    margin: 0 auto 14px !important;
-  }
-  body.cex-migrated-page:not(.home) .hero__title {
-    width: 100%;
-    max-width: min(18ch, 100%);
-    margin: 0 auto 18px;
-    font-size: clamp(2.125rem, 9.5vw, 2.625rem);
-    line-height: 1.04;
-    letter-spacing: -0.038em;
-    text-align: center;
-    text-transform: none;
-    overflow-wrap: anywhere;
-    word-break: normal;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-    text-wrap: balance;
-  }
-  body.cex-migrated-page:not(.home) .hero__lead {
-    max-width: 42rem;
-    margin: 0 auto 22px;
-    font-size: 1rem;
-    line-height: 1.55;
-    text-align: center;
-  }
-  body.cex-migrated-page:not(.home) .hero__cta-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  body.cex-migrated-page:not(.home) .hero__cta-row .btn {
-    width: min(100%, 320px);
-    justify-content: center;
-  }
-  body.cex-migrated-page:not(.home) .hero__cta-row .btn--ghost {
-    display: none;
-  }
-  body.cex-migrated-page:not(.home) .hero__form-col,
-  body.cex-migrated-page.home .hero__form-wrap {
-    display: none !important;
-  }
-  body.cex-migrated-page:not(.home) .hero__trust {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
-    margin-top: 26px;
-    padding-top: 18px;
-    text-align: center;
-  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   .cex-migrated-page .trust-item__num,
   .cex-migrated-page .trust-item__label,
   .cex-migrated-page .cross-link__tag,
@@ -632,15 +452,8 @@ body.cex-migrated-page.has-privacy-dialog {
     display: none;
   }
 
-  .cex-migrated-page .hero__cta-group {
-    flex-direction: column;
-    width: 100%;
-  }
-  .cex-migrated-page .hero__cta-group .hero__cta {
-    width: min(100%, 320px);
-    justify-content: center;
-    margin-inline: auto;
-  }
+  
+  
 
   .cex-migrated-page .legal-hero {
     padding: 72px 0 52px;
@@ -683,14 +496,7 @@ body.cex-migrated-page.has-privacy-dialog {
   }
 }
 
-@media (max-width: 420px) {
-  body.cex-migrated-page:not(.home) .hero__trust {
-    gap: 8px;
-  }
-  body.cex-migrated-page.home .hero__cta--secondary {
-    display: none;
-  }
-}
+
 
 @media (prefers-reduced-motion: reduce) {
   .cex-migrated-page *,
@@ -902,9 +708,7 @@ html { scroll-padding-top: calc(var(--cx-nav-h) + 16px); }
 }
 
 /* ---- Hero-Freiraum (AGENTS.md: fixe Nav darf Hero nie verdecken) --------- */
-body.cex-migrated-page:not(.home) .hero {
-  padding-top: max(clamp(48px, 6vh, 68px), calc(var(--cx-nav-h) + 24px));
-}
+
 
 /* ==========================================================================
    Breakpoints

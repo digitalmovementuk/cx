@@ -135,13 +135,6 @@
 
 
 </style>
-<style id="cx-hero-grid">
-
-
-
-
-
-</style>
 <style id="cx-nav-ported">
 :root{--acn-purple:var(--cx-yellow);--acn-black:var(--cx-charcoal);--acn-ink:var(--cx-charcoal);--ease-out:var(--ease);--font-display:var(--font-sans)}
 
@@ -301,16 +294,8 @@ eorder (homepage) === */
 <style id="grid-coherence">
 /* Card-grid coherence: a grid with EXACTLY 4 cards renders 2×2 (never 3+1 orphan / negative space). 3- and 6-card grids unaffected. */
 </style>
-<style id="qa-h1wrap"></style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://cex.koeln/#organization","name":"CEx","url":"https://cex.koeln","email":"kontakt@cex.koeln"}</script>
-<meta name="theme-color" content="#1E2327"><style>
-
-
-
-
-
-
-</style>
+<meta name="theme-color" content="#1E2327">
 <style>
 
 
@@ -324,46 +309,12 @@ eorder (homepage) === */
 
 .cx-proof__note{margin:28px auto 0;max-width:82ch;font-size:1rem;line-height:1.7;color:var(--muted);text-align:center}
 </style>
-<style>
-
-
-</style>
-<style></style>
 <meta name="twitter:image:alt" content="Kölner Stadtansicht am Rhein als regionaler Bezug">
 <meta name="robots" content="noindex, follow">
 <link rel="preload" href="../../fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../founders.css?v=20260731">
 <link rel="stylesheet" href="../../polish.css?v=20260715">
-<style id="projektmanagement-beratung-rheinland-hero-polish">
-
-
-body.cex-migrated-page:not(.home) .hero::after{content:"";position:absolute;inset:0;z-index:0;background:var(--hero-scrim-split),url("../../media/page-projektmanagement-beratung-rheinland.jpg") center/cover no-repeat}
-
-important;border:0!important;border-top:1px solid var(--line-on-dark)!important;margin-top:clamp(44px,5vw,64px)}
- body.cex-migrated-page .method .method-step{position:relative;min-width:0;padding:34px 26px 36px!important;border:0!important}
- body.cex-migrated-page .method .method-step+.method-step{border-left:1px solid var(--line-on-dark)!important}
- body.cex-migrated-page .method .method-step::before{content:"";position:absolute;top:-3px;left:26px;width:24px;height:5px;background:var(--cx-yellow)}
-}
-@media(min-width:821px) and (max-width:1059px){
- body.cex-migrated-page .method .method-step{padding:28px 18px 30px!important}
- body.cex-migrated-page .method .method-step::before{left:18px;width:20px}
- body.cex-migrated-page .method-step__title{font-size:.9375rem}
- body.cex-migrated-page .method-step__body{font-size:.8125rem;line-height:1.55}
- body.cex-migrated-page .method-step__meta{gap:7px}
- body.cex-migrated-page .method-step__num,body.cex-migrated-page .method-step__when{font-size:.625rem;letter-spacing:.1em}
- body.cex-migrated-page .method-step__when{padding-left:7px}
-}
-body.cex-migrated-page .method-step__title{margin:0 0 10px;font-size:1.0625rem;font-weight:700;color:#fff;letter-spacing:-.015em;line-height:1.25;hyphens:manual;overflow-wrap:break-word}
-body.cex-migrated-page .method-step__body{margin:0;font-size:.9375rem;line-height:1.6;color:rgba(255,255,255,.74);overflow-wrap:break-word}
-@media(max-width:820px){
- body.cex-migrated-page .method{grid-template-columns:1fr!important;margin-top:36px;border:0!important;border-top:1px solid var(--line-on-dark)!important}
- body.cex-migrated-page .method .method-step{padding:28px 0 30px!important;border:0!important}
- body.cex-migrated-page .method .method-step+.method-step{border-left:0!important;border-top:1px solid var(--line-on-dark)!important}
- body.cex-migrated-page .method .method-step::before{content:"";position:absolute;top:-3px;left:50%;margin-left:-12px;width:24px;height:5px;background:var(--cx-yellow)}
- body.cex-migrated-page .method-step__title{font-size:1.125rem;line-height:1.25}
- body.cex-migrated-page .method-step__body{font-size:1rem;line-height:1.65;max-width:40ch;margin-left:auto;margin-right:auto}
-}
-</style>
+<link rel="stylesheet" href="../../cx-hero.css?v=20260803">
 </head>
 <body class="cex-migrated-page cex-static-site">
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
@@ -436,35 +387,102 @@ body.cex-migrated-page .method-step__body{margin:0;font-size:.9375rem;line-heigh
 <main id="main">
 
 <!-- HERO -->
-<section class="hero" data-bench-role="hero">
- <div class="container">
+<section class="hero" id="top">
+ <div class="hero__video-shell" aria-hidden="true">
+ <video class="hero__video" autoplay muted loop playsinline preload="auto" disablepictureinpicture>
+ <source src="../../media/cx-hero-background-calm.mp4" type="video/mp4" />
+ </video>
+ <script>(function(){var v=document.currentScript.previousElementSibling;if(v&&window.matchMedia('(max-width: 820px)').matches){v.querySelector('source').src='../../media/cx-hero-background-calm-mobile.mp4';v.load();}})();</script>
+ <div class="hero__video-overlay"></div>
+ </div>
+
  <div class="hero__grid">
  <div class="hero__copy">
- <div class="hero__eyebrow">Projektmanagement · Rheinland</div>
- <h1 class="hero__title">Projektmanagement <span class="accent">›</span> im Rheinland, vor Ort.</h1>
+ <div class="hero__eyebrow">
+ <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+ <span>Projektmanagement · Rheinland</span>
+ </div>
+
+ <h1 class="hero__title hero__title--long">
+ <span class="hero__title-line"><span class="hero__title-text hero__title-text--left">Projektmanagement</span></span>
+ <span class="hero__title-line hero__title-line--accent"><span class="hero__title-glyph" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none"><path d="M22 14 L58 40 L22 66" stroke="currentColor" stroke-width="11" stroke-linecap="square" stroke-linejoin="miter" /></svg></span><span class="hero__title-text hero__title-text--right">im Rheinland, vor Ort.</span></span>
+ </h1>
+
+ <div class="hero__lead-wrap">
+ <span class="hero__lead-bar" aria-hidden="true"></span>
  <p class="hero__lead">Externe Projektleitung und Programm-Steuerung mit echter Präsenz im Rheinland — vor Ort in Köln, Bonn, Düsseldorf und Aachen, mit kurzen Wegen. Klassisch, agil oder hybrid, für Vorhaben in Organisationen jeder Größe.</p>
- <div class="hero__cta-row">
- <a href="#kontakt" class="btn">Erstgespräch anfragen <span class="btn__icon">→</span></a>
- <a href="#leistungen" class="btn btn--ghost">Leistungen ansehen <span class="btn__icon">↓</span></a>
+ </div>
+
+ <div class="hero__cta-group">
+   <a href="#kontakt" class="hero__cta hero__cta--primary"><span class="hero__cta-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" /></svg></span><span>Erstgespräch anfragen</span></a>
+   <a href="#leistungen" class="hero__cta hero__cta--secondary"><span class="hero__cta-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" /></svg></span><span>Leistungen ansehen</span></a>
  </div>
  </div>
- <div class="hero__form-col">
- <form class="cx-hero-form" action="mailto:kontakt@cex.koeln" method="post" enctype="text/plain" aria-label="Erstgespräch anfragen" style="display:block;max-width:540px;margin:18px 0 6px;padding:16px 18px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.28);border-radius:0" data-cex-static-contact="true">
- <span style="display:block;font-size:11px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--cx-accent-soft);margin-bottom:10px">Erstgespräch anfragen — kostenlos &amp; unverbindlich</span>
- <div style="display:flex;gap:8px;margin-bottom:8px">
- <input type="text" name="name" placeholder="Vollständiger Name" required aria-label="Vollständiger Name" autocomplete="name" style="flex:1;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:0;min-width:0">
- <input type="tel" name="phone" placeholder="Telefonnummer" required aria-label="Telefonnummer" autocomplete="tel" style="flex:1;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:0;min-width:0">
+
+ <div class="hero__form-wrap">
+ <div class="hero__card">
+ <div class="form__kicker">
+ <span class="form__kicker-bar" aria-hidden="true"></span>
+ <span>Lassen Sie uns sprechen</span>
  </div>
- <input type="email" name="email" placeholder="Geschäfts-E-Mail" required aria-label="E-Mail" autocomplete="email" style="display:block;width:100%;box-sizing:border-box;padding:12px 13px;font-size:16px;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:0;margin-bottom:8px">
- <textarea name="enquiry" rows="2" placeholder="Worum geht es? Ein, zwei Sätze genügen." required aria-label="Ihre Anfrage" style="display:block;width:100%;box-sizing:border-box;padding:12px 13px;font-size:16px;line-height:1.4;background:#fff;border:1px solid rgba(0,0,0,0.18);color:#1E2327;border-radius:0;margin-bottom:10px;resize:vertical;font-family:inherit"></textarea>
- <button type="submit" style="display:block;width:100%;padding:13px 18px;font-size:14px;font-weight:800;background:var(--cx-accent);color:var(--cx-accent-on);border:none;border-radius:0;cursor:pointer">Anfrage senden →</button>
- <label style="display:flex;gap:8px;align-items:flex-start;font-size:11px;line-height:1.45;color:rgba(255,255,255,0.88);margin-top:10px"><input type="checkbox" name="dsgvo" required style="flex-shrink:0;margin-top:2px"><span>Ich willige in die Verarbeitung meiner Angaben gem. <a href="../../datenschutz.html" style="color:var(--cx-accent-soft)">Datenschutzerklärung</a> (Art. 6 Abs. 1 lit. b DSGVO) ein. Die Daten werden ausschließlich zur Beantwortung meiner Anfrage genutzt und nach Abschluss bzw. auf Widerruf gelöscht.</span></label>
+ <p class="form__sub" id="contact-privacy-note">
+ Ein kurzer Überblick reicht. Wir melden uns werktags innerhalb von 24 Stunden.
+ </p>
+
+ <form class="form" id="contact" aria-describedby="contact-privacy-note" data-cex-static-contact="true" action="mailto:kontakt@cex.koeln" method="post" enctype="text/plain">
+ <label class="form__label">
+ <span>Name</span>
+ <input class="form__input" name="name" autocomplete="name" maxlength="80" placeholder="Ihr Name" />
+ </label>
+
+ <label class="form__label">
+ <span>E-Mail</span>
+ <input class="form__input" type="email" name="email" autocomplete="email" maxlength="120" placeholder="Ihre E-Mail" required />
+ </label>
+
+ <label class="form__label">
+ <span>Telefon <em class="form__optional">optional</em></span>
+ <input class="form__input" type="tel" name="phone" autocomplete="tel" maxlength="40" placeholder="Ihre Telefonnummer" />
+ </label>
+
+ <label class="form__label">
+ <span>Thema</span>
+ <textarea class="form__textarea" name="situation" maxlength="1200" placeholder="Welche Ausgangslage sollen wir einordnen?"></textarea>
+ </label>
+
+ <label class="form__consent">
+ <input class="form__checkbox" type="checkbox" name="privacy_acknowledged" required />
+ <span>
+ Ich habe die <a href="../../datenschutz.html">Datenschutzhinweise</a> gelesen.
+ Meine Angaben werden nur zur Bearbeitung der Anfrage genutzt.
+ </span>
+ </label>
+
+ <p class="form__privacy">
+ Zweck: Antwort auf Ihre Anfrage (Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO).
+ Löschung nach Abschluss der Anfrage oder Widerruf. Ihre Angaben dienen allein der
+ Anfragebearbeitung und verbleiben bei uns. Details: <a href="../../datenschutz.html">Datenschutzerklärung</a>.
+ </p>
+
+ <button type="submit" class="btn btn--accent form__submit">
+ Erstgespräch anfragen
+ <span class="btn__icon" aria-hidden="true">
+ <svg viewBox="0 0 16 16" fill="none">
+ <path d="M3 8h9M9 5l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" />
+ </svg>
+ </span>
+ </button>
+
  <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="cex-honeypot"><p class="form__status cex-form-status" aria-live="polite"></p></form>
  </div>
  </div>
- <div class="hero__trust"><div class="trust-item"><div class="trust-item__num">Im Takt</div><div class="trust-item__label">Vorhaben, die umgesetzt werden und im Alltag ankommen</div></div><div class="trust-item"><div class="trust-item__num">durchgängig</div><div class="trust-item__label">vom Audit über die Steuerung bis zur Übergabe</div></div><div class="trust-item"><div class="trust-item__num">DACH</div><div class="trust-item__label">branchenübergreifend · Organisationen jeder Größe</div></div></div>
  </div>
-</section>
+
+ <div class="hero__scroll-cue" aria-hidden="true">
+ <span class="hero__scroll-cue-label">Scrollen</span>
+ <span class="hero__scroll-cue-line"></span>
+ </div>
+ </section>
 
 <!-- PROBLEM FRAMING -->
 <section class="section section--paper reveal" data-bench-role="approach">

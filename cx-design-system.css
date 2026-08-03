@@ -93,18 +93,10 @@
   --hero-overlay:    linear-gradient(180deg, rgba(30,35,39,.62) 0%,
                                              rgba(30,35,39,.42) 60%,
                                              rgba(30,35,39,.34) 100%);
-  /* The service-template hero is a two-column split: copy left, form right.
-     Its scrim was authored inline on 32 pages in three near-identical
-     variants (.98/.93/.72, .98/.93/.74, .98/.92/.68) stacked on a second
-     .42->.84 vertical layer — combined that is effectively opaque, so the
-     photograph behind it never showed and the page read black. One token
-     now, lightened in step with the homepage: the left stays dark enough
-     for white display type, the right lets the image through. */
-  --hero-scrim-split:
-      linear-gradient(90deg, rgba(30,35,39,.92) 0%,
-                             rgba(30,35,39,.80) 48%,
-                             rgba(30,35,39,.60) 100%),
-      linear-gradient(180deg, rgba(30,35,39,.18), rgba(30,35,39,.60));
+  /* --hero-scrim-split is gone. It existed because the 32 service pages had a
+     second, different hero — a left/right split over a per-page photograph.
+     There is one hero now and it uses --hero-overlay above, like the homepage
+     always did. */
   --hero-ink:        #FFFFFF;
   --hero-lead:       rgba(255,255,255,.86);
   --hero-eyebrow:    var(--cx-accent-soft);
@@ -269,13 +261,17 @@
   .footer__grid { grid-template-columns:1fr 1fr }
   .footer__brand { grid-column:1/-1 }
 
-  /* The split scrim is a two-column device. On mobile the columns stack, so a
-     left-to-right ramp just leaves the right edge of the copy at .60 over a
-     photograph. Redefine the token flat for the stacked layout — every page
-     that consumes var(--hero-scrim-split) picks this up automatically. */
+  /* The hero scrim is tuned for the desktop layout, where the copy sits over
+     the river — dark water, so .34 at the foot of the gradient is plenty. On a
+     phone the columns stack and that same copy lands on the sky, which is the
+     brightest part of the plate: white text at .86 over it is roughly 2:1 and
+     unreadable in daylight. Even the scrim across the whole frame, and hold it
+     through the lower two thirds where the lead and the CTAs sit. Redefining
+     the token means every consumer picks it up; nothing needs to know. */
   :root {
-    --hero-scrim-split: linear-gradient(180deg, rgba(30,35,39,.74),
-                                                rgba(30,35,39,.86));
+    --hero-overlay: linear-gradient(180deg, rgba(30,35,39,.70) 0%,
+                                            rgba(30,35,39,.66) 45%,
+                                            rgba(30,35,39,.74) 100%);
   }
 }
 

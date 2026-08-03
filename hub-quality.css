@@ -10,21 +10,9 @@ body.cex-migrated-page {
    min-height statt height: der Hero-Inhalt (H1, Formular, CTAs, Kennzahlenzeile)
    misst natuerlich 685-689px und wuerde bei harten 66svh abgeschnitten. So belegt
    der Hero zwei Drittel, wo der Inhalt es zulaesst, und nie mehr als noetig. */
-body.cex-migrated-page:not(.home) .hero {
-  display: flex !important;
-  height: auto !important;
-  min-height: 66svh !important;
-  box-sizing: border-box;
-}
 
-body.cex-migrated-page:not(.home) .hero > .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  min-height: calc(66svh - 124px);
-  height: auto;
-}
+
+
 
 body.cex-migrated-page .section__head {
   max-width: 1040px;
@@ -383,10 +371,7 @@ body.cex-migrated-page .hub-result {
 @media (max-width: 820px) {
   /* Auch mobil nur zwei Drittel — sonst setzt diese Regel den Hero wieder auf
      volle Viewporthoehe und der naechste Abschnitt verschwindet unter der Falz. */
-  body.cex-migrated-page:not(.home) .hero > .container {
-    min-height: calc(66svh - 104px);
-    height: auto;
-  }
+  
 
   body.cex-migrated-page .section__head,
   body.cex-migrated-page .section__head .eyebrow,

@@ -359,17 +359,17 @@ const caseStudies = [
     challenge:
       'Fachbereiche erwarten schnelle Ergebnisse, IT muss bestehende Systeme schützen, mehrere Initiativen konkurrieren um Ressourcen und der konkrete Nutzen ist noch nicht messbar.',
     focus:
-      'CEx klärt Zielbild, Ist-IT-Architektur und Prozesslandschaft, priorisiert Maßnahmen im Backlog und plant die Umsetzung in Wellen mit Reviews und Hypercare.',
+      'CEx klärt Zielbild, Ist-IT-Architektur und Prozesslandschaft, priorisiert Maßnahmen im Backlog und plant die Umsetzung in Sprints mit Reviews und Hypercare.',
     change:
       'Aus einem großen Vorhaben wird ein steuerbares Programm mit klarer Reihenfolge, Verantwortlichen und messbaren Zwischenergebnissen.',
     stats: [
       ['Zielbild', 'entscheidbar'],
       ['Backlog', 'nach Nutzen priorisiert'],
-      ['Wellen', 'reviewfähig geplant'],
+      ['Sprints', 'reviewfähig geplant'],
     ],
-    principleTitle: 'Erst Zielbild, dann Welle',
+    principleTitle: 'Erst Zielbild, dann Sprint',
     principleCopy:
-      'Jede Welle bekommt Nutzen, Entscheidungspunkt, Verantwortliche und Übergabe. So bleibt Transformation groß genug im Ziel und klein genug in der Umsetzung.',
+      'Jeder Sprint bekommt Nutzen, Entscheidungspunkt, Verantwortliche und Übergabe. So bleibt Transformation groß genug im Ziel und klein genug in der Umsetzung.',
   },
   {
     title: 'Wenn KI-Piloten laufen, aber Nutzen, Daten, Governance und Betrieb unklar bleiben.',
