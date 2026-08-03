@@ -567,13 +567,16 @@ document.querySelectorAll('.outcomes__tab').forEach((button) => {
   const videos = Array.from(document.querySelectorAll('.cap-card__video'));
   if (!videos.length) return;
   const mayAnimate = !window.matchMedia('(prefers-reduced-motion: reduce)').matches && !navigator.connection?.saveData;
+  // Every card has a real poster, so motion- or data-sensitive visitors do
+  // not need to download decorative video files at all.
+  if (!mayAnimate) return;
   const load = function (video) {
     const source = video.querySelector('source[data-src]');
     if (!source || !source.dataset.src) return;
     source.src = source.dataset.src;
     source.removeAttribute('data-src');
     video.load();
-    if (mayAnimate) video.play().catch(function () {});
+    video.play().catch(function () {});
   };
   if (!('IntersectionObserver' in window)) {
     videos.forEach(load);

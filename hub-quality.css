@@ -72,6 +72,12 @@ body.cex-migrated-page .service-card__num {
   font-size: .75rem;
   font-weight: 800;
   letter-spacing: .08em;
+  /* Der Sperrabstand hinter der letzten Ziffer zählt zur Textbreite und schiebt
+     die Ziffern um seine Hälfte nach links. Innenabstand links in derselben
+     Höhe hebt das auf; bei fester Größe wächst der Kasten dadurch nicht.
+     padding:0 davor, damit ein Rest von rechts nicht dagegenhält. */
+  padding: 0;
+  padding-left: .08em;
 }
 
 body.cex-migrated-page .problem-card__num {

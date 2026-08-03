@@ -15,6 +15,7 @@ Die zugehörige Gestaltung steht in `cx-components.css` (FAQ) und `founders.css`
 | Baustein | Selektor | Wortlaut |
 |---|---|---|
 | FAQ | `<section id="faq"> h2` | **Diese Fragen hören wir häufiger** |
+| Praxischeck | `.cx-proof__h` | **Diese Fragen klären wir vor Projektbeginn** |
 | Wer wir sind | `.cx-trust__heading` | **Prozesse, Architektur, Change.** |
 
 ### FAQ
@@ -27,6 +28,15 @@ sich war in Ordnung, zusammen wirkten sie wie 30 verschiedene Abschnitte.
 
 Kein Punkt am Ende. Die Kicker-Zeile darüber (`.eyebrow`) darf seitenspezifisch
 bleiben.
+
+### Praxischeck
+
+Derselbe Fall wie beim FAQ. Der Kopf über dem Fragenblock lautete auf jeder Seite
+anders — "Diese Fragen klären wir, bevor Struktur, Rollen oder Zusammenarbeit
+verändert werden.", "… bevor KI Produktwissen, Service oder Engineering
+unterstützt.", "Was Kunden vor dem Start am häufigsten wissen wollen." Alle sagten
+dasselbe, keine zwei gleich. Freigegeben ist die kurze Fassung von der
+Prozessoptimierungs-Seite; sie gilt jetzt überall.
 
 ### Wer wir sind
 
@@ -47,5 +57,40 @@ Kontaktformular am Seitenende.
   Prozessoptimierung" bleibt bewusst stehen.
 - **Kein Doppelpunkt-Aufzähler** ("Praxisbeispiele: weniger Rückstand, kürzere
   Bearbeitung, weniger Handarbeit."). Die Aufzählung steht darunter.
+- **Kein Gedankenstrich-Aufzähler** ("Vier Leistungsfelder — von der zeitweisen
+  Projektleitung bis zur Projektstabilisierung."). Der Gedankenstrich klebt hier
+  zwei Überschriften aneinander. Entweder das eine oder das andere.
 - **Klartext**, verständlich für eine fünfzehnjährige Leserin. Kein Fachjargon in
-  der Überschrift.
+  der Überschrift. Konkret gestrichen: Roadmap, Audit, Go-live, Portfolio, RPA,
+  Mandat, Stabsarbeit, Folien-Beratung.
+- **Zwei Zeilen** ist das Maß. Eine Zeile wirkt wie eine Bildunterschrift, drei
+  wie ein Absatz. Bei 960 px Spaltenbreite sind das rund 50 bis 75 Zeichen — bei
+  langen Komposita eher weniger, weil ein einzelnes Wort die Zeile früh umbricht.
+  Nicht mit dem Zeichenzähler prüfen, sondern im Browser messen.
+  Ausgenommen sind die vom Kunden persönlich freigegebenen Überschriften und die
+  beiden festgelegten Bausteine oben; die stehen so, wie sie stehen.
+
+---
+
+## Abschnitts-Labels (`.eyebrow`)
+
+Die kleine Zeile über der Überschrift benennt den Abschnitt. Sie lief in drei
+Varianten auseinander: die Hub-Seiten sagten "Unsere Leistungen", ein Teil der
+Unterseiten nur "Leistungen", ein anderer "Ausgangslage" statt zu sagen, woran es
+hakt. Verbindlich ist die Hub-Fassung:
+
+| Abschnitt | Label |
+|---|---|
+| Problem | eine **"Warum …"**-Zeile, die das Problem benennt — nicht "Ausgangslage" |
+| Leistungen | Unsere Leistungen |
+| Vorgehen | Unser Vorgehen |
+| Anwendungsfälle | Konkrete Anwendungsfelder |
+| Zuschnitt / Branchen | Branchenübergreifend |
+| Abgrenzung | Was uns unterscheidet |
+| Arbeitsweise | Wie wir arbeiten |
+| FAQ | Häufig gestellte Fragen |
+| Abschluss | Nächster Schritt |
+
+Themenspezifische Labels dazwischen sind erlaubt ("Methoden im Überblick",
+"Fertigungstypen", "Leitplanken") — die gibt es auf den Hub-Seiten auch. Kein
+Label darf auf einer Seite zweimal vorkommen, und statt `&` steht "und".

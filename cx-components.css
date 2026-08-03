@@ -451,3 +451,53 @@ label:has(input[name="phone"]) .form__optional { display: none; }
   .cx-practice__q, .cx-practice__a, .cx-practice__case, .cx-practice__label { text-align:left }
   .cx-practice__by { justify-content:flex-start; margin:20px 0 26px }
 }
+
+/* ---------------------------------------------------------------------------
+   ZAHLEN-PLAKETTEN — die Ziffer sitzt mittig im Kasten
+   ---------------------------------------------------------------------------
+   1. MOBIL, der sichtbare Fehler. Weiter oben in dieser Datei (und noch einmal
+      in styles.css) werden unter 820 px alle Kicker, Marken und Nummern nach
+      links gerückt — richtig für Textmarken, falsch für die Nummern. Die
+      Nummern stehen in einem farbigen Quadrat fester Größe; `justify-content:
+      flex-start` klebt die Ziffer dort an den linken Rand. Gemessen: 14 px
+      Versatz im 46er Quadrat, 7 px im 32er und im 28er. Die Regel dort ist mit
+      !important gesetzt, also braucht die Rücknahme hier auch eines.
+
+      Der Kasten selbst bleibt linksbündig — `margin-left:0; margin-right:auto`
+      aus der Regel oben gilt weiter. Nur sein Inhalt wird wieder zentriert.
+
+   2. WAAGERECHT, überall. Bei gesperrter Schrift zählt hinter der letzten
+      Ziffer noch ein Sperrabstand zur Textbreite. Zentriert wird also eine Box,
+      die rechts breiter ist als die sichtbare Ziffernfolge — die Ziffern sitzen
+      um die halbe Sperrung zu weit links. Innenabstand links in Höhe der
+      Sperrung verschiebt den Inhalt um genau die Hälfte davon zurück und hebt
+      das auf. Bei fester Größe und box-sizing:border-box wächst der Kasten
+      dadurch nicht (geprüft: 46x46 vorher wie nachher).
+
+      Der Wert muss zur Sperrung der jeweiligen Plakette passen. Er steht
+      deshalb nicht hier, sondern jeweils direkt neben der letter-spacing-Zeile,
+      die ihn nötig macht — in cx-template.css und hub-quality.css. Nur die
+      beiden Plaketten mit seitenweit einheitlicher Sperrung stehen unten.
+
+   Senkrecht bleibt es, wie es ist: dort liegt der Rest bei rund 0,3 px und
+   wechselt je nach Schriftgröße das Vorzeichen. Das ist Rundung, kein Fehler —
+   dagegen anzurechnen würde es an anderer Stelle schlechter machen.
+--------------------------------------------------------------------------- */
+.cx-drawer__num  { padding-left: .04em }
+.link-group__num { padding-left: .08em }
+
+/* Diese beiden haben bereits Innenabstand. Der Ausgleich wird deshalb zwischen
+   links und rechts umgeschichtet, statt hinzugefügt — sonst wandert die Ziffer
+   um die vollen 10 bzw. 8 px. Umgeschichtet zählt der Ausgleich doppelt (links
+   plus, rechts minus), also je die Hälfte der Sperrung. */
+.cap-card__index   { padding-left: calc(10px + .01em); padding-right: calc(10px - .01em) }
+.outcomes__tab-num { padding-left: calc(8px  + .01em); padding-right: calc(8px  - .01em) }
+
+@media (max-width: 820px) {
+  .service-card__num,
+  .problem-card__num,
+  .method-step__num {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+}
