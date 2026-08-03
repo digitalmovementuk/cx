@@ -135,50 +135,11 @@ body.cex-migrated-page .method-step__title {
   min-height: 2.5em;
 }
 
-body.cex-migrated-page #faq .faq {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 42px;
-  border: 0;
-}
 
-body.cex-migrated-page #faq .faq__item {
-  align-self: start;
-  overflow: hidden;
-  background: var(--cx-warm-2);
-  border: 1px solid var(--line);
-  border-radius:0;
-}
 
-body.cex-migrated-page #faq .faq__item[open] {
-  border-color: rgba(30,35,39,.34);
-  box-shadow: 0 12px 30px -26px rgba(30,35,39,.55);
-}
 
-body.cex-migrated-page #faq .faq__item summary {
-  min-height: 70px;
-  padding: 18px 20px;
-  font-size: .975rem;
-}
 
-body.cex-migrated-page #faq .faq__item summary::after {
-  display: grid;
-  place-items: center;
-  width: 28px;
-  height: 28px;
-  flex: 0 0 28px;
-  border-radius:0;
-  background: var(--cx-yellow);
-  color: var(--cx-charcoal);
-  font-size: 1rem;
-}
 
-body.cex-migrated-page #faq .faq__answer {
-  padding: 0 20px 22px;
-  font-size: .91rem;
-  line-height: 1.62;
-}
 
 body.cex-migrated-page .cex-page-visual {
   overflow: hidden;
@@ -359,12 +320,16 @@ body.cex-migrated-page .hub-result {
     grid-column: span 2 !important;
   }
 
+  /* Five steps, three on top and two below. The two used to sit centred at their
+     original width, leaving a column of air at each end. They now take half the
+     row each, so the second row ends flush with the first — same rule as every
+     other card grid on the site. */
   body.cex-migrated-page .method:has(> .method-step:nth-child(5):last-child) > .method-step:nth-child(4) {
-    grid-column: 2 / span 2 !important;
+    grid-column: 1 / span 3 !important;
   }
 
   body.cex-migrated-page .method:has(> .method-step:nth-child(5):last-child) > .method-step:nth-child(5) {
-    grid-column: 4 / span 2 !important;
+    grid-column: 4 / span 3 !important;
   }
 }
 
@@ -392,13 +357,17 @@ body.cex-migrated-page .hub-result {
   body.cex-migrated-page .h-section,
   body.cex-migrated-page .hero__title,
   body.cex-migrated-page .cx-proof__h {
-    overflow-wrap: normal !important;
+    /* break-word, not normal. `normal` was added to stop mid-syllable splits, but
+       it also forbids the one break a long German compound genuinely needs, so
+       headings ran past their column at 390px. break-word breaks only when the
+       word cannot fit at all; word-break and hyphens stay off, so nothing else
+       about the wrapping changes. */
+    overflow-wrap: break-word !important;
     word-break: normal !important;
     -webkit-hyphens: none !important;
     hyphens: none !important;
   }
 
-  body.cex-migrated-page #faq .faq,
   body.cex-migrated-page .hub-result-grid {
     grid-template-columns: 1fr;
   }
@@ -407,21 +376,18 @@ body.cex-migrated-page .hub-result {
     grid-template-columns: 1fr !important;
   }
 
-  body.cex-migrated-page .method-step,
-  body.cex-migrated-page .method-step__body,
-  body.cex-migrated-page .method-step__title {
-    text-align: center;
-  }
-
+  /* Step cards read flush left on a narrow screen — see section 4 of
+     cx-components.css. Centring a four-line paragraph in a 347px column makes
+     the reader hunt for the start of every line. */
   body.cex-migrated-page .method-step__meta,
   body.cex-migrated-page .use-card__tag {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   body.cex-migrated-page .problem-card__num,
   body.cex-migrated-page .service-card__num {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .ea-architecture-map__head {
@@ -435,12 +401,11 @@ body.cex-migrated-page .hub-result {
 
   .ea-architecture-map__entry {
     min-height: 0;
-    text-align: center;
   }
 
   .ea-architecture-map__entry .ea-architecture-map__num {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .ea-architecture-map__arrow {

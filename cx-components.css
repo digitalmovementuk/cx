@@ -1,0 +1,295 @@
+/* ==========================================================================
+   cx-components.css — the components that must look the same on every page
+
+   Anything that appears on more than one page and kept drifting between the
+   homepage and the 32 service pages lives here, declared once. It loads LAST
+   on all 36 public pages, so it is the last word on these three things:
+
+     1. FAQ            — one question style, the homepage's, everywhere
+     2. Card grids     — the last row fills the width; no orphan gaps
+     3. Long words     — German compounds break instead of escaping their column
+
+   The reason the site had two of everything: styles.css only reaches the
+   homepage and the legal pages, cx-template.css only reaches the service
+   pages, so the same component was written twice and then edited once. Adding
+   a rule to either of those files fixes half the site. Add it here instead.
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. FAQ — the homepage list is the blueprint
+   --------------------------------------------------------------------------
+   Two FAQ components existed. The homepage (.faq-item / .faq-icon /
+   .faq-item__body, in styles.css) is a flat list: hairline rules, no boxes, a
+   square accent chip that turns from + to − when the answer opens. The service
+   pages (.faq__item / .faq__answer, in cx-template.css) were bordered cards in
+   two columns with a plain "+" character.
+
+   The service markup has no element for the chip, so it is drawn here on
+   summary::after — a coloured box with the two bars painted as background
+   layers. Open state drops the vertical bar and inverts, which is the same
+   plus-to-minus flip the homepage does by hiding .faq-icon__bar--v.
+   ========================================================================== */
+
+.faq {
+  /* min() so the mobile rules that force this to 100% still get their way. */
+  max-width: min(920px, 100%);
+  /* Flush left by default: service pages set their section heads left, and a
+     centred 920px list under a left-aligned heading reads as a mistake. */
+  margin: 56px 0 0;
+  display: block;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+/* The homepage centres its FAQ heading, so the list follows it. */
+#faq:has(.section__intro--center) .faq,
+#faq:has(.h-section--center) .faq { margin-inline: auto; }
+
+.faq__item {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  transition: background-color var(--dur) var(--ease-out);
+}
+.faq__item[open] { background: var(--cx-warm-2); border-color: var(--line); }
+
+.faq__item summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: clamp(24px, 2.4vw, 32px) clamp(16px, 1.6vw, 24px);
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 1.2vw, 1.1875rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.012em;
+  color: var(--acn-ink);
+  cursor: pointer;
+  transition: padding-left var(--dur) var(--ease-out);
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary:hover { padding-left: 24px; }
+
+/* The chip. 28px square, accent fill, a 12px plus drawn from two background
+   layers so no extra markup is needed. */
+.faq__item summary::after {
+  content: "";
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background-color: var(--cx-yellow);
+  background-image:
+    linear-gradient(var(--cx-charcoal), var(--cx-charcoal)),
+    linear-gradient(var(--cx-charcoal), var(--cx-charcoal));
+  background-size: 12px 1.5px, 1.5px 12px;
+  background-position: center center, center center;
+  background-repeat: no-repeat;
+  transition:
+    background-color var(--dur) var(--ease-out),
+    transform var(--dur) var(--ease-out);
+}
+/* Open: only the horizontal bar survives, so the plus reads as a minus. */
+.faq__item[open] summary::after {
+  content: "";
+  background-color: var(--cx-charcoal);
+  background-image: linear-gradient(var(--cx-yellow), var(--cx-yellow));
+  background-size: 12px 1.5px;
+  transform: rotate(180deg);
+}
+
+.faq__answer {
+  padding: 0 clamp(16px, 1.6vw, 24px) clamp(28px, 3vw, 36px);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--muted);
+  max-width: 820px;
+}
+
+
+/* ==========================================================================
+   2. Card grids — the last row fills the width
+   --------------------------------------------------------------------------
+   Five industry cards in a three-across grid left a hole where a sixth card
+   would have been. Same for five service cards, six cross-links, thirty topic
+   tiles. The rule now is: whatever is left over on the final row grows to fill
+   it, so two cards under three are each half the row, not two thirds of it.
+
+   These were all `repeat(auto-fit, minmax(Npx, 1fr))` grids, where the column
+   count changes with the viewport — so an nth-child rule can't know which item
+   starts the last row. Wrapping flex does know: give every card the same
+   flex-basis the minmax had and let flex-grow settle the remainder. Same
+   breakpoints, same card widths on full rows, and it self-corrects at every
+   width instead of at the three we happened to test.
+   ========================================================================== */
+
+.services-grid,
+.uses-grid,
+.industries,
+.cross-links,
+.topic-grid,
+.sm-grid,
+.pm-practice__grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+/* min-width:0 so a long word inside a card can't veto the shrink. */
+.services-grid > *,
+.uses-grid > *,
+.industries > *,
+.cross-links > *,
+.topic-grid > *,
+.sm-grid > *,
+.pm-practice__grid > * { min-width: 0; }
+
+/* Basis per grid = the minmax() floor it used to carry, so full rows keep the
+   card count and width they already had. */
+.services-grid   > * { flex: 1 1 280px; }
+.uses-grid       > * { flex: 1 1 280px; }
+.industries      > * { flex: 1 1 300px; }
+.cross-links     > * { flex: 1 1 220px; }
+.topic-grid      > * { flex: 1 1 240px; }
+.sm-grid         > * { flex: 1 1 290px; }
+.pm-practice__grid > * { flex: 1 1 320px; }
+
+/* Thirty topic tiles is a directory, not a feature row. Letting the last two
+   double in width would make the tail of the list shout louder than the head,
+   so they fill the row but stop at the width of two normal tiles. */
+.topic-grid > * { max-width: 100%; }
+@media (min-width: 981px) {
+  .topic-grid > * { max-width: calc(50% - 6px); }
+}
+
+
+/* ==========================================================================
+   3. Long words stay inside their column
+   --------------------------------------------------------------------------
+   "Vier Leistungsfelder — von der Standortbestimmung bis zur Übergabe in den
+   Alltag." at 52px in a 440px column: "Standortbestimmung" alone measures
+   518px, so the line ran 21px past the column and under the cards next to it.
+
+   Two fixes, because it is two problems. The heading was also simply too big
+   for the column it sits in — a container query ties .h-section to the width
+   it actually gets rather than to the viewport, so the two-column sections
+   scale down and the full-width ones are untouched. Then hyphenation as the
+   safety net for every other compound noun on a German site.
+   ========================================================================== */
+
+.section__head { container-type: inline-size; }
+
+@supports (font-size: 1cqi) {
+  .section__head > .h-section {
+    /* 8.5cqi: 37px in a 440px column, and past ~610px the 3.25rem ceiling
+       takes over — which is where the full-width headings already were. */
+    font-size: clamp(1.75rem, 8.5cqi, 3.25rem);
+  }
+}
+
+/* overflow-wrap only — no hyphens:auto. It was tried and reverted: Chrome's
+   German dictionary hyphenates at nearly every line end in a 357px card column
+   and gets the compounds wrong where it matters ("Medi-enbrüche" for
+   Medien-brüche, "ab-tippfrei" for abtipp-frei). overflow-wrap breaks a word
+   only when it genuinely cannot fit, which is the one case that was broken. */
+h1, h2, h3, h4, h5, h6,
+.h-section, .h-lead, .hero__title, .final-cta__headline,
+p, li, dt, dd, figcaption, summary, blockquote {
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+/* The mobile heading rules in cx-template.css and cx-hero.css reach for
+   `overflow-wrap: anywhere` plus `hyphens: auto`, which between them will split
+   a headline mid-syllable at any character. They were added to stop long
+   service-page H1s overflowing at 390px; break-word already does that, and only
+   when the word actually doesn't fit. Same job, no collateral. */
+@media (max-width: 820px) {
+  h1, h2, h3, h4, h5, h6,
+  .h-section, .h-lead, .cx-proof__h, .hero__title, .section__head {
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: none;
+  }
+}
+
+
+/* ==========================================================================
+   4. Mobile alignment — section heads centred, cards flush left
+   --------------------------------------------------------------------------
+   cx-template.css centres everything below 820px, cards included, so a
+   four-line paragraph in a card sat as a centred block with both edges ragged.
+   That is the hardest shape to read on a narrow screen: the eye has to hunt for
+   the start of every line.
+
+   The house rule is centred section heads and intros, left-aligned body and
+   cards, so the split is drawn at the card edge. Section heads keep their
+   centring; anything inside a card, a step or a list item goes flush left.
+   Equal specificity to the rules it replaces, and this file loads last.
+   ========================================================================== */
+
+@media (max-width: 820px) {
+  [class*="card"],
+  [class*="card"] p,
+  [class*="card"] li,
+  [class*="card"] h2,
+  [class*="card"] h3,
+  [class*="card"] h4,
+  .method-step,
+  .method-step__title,
+  .method-step__body,
+  .method-step__when,
+  .faq__item summary,
+  .faq__answer { text-align: left; }
+
+  .bv-phase,
+  .method-steps > * { text-align: left; }
+
+  /* The homepage capability cards are flex columns that centre their children,
+     so text-align alone leaves the tag and the divider floating in the middle. */
+  .cap-card__body { align-items: flex-start; text-align: left; }
+  .cap-card__tag,
+  .cap-card__list li { justify-content: flex-start; }
+
+  /* The number chips and tags at the top of a card are centred by a family of
+     `margin-inline: auto !important` rules in cx-template.css. With the text now
+     flush left, a centred chip floating above it reads as a second, competing
+     column. margin-right:auto keeps the fit-content width and pins it left.
+     Section-level .eyebrow is deliberately left out — section heads stay centred. */
+  .method-step__num,
+  .method-step__when,
+  .service-card__num,
+  .problem-card__num,
+  .diff-item__num,
+  .use-card__tag,
+  .bv-phase-num,
+  .bv-phase-range,
+  .ph-tag,
+  .svc-tag,
+  .ws-tag,
+  [class*="card"] .eyebrow,
+  [class*="card"] [class*="__eyebrow"] {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  /* Exception: on the two pages that draw the process as a vertical timeline the
+     number sits ON the axis, so it stays centred — the axis line runs through it. */
+  .process-timeline .method-step__num {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Forms. A centred label above a full-width input leaves the two out of line
+     with each other; the eye reads the field, not the label. Buttons keep their
+     own centring — centred text in a button is right. */
+  form, form p, form label,
+  .form__label, .form__consent, .form__optional, .form__hint,
+  .cx-form, .cx-form__eyebrow, .cx-form__h, .cx-form__row,
+  .cx-form__hint, .cx-form__consent { text-align: left; }
+}
