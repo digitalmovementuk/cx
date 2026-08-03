@@ -90,7 +90,7 @@ body.cex-migrated-page {
   margin-bottom: clamp(36px, 4vw, 56px);
 }
 .cex-migrated-page main figure img {
-  border-radius: 14px !important;
+  border-radius:0 !important;
 }
 .cex-migrated-page .cex-page-visual {
   width: 100%;
@@ -113,12 +113,12 @@ body.cex-migrated-page.home > main > .cex-page-visual {
 }
 body.cex-migrated-page.home > main > .cex-page-visual img {
   height: clamp(260px, 32vw, 460px);
-  border-radius: 0 !important;
+  border-radius:0 !important;
 }
 
 .cex-migrated-page :is(.btn, .cx-form__submit, .cx-hero-form button[type="submit"]) {
   min-height: 48px;
-  border-radius: 8px !important;
+  border-radius:0 !important;
   font-size: 0.9375rem;
   font-weight: 700;
 }
@@ -137,7 +137,7 @@ body.cex-migrated-page.home > main > .cex-page-visual img {
   line-height: 1.5 !important;
 }
 .cex-migrated-page :is(input, textarea, select, button, a):focus-visible {
-  outline: 3px solid #ff7a00;
+  outline: 3px solid var(--cx-accent);
   outline-offset: 3px;
 }
 .cex-migrated-page .cex-honeypot {
@@ -159,7 +159,11 @@ body.cex-migrated-page.home > main > .cex-page-visual img {
 
 /* Final accessibility overrides shared by static HTML and WordPress. */
 .cex-migrated-page .cx-form__eyebrow {
-  color: #08704f !important;
+  /* Was #08704f — a green that existed nowhere else on the site and read as a
+     success state where there is none. It was there for contrast, and the
+     accent cannot replace it: #D96800 on the light form fill is 2.7:1 and
+     fails. --muted is 7.3:1 and is already the site's secondary ink. */
+  color: var(--muted) !important;
 }
 .cex-migrated-page .cx-hero-form > label > span > a[href*="datenschutz"] {
   color: #ffffff !important;
@@ -168,7 +172,7 @@ body.cex-migrated-page.home > main > .cex-page-visual img {
   text-underline-offset: 3px;
 }
 .cex-migrated-page .cross-link__tag {
-  color: #7b3700 !important;
+  color: var(--cx-accent-3) !important;
 }
 .cex-migrated-page button.footer__cookie {
   min-height: 44px !important;
@@ -241,7 +245,7 @@ body.cex-migrated-page.home > main > .cex-page-visual img {
     max-width: 500px !important;
     margin: 0 !important;
     padding: 16px !important;
-    border-radius: 14px !important;
+    border-radius:0 !important;
   }
   body.cex-migrated-page:not(.home) .cx-hero-form :is(input:not([type="checkbox"]), textarea, button) {
     min-height: 44px !important;
@@ -306,17 +310,17 @@ body.cex-migrated-page.home > main > .cex-page-visual img {
   min-height: 48px;
   padding: 10px 16px;
   border: 1px solid rgba(255, 255, 255, 0.34);
-  border-radius: 8px;
+  border-radius:0;
 }
 .cex-migrated-page .hero__cta-group .hero__cta--primary {
-  color: #1e2327;
-  background: #ff7a00;
-  border-color: #ff7a00;
+  color: var(--cx-charcoal);
+  background: var(--cx-accent);
+  border-color: var(--cx-accent);
   font-weight: 700;
 }
 .cex-migrated-page .hero__cta-group .hero__cta--primary .hero__cta-icon {
   color: #fff;
-  background: #1e2327;
+  background: var(--cx-charcoal);
 }
 
 /* Legal/support pages use the same scale and readable body size. */
@@ -334,7 +338,7 @@ body.cex-migrated-page.home > main > .cex-page-visual img {
 .cex-migrated-page .legal-inline-button {
   min-height: 44px;
   padding: 10px 14px;
-  border-radius: 8px;
+  border-radius:0;
 }
 
 /* Static service pages do not load the homepage stylesheet. Keep the shared
@@ -362,7 +366,7 @@ body.cex-migrated-page.has-privacy-dialog {
   max-height: 90dvh;
   overflow-y: auto;
   padding: clamp(24px, 4vw, 40px);
-  background: #fff;
+  background: var(--cx-surface, var(--cx-surface));
   color: var(--cx-charcoal);
   border: 1px solid var(--line);
   box-shadow: 0 28px 80px -30px rgba(0, 0, 0, 0.72);
@@ -499,7 +503,7 @@ body.cex-migrated-page.has-privacy-dialog {
 .cex-migrated-page .privacy-consent__actions button {
   min-width: 44px;
   min-height: 44px;
-  border-radius: 8px;
+  border-radius:0;
 }
 
 @media (max-width: 920px) {
@@ -717,7 +721,7 @@ html { scroll-padding-top: calc(var(--cx-nav-h) + 16px); }
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 100;
-  background: var(--cx-warm-2);
+  background: var(--cx-surface, var(--cx-surface));
   -webkit-backdrop-filter: saturate(180%) blur(18px);
   backdrop-filter: saturate(180%) blur(18px);
   color: var(--cx-charcoal);
@@ -822,10 +826,10 @@ html { scroll-padding-top: calc(var(--cx-nav-h) + 16px); }
   font-size: 0.8125rem;
   font-weight: 600;
   white-space: nowrap;
-  background: #1e2327 !important;
-  border: 1px solid #1e2327 !important;
-  color: #faf6ec !important;
-  border-radius: 0;
+  background: var(--cx-charcoal) !important;
+  border: 1px solid var(--cx-charcoal) !important;
+  color: var(--cx-surface) !important;
+  border-radius:0;
   text-decoration: none;
   transition: background-color 280ms cubic-bezier(0.85, 0, 0, 1),
               border-color 280ms cubic-bezier(0.85, 0, 0, 1),
@@ -867,7 +871,7 @@ html { scroll-padding-top: calc(var(--cx-nav-h) + 16px); }
   font-weight: 700;
   letter-spacing: -0.005em;
   cursor: pointer;
-  border-radius: 0;
+  border-radius:0;
 }
 .cex-migrated-page .nav .cx-menu-btn:hover,
 .cex-migrated-page .nav .cx-menu-btn[aria-expanded="true"] {
@@ -928,7 +932,7 @@ body.cex-migrated-page:not(.home) .hero {
   .cex-migrated-page .nav__brand img { width: 100px !important; height: 40px !important; }
   .cex-migrated-page .nav .nav__cta-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .cex-migrated-page .nav .nav__cta { width: 44px; padding: 0; gap: 0; justify-content: center; }
-  .cex-migrated-page .nav .nav__cta .btn__icon { width: 100%; height: 100%; background: transparent; color: #faf6ec; }
+  .cex-migrated-page .nav .nav__cta .btn__icon { width: 100%; height: 100%; background: transparent; color: var(--cx-surface); }
   .cex-migrated-page .nav .nav__cta:hover .btn__icon { background: transparent; color: var(--cx-charcoal); }
   .cex-migrated-page .nav .nav__cta .btn__icon svg { width: 15px; height: 15px; }
   /* AGENTS.md: Mikro-Labels auf Mobile zentrieren */
@@ -958,3 +962,17 @@ body.cex-migrated-page:not(.home) .hero {
         @media (max-width:520px) { … } — das CTA-Label bleibt bis 520px sichtbar.
    Die Bar bleibt sonst identisch.
    ========================================================================== */
+
+/* ==========================================================================
+   CEx DESIGN SYSTEM — shared surface palette (single source of truth)
+   Loaded on every CEx page after the page's own CSS, so these win. Editing
+   the tokens here retires a colour everywhere at once; do not re-declare
+   these values in a page's own <style> block.
+   ========================================================================== */
+:root {
+
+  /* Highlight/badge wash. Was rgba(255,122,0,.12), which composited over the
+     var(--cx-warm-2) card fill to #EBDBCC — a tan that read as the retired cream even
+     though nothing in the source was cream. At .30 it reads unambiguously as
+     the brand orange on both the surface and the card fill. */
+}

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CEx — Farbstudie · 3 helle Varianten</title>
+
+<style>
+@font-face{font-family:Inter;src:url(../fonts/inter-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url(../fonts/inter-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:Inter;src:url(../fonts/inter-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:Inter;src:url(../fonts/inter-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:Inter;src:url(../fonts/inter-latin-800-normal.woff2) format("woff2");font-weight:800;font-display:swap}
+
+/* ==========================================================================
+   FARBSTUDIE — MID-FI
+   Zwei Homepage-Sektionen (Hero + Leistungen), dreimal, nur die Farbe ändert
+   sich. Struktur, Typografie und Abstände sind in allen drei identisch und
+   entsprechen dem Live-Stand. Kanten bleiben eckig (radius 0).
+   ========================================================================== */
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+     background:#111417;color:#1E2327;font-size:16px;line-height:1.625}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+
+/* --- Studien-Chrome (gehört nicht zum Design) ---------------------------- */
+.study-head{max-width:1180px;margin:0 auto;padding:56px 32px 40px;color:#fff}
+.study-tag{display:inline-block;background:#FF7A00;color:#fff;font-size:11px;font-weight:800;
+           letter-spacing:.18em;padding:6px 12px;margin-bottom:22px}
+.study-head h1{font-size:30px;line-height:1.25;margin:0 0 12px;font-weight:800;letter-spacing:-.02em}
+.study-head p{margin:0 0 8px;max-width:66ch;color:#b9bfc4;font-size:15px}
+.study-now{margin-top:26px;display:flex;gap:0;flex-wrap:wrap;align-items:center}
+.study-now b{font-size:11px;letter-spacing:.16em;color:#8d949a;margin-right:14px;font-weight:700}
+.sw{width:44px;height:26px;display:block}
+
+.variant-bar{background:#181C20;color:#fff;border-top:1px solid rgba(255,255,255,.1)}
+.variant-bar__in{max-width:1180px;margin:0 auto;padding:30px 32px 26px;
+                 display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:end}
+.variant-bar h2{margin:0 0 6px;font-size:22px;font-weight:800;letter-spacing:-.01em}
+.variant-bar .num{font-size:11px;letter-spacing:.2em;color:#FF7A00;font-weight:800;display:block;margin-bottom:8px}
+.variant-bar p{margin:0;color:#b9bfc4;font-size:14px;max-width:70ch}
+.variant-bar p+p{margin-top:5px}
+.swatches{display:flex}
+.swatches span{width:38px;height:38px;display:block;position:relative}
+.swatches span::after{content:attr(data-l);position:absolute;top:100%;left:0;margin-top:6px;
+                      font-size:9px;letter-spacing:.06em;color:#7d848a;white-space:nowrap;
+                      transform:rotate(35deg);transform-origin:0 0}
+.swatches{margin-bottom:34px}
+
+/* ==========================================================================
+   DIE ZWEI SEKTIONEN — identisch für alle drei Varianten
+   ========================================================================== */
+.mock{
+  --container:1180px;
+  --container-px:44px;
+  font-size:16px;
+  background:var(--cx-surface);
+  color:var(--cx-charcoal);
+}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 var(--container-px)}
+
+/* --- Nav ---------------------------------------------------------------- */
+.nav{background:var(--cx-surface);border-bottom:1px solid var(--line)}
+.nav__in{max-width:var(--container);margin:0 auto;padding:0 var(--container-px);height:64px;
+         display:flex;align-items:center;gap:26px}
+.logo{font-size:26px;font-weight:800;letter-spacing:-.03em;color:var(--cx-charcoal)}
+.logo i{font-style:normal;color:var(--cx-accent)}
+.nav__links{display:flex;gap:20px;font-size:14px;font-weight:600;color:var(--cx-charcoal)}
+.nav__cta{margin-left:auto;display:inline-flex;align-items:center;gap:10px;
+          background:var(--cx-charcoal);color:var(--cx-surface);font-size:13.5px;font-weight:700;
+          padding:11px 16px}
+.nav__cta i{display:block;width:20px;height:20px;background:var(--cx-accent);color:var(--cx-accent-on);
+            font-style:normal;font-size:11px;line-height:20px;text-align:center}
+.nav__menu{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);
+           padding:10px 14px;font-size:13.5px;font-weight:700}
+
+/* --- Hero --------------------------------------------------------------- */
+.hero{position:relative;min-height:560px;display:flex;align-items:center;overflow:hidden}
+.hero__bg{position:absolute;inset:0}
+.hero__bg img{width:100%;height:100%;object-fit:cover;filter:var(--hero-img-filter)}
+.hero__bg::after{content:"";position:absolute;inset:0;background:var(--hero-overlay)}
+.hero__grid{position:relative;z-index:1;max-width:var(--container);margin:0 auto;width:100%;
+            padding:64px var(--container-px);
+            display:grid;grid-template-columns:minmax(0,1.05fr) 400px;gap:52px;align-items:center}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:700;
+         letter-spacing:.22em;color:var(--hero-eyebrow);margin-bottom:22px}
+.eyebrow b{width:10px;height:10px;background:var(--cx-accent);display:block}
+.hero h1{margin:0 0 26px;font-size:clamp(38px,4.4vw,58px);line-height:1.02;font-weight:800;
+         letter-spacing:-.03em;text-transform:uppercase;color:var(--hero-ink)}
+.hero h1 .accent-row{display:flex;align-items:center;gap:16px}
+.hero h1 svg{flex:none;width:44px;height:44px;stroke:var(--cx-accent)}
+.hero__lead{display:flex;gap:18px;max-width:56ch;margin:0 0 30px}
+.hero__lead i{flex:none;width:44px;height:3px;background:var(--cx-accent);margin-top:12px;display:block}
+.hero__lead p{margin:0;font-size:17px;line-height:1.55;color:var(--hero-lead)}
+.btnrow{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:14px;font-size:15.5px;font-weight:700;padding:15px 22px}
+.btn i{font-style:normal;display:block;width:26px;height:26px;line-height:26px;text-align:center;font-size:13px}
+.btn--p{background:var(--btn-p-bg);color:var(--btn-p-fg)}
+.btn--p i{background:var(--btn-p-icon-bg);color:var(--btn-p-icon-fg)}
+.btn--s{border:1px solid var(--hero-btn-line);color:var(--hero-ink)}
+.btn--s i{background:var(--btn-s-icon-bg);color:var(--btn-s-icon-fg)}
+
+/* --- Hero-Formular ------------------------------------------------------ */
+.card-form{background:var(--form-bg);border:1px solid var(--form-line);
+           border-top:4px solid var(--cx-accent);padding:26px 26px 28px}
+.card-form__kicker{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:700;
+                   letter-spacing:.2em;color:var(--cx-charcoal);margin-bottom:12px}
+.card-form__kicker i{width:26px;height:3px;background:var(--cx-accent);display:block}
+.card-form>p{margin:0 0 18px;font-size:14px;color:var(--cx-muted);line-height:1.5}
+.fl{display:block;font-size:11px;font-weight:700;letter-spacing:.13em;margin-bottom:7px;color:var(--cx-charcoal)}
+.fl span{font-weight:500;letter-spacing:0;color:var(--cx-muted);text-transform:none}
+.fi{width:100%;border:1px solid var(--field-line);background:var(--field-bg);padding:11px 12px;
+    font:inherit;font-size:14px;color:var(--cx-charcoal);margin-bottom:14px}
+.fi::placeholder{color:var(--cx-muted)}
+textarea.fi{min-height:66px;resize:vertical}
+.consent{display:flex;gap:11px;font-size:12px;line-height:1.45;color:var(--cx-muted);margin-bottom:16px}
+.consent i{flex:none;width:17px;height:17px;border:1px solid var(--field-line);background:var(--field-bg);display:block;margin-top:1px}
+.consent a{color:var(--cx-charcoal)}
+.btn--form{width:100%;justify-content:center;background:var(--cx-charcoal);color:var(--cx-surface);
+           font-size:15px;font-weight:700;padding:15px}
+.btn--form i{background:var(--cx-accent);color:var(--cx-accent-on)}
+
+/* --- Sektion Leistungen ------------------------------------------------- */
+.section{background:var(--cx-surface-2);padding:96px 0 104px}
+.sec-eyebrow{display:flex;align-items:center;gap:14px;font-size:11.5px;font-weight:700;
+             letter-spacing:.2em;color:var(--cx-charcoal);margin-bottom:34px}
+.sec-eyebrow i{width:34px;height:3px;background:var(--cx-accent);display:block}
+.sec-eyebrow em{font-style:normal;color:var(--cx-muted)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:52px;
+          align-items:start;margin-bottom:46px}
+.sec-head h2{margin:0;font-size:clamp(30px,3.4vw,45px);line-height:1.08;font-weight:800;
+             letter-spacing:-.025em;color:var(--cx-charcoal)}
+.sec-head p{margin:6px 0 0;font-size:17.5px;line-height:1.5;color:var(--cx-muted)}
+.pillar{display:inline-flex;align-items:center;gap:14px;border-left:4px solid var(--cx-accent);
+        background:var(--pillar-bg);padding:12px 20px;margin-bottom:34px;font-size:14px}
+.pillar b{font-size:11.5px;font-weight:800;letter-spacing:.16em;color:var(--cx-accent-3)}
+.pillar em{font-style:normal;color:var(--line-strong)}
+.pillar span{font-weight:700;color:var(--cx-charcoal)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.card{background:var(--cx-warm-2);border:1px solid var(--cx-warm-4);
+      border-top:var(--card-top);display:flex;flex-direction:column}
+.card__img{position:relative;aspect-ratio:16/11;overflow:hidden}
+.card__img img{width:100%;height:100%;object-fit:cover;filter:var(--card-img-filter)}
+.card__num{position:absolute;top:0;left:0;background:var(--cx-charcoal);color:var(--cx-surface);
+           font-size:13px;font-weight:700;padding:8px 13px}
+.card__body{padding:26px 24px 30px}
+.card__kicker{display:flex;align-items:flex-start;gap:11px;font-size:10.5px;font-weight:700;
+              letter-spacing:.16em;color:var(--cx-charcoal);margin-bottom:14px;line-height:1.5}
+.card__kicker i{flex:none;width:20px;height:3px;background:var(--cx-accent);display:block;margin-top:6px}
+.card h3{margin:0 0 12px;font-size:21px;line-height:1.2;font-weight:800;letter-spacing:-.015em;color:var(--cx-charcoal)}
+.card p{margin:0;font-size:14.5px;line-height:1.6;color:var(--cx-muted)}
+
+/* --- Dunkles Band (Ablauf) — zeigt, was aus #1E2327 wird ---------------- */
+.band{background:var(--cx-band);padding:80px 0 88px;color:var(--cx-band-ink)}
+.band .sec-eyebrow{color:var(--cx-band-ink)}
+.band .sec-eyebrow i{background:var(--cx-accent-soft)}
+.band h2{margin:0 0 40px;font-size:clamp(28px,3.2vw,42px);line-height:1.1;font-weight:800;
+         letter-spacing:-.025em;color:var(--cx-band-ink);max-width:22ch}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
+.step{border-top:3px solid var(--cx-accent-soft);padding-top:18px}
+.step b{display:block;font-size:11px;letter-spacing:.2em;color:var(--cx-accent-soft);margin-bottom:10px;font-weight:800}
+.step h4{margin:0 0 8px;font-size:18px;font-weight:700;color:var(--cx-band-ink)}
+.step p{margin:0;font-size:14px;line-height:1.55;color:var(--cx-band-muted)}
+
+/* ==========================================================================
+   DIE DREI PALETTEN
+   --------------------------------------------------------------------------
+   Token-Namen sind bewusst so gewählt, dass sie sich 1:1 auf die bestehenden
+   Namen in cx-design-system.css abbilden lassen. Beim Rollout gilt:
+
+     --cx-surface    -> --cx-surface   (bleibt)
+     --cx-surface-2  -> NEU            (zweiter heller Ton für Wechsel-Sektionen,
+                                        ersetzt die Doppelrolle von --cx-warm)
+     --cx-warm-2     -> --cx-warm-2 / --cx-warm-3  (Kartenfüllung)
+     --cx-warm-4     -> --cx-warm-4    (Haarlinie)
+     --cx-band       -> NEU            (heute ist das schlicht --cx-charcoal)
+     --cx-band-ink   -> NEU
+     --cx-charcoal*  -> --cx-charcoal, -2, -3  (nur noch Text, nicht mehr Band)
+     --cx-accent*    -> --cx-yellow, -2, -3, -soft, -tint  (Namen umbenennen)
+     --cx-accent-on  -> NEU            (Textfarbe AUF der Akzentfläche)
+     --cx-muted      -> --muted
+   Die Aliase --acn-* zeigen weiterhin auf die neuen Werte, damit alte Markup-
+   Reste auflösen. Geändert wird ausschließlich zentral, nie pro Seite.
+   -------------------------------------------------------------------------- */
+
+/* Die beiden Markenfarben #1E2327 und #FF7A00 sind in allen drei Varianten
+   identisch und unverändert. Sie sind laut Markenblatt gesetzt. Heller wird
+   die Seite ausschließlich über die Neutraltöne, das Band, den Hero und die
+   MENGE an Orange. Textfarbe auf Orange ist überall #1E2327 (7,3:1) —
+   Weiß auf diesem Orange erreicht nur 2,9:1 und fällt durch. */
+
+/* --- V1 · Gallery White -------------------------------------------------- */
+.v1{
+  --cx-surface:#FFFFFF;   --cx-surface-2:#F6F8FA;
+  --cx-warm-2:#F2F5F7;    --cx-warm-4:#DFE5E9;
+  --cx-band:#E9EEF2;      --cx-band-ink:#1E2327;  --cx-band-muted:#4C565F;
+  --cx-charcoal:#1E2327;  --cx-charcoal-2:#3A424A; --cx-charcoal-3:#566068;
+  --cx-accent:#FF7A00;    --cx-accent-2:#E96F00;  --cx-accent-3:#D26400;
+  --cx-accent-soft:#E06A00; --cx-accent-on:#1E2327; --cx-accent-tint:rgba(255,122,0,.07);
+  --cx-muted:#4C565F;
+  --line:rgba(30,35,39,.10); --line-strong:rgba(30,35,39,.22);
+  --form-bg:#FFFFFF; --form-line:#DFE5E9; --field-bg:#F6F8FA; --field-line:#C9D2D8;
+  --pillar-bg:#FFFFFF;
+  --hero-overlay:linear-gradient(180deg,rgba(255,255,255,.88) 0%,rgba(255,255,255,.72) 55%,rgba(255,255,255,.60) 100%);
+  --hero-ink:#1E2327; --hero-lead:#3A424A;
+  --hero-eyebrow:#B85500; --hero-btn-line:rgba(30,35,39,.35);
+  --hero-img-filter:saturate(.5) brightness(1.15) contrast(.92);
+  /* Orange füllt hier NICHTS — Hauptbutton ist Anthrazit */
+  --btn-p-bg:#1E2327;     --btn-p-fg:#FFFFFF;
+  --btn-p-icon-bg:#FF7A00; --btn-p-icon-fg:#1E2327;
+  --btn-s-icon-bg:#1E2327; --btn-s-icon-fg:#FFFFFF;
+  --card-top:1px solid var(--cx-warm-4);
+  --card-img-filter:saturate(.85);
+}
+
+/* --- V2 · Kept Anchor ---------------------------------------------------- */
+.v2{
+  --cx-surface:#FCFBFA;   --cx-surface-2:#F5F3F1;
+  --cx-warm-2:#F3F0ED;    --cx-warm-4:#E2DDD7;
+  --cx-band:#1E2327;      --cx-band-ink:#F5F3F1;  --cx-band-muted:#AEB4B9;
+  --cx-charcoal:#1E2327;  --cx-charcoal-2:#3B4148; --cx-charcoal-3:#596066;
+  --cx-accent:#FF7A00;    --cx-accent-2:#F07300;  --cx-accent-3:#D96800;
+  --cx-accent-soft:#FF9433; --cx-accent-on:#1E2327; --cx-accent-tint:rgba(255,122,0,.08);
+  --cx-muted:#4E555C;
+  --line:rgba(30,35,39,.12); --line-strong:rgba(30,35,39,.26);
+  --form-bg:#FFFFFF; --form-line:#E2DDD7; --field-bg:#FAF8F7; --field-line:#D6D0CA;
+  --pillar-bg:#F3F0ED;
+  --hero-overlay:linear-gradient(180deg,rgba(30,35,39,.62) 0%,rgba(30,35,39,.42) 60%,rgba(30,35,39,.34) 100%);
+  --hero-ink:#FFFFFF; --hero-lead:rgba(255,255,255,.86);
+  --hero-eyebrow:#FF9433; --hero-btn-line:rgba(255,255,255,.55);
+  --hero-img-filter:brightness(1.12) saturate(.85);
+  /* Orange füllt den Hauptbutton — mit anthrazitfarbener Schrift */
+  --btn-p-bg:#FF7A00;     --btn-p-fg:#1E2327;
+  --btn-p-icon-bg:#1E2327; --btn-p-icon-fg:#FCFBFA;
+  --btn-s-icon-bg:#FF7A00; --btn-s-icon-fg:#1E2327;
+  --card-top:1px solid var(--cx-warm-4);
+  --card-img-filter:saturate(.9);
+}
+
+/* --- V3 · Signal Tint ---------------------------------------------------- */
+.v3{
+  --cx-surface:#FBFBFB;   --cx-surface-2:#F3F4F4;
+  --cx-warm-2:#F4F4F3;    --cx-warm-4:#E3E4E4;
+  --cx-band:#FFF3E8;      --cx-band-ink:#1E2327;  --cx-band-muted:#4E555C;
+  --cx-charcoal:#1E2327;  --cx-charcoal-2:#384047; --cx-charcoal-3:#545C63;
+  --cx-accent:#FF7A00;    --cx-accent-2:#EE7200;  --cx-accent-3:#D66700;
+  --cx-accent-soft:#DB6600; --cx-accent-on:#1E2327; --cx-accent-tint:rgba(255,122,0,.08);
+  --cx-muted:#4E555C;
+  --line:rgba(30,35,39,.11); --line-strong:rgba(30,35,39,.24);
+  --form-bg:#FFFFFF; --form-line:#E3E4E4; --field-bg:#F6F6F5; --field-line:#CFD2D4;
+  --pillar-bg:#F4F4F3;
+  /* Verlauf läuft nach RECHTS aus — das Foto steht rechts im Tageslicht */
+  --hero-overlay:linear-gradient(90deg,rgba(30,35,39,.82) 0%,rgba(30,35,39,.55) 45%,rgba(30,35,39,.12) 78%,rgba(30,35,39,0) 100%);
+  --hero-ink:#FFFFFF; --hero-lead:rgba(255,255,255,.88);
+  --hero-eyebrow:#FFA347; --hero-btn-line:rgba(255,255,255,.60);
+  --hero-img-filter:brightness(1.18) saturate(.8) contrast(.95);
+  --btn-p-bg:#FF7A00;     --btn-p-fg:#1E2327;
+  --btn-p-icon-bg:#1E2327; --btn-p-icon-fg:#FBFBFB;
+  --btn-s-icon-bg:#FF7A00; --btn-s-icon-fg:#1E2327;
+  /* 3px Orange als Oberkante jeder Karte */
+  --card-top:3px solid var(--cx-accent);
+  --card-img-filter:saturate(.9) brightness(1.02);
+}
+
+@media (max-width:960px){
+  .hero__grid,.sec-head{grid-template-columns:1fr;gap:34px}
+  .cards,.steps{grid-template-columns:1fr}
+  .nav__links{display:none}
+  .variant-bar__in{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="study-head">
+  <span class="study-tag">MID-FI · FARBSTUDIE</span>
+  <h1>CEx Farbpalette — drei helle Varianten</h1>
+  <p>Jede Variante zeigt dieselben drei Homepage-Bausteine: Hero mit Formular, die Leistungs-Sektion mit Karten und das Band, das heute fast schwarz ist. Struktur, Schrift und Abstände sind überall identisch — es ändert sich <strong>ausschließlich die Farbe</strong>.</p>
+  <p><strong style="color:#fff">Die beiden Markenfarben sind gesetzt.</strong> #1E2327 (das C und das E) und #FF7A00 (das X) stehen in allen drei Varianten unverändert. Heller wird die Seite deshalb nur über vier Hebel: die Neutraltöne, das Band, den Hero und die <em>Menge</em> an Orange. Genau darin unterscheiden sich die drei.</p>
+  <div class="study-now">
+    <b>GESETZT</b>
+    <span class="sw" style="background:#1E2327"></span>
+    <span class="sw" style="background:#FF7A00"></span>
+    <b style="margin-left:32px">HEUTE DAZU</b>
+    <span class="sw" style="background:#FFFEFA"></span>
+    <span class="sw" style="background:#E8E8E8"></span>
+    <span class="sw" style="background:#D5D5D5"></span>
+    <span class="sw" style="background:#FFA64D"></span>
+  </div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- VARIANTE 1                                                             -->
+<!-- ====================================================================== -->
+<section class="variant-bar">
+  <div class="variant-bar__in">
+    <div>
+      <span class="num">VARIANTE 1</span>
+      <h2>Gallery White</h2>
+      <p><strong>Wirkung:</strong> hell, kühl, museumsruhig. Das Anthrazit spricht, das Orange ist Signatur statt Ruf.</p>
+      <p><strong>Aufbau:</strong> reines Weiß und kühle Blaugrautöne. Das Band gibt seine dunkle Fläche komplett auf und wird eine helle kühlgraue Ebene mit anthrazitfarbener Schrift. Auch der Hero wird hell: das Köln-Foto liegt gewaschen unter einem weißen Verlauf, die Schlagzeile steht in Anthrazit darauf.</p>
+      <p><strong>Orange:</strong> die sparsamste Dosis der drei. Nur Linien, Marken und das X im Logo — Orange füllt hier nichts, der Hauptbutton ist anthrazit.</p>
+      <p><strong>Nachteil:</strong> ohne dunkles Band fehlt der stärkste Trenner. Wenn die Orange-Marken nicht absolut konsequent gesetzt sind, wirkt die Seite luftig bis beliebig.</p>
+    </div>
+    <div class="swatches" data-slot="v1-sw">
+      <span style="background:#FFFFFF" data-l="Fläche"></span>
+      <span style="background:#F6F8FA" data-l="Fläche 2"></span>
+      <span style="background:#F2F5F7" data-l="Karte"></span>
+      <span style="background:#E9EEF2" data-l="Band"></span>
+      <span style="background:#1E2327" data-l="Schrift ◆"></span>
+      <span style="background:#FF7A00" data-l="Akzent ◆"></span>
+    </div>
+  </div>
+</section>
+<div class="mock v1" data-tpl></div>
+
+<!-- ====================================================================== -->
+<!-- VARIANTE 2                                                             -->
+<!-- ====================================================================== -->
+<section class="variant-bar">
+  <div class="variant-bar__in">
+    <div>
+      <span class="num">VARIANTE 2</span>
+      <h2>Kept Anchor</h2>
+      <p><strong>Wirkung:</strong> warmes Tageslicht um einen bewusst gesetzten Block Nacht. Alles wird heller, außer den Momenten, in denen die Marke die Füße aufsetzt.</p>
+      <p><strong>Aufbau:</strong> warme Grautöne und ein leicht warmes Weiß — warmgrau, nicht creme, der Blaukanal bleibt hoch. Das Band behält #1E2327, ist aber das einzige Dunkle auf der Seite. Der Hero verliert rund ein Drittel seiner Schleier-Deckkraft: das Foto atmet durch, statt zugedeckt zu sein.</p>
+      <p><strong>Orange:</strong> die vollste Dosis. Orange füllt hier den Hauptbutton, immer mit anthrazitfarbener Schrift.</p>
+      <p><strong>Nachteil:</strong> die dunklen Bänder behalten auf langen Seiten echtes Gewicht. Das ist ehrlich die am wenigsten helle der drei — sie tauscht Helligkeit gegen Markenpräsenz.</p>
+    </div>
+    <div class="swatches" data-slot="v2-sw">
+      <span style="background:#FCFBFA" data-l="Fläche"></span>
+      <span style="background:#F5F3F1" data-l="Fläche 2"></span>
+      <span style="background:#F3F0ED" data-l="Karte"></span>
+      <span style="background:#1E2327" data-l="Band"></span>
+      <span style="background:#1E2327" data-l="Schrift ◆"></span>
+      <span style="background:#FF7A00" data-l="Akzent ◆"></span>
+    </div>
+  </div>
+</section>
+<div class="mock v2" data-tpl></div>
+
+<!-- ====================================================================== -->
+<!-- VARIANTE 3                                                             -->
+<!-- ====================================================================== -->
+<section class="variant-bar">
+  <div class="variant-bar__in">
+    <div>
+      <span class="num">VARIANTE 3</span>
+      <h2>Signal Tint</h2>
+      <p><strong>Wirkung:</strong> temperaturfreies Tageslichtgrau, durch das die Markenfarbe schwach hindurchatmet. Hell, aber unverkennbar CEx.</p>
+      <p><strong>Aufbau:</strong> vollkommen neutrale Grautöne, weder warm noch kühl — die einzige Farbe auf der Seite ist das Markenpaar selbst. Das Band wird zu einer hellen Fläche, die mit dem Akzent selbst getönt ist: #FF7A00 bei 8&nbsp;% über Weiß. Der Hero bekommt eine dritte Antwort: der Schleier läuft nach rechts auf null aus, das Foto steht rechts im offenen Tageslicht.</p>
+      <p><strong>Orange:</strong> mittlere Dosis. 3&nbsp;px Oberkante auf jeder Karte, genau ein gefüllter Button pro Seite, plus die Tönung des Bandes.</p>
+      <p><strong>Nachteil:</strong> auf warm kalibrierten Bildschirmen kann das getönte Band im ersten Blick als Creme durchgehen — und Creme ist auf dieser Seite ausdrücklich abgeschafft. Es hängt an den dunkleren Orange-Marken darauf, dass es sich als Markenton zu erkennen gibt.</p>
+    </div>
+    <div class="swatches" data-slot="v3-sw">
+      <span style="background:#FBFBFB" data-l="Fläche"></span>
+      <span style="background:#F3F4F4" data-l="Fläche 2"></span>
+      <span style="background:#F4F4F3" data-l="Karte"></span>
+      <span style="background:#FFF3E8" data-l="Band"></span>
+      <span style="background:#1E2327" data-l="Schrift ◆"></span>
+      <span style="background:#FF7A00" data-l="Akzent ◆"></span>
+    </div>
+  </div>
+</section>
+<div class="mock v3" data-tpl></div>
+
+<template id="tpl">
+  <!-- NAV -->
+  <div class="nav"><div class="nav__in">
+    <span class="logo">CE<i>x</i></span>
+    <nav class="nav__links"><span>Vorgehen</span><span>Vorteile</span><span>FAQ</span></nav>
+    <span class="nav__cta">Erstgespräch anfragen <i>&rarr;</i></span>
+    <span class="nav__menu">&#9776; Menü</span>
+  </div></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg"><img src="../media/cx-hero-background-calm-poster.jpg" alt=""></div>
+    <div class="hero__grid">
+      <div>
+        <div class="eyebrow"><b></b>CEX · BERATUNG</div>
+        <h1>
+          Komplexe<br>Veränderungen
+          <span class="accent-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="3.5" stroke-linecap="square"><path d="M7 4l9 8-9 8"/></svg>
+            Klare Umsetzung
+          </span>
+        </h1>
+        <div class="hero__lead"><i></i><p>CEx verbindet KI, Digitalisierung, Prozesse, Projektsteuerung, Change und Enterprise Architecture zu einem erfolgreichen Projekt.</p></div>
+        <div class="btnrow">
+          <span class="btn btn--p"><i>&rarr;</i> Erstgespräch anfragen</span>
+          <span class="btn btn--s"><i>&rarr;</i> Leistungen entdecken</span>
+        </div>
+      </div>
+
+      <div class="card-form">
+        <div class="card-form__kicker"><i></i>LASSEN SIE UNS SPRECHEN</div>
+        <p>Ein kurzer Überblick reicht. Wir melden uns werktags innerhalb von 24 Stunden.</p>
+        <label class="fl">NAME</label>
+        <div class="fi">Ihr Name</div>
+        <label class="fl">E-MAIL</label>
+        <div class="fi">Ihre E-Mail</div>
+        <label class="fl">TELEFON <span>optional</span></label>
+        <div class="fi">Ihre Telefonnummer</div>
+        <label class="fl">THEMA</label>
+        <div class="fi" style="min-height:62px">Welche Ausgangslage sollen wir einordnen?</div>
+        <div class="consent"><i></i><span>Ich habe die <a href="#">Datenschutzhinweise</a> gelesen. Meine Angaben werden nur zur Bearbeitung der Anfrage genutzt.</span></div>
+        <span class="btn btn--form">Erstgespräch anfragen <i>&rarr;</i></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEISTUNGEN -->
+  <section class="section"><div class="wrap">
+    <div class="sec-eyebrow"><i></i><em>01</em> LEISTUNGEN</div>
+    <div class="sec-head">
+      <h2>Sechs Beratungsfelder.</h2>
+      <p>Senior-Experten in allen Bereichen, die für erfolgreiche IT- und Digitalisierungsvorhaben notwendig sind.</p>
+    </div>
+    <div class="pillar"><b>SÄULE 1</b><em>|</em><span>Projekte &amp; Prozesse</span></div>
+    <div class="cards">
+      <article class="card">
+        <div class="card__img"><img src="../media/cx-img-analyse.jpg" alt=""><span class="card__num">01</span></div>
+        <div class="card__body">
+          <div class="card__kicker"><i></i>PROZESSE · BPM</div>
+          <h3>Prozesse messbar besser machen.</h3>
+          <p>Prozessoptimierung und Business Process Management: Ist-Abläufe aufnehmen, Engpässe finden, Soll-Prozesse einführen.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__img"><img src="../media/cx-img-planung.jpg" alt=""><span class="card__num">02</span></div>
+        <div class="card__body">
+          <div class="card__kicker"><i></i>PROJEKTMANAGEMENT · IT-UMSETZUNG</div>
+          <h3>Projekte führen, IT umsetzen.</h3>
+          <p>IT-Projektumsetzung, klassisches und agiles Projektmanagement, Steuerung von Programmen mit vielen Beteiligten.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card__img"><img src="../media/cx-img-strategie.jpg" alt=""><span class="card__num">03</span></div>
+        <div class="card__body">
+          <div class="card__kicker"><i></i>DIGITALISIERUNG · TRANSFORMATION</div>
+          <h3>Digitalisierung strukturiert umsetzen.</h3>
+          <p>Digitalisierungsberatung, digitale Roadmaps, Auswahl und Einführung der passenden Systeme — Schritt für Schritt.</p>
+        </div>
+      </article>
+    </div>
+  </div></section>
+
+  <!-- BAND -->
+  <section class="band"><div class="wrap">
+    <div class="sec-eyebrow"><i></i><em>02</em> VORGEHEN</div>
+    <h2>Ein klarer Ablauf für komplexe Veränderung.</h2>
+    <div class="steps">
+      <div class="step"><b>SCHRITT 01</b><h4>Analyse</h4><p>Wir sehen uns an, wie heute gearbeitet wird — und wo es hakt.</p></div>
+      <div class="step"><b>SCHRITT 02</b><h4>Zielbild</h4><p>Gemeinsam legen wir fest, wohin es gehen soll und was das bringt.</p></div>
+      <div class="step"><b>SCHRITT 03</b><h4>Planung</h4><p>Ein Plan mit Reihenfolge, Verantwortung und realistischen Terminen.</p></div>
+      <div class="step"><b>SCHRITT 04</b><h4>Umsetzung</h4><p>Wir bleiben dabei, bis es im Alltag läuft — nicht nur auf dem Papier.</p></div>
+    </div>
+  </div></section>
+</template>
+
+<script>
+(function(){
+  var tpl = document.getElementById('tpl');
+  document.querySelectorAll('[data-tpl]').forEach(function(host){
+    host.appendChild(tpl.content.cloneNode(true));
+  });
+})();
+</script>
+
+</body>
+</html>

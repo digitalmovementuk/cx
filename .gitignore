@@ -2,3 +2,7 @@ _gate-compare/
 .DS_Store
 .github/
 _audit/
+
+# Client brand originals — 22MB of unreferenced photography, kept locally only
+assets/CEx Brandings/
+*.bak-preblueprint

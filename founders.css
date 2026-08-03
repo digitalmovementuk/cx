@@ -1,7 +1,7 @@
 /* Canonical founder block — homepage is the content and visual reference. */
 .cx-trust {
-  background: #f4efe3 !important;
-  color: #1e2327 !important;
+  background: var(--cx-surface, var(--cx-surface)) !important;
+  color: var(--cx-charcoal) !important;
 }
 
 .cx-trust .cx-trust__col:first-child .eyebrow {
@@ -10,7 +10,7 @@
   gap: 14px !important;
   width: fit-content !important;
   margin: 0 0 24px !important;
-  color: #1e2327 !important;
+  color: var(--cx-charcoal) !important;
   font-size: 0.75rem !important;
   font-weight: 700 !important;
   line-height: 1.55 !important;
@@ -34,7 +34,7 @@
 .cx-trust .cx-trust__heading {
   margin: 0 !important;
   max-width: 18ch !important;
-  color: #1e2327 !important;
+  color: var(--cx-charcoal) !important;
   font-family: Inter, system-ui, sans-serif !important;
   font-size: clamp(2.25rem, 4.6vw, 4rem) !important;
   font-weight: 700 !important;
@@ -48,7 +48,7 @@
 .cx-trust .cx-trust__col:first-child > .h-lead {
   max-width: 42ch !important;
   margin: clamp(20px, 2vw, 28px) 0 0 !important;
-  color: #616160 !important;
+  color: var(--muted) !important;
   font-size: clamp(1.0625rem, 1.3vw, 1.25rem) !important;
   line-height: 1.55 !important;
   letter-spacing: -0.005em !important;
@@ -77,14 +77,14 @@
   object-fit: cover !important;
   object-position: center 18% !important;
   margin: 0 auto 10px !important;
-  border-radius: 14px !important;
+  border-radius:0 !important;
 }
 
 .cx-trust .cx-trust__founders b {
   display: block !important;
   font-size: 1.02rem !important;
   line-height: 1.25 !important;
-  color: #1e2327 !important;
+  color: var(--cx-charcoal) !important;
 }
 
 .cx-trust .cx-trust__founders span {
@@ -92,7 +92,7 @@
   margin-top: 3px !important;
   font-size: 0.84rem !important;
   line-height: 1.35 !important;
-  color: #616160 !important;
+  color: var(--muted) !important;
   opacity: 1 !important;
 }
 
@@ -110,14 +110,14 @@
 
 .cx-trust .cx-trust__creds li {
   padding: 8px 0 !important;
-  color: #3a4046 !important;
+  color: var(--cx-charcoal-2) !important;
   font-size: 0.9375rem !important;
   line-height: 1.6 !important;
 }
 
 .cx-trust .cx-trust__creds b {
   display: block !important;
-  color: #1e2327 !important;
+  color: var(--cx-charcoal) !important;
   font-weight: 800 !important;
   font-size: 1.125rem !important;
   line-height: 1.25 !important;

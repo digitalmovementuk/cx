@@ -14,7 +14,7 @@
   var ROOT = me.replace(/overview-widget\.js(\?.*)?$/, "");
 
   var CSS = `
-  :root{--ov-ink:#1E2327;--ov-acc:#FF7A00;--ov-warm:#FAF6EC;--ov-line:rgba(30,35,39,.12);--ov-mut:#5A6066}
+  :root{--ov-ink:#1E2327;--ov-acc:#FF7A00;--ov-warm:#E8E8E8;--ov-line:rgba(30,35,39,.12);--ov-mut:#5A6066}
   /* TEMP overview state: clear the centred in-page nav links so the LIVE button never overlaps */
   .nav__links{display:none!important}
   .ov-pill{position:fixed;top:10px;left:50%;transform:translateX(-50%);z-index:99998;
