@@ -76,7 +76,7 @@
 
 
 
-.method-step+.method-step{border-left:1px solid var(--line-on-dark)}
+.method-step{border-left:1px solid var(--line-on-dark)}
 .method-step::before{content:"";position:absolute;top:-3px;left:26px;width:24px;height:5px;background:var(--cx-yellow)}
 .method-step__meta{display:flex;align-items:baseline;gap:9px;margin-bottom:16px;white-space:nowrap}
 
@@ -351,7 +351,7 @@ eorder (homepage) === */
 @media(max-width:820px){
  body.cex-migrated-page .method{grid-template-columns:1fr!important;margin-top:36px;border:0!important;border-top:1px solid var(--line-on-dark)!important}
  body.cex-migrated-page .method .method-step{padding:28px 0 30px;border:0!important}
- body.cex-migrated-page .method .method-step+.method-step{border-left:0!important;border-top:1px solid var(--line-on-dark)!important}
+ body.cex-migrated-page .method .method-step{border-left:0!important;border-top:1px solid var(--line-on-dark)!important}
  body.cex-migrated-page .method-step::before{left:50%;margin-left:-12px}
  body.cex-migrated-page .method-step__meta{justify-content:flex-start;gap:9px;margin-bottom:14px}
  body.cex-migrated-page .method-step__meta .method-step__num,
@@ -441,7 +441,7 @@ body.change-management-page .method-step {
 /* Second row fills the width instead of sitting centred — see hub-quality.css. */
 body.change-management-page .method-step:nth-child(4) { grid-column:1/span 3!important; }
 body.change-management-page .method-step:nth-child(5) { grid-column:4/span 3!important; }
-body.change-management-page .method-step+.method-step { border-left:1px solid rgba(255,255,255,.14)!important; }
+body.change-management-page .method-step { border-left:1px solid rgba(255,255,255,.14)!important; }
 body.change-management-page .method-step::before { display:none!important; }
 body.change-management-page .method-step__title { min-height:0;font-size:1.02rem!important; }
 body.change-management-page .method-step__body { font-size:.9rem!important;line-height:1.62!important; }
@@ -580,7 +580,7 @@ body.change-management-page .cx-form__submit { border-radius:0;min-height:48px; 
  body.change-management-page .method-step,
  body.change-management-page .method-step:nth-child(4),
  body.change-management-page .method-step:nth-child(5) { grid-column:auto!important;min-height:0;padding:26px 22px!important; }
- body.change-management-page .method-step+.method-step { border-left:1px solid rgba(255,255,255,.14)!important; }
+ body.change-management-page .method-step { border-left:1px solid rgba(255,255,255,.14)!important; }
  body.change-management-page [data-bench-role="adaptability"] .industries,
  body.change-management-page [data-bench-role="confidence"] .diff-list,
  body.change-management-page [data-bench-role="frameworks"] .industries { grid-template-columns:1fr!important; }
