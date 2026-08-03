@@ -293,3 +293,22 @@ p, li, dt, dd, figcaption, summary, blockquote {
   .cx-form, .cx-form__eyebrow, .cx-form__h, .cx-form__row,
   .cx-form__hint, .cx-form__consent { text-align: left; }
 }
+
+
+/* ==========================================================================
+   5. Contact form — Telefon is never optional
+   --------------------------------------------------------------------------
+   Every contact form on the site carries the same four fields, and the phone
+   number is one we always want. The label used to read "Telefon optional"; the
+   marker is gone from the markup on all 33 pages and the field now carries
+   `required`, the same way E-Mail does.
+
+   This rule is the guard, not the fix: an attribute cannot be set from CSS, so
+   if a new page is built from an older template the marker is at least never
+   shown next to a telephone field. Scoped to type="tel" so a genuinely optional
+   field somewhere else can still say so.
+   ========================================================================== */
+
+.form__label:has(input[type="tel"]) .form__optional,
+.cx-form__row:has(input[type="tel"]) .form__optional,
+label:has(input[name="phone"]) .form__optional { display: none; }
