@@ -108,6 +108,27 @@ body.cex-migrated-page .method-step::before {
   display: none !important;
 }
 
+/* Schmaler Abschnittskopf neben einem Kartenraster. Bei voller Breite ist die
+   Ueberschrift 52px gross; in einer Spalte von rund 440px passt ein langes
+   deutsches Kompositum ("Standortbestimmung" = 518px bei 52px) dann nicht mehr
+   in eine Zeile, und die globale Regel overflow-wrap:anywhere trennt es mitten
+   im Wort ("Standortbestimm / ung"). Solche Koepfe bekommen diese Klasse und
+   damit eine Stufe kleinere Schrift — dieselbe Stufe, die die schmalen Koepfe
+   auf Prozessoptimierung schon verwenden. */
+body.cex-migrated-page .section__head--narrow .h-section {
+  font-size: clamp(2rem, 3vw, 2.4rem) !important;
+}
+
+/* Die orange 3px-Kante oben gehoert zur Karten-Darstellung der Phasen. In der
+   Zeitstrahl-Darstellung (.process-timeline auf Digitalisierung und KI) sind
+   die Schritte keine Karten, sondern Zeilen an einem durchgehenden orangen
+   Faden. Dort liefen zwei orange Striche gegeneinander — der senkrechte Faden
+   und ueber jedem Schritt noch eine waagerechte Kante. Der Zeitstrahl behaelt
+   nur den Faden. */
+body.cex-migrated-page .process-timeline .method-step {
+  box-shadow: none !important;
+}
+
 body.cex-migrated-page .method-step__meta {
   display: flex;
   align-items: center;
@@ -352,6 +373,18 @@ body.cex-migrated-page .hub-result {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
+  }
+
+  /* width:100% ist hier Pflicht, nicht Kosmetik. Steht ein .section__head als
+     Grid- oder Flex-Kind (z. B. in .process-services-intro), dann schalten die
+     beiden auto-Margins oben das Stretchen ab. Die Box faellt dann auf ihre
+     min-content-Breite zurueck — und weil mobil zusaetzlich
+     overflow-wrap:anywhere gilt, ist min-content die Breite EINES Buchstabens.
+     Ergebnis war eine Ueberschrift, die senkrecht Zeichen fuer Zeichen
+     untereinander stand. Mit width:100% bleibt die Box breit, die auto-Margins
+     laufen auf 0 und die Zentrierung macht ohnehin text-align. */
+  body.cex-migrated-page .section__head {
+    width: 100%;
   }
 
   body.cex-migrated-page .section__head .eyebrow {

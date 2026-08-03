@@ -469,7 +469,15 @@ eorder (homepage) === */
 .delivery-evidence{display:grid;gap:0;margin-top:40px}
 .delivery-evidence>*+*{border-top:0}
 .evidence-panel{margin:0;padding:clamp(24px,4vw,36px);background:#fff;border:1px solid var(--line)}
+/* Die Einstiegsueberschrift soll zweizeilig stehen. Mit der Standardbreite von
+   20ch bricht sie auf drei Zeilen; 30ch ergibt ab 980px zwei ausgewogene Zeilen
+   (1440px: 1038/806, 1280px: 933/724, 1100px: 801/622). Darunter greift die
+   Containerbreite, dort sind zwei Zeilen ohnehin nicht moeglich. */
+[data-bench-role="approach"] .section__head .h-section{max-width:30ch!important}
 .evidence-panel__head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);gap:32px;align-items:end;margin-bottom:26px}
+/* Ohne Begleittext gibt es nichts fuer die zweite Spalte — sonst steht die
+   Ueberschrift links und rechts daneben 250px Loch. */
+.evidence-panel__head:not(:has(p)){grid-template-columns:minmax(0,1fr)}
 .evidence-panel__head p{margin:0;font-size:.9rem;line-height:1.6;color:var(--muted)}
 .mining-flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
 .mining-step{position:relative;display:flex;min-width:0;min-height:190px;padding:18px 14px;border:1px solid var(--line);background:var(--cx-warm-2);flex-direction:column}
@@ -636,7 +644,7 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
 <link rel="preload" href="../fonts/inter-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../polish.css?v=20260715">
 <link rel="stylesheet" href="../cx-hero.css?v=20260803">
-<link rel="stylesheet" href="../hub-quality.css?v=20260801">
+<link rel="stylesheet" href="../hub-quality.css?v=20260803-headfix">
 <link rel="stylesheet" href="../cx-components.css?v=20260803" />
 <link rel="stylesheet" href="../founders.css?v=20260803-wwsind">
 </head>
@@ -813,7 +821,7 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
  <div class="container">
   <div class="section__head">
    <div class="eyebrow">Wenn gewachsene Abläufe langsam und teuer werden</div>
-   <h2 class="h-section">Über Jahre gewachsene Prozesse werden irgendwann langsam, teuer und fehleranfällig.</h2>
+   <h2 class="h-section">Gewachsene Prozesse werden irgendwann langsam, teuer und fehleranfällig.</h2>
    <p class="h-lead">Typische Ursachen sind fehlende Daten, neue Abläufe, die niemand erprobt, und unklare Zuständigkeiten im Tagesgeschäft.</p>
   </div>
   <figure class="growth-infographic" aria-labelledby="growth-map-caption">
@@ -834,7 +842,7 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
   <div class="process-services-intro">
    <div class="section__head">
     <div class="eyebrow">Unsere Leistungen</div>
-    <h2 class="h-section">Sechs Leistungsfelder<br>prägen unsere Arbeit.</h2>
+    <h2 class="h-section">Sechs Leistungsfelder der Prozessoptimierung</h2>
     <p class="h-lead">Sie reichen von der Analyse und Neugestaltung über Automatisierung und Umsetzungssteuerung bis zur Einarbeitung des internen Teams.</p>
    </div>
    <figure class="cex-page-visual"><img src="../media/page-prozessoptimierung-beratung.jpg" alt="Mitarbeiter beobachtet einen Produktionsablauf zur Prozessverbesserung" width="2000" height="1333" loading="lazy" decoding="async"></figure>
@@ -848,7 +856,7 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
  <div class="container">
  <div class="section__head">
  <div class="eyebrow eyebrow--on-dark">Unser Vorgehen</div>
- <h2 class="h-section h-section--on-dark">Fünf Phasen vom Lagebild bis zur Übergabe.</h2>
+ <h2 class="h-section h-section--on-dark">Vom Lagebild bis zur Übergabe</h2>
  <p class="h-lead h-lead--on-dark">Jede Phase liefert ein nutzbares Ergebnis. Danach entscheiden Sie, ob und wie es weitergeht.</p>
  </div>
 
@@ -861,7 +869,7 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
  <div class="container">
  <div class="section__head">
  <div class="eyebrow">Vorgehen visualisiert</div>
- <h2 class="h-section">So werden Wartezeiten sichtbar und Verbesserungen geplant.</h2>
+ <h2 class="h-section">Wartezeiten sichtbar machen und Verbesserungen umsetzen.</h2>
  <p class="h-lead">Ein Beispiel zeigt, wie wir Engpässe in einem Ablauf erkennen. Der Zeitplan darunter ordnet die fünf Projektphasen von der ersten Bestandsaufnahme bis zur Übergabe.</p>
  </div>
 
@@ -869,7 +877,6 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
   <figure class="evidence-panel" aria-labelledby="mining-example-title">
    <div class="evidence-panel__head">
     <div><span class="evidence-panel__kicker">Illustratives Process-Mining-Beispiel</span><h3 id="mining-example-title">Wartezeiten werden pro Prozessschritt sichtbar.</h3></div>
-    <p>Alle Werte nutzen dieselbe Einheit. So lässt sich sofort erkennen, an welchen Übergaben eine genauere Prüfung den größten Nutzen verspricht.</p>
    </div>
    <div class="mining-flow" aria-label="Beispielhafter Auftragsprozess mit durchschnittlicher Dauer je Schritt">
     <div class="mining-step"><span class="mining-step__num">Schritt 01</span><strong>Eingang</strong><span class="mining-step__desc">Der Vorgang wird erfasst.</span><span class="mining-step__time">0,5 Arbeitstage</span></div>
@@ -919,7 +926,7 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
  <div class="container">
   <div class="section__head">
    <div class="eyebrow">Konkrete Anwendungsfelder</div>
-   <h2 class="h-section">Sechs häufige Prozesse mit hohem Verbesserungspotenzial.</h2>
+   <h2 class="h-section">Prozesse mit großem Optimierungspotenzial</h2>
    <p class="h-lead">Besonders lohnend sind Abläufe, die täglich oder wöchentlich in hoher Zahl wiederholt werden und dabei viele manuelle Eingaben, Rückfragen oder Sonderfreigaben erfordern. Schon kleine Verbesserungen sparen dort bei jedem Vorgang Zeit und vermeiden Fehler.</p>
   </div>
 
@@ -947,11 +954,11 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
 </section>
 
 <!-- HOW WE WORK -->
-<section class="section section--paper reveal" data-bench-role="frameworks"><div class="container"><div class="section__head"><div class="eyebrow">Methoden im Überblick</div><h2 class="h-section">Methoden, die je nach Engpass sinnvoll sind.</h2></div><div class="industries"><div class="industry-card"><h3>Lean</h3><p>Ein Ansatz, der den Wert aus Kundensicht maximiert und Verschwendung im Ablauf reduziert.</p></div><div class="industry-card"><h3>Six Sigma</h3><p>Eine Methode, die datenbasiert Streuung und Fehlerquoten in Prozessen senkt.</p></div><div class="industry-card"><h3>Kaizen / KVP</h3><p>Ein Prinzip, das Prozesse in kleinen Schritten kontinuierlich verbessert.</p></div><div class="industry-card"><h3>BPMN</h3><p>Eine Notation, die Geschäftsprozesse standardisiert und lesbar modelliert.</p></div><div class="industry-card"><h3>DMAIC</h3><p>Ein Ablauf in fünf Schritten: Ziel klären, messen, untersuchen, verbessern und die Wirkung sichern.</p></div><div class="industry-card"><h3>Engpassmethode</h3><p>Ein Ansatz, der gezielt den Engpass erweitert, der das Tempo bestimmt.</p></div></div></div></section><section class="section section--dark reveal" data-bench-role="quality">
+<section class="section section--paper reveal" data-bench-role="frameworks"><div class="container"><div class="section__head"><div class="eyebrow">Methoden im Überblick</div><h2 class="h-section">Wir sind methodisch flexibel.</h2></div><div class="industries"><div class="industry-card"><h3>Lean</h3><p>Ein Ansatz, der den Wert aus Kundensicht maximiert und Verschwendung im Ablauf reduziert.</p></div><div class="industry-card"><h3>Six Sigma</h3><p>Eine Methode, die datenbasiert Streuung und Fehlerquoten in Prozessen senkt.</p></div><div class="industry-card"><h3>Kaizen / KVP</h3><p>Ein Prinzip, das Prozesse in kleinen Schritten kontinuierlich verbessert.</p></div><div class="industry-card"><h3>BPMN</h3><p>Eine Notation, die Geschäftsprozesse standardisiert und lesbar modelliert.</p></div><div class="industry-card"><h3>DMAIC</h3><p>Ein Ablauf in fünf Schritten: Ziel klären, messen, untersuchen, verbessern und die Wirkung sichern.</p></div><div class="industry-card"><h3>Engpassmethode</h3><p>Ein Ansatz, der gezielt den Engpass erweitert, der das Tempo bestimmt.</p></div></div></div></section><section class="section section--dark reveal" data-bench-role="quality">
  <div class="container">
   <div class="section__head">
    <div class="eyebrow eyebrow--on-dark">Wie wir arbeiten</div>
-   <h2 class="h-section h-section--on-dark">Drei Regeln für die gemeinsame Prozessarbeit.</h2>
+   <h2 class="h-section h-section--on-dark">Klare Planung, Umsetzung und Kommunikation.</h2>
    <p class="h-lead h-lead--on-dark">Fachbereich, IT und Leitung arbeiten auf dasselbe Ziel hin. Gemeinsame Begriffe, benannte Verantwortliche und wenige Kennzahlen halten den Fortschritt sichtbar.</p>
   </div>
   <figure class="dmaic-cycle" aria-labelledby="dmaic-cycle-title">
@@ -992,7 +999,7 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
  <div class="container">
  <div class="section__head">
  <div class="eyebrow">Häufig gestellte Fragen</div>
- <h2 class="h-section">Fragen, die in den ersten Gesprächen immer kommen.</h2>
+ <h2 class="h-section">Diese Fragen hören wir häufiger</h2>
  </div>
  <div class="faq">
  <details class="faq__item"><summary>Was kostet eine Prozessoptimierung?</summary><div class="faq__answer">Die Preisgestaltung ist <span>individuell</span> und richtet sich nach dem Umfang — etwa nach der Anzahl der Prozesse, der Datenlage und dem gewünschten Grad der Umsetzungsbegleitung. Im kostenlosen Erstgespräch nennen wir Ihnen transparent eine verlässliche Preisspanne, bevor Sie sich festlegen. Programme über mehrere Sprints werden je Sprint kalkuliert, sodass Sie nach jeder Phase neu entscheiden.</div></details>
@@ -1058,7 +1065,7 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
  <div class="container">
   <div class="practice-evidence__head">
    <div class="eyebrow">Aus der Praxis</div>
-   <h2 class="h-section" id="practice-evidence-title">Praxisbeispiele: weniger Rückstand, kürzere Bearbeitung, weniger Handarbeit.</h2>
+   <h2 class="h-section" id="practice-evidence-title">Erfolgsgeschichten – Klare Effizienzgewinne</h2>
    <p class="h-lead">Die folgenden Fälle zeigen konkret, wie Daten, eine schrittweise Umsetzung und eindeutige Zuständigkeiten einen Prozess verändern.</p>
   </div>
 
@@ -1119,7 +1126,7 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
  <div class="container">
  <div class="cx-proof__head">
  <div class="cx-proof__eyebrow">Praxischeck vor der Prozessoptimierung</div>
- <h2 class="cx-proof__h h-section" id="praxis-check">Diese Fragen klären wir, bevor Prozesse neu gezeichnet oder automatisiert werden.</h2>
+ <h2 class="cx-proof__h h-section" id="praxis-check">Diese Fragen klären wir vor Projektbeginn</h2>
  <p class="cx-proof__lead">Prozessoptimierung bringt nur dann Wirkung, wenn der größte Engpass richtig erkannt wird. Wir prüfen mit Daten, wo Arbeit wartet, doppelt läuft oder durch Behelfe ersetzt wurde.</p>
  </div>
  <div class="cx-proof__grid">

@@ -5,9 +5,13 @@
    homepage and the 32 service pages lives here, declared once. It loads LAST
    on all 36 public pages, so it is the last word on these three things:
 
-     1. FAQ            — one question style, the homepage's, everywhere
+     1. FAQ            — one question style AND one heading wording, everywhere
      2. Card grids     — the last row fills the width; no orphan gaps
      3. Long words     — German compounds break instead of escaping their column
+
+   Wording that must be identical on every page is listed in INHALTS-STANDARDS.md
+   next to this file. CSS cannot enforce a sentence, so the standard lives there
+   and is cross-referenced from the component it belongs to.
 
    The reason the site had two of everything: styles.css only reaches the
    homepage and the legal pages, cx-template.css only reaches the service
@@ -29,6 +33,19 @@
    summary::after — a coloured box with the two bars painted as background
    layers. Open state drops the vertical bar and inverts, which is the same
    plus-to-minus flip the homepage does by hiding .faq-icon__bar--v.
+
+   DIE UEBERSCHRIFT IST FESTGELEGT. Das H2 in <section id="faq"> lautet auf
+   allen 33 Seiten wortgleich:
+
+       Diese Fragen hören wir häufiger
+
+   Vorher standen dort 30 verschiedene Formulierungen ("Fragen, die in den
+   ersten Gesprächen immer kommen.", "Häufige Fragen zur …", "Fragen aus
+   Produktion, Qualität und Instandhaltung." …). Der Abschnitt ist auf jeder
+   Seite derselbe Baustein und liest sich nur dann als einer, wenn er auch
+   gleich heisst. Neue Seiten uebernehmen den Satz unveraendert — die
+   Seitenspezifik gehoert in die Fragen, nicht in die Ueberschrift.
+   Quelle: INHALTS-STANDARDS.md
    ========================================================================== */
 
 .faq {
