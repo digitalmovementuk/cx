@@ -717,10 +717,17 @@ label:has(input[name="phone"]) .form__optional { display: none; }
    steht nur da, wo die andere Seite schon eins gesetzt hat.
    ------------------------------------------------------------------------- */
 @media (max-width: 900px) {
-  body .method-step__body,
   body .cx-trust .cx-trust__col .cx-trust__creds li,
   body .cx-trust__creds li,
   body .process-sequence__note {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* .method-step__body verliert gegen body.change-management-page
+     .method-step__body (0,2,0). Das [class] hebt die eigene Gewichtung auf
+     0,2,1 — greift auf jeder Seite, ohne den Seitennamen zu kennen. */
+  body[class] .method-step__body {
     font-size: 1rem !important;
     line-height: 1.6 !important;
   }
