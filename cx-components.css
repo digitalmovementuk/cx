@@ -705,6 +705,32 @@ label:has(input[name="phone"]) .form__optional { display: none; }
 }
 
 /* -------------------------------------------------------------------------
+   Drei Bausteine haben den Boden oben ignoriert. Nachgesehen statt geraten —
+   im Browser die gewinnende Regel abgefragt, nicht im Quelltext gesucht:
+
+     .practice-scale__note   Seiten-<style>   0,75rem !important
+     .method-step__body      Seiten-<style>   0,9rem  !important
+     .cx-trust__creds li     founders.css     0,9375rem !important
+
+   Gegen ein !important hilft Gewichtung nicht; da gewinnt nur ein zweites.
+   Sonst gilt hier weiter das Gegenteil — !important ist die Ausnahme und
+   steht nur da, wo die andere Seite schon eins gesetzt hat.
+   ------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  body .method-step__body,
+  body .cx-trust .cx-trust__col .cx-trust__creds li,
+  body .cx-trust__creds li,
+  body .process-sequence__note {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  body .practice-scale__note {
+    font-size: 0.875rem !important;
+  }
+}
+
+/* -------------------------------------------------------------------------
    Kontrast. Drei Bausteine lagen unter dem Mindestwert von 4,5:1 für
    Fliesstext — gemessen im Browser, nicht geschätzt:
      .form__privacy    #8A8F94 auf Weiss = 3,26
