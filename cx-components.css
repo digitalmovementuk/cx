@@ -501,3 +501,158 @@ label:has(input[name="phone"]) .form__optional { display: none; }
     text-align: center !important;
   }
 }
+
+/* =========================================================================
+   Breadcrumb — der sichtbare Pfad zur Breadcrumb-Auszeichnung
+   -------------------------------------------------------------------------
+   Die BreadcrumbList stand seit jeher im Markup, auf der Seite war sie nicht
+   zu sehen. Google verlangt, dass die Auszeichnung abbildet, was die Seite
+   zeigt; ohne den sichtbaren Pfad ist die Auszeichnung eine Behauptung.
+   Sitzt im Hero über der Augenbraue, damit die Hero-Geometrie bleibt: der
+   Pfad ist zwei Zeilen hoch und schiebt nichts unter die Falz.
+   ========================================================================= */
+.cx-crumbs {
+  margin: 0 0 14px;
+  animation: acn-deco-fade-in 1100ms var(--acn-ease) var(--acn-delay-1) backwards;
+}
+.cx-crumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+.cx-crumbs__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+/* Das Trennzeichen gehört zur Darstellung, nicht zum Text — sonst liest ein
+   Screenreader "Startseite Schrägstrich KI-Beratung" vor. */
+.cx-crumbs__item + .cx-crumbs__item::before {
+  content: "/";
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 0.75rem;
+}
+.cx-crumbs__item a {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  padding: 2px 0;
+}
+.cx-crumbs__item a:hover,
+.cx-crumbs__item a:focus-visible {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, 0.55);
+}
+.cx-crumbs__item [aria-current="page"] {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 500;
+}
+@media (max-width: 900px) {
+  .cx-crumbs { margin-bottom: 12px; }
+  .cx-crumbs__list { justify-content: center; }
+}
+
+/* -------------------------------------------------------------------------
+   Zwei Nachbesserungen aus dem Rendercheck vom 4. August 2026.
+
+   1. Das Tippziel im Breadcrumb war 22 Pixel hoch. Die Regel für die Grösse
+      eines Tippziels nimmt Links aus, die mitten im Satz stehen — ein Pfad
+      oben auf der Seite ist keiner. Ein Pixel Polsterung oben und unten
+      bringt ihn über die Grenze, ohne die Zeile zu verschieben.
+   2. Auf dem Handy stand Fliesstext in Karten bei 13 bis 15 Pixel und der
+      Datenschutzhinweis am Formular bei 11,5. Gelesen wird das mit
+      zusammengekniffenen Augen. Untergrenze ist jetzt 16 Pixel für Fliesstext
+      und 14 für den rechtlichen Kleingedruckten.
+   ------------------------------------------------------------------------- */
+.cx-crumbs__item a,
+.cx-crumbs__item [aria-current="page"] {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+}
+
+@media (max-width: 900px) {
+  .ki-case-flow__step,
+  .cx-proof__card p,
+  .compliance-item,
+  .cx-trust__creds,
+  .cx-ig__lead,
+  .ki-funnel p,
+  .ki-foundation-card p,
+  .form__sub {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .form__privacy {
+    font-size: 0.875rem;
+    line-height: 1.55;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Untergrenze für Fliesstext auf dem Handy.
+
+   Die Karten und Blöcke setzen ihren Text seitenweise auf 0,90 bis 0,95 rem.
+   Am Schreibtisch geht das durch, auf dem Handy landet man bei 13 bis 15
+   Pixel — darunter wird gekniffen statt gelesen. Auf Bildschirmen bis 900
+   Pixel gilt deshalb 16 Pixel als Boden. Am Desktop bleibt die Typo, wie sie
+   ist; das hier greift ausschliesslich mobil.
+
+   Das "body" davor ist kein Zierrat: die Regeln stehen in <style>-Blöcken je
+   Seite und damit NACH dieser Datei. Bei gleicher Gewichtung gewinnt die
+   spätere. Ein zusätzliches Element hebt die Gewichtung gerade so an —
+   billiger als !important, das die nächste Änderung blockieren würde.
+   ------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  body #leistungen .service-card p,
+  body #vorteile.delivery-principles .delivery-principles__item p,
+  body .cx-prose ul li,
+  body .data-block p,
+  body .deep-section__block p,
+  body .deep-section__block ul,
+  body .digital-practice__principle p,
+  body .evidence-panel__head p,
+  body .h-lead,
+  body .impact-card p,
+  body .ki-case-card ul,
+  body .ki-case-flow__step p,
+  body .ki-foundation-card p,
+  body .ki-funnel p,
+  body .ki-question p,
+  body .mandate-principle p,
+  body .modifier-cases-signals.modifier-  body p,
+  body .modifier-context.container > p,
+  body .modifier-diag-appr.modifier-  body p,
+  body .pm-choice__card p,
+  body .pm-contrast__row>p,
+  body .pm-governance__layer p,
+  body .pm-visual__head p,
+  body .practice-card p,
+  body .practice-market p,
+  body .practice-scale p,
+  body .related-services__head p,
+  body .support-choice p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Nachzügler: dieselben zwei Bausteine stehen ebenfalls in Seiten-<style>-
+   Blöcken und brauchen deshalb dieselbe Gewichtungsanhebung. */
+@media (max-width: 900px) {
+  body .compliance-item,
+  body .cx-trust__creds {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}

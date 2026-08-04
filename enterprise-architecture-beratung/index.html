@@ -35,10 +35,7 @@
   ],
   "description": "EAM-Beratung für Auftragsklärung, Zielarchitektur, verständliche Dokumentation, Analyse, Planung, Umsetzung und verbindliche Prüfpunkte. CEx klärt zuerst den konkreten Auftrag und richtet danach eine Arbeitsweise ein, die Unternehmensziele, Projekte und Betrieb verbindet.",
   "provider": {
-    "@type": "Organization",
-    "name": "CEx",
-    "url": "https://cex.koeln",
-    "logo": "https://cex.koeln/media/cex-logo.png"
+    "@id": "https://cex.koeln/#organization"
   },
   "areaServed": [
     "DE",
@@ -208,10 +205,7 @@
   "name": "Hans-Helmut Scheel",
   "jobTitle": "Gründer",
   "worksFor": {
-    "@type": "Organization",
-    "name": "CEx",
-    "url": "https://cex.koeln",
-    "logo": "https://cex.koeln/media/cex-logo.png"
+    "@id": "https://cex.koeln/#organization"
   }
 }
 </script>
@@ -224,23 +218,7 @@
 </style>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "CEx",
-  "description": "Unternehmensarchitektur — von der heutigen IT-Landschaft über Zielbild und Umsetzungsplan bis zu klaren Zuständigkeiten, Schnittstellen und laufender Pflege, branchenübergreifend für Organisationen jeder Größe, DACH-weit.",
-  "areaServed": [
-    "DE",
-    "AT",
-    "CH"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Köln",
-    "addressCountry": "DE"
-  },
-  "email": "kontakt@cex.koeln",
-  "url": "https://cex.koeln",
-  "logo": "https://cex.koeln/media/cex-logo.png"
+  "@id": "https://cex.koeln/#organization"
 }
 </script>
 <script type="application/ld+json">
@@ -537,19 +515,6 @@ eorder (homepage) === */
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "speakable": {
-    "@type": "SpeakableSpecification",
-    "cssSelector": [
-      ".hero__lead",
-      ".faq"
-    ]
-  }
-}
-</script>
 <style id="grid-coherence">
 /* Card-grid coherence: a grid with EXACTLY 4 cards renders 2×2 (never 3+1 orphan / negative space). 3- and 6-card grids unaffected. */
 </style>
@@ -689,7 +654,7 @@ eorder (homepage) === */
 <link rel="stylesheet" href="../polish.css?v=20260715">
 <link rel="stylesheet" href="../cx-hero.css?v=20260803">
 <link rel="stylesheet" href="../hub-quality.css?v=20260803e">
-<link rel="stylesheet" href="../cx-components.css?v=20260803f" />
+<link rel="stylesheet" href="../cx-components.css?v=20260804a" />
 <link rel="stylesheet" href="../founders.css?v=20260803-wwsind">
 <style id="qa-h1wrap">
 /* Phasen-Label site-weit einheitlich: Zahl, Trennstrich, Stufe — auf EINER Zeile.
@@ -835,6 +800,13 @@ body.cex-migrated-page .method-step__body{margin:0;font-size:.9375rem;line-heigh
 
  <div class="hero__grid">
  <div class="hero__copy">
+<nav class="cx-crumbs" aria-label="Breadcrumb">
+ <ol class="cx-crumbs__list">
+  <li class="cx-crumbs__item"><a href="../">Startseite</a></li>
+  <li class="cx-crumbs__item"><span aria-current="page">Enterprise Architecture Beratung</span></li>
+ </ol>
+</nav>
+
  <div class="hero__eyebrow">
  <span class="hero__eyebrow-dot" aria-hidden="true"></span>
  <span>Enterprise Architecture &amp; Architecture Management</span>
