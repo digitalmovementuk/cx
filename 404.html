@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seite nicht gefunden | CEx</title>
+    <meta name="description" content="Diese Adresse gibt es auf cex.koeln nicht. Hier geht es weiter zu den sechs Beratungsfeldern und zum Kontakt." />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#1E2327" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/media/cex-favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/media/cex-favicon-16.png" />
+    <link rel="apple-touch-icon" href="/media/cex-apple-touch.png" />
+    <!-- Diese Datei wird fuer BELIEBIGE fehlende Adressen ausgeliefert, auch fuer tiefe
+         wie /a/b/c/. Relative Pfade zeigen von dort ins Leere, deshalb sind alle
+         Verweise wurzelabsolut und die Gestaltung steht hier drin statt in einer
+         eigenen Datei — so sieht die Seite aus jeder Tiefe gleich aus.
+         Auf der Vorschau (github.io/cx/) fehlt den wurzelabsoluten Pfaden das
+         Praefix /cx; das Skript am Seitenende ergaenzt es dort und nur dort. -->
+    <style>
+      :root { --ink:#1E2327; --akz:#FF7A00; --warm:#F3F0ED; --gedaempft:#4E555C; --linie:rgba(30,35,39,.14); }
+      *, *::before, *::after { box-sizing: border-box; border-radius: 0; }
+      body { margin:0; background:var(--warm); color:var(--ink);
+             font:400 17px/1.6 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+             -webkit-font-smoothing:antialiased; }
+      img { max-width:100%; height:auto; }
+      .band { background:#fff; border-bottom:1px solid var(--linie); }
+      .huelle { max-width:1136px; margin:0 auto; padding:0 24px; }
+      .kopf { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0; }
+      .knopf { display:inline-block; padding:13px 22px; background:var(--ink); color:#fff;
+               text-decoration:none; font-weight:700; font-size:15px; }
+      .knopf:hover { background:#3B4148; }
+      .knopf--akz { background:var(--akz); color:var(--ink); }
+      .knopf--akz:hover { background:#e56d00; }
+      main { padding:72px 0 88px; }
+      .augenbraue { font:800 12px/1 ui-monospace, Menlo, monospace; letter-spacing:.18em;
+                    text-transform:uppercase; color:var(--akz); margin:0 0 14px; }
+      h1 { font:800 clamp(2rem, 5vw, 3.1rem)/1.12 Inter, system-ui, sans-serif;
+           letter-spacing:-.03em; margin:0 0 18px; max-width:19ch; }
+      .vorspann { font-size:19px; color:var(--gedaempft); max-width:62ch; margin:0 0 34px; }
+      .aktionen { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:56px; }
+      h2 { font:800 15px/1 ui-monospace, Menlo, monospace; letter-spacing:.14em;
+           text-transform:uppercase; color:var(--gedaempft); margin:0 0 18px; }
+      .felder { display:flex; flex-wrap:wrap; gap:14px; list-style:none; padding:0; margin:0; }
+      .felder li { flex:1 1 300px; }
+      .felder a { display:block; height:100%; background:#fff; border:1px solid var(--linie);
+                  padding:20px 22px; text-decoration:none; color:var(--ink); font-weight:700; }
+      .felder a:hover { border-color:var(--akz); }
+      .felder small { display:block; font-weight:400; font-size:15px; color:var(--gedaempft); margin-top:6px; }
+      footer { border-top:1px solid var(--linie); padding:26px 0; font-size:14px; color:var(--gedaempft); }
+      footer a { color:var(--gedaempft); }
+      @media (max-width:620px) {
+        main { padding:48px 0 64px; }
+        .kopf { flex-direction:column; align-items:stretch; gap:12px; text-align:center; }
+        .aktionen a { flex:1 1 100%; text-align:center; }
+        .felder li { flex:1 1 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="band">
+      <div class="huelle kopf">
+        <a href="/" aria-label="CEx — zur Startseite">
+          <img src="/media/cex-logo.png" srcset="/media/cex-logo-2x.png 2x" alt="CEx" width="120" height="48" />
+        </a>
+        <nav aria-label="Hauptnavigation">
+          <a class="knopf" href="/#kontakt">Erstgespräch anfragen</a>
+        </nav>
+      </div>
+    </div>
+
+    <main>
+      <div class="huelle">
+        <p class="augenbraue">Fehler 404</p>
+        <h1>Diese Seite gibt es nicht.</h1>
+        <p class="vorspann">
+          Die Adresse stimmt nicht, oder die Seite ist umgezogen. Beides ist schnell
+          behoben: unten stehen die sechs Bereiche, in denen wir arbeiten. Wenn Sie
+          etwas Bestimmtes gesucht haben, schreiben Sie uns kurz — wir schicken Ihnen
+          den richtigen Verweis.
+        </p>
+
+        <div class="aktionen">
+          <a class="knopf knopf--akz" href="/">Zur Startseite</a>
+          <a class="knopf" href="/sitemap/">Alle Seiten ansehen</a>
+        </div>
+
+        <h2>Unsere sechs Bereiche</h2>
+        <ul class="felder">
+          <li><a href="/prozessoptimierung-beratung/">Prozessoptimierung
+            <small>Geschäftsprozesse messbar verbessern.</small></a></li>
+          <li><a href="/projektmanagement-beratung/">Projektmanagement
+            <small>IT-Projekte klar führen und liefern.</small></a></li>
+          <li><a href="/digitalisierungsberatung/">Digitalisierung
+            <small>Transformation strukturiert umsetzen.</small></a></li>
+          <li><a href="/ki-beratung/">KI-Beratung
+            <small>Anwendungsfälle, die zum Unternehmen passen.</small></a></li>
+          <li><a href="/change-management-beratung/">Change Management
+            <small>Damit Veränderung in der Organisation ankommt.</small></a></li>
+          <li><a href="/enterprise-architecture-beratung/">Enterprise Architecture
+            <small>Architektur als laufender Prozess.</small></a></li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <div class="huelle">
+        © 2026 CEx · <a href="/impressum.html">Impressum</a> ·
+        <a href="/datenschutz.html">Datenschutz</a> ·
+        <a href="mailto:kontakt@cex.koeln">kontakt@cex.koeln</a>
+      </div>
+    </footer>
+
+    <script>
+      /* Nur fuer die Vorschau: dort liegt das Projekt unter /cx/, die wurzelabsoluten
+         Verweise oben zeigen also am Projekt vorbei. Auf cex.koeln laeuft das Skript
+         nicht und die Verweise stimmen unveraendert. */
+      (function () {
+        if (location.hostname.indexOf("github.io") === -1) return;
+        var praefix = "/cx";
+        var knoten = document.querySelectorAll('a[href^="/"], link[href^="/"], img[src^="/"]');
+        for (var i = 0; i < knoten.length; i++) {
+          var el = knoten[i];
+          var attr = el.hasAttribute("href") ? "href" : "src";
+          el.setAttribute(attr, praefix + el.getAttribute(attr));
+          if (el.hasAttribute("srcset")) {
+            el.setAttribute("srcset", el.getAttribute("srcset").replace(/(^|,\s*)\//g, "$1" + praefix + "/"));
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
