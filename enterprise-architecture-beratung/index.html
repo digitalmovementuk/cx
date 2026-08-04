@@ -218,11 +218,6 @@
 </style>
 <script type="application/ld+json">
 {
-  "@id": "https://cex.koeln/#organization"
-}
-</script>
-<script type="application/ld+json">
-{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -312,30 +307,6 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Ja. Häufig geht es nicht darum, Architektur neu zu erfinden, sondern bestehende Teams, Prozesse, Rollen, Schnittstellen und Leitplanken zu schärfen und besser mit Fachbereichen, Projekten, Betrieb und IT-Strategie zu verzahnen."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Wie lange dauert ein Auftrag für Unternehmensarchitektur?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Pauschal lässt sich das nicht sagen. Wir starten deshalb immer mit einem Vorprojekt, der Scoping-Phase. Darin klären wir, wie weit die bestehende Unternehmensarchitektur ist und was das Mandat leisten soll; daraus entsteht ein Vorschlag mit Roadmap. Die Scoping-Phase dauert erfahrungsgemäß zwei bis vier Wochen und wird von ein bis zwei Beratern begleitet. Die eigentliche Mandatsdauer ergibt sich aus dem Scoping. Wichtig ist, dass in überschaubaren Abschnitten von etwa drei Monaten immer wieder belastbare Zwischenergebnisse entstehen."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Musste eine Roadmap nach dem Scoping schon einmal geändert werden?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ja, das kommt vor. In einem Mandat sollten Kosten und Nutzen sehr genau abgewogen werden. Die nötigen Analysen wurden in dieser Genauigkeit spezifiziert, einschließlich der benötigten Daten. Erst dabei zeigte sich, dass diese Daten im Unternehmen nicht in vergleichbarer Qualität und Verlässlichkeit erhoben werden konnten, zum Teil auch aus internen Interessen. Das Scoping wurde angepasst: Die Kosten-Nutzen-Abwägung blieb, nur ohne den feinen Detailgrad. Dafür konnten andere, vorher niedriger priorisierte Fragen stärker berücksichtigt werden."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Welche Ergebnisse entstehen aus einem Enterprise-Architecture-Mandat und welcher Aufwand entsteht dafür?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Das hängt von der Art des Mandats ab. Eine Standortbestimmung einer bestehenden Enterprise-Architecture-Organisation nimmt Güte, Nachvollziehbarkeit und Akzeptanz der Architekturarbeit auf und spricht Empfehlungen für die Weiterentwicklung aus; Aufwand zwei bis vier Wochen. Soll die Unternehmensarchitektur samt Architekturmanagement grundlegend umgebaut werden, ist die Beratungsleistung je nach Komplexität nach drei bis sechs Monaten abgeschlossen. Eine durchgehende Begleitung der Umsetzung oder ein Interimsmanagement erzeugt einen anderen Aufwand."
       }
     }
   ]
@@ -521,12 +492,24 @@ eorder (homepage) === */
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
   "@id": "https://cex.koeln/#organization",
+  "@type": [
+    "Organization",
+    "ProfessionalService"
+  ],
   "name": "CEx",
+  "legalName": "CEx UG (haftungsbeschränkt)",
   "url": "https://cex.koeln",
-  "email": "kontakt@cex.koeln",
-  "logo": "https://cex.koeln/media/cex-logo-512.png"
+  "logo": "https://cex.koeln/media/cex-logo-512.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Stolberger Straße 90 a",
+    "postalCode": "50825",
+    "addressLocality": "Köln",
+    "addressRegion": "Nordrhein-Westfalen",
+    "addressCountry": "DE"
+  },
+  "email": "kontakt@cex.koeln"
 }
 </script>
 <meta name="theme-color" content="#1E2327">
@@ -654,7 +637,7 @@ eorder (homepage) === */
 <link rel="stylesheet" href="../polish.css?v=20260804c">
 <link rel="stylesheet" href="../cx-hero.css?v=20260803">
 <link rel="stylesheet" href="../hub-quality.css?v=20260803e">
-<link rel="stylesheet" href="../cx-components.css?v=20260804f" />
+<link rel="stylesheet" href="../cx-components.css?v=20260804g" />
 <link rel="stylesheet" href="../founders.css?v=20260804c-wwsind">
 <style id="qa-h1wrap">
 /* Phasen-Label site-weit einheitlich: Zahl, Trennstrich, Stufe — auf EINER Zeile.
@@ -715,29 +698,6 @@ body.cex-migrated-page .method-step__body{margin:0;font-size:.9375rem;line-heigh
   "publisher": {
     "@id": "https://cex.koeln/#organization"
   }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": [
-    "Organization",
-    "ProfessionalService"
-  ],
-  "@id": "https://cex.koeln/#organization",
-  "name": "CEx",
-  "url": "https://cex.koeln",
-  "logo": "https://cex.koeln/media/cex-logo-512.png",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Stolberger Straße 90 a",
-    "postalCode": "50825",
-    "addressLocality": "Köln",
-    "addressRegion": "Nordrhein-Westfalen",
-    "addressCountry": "DE"
-  },
-  "email": "kontakt@cex.koeln",
-  "legalName": "CEx UG (haftungsbeschränkt)"
 }
 </script>
 </head>

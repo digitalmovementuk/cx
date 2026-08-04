@@ -90,14 +90,6 @@
     },
     {
       "@type": "Question",
-      "name": "Wie schnell können Sie eine Projektleitung auf Zeit stellen?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Bei einem üblichen Profil können wir kurzfristig starten; bei sehr speziellen Anforderungen dauert die Besetzung etwas länger. Wenn ein Vorhaben akut aus dem Ruder läuft, stellen wir in der Regel sehr schnell erfahrene Unterstützung bereit."
-      }
-    },
-    {
-      "@type": "Question",
       "name": "Was ist der Unterschied zwischen agil und klassisch?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -169,11 +161,6 @@
       }
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@id": "https://cex.koeln/#organization"
 }
 </script>
 <link rel="stylesheet" href="../cx-design-system.css?v=20260804b">
@@ -481,12 +468,24 @@ eorder (homepage) === */
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
   "@id": "https://cex.koeln/#organization",
+  "@type": [
+    "Organization",
+    "ProfessionalService"
+  ],
   "name": "CEx",
+  "legalName": "CEx UG (haftungsbeschränkt)",
   "url": "https://cex.koeln",
-  "email": "kontakt@cex.koeln",
-  "logo": "https://cex.koeln/media/cex-logo-512.png"
+  "logo": "https://cex.koeln/media/cex-logo-512.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Stolberger Straße 90 a",
+    "postalCode": "50825",
+    "addressLocality": "Köln",
+    "addressRegion": "Nordrhein-Westfalen",
+    "addressCountry": "DE"
+  },
+  "email": "kontakt@cex.koeln"
 }
 </script>
 <meta name="theme-color" content="#1E2327">
@@ -596,7 +595,7 @@ eorder (homepage) === */
 <link rel="stylesheet" href="../polish.css?v=20260804c">
 <link rel="stylesheet" href="../cx-hero.css?v=20260803">
 <link rel="stylesheet" href="../hub-quality.css?v=20260803e">
-<link rel="stylesheet" href="../cx-components.css?v=20260804f" />
+<link rel="stylesheet" href="../cx-components.css?v=20260804g" />
 <link rel="stylesheet" href="../founders.css?v=20260804c-wwsind">
 <script type="application/ld+json">
 {
@@ -616,29 +615,6 @@ eorder (homepage) === */
   "publisher": {
     "@id": "https://cex.koeln/#organization"
   }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": [
-    "Organization",
-    "ProfessionalService"
-  ],
-  "@id": "https://cex.koeln/#organization",
-  "name": "CEx",
-  "url": "https://cex.koeln",
-  "logo": "https://cex.koeln/media/cex-logo-512.png",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Stolberger Straße 90 a",
-    "postalCode": "50825",
-    "addressLocality": "Köln",
-    "addressRegion": "Nordrhein-Westfalen",
-    "addressCountry": "DE"
-  },
-  "email": "kontakt@cex.koeln",
-  "legalName": "CEx UG (haftungsbeschränkt)"
 }
 </script>
 </head>

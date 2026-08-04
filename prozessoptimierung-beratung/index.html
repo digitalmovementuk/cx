@@ -165,11 +165,6 @@
 </script>
 <script type="application/ld+json">
 {
-  "@id": "https://cex.koeln/#organization"
-}
-</script>
-<script type="application/ld+json">
-{
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Johannes Reusch",
@@ -633,12 +628,24 @@ eorder (homepage) === */
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
   "@id": "https://cex.koeln/#organization",
+  "@type": [
+    "Organization",
+    "ProfessionalService"
+  ],
   "name": "CEx",
+  "legalName": "CEx UG (haftungsbeschränkt)",
   "url": "https://cex.koeln",
-  "email": "kontakt@cex.koeln",
-  "logo": "https://cex.koeln/media/cex-logo-512.png"
+  "logo": "https://cex.koeln/media/cex-logo-512.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Stolberger Straße 90 a",
+    "postalCode": "50825",
+    "addressLocality": "Köln",
+    "addressRegion": "Nordrhein-Westfalen",
+    "addressCountry": "DE"
+  },
+  "email": "kontakt@cex.koeln"
 }
 </script>
 <style id="cex-process-feedback-full">
@@ -840,7 +847,7 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
 <link rel="stylesheet" href="../polish.css?v=20260804c">
 <link rel="stylesheet" href="../cx-hero.css?v=20260803">
 <link rel="stylesheet" href="../hub-quality.css?v=20260803e">
-<link rel="stylesheet" href="../cx-components.css?v=20260804f" />
+<link rel="stylesheet" href="../cx-components.css?v=20260804g" />
 <link rel="stylesheet" href="../founders.css?v=20260804c-wwsind">
 <script type="application/ld+json">
 {
@@ -860,29 +867,6 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
   "publisher": {
     "@id": "https://cex.koeln/#organization"
   }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": [
-    "Organization",
-    "ProfessionalService"
-  ],
-  "@id": "https://cex.koeln/#organization",
-  "name": "CEx",
-  "url": "https://cex.koeln",
-  "logo": "https://cex.koeln/media/cex-logo-512.png",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Stolberger Straße 90 a",
-    "postalCode": "50825",
-    "addressLocality": "Köln",
-    "addressRegion": "Nordrhein-Westfalen",
-    "addressCountry": "DE"
-  },
-  "email": "kontakt@cex.koeln",
-  "legalName": "CEx UG (haftungsbeschränkt)"
 }
 </script>
 </head>

@@ -38,11 +38,6 @@
  <script defer src="./script.js?v=20260803-service-media"></script>
  <script type="application/ld+json">
 {
-  "@id": "https://cex.koeln/#organization"
-}
-</script>
- <script type="application/ld+json">
-{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -314,11 +309,6 @@
 </style>
 <script type="application/ld+json">
 {
-  "@id": "https://cex.koeln/#organization"
-}
-</script>
-<script type="application/ld+json">
-{
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Hans-Helmut Scheel",
@@ -331,12 +321,24 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
   "@id": "https://cex.koeln/#organization",
+  "@type": [
+    "Organization",
+    "ProfessionalService"
+  ],
   "name": "CEx",
+  "legalName": "CEx UG (haftungsbeschränkt)",
   "url": "https://cex.koeln",
-  "email": "kontakt@cex.koeln",
-  "logo": "https://cex.koeln/media/cex-logo-512.png"
+  "logo": "https://cex.koeln/media/cex-logo-512.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Stolberger Straße 90 a",
+    "postalCode": "50825",
+    "addressLocality": "Köln",
+    "addressRegion": "Nordrhein-Westfalen",
+    "addressCountry": "DE"
+  },
+  "email": "kontakt@cex.koeln"
 }
 </script>
 <meta name="twitter:image:alt" content="Kölner Dom und Hohenzollernbrücke, darüber der Satz Komplexe Veränderungen, klare Umsetzung">
@@ -344,7 +346,7 @@
 <link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="polish.css?v=20260804c">
 <link rel="stylesheet" href="cx-hero.css?v=20260803">
-<link rel="stylesheet" href="cx-components.css?v=20260804f" />
+<link rel="stylesheet" href="cx-components.css?v=20260804g" />
 <link rel="stylesheet" href="founders.css?v=20260804c-wwsind">
 <script type="application/ld+json">
 {
@@ -364,29 +366,6 @@
   "publisher": {
     "@id": "https://cex.koeln/#organization"
   }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": [
-    "Organization",
-    "ProfessionalService"
-  ],
-  "@id": "https://cex.koeln/#organization",
-  "name": "CEx",
-  "url": "https://cex.koeln",
-  "logo": "https://cex.koeln/media/cex-logo-512.png",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Stolberger Straße 90 a",
-    "postalCode": "50825",
-    "addressLocality": "Köln",
-    "addressRegion": "Nordrhein-Westfalen",
-    "addressCountry": "DE"
-  },
-  "email": "kontakt@cex.koeln",
-  "legalName": "CEx UG (haftungsbeschränkt)"
 }
 </script>
 </head>

@@ -658,6 +658,53 @@ label:has(input[name="phone"]) .form__optional { display: none; }
 }
 
 /* -------------------------------------------------------------------------
+   Nachtrag zur Untergrenze — zwei Lücken, im Browser bei 390 Pixel gemessen,
+   nicht im Quelltext gesucht.
+
+   1. Die beiden Regeln oben treffen den BEHÄLTER. Der kleine Text sitzt aber
+      im Kind: .compliance-item hat ein <p> darin, .cx-trust__creds ein <li>.
+      Das Kind bringt seine eigene, kleinere Grösse mit und war deshalb
+      unverändert bei 15 Pixel — auf 39 beziehungsweise 66 Fundstellen.
+      Wer den Behälter setzt, hat das Kind noch nicht gesetzt.
+
+   2. Vierzehn weitere Bausteine standen nie auf der Liste. Am deutlichsten
+      die Zeile mit den Ansprechpartnern und die Fussnote unter den
+      Projektzahlen: beide bei 12 Pixel.
+
+   Zwei Böden, weil zwei Sorten Text: ganze Sätze werden gelesen und bekommen
+   16 Pixel. Bildunterschriften und Kennzahlen-Etiketten werden überflogen und
+   bekommen 14. Nach oben wird nichts angefasst — was schon grösser ist,
+   bleibt grösser.
+   ------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  body .compliance-item p,
+  body .cx-trust__creds li,
+  body .cap-card__copy,
+  body .cap-card__list li,
+  body .journey-step__copy,
+  body .journey__figure-copy,
+  body .benefit__copy,
+  body .outcomes__principle-copy,
+  body .faq-followup__copy,
+  body .dmaic-cycle__outcome,
+  body .method-step__body,
+  body .final-cta__reassurance,
+  body .support-choice__note,
+  body .practice-case__note,
+  body .process-sequence__note {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  body .faq-followup__byline,
+  body .practice-scale__note,
+  body .cx-practice__fact {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+/* -------------------------------------------------------------------------
    Kontrast. Drei Bausteine lagen unter dem Mindestwert von 4,5:1 für
    Fliesstext — gemessen im Browser, nicht geschätzt:
      .form__privacy    #8A8F94 auf Weiss = 3,26
