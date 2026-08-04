@@ -16,14 +16,21 @@
  content="KI, Digitalisierung, Prozesse, Projekte, Change und Enterprise Architecture aus einer klaren Umsetzungslogik."
  />
  <meta property="og:url" content="https://cex.koeln/" />
- <meta property="og:image" content="https://cex.koeln/media/page-home.jpg">
- <meta property="og:image:width" content="1600">
- <meta property="og:image:height" content="2400">
- <meta property="og:image:alt" content="Moderne Büroarchitektur in Köln als Standortbezug von CEx">
+ <!-- Share cards. Built from the hero film by scripts/render-share-cards.sh, so
+      the preview and the page a click later are the same picture. The old card
+      was media/page-home.jpg at 1600x2400 — a portrait plate handed to a 1.91:1
+      slot, which every platform cropped to a vertical sliver of a wall.
+      The host is the Pages preview because cex.koeln does not resolve yet; at
+      go-live these three URLs move to https://cex.koeln/ with the noindex. -->
+ <meta property="og:image" content="https://digitalmovementuk.github.io/cx/media/cex-og-1200x630.jpg">
+ <meta property="og:image:type" content="image/jpeg">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:image:alt" content="Kölner Dom und Hohenzollernbrücke, darüber der Satz Komplexe Veränderungen, klare Umsetzung">
  <meta name="twitter:card" content="summary_large_image" />
  <meta name="twitter:title" content="CEx | Beratung für Prozesse, Projekte, Digitalisierung, KI" />
  <meta name="twitter:description" content="CEx bringt Prozesse, Projekte, Digitalisierung, Change, KI und Architektur in eine klare Umsetzungslogik." />
- <meta name="twitter:image" content="https://cex.koeln/media/page-home.jpg">
+ <meta name="twitter:image" content="https://digitalmovementuk.github.io/cx/media/cex-og-1200x630.jpg">
  <meta name="referrer" content="strict-origin-when-cross-origin" />
  <link rel="canonical" href="https://cex.koeln/" />
  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="icon" type="image/png" sizes="32x32" href="media/cex-favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="media/cex-favicon-16.png"><link rel="apple-touch-icon" href="media/cex-apple-touch.png">
@@ -59,6 +66,10 @@
   ],
   "url": "https://cex.koeln",
   "logo": "https://cex.koeln/media/cex-logo.png",
+  "image": [
+    "https://digitalmovementuk.github.io/cx/media/cex-thumbnail-1200x1200.jpg",
+    "https://digitalmovementuk.github.io/cx/media/cex-og-1200x630.jpg"
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Stolberger Straße 90 a",
@@ -388,7 +399,7 @@
   "logo": "https://cex.koeln/media/cex-logo.png"
 }
 </script>
-<meta name="twitter:image:alt" content="Moderne Büroarchitektur in Köln als Standortbezug von CEx">
+<meta name="twitter:image:alt" content="Kölner Dom und Hohenzollernbrücke, darüber der Satz Komplexe Veränderungen, klare Umsetzung">
 <meta name="robots" content="noindex, follow">
 <link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="polish.css?v=20260715">
