@@ -167,7 +167,11 @@ body.cex-migrated-page.home > main > .cex-page-visual img {
 }
 
 .cex-migrated-page .cross-link__tag {
-  color: var(--cx-accent-3) !important;
+  /* War var(--cx-accent-3), also #D96800. Auf der Kartenfüllung #F3F0ED sind
+     das 3,12:1 bei 11 Pixel Schriftgrösse — unter dem Mindestwert von 4,5:1
+     für Fliesstext. Dieselbe Farbfamilie, nur so weit abgedunkelt, dass sie
+     die Grenze nimmt. Das Orange auf Flächen und Rahmen bleibt unberührt. */
+  color: #7d3a00 !important;
 }
 .cex-migrated-page button.footer__cookie {
   min-height: 44px !important;

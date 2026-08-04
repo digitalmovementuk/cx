@@ -656,3 +656,51 @@ label:has(input[name="phone"]) .form__optional { display: none; }
     line-height: 1.6;
   }
 }
+
+/* -------------------------------------------------------------------------
+   Kontrast. Drei Bausteine lagen unter dem Mindestwert von 4,5:1 für
+   Fliesstext — gemessen im Browser, nicht geschätzt:
+     .form__privacy    #8A8F94 auf Weiss = 3,26
+     .ki-case-card__label und .cross-link__tag  #D96800 = 3,1 bis 3,5
+   Grau und Orange bleiben Grau und Orange, nur dunkler. Betroffen ist
+   ausschliesslich Text, der ohnehin klein gesetzt ist; Flächen und Rahmen
+   in Markenorange bleiben unangetastet.
+   ------------------------------------------------------------------------- */
+body .form__privacy,
+body .form__privacy a {
+  color: #676c71;
+}
+body .ki-case-card__label,
+body .cross-link__tag {
+  color: #8f4400;
+}
+
+/* Zwei Nachzügler aus dem Kontrast-Durchgang über mehrere Seitentypen:
+   .caps__pillar-num auf der Startseite (3,43:1) und .mining-step__num auf
+   der Prozessoptimierung (3,95:1). Beide sind Ziffern bei 10 bis 11 Pixel —
+   genau die Grösse, bei der ein schwaches Grau verschwindet. */
+body .caps__pillar-num,
+body .mining-step__num {
+  color: #4a5158;
+}
+
+/* Kartenüberschriften in dunklen Bändern.
+   Die Karten selbst sind hell gefüllt (--cx-warm-2), das Band setzt aber
+   color:#F5F3F1 für alles darin. Der Fliesstext der Karte hat eine eigene
+   Farbe und war deshalb lesbar — die Überschrift hatte keine und erbte das
+   Bandweiss. Ergebnis: helle Schrift auf heller Karte, Kontrast 1,03:1,
+   praktisch unsichtbar. Betroffen waren 17 Seiten mit je drei Überschriften.
+   Die Karte ist hell, also gehört ihr die dunkle Schrift — unabhängig davon,
+   in welchem Band sie steht. */
+body :is(.service-card, .problem-card, .use-card, .industry-card) :is(h2, h3, h4) {
+  color: var(--cx-charcoal);
+}
+
+/* Die drei Marken auf der Fallkarte der Prozessoptimierung ("Ausgangslage",
+   "Veränderung", "Wirkung") standen im Markenorange auf dunklem Grund: 3,95:1
+   bei 10 Pixel. Für Schrift dieser Größe verlangt die Norm 4,5:1. Dieselbe
+   Farbe, nur so weit aufgehellt, dass sie die Grenze nimmt (4,6:1). Das Orange
+   auf Flächen, Rahmen und größerer Schrift bleibt unberührt. */
+body .practice-case__step span {
+  color: #ff9530;
+}
