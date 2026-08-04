@@ -1,4 +1,14 @@
 User-agent: *
 Allow: /
 
+# Interne Arbeitsseiten und die Daten der Fortschrittsanzeige. Sie tragen
+# unsere Produktionsplanung: Suchvolumen, Schwierigkeit je Begriff und eine
+# Hochrechnung der Anfragen. Sie gehoeren nicht in den Suchindex. Beim
+# Livegang sollten diese fuenf Eintraege gar nicht erst hochgeladen werden.
+Disallow: /lead-chancen/
+Disallow: /produktions-prioritaet/
+Disallow: /produktions-sitemap/
+Disallow: /project-plan/
+Disallow: /overview-data.json
+
 Sitemap: https://cex.koeln/sitemap.xml
