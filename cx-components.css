@@ -810,3 +810,30 @@ body .privacy-consent__secondary:hover {
   border-color: var(--cx-charcoal) !important;
   color: #fff !important;
 }
+
+/* Honigfalle fuer Kontaktformulare: unsichtbar fuer Menschen, fuer
+   Screenreader nicht erreichbar (aria-hidden im HTML), aber technisch
+   vorhanden fuer Bots. Gilt sitesweit, weil dieses Blatt auf jeder Seite
+   mit Formular zuletzt laedt (siehe Kopfkommentar dieser Datei). */
+.form__trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+
+/* --- Handy: der Hero traegt nicht das ganze Formular ----------------------
+   Gemessen am 2026-08-04 bei 390x844 Pixeln: der Hero war 1553 Pixel hoch,
+   also 184 Prozent der Bildschirmhoehe — davon 888 Pixel allein das
+   Formular. Wer die Seite auf dem Handy oeffnet, scrollt zwei volle
+   Bildschirme, bevor der erste Inhalt kommt. Die Regel verlangt rund zwei
+   Drittel der Bildschirmhoehe und niemals mehr als eine ganze.
+   Auf dem Handy gibt es ohnehin keine zwei Spalten. Der Hero zeigt dort
+   Text und Handlungsaufruf; das Formular am Seitenende bleibt unveraendert
+   stehen und traegt die Sprungmarke, auf die der Knopf zeigt. */
+@media (max-width: 900px) {
+  body .hero .hero__form-wrap { display: none; }
+  body .hero { min-height: 62vh; }
+}

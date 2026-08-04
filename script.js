@@ -242,38 +242,117 @@ document.addEventListener('click', (event) => {
   }
 });
 
-// GitHub Pages cannot run the WordPress REST endpoint. On the static preview,
-// open a pre-filled email in the visitor's mail program; WordPress binds the
-// same visual forms to its private REST/API storage instead.
+// Die Formulare gehen an den echten Lead-Endpunkt der Digital Movement UK.
+// Der Endpunkt erwartet JSON im Rumpf mit dem Header
+// Content-Type: text/plain;charset=utf-8, damit die Anfrage eine einfache
+// CORS-Anfrage bleibt und keine Vorabfrage (Preflight) ausloest.
 if (isStaticCExSite) {
+  const LEADS_ENDPOINT = 'https://leads.digitalmovement.uk/';
+
   document.querySelectorAll('form[data-cex-static-contact]').forEach((form) => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
+
       const status = form.querySelector('.cex-form-status');
-      const honeypot = form.querySelector('[name="website"]');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const honeypot = form.querySelector('[name="company_website"]');
+
+      // Honigfalle: ein Mensch fuellt dieses Feld nie aus. Ist es trotzdem
+      // gefuellt, wird nichts gesendet, aber so getan, als hätte es geklappt.
       if (honeypot?.value) {
         if (status) status.textContent = 'Vielen Dank. Ihre Anfrage wurde vorbereitet.';
         return;
       }
+
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
 
-      const labels = {
-        name: 'Name', email: 'E-Mail', phone: 'Telefon', company: 'Unternehmen',
-        unternehmen: 'Unternehmen', subject: 'Thema', message: 'Nachricht',
-        nachricht: 'Nachricht', service: 'Leistung', challenge: 'Anliegen'
+      // Doppeltes Absenden verhindern, auch wenn der Absendeknopf per
+      // Enter-Taste statt per Klick ausgeloest wird.
+      if (form.dataset.sending === 'true') {
+        return;
+      }
+      form.dataset.sending = 'true';
+      if (submitBtn) submitBtn.disabled = true;
+      if (status) status.textContent = 'Ihre Anfrage wird gesendet …';
+
+      const data = new FormData(form);
+      const field = (key) => (data.get(key) ?? '').toString().trim();
+
+      // Der Endpunkt kennt genau ein Freitextfeld, und es heisst `message`.
+      // Die beiden Formularfassungen nennen ihres `situation` bzw.
+      // `anliegen`; fuer den Firmennamen gibt es dort gar kein Feld. Beides
+      // wird deshalb hier zusammengefuehrt, statt unter einem Namen zu
+      // reisen, den der Endpunkt nie liest.
+      const teile = [];
+      const firma = field('unternehmen');
+      if (firma) teile.push('Unternehmen: ' + firma);
+      const freitext = field('situation') || field('anliegen');
+      if (freitext) teile.push(freitext);
+
+      // Die Zeile neben dem Ankreuzfeld ist der Wortlaut, dem zugestimmt
+      // wurde. Der Endpunkt schreibt sie als Nachweis in die E-Mail.
+      const consentFeld = form.querySelector('[name="consent"]');
+      const consentLabel = consentFeld ? consentFeld.closest('label') : null;
+
+      const payload = {
+        name: field('name'),
+        email: field('email'),
+        phone: field('phone'),
+        company_website: field('company_website'),
+        consent: consentFeld?.checked === true,
+        message: teile.join('\n\n'),
+        // Macht die Betreffzeile der Benachrichtigung brauchbar: man sieht,
+        // von welcher Seite die Anfrage kam, ohne sie zu oeffnen.
+        service: document.title.replace(/^CEx\s*[|\u00b7-]\s*/, '').trim().slice(0, 120),
+        page_url: location.href,
+        form_id: form.id || 'kontakt',
+        form_location: form.closest('.hero') ? 'Hero' : 'Seitenende',
+        consent_text: consentLabel ? consentLabel.innerText.trim().slice(0, 500) : '',
+        consent_timestamp: new Date().toISOString(),
       };
-      const lines = [];
-      new FormData(form).forEach((value, key) => {
-        if (key === 'website' || value instanceof File || !String(value).trim()) return;
-        lines.push(`${labels[key.toLowerCase()] || key}: ${String(value).trim()}`);
-      });
-      const subject = `CEx Anfrage – ${document.querySelector('h1')?.textContent.trim() || document.title}`;
-      const body = `${lines.join('\n')}\n\nGesendet von: ${window.location.href}`;
-      if (status) status.textContent = 'Ihr E-Mail-Programm wird geöffnet.';
-      window.location.href = `mailto:kontakt@cex.koeln?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Absichtlich NICHT gesendet: form_open_seconds. Der Endpunkt verwirft
+      // eine Anfrage stillschweigend, wenn der Wert unter zwei Sekunden
+      // liegt — ein falsch gemessener Wert kostet einen echten Kontakt.
+      if (false) {
+      }
+
+      fetch(LEADS_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload),
+      })
+        .then((response) =>
+          response
+            .json()
+            .catch(() => ({ ok: false, error: 'Die Antwort des Servers konnte nicht gelesen werden.' }))
+        )
+        .then((result) => {
+          if (result?.ok) {
+            if (status) {
+              status.textContent =
+                'Vielen Dank. Ihre Anfrage ist angekommen. Wir melden uns werktags innerhalb von 24 Stunden.';
+            }
+            form.reset();
+          } else if (status) {
+            status.textContent =
+              result?.error ||
+              'Die Anfrage konnte nicht gesendet werden. Bitte pruefen Sie Ihre Angaben und versuchen Sie es erneut.';
+          }
+        })
+        .catch(() => {
+          if (status) {
+            status.textContent =
+              'Die Anfrage konnte nicht gesendet werden. Bitte schreiben Sie uns direkt an kontakt@cex.koeln.';
+          }
+        })
+        .finally(() => {
+          form.dataset.sending = 'false';
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   });
 }
