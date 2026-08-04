@@ -47,21 +47,25 @@
     object-fit:cover;
     filter:var(--hero-img-filter);
   }
-  /* The hero scrim, verbatim from --hero-overlay. */
+  /* The hero scrim. Lighter than --hero-overlay on purpose: a second,
+     left-to-right scrim sits on top of it here, and the two multiply. At the
+     hero's own .62 the pair composited to ~.96 on the copy side and the film
+     vanished — the card read as a plain grey box with type on it. */
   .card__scrim-v {
     position:absolute; inset:0; z-index:1;
-    background:linear-gradient(180deg, rgba(30,35,39,.62) 0%,
-                                       rgba(30,35,39,.42) 60%,
-                                       rgba(30,35,39,.34) 100%);
+    background:linear-gradient(180deg, rgba(30,35,39,.38) 0%,
+                                       rgba(30,35,39,.20) 58%,
+                                       rgba(30,35,39,.30) 100%);
   }
   /* The one addition: the copy side goes darker so white type survives a
-     200px-wide preview in a chat window. */
+     200px-wide preview in a chat window, and the picture side stays open so
+     the Dom and the Hohenzollernbrücke are still recognisable at that size. */
   .card__scrim-h {
     position:absolute; inset:0; z-index:2;
-    background:linear-gradient(90deg, rgba(30,35,39,.90) 0%,
-                                      rgba(30,35,39,.78) 42%,
-                                      rgba(30,35,39,.34) 78%,
-                                      rgba(30,35,39,.22) 100%);
+    background:linear-gradient(90deg, rgba(30,35,39,.72) 0%,
+                                      rgba(30,35,39,.62) 40%,
+                                      rgba(30,35,39,.24) 74%,
+                                      rgba(30,35,39,.06) 100%);
   }
   .card__body {
     position:relative; z-index:3;
@@ -79,7 +83,7 @@
     font-weight:700; text-transform:uppercase;
     line-height:1.03; letter-spacing:-.035em;
   }
-  .title__line { display:block; }
+  .title__line { display:block; white-space:nowrap; }
   .title__line--accent { display:flex; align-items:center; }
   .title__glyph { flex-shrink:0; color:var(--cx-accent); }
   .title__glyph svg { width:100%; height:100%; }
@@ -96,12 +100,12 @@
   #og .card__logo { width:150px; height:60px; }
   #og .eyebrow { font-size:16px; margin-top:44px; }
   #og .eyebrow__dot { width:9px; height:9px; }
-  #og .title { font-size:70px; margin-top:20px; max-width:840px; }
+  #og .title { font-size:64px; margin-top:18px; }
   #og .title__line--accent { gap:18px; }
-  #og .title__glyph { width:56px; height:56px; }
-  #og .lead-wrap { gap:18px; margin-top:28px; max-width:720px; }
-  #og .lead-bar { width:42px; height:5px; margin-top:11px; }
-  #og .lead { font-size:22px; line-height:1.45; }
+  #og .title__glyph { width:52px; height:52px; }
+  #og .lead-wrap { gap:18px; margin-top:26px; }
+  #og .lead-bar { width:42px; height:5px; margin-top:10px; }
+  #og .lead { font-size:21px; line-height:1.45; white-space:nowrap; }
   #og .foot { gap:24px; padding-top:34px; }
   #og .foot__url { font-size:15px; }
 
@@ -117,12 +121,12 @@
   #thumb .card__logo { width:200px; height:80px; }
   #thumb .eyebrow { font-size:20px; margin-top:auto; }
   #thumb .eyebrow__dot { width:11px; height:11px; }
-  #thumb .title { font-size:104px; margin-top:26px; }
-  #thumb .title__line--accent { gap:24px; }
-  #thumb .title__glyph { width:84px; height:84px; }
-  #thumb .lead-wrap { gap:22px; margin-top:36px; max-width:900px; }
-  #thumb .lead-bar { width:52px; height:6px; margin-top:14px; }
-  #thumb .lead { font-size:30px; line-height:1.45; }
+  #thumb .title { font-size:84px; margin-top:24px; }
+  #thumb .title__line--accent { gap:22px; }
+  #thumb .title__glyph { width:70px; height:70px; }
+  #thumb .lead-wrap { gap:22px; margin-top:34px; }
+  #thumb .lead-bar { width:52px; height:6px; margin-top:13px; }
+  #thumb .lead { font-size:27px; line-height:1.45; white-space:nowrap; }
   #thumb .foot { margin-top:52px; gap:28px; }
   #thumb .foot__url { font-size:19px; }
 </style>
@@ -147,7 +151,7 @@
     </h1>
     <div class="lead-wrap">
       <span class="lead-bar"></span>
-      <p class="lead">KI, Digitalisierung, Prozesse, Projekte, Change und Architektur — aus einer Hand.</p>
+      <p class="lead">Prozesse, Projekte, Digitalisierung, Change, KI, Architektur.</p>
     </div>
     <div class="foot"><span class="foot__url">cex.koeln</span><span class="foot__rule"></span><span class="foot__url">Köln</span></div>
   </div>
@@ -171,7 +175,7 @@
     </h1>
     <div class="lead-wrap">
       <span class="lead-bar"></span>
-      <p class="lead">KI, Digitalisierung, Prozesse, Projekte, Change und Architektur — aus einer Hand.</p>
+      <p class="lead">Prozesse, Projekte, Digitalisierung, Change, KI, Architektur.</p>
     </div>
     <div class="foot"><span class="foot__url">cex.koeln</span><span class="foot__rule"></span><span class="foot__url">Köln</span></div>
   </div>
