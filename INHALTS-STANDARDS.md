@@ -14,9 +14,16 @@ Die zugehörige Gestaltung steht in `cx-components.css` (FAQ) und `founders.css`
 
 | Baustein | Selektor | Wortlaut |
 |---|---|---|
-| FAQ | `<section id="faq"> h2` | **Diese Fragen hören wir häufiger** |
-| Praxischeck | `.cx-proof__h` | **Diese Fragen klären wir vor Projektbeginn** |
+| FAQ | `<section id="faq"> h2` | **Welche Fragen hören wir häufiger?** |
+| Praxischeck | `.cx-proof__h` | **Welche Fragen klären wir vor Projektbeginn?** |
 | Wer wir sind | `.cx-trust__heading` | **Prozesse, Architektur, Change.** |
+
+Am 4. August 2026 wurden die beiden Fragen-Überschriften von der Aussageform in die
+Frageform gebracht ("Diese Fragen …" → "Welche Fragen …?"). Grund: Google und die
+KI-Assistenten ziehen Antworten bevorzugt aus Abschnitten, deren Überschrift die Frage
+stellt, die der Nutzer eingibt. Der Sinn bleibt gleich, ein Wort ändert sich, und beide
+Blöcke sind ohnehin Fragenblöcke. **Ausnahme von "kein Punkt am Ende": das Fragezeichen
+gehört hier dazu.**
 
 ### FAQ
 
