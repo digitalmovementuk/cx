@@ -212,30 +212,93 @@
   }
 }
 
-/* overflow-wrap only — no hyphens:auto. It was tried and reverted: Chrome's
-   German dictionary hyphenates at nearly every line end in a 357px card column
-   and gets the compounds wrong where it matters ("Medi-enbrüche" for
-   Medien-brüche, "ab-tippfrei" for abtipp-frei). overflow-wrap breaks a word
-   only when it genuinely cannot fit, which is the one case that was broken. */
+/* --------------------------------------------------------------------------
+   Deutsche Silbentrennung — die eine Stelle, an der sie geregelt wird
+   --------------------------------------------------------------------------
+   Bricht ein langes Kompositum um, gehoert ein Trennstrich ans Zeilenende.
+   Vorher stand hier `hyphens: none` neben `overflow-wrap: break-word`: das
+   trennte "Digitalisierungsberatung" ohne jedes Zeichen mitten im Wort.
+
+   `hyphens: auto` allein war schon einmal drin und wurde zurueckgenommen,
+   weil Chromes deutsches Woerterbuch in einer 357px-Kartenspalte an fast
+   jedem Zeilenende trennte und die Komposita an der falschen Fuge aufmachte
+   ("Medi-enbrueche", "ab-tippfrei"). Genau dagegen steht jetzt
+   `hyphenate-limit-chars: 12 5 4`:
+
+     12  Woerter unter 12 Zeichen werden gar nicht getrennt
+          -> "abtippfrei" (10) bleibt ganz, der alte Fehlbruch entfaellt
+      5  mindestens 5 Zeichen vor dem Strich
+          -> "Medienbrueche" kann nur noch "Medien-brueche" werden
+      4  mindestens 4 Zeichen auf der naechsten Zeile
+          -> keine ein- und zweibuchstabigen Zeilenanfaenge
+
+   `overflow-wrap: break-word` bleibt als letzte Instanz stehen, fuer Woerter,
+   die auch getrennt nicht in die Spalte passen. Voraussetzung fuer die
+   Trennung ist `lang="de"` am <html> — steht auf allen ausgelieferten Seiten.
+   -------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6,
 .h-section, .h-lead, .hero__title, .final-cta__headline,
 p, li, dt, dd, figcaption, summary, blockquote {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-limit-before: 5;
+  -webkit-hyphenate-limit-after: 4;
+  -webkit-hyphenate-limit-lines: 2;
+  hyphenate-limit-chars: 12 5 4;
+  hyphenate-limit-lines: 2;
   overflow-wrap: break-word;
-  hyphens: none;
+  word-break: normal;
 }
 
-/* The mobile heading rules in cx-template.css and cx-hero.css reach for
-   `overflow-wrap: anywhere` plus `hyphens: auto`, which between them will split
-   a headline mid-syllable at any character. They were added to stop long
-   service-page H1s overflowing at 390px; break-word already does that, and only
-   when the word actually doesn't fit. Same job, no collateral. */
+/* Mobil ist die Spalte am schmalsten, dort wird die Trennung am dringendsten
+   gebraucht. cx-template.css und cx-hero.css setzen hier `overflow-wrap:
+   anywhere`, was ein Wort an jedem beliebigen Zeichen aufbricht — mit aktiver
+   Trennung ist das nicht mehr noetig und nimmt der Trennung nur die Arbeit ab.
+   Zurueck auf break-word, Trennung an, gleiche Grenzwerte wie oben. */
 @media (max-width: 820px) {
   h1, h2, h3, h4, h5, h6,
   .h-section, .h-lead, .cx-proof__h, .hero__title, .section__head {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    hyphenate-limit-chars: 12 5 4;
     overflow-wrap: break-word;
     word-break: normal;
-    hyphens: none;
   }
+}
+
+/* hub-quality.css setzt dieselben Ueberschriften mobil auf
+   `hyphens: none !important` — das gewinnt sonst gegen die Regel oben, obwohl
+   diese Datei spaeter laedt. Gleiche Selektoren, gleiche Spezifitaet, hier
+   entschieden. */
+@media (max-width: 820px) {
+  body.cex-migrated-page h1,
+  body.cex-migrated-page h2,
+  body.cex-migrated-page h3,
+  body.cex-migrated-page .h-section,
+  body.cex-migrated-page .hero__title,
+  body.cex-migrated-page .cx-proof__h {
+    -webkit-hyphens: auto !important;
+    hyphens: auto !important;
+    hyphenate-limit-chars: 12 5 4;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+}
+
+/* Kurze Beschriftungen und Kennzahlen, die anderswo auf `overflow-wrap:
+   anywhere` stehen. Auch sie sollen an der Silbe trennen statt am Zeichen. */
+.cx-trust__creds li,
+.cx-trust__creds b,
+.tree-major-summary b,
+.tree-branch-summary b,
+.cross-link__tag,
+.trust-item__num,
+.trust-item__label {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 12 5 4;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 

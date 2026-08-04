@@ -1694,8 +1694,8 @@ a { color: inherit; }
 .cx-trust__heading {
   max-width: 18ch;
   text-wrap: balance;
-  overflow-wrap: normal !important;
-  hyphens: none !important;
+  overflow-wrap: break-word !important;
+  hyphens: auto !important;
 }
 .cx-trust__founders b {
   display: block;

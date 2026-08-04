@@ -77,8 +77,8 @@
   line-height: 1.02 !important;
   letter-spacing: -0.03em !important;
   text-wrap: balance;
-  overflow-wrap: normal !important;
-  hyphens: none !important;
+  overflow-wrap: break-word !important;
+  hyphens: auto !important;
 }
 
 .cx-trust .cx-trust__col:first-child > .h-lead {

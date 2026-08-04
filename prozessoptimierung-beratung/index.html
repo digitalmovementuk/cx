@@ -333,7 +333,7 @@ body.cex-migrated-page .c-cell>.use-card::before{content:"";position:absolute;to
 .dmaic-cycle figcaption{margin-top:14px;text-align:center;font-size:0.8125rem;line-height:1.55;color:var(--muted)}
 .related-services{margin:0;padding:clamp(32px,4vw,48px);background:#fff;border:1px solid var(--line)}
 .related-services__head{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.8fr);gap:40px;align-items:end;max-width:none;margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid var(--line)}
-.related-services__head h2{margin:10px 0 10px;font-size:clamp(1.75rem,3vw,2.35rem);line-height:1.2;letter-spacing:-0.025em;color:var(--cx-charcoal);overflow-wrap:normal;hyphens:none}
+.related-services__head h2{margin:10px 0 10px;font-size:clamp(1.75rem,3vw,2.35rem);line-height:1.2;letter-spacing:-0.025em;color:var(--cx-charcoal);overflow-wrap:break-word;hyphens:auto}
 .related-services__head p{margin:0;font-size:0.9375rem;line-height:1.65;color:var(--muted)}
 .related-services__group+.related-services__group{margin-top:28px;padding-top:28px;border-top:1px solid var(--line)}
 .related-services__group-title{margin:0 0 14px;font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--cx-charcoal-3)}
@@ -373,7 +373,7 @@ dia (max-width:920px){
  /* Container padding tighter */
 :root{--container-px:18px;--section-py:48px}
  /* Avoid horizontal overflow from long German compound words anywhere */
- h1,h2,h3{overflow-wrap:anywhere;word-break:break-word;hyphens:auto}
+ h1,h2,h3{overflow-wrap: break-word;word-break:break-word;hyphens:auto}
  /* Comparison table — already stacks per.compare-table @680px, but ensure scroll fallback */
 .compare-table{font-size:0.8125rem}
 .compare-table th:nth-child(2),.compare-table td:nth-child(2){background:rgba(255,122,0,0.10);border-left:2px solid var(--accent,var(--cx-accent));border-right:2px solid var(--accent,var(--cx-accent))}
@@ -744,8 +744,8 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
 #leistungen .service-card:nth-child(-n+2){grid-column:span 6;min-height:300px;border-top:3px solid var(--cx-yellow)}
 #leistungen .service-card:nth-child(n+3){grid-column:span 6;min-height:240px}
 #leistungen .service-card__num{width:46px;height:46px;margin-bottom:clamp(22px,3vw,32px);border-radius:0;font-size:.6875rem}
-#leistungen .service-card h3{max-width:100%;margin:0 0 14px;font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.25;overflow-wrap:anywhere!important;word-break:normal!important;hyphens:none!important}
-#leistungen .service-card p{max-width:62ch;margin:0;font-size:.9rem;line-height:1.65;overflow-wrap:anywhere}
+#leistungen .service-card h3{max-width:100%;margin:0 0 14px;font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.25;overflow-wrap:break-word!important;word-break:normal!important;hyphens:auto!important}
+#leistungen .service-card p{max-width:62ch;margin:0;font-size:.9rem;line-height:1.65;overflow-wrap: break-word}
 #leistungen .service-card:nth-child(-n+2) p{max-width:56ch}
 @media(max-width:1180px) and (min-width:821px){
  .process-services-intro{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px}
@@ -768,7 +768,7 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
  .evidence-panel__head,.evidence-panel figcaption{text-align:center}
  .evidence-panel__head>div{margin-right:auto;margin-left:auto}
  .evidence-panel__kicker{display:block;text-align:center}
- .evidence-panel__head h3{hyphens:none;overflow-wrap:normal;word-break:normal}
+ .evidence-panel__head h3{hyphens:auto;overflow-wrap:break-word;word-break:normal}
  .evidence-panel__head p{max-width:34rem;margin-right:auto;margin-left:auto;text-align:center}
  .growth-infographic{margin-right:calc(var(--container-px) * -.35);margin-left:calc(var(--container-px) * -.35);padding:6px}
  .growth-infographic figcaption{padding:0 14px}
@@ -848,8 +848,8 @@ body.cex-migrated-page .process-services-intro .cex-page-visual{margin:0;padding
 <link rel="stylesheet" href="../polish.css?v=20260804c">
 <link rel="stylesheet" href="../cx-hero.css?v=20260803">
 <link rel="stylesheet" href="../hub-quality.css?v=20260803e">
-<link rel="stylesheet" href="../cx-components.css?v=20260804j" />
-<link rel="stylesheet" href="../founders.css?v=20260804c-wwsind">
+<link rel="stylesheet" href="../cx-components.css?v=20260804k" />
+<link rel="stylesheet" href="../founders.css?v=20260804d-trennung">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
