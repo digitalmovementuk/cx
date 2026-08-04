@@ -68,7 +68,7 @@
   margin: 0 !important;
   max-width: 18ch !important;
   color: var(--cx-charcoal) !important;
-  font-family: Inter, system-ui, sans-serif !important;
+  font-family: Inter, "Inter Fallback", system-ui, sans-serif !important;
   /* Der Wert kam bisher aus polish.css:62 — founders.css stand zu weit vorne im
      <head> und verlor. Jetzt steht er hier, wo er hingehoert, mit genau dem
      gleichen Ergebnis: 52px bei 1440px, 43.8px bei 1200px. */

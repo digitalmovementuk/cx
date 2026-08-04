@@ -704,3 +704,29 @@ body :is(.service-card, .problem-card, .use-card, .industry-card) :is(h2, h3, h4
 body .practice-case__step span {
   color: #ff9530;
 }
+
+/* Einwilligungsbanner: alle drei Schaltflächen gleich gewichtet.
+   "Alle akzeptieren" war orange gefüllt, "Nur notwendige" und "Auswahl
+   speichern" nur umrandet. Grösse, Schriftgrad und Ebene waren schon gleich —
+   nur die Füllung zog das Auge auf das Zustimmen. Genau dieses Muster nennen
+   die Aufsichtsbehörden als Anstupsen. Die Füllung fällt weg, alle drei
+   Schaltflächen sind jetzt identisch: gleiche Grösse, gleicher Rahmen,
+   gleiche Farbe. Das Markenorange hat auf einem Einwilligungsbanner nichts
+   zu suchen. */
+/* Zwei Stylesheets setzen die Füllung mit !important, eines davon über
+   .cex-migrated-page. Deshalb hier dieselbe Kettenlänge plus body — sonst
+   gewinnt das ältere Blatt. (Die bekannte polish.css-Falle.) */
+body.cex-migrated-page .privacy-consent__primary,
+body .privacy-consent__primary {
+  background: #fff !important;
+  color: var(--cx-charcoal) !important;
+  border-color: var(--cx-charcoal) !important;
+}
+body.cex-migrated-page .privacy-consent__primary:hover,
+body.cex-migrated-page .privacy-consent__secondary:hover,
+body .privacy-consent__primary:hover,
+body .privacy-consent__secondary:hover {
+  background: var(--cx-charcoal) !important;
+  border-color: var(--cx-charcoal) !important;
+  color: #fff !important;
+}
