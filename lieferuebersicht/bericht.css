@@ -77,9 +77,10 @@ p{margin:0}
    Breite folgt — die Seitenverhältnisse der Dateien sind unterschiedlich. */
 .masthead__cex{display:block;height:30px;width:auto}
 .masthead__x{color:var(--band-muted);font-size:15px}
-/* Höher als es die Dateihöhe nahelegt: im DM-Logo steckt Luft über und unter
-   der Wortmarke, im CEx-Logo nicht. Gleiche Bildhöhe liest sich sonst kleiner. */
-.masthead__dm{display:block;height:20px;width:auto}
+/* Höher als es die Dateihöhe nahelegt: die DM-Datei hat rundum rund ein Drittel
+   Luft, die CEx-Datei sitzt eng am Zeichen. Gleiche Bildhöhe liest sich sonst
+   deutlich kleiner — gemessen an der sichtbaren Zeichenhöhe, nicht am Kasten. */
+.masthead__dm{display:block;height:24px;width:auto}
 .masthead__meta{font-size:14px;color:var(--band-muted)}
 
 .hero{padding-block:clamp(56px,8vw,96px) clamp(60px,8vw,100px)}
@@ -190,7 +191,7 @@ p{margin:0}
 .foot__grid{display:flex;flex-wrap:wrap;gap:36px;justify-content:space-between;align-items:flex-start}
 .foot strong{color:#fff;display:block;margin-bottom:10px;font-size:16px;font-weight:700}
 .foot__logo{display:block;height:28px;width:auto;margin-bottom:16px}
-.foot__dm{display:block;height:22px;width:auto;margin:0 0 12px}
+.foot__dm{display:block;height:32px;width:auto;margin:-4px 0 12px}
 .foot__bottom{margin-top:40px;padding-top:24px;border-top:1px solid #31373D;font-size:13.5px;color:var(--band-muted)}
 
 /* Abnahmeprotokoll */
@@ -284,6 +285,3 @@ p{margin:0}
 .callout__h{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);margin-bottom:10px}
 .callout p{color:var(--muted);font-size:16px;line-height:1.7}
 .callout p+p{margin-top:12px}
-
-/* ---------- DM-Logo im Fuss ---------- */
-.foot__dm{display:block;height:26px;width:auto;margin-bottom:14px}
