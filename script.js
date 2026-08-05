@@ -231,7 +231,7 @@ window.CExCookies = {
   read: readConsent,
 };
 
-if (!readConsent()) {
+if (!readConsent() && !new URLSearchParams(window.location.search).has('embed')) {
   openConsentDialog();
 }
 
