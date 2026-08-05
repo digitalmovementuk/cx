@@ -816,6 +816,38 @@
         Punkte; die Abnahme selbst bleibt davon unberührt.</p>
       </div>
 
+      <p class="form__h form__h--gap">Unterschrift</p>
+      <p class="form__hint">Unterschreiben Sie im Feld mit Maus, Finger oder Stift. Wer lieber tippt, setzt die Unterschrift aus dem Namensfeld ein.</p>
+
+      <div class="signs">
+        <div class="signs__b">
+          <p class="signs__p">Auftraggeber</p>
+          <p class="signs__n">CX-Experts</p>
+          <div class="pad" id="pad">
+            <canvas class="pad__c" id="padC" role="img" aria-label="Feld für Ihre Unterschrift"></canvas>
+            <div class="pad__hint" id="padHint"><span class="pad__x">×</span><span>Hier unterschreiben</span></div>
+            <div class="pad__line" aria-hidden="true"></div>
+          </div>
+          <div class="pad__bar">
+            <span class="pad__st" id="padSt">Noch nicht unterschrieben</span>
+            <span class="pad__acts">
+              <button type="button" class="link-btn" id="padUndo" disabled>Zurück</button>
+              <button type="button" class="link-btn" id="padClear" disabled>Löschen</button>
+            </span>
+          </div>
+          <p class="pad__alt"><button type="button" class="link-btn" id="padName">Unterschrift aus dem Namensfeld einsetzen</button></p>
+          <div class="pad__cap" id="padCap">Ort und Datum stehen oben im Formular.</div>
+        </div>
+
+        <div class="signs__b signs__b--wartet">
+          <p class="signs__p">Auftragnehmer</p>
+          <p class="signs__n">Digital Movement UK</p>
+          <div class="pad pad--leer" aria-hidden="true"></div>
+          <div class="pad__bar"><span class="pad__st">Wird nach Eingang gegengezeichnet</span></div>
+          <div class="pad__cap">Nach Eingang des Protokolls.</div>
+        </div>
+      </div>
+
       <div class="actions">
         <button type="submit" class="btn" id="btnSend">Abnahme bestätigen</button>
         <button type="button" class="btn btn--ghost" id="btnPdf">Nur PDF herunterladen</button>
@@ -827,18 +859,6 @@
 
       <div class="msg" id="msg" role="status" aria-live="polite" hidden></div>
 
-      <div class="signs" aria-hidden="true">
-        <div class="signs__b">
-          <p class="signs__p">Auftraggeber</p>
-          <p class="signs__n">CX-Experts</p>
-          <div class="signs__l">Ort, Datum, Unterschrift</div>
-        </div>
-        <div class="signs__b">
-          <p class="signs__p">Auftragnehmer</p>
-          <p class="signs__n">Digital Movement UK</p>
-          <div class="signs__l">Ort, Datum, Unterschrift</div>
-        </div>
-      </div>
     </form>
   </div>
 </section>
@@ -922,6 +942,168 @@
     this.textContent = alle ? 'Alle neun auswählen' : 'Auswahl aufheben';
   });
 
+
+  /* ==========================================================================
+     Unterschriftfeld
+
+     Zeigerereignisse statt getrennter Maus- und Berührungspfade: ein Weg
+     für Maus, Finger und Stift. Die Punkte liegen als 0..1 im Feld, damit
+     ein Drehen des Geräts oder ein Fensterwechsel den Zug nicht verzerrt
+     und das PDF ihn unabhängig von der Bildschirmgrösse setzen kann.
+     ========================================================================== */
+  var padFeld = (function(){
+    var kasten = document.getElementById('pad');
+    var cv = document.getElementById('padC');
+    if(!kasten || !cv) return null;
+
+    var ctx = cv.getContext('2d');
+    var striche = [];          /* [[[x,y], ...], ...] jeweils 0..1 */
+    var laufend = null;
+    var tippText = '';         /* gesetzt, wenn mit dem Namen unterschrieben wurde */
+
+    var stand = document.getElementById('padSt');
+    var bZurueck = document.getElementById('padUndo');
+    var bLeeren = document.getElementById('padClear');
+    var bName = document.getElementById('padName');
+    var kappe = document.getElementById('padCap');
+
+    function masse(){ return kasten.getBoundingClientRect(); }
+
+    function anpassen(){
+      var r = masse(), dpr = window.devicePixelRatio || 1;
+      cv.width = Math.round(r.width * dpr);
+      cv.height = Math.round(r.height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      malen();
+    }
+
+    function malen(){
+      var r = masse();
+      ctx.clearRect(0, 0, r.width, r.height);
+
+      if(tippText){
+        ctx.fillStyle = '#1E2327';
+        ctx.font = 'italic 600 34px Inter, system-ui, sans-serif';
+        ctx.textBaseline = 'alphabetic';
+        ctx.fillText(tippText, 26, r.height - 58);
+        return;
+      }
+
+      ctx.strokeStyle = '#1E2327';
+      ctx.fillStyle = '#1E2327';
+      ctx.lineWidth = 2.2;
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+
+      for(var i=0;i<striche.length;i++){
+        var s = striche[i];
+        if(s.length === 1){
+          ctx.beginPath();
+          ctx.arc(s[0][0]*r.width, s[0][1]*r.height, 1.4, 0, Math.PI*2);
+          ctx.fill();
+          continue;
+        }
+        /* Mittelpunkte als Stützstellen: der Zug wird rund statt eckig. */
+        ctx.beginPath();
+        ctx.moveTo(s[0][0]*r.width, s[0][1]*r.height);
+        for(var j=1;j<s.length-1;j++){
+          var x1 = s[j][0]*r.width,   y1 = s[j][1]*r.height;
+          var x2 = s[j+1][0]*r.width, y2 = s[j+1][1]*r.height;
+          ctx.quadraticCurveTo(x1, y1, (x1+x2)/2, (y1+y2)/2);
+        }
+        var e = s[s.length-1];
+        ctx.lineTo(e[0]*r.width, e[1]*r.height);
+        ctx.stroke();
+      }
+    }
+
+    function leer(){ return !tippText && striche.length === 0; }
+
+    function melden(){
+      var voll = !leer();
+      kasten.classList.toggle('is-signiert', voll);
+      stand.classList.toggle('is-ok', voll);
+      stand.textContent = voll
+        ? (tippText ? 'Mit dem Namen unterzeichnet' : 'Unterschrieben')
+        : 'Noch nicht unterschrieben';
+      bZurueck.disabled = tippText ? true : striche.length === 0;
+      bLeeren.disabled = !voll;
+      kappeSetzen();
+    }
+
+    function kappeSetzen(){
+      var ort = (form.elements['ort'].value || '').trim();
+      var tag = form.elements['datum'].value;
+      if(leer() || !tag){ kappe.textContent = 'Ort und Datum stehen oben im Formular.'; return; }
+      kappe.textContent = (ort ? ort + ', ' : '') + langesDatum(tag);
+    }
+
+    function punkt(e){
+      var r = masse();
+      return [Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)),
+              Math.min(1, Math.max(0, (e.clientY - r.top) / r.height))];
+    }
+
+    cv.addEventListener('pointerdown', function(e){
+      if(e.button !== undefined && e.button !== 0) return;
+      e.preventDefault();
+      if(tippText){ tippText = ''; }
+      try { cv.setPointerCapture(e.pointerId); } catch(x){}
+      laufend = [punkt(e)];
+      striche.push(laufend);
+      malen(); melden();
+    });
+
+    cv.addEventListener('pointermove', function(e){
+      if(!laufend) return;
+      e.preventDefault();
+      var p = punkt(e), letzt = laufend[laufend.length-1];
+      /* Zu dichte Punkte bringen nichts und blaehen das PDF auf. */
+      if(Math.abs(p[0]-letzt[0])*masse().width + Math.abs(p[1]-letzt[1])*masse().height < 1.2) return;
+      laufend.push(p);
+      malen();
+    });
+
+    ['pointerup','pointercancel'].forEach(function(ev){
+      cv.addEventListener(ev, function(){ if(laufend){ laufend = null; melden(); } });
+    });
+
+    bZurueck.addEventListener('click', function(){
+      striche.pop(); malen(); melden();
+    });
+    bLeeren.addEventListener('click', function(){
+      striche = []; tippText = ''; malen(); melden();
+    });
+    bName.addEventListener('click', function(){
+      var n = (form.elements['name'].value || '').trim();
+      if(!n){
+        zeigen('err', 'Bitte tragen Sie zuerst Ihren Namen unter „Abnahme durch“ ein.');
+        form.elements['name'].focus();
+        return;
+      }
+      striche = []; tippText = n; malen(); melden();
+    });
+
+    ['ort','datum'].forEach(function(n){
+      form.elements[n].addEventListener('input', kappeSetzen);
+    });
+
+    /* Der Zug liegt normiert vor, ein neues Format zeichnet ihn einfach neu. */
+    var bremse;
+    window.addEventListener('resize', function(){
+      clearTimeout(bremse); bremse = setTimeout(anpassen, 120);
+    });
+
+    anpassen(); melden();
+
+    return {
+      leer: leer,
+      striche: function(){ return striche; },
+      text: function(){ return tippText; },
+      masse: function(){ var r = masse(); return [r.width, r.height]; }
+    };
+  })();
+
   /* ---------- Minimaler PDF-Erzeuger (Helvetica, WinAnsi) ---------- */
 
   /* Zeichen jenseits Latin-1, die in einem deutschen Text vorkommen. */
@@ -973,7 +1155,7 @@
 
     function f(n){ return (Math.round(n*100)/100).toString(); }
     function text(s, x, yy, size, fett, farbe){
-      ops.push({k:'t', s:s, x:x, y:yy, z:size, b:!!fett, c:farbe||INK});
+      ops.push({k:'t', s:s, x:x, y:yy, z:size, b:(fett === 'i' ? 'i' : !!fett), c:farbe||INK});
     }
     function rechteck(x, yy, w, h, farbe){ ops.push({k:'r', x:x, y:yy, w:w, h:h, c:farbe}); }
     function linie(yy){ ops.push({k:'l', y:yy, c:LINIE}); }
@@ -1053,8 +1235,10 @@
     }
 
     /* ---- Erklärung ---- */
-    rubrik('Erklärung');
-    for(var j=0;j<d.erklaerungen.length;j++) haken(true, d.erklaerungen[j]);
+    if(d.erklaerungen.length){
+      rubrik('Erklärung');
+      for(var j=0;j<d.erklaerungen.length;j++) haken(true, d.erklaerungen[j]);
+    }
 
     /* ---- Person ---- */
     rubrik('Abnahme durch');
@@ -1069,19 +1253,62 @@
     /* Schlusssatz und Unterschriftszeile gehören zusammen: einmal vorab
        Platz für den ganzen Block prüfen, sonst reisst die Seite dazwischen. */
     abstand(10);
-    platz(200);
+    platz(280);
     absatz(d.teilabnahme
       ? 'Die oben markierten Lieferpakete werden hiermit abgenommen. Nicht markierte Pakete bleiben offen und sind von dieser Abnahme nicht erfasst.'
       : 'Die Lieferung wird hiermit vollständig abgenommen.', 11, false, INK, 16.5);
     abstand(6);
-    absatz('Mit der Abnahme geht die Verantwortung für die Website auf den Auftraggeber ueber und die Gewaehrleistungsfrist beginnt.',
+    absatz('Mit der Abnahme geht die Verantwortung für die Website auf den Auftraggeber über und die Gewährleistungsfrist beginnt.',
            10, false, GRAU, 14.5);
 
+    /* ---- Unterschriften ----
+       Der gezeichnete Zug wird auf seine benutzte Flaeche zugeschnitten und
+       dann in den Kasten ueber der Linie gelegt. Ohne den Zuschnitt haengt
+       die Groesse davon ab, wo im Feld jemand unterschrieben hat. */
+    function zug(d){
+      var s = d.striche, x0 = 1, y0 = 1, x1 = 0, y1 = 0;
+      for(var i=0;i<s.length;i++) for(var j=0;j<s[i].length;j++){
+        var p = s[i][j];
+        if(p[0] < x0) x0 = p[0];
+        if(p[0] > x1) x1 = p[0];
+        if(p[1] < y0) y0 = p[1];
+        if(p[1] > y1) y1 = p[1];
+      }
+      var spB = Math.max(x1 - x0, 0.02), spH = Math.max(y1 - y0, 0.02);
+      var verh = (spB * d.padB) / (spH * d.padH);
+      var hoehe = 46, breiteU = Math.max(44, Math.min(MAX * 0.46, hoehe * verh));
+      var unten = y - hoehe, pfade = [];
+      for(var a=0;a<s.length;a++){
+        var pk = s[a], neu = [];
+        for(var b2=0;b2<pk.length;b2++){
+          neu.push([L + 4 + ((pk[b2][0] - x0) / spB) * breiteU,
+                    unten + (1 - (pk[b2][1] - y0) / spH) * hoehe]);
+        }
+        if(neu.length === 1) neu.push([neu[0][0] + 0.7, neu[0][1]]);
+        pfade.push(neu);
+      }
+      ops.push({k:'p', s:pfade, w:1.2, c:INK});
+      y -= hoehe + 5;
+    }
+
     abstand(30);
+    if(d.unterschriftText){
+      text(d.unterschriftText, L + 4, y - 30, 25, 'i', INK);
+      y -= 43;
+    } else if(d.striche && d.striche.length){
+      zug(d);
+    } else {
+      abstand(40);
+    }
     linie(y); y -= 12;
     text('Auftraggeber · CX-Experts', L, y - 8, 8.5, true, GRAU);
-    text('Ort, Datum, Unterschrift', L + MAX/2, y - 8, 8.5, false, GRAU);
-    abstand(52);
+    text((d.ort ? d.ort + ', ' : '') + (d.datumLang || ''), L + MAX/2, y - 8, 8.5, false, GRAU);
+    if(!d.leerUnterschrift){
+      text('Unterschrift digital erfasst am ' + d.zeitstempel, L, y - 21, 8, false, GRAU);
+      y -= 13;
+    }
+
+    abstand(56);
     linie(y); y -= 12;
     text('Auftragnehmer · Digital Movement UK', L, y - 8, 8.5, true, GRAU);
     text('Ort, Datum, Unterschrift', L + MAX/2, y - 8, 8.5, false, GRAU);
@@ -1094,8 +1321,8 @@
   function seriell(seiten, PB, PH, L, R){
     var out = [], offsets = [], objekte = [];
     var anzahl = seiten.length;
-    var idKatalog = 1, idPages = 2, idF1 = 3, idF2 = 4;
-    var idErsteSeite = 5;
+    var idKatalog = 1, idPages = 2, idF1 = 3, idF2 = 4, idF3 = 5;
+    var idErsteSeite = 6;
 
     function f(n){ return (Math.round(n*100)/100).toString(); }
 
@@ -1104,7 +1331,7 @@
       for(var i=0;i<ops.length;i++){
         var o = ops[i];
         if(o.k === 't'){
-          asciiPush(b, 'BT /' + (o.b ? 'F2' : 'F1') + ' ' + o.z + ' Tf ' + o.c + ' rg 1 0 0 1 ' + f(o.x) + ' ' + f(o.y) + ' Tm (');
+          asciiPush(b, 'BT /' + (o.b === 'i' ? 'F3' : (o.b ? 'F2' : 'F1')) + ' ' + o.z + ' Tf ' + o.c + ' rg 1 0 0 1 ' + f(o.x) + ' ' + f(o.y) + ' Tm (');
           strPush(b, o.s);
           asciiPush(b, ') Tj ET\n');
         } else if(o.k === 'r'){
@@ -1113,6 +1340,17 @@
           asciiPush(b, o.c + ' RG 0.9 w ' + f(o.x) + ' ' + f(o.y) + ' ' + f(o.w) + ' ' + f(o.h) + ' re S\n');
         } else if(o.k === 'l'){
           asciiPush(b, o.c + ' RG 0.7 w ' + f(L) + ' ' + f(o.y) + ' m ' + f(R) + ' ' + f(o.y) + ' l S\n');
+        } else if(o.k === 'p'){
+          /* Der Unterschriftzug als Pfad. Runde Enden und Ecken, sonst
+             sieht ein schneller Zug aus wie mit dem Lineal gezogen. */
+          asciiPush(b, o.c + ' RG ' + f(o.w) + ' w 1 J 1 j\n');
+          for(var q=0;q<o.s.length;q++){
+            var zug = o.s[q];
+            if(zug.length < 2) continue;
+            asciiPush(b, f(zug[0][0]) + ' ' + f(zug[0][1]) + ' m\n');
+            for(var t=1;t<zug.length;t++) asciiPush(b, f(zug[t][0]) + ' ' + f(zug[t][1]) + ' l\n');
+            asciiPush(b, 'S\n');
+          }
         }
       }
       return b;
@@ -1139,12 +1377,14 @@
     });
     obj(idF1, function(b){ asciiPush(b, '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>'); });
     obj(idF2, function(b){ asciiPush(b, '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>'); });
+    /* Schraeg, fuer die getippte Unterschrift. */
+    obj(idF3, function(b){ asciiPush(b, '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>'); });
 
     for(var p=0;p<anzahl;p++){
       (function(p){
         obj(seitenIds[p], function(b){
           asciiPush(b, '<< /Type /Page /Parent ' + idPages + ' 0 R /MediaBox [0 0 ' + f(PB) + ' ' + f(PH) + ']'
-            + ' /Resources << /Font << /F1 ' + idF1 + ' 0 R /F2 ' + idF2 + ' 0 R >> >>'
+            + ' /Resources << /Font << /F1 ' + idF1 + ' 0 R /F2 ' + idF2 + ' 0 R /F3 ' + idF3 + ' 0 R >> >>'
             + ' /Contents ' + contentIds[p] + ' 0 R >>');
         });
         obj(contentIds[p], function(b){
@@ -1211,6 +1451,11 @@
       paketeJa: ja,
       erklaerungen: erkl,
       abnahmeart: art ? art.value : '',
+      striche: padFeld ? padFeld.striche() : [],
+      unterschriftText: padFeld ? padFeld.text() : '',
+      leerUnterschrift: padFeld ? padFeld.leer() : true,
+      padB: padFeld ? padFeld.masse()[0] : 1,
+      padH: padFeld ? padFeld.masse()[1] : 1,
       teilabnahme: ja.length < alle.length,
       honeypot: el('company_website').value,
       zeitstempel: langesDatum(jetzt.getFullYear()+'-'+pad(jetzt.getMonth()+1)+'-'+pad(jetzt.getDate()))
@@ -1223,6 +1468,7 @@
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) return 'Bitte tragen Sie eine gültige E-Mail-Adresse ein.';
     if(!d.datumIso) return 'Bitte wählen Sie ein Datum.';
     if(mitErklaerung && !d.abnahmeart) return 'Bitte wählen Sie die Art der Abnahme.';
+    if(mitErklaerung && d.leerUnterschrift) return 'Bitte unterschreiben Sie im Feld unter „Unterschrift“.';
     if(d.paketeJa.length === 0) return 'Bitte markieren Sie mindestens ein Lieferpaket.';
     if(mitErklaerung && d.erklaerungen.length < 2) return 'Bitte bestätigen Sie beide Punkte unter „Erklärung“.';
     if(mitErklaerung && !document.getElementById('f-consent').checked) return 'Bitte stimmen Sie der Übermittlung zu.';

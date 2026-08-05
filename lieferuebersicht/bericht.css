@@ -268,7 +268,7 @@ p{margin:0}
   .toc{display:none}
   .sec{break-inside:avoid;page-break-inside:avoid}
   body{font-size:11pt}
-  .actions,.selall,.note,.msg,.form__hint{display:none !important}
+  .actions,.selall,.note,.msg,.form__hint,.pad__acts,.pad__alt{display:none !important}
   .check input{border:1.5px solid #1E2327}
 }
 
@@ -330,6 +330,36 @@ p{margin:0}
 .infobox{margin-top:18px;border-left:3px solid var(--accent);background:var(--card);padding:18px clamp(18px,2.2vw,24px);max-width:70ch}
 .infobox__h{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);margin-bottom:8px}
 .infobox p{font-size:15.5px;line-height:1.75;color:var(--muted)}
+
+/* ---------- Unterschriftfeld ----------
+   touch-action:none ist der entscheidende Teil auf dem Handy: ohne das
+   scrollt die Seite, statt einen Strich zu setzen. user-select verhindert,
+   dass beim Ziehen die Beschriftung markiert wird. */
+.pad{
+  position:relative;height:172px;background:#fff;border:1px solid var(--line-2);
+  touch-action:none;overscroll-behavior:contain;cursor:crosshair;overflow:hidden;
+  -webkit-user-select:none;user-select:none;
+}
+.pad__c{display:block;width:100%;height:100%;touch-action:none}
+.pad__line{position:absolute;left:24px;right:24px;bottom:42px;height:1px;background:var(--line-2);pointer-events:none}
+.pad__hint{
+  position:absolute;left:24px;bottom:50px;display:flex;align-items:baseline;gap:10px;
+  font-size:15px;color:var(--muted-2);pointer-events:none;transition:opacity .15s;
+}
+.pad__x{font-size:22px;font-weight:700;line-height:1;color:var(--accent)}
+.pad.is-signiert{border-color:var(--ink)}
+.pad.is-signiert .pad__hint{opacity:0}
+.pad--leer{background:var(--surface-2);border-style:dashed;cursor:default}
+.sec--alt .pad--leer{background:var(--card)}
+.pad__bar{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;align-items:baseline;margin-top:11px}
+.pad__st{font-size:13px;color:var(--muted-2)}
+.pad__st.is-ok{color:var(--ink);font-weight:700}
+.pad__acts{display:flex;gap:20px}
+.pad__alt{margin:14px 0 18px}
+.pad__cap{margin-top:auto;padding-top:10px;border-top:1px solid var(--ink);font-size:13px;color:var(--muted)}
+.signs__b--wartet .pad__cap{border-top-color:var(--line-2)}
+.link-btn:disabled{color:var(--line-2);text-decoration:none;cursor:default}
+.link-btn:disabled:hover{color:var(--line-2)}
 
 /* ---------- Dokumentenkopf ----------
    Kopfdaten nach der üblichen Gliederung eines Abnahmeprotokolls: Parteien,
@@ -404,6 +434,7 @@ p{margin:0}
 /* ---------- Unterschriften beider Seiten ----------
    Ein Protokoll, das nur eine Partei unterschreibt, belegt nichts. */
 .signs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(26px,4vw,56px);margin-top:clamp(36px,4.6vw,52px)}
+.signs__b{display:flex;flex-direction:column}
 .signs__p{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted-2);margin-bottom:6px}
 .signs__n{font-size:15.5px;font-weight:700;margin-bottom:48px}
 .signs__l{border-top:1px solid var(--ink);padding-top:9px;font-size:13px;color:var(--muted)}
@@ -420,6 +451,10 @@ p{margin:0}
   .step__n{width:44px;height:44px;font-size:17px}
   .step::before{left:21px;top:44px}
   .step__b{padding-top:6px}
+  .pad{height:150px}
+  .pad__line{left:18px;right:18px;bottom:36px}
+  .pad__hint{left:18px;bottom:44px;font-size:14px}
+  .pad--leer{height:104px}
   .docmeta__grid{grid-template-columns:1fr;column-gap:0}
   .docmeta__row{grid-template-columns:1fr;gap:5px;padding:12px 0}
   .balance__row{grid-template-columns:1fr}
