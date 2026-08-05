@@ -72,11 +72,14 @@ p{margin:0}
   display:flex;align-items:center;justify-content:space-between;gap:24px;
   padding-block:20px;flex-wrap:wrap;
 }
-.masthead__brand{display:flex;align-items:center;gap:16px}
-.masthead__logo{font-size:26px;font-weight:800;letter-spacing:-.03em;color:#fff}
-.masthead__logo span{color:var(--accent)}
+.masthead__brand{display:flex;align-items:center;gap:18px}
+/* Beide Originalmarken, jeweils die Fassung für dunklen Grund. Höhe steuert,
+   Breite folgt — die Seitenverhältnisse der Dateien sind unterschiedlich. */
+.masthead__cex{display:block;height:30px;width:auto}
 .masthead__x{color:var(--band-muted);font-size:15px}
-.masthead__dm{font-size:15px;font-weight:600;color:var(--band-ink)}
+/* Höher als es die Dateihöhe nahelegt: im DM-Logo steckt Luft über und unter
+   der Wortmarke, im CEx-Logo nicht. Gleiche Bildhöhe liest sich sonst kleiner. */
+.masthead__dm{display:block;height:20px;width:auto}
 .masthead__meta{font-size:14px;color:var(--band-muted)}
 
 .hero{padding-block:clamp(56px,8vw,96px) clamp(60px,8vw,100px)}
@@ -186,8 +189,8 @@ p{margin:0}
 .foot{background:var(--band);color:var(--band-muted);padding-block:clamp(48px,6vw,68px);font-size:15px}
 .foot__grid{display:flex;flex-wrap:wrap;gap:36px;justify-content:space-between;align-items:flex-start}
 .foot strong{color:#fff;display:block;margin-bottom:10px;font-size:16px;font-weight:700}
-.foot__logo{font-size:22px;font-weight:800;letter-spacing:-.03em;color:#fff;margin-bottom:12px}
-.foot__logo span{color:var(--accent)}
+.foot__logo{display:block;height:28px;width:auto;margin-bottom:16px}
+.foot__dm{display:block;height:22px;width:auto;margin:0 0 12px}
 .foot__bottom{margin-top:40px;padding-top:24px;border-top:1px solid #31373D;font-size:13.5px;color:var(--band-muted)}
 
 /* Abnahmeprotokoll */
