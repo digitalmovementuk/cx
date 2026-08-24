@@ -709,7 +709,6 @@
         <h3>Bei CEx</h3>
         <p>Ab der Abnahme liegen bei Ihnen:</p>
         <ul>
-          <li>die Inhalte der Website in WordPress</li>
           <li>Domain, Postfach und die Verträge mit dem Anbieter</li>
           <li>die Google-Konten für Analytics und Search Console</li>
         </ul>
@@ -718,6 +717,7 @@
         <h3>Bei Digital Movement</h3>
         <p>Nach dem Vertrag betreuen wir weiter:</p>
         <ul>
+          <li>die Inhalte der Website in WordPress</li>
           <li>die Anmeldung der Website bei Google</li>
           <li>die Messung der Sichtbarkeit und den monatlichen Bericht</li>
           <li>den Aufbau von Verweisen auf cex.koeln</li>
@@ -726,7 +726,7 @@
       <div class="handover__c">
         <h3>Was übergeben wird</h3>
         <ul>
-          <li>Zugang als Verwalter zur WordPress-Website</li>
+          <li>das vollständige WordPress-Paket der Website mit allen Seiten, Bildern und Einstellungen</li>
           <li>alle Textdokumente und Design-Dateien</li>
           <li>die Prüfberichte aus Abschnitt 07</li>
           <li>der Projektplan mit dem Stand aller Arbeitspakete</li>
@@ -769,17 +769,10 @@
       <p class="form__hint">Markieren Sie alle Lieferpakete, die Sie abnehmen. Nicht markierte Pakete weist das Protokoll als offen aus.</p>
 
       <div class="checks" id="pakete">
-        <label class="check"><input type="checkbox" name="paket" value="F1-F3 · Marke und Design-System: Markenregelwerk, Design-System, Entwicklungsstandards"><span class="check__b"><span class="check__c">F1-F3</span><span class="check__t">Marke und Design-System</span><span class="check__s">Markenregelwerk, Design-System, Entwicklungsstandards</span></span></label>
-        <label class="check"><input type="checkbox" name="paket" value="01 · Projektmanagement: Projektbriefing, Projektplan, Freigabeunterlagen"><span class="check__b"><span class="check__c">01</span><span class="check__t">Projektmanagement</span><span class="check__s">Projektbriefing, Projektplan, Freigabeunterlagen</span></span></label>
-        <label class="check"><input type="checkbox" name="paket" value="02 · Recherche und Seitenplan: Suchbegriff-Recherche, Seitenplan je Seitentyp"><span class="check__b"><span class="check__c">02</span><span class="check__t">Recherche und Seitenplan</span><span class="check__s">Suchbegriff-Recherche, Seitenplan je Seitentyp</span></span></label>
-        <label class="check"><input type="checkbox" name="paket" value="03 · Texte: Textdokument für alle 33 Seiten"><span class="check__b"><span class="check__c">03</span><span class="check__t">Texte</span><span class="check__s">Textdokument für alle 33 Seiten</span></span></label>
-        <label class="check"><input type="checkbox" name="paket" value="04-05 · Gestaltung: Wireframes und Design-Entwürfe"><span class="check__b"><span class="check__c">04-05</span><span class="check__t">Gestaltung</span><span class="check__s">Wireframes und Design-Entwürfe</span></span></label>
         <label class="check"><input type="checkbox" name="paket" value="06 · Website und Technik: 33 fertige Seiten in WordPress, übergeben"><span class="check__b"><span class="check__c">06</span><span class="check__t">Website und Technik</span><span class="check__s">33 fertige Seiten in WordPress, übergeben</span></span></label>
-        <label class="check"><input type="checkbox" name="paket" value="06+ · Suchmaschinen-Arbeit: Technik, Texte, Auszeichnung, KI-Suche"><span class="check__b"><span class="check__c">06+</span><span class="check__t">Suchmaschinen-Arbeit</span><span class="check__s">Technik, Texte, Auszeichnung, KI-Suche</span></span></label>
-        <label class="check"><input type="checkbox" name="paket" value="07 · Prüfnachweise: Prüfbericht über alle 33 Seiten"><span class="check__b"><span class="check__c">07</span><span class="check__t">Prüfnachweise</span><span class="check__s">Prüfbericht über alle 33 Seiten</span></span></label>
         <label class="check"><input type="checkbox" name="paket" value="08 · Livegang: Livegang-Protokoll; offene Punkte zur Kenntnis genommen"><span class="check__b"><span class="check__c">08</span><span class="check__t">Livegang</span><span class="check__s">Livegang-Protokoll; die offenen Punkte habe ich zur Kenntnis genommen</span></span></label>
       </div>
-      <p class="selall"><button type="button" class="link-btn" id="selAll">Alle neun auswählen</button></p>
+      <p class="selall"><button type="button" class="link-btn" id="selAll">Beide auswählen</button></p>
 
       <p class="form__h form__h--gap">Erklärung</p>
       <div class="checks" id="erklaerungen">
@@ -939,7 +932,7 @@
     var alle = true;
     for(var i=0;i<boxes.length;i++){ if(!boxes[i].checked){ alle = false; break; } }
     for(var j=0;j<boxes.length;j++){ boxes[j].checked = !alle; }
-    this.textContent = alle ? 'Alle neun auswählen' : 'Auswahl aufheben';
+    this.textContent = alle ? 'Beide auswählen' : 'Auswahl aufheben';
   });
 
 
